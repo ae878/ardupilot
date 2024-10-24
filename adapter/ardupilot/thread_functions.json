@@ -1,0 +1,138 @@
+[
+    {
+      "thread": "AP_OAPathPlanner::avoidance_thread",
+      "size": "8192"
+    },
+    {
+      "thread": "CANSensor::loop",
+      "size": "999999"
+    },
+    {
+      "thread": "Compass::_update_calibration_trampoline",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_DDS_Client::main_loop",
+      "size": "8192"
+    },
+    {
+      "thread": "AP_DroneCAN::loop",
+      "size": "4096"
+    },
+    {
+      "thread": "AP_ExternalAHRS_InertialLabs::update_thread",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_ExternalAHRS_MicroStrain5::update_thread",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_ExternalAHRS_MicroStrain7::update_thread",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_ExternalAHRS_VectorNav::update_thread",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_Frsky_Backend::loop",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_GPS_Backend::logging_start",
+      "size": "4096"
+    },
+    {
+      "thread": "AP_GyroFFT::update_thread",
+      "size": "1024"
+    },
+    {
+      "thread": "BinarySemTest::thread1",
+      "size": "2048"
+    },
+    {
+      "thread": "BinarySemTest::thread2",
+      "size": "2048"
+    },
+    {
+      "thread": "RCOutput::led_thread",
+      "size": "256"
+    },
+    {
+      "thread": "GPIO_Sysfs::_gpio_script_thread",
+      "size": "4096"
+    },
+    {
+      "thread": "AP_Hott_Telem::loop",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_InertialSensor_ADIS1647x::loop",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_IOMCU::thread_main",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_KDECAN_Driver::loop",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_Logger::io_thread",
+      "size": "1580"
+    },
+    {
+      "thread": "AP_Mount_Backend::calculate_poi",
+      "size": "8192"
+    },
+    {
+      "thread": "AP_MSP::loop",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_Networking_ChibiOS::thread",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_Networking_PPP::ppp_loop",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_Networking::sendfile_check",
+      "size": "2048"
+    },
+    {
+      "thread": "ThreadWrapper::run",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_OSD::osd_thread",
+      "size": "1280"
+    },
+    {
+      "thread": "AP_PiccoloCAN::loop",
+      "size": "4096"
+    },
+    {
+      "thread": "AP_Scripting::thread",
+      "size": "1024"
+    },
+    {
+      "thread": "AP_Torqeedo_TQBus::thread_main",
+      "size": "2048"
+    },
+    {
+      "thread": "AP_SmartAudio::loop",
+      "size": "760"
+    },
+    {
+      "thread": "GCS_MAVLINK::ftp_worker",
+      "size": "2560"
+    },
+    {
+      "thread": "FlightAxis::socket_creator",
+      "size": "8192"
+    }
+]

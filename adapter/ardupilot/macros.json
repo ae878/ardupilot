@@ -1,0 +1,2774 @@
+[
+  {
+      "macro": "AP_SCRIPTING_ENABLED",
+      "value": "0"
+  },
+  {
+      "macro": "LWIP_ALTCP",
+      "value": "0"
+  },
+  {
+      "macro": "APM_BUILD_DIRECTORY",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ADVANCEDFAILSAFE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_QUADPLANE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TERRAIN_AVAILABLE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_IO_MCU",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RELAY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PARACHUTE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ADSB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TUNING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MAX_CAN_PROTOCOL_DRIVERS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_RALLY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NAVEKF2_AVAILABLE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NAVEKF3_AVAILABLE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RSSI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PLANE_GLIDER_PULLUP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_BUTTON_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ICENGINE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SOARING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_LANDINGGEAR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PLANE_OFFBOARD_GUIDED_SLEW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PRECLAND_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FENCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MISSION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AIRSPEED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_INERTIALSENSOR_HARMONICNOTCH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_EFI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_STATS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GRIPPER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SERIALMANAGER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "QAUTOTUNE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AIRSPEED_AUTOCAL_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SERVORELAYEVENTS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_GYROFFT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EXTERNAL_CONTROL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_WATT_MAX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AIRSPEED_HYGROMETER_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_MCU_MONITORING",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_ESC_TELEM",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "COMPASS_CAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AIS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MAV_CMD_SET_HAGL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_COMMAND_LONG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MISSION_SET_CURRENT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HIGH_LATENCY2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_QUADPLANE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RTC_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AHRS_DCM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PLANE_BLACKBOX_LOGGING",
+      "value": "1"
+  },
+  {
+      "macro": "CIRCLE_NAV_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AVOIDANCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "RCMAP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PROXIMITY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_LTM_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_DEVO_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "USERHOOK_INIT",
+      "value": "1"
+  },
+  {
+      "macro": "RANGEFINDER_TILT_CORRECTION",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "NAV_GUIDED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FEATURE_BOARD_DETECT",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_VISUALODOM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "POSHOLD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_GENERATOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "DISALLOW_GCS_MODE_CHANGE_DURING_RC_FAILSAFE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ROVER_ADVANCED_FAILSAFE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BEACON_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AVOIDANCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FOLLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SPRAYER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OAPATHPLANNER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_TORQEEDO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_DOCK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HAVE_SAFETY_SWITCH",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_FOLLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OADATABASE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MAV_CMD_NAV_SET_YAW_SPEED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PICCOLO_CAN_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CANMANAGER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_CURRAWONG_ECU_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SBUSOUTPUT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "SBUS_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_GCS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_VEHICLE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_RUNCAM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_VIDEOTX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MSP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_FRSKY_TELEM_BIDIRECTIONAL",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_EXTERNAL_AHRS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CUSTOMROTATIONS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPENDRONEID_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NMEA_OUTPUT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_DDS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_KDECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_REGISTER_PORT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILTER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CHECK_FIRMWARE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SCHEDULER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SCRIPTING_SERIALDEVICE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SRV_CHANNELS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HOTT_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SMARTAUDIO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TRAMP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PARAM_KEY_DUMP",
+      "value": "1"
+  },
+  {
+      "macro": "AP_IBUS_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_INS_ACCELCAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ARMING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AHRS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CAL_ALWAYS_REBOOT",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_EKF_IMU_MASK_DEFAULT",
+      "value": "1"
+  },
+  {
+      "macro": "ENABLE_EKF_TIMING",
+      "value": "1"
+  },
+  {
+      "macro": "TERRAIN_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "WITH_SITL_TONEALARM",
+      "value": "1"
+  },
+  {
+      "macro": "HAVE_SFML_AUDIO_H",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_UART_STATS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_SOLOGIMBAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEST_DRONECAN_DRIVERS",
+      "value": "1"
+  },
+  {
+      "macro": "CYGWIN_BUILD",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_JSON_MASTER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NUM_CAN_IFACES",
+      "value": "1"
+  },
+  {
+      "macro": "STORAGE_USE_FRAM",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_RAMTRON_ALLOW_FALLBACK",
+      "value": "1"
+  },
+  {
+      "macro": "STORAGE_USE_FLASH",
+      "value": "1"
+  },
+  {
+      "macro": "STORAGE_USE_POSIX",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_STRATOBLIMP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CANFD_SUPPORTED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_DSP",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CAN_WITH_SOCKETCAN",
+      "value": "1"
+  },
+  {
+      "macro": "ENABLE_HEAP",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_PWM",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_ADSB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_CRSF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_PS_RPLIDARA2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_PS_RPLIDARA1_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_PS_TERARANGERTOWER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_PS_LIGHTWARE_SF45B_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_ADSB_SAGETECH_MXS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_LOWEHEISER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_AIS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_DEVICE_OP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_INERTIALSENSOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GPS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RC_CHANNEL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_SERVO_RELAY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_FTP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_HAVE_DIRENT_DTYPE",
+      "value": "1"
+  },
+  {
+      "macro": "MAX_NAME_LEN",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_HAVE_DIRENT_DTYPE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RADIO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_RANGEFINDER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_MISSION_REQUEST_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "GCS_DEBUG_SEND_MESSAGE_TIMINGS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_HIGHRES_IMU_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_BATTERY2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SEND_THERMAL_RANGE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LANDING_DEEPSTALL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINCH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_UAVIONIX_ADSB_OUT_STATUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_RELAY_STATUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_FORMAT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MAVLINK_INTERVALS_FROM_FILES_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FRSKY_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SPEKTRUM_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CRSF_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "APJ_BOARD_ID",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_FAILURE_CREATION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ENABLE_DFU_BOOT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIGNED_FIRMWARE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_CALIBRATION_FIXED_YAW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "OSD_PARAM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_AUTOPILOT_VERSION_REQUEST_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_POLYFENCE_FENCE_POINT_PROTOCOL_SUPPORT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_MOUNT_CONFIGURE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_MOUNT_CONTROL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_SERIAL_CONTROL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MSG_HIL_GPS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_MAVLINK_LED_CONTROL_SUPPORT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_MAVLINK_PLAY_TUNE_SUPPORT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_RALLY_POINT_PROTOCOL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_MAVLINK_RADIO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_MAV_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BOOTLOADER_FLASHING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_MAV_CMD_REQUEST_AUTOPILOT_CAPABILITIES_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_HOME_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AHRS_POSITION_RESET_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AHRS_EXTERNAL_WIND_ESTIMATE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SEND_FOV_STATUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MAVLINK_BINDINGS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MAVLINK_SEPARATE_HELPERS",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SOLO_GIMBAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "ROUTING_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAVE_AP_BLHELI_SUPPORT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_TSYS03_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_TSYS03_ENFORCE_KNOWN_VALID_I2C_ADDRESS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_MLX90614_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_TSYS01_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_ANALOG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_MCP9600_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_DUMMY_METHODS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_TEMPERATURE_SENSOR_MAX31865_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MAX31865_DEBUGGING",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_BUILD_AP_PERIPH",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_BOOTLOADER_BUILD",
+      "value": "1"
+  },
+  {
+      "macro": "DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_OCTOSPI",
+      "value": "1"
+  },
+  {
+      "macro": "AP_INTERNALERROR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RELAY_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_MSP_DISPLAYPORT",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MSP_RANGEFINDER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MSP_OPTICALFLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MSP_GPS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_MSP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_MSP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_OSD_BITMAP",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RADIO_CYRF6936_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RADIO_CC2500_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RADIO_BK2425_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "SUPPORT_BK_DEBUG_PINS",
+      "value": "1"
+  },
+  {
+      "macro": "USE_D16_FORMAT",
+      "value": "1"
+  },
+  {
+      "macro": "FCC_SUPPORT_CW_MODE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GSOF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "gsof_DEBUGGING",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PRECLAND_COMPANION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PRECLAND_IRLOCK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PRECLAND_SITL_GAZEBO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PRECLAND_SITL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_FILE_WRITING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "ENABLE_DEBUG_MODULE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGER_FILE_CONTENTS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CONSOLE_DISABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HAVE_AP_ROMFS_EMBEDDED_LUA",
+      "value": "1"
+  },
+  {
+      "macro": "DISABLE_INTERRUPTS_FOR_SCRIPT_RUN",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SCRIPTING_CAN_SENSOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "LUA_SUPPORT_LOAD_BINARY",
+      "value": "1"
+  },
+  {
+      "macro": "LUA_USE_CTYPE",
+      "value": "1"
+  },
+  {
+      "macro": "IOMCU_DEBUG_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_IO_MCU_BIDIR_DSHOT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EXTENDED_DSHOT_TELEM_V2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_DSHOT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_SBUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_SBUS_NI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_FPORT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_HAL_SHARED_DMA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "IOMCU_ENABLE_RESET_TEST",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_AP_FETTEC_HALF_DUPLEX",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_AP_FETTEC_ONEWIRE_GET_STATIC_INFO",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_AP_FETTEC_ESC_BEEP",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_AP_FETTEC_ESC_LIGHT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BEACON_MARVELMIND_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SDCARD_STORAGE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "DO_INITIALISATION",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EXTENDED_ESC_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SERVO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_RELAY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SOLOGIMBAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_MOUNT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_MAVLINK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_MAVLINKCAMV2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SCRIPTING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAMERA_SET_CAMERA_SOURCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "RUNCAM_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_SET_CAMERA_SOURCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOUNT_SEND_THERMAL_RANGE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_GENERATOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_ESC_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_HARMONICNOTCH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_ESC_TELEM_OUTBOUND_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_SIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_PIN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RPM_EFI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_RPM_STREAM",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AVOID_ENABLE_Z",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OAPATHPLANNER_BENDYRULER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OAPATHPLANNER_DIJKSTRA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "VERTICAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ADSB_UCP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ADSB_UAVIONIX_EMERGENCY_STATUS_ON_LOST_LINK",
+      "value": "1"
+  },
+  {
+      "macro": "ADSB_STATIC_CALLSIGN",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ADSB_SAGETECH_MXS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "SAGETECH_USE_MXS_SDK",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GRIPPER_SERVO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GRIPPER_EPM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "UAVCAN_IOCS_HARDPOINT_SET",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_SERIAL_LUTAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_THROTTLE_LINEARISATION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_SERIAL_MS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_NWPWU_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_SCRIPTING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_EFI_SERIAL_HIRTH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SCHEDULER_EXTENDED_TASKINFO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_AIS_DUMMY_METHODS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAVE_GPIO_PINS",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PIN_ALT_CONFIG",
+      "value": "1"
+  },
+  {
+      "macro": "IOMCU_FW",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SERIAL_ESC_COMM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SERIALLED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_DSHOT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_HAL_SHARED_DMA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "STM32_DMA_SUPPORTS_DMAMUX",
+      "value": "1"
+  },
+  {
+      "macro": "HAVE_USB_SERIAL",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HAVE_DUAL_USB_CDC",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HAVE_LOW_NOISE_UART",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_SERIAL_USB",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_FORWARD_OTG2_SERIAL",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SPI_SCK_SAVE_RESTORE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_EMPTY_STORAGE",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_WITH_RAMTRON",
+      "value": "1"
+  },
+  {
+      "macro": "STORAGE_FLASH_PAGE",
+      "value": "1"
+  },
+  {
+      "macro": "STM32_I2C_ISR_LIMIT",
+      "value": "1"
+  },
+  {
+      "macro": "ANALOG_VCC_5V_PIN",
+      "value": "1"
+  },
+  {
+      "macro": "FMU_SERVORAIL_ADC_PIN",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NO_TIMER_THREAD",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_NO_RCOUT_THREAD",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_EMPTY_IO",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FASTBOOT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CRASHDUMP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ENABLE_SAVE_PERSISTENT_PARAMS",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_FLASH_PROTECTION",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PWM_ALARM",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_DSHOT_ALARM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ENABLE_THREAD_STATISTICS",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_INS_TEMPERATURE_CAL_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WATCHDOG_SAVE_FAULT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_GPIO_PIN_FAULT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BOARD_START_TIME",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_SDC",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_USE_MMC_SPI",
+      "value": "1"
+  },
+  {
+      "macro": "STM32F427xx",
+      "value": "1"
+  },
+  {
+      "macro": "AC_WPNAV_OA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MISSION_NAV_PAYLOAD_PLACE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MAVLINK_PACKETISE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_BACKEND_PPP",
+      "value": "1"
+  },
+  {
+      "macro": "PPP_DEBUG_TX",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_PPP_GATEWAY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "PPP_DEBUG_RX",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_CAN_MCAST_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_CONTROLS_HOST_IP_SETTINGS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_DHCP_AVAILABLE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_TESTS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_HAVE_GCS_SEND_TEXT",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_LWIP_DEBUG_FILE",
+      "value": "1"
+  },
+  {
+      "macro": "LWIP_DHCP",
+      "value": "1"
+  },
+  {
+      "macro": "LWIP_IGMP",
+      "value": "1"
+  },
+  {
+      "macro": "ETH_PAD_SIZE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NETWORKING_NEED_LWIP",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CAN_SLCAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_ENABLE_DRONECAN_DRIVERS",
+      "value": "1"
+  },
+  {
+      "macro": "INVENSENSEV2_DRDY_PIN",
+      "value": "1"
+  },
+  {
+      "macro": "BMI160_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_INS_HIGHRES_SAMPLE",
+      "value": "1"
+  },
+  {
+      "macro": "INV3_ENABLE_FIFO_LOGGING",
+      "value": "1"
+  },
+  {
+      "macro": "ICM45686_CLKIN",
+      "value": "1"
+  },
+  {
+      "macro": "LSM9DS0_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "BMI270_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "TIMING_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "LSM9DS1_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_INS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_INS_FILE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_INERTIALSENSOR_BATCHSAMPLER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "INS_AUX_INSTANCES",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SERIALMANAGER_IMUOUT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_INERTIALSENSOR_KILL_IMU_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "INVENSENSE_DEBUG_REG_CHANGE",
+      "value": "1"
+  },
+  {
+      "macro": "INVENSENSE_DRDY_PIN",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MODULE_SUPPORTED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HAVE_IMU_HEATER",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCMAPPER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_CALIBRATOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RC_CHANNEL_AUX_FUNCTION_STRINGS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FRSKY_D_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FRSKY_SPORT_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FRSKY_SPORT_PASSTHROUGH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_FATFS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "FF_USE_MKFS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_SYS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_SYS_FLASH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_ROMFS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_POSIX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_POSIX_HAVE_UTIME",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_POSIX_MAP_FILENAME_ALLOC",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_POSIX_HAVE_FSYNC",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_POSIX_HAVE_STATFS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_PARAM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PARAM_DEFAULTS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "FSDEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_FILE_READING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_FILESYSTEM_MISSION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_QUAD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_HEXA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_OCTA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_OCTAQUAD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_DODECAHEXA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_Y6_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOTORS_FRAME_DECA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_UDP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_FDM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_JOYSTICK_SFML_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RC_CHANNEL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_PPMSUM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_IBUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_FASTSBUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_DSM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_SUMD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_SRXL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_SRXL2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_CRSF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_FPORT2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_ST24_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_GHST_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RCPROTOCOL_RADIO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "SRXL_INCLUDE_FWD_PGM_CODE",
+      "value": "1"
+  },
+  {
+      "macro": "SRXL_IS_HUB",
+      "value": "1"
+  },
+  {
+      "macro": "CRSF_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "CRSF_DEBUG_CHARS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OSD_LINK_STATS_EXTENSIONS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "GHST_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "GHST_DEBUG_CHARS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GHST_TELEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "SRXL2_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SUPPORT_RCOUT_SERIAL",
+      "value": "1"
+  },
+  {
+      "macro": "AP_VOLZ_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ROBOTISSERVO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_KDECAN_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "AP_KDECAN_USE_EVENTS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_ESC_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_BEBOP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_SUM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_ANALOG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BATTERY_UAVCAN_BATTERYINFO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_DISPLAY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_OREOLED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_SYSFS_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_EXTERNALLED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_GPIO_LED_RGB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_GPIO_LED_1_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_PCA9685_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_NEOPIXEL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_PROFILED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_PROFILED_SPI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_SCRIPTING_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_DSHOT_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_DISCRETE_RGB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_TONEALARM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_VRBOARD_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_DISCO_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_GPIO_LED_2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_SERIALLED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_RCOUTPUTRGBLED_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_NAVIGATOR_LED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_NOTIFY_GPIO_LED_3_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CUSTOMCONTROL_EMPTY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CUSTOMCONTROL_PID_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_CUSTOMCONTROL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_ICP201XX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_MS56XX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_BMP581_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_BMP280_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_ICM20789_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "BARO_ICM20789_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_BARO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_BARO_WIND_COMP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_LPS2XH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_EXTERNALAHRS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_ICP101XX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_DPS280_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_DUMMY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_SPL06_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_SPL06_BACKGROUND_ENABLE",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_BMP085_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_KELLERLD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_BMP388_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_FBM320_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_BARO_ALLOW_INIT_NO_BARO",
+      "value": "1"
+  },
+  {
+      "macro": "AP_BARO_DRONECAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_SERVO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_SIYI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_TOPOTEK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_VIEWPRO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_SCRIPTING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_STORM32MAVLINK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_ALEXMOS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_STORM32SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_GREMSY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_MOUNT_XACTI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_MOUNT_POI_TO_LATLONALT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "COMPASS_LEARN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "COMPASS_MOT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_HMC5843_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_QMC5883L_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_QMC5883P_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_LIS3MDL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_IST8310_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_IST8308_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_RM3100_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_BMM150_DETECT_BACKENDS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_BMM150_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_LSM303D_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_MMC5XX3_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_LSM9DS1_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_HEATER_MAG_OFFSET",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_MAG3110_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_DRONECAN_HIRES_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_COMPASS_ICM20948_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_LIGHTWARE_SF40C_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_LIGHTWARE_SF45B_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_MAV_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_LD06_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_AIRSIMSITL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_TERARANGERTOWEREVO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_MR72_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_SITL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_TERARANGERTOWER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_RPLIDARA2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_CYGBOT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_PROXIMITY_SCRIPTING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_MAV_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_UPFLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_PX4FLOW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_ONBOARD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_PIXART_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_OPTICALFLOW_CXOF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_AIRSPEED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_NMEA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_ANALOG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_HOME_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_RPM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_SIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINDVANE_MODERNDEVICE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ARMING_CRASHDUMP_ACK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GPS_BLENDED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GPS_BLENDED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ARMING_AUX_AUTH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINCH_PWM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_WINCH_DAIWA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_CRSF_TELEM_TEXT_SELECTION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "ENABLE_ONVIF",
+      "value": "1"
+  },
+  {
+      "macro": "TRAMP_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "SA_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "AP_DDS_IMU_PUB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_DDS_UDP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_DDS_VISUALODOM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "RUNTIME_BITS_TABLES",
+      "value": "1"
+  },
+  {
+      "macro": "AP_ICENGINE_TCA9554_STARTER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_FENCE_DUMMY_METHODS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_FENCE_DUMMY_METHODS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_FENCE_DEBUG",
+      "value": "1"
+  },
+  {
+      "macro": "POLYFENCE_LOADER_DEBUGGING",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_FLASH_W25NXX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_FILESYSTEM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGER_FENCE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_FLASH_JEDEC_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_MAVLINK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_BLOCK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGING_DATAFLASH_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "DEBUG_LOG_STRUCTURES",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_LOGGER_RALLY_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GPS_ERB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_TOFSENSEF_I2C_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_NRA24_CAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_NMEA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_USD1_SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_RDS02UF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_TRI2C_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BENEWAKE_TFMINIPLUS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_USD1_CAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LANBAO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_PULSEDLIGHTLRF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_MAXSONARI2CXL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LWI2C_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_RANGEFINDER_LIGHTWARE_I2C_BUS",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_VL53L0X_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_VL53L1X_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_PWM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BBB_PRU_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LIGHTWARE_SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LEDDARONE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BEBOP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_MAVLINK_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_MAXBOTIX_SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_ANALOG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_HC_SR04_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_WASP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BENEWAKE_TF02_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BENEWAKE_TFMINI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BENEWAKE_TF03_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_TERARANGER_SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BLPING_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LEDDARVU8_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_GYUS42V2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_SIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_BENEWAKE_CAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_LUA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_NOOPLOOP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_AINSTEIN_LR_D1_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_TOFSENSEP_CAN_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_RANGEFINDER_JRE_SERIAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_SHIP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GLIDER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_SLUNGPAYLOAD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_TRIMBLE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_WEBOTS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_LAST_LETTER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPIO_LED_3_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_CRRCSIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_JSBSIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_TOSHIBALED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_TSYS03_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_LM2755_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_COMPASS_QMC5883L_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_AIRSIM_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_JSON_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_RAMTRON_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_SERIALPROXIMITYSENSOR_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_FILE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_SCRIMMAGE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_NOVA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_RAMTRON_FM25V02_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_JEDEC_MX25L3206E_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_FLIGHTAXIS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_UBLOX_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_NMEA_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_SERIALDEVICE_CORRUPTION_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_JEDEC_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_MORSE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_SILENTWINGS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_SBP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_XPLANE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_WEBOTSPYTHON_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPIO_LED_2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPIO_LED_RGB_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GIMBAL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_SBF_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_SIM_GAZEBO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_MSP_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_GPS_SBP2_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_SIM_LED_N_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GENERATOR_RICHENPOWER_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GENERATOR_IE_2400_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GENERATOR_IE_650_800_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AP_GENERATOR_IE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_GPS",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_BATTERY",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_MAG",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_BARO",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_AIRSPEED",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_RANGEFINDER",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_NOTIFY",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_RC_OUT",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_NEOPIXEL_COUNT_WITHOUT_NOTIFY",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_NCP5623_LED_WITHOUT_NOTIFY",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_NCP5623_BGR_LED_WITHOUT_NOTIFY",
+      "value": "1"
+  },
+  {
+      "macro": "HAL_PERIPH_ENABLE_TOSHIBA_LED_WITHOUT_NOTIFY",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_RTL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_POSHOLD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_CIRCLE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_AUTO_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_THROW_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_CUSTOMCONTROL_MULTI_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "ADVANCED_FAILSAFE",
+      "value": "1"
+  },
+  {
+      "macro": "TOY_MODE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_SMARTRTL_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_FLOWHOLD_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "USER_PARAMS_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AUTOTUNE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_SYSTEMID_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_AUTOROTATE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_ZIGZAG_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_GUIDED_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "WEATHERVANE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_BRAKE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_DRIFT_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_TURTLE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "AC_PAYLOAD_PLACE_ENABLED",
+      "value": "1"
+  },
+  {
+      "macro": "MODE_FLIP_ENABLED",
+      "value": "1"
+  }
+]
