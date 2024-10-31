@@ -6,8 +6,8 @@ import copy
 import csv
 import json
 from typing import Literal
-from utils.exception import BuildErrorException
-from adapter.adapter import BaseAdapter
+from src.utils.exception import BuildErrorException
+from src.adapter.adapter import BaseAdapter
 
 
 logger = logging.getLogger(__name__)
@@ -66,6 +66,8 @@ class ArdupilotAdapter(BaseAdapter):
         # Function results
         self.function_results = []
 
+        self.name = "ardupilot"
+
 
         # if Config file source is relative, convert it to an absolute path
         if not os.path.isabs(self.config_file_src):
@@ -83,7 +85,10 @@ class ArdupilotAdapter(BaseAdapter):
 
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
+
     def build(self) -> bool:
+        if self.verbose:
+            logger.debug(f"[+] ================ Build Start ================")
         original_cwd = os.getcwd()
         # Change the cwd to the base directory
         os.chdir(self.base)
@@ -133,6 +138,8 @@ class ArdupilotAdapter(BaseAdapter):
                 logger.error(f"[-] Command failed: {build_command}")
                 raise BuildErrorException(f"Command failed: {build_command}")
         os.chdir(original_cwd)
+        if self.verbose:
+            logger.debug(f"[+] ================ Build End ================")
         return True
 
 

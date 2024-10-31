@@ -3,7 +3,11 @@ from typing import Literal
 import csv
 import json
 import os
-from ir2dot.gccir2dot import Parser
+from src.ir2dot.gccir2dot import Parser
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class BaseAdapter(ABC):
     @abstractmethod
@@ -19,11 +23,32 @@ class BaseAdapter(ABC):
         self.base = base
         self.build_commands = build_commands
         self.config_file_src = config_file_src
+        '''
+        example
+        [
+            {
+                "thread": "AP_OAPathPlanner::avoidance_thread",
+                "size": "8192"
+            }
+        ]
+        '''
         self.thread_functions = []
         self.thread_functions_file_path = thread_functions_file_path
         self.analyze_result_dir = analyze_result_dir
         self.verbose = verbose
+        self.name = ""
 
+    def get_thread_functions(self):
+        thread_functions = []
+        for function in self.thread_functions:
+            thread_functions.append(function["thread"])
+        return thread_functions
+
+    def set_analyze_result_dir(self, analyze_result_dir: str):
+        self.analyze_result_dir = analyze_result_dir
+
+    def set_config_file_src(self, config_file_src: str):
+        self.config_file_src = config_file_src
     @abstractmethod
     def build(self) -> bool:
         '''
@@ -32,6 +57,8 @@ class BaseAdapter(ABC):
         Or just calling batch gcc commands directly
 
         The point is, you MUST create *.su, *.optimized, *.class files in the base directory
+
+        return True if build success else False
         '''
         pass
 
@@ -41,6 +68,8 @@ class BaseAdapter(ABC):
         Analyze the project by given build result
 
         '''
+        if self.verbose:
+            logger.debug(f"[+] ================ Analyze Start ================")
         try:
             os.makedirs(self.analyze_result_dir, exist_ok=True)
         except Exception as e:
@@ -82,18 +111,19 @@ class BaseAdapter(ABC):
                     "max_depth": 0,
                 })
         self.function_results = function_results
+        return function_results
         
 
 
     def dump_result(self, save_file_name: str = "function_results", format: Literal["csv", "json"] = "csv"):
         if format == "csv":
-            with open(f"{self.analyze_result_dir}/{save_file_name}.csv", "w") as f:
+            with open(f"{save_file_name}.csv", "w") as f:
                 writer = csv.writer(f)
                 writer.writerow(["name", "biggest_stack", "deepest_stack", "max_depth"])
                 for result in self.function_results:
                     writer.writerow([result["name"], result["biggest_stack"], result["deepest_stack"], result["max_depth"]])
         elif format == "json":
-            with open(f"{self.analyze_result_dir}/{save_file_name}.json", "w") as f:
+            with open(f"{save_file_name}.json", "w") as f:
                 json.dump(self.function_results, f, indent=4)
         else:
             raise ValueError(f"Invalid format: {format}")
