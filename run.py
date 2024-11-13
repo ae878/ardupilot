@@ -22,3 +22,6 @@ adapter = ArdupilotAdapter(ardupilot_base, build_commands, header_file, thread_f
 
 
 fuzzer = Fuzzer(ardupilot_base, "src/adapter/ardupilot/macros.json", adapter, verbose=True)
+while True:
+    fuzzer.fuzz()
+    fuzzer.mutate("AP_OSD::osd_thread")

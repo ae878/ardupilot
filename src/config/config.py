@@ -39,6 +39,12 @@ class ConfigFactory:
         return self.config[random_index]
 
     def create_config_header(self, dst="config.h") -> str:
+        # path not exist, create dir
+        try:
+            if not os.path.exists(os.path.dirname(dst)):
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+        except Exception as e:
+            pass
         with open(dst, "w") as file:
             for item in self.config:
                 macro = item["macro"]

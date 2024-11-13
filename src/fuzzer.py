@@ -2,6 +2,9 @@ import copy
 from src.config.config import ConfigFactory
 from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
+# from logging import logger
+
+
 
 class Fuzzer():
     def __init__(self, base: str, seed_macro_file: str, adapter: BaseAdapter, verbose: bool = False):
@@ -28,10 +31,11 @@ class Fuzzer():
 
         dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
         # build result
-        build_result = self.adapter.build()
+        # build_result = self.adapter.build()
+        build_result = True
         if build_result:
             function_results = self.adapter.analyze()
-            self.adapter.dump_result(f"{self.output_base_dir}/{dump_result_filename}", function_results)
+            self.adapter.dump_result(f"{self.output_base_dir}/{dump_result_filename}", "json")
         
             # dump steps
             self.steps.append({
@@ -46,16 +50,16 @@ class Fuzzer():
             print(f"[+] Step {self.steps_count} done. Build Result: ({build_result})")
 
 
+    # TODO: mutate 휴리스틱 룰 정리해놓기
+    # Stage 1. 코드 파싱 단계
+    # Stage 2. Feedback을 통한 mutation 단계
     def mutate(self, target_function: str):
         if target_function not in self.adapter.get_thread_functions():
             raise TargetFunctionNotFoundException(f"Target function {target_function} not found")
         
         mutation_config = None
 
-            
-
         if len(self.steps) >= 2:
-            
             # 이전 결과
             current_function_results = self.steps[-1]["function_results"]
             before_function_results = self.steps[-2]["function_results"]
