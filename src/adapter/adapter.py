@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import Literal
+from typing import Literal, Union
 import csv
 import json
 import os
+from config.config import ConfigFactory
 from src.ir2dot.gccir2dot import Parser
 import logging
 
@@ -49,8 +50,9 @@ class BaseAdapter(ABC):
 
     def set_config_file_src(self, config_file_src: str):
         self.config_file_src = config_file_src
+        
     @abstractmethod
-    def build(self) -> bool:
+    def build(self, config: Union[ConfigFactory, None] = None) -> bool:
         '''
         Batch build the script
         You can just using your own build command (such as make, cmake, etc..)

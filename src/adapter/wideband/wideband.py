@@ -6,10 +6,9 @@ import copy
 import csv
 import json
 from typing import Literal, Union
+from src.config.config import ConfigFactory
 from src.utils.exception import BuildErrorException
 from src.adapter.adapter import BaseAdapter
-from src.config.config import ConfigFactory
-
 
 logger = logging.getLogger(__name__)
 
@@ -27,24 +26,24 @@ def remove_duplicate_include_flags(arguments):
     return unique_arguments
 
 
-class ArdupilotAdapter(BaseAdapter):
+class WidebandAdapter(BaseAdapter):
     def __init__(
         self,
         base: str,
         build_commands: list[str],
         config_file_src: str = "",
         thread_functions_file_path: str = "",
-        analyze_result_dir = "./analyze_ardupilot",
+        analyze_result_dir = "./analyze_wideband",
         verbose: bool = False,
     ):
         '''
-        ArdupilotAdapter class
-        This class is used to build and analyze the Ardupilot project.
+        WidebandAdapter class
+        This class is used to build and analyze the Wideband project.
 
         Args:
-            base (str): The base directory of the Ardupilot project.
-            build_commands (list[str]): The build commands to build the Ardupilot project.
-            config_file_src (str): The source file of the Ardupilot project configuration file.
+            base (str): The base directory of the Wideband project.
+            build_commands (list[str]): The build commands to build the Wideband project.
+            config_file_src (str): The source file of the Wideband project configuration file.
             thread_functions_file_path (str): The path to the thread functions file.
             analyze_result_dir (str): The directory to save the analyze result.
             verbose (bool): The verbose mode.
@@ -67,7 +66,7 @@ class ArdupilotAdapter(BaseAdapter):
         # Function results
         self.function_results = []
 
-        self.name = "ardupilot"
+        self.name = "wideband"
 
 
         # if Config file source is relative, convert it to an absolute path
@@ -88,6 +87,8 @@ class ArdupilotAdapter(BaseAdapter):
             self.thread_functions = json.load(file)
 
     def build(self, config: Union[ConfigFactory, None] = None) -> bool:
+        if config is None:
+            raise BuildErrorException("ConfigFactory is None")
         if self.verbose:
             logger.debug(f"[+] ================ Build Start ================")
         original_cwd = os.getcwd()
@@ -95,49 +96,17 @@ class ArdupilotAdapter(BaseAdapter):
         os.chdir(self.base)
 
         # Run the build commands
-        for build_command in self.build_commands:
-            comiple_arguments = copy.deepcopy(build_command)
-            output_directory = ""
+        board_name = config.get_config("BOARD").get("value")
 
-            # 작업 디렉토리 확인하기
-            for argument in comiple_arguments:
-                if argument.startswith("-o"):
-                    output_directory = argument[2:]
-                    # separate the output directory from the file name
-                    output_directory = os.path.dirname(output_directory)
-                    break
+        # Call make command with export board name
+        # ifeq ($(BOARD),)
+        # BOARD = f0_module
+        # endif
+        # make env
+        subprocess.run(["make", "-j4", f"BOARD={board_name}"], check=True)
 
-            insert_index = next(
-                (i for i, arg in enumerate(comiple_arguments) if arg.startswith("-I")),
-                len(comiple_arguments),
-            )
-            # include_flags를 해당 인덱스 앞에 삽입
-            for include_flag in self.build_includes:
-                if include_flag.strip() == "":
-                    continue
-                comiple_arguments.insert(insert_index, include_flag)
-                insert_index += 1
-            comiple_arguments = remove_duplicate_include_flags(comiple_arguments)
-            os.makedirs(output_directory, exist_ok=True)
 
-            if self.verbose:
-                logger.debug(f"[+] Directory: {output_directory}")
-                logger.debug(f"[+] Command: {build_command}")
-
-            try:
-                result = subprocess.run(
-                    comiple_arguments,
-                    check=True,
-                    text=True,
-                    capture_output=True,
-                    cwd=self.base,
-                )
-                if result.returncode == -1:
-                    logger.error(f"[-] Command failed: {build_command}")
-                    raise BuildErrorException(f"Command failed: {build_command}")
-            except subprocess.CalledProcessError as e:
-                logger.error(f"[-] Command failed: {build_command}")
-                raise BuildErrorException(f"Command failed: {build_command}")
+        
         os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")

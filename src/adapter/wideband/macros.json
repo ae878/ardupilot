@@ -1,0 +1,8 @@
+[
+    {
+        "macro": "BOARD",
+        "type": "string",
+        "value": "f0_module",
+        "value_candidate": ["f0_module", "f1_common", "f1_dual", "f1_dual_rev1", "f1_rev2", "f1_rev3"]
+    }
+]

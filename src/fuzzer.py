@@ -75,5 +75,5 @@ class Fuzzer():
         if mutation_config:
             self.current_config = mutation_config
         
-        self.current_config.flip_config(self.current_config.random_select_config())
-        self.current_config.flip_config(self.current_config.random_select_config())
+        self.current_config.flip_config(self.current_config.random_select_config().get("name"))
+        self.current_config.flip_config(self.current_config.random_select_config().get("name"))

@@ -5,10 +5,22 @@ import random
 class ConfigFactory:
     def __init__(self, config_json_file: str):
         self.config_json_file = config_json_file
-        self.config = self.load_config()
+        self.config: list[dict] = self.load_config()
 
-    def get_config(self, key):
-        return self.config[key]
+    def get_config(self, key) -> dict:
+        """
+        {
+            "macro": "BOARD",
+            "type": "string",
+            "value": "f0_module",
+            "value_candidate": ["f0_module", "f1_common", "f1_dual", "f1_dual_rev1", "f1_rev2", "f1_rev3"]
+        }
+        """
+        for item in self.config:
+            if item["macro"] == key:
+                return item
+        # Todo: change custom exception
+        raise Exception(f"Key {key} not found in config")
 
     def load_config(self):
         '''
@@ -32,6 +44,13 @@ class ConfigFactory:
         for item in self.config:
             if item["macro"] == macro_name:
                 item["value"] = "1" if item["value"] == "0" else "0"
+                return
+            
+    def change_config(self, macro_name: str):
+        for item in self.config:
+            if item["macro"] == macro_name:
+                if item.get("value_candidate"):
+                    item["value"] = random.choice(item["value_candidate"])
                 return
     
     def random_select_config(self):
