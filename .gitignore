@@ -1,5 +1,6 @@
 
 classes
+output/*
 *.csv
 *.pkl
 phase1
