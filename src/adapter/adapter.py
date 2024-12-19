@@ -33,11 +33,15 @@ class BaseAdapter(ABC):
             }
         ]
         """
-        self.thread_functions = []
+        self.thread_functions: list[dict] = []
         self.thread_functions_file_path = thread_functions_file_path
         self.analyze_result_dir = analyze_result_dir
         self.verbose = verbose
         self.name = ""
+
+        # For the analyzer
+        self.function_results: list[dict] = []
+        self.visited_functions: dict[str, set] = {}
 
     def get_thread_functions(self):
         thread_functions = []
@@ -93,6 +97,7 @@ class BaseAdapter(ABC):
             try:
                 function = parser.find_function(function_name)
                 result = parser.bfs(function)
+                print(result)
                 function_results.append(
                     {
                         "name": function_name,
@@ -112,6 +117,7 @@ class BaseAdapter(ABC):
                     }
                 )
         self.function_results = function_results
+        input()
         return function_results
 
     def dump_result(self, save_file_name: str = "function_results", format: Literal["csv", "json"] = "csv"):
