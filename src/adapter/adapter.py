@@ -42,6 +42,7 @@ class BaseAdapter(ABC):
         # For the analyzer
         self.function_results: list[dict] = []
         self.visited_functions: dict[str, set] = {}
+        self.initial_analyze_result: dict[str, Union[set, int, list, dict]] = {}
 
     def get_thread_functions(self):
         thread_functions = []
@@ -68,6 +69,46 @@ class BaseAdapter(ABC):
         """
         pass
 
+    def initial_analyze(self, target_function: str, output_dir: str = "initial_analyze"):
+        """
+        In this method, fuzzer will initially analyze the project
+        this makes a callgraph of the project, and it gives hint to the fuzzer
+
+        For detail: after getting the callgraph, fuzzer find the macro that uses only in the function
+        and only mutate the macros
+        """
+        if self.verbose:
+            logger.debug(f"[+] ================ Initial Analyze Start ================")
+
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+        except OSError:
+            pass
+
+        # parse the project
+        parser = None
+        print(output_dir)
+        if os.path.exists(f"{output_dir}/phase2.pkl"):
+            parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
+            parser.load_from_pkl(f"phase2.pkl")
+            logger.debug(f"[+] ================ Load from Pickle ================")
+        else:
+            parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
+            parser.parse()
+
+        try:
+            function = parser.find_function(target_function)
+            result = parser.bfs(function)
+            self.initial_analyze_result = result
+        except Exception as e:
+            logger.error(f"[-] Initial Analyze Failed: {e}")
+            raise e
+
+        if self.verbose:
+            logger.debug(f"[+] ================ Initial Analyze End ================")
+
+        return self.initial_analyze_result
+
     # @abstractmethod
     def analyze(self):
         """
@@ -78,7 +119,7 @@ class BaseAdapter(ABC):
             logger.debug(f"[+] ================ Analyze Start ================")
         try:
             os.makedirs(self.analyze_result_dir, exist_ok=True)
-        except Exception as e:
+        except OSError:
             pass
 
         # remote all files in the analyze result directory

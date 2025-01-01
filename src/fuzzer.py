@@ -1,7 +1,14 @@
 import copy
+import os.path
+import os
+import random
+
+# from mutator.mutate import related_based_mutate
+from src.ir2dot.irlib.file import File
 from src.config.config import ConfigFactory
 from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
+from src.ir2dot.gccir2dot import Function
 
 # from logging import logger
 
@@ -17,11 +24,52 @@ class Fuzzer:
         self.base = base
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
         self.current_config: ConfigFactory = ConfigFactory(seed_macro_file)
-        self.steps = []
+        self.steps: list[dict] = []
         self.steps_count = 0
         self.output_base_dir = "output"
         self.adapter = adapter
         self.verbose = verbose
+
+        # 특정 스레드 함수의 callgraph에 해당하는 파일들
+        # dict["function_name": set[File]]
+        self.related_files_per_function: dict[str, set[File]] = {}
+
+        # 특정 스레드 함수가 사용하는 macro 리스트
+        # dict["function_name": set[str]]
+        self.related_macros_per_function: dict[str, set[str]] = {}
+
+    def initial_analyze(self, target_function: str):
+        self.adapter.initial_analyze(target_function)
+        # 방문한 함수들에 해당하는 파일들 모두 추가
+        visited_functions: list[Function] = self.adapter.initial_analyze_result["visited"]
+        if not self.related_files_per_function.get(target_function):
+            self.related_files_per_function[target_function] = set()
+        if not self.related_macros_per_function.get(target_function):
+            self.related_macros_per_function[target_function] = set()
+
+        # 특정 함수가 방문하는 파일들 리스트로 추가
+        for function in visited_functions:
+            self.related_files_per_function[target_function].add(function.parent_file)
+
+        # 특정 스레드 함수가 사용하는 macro 리스트
+        for file in list(self.related_files_per_function[target_function]):
+            analyzer_file_name = os.path.basename(file.name)
+            analyzer_file_name = ".".join(analyzer_file_name.split(".")[:2])
+
+            if isinstance(self.seed.config, list):
+                raise NotImplementedError("list type config is not supported")
+
+            elif isinstance(self.seed.config, dict):
+                for macro_name, macro_info in self.seed.config.items():
+                    # 특정 macro가 해당 macro를 실제로 쓰는경우
+                    for filename in macro_info["used_in"]:
+                        filename = os.path.basename(filename)
+                        if analyzer_file_name in filename:
+                            self.related_macros_per_function[target_function].add(macro_name)
+                            break
+
+        print(self.related_macros_per_function)
+        # exit()
 
     def fuzz(self):
         function_results = []
@@ -61,12 +109,29 @@ class Fuzzer:
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
-    def mutate(self, target_function: str):
+    def mutate(self, target_function: str, methods: list[str] = ["related", "stack"]):
+        threshold = 2
+        for method in methods:
+            if method not in ["related", "stack", "code"]:
+                raise ValueError(f"Invalid method: {method}")
+
         if target_function not in self.adapter.get_thread_functions():
             raise TargetFunctionNotFoundException(f"Target function {target_function} not found")
 
+        target_macros = []
+        if "related" in methods:
+            target_macros = list(self.related_macros_per_function[target_function])
+        else:
+            if isinstance(self.current_config.config, dict):
+                target_macros = list(self.current_config.config.keys())
+            elif isinstance(self.current_config.config, list):
+                target_macros = [item["macro"] for item in self.current_config.config]
+
         mutation_config = None
 
+        """
+            2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
+        """
         if len(self.steps) >= 2:
             # 이전 결과
             current_function_results = self.steps[-1]["function_results"]
@@ -87,5 +152,8 @@ class Fuzzer:
         if mutation_config:
             self.current_config = mutation_config
 
-        self.current_config.flip_config(self.current_config.random_select_config().get("name"))
-        self.current_config.flip_config(self.current_config.random_select_config().get("name"))
+        for i in range(threshold):
+            random_macro = random.choice(target_macros)
+            self.current_config.change_config(random_macro)
+
+        # TODO: 영향 받는것만 추가로 퍼징

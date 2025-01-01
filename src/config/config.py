@@ -5,7 +5,7 @@ from typing import Union
 
 
 class ConfigFactory:
-    def __init__(self, config_json_file: str):
+    def __init__(self, config_json_file: str, verbose: bool = False):
         self.config_json_file = os.path.abspath(config_json_file)
         self.config: Union[dict[str, dict], list[dict]] = self.load_config()
 
@@ -58,6 +58,7 @@ class ConfigFactory:
                         item["value"] = random.choice(item["value_candidates"])
                     return
             elif isinstance(item, str):
+                raise NotImplementedError("Not implemented")
                 item = self.get_config(item)
 
     def random_select_config(self):
@@ -70,7 +71,7 @@ class ConfigFactory:
         else:
             raise Exception("Invalid config type")
 
-    def create_config_header(self, dst="config.h") -> str:
+    def create_config_header(self, dst="config.h", target_configs: list = []) -> str:
         # path not exist, create dir
         try:
             if not os.path.exists(os.path.dirname(dst)):
@@ -78,17 +79,22 @@ class ConfigFactory:
         except Exception as e:
             pass
         with open(dst, "w") as file:
-            for item in self.config:
-                if isinstance(item, dict):
-                    macro = item["macro"]
-                    value = item["value"]
-                    file.write(f"#define {macro} {value}\n")
-                elif isinstance(item, str):
-                    dict_item = self.config.get(item)
-                    macro = item
-                    value = dict_item.get("value")
-                    # file.write(f"#ifdef {macro}\n")
-                    file.write(f"#undef {macro}\n")
-                    # file.write(f"#endif\n")
-                    file.write(f"#define {macro} {value}\n")
+            if isinstance(self.config, dict):
+                for item in self.config.keys():
+                    if isinstance(item, dict):
+                        macro = item["macro"]
+                        value = item["value"]
+                        if len(target_configs) > 0 and macro not in target_configs:
+                            continue
+                        file.write(f"#define {macro} {value}\n")
+                    elif isinstance(item, str):
+                        dict_item = self.config.get(item)
+                        macro = item
+                        value = dict_item.get("value")
+                        if len(target_configs) > 0 and macro not in target_configs:
+                            continue
+                        # file.write(f"#ifdef {macro}\n")
+                        file.write(f"#undef {macro}\n")
+                        # file.write(f"#endif\n")
+                        file.write(f"#define {macro} {value}\n")
         return os.path.abspath(dst)
