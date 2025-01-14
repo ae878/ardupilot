@@ -76,7 +76,15 @@ class Fuzzer:
         output_dir = f"{self.output_base_dir}/{self.adapter.name}_{self.steps_count}"
 
         # 1. create config file
-        config_file = self.current_config.create_config_header(f"{output_dir}/config.h")
+        target_configs = []
+        for key in self.related_macros_per_function.keys():
+            for macro in self.related_macros_per_function[key]:
+                target_configs.append(macro)
+
+        config_file = self.current_config.create_config_header(
+            f"{output_dir}/config.h",
+            target_configs,
+        )
 
         # 2. set config file, result dir to adapter
         self.adapter.set_analyze_result_dir(output_dir)
@@ -112,7 +120,7 @@ class Fuzzer:
     def mutate(self, target_function: str, methods: list[str] = ["related", "stack"]):
         threshold = 2
         for method in methods:
-            if method not in ["related", "stack", "code"]:
+            if method not in ["related", "stack", "code", "length"]:
                 raise ValueError(f"Invalid method: {method}")
 
         if target_function not in self.adapter.get_thread_functions():

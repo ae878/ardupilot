@@ -84,7 +84,7 @@ class FMTControllerAdapter(BaseAdapter):
         with open(build_commands_path, "r", encoding="utf-8") as file:
             self.build_commands = file.readlines()
 
-    def build(self, config: Union[ConfigFactory, None] = None) -> bool:
+    def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
         if config is None:
             raise BuildErrorException("ConfigFactory is None")
         if self.verbose:
@@ -92,7 +92,12 @@ class FMTControllerAdapter(BaseAdapter):
 
         # config를 config.h 파일로 생성
         original_cwd = os.getcwd()
-        config_file = config.create_config_header()
+        if isinstance(config, ConfigFactory):
+            config_file = config.create_config_header()
+        elif isinstance(config, str):
+            config_file = config
+        else:
+            raise BuildErrorException("Invalid config type")
 
         # 현재 디렉토리의 target/amov/icf5 디렉토리로 이동
         os.chdir(os.path.join(self.base, "target", "amov", "icf5"))

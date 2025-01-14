@@ -4,46 +4,49 @@ import random
 from typing import Union
 
 
+class Config:
+    def __init__(self, config: dict):
+        # define 매크로 명
+        self.name: str = config.get("name", "")
+        # 매크로 타입 (hex, int, str, ..)
+        self.type: str = config.get("type", "")
+        # 매크로 기본 값
+        self.value: Union[str, int, float] = config.get("value", "")
+        # 매크로 값이 될 수 있는 값들
+        self.value_candidates: list[Union[str, int, float]] = config.get("value_candidates", [])
+        # 매크로가 정의된 파일들 list
+        self.defined_in: list[str] = config.get("defined_in", [])
+        # 매크로가 사용된 파일들 list
+        self.used_in: list[str] = config.get("used_in", [])
+        # 매크로가 사용된 함수들 dict
+        self.used_in_functions: dict[str, list[str]] = config.get("used_in_functions", {})
+
+
 class ConfigFactory:
     def __init__(self, config_json_file: str, verbose: bool = False):
         self.config_json_file = os.path.abspath(config_json_file)
-        self.config: Union[dict[str, dict], list[dict]] = self.load_config()
+        self.config: dict[str, Config] = self.load_config()
 
-    def get_config(self, key) -> dict:
-        """
-        {
-            "macro": "BOARD",
-            "type": "string",
-            "value": "f0_module",
-            "value_candidates": ["f0_module", "f1_common", "f1_dual", "f1_dual_rev1", "f1_rev2", "f1_rev3"]
-        }
-        """
+    def get_config(self, key) -> Config:
         try:
             return self.config[key]
         except KeyError:
             # Todo: change custom exception
             raise Exception(f"Key {key} not found in config")
 
-    def load_config(self):
-        """
-        Config file looks like:
-        [
-            {
-                "macro": "AP_SCRIPTING_ENABLED",
-                "value": "0"
-            },
-            {
-                "macro": "LWIP_ALTCP",
-                "value": "0"
-            },
-            ...
-        ]
-        """
+    def load_config(self) -> dict[str, Config]:
 
         print(self.config_json_file)
         print("================")
+        data = {}
         with open(self.config_json_file, "r") as file:
-            return json.load(file)
+            data = json.load(file)
+
+        for key, value in data.items():
+            data[key] = Config(value)
+
+        self.config = data
+        return self.config
 
     def flip_config(self, macro_name: str) -> dict:
         macro = self.get_config(macro_name)
@@ -51,15 +54,16 @@ class ConfigFactory:
         return macro
 
     def change_config(self, macro_name: str):
-        for item in self.config:
+        if isinstance(self.config, list):
+            raise NotImplementedError("Not implemented")
+        for item in self.config.values():
             if isinstance(item, dict):
-                if item["macro"] == macro_name:
+                if item["name"] == macro_name:
                     if item.get("value_candidates"):
                         item["value"] = random.choice(item["value_candidates"])
                     return
             elif isinstance(item, str):
-                raise NotImplementedError("Not implemented")
-                item = self.get_config(item)
+                raise NotImplementedError("Not implemented (WTF?)")
 
     def random_select_config(self):
         if isinstance(self.config, list):
@@ -73,6 +77,7 @@ class ConfigFactory:
 
     def create_config_header(self, dst="config.h", target_configs: list = []) -> str:
         # path not exist, create dir
+        print(target_configs)
         try:
             if not os.path.exists(os.path.dirname(dst)):
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
@@ -88,9 +93,14 @@ class ConfigFactory:
                             continue
                         file.write(f"#define {macro} {value}\n")
                     elif isinstance(item, str):
+
                         dict_item = self.config.get(item)
                         macro = item
                         value = dict_item.get("value")
+                        # Process exception
+                        if isinstance(value, str) and "#ifdef" in value:
+                            continue
+
                         if len(target_configs) > 0 and macro not in target_configs:
                             continue
                         # file.write(f"#ifdef {macro}\n")

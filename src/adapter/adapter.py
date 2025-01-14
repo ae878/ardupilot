@@ -57,7 +57,7 @@ class BaseAdapter(ABC):
         self.config_file_src = config_file_src
 
     @abstractmethod
-    def build(self, config: Union[ConfigFactory, None] = None) -> bool:
+    def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
         """
         Batch build the script
         You can just using your own build command (such as make, cmake, etc..)

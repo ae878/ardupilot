@@ -33,10 +33,10 @@ class WidebandAdapter(BaseAdapter):
         build_commands: list[str],
         config_file_src: str = "",
         thread_functions_file_path: str = "",
-        analyze_result_dir = "./analyze_wideband",
+        analyze_result_dir="./analyze_wideband",
         verbose: bool = False,
     ):
-        '''
+        """
         WidebandAdapter class
         This class is used to build and analyze the Wideband project.
 
@@ -47,7 +47,7 @@ class WidebandAdapter(BaseAdapter):
             thread_functions_file_path (str): The path to the thread functions file.
             analyze_result_dir (str): The directory to save the analyze result.
             verbose (bool): The verbose mode.
-        '''
+        """
         self.base = base
         # Compile commands
         self.build_commands = build_commands
@@ -68,7 +68,6 @@ class WidebandAdapter(BaseAdapter):
 
         self.name = "wideband"
 
-
         # if Config file source is relative, convert it to an absolute path
         if not os.path.isabs(self.config_file_src):
             self.config_file_src = os.path.abspath(self.config_file_src)
@@ -79,15 +78,13 @@ class WidebandAdapter(BaseAdapter):
 
         with open(build_includes_path, "r", encoding="utf-8") as file:
             include_flags = file.readlines()
-            self.build_includes = [
-                flag.strip() for flag in include_flags if flag.strip()
-            ]
+            self.build_includes = [flag.strip() for flag in include_flags if flag.strip()]
 
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
 
-    def build(self, config: Union[ConfigFactory, None] = None) -> bool:
-        if config is None:
+    def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
+        if not isinstance(config, ConfigFactory):
             raise BuildErrorException("ConfigFactory is None")
         if self.verbose:
             logger.debug(f"[+] ================ Build Start ================")
@@ -105,12 +102,7 @@ class WidebandAdapter(BaseAdapter):
         # make env
         subprocess.run(["make", "-j4", f"BOARD={board_name}"], check=True)
 
-
-        
         os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True
-
-
-
