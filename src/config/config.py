@@ -24,6 +24,9 @@ class Config:
 
 class ConfigFactory:
     def __init__(self, config_json_file: str, verbose: bool = False):
+        """
+        self.config: dict[str, Config] = [Config Name]: [Config]
+        """
         self.config_json_file = os.path.abspath(config_json_file)
         self.config: dict[str, Config] = self.load_config()
 
@@ -87,16 +90,14 @@ class ConfigFactory:
             if isinstance(self.config, dict):
                 for item in self.config.keys():
                     if isinstance(item, dict):
-                        macro = item["macro"]
-                        value = item["value"]
-                        if len(target_configs) > 0 and macro not in target_configs:
-                            continue
-                        file.write(f"#define {macro} {value}\n")
+                        raise NotImplementedError("Not implemented")
                     elif isinstance(item, str):
 
                         dict_item = self.config.get(item)
-                        macro = item
-                        value = dict_item.get("value")
+                        if not dict_item:
+                            continue
+                        macro = dict_item.name
+                        value = dict_item.value
                         # Process exception
                         if isinstance(value, str) and "#ifdef" in value:
                             continue

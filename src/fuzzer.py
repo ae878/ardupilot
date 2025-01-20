@@ -5,10 +5,11 @@ import random
 
 # from mutator.mutate import related_based_mutate
 from src.ir2dot.irlib.file import File
-from src.config.config import ConfigFactory
+from src.config.config import Config, ConfigFactory
 from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
+from src.applyer.applyer import Applyer
 
 # from logging import logger
 
@@ -25,18 +26,25 @@ class Fuzzer:
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
         self.current_config: ConfigFactory = ConfigFactory(seed_macro_file)
         self.steps: list[dict] = []
+        self.applyer: Applyer = Applyer(self.base)
         self.steps_count = 0
         self.output_base_dir = "output"
         self.adapter = adapter
         self.verbose = verbose
 
         # 특정 스레드 함수의 callgraph에 해당하는 파일들
+        # self.initial_analyze 를 먼저해야함
         # dict["function_name": set[File]]
         self.related_files_per_function: dict[str, set[File]] = {}
 
         # 특정 스레드 함수가 사용하는 macro 리스트
+        # self.initial_analyze 를 먼저해야함
         # dict["function_name": set[str]]
         self.related_macros_per_function: dict[str, set[str]] = {}
+
+        # fuzzer stting
+        # 퍼징 시 매크로를 찾을때, 해당 line 이상 영향력을 끼치는 매크로들만 수정합니다.
+        self.fuzzer_line_threshold = 30
 
     def initial_analyze(self, target_function: str):
         self.adapter.initial_analyze(target_function)
@@ -62,7 +70,7 @@ class Fuzzer:
             elif isinstance(self.seed.config, dict):
                 for macro_name, macro_info in self.seed.config.items():
                     # 특정 macro가 해당 macro를 실제로 쓰는경우
-                    for filename in macro_info["used_in"]:
+                    for filename in macro_info.used_in:
                         filename = os.path.basename(filename)
                         if analyzer_file_name in filename:
                             self.related_macros_per_function[target_function].add(macro_name)
@@ -73,6 +81,7 @@ class Fuzzer:
 
     def fuzz(self):
         function_results = []
+        related_files = []
         output_dir = f"{self.output_base_dir}/{self.adapter.name}_{self.steps_count}"
 
         # 1. create config file
@@ -81,14 +90,17 @@ class Fuzzer:
             for macro in self.related_macros_per_function[key]:
                 target_configs.append(macro)
 
-        config_file = self.current_config.create_config_header(
-            f"{output_dir}/config.h",
-            target_configs,
-        )
+        if self.applyer:
+            self.applyer.apply(self.current_config, target_configs)
+
+        # config_file = self.current_config.create_config_header(
+        #     f"{output_dir}/config.h",
+        #     target_configs,
+        # )
 
         # 2. set config file, result dir to adapter
         self.adapter.set_analyze_result_dir(output_dir)
-        self.adapter.set_config_file_src(config_file)
+        # self.adapter.set_config_file_src(config_file)
 
         dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
         # build result
@@ -113,27 +125,30 @@ class Fuzzer:
         if self.verbose:
             print(f"[+] Step {self.steps_count} done. Build Result: ({build_result})")
 
+        if self.applyer:
+            self.applyer.revert()
+
     # TODO: mutate 휴리스틱 룰 정리해놓기
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
-    def mutate(self, target_function: str, methods: list[str] = ["related", "stack"]):
+    def mutate(self, target_function: str, methods: list[str] = ["related", "stack", "use-codesize"]):
         threshold = 2
         for method in methods:
-            if method not in ["related", "stack", "code", "length"]:
+            if method not in ["related", "stack", "use-codesize"]:
                 raise ValueError(f"Invalid method: {method}")
 
         if target_function not in self.adapter.get_thread_functions():
             raise TargetFunctionNotFoundException(f"Target function {target_function} not found")
 
-        target_macros = []
+        target_macros: list[Config] = []
         if "related" in methods:
             target_macros = list(self.related_macros_per_function[target_function])
         else:
             if isinstance(self.current_config.config, dict):
                 target_macros = list(self.current_config.config.keys())
             elif isinstance(self.current_config.config, list):
-                target_macros = [item["macro"] for item in self.current_config.config]
+                target_macros = [item.name for item in self.current_config.config]
 
         mutation_config = None
 

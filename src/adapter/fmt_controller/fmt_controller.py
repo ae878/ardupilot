@@ -1,16 +1,18 @@
 import os
 import os.path
-import logging
+
 import subprocess
 import copy
 import csv
 import json
 from typing import Literal, Union
+from src.utils.logging import logging as logger, console
 from src.config.config import ConfigFactory
 from src.utils.exception import BuildErrorException
 from src.adapter.adapter import BaseAdapter
-
-logger = logging.getLogger(__name__)
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.console import Console
+from rich.logging import RichHandler
 
 
 def remove_duplicate_include_flags(arguments):
@@ -85,44 +87,73 @@ class FMTControllerAdapter(BaseAdapter):
             self.build_commands = file.readlines()
 
     def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
-        if config is None:
-            raise BuildErrorException("ConfigFactory is None")
+        # if config is None:
+        #     raise BuildErrorException("ConfigFactory is None")
         if self.verbose:
-            logger.debug(f"[+] ================ Build Start ================")
+            logger.info("[bold cyan]================ Build Start ================")
 
         # config를 config.h 파일로 생성
         original_cwd = os.getcwd()
         if isinstance(config, ConfigFactory):
             config_file = config.create_config_header()
+            logger.info(f"[green]Created config header: {config_file}")
         elif isinstance(config, str):
             config_file = config
+            logger.info(f"[green]Using existing config: {config_file}")
         else:
             raise BuildErrorException("Invalid config type")
 
         # 현재 디렉토리의 target/amov/icf5 디렉토리로 이동
-        os.chdir(os.path.join(self.base, "target", "amov", "icf5"))
-        print(os.getcwd())
-        # Build
-        for build_command in self.build_commands:
-            build_command_list = build_command.strip().split(" ")
-            for idx, build_command_item in enumerate(build_command_list):
-                if build_command_item.startswith("-I") and (not build_command_list[idx + 1].startswith("-I")):
-                    # -I 다음에 -I가 아닌 다른 flag가 오면 config_file을 추가
-                    build_command_list.insert(idx + 1, f"-include")
-                    build_command_list.insert(idx + 2, config_file)
-                    break
-            print(build_command_list)
-            try:
-                subprocess.run(build_command_list, check=True)
-            except Exception as e:
-                print(" ".join(build_command_list))
-                raise e
-            # clear console
-            os.system("cls" if os.name == "nt" else "clear")
+        build_dir = os.path.join(self.base, "target", "amov", "icf5")
+        os.chdir(build_dir)
+        logger.info(f"[yellow]Changed working directory to: {build_dir}")
+
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            console=console,
+        ) as progress:
+            # Create main build task
+            build_task = progress.add_task("[cyan]Building...", total=len(self.build_commands))
+
+            # Build
+            for i, build_command in enumerate(self.build_commands, 1):
+                build_command_list = build_command.strip().split(" ")
+                # for idx, build_command_item in enumerate(build_command_list):
+                #     if build_command_item.startswith("-I") and (not build_command_list[idx + 1].startswith("-I")):
+                #         # -I 다음에 -I가 아닌 다른 flag가 오면 config_file을 추가
+                #         build_command_list.insert(idx + 1, f"-include")
+                #         build_command_list.insert(idx + 2, config_file)
+                #         break
+                # Update progress description with current command
+                progress.update(build_task, description=f"[cyan]Building ({i}/{len(self.build_commands)})")
+
+                try:
+                    # Execute build command
+                    result = subprocess.run(build_command_list, check=True, capture_output=True, text=True)
+
+                    if self.verbose:
+                        # Log command output if verbose
+                        if result.stdout:
+                            logger.debug(f"[dim]{result.stdout}")
+
+                except subprocess.CalledProcessError as e:
+                    logger.error(f"[red]Build command failed: {' '.join(build_command_list)}")
+                    if e.stdout:
+                        logger.error(f"[red]stdout: {e.stdout}")
+                    if e.stderr:
+                        logger.error(f"[red]stderr: {e.stderr}")
+                    raise BuildErrorException(f"Build failed: {str(e)}")
+                except Exception as e:
+                    logger.error(f"[red]Unexpected error during build: {str(e)}")
+                    raise e
+
+                progress.advance(build_task)
 
         # Restore cwd
         os.chdir(original_cwd)
+        logger.info("[bold cyan]================ Build End ================")
 
-        if self.verbose:
-            logger.debug(f"[+] ================ Build End ================")
         return True
