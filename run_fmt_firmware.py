@@ -18,7 +18,7 @@ adapter = FMTControllerAdapter(
 
 
 fuzzer = Fuzzer(fmt_firmware_base, "src/adapter/fmt_controller/macros.json", adapter, verbose=True)
-# fuzzer.initial_analyze("task_mavobc_entry")
+fuzzer.initial_analyze("task_mavobc_entry")
 # with open("fuzzer.json", "w") as f:
 #     json.dump(list(fuzzer.related_files_per_function["task_mavobc_entry"]), f)
 while True:

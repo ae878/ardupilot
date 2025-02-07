@@ -21,6 +21,9 @@ class Config:
         # 매크로가 사용된 함수들 dict
         self.used_in_functions: dict[str, list[str]] = config.get("used_in_functions", {})
 
+        # 매크로가 사용된 범위들
+        self.conditional_scopes: list[dict] = config.get("conditional_scopes", [])
+
 
 class ConfigFactory:
     def __init__(self, config_json_file: str, verbose: bool = False):
@@ -65,8 +68,11 @@ class ConfigFactory:
                     if item.get("value_candidates"):
                         item["value"] = random.choice(item["value_candidates"])
                     return
-            elif isinstance(item, str):
-                raise NotImplementedError("Not implemented (WTF?)")
+            if isinstance(item, Config):
+                if item.name == macro_name:
+                    if item.value_candidates:
+                        item.value = random.choice(item.value_candidates)
+                    return
 
     def random_select_config(self):
         if isinstance(self.config, list):

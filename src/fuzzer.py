@@ -11,7 +11,14 @@ from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
 from src.applyer.applyer import Applyer
 
+
 # from logging import logger
+class FuzzerStep:
+    def __init__(self, build_result: bool, function_results: list, step: int, config: ConfigFactory):
+        self.build_result = build_result
+        self.function_results = function_results
+        self.step = step
+        self.config = config
 
 
 class Fuzzer:
@@ -25,7 +32,7 @@ class Fuzzer:
         self.base = base
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
         self.current_config: ConfigFactory = ConfigFactory(seed_macro_file)
-        self.steps: list[dict] = []
+        self.steps: list[FuzzerStep] = []
         self.applyer: Applyer = Applyer(self.base)
         self.steps_count = 0
         self.output_base_dir = "output"
@@ -40,7 +47,7 @@ class Fuzzer:
         # 특정 스레드 함수가 사용하는 macro 리스트
         # self.initial_analyze 를 먼저해야함
         # dict["function_name": set[str]]
-        self.related_macros_per_function: dict[str, set[str]] = {}
+        self.related_macros_per_function: dict[str, set[Config]] = {}
 
         # fuzzer stting
         # 퍼징 시 매크로를 찾을때, 해당 line 이상 영향력을 끼치는 매크로들만 수정합니다.
@@ -73,7 +80,7 @@ class Fuzzer:
                     for filename in macro_info.used_in:
                         filename = os.path.basename(filename)
                         if analyzer_file_name in filename:
-                            self.related_macros_per_function[target_function].add(macro_name)
+                            self.related_macros_per_function[target_function].add(macro_info)
                             break
 
         print(self.related_macros_per_function)
@@ -113,12 +120,12 @@ class Fuzzer:
 
             # dump steps
             self.steps.append(
-                {
-                    "build_result": build_result,
-                    "function_results": function_results,
-                    "step": self.steps_count,
-                    "config": copy.deepcopy(self.current_config),
-                }
+                FuzzerStep(
+                    build_result=build_result,
+                    function_results=function_results,
+                    step=self.steps_count,
+                    config=copy.deepcopy(self.current_config),
+                )
             )
         self.steps_count += 1
 
@@ -142,41 +149,59 @@ class Fuzzer:
             raise TargetFunctionNotFoundException(f"Target function {target_function} not found")
 
         target_macros: list[Config] = []
+
+        # Check [related] method
+        # if related method is used, fuzz related macros with the target function
+        # else, fuzz all macros
         if "related" in methods:
             target_macros = list(self.related_macros_per_function[target_function])
         else:
-            if isinstance(self.current_config.config, dict):
-                target_macros = list(self.current_config.config.keys())
-            elif isinstance(self.current_config.config, list):
-                target_macros = [item.name for item in self.current_config.config]
+            if isinstance(self.current_config.config, list):
+                raise NotImplementedError("list type config is not supported")
+            for key, macro in self.current_config.config.items():
+                target_macros.append(macro)
+
+        # Check [use-codesize] method
+        if "use-codesize" in methods:
+            new_target_macros = []
+            for target_macro in target_macros:
+                scope_size = 0
+                for scope in target_macro.conditional_scopes:
+                    scope_size += scope["scope_size"]
+                if scope_size > self.fuzzer_line_threshold:
+                    new_target_macros.append(target_macro)
+            if len(new_target_macros) == 0:
+                raise ValueError("No macros to fuzz")
+            target_macros = new_target_macros
 
         mutation_config = None
 
         """
             2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
         """
-        if len(self.steps) >= 2:
-            # 이전 결과
-            current_function_results = self.steps[-1]["function_results"]
-            before_function_results = self.steps[-2]["function_results"]
+        if "stack" in methods:
+            if len(self.steps) >= 2:
+                # 이전 결과
+                current_function_results = self.steps[-1].function_results
+                before_function_results = self.steps[-2].function_results
 
-            current_target_function_result = [
-                result for result in current_function_results if result["name"] == target_function
-            ][0]
-            before_target_function_result = [
-                result for result in before_function_results if result["name"] == target_function
-            ][0]
+                current_target_function_result = [
+                    result for result in current_function_results if result["name"] == target_function
+                ][0]
+                before_target_function_result = [
+                    result for result in before_function_results if result["name"] == target_function
+                ][0]
 
-            if current_target_function_result["biggest_stack"] >= before_target_function_result["biggest_stack"]:
-                mutation_config = self.steps[-1]["config"]
-            else:
-                mutation_config = self.steps[-2]["config"]
+                if current_target_function_result["biggest_stack"] >= before_target_function_result["biggest_stack"]:
+                    mutation_config = self.steps[-1].config
+                else:
+                    mutation_config = self.steps[-2].config
 
-        if mutation_config:
-            self.current_config = mutation_config
+            if mutation_config:
+                self.current_config = mutation_config
 
         for i in range(threshold):
             random_macro = random.choice(target_macros)
-            self.current_config.change_config(random_macro)
+            self.current_config.change_config(random_macro.name)
 
         # TODO: 영향 받는것만 추가로 퍼징
