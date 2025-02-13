@@ -16,14 +16,12 @@ class BaseAdapter(ABC):
         self,
         base: str,
         build_commands: list[str],
-        config_file_src: str,
         thread_functions_file_path: str,
         analyze_result_dir: str,
         verbose: bool = False,
     ):
         self.base = base
         self.build_commands = build_commands
-        self.config_file_src = config_file_src
         """
         example
         [
@@ -95,7 +93,7 @@ class BaseAdapter(ABC):
         else:
             parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
             parser.parse()
-
+        print(parser.functions)
         try:
             function = parser.find_function(target_function)
             result = parser.bfs(function)

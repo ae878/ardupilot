@@ -1,0 +1,26 @@
+{
+    "SAMPLE_IF": {
+        "defined_in": [
+            "/home/ubuntu/conffuzz/sample/sample.h"
+        ],
+        "value": "10",
+        "used_in": [
+            "/home/ubuntu/conffuzz/sample/sample.c"
+        ],
+        "name": "SAMPLE_IF",
+        "type": "integer",
+        "value_candidates": []
+    },
+    "SAMPLE_IFNDEF": {
+        "defined_in": [
+            "/home/ubuntu/conffuzz/sample/sample.h"
+        ],
+        "value": "1",
+        "used_in": [
+            "/home/ubuntu/conffuzz/sample/sample.c"
+        ],
+        "name": "SAMPLE_IFNDEF",
+        "type": "integer",
+        "value_candidates": []
+    }
+}

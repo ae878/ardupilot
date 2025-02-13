@@ -9,7 +9,7 @@ from src.config.config import Config, ConfigFactory
 from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
-from src.applyer.applyer import Applyer
+from src.applier.applier import Applier
 
 
 # from logging import logger
@@ -33,7 +33,7 @@ class Fuzzer:
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
         self.current_config: ConfigFactory = ConfigFactory(seed_macro_file)
         self.steps: list[FuzzerStep] = []
-        self.applyer: Applyer = Applyer(self.base)
+        self.applyer: Applier = Applier(self.base)
         self.steps_count = 0
         self.output_base_dir = "output"
         self.adapter = adapter
@@ -54,9 +54,15 @@ class Fuzzer:
         self.fuzzer_line_threshold = 30
 
     def initial_analyze(self, target_function: str):
+        """
+        이 함수는 특정 함수에 대해 초기 분석을 진행합니다
+        소스코드를 이용해 만든 macros.json 파일을 이용해 분석을 진행합니다
+
+        이를 이용해, 특정 함수와 관련있는 파일들과, 매크로들을 찾아 저장합니다
+        """
         self.adapter.initial_analyze(target_function)
         # 방문한 함수들에 해당하는 파일들 모두 추가
-        visited_functions: list[Function] = self.adapter.initial_analyze_result["visited"]
+        visited_functions: list[Function] = self.adapter.initial_analyze_result.get("visited", [])
         if not self.related_files_per_function.get(target_function):
             self.related_files_per_function[target_function] = set()
         if not self.related_macros_per_function.get(target_function):
@@ -201,6 +207,7 @@ class Fuzzer:
                 self.current_config = mutation_config
 
         for i in range(threshold):
+            print(target_macros)
             random_macro = random.choice(target_macros)
             self.current_config.change_config(random_macro.name)
 

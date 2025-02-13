@@ -1,6 +1,8 @@
+from src.ir2dot.irlib.function import Function
 from src.ir2dot.irlib.file import File
-from src.config.config import ConfigFactory
+from src.config.config import Config, ConfigFactory
 from src.utils.logging import logging as logger
+from typing import Union
 import os
 import re
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
@@ -13,7 +15,7 @@ class FileItem:
         self.content = content
 
 
-class Applyer:
+class Applier:
     def __init__(self, base: str, apply_extensions: list[str] = [".c", ".h", ".cpp", ".hpp"]):
         """
         Applyer class
@@ -29,7 +31,7 @@ class Applyer:
         self.original_items = []
         self.apply_items = []
 
-    def apply(self, config: ConfigFactory, target_macros: list[str] = []):
+    def apply(self, config: ConfigFactory, target_macros: list[Union[str, Config]] = []):
         """
         Apply config into the project
 
@@ -52,9 +54,12 @@ class Applyer:
         if len(target_macros) > 0:
 
             total_files_set = set()
-            for function_name in target_macros:
+            for target_macro in target_macros:
                 # Find macro in ConfigFactory, add files in macro_config.used_in
-                macro_config = config.get_config(function_name)
+                if isinstance(target_macro, str):
+                    macro_config = config.get_config(target_macro)
+                else:
+                    macro_config = target_macro
                 for file_path in macro_config.used_in:
                     total_files_set.add(file_path)
             file_paths = list(total_files_set)

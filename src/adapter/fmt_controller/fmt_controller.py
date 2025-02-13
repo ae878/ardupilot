@@ -33,7 +33,6 @@ class FMTControllerAdapter(BaseAdapter):
         self,
         base: str,
         build_commands: list[str],
-        config_file_src: str = "",
         thread_functions_file_path: str = "",
         analyze_result_dir="./analyze_fmtcontroller",
         verbose: bool = False,
@@ -53,8 +52,6 @@ class FMTControllerAdapter(BaseAdapter):
         self.base = base
         # Compile commands
         self.build_commands = build_commands
-        # Config file source
-        self.config_file_src = config_file_src
         # Thread functions file path
         self.thread_functions_file_path = thread_functions_file_path
         # Build includes
@@ -69,10 +66,6 @@ class FMTControllerAdapter(BaseAdapter):
         self.function_results = []
 
         self.name = "fmt-controller"
-
-        # if Config file source is relative, convert it to an absolute path
-        if not os.path.isabs(self.config_file_src):
-            self.config_file_src = os.path.abspath(self.config_file_src)
 
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
@@ -94,14 +87,6 @@ class FMTControllerAdapter(BaseAdapter):
 
         # config를 config.h 파일로 생성
         original_cwd = os.getcwd()
-        if isinstance(config, ConfigFactory):
-            config_file = config.create_config_header()
-            logger.info(f"[green]Created config header: {config_file}")
-        elif isinstance(config, str):
-            config_file = config
-            logger.info(f"[green]Using existing config: {config_file}")
-        else:
-            raise BuildErrorException("Invalid config type")
 
         # 현재 디렉토리의 target/amov/icf5 디렉토리로 이동
         build_dir = os.path.join(self.base, "target", "amov", "icf5")

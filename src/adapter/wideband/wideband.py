@@ -31,7 +31,6 @@ class WidebandAdapter(BaseAdapter):
         self,
         base: str,
         build_commands: list[str],
-        config_file_src: str = "",
         thread_functions_file_path: str = "",
         analyze_result_dir="./analyze_wideband",
         verbose: bool = False,
@@ -51,8 +50,6 @@ class WidebandAdapter(BaseAdapter):
         self.base = base
         # Compile commands
         self.build_commands = build_commands
-        # Config file source
-        self.config_file_src = config_file_src
         # Thread functions file path
         self.thread_functions_file_path = thread_functions_file_path
         # Build includes
@@ -67,10 +64,6 @@ class WidebandAdapter(BaseAdapter):
         self.function_results = []
 
         self.name = "wideband"
-
-        # if Config file source is relative, convert it to an absolute path
-        if not os.path.isabs(self.config_file_src):
-            self.config_file_src = os.path.abspath(self.config_file_src)
 
         # build_includes.txt 파일의 절대 경로 생성
         current_dir = os.path.dirname(os.path.abspath(__file__))

@@ -15,8 +15,10 @@
 ㄴ [?] wideband-controller (rusefi) - deprecated
 [x] heuristic rules - Check codesize when fuzzing
 [x] (low priority) ir parser optimization
-[ ] Builder (Compile) opti
+[ ] Builder (Compile) optimization
 [ ] writing paper (Deadline for CCS ~ Apr. 15)
 
-* Heuristic rules 정리해서 보내기 (이미 적용된것, TODOs)
-* ardupilot 적용
+
+1. build success rate
+2. code size (of the binary)
+3. maximum stack size (of each thread function)
