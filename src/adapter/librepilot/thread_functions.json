@@ -1,0 +1,166 @@
+[
+  {
+    "thread": "writeTask",
+    "size": 512
+  },
+  {
+    "thread": "eventTask",
+    "size": 1000
+  },
+  {
+    "thread": "pathPlannerTask",
+    "size": 1024
+  },
+  {
+    "thread": "updatePathDesired",
+    "size": 1024
+  },
+  {
+    "thread": "manualControlTask",
+    "size": 800
+  },
+  {
+    "thread": "CameraControlTask",
+    "size": 512
+  },
+  {
+    "thread": "altitudeHoldTask",
+    "size": 800
+  },
+  {
+    "thread": "stabilizationOuterloopTask",
+    "size": 800
+  },
+  {
+    "thread": "stabilizationInnerloopTask",
+    "size": 800
+  },
+  {
+    "thread": "pathFollowerTask",
+    "size": 2048
+  },
+  {
+    "thread": "main",
+    "size": 1024
+  },
+  {
+    "thread": "actuatorTask",
+    "size": 1020
+  },
+  {
+    "thread": "com2UsbBridgeTask",
+    "size": 260
+  },
+  {
+    "thread": "usb2ComBridgeTask",
+    "size": 316
+  },
+  {
+    "thread": "SensorsTask",
+    "size": 1000
+  },
+  {
+    "thread": "uavoFrSKYSensorHubBridgeTask",
+    "size": 672
+  },
+  {
+    "thread": "AutoTuneTask",
+    "size": 1340
+  },
+  {
+    "thread": "gpsTask",
+    "size": 1024
+  },
+  {
+    "thread": "telemetryTxTask",
+    "size": 800
+  },
+  {
+    "thread": "telemetryRxTask",
+    "size": 800
+  },
+  {
+    "thread": "telemetryTxTask",
+    "size": 800
+  },
+  {
+    "thread": "telemetryRxTask",
+    "size": 800
+  },
+  {
+    "thread": "AttitudeTask",
+    "size": 540
+  },
+  {
+    "thread": "telemetryTxTask",
+    "size": 150
+  },
+  {
+    "thread": "telemetryRxTask",
+    "size": 150
+  },
+  {
+    "thread": "uavoMavlinkBridgeTask",
+    "size": 696
+  },
+  {
+    "thread": "uavoMSPBridgeTask",
+    "size": 768
+  },
+  {
+    "thread": "receiverTask",
+    "size": 840
+  },
+  {
+    "thread": "systemTask",
+    "size": 1536
+  },
+  {
+    "thread": "overoSyncTask",
+    "size": 512
+  },
+  {
+    "thread": "magbaroTask",
+    "size": 600
+  },
+  {
+    "thread": "osdgenTask",
+    "size": 4096
+  },
+  {
+    "thread": "osdinputTask",
+    "size": 1024
+  },
+  {
+    "thread": "WavPlayerTask",
+    "size": 1600
+  },
+  {
+    "thread": "flightPlanTask",
+    "size": 1500
+  },
+  {
+    "thread": "MkSerialTask",
+    "size": 1024
+  },
+  {
+    "thread": "fault_task",
+    "size": 1024
+  },
+  {
+    "thread": "telemRadioTxTask",
+    "size": 150
+  },
+  {
+    "thread": "telemRadioRxTask",
+    "size": 150
+  },
+  {
+    "thread": "PPMInputTask",
+    "size": 150
+  },
+  {
+    "thread": "gpspSystemTask",
+    "size": 450
+  }
+]
