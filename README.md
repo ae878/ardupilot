@@ -1,4 +1,24 @@
 
-* Stack size
-* Build T/F
-* Binary Size
+# Configuration Fuzzer - Conffuzz
+
+### Usage
+1. Use preprocessor/macro-parser for parsing macros
+2. Make a custom script - use `run.py`
+
+### TODOs
+[x] Use callgraph to find related macros
+[x] Add more adapters
+ㄴ [ ] rusefi
+ㄴ [x] FMT-firmware
+ㄴ [ ] librepilot
+ㄴ [?] ardupilot - deprecated
+ㄴ [?] wideband-controller (rusefi) - deprecated
+[x] heuristic rules - Check codesize when fuzzing
+[x] (low priority) ir parser optimization
+[ ] Builder (Compile) optimization
+[ ] writing paper (Deadline for CCS ~ Apr. 15)
+
+
+1. build success rate
+2. code size (of the binary)
+3. maximum stack size (of each thread function)

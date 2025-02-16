@@ -1,0 +1,106 @@
+[
+    {
+        "thread": "usb_msd_worker",
+        "size": "256"
+    },
+    {
+        "thread": "usb_debug_thread",
+        "size": "512"
+    },
+    {
+        "thread": "rfIntThread",
+        "size": "128"
+    },
+    {
+        "thread": "rfEvtThread",
+        "size": "128"
+    },
+    {
+        "thread": "flashWriteThread",
+        "size": "400"
+    },
+    {
+        "thread": "AuxOutThread",
+        "size": "256"
+    },
+    {
+        "thread": "CanTxThread",
+        "size": "256"
+    },
+    {
+        "thread": "HeaterThread",
+        "size": "256"
+    },
+    {
+        "thread": "IndicationThread",
+        "size": "128"
+    },
+    {
+        "thread": "PumpThread",
+        "size": "256"
+    },
+    {
+        "thread": "SamplingThread",
+        "size": "256"
+    },
+    {
+        "thread": "UartThread",
+        "size": "512"
+    },
+    {
+        "thread": "BootloaderThread",
+        "size": "512"
+    },
+    {
+        "thread": "StaticThreadTaskAdapter",
+        "size": "99999999"
+    },
+    {
+        "thread": "kLineThread",
+        "size": "400"
+    },
+    {
+        "thread": "MMCmonThread",
+        "size": "1200"
+    },
+    {
+        "thread": "drv8860_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "l9779_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "mc33810_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "mc33972_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "tle6240_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "tle8888_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "tle9104_driver_thread",
+        "size": "256"
+    },
+    {
+        "thread": "SentDecoderThread",
+        "size": "256"
+    },
+    {
+        "thread": "GpsThreadEntryPoint",
+        "size": "400"
+    },
+    {
+        "thread": "hipThread",
+        "size": "400"
+    }
+]

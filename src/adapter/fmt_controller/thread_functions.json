@@ -1,0 +1,46 @@
+[
+    {
+      "thread": "task_status_entry",
+      "size": 4096
+    },
+    {
+      "thread": "task_mavgcs_entry",
+      "size": 8192
+    },
+    {
+      "thread": "task_mavobc_entry",
+      "size": 4096
+    },
+    {
+      "thread": "task_logger_entry",
+      "size": 2048
+    },
+    {
+      "thread": "task_vehicle_entry",
+      "size": 5120
+    },
+    {
+      "thread": "task_fmtio_entry",
+      "size": 2048
+    },
+    {
+      "thread": "gps_probe_entry",
+      "size": 4096
+    },
+    {
+      "thread": "rt_init_thread_entry",
+      "size": 8192
+    },
+    {
+      "thread": "workqueue_executor",
+      "size": 4096
+    },
+    {
+      "thread": "thread_entry",
+      "size": 8192
+    },
+    {
+      "thread": "task_dronecan_entry",
+      "size": 40960
+    }
+]
