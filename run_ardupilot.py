@@ -1,25 +1,26 @@
-from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
+from src.adapter.ardupilot.ardupilot import ArdupilotAdapter
 from src.config.config import ConfigFactory
 from src.fuzzer import Fuzzer
 import json
 import time
 
-fmt_firmware_base = "/home/ubuntu/lab/FMT-Firmware"
-thread_functions_file_path = "src/adapter/fmt_controller/thread_functions.json"
+ardupilot_base = "/home/ubuntu/lab/ardupilot/build/R9Pilot"
+thread_functions_file_path = "src/adapter/ardupilot/thread_functions.json"
 
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/fmt_controller/macros.json")
+config = ConfigFactory("src/adapter/ardupilot/macros.json")
 # header_file = config.create_config_header()
 
+with open("src/adapter/ardupilot/build_commands.json", "r") as f:
+    build_commands = json.load(f)
 
-build_commands = []
-adapter = FMTControllerAdapter(
-    fmt_firmware_base, build_commands, thread_functions_file_path=thread_functions_file_path, verbose=True
+adapter = ArdupilotAdapter(
+    ardupilot_base, build_commands, thread_functions_file_path=thread_functions_file_path, verbose=True
 )
 
 
-fuzzer = Fuzzer(fmt_firmware_base, "src/adapter/fmt_controller/macros.json", adapter, verbose=True)
-fuzzer.initial_analyze("task_mavobc_entry")
+fuzzer = Fuzzer(ardupilot_base, "src/adapter/ardupilot/macros.json", adapter, verbose=True)
+fuzzer.initial_analyze("AP_InertialSensor_ADIS1647x::loop", initial_analyze_result_dir="initial_analyze_ardupilot")
 # with open("fuzzer.json", "w") as f:
 #     json.dump(list(fuzzer.related_files_per_function["task_mavobc_entry"]), f)
 while True:
@@ -29,4 +30,4 @@ while True:
     print(f"Time taken: {end_time - start_time} seconds")
 
     input("Press Enter to continue...")
-    fuzzer.mutate("task_mavobc_entry", methods=["related", "stack"])
+    fuzzer.mutate("AP_InertialSensor_ADIS1647x::loop", methods=["related", "stack"])

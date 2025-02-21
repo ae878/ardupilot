@@ -1,0 +1,37 @@
+[
+    {
+      "thread": "synthThread",
+      "thread__1": "synthThread",
+      "size": 1024
+    },
+    {
+      "thread": "ThreadReadButtons",
+      "thread__1": "ThreadReadButtons",
+      "size": 128
+    },
+    {
+      "thread": "synthThread",
+      "thread__1": "synthThread",
+      "size": 1024
+    },
+    {
+      "thread": "AuxJack",
+      "thread__1": "AuxJack",
+      "size": 128
+    },
+    {
+      "thread": "ThreadSend",
+      "thread__1": "ThreadSend",
+      "size": 512
+    },
+    {
+      "thread": "Thread1",
+      "thread__1": "Thread1",
+      "size": 128
+    },
+    {
+      "thread": "main",
+      "thread__1": "main",
+      "size": 1024
+    }
+  ]

@@ -76,14 +76,46 @@ class ArdupilotAdapter(BaseAdapter):
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
 
+        # Build cache to store last modified times
+        self.build_cache = {}
+
+    def _should_rebuild(self, output_file: str, command: list[str]) -> bool:
+        """
+        Check if rebuilding is necessary by comparing source and object file timestamps
+        """
+        # If output doesn't exist, rebuild is needed
+        if not os.path.exists(output_file):
+            return True
+
+        # Find source file from command (usually the last argument)
+        source_file = command[-1]
+        if not os.path.exists(source_file):
+            return True
+
+        # Check if source was modified after the output was created
+        source_mtime = os.path.getmtime(source_file)
+        output_mtime = os.path.getmtime(output_file)
+
+        # Check dependencies if .d file exists
+        dep_file = output_file + ".d"
+        if os.path.exists(dep_file):
+            with open(dep_file, "r") as f:
+                # Parse dependency file
+                deps = f.read().replace("\\\n", "").split(":")[1].split()
+                for dep in deps:
+                    if os.path.exists(dep):
+                        dep_mtime = os.path.getmtime(dep)
+                        if dep_mtime > output_mtime:
+                            return True
+
+        return source_mtime > output_mtime
+
     def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
         if self.verbose:
-            logger.debug(f"[+] ================ Build Start ================")
+            logger.debug("[+] ================ Build Start ================")
         original_cwd = os.getcwd()
-        # Change the cwd to the base directory
         os.chdir(self.base)
 
-        # Create a progress bar
         with Progress(
             SpinnerColumn(),
             TextColumn("[cyan]Building..."),
@@ -93,42 +125,57 @@ class ArdupilotAdapter(BaseAdapter):
         ) as progress:
             task = progress.add_task("[cyan]Building...", total=len(self.build_commands))
 
-            # Run the build commands
             for build_command in self.build_commands:
-                comiple_arguments = copy.deepcopy(build_command)
-                output_directory = ""
+                compile_arguments = copy.deepcopy(build_command)
+                output_file = ""
 
-                # 작업 디렉토리 확인하기
-                for argument in comiple_arguments:
+                # Find output file path
+                for i, argument in enumerate(compile_arguments):
                     if argument.startswith("-o"):
-                        output_directory = argument[2:]
-                        output_directory = os.path.dirname(output_directory)
+                        if argument == "-o":
+                            output_file = compile_arguments[i + 1]
+                        else:
+                            output_file = argument[2:]
                         break
 
+                # Add -MMD flag if not present to generate dependency files
+                if "-MMD" not in compile_arguments:
+                    # Find the source file (last argument) and insert -MMD before it
+                    source_file_index = len(compile_arguments) - 1
+                    compile_arguments.insert(source_file_index, "-MMD")
+
+                output_directory = os.path.dirname(output_file)
                 os.makedirs(output_directory, exist_ok=True)
+
+                # Check if rebuild is necessary
+                if not self._should_rebuild(output_file, compile_arguments):
+                    if self.verbose:
+                        logger.debug(f"[+] Skipping up-to-date file: {output_file}")
+                    progress.update(task, advance=1)
+                    continue
 
                 if self.verbose:
                     logger.debug(f"[+] Directory: {output_directory}")
-                    logger.debug(f"[+] Command: {build_command}")
+                    logger.debug(f"[+] Command: {compile_arguments}")
 
                 try:
                     result = subprocess.run(
-                        comiple_arguments,
+                        compile_arguments,
                         check=True,
                         text=True,
                         capture_output=True,
                         cwd=self.base,
                     )
                     if result.returncode == -1:
-                        logger.error(f"[-] Command failed: {build_command}")
-                        raise BuildErrorException(f"Command failed: {build_command}")
-                except subprocess.CalledProcessError as e:
-                    logger.error(f"[-] Command failed: {build_command}")
-                    raise BuildErrorException(f"Command failed: {build_command}")
+                        logger.error(f"[-] Command failed: {compile_arguments}")
+                        raise BuildErrorException(f"Command failed: {compile_arguments}")
+                except subprocess.CalledProcessError:
+                    logger.error(f"[-] Command failed: {compile_arguments}")
+                    raise BuildErrorException(f"Command failed: {compile_arguments}")
                 finally:
-                    progress.update(task, advance=1)  # Update the progress bar
+                    progress.update(task, advance=1)
 
         os.chdir(original_cwd)
         if self.verbose:
-            logger.debug(f"[+] ================ Build End ================")
+            logger.debug("[+] ================ Build End ================")
         return True

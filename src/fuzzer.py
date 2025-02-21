@@ -53,14 +53,14 @@ class Fuzzer:
         # 퍼징 시 매크로를 찾을때, 해당 line 이상 영향력을 끼치는 매크로들만 수정합니다.
         self.fuzzer_line_threshold = 30
 
-    def initial_analyze(self, target_function: str):
+    def initial_analyze(self, target_function: str, initial_analyze_result_dir: str = "initial_analyze"):
         """
         이 함수는 특정 함수에 대해 초기 분석을 진행합니다
         소스코드를 이용해 만든 macros.json 파일을 이용해 분석을 진행합니다
 
         이를 이용해, 특정 함수와 관련있는 파일들과, 매크로들을 찾아 저장합니다
         """
-        self.adapter.initial_analyze(target_function)
+        self.adapter.initial_analyze(target_function, initial_analyze_result_dir)
         # 방문한 함수들에 해당하는 파일들 모두 추가
         visited_functions: list[Function] = self.adapter.initial_analyze_result.get("visited", [])
         if not self.related_files_per_function.get(target_function):
