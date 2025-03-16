@@ -5,6 +5,9 @@
 1. Use preprocessor/macro-parser for parsing macros
 2. Make a custom script - use `run.py`
 
+### 
+1. run analyze_conditions.py --source-dir /~/ardupilot 
+
 ### TODOs
 [x] Use callgraph to find related macros
 [x] Add more adapters
