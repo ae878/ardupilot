@@ -8,17 +8,20 @@
 ### TODOs
 [x] Use callgraph to find related macros
 [x] Add more adapters
-ㄴ [ ] rusefi
+ㄴ [x] rusefi
 ㄴ [x] FMT-firmware
-ㄴ [ ] librepilot
-ㄴ [?] ardupilot - deprecated
-ㄴ [?] wideband-controller (rusefi) - deprecated
+ㄴ [x] librepilot
+ㄴ [?] ardupilot
+ㄴ [x] wideband-controller (rusefi)
 [x] heuristic rules - Check codesize when fuzzing
 [x] (low priority) ir parser optimization
-[ ] Builder (Compile) optimization
+[x] Builder (Compile) optimization
 [ ] writing paper (Deadline for CCS ~ Apr. 15)
 
 
 1. build success rate
 2. code size (of the binary)
 3. maximum stack size (of each thread function)
+
+
+- Zephyr-based program (ZMK)

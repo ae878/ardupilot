@@ -6,29 +6,30 @@ import copy
 import csv
 import json
 from typing import Literal, Union
-from src.utils.logging import logging as logger
+from src.utils.logging import logging as logger, console
 from src.utils.exception import BuildErrorException
 from src.adapter.adapter import BaseAdapter
 from src.config.config import ConfigFactory
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 
 
-class LibrepilotAdapter(BaseAdapter):
+class MakeBaseAdapter(BaseAdapter):
     def __init__(
         self,
         base: str,
         build_commands: list[str],
         thread_functions_file_path: str = "",
-        analyze_result_dir: str = "./analyze_librepilot",
+        analyze_result_dir: str = "./analyze_make",
         verbose: bool = False,
     ):
         """
-        LibrepilotAdapter class
-        This class is used to build and analyze the Librepilot project.
+        MakeBaseAdapter class
+        This class is generally used to build the project using make command.
 
         Args:
-            base (str): The base directory of the Ardupilot project.
-            build_commands (list[str]): The build commands to build the Ardupilot project.
-            config_file_src (str): The source file of the Ardupilot project configuration file.
+            base (str): The base directory of the project.
+            build_commands (list[str]): The build commands to build the project.
+            config_file_src (str): The source file of the project configuration file.
             thread_functions_file_path (str): The path to the thread functions file.
             analyze_result_dir (str): The directory to save the analyze result.
             verbose (bool): The verbose mode.
@@ -49,7 +50,7 @@ class LibrepilotAdapter(BaseAdapter):
         # Function results
         self.function_results = []
 
-        self.name = "librepilot"
+        self.name = "make"
 
         # build_includes.txt 파일의 절대 경로 생성
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -57,7 +58,7 @@ class LibrepilotAdapter(BaseAdapter):
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
 
-    def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
+    def build(self, config: Union[ConfigFactory, str, None] = None, additional_args: list[str] = []) -> bool:
         if self.verbose:
             logger.debug(f"[+] ================ Build Start ================")
         original_cwd = os.getcwd()
@@ -65,10 +66,8 @@ class LibrepilotAdapter(BaseAdapter):
         os.chdir(self.base)
 
         # Run as subprocess
-        try:
-            subprocess.run(["make", "fw_sparky2"], check=True)
-        except subprocess.CalledProcessError as e:
-            raise BuildErrorException(f"Build failed: {e}")
+        subprocess.run(["make", *additional_args], check=True)
+
         os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")

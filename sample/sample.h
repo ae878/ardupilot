@@ -1,6 +1,6 @@
 #ifndef __SAMPLE_H__
 
-#define SAMPLE_IF 10
+#define SAMPLE_IF 11
 
 #define SAMPLE_IFNDEF 1
 
