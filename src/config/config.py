@@ -7,22 +7,35 @@ from typing import Union
 class Config:
     def __init__(self, config: dict):
         # define 매크로 명
+        # name of #define
         self.name: str = config.get("name", "")
         # 매크로 타입 (hex, int, str, ..)
+        # type of #define
         self.type: str = config.get("type", "")
         # 매크로 기본 값
+        # default value of #define
         self.value: Union[str, int, float] = config.get("value", "")
         # 매크로 값이 될 수 있는 값들
+        # value candidates of #define
         self.value_candidates: list[Union[str, int, float]] = config.get("value_candidates", [])
         # 매크로가 정의된 파일들 list
+        # files that #define is defined in
         self.defined_in: list[str] = config.get("defined_in", [])
         # 매크로가 사용된 파일들 list
+        # files that #define is used in
+        # users
         self.used_in: list[str] = config.get("used_in", [])
         # 매크로가 사용된 함수들 dict
+        # functions that #define is used in
         self.used_in_functions: dict[str, list[str]] = config.get("used_in_functions", {})
 
         # 매크로가 사용된 범위들
+        # scopes that #define is used in
         self.conditional_scopes: list[dict] = config.get("conditional_scopes", [])
+
+        # The child/parent of the config (dependent between nodes)
+        self.child_configs: list[Config] = config.get("child_configs", [])
+        self.parent_configs: list[Config] = config.get("parent_configs", [])
 
 
 class ConfigFactory:
