@@ -82,10 +82,21 @@ class ArdupilotAdapter(BaseAdapter):
     def _should_rebuild(self, output_file: str, command: list[str]) -> bool:
         """
         Check if rebuilding is necessary by comparing source and object file timestamps
+
+        Args:
+            output_file (str): Path to the output file
+            command (list[str]): List of compilation command arguments
+
+        Returns:
+            bool: True if rebuild is needed, False otherwise
         """
         # If output doesn't exist, rebuild is needed
         if not os.path.exists(output_file):
             return True
+
+        # Ensure command is a list
+        if not isinstance(command, list):
+            command = list(command) if hasattr(command, "__iter__") else [str(command)]
 
         # Find source file from command (usually the last argument)
         source_file = command[-1]
@@ -126,7 +137,14 @@ class ArdupilotAdapter(BaseAdapter):
             task = progress.add_task("[cyan]Building...", total=len(self.build_commands))
 
             for build_command in self.build_commands:
-                compile_arguments = copy.deepcopy(build_command)
+                # Ensure compile_arguments is a list
+                if isinstance(build_command, dict):
+                    if build_command.get("arguments"):
+                        compile_arguments = build_command.get("arguments")
+                    else:
+                        raise ValueError("Invalid build command")
+                else:
+                    raise ValueError("Invalid build command")
                 output_file = ""
 
                 # Find output file path

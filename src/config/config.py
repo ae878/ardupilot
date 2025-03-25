@@ -2,6 +2,8 @@ import json
 import os
 import random
 from typing import Union
+from src.config.conditional_config import Condition
+from src.utils.logging import logger
 
 
 class Config:
@@ -39,12 +41,16 @@ class Config:
 
 
 class ConfigFactory:
-    def __init__(self, config_json_file: str, verbose: bool = False):
+    def __init__(
+        self, config_json_file: str, condition: Union[Condition, None] = None, condition_threshold: float = 0.5
+    ):
         """
         self.config: dict[str, Config] = [Config Name]: [Config]
         """
         self.config_json_file = os.path.abspath(config_json_file)
         self.config: dict[str, Config] = self.load_config()
+        self.condition: Union[Condition, None] = condition
+        self.condition_threshold: float = condition_threshold
 
     def get_config(self, key) -> Config:
         try:
@@ -54,9 +60,6 @@ class ConfigFactory:
             raise Exception(f"Key {key} not found in config")
 
     def load_config(self) -> dict[str, Config]:
-
-        print(self.config_json_file)
-        print("================")
         data = {}
         with open(self.config_json_file, "r") as file:
             data = json.load(file)
@@ -97,7 +100,29 @@ class ConfigFactory:
         else:
             raise Exception("Invalid config type")
 
+    def validate_configuration(self, condition_threshold: float = -1):
+        satisfied_count = 0
+        non_satisfied_count = 0
+        if condition_threshold == -1:
+            condition_threshold = self.condition_threshold
+
+        if not self.condition:
+            return True
+
+        for macro in self.config.values():
+            if macro.name in self.condition.condition_analysis:
+                if macro.value not in self.condition.condition_analysis[macro.name].satisfying_values:
+                    non_satisfied_count += 1
+                else:
+                    satisfied_count += 1
+
+        if satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold:
+            return True
+        else:
+            return False
+
     def create_config_header(self, dst="config.h", target_configs: list = []) -> str:
+        raise NotImplementedError("Deprecated Function")
         # path not exist, create dir
         print(target_configs)
         try:

@@ -1,7 +1,6 @@
 from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
 from src.config.config import ConfigFactory
 from src.fuzzer import Fuzzer
-import json
 import time
 
 fmt_firmware_base = "/home/ubuntu/lab/FMT-Firmware"

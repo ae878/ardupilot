@@ -85,7 +85,6 @@ class BaseAdapter(ABC):
 
         # parse the project
         parser = None
-        print(output_dir)
         if os.path.exists(f"{output_dir}/phase2.pkl"):
             parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
             parser.load_from_pkl(f"phase2.pkl")

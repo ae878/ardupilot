@@ -43,8 +43,7 @@ class FlipperZeroAdapter(BaseAdapter):
 
         Args:
             base (str): The base directory of the project.
-            build_commands (list[str]): The build commands to build the Wideband project.
-            config_file_src (str): The source file of the FMT-Controller project configuration file.
+            build_commands (list[str]): The build commands to build the project.
             thread_functions_file_path (str): The path to the thread functions file.
             analyze_result_dir (str): The directory to save the analyze result.
             verbose (bool): The verbose mode.
@@ -70,27 +69,18 @@ class FlipperZeroAdapter(BaseAdapter):
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
 
-        # TODO: initial build and get build commands
-        self.build_commands = []
-
-        # build_includes.txt 파일의 절대 경로 생성
+        # Load build commands from JSON file
         current_dir = os.path.dirname(os.path.abspath(__file__))
         build_commands_path = os.path.join(current_dir, "build_commands.json")
         with open(build_commands_path, "r", encoding="utf-8") as file:
             self.build_commands = json.load(file)
 
     def build(self, config: Union[ConfigFactory, str, None] = None) -> bool:
-        # if config is None:
-        #     raise BuildErrorException("ConfigFactory is None")
         if self.verbose:
             logger.info("[bold cyan]================ Build Start ================")
 
-        # config를 config.h 파일로 생성
         original_cwd = os.getcwd()
-
-        # 현재 디렉토리의 target/amov/icf5 디렉토리로 이동
         build_dir = os.path.join(self.base)
-
         os.chdir(build_dir)
 
         with Progress(
@@ -103,21 +93,30 @@ class FlipperZeroAdapter(BaseAdapter):
             # Create main build task
             build_task = progress.add_task("[cyan]Building...", total=len(self.build_commands))
 
-            # Build
+            # Build each command from build_commands.json
             for i, build_command in enumerate(self.build_commands, 1):
-                build_command_list = build_command.strip().split(" ")
-                # for idx, build_command_item in enumerate(build_command_list):
-                #     if build_command_item.startswith("-I") and (not build_command_list[idx + 1].startswith("-I")):
-                #         # -I 다음에 -I가 아닌 다른 flag가 오면 config_file을 추가
-                #         build_command_list.insert(idx + 1, f"-include")
-                #         build_command_list.insert(idx + 2, config_file)
-                #         break
-                # Update progress description with current command
-                progress.update(build_task, description=f"[cyan]Building ({i}/{len(self.build_commands)})")
+                # Get command components
+                command = build_command["command"]
+                directory = build_command["directory"]
+                output = build_command["output"]
+
+                # Create output directory if it doesn't exist
+                os.makedirs(os.path.dirname(output), exist_ok=True)
+
+                # Split command into list
+                build_command_list = command.split()
+
+                # Update progress description
+                progress.update(
+                    build_task,
+                    description=f"[cyan]Building {os.path.basename(output)} ({i}/{len(self.build_commands)})",
+                )
 
                 try:
                     # Execute build command
-                    result = subprocess.run(build_command_list, check=True, capture_output=True, text=True)
+                    result = subprocess.run(
+                        build_command_list, check=True, capture_output=True, text=True, cwd=directory
+                    )
 
                     if self.verbose:
                         # Log command output if verbose
@@ -137,7 +136,7 @@ class FlipperZeroAdapter(BaseAdapter):
 
                 progress.advance(build_task)
 
-        # Restore cwd
+        # Restore original working directory
         os.chdir(original_cwd)
         logger.info("[bold cyan]================ Build End ================")
 

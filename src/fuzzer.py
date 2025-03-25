@@ -2,6 +2,7 @@ import copy
 import os.path
 import os
 import random
+from typing import Union
 
 # from mutator.mutate import related_based_mutate
 from src.ir2dot.irlib.file import File
@@ -10,6 +11,7 @@ from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
 from src.applier.applier import Applier
+from src.utils.logging import logger
 
 
 # from logging import logger
@@ -25,13 +27,17 @@ class Fuzzer:
     def __init__(
         self,
         base: str,
-        seed_macro_file: str,
         adapter: BaseAdapter,
+        seed_macro_file: Union[str, None] = None,
+        config: Union[ConfigFactory, None] = None,
         verbose: bool = False,
     ):
+        if not seed_macro_file and not config:
+            raise ValueError("seed_macro_file or config must be provided")
+
         self.base = base
-        self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
-        self.current_config: ConfigFactory = ConfigFactory(seed_macro_file)
+        self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
+        self.current_config: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
         self.steps: list[FuzzerStep] = []
         self.applyer: Applier = Applier(self.base)
         self.steps_count = 0
@@ -60,6 +66,7 @@ class Fuzzer:
 
         이를 이용해, 특정 함수와 관련있는 파일들과, 매크로들을 찾아 저장합니다
         """
+        logger.info(f"[+] Initial analyze of the fuzzer {self.base}")
         self.adapter.initial_analyze(target_function, initial_analyze_result_dir)
         # 방문한 함수들에 해당하는 파일들 모두 추가
         visited_functions: list[Function] = self.adapter.initial_analyze_result.get("visited", [])
@@ -89,7 +96,6 @@ class Fuzzer:
                             self.related_macros_per_function[target_function].add(macro_info)
                             break
 
-        print(self.related_macros_per_function)
         # exit()
 
     def fuzz(self):
@@ -140,6 +146,10 @@ class Fuzzer:
 
         if self.applyer:
             self.applyer.revert()
+
+    def change_config_with_seed(self, config: ConfigFactory):
+        self.current_config = config
+        self.seed = config
 
     # TODO: mutate 휴리스틱 룰 정리해놓기
     # Stage 1. 코드 파싱 단계
