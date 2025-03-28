@@ -47,6 +47,7 @@ class ConfigFactory:
         """
         self.config: dict[str, Config] = [Config Name]: [Config]
         """
+        print(config_json_file)
         self.config_json_file = os.path.abspath(config_json_file)
         self.config: dict[str, Config] = self.load_config()
         self.condition: Union[Condition, None] = condition
@@ -75,19 +76,40 @@ class ConfigFactory:
         macro["value"] = "1" if macro["value"] == "0" else "0"
         return macro
 
-    def change_config(self, macro_name: str):
+    def change_config(self, macro_name: str, value: Union[str, int, float] = None):
+        """
+        매크로의 값을 변경하는 함수입니다.
+
+        Args:
+            macro_name (str): 변경할 매크로의 이름
+            value (Union[str, int, float], optional): 변경할 값. None인 경우 value_candidates에서 랜덤하게 선택됩니다.
+
+        Raises:
+            NotImplementedError: config가 list 타입일 경우 발생
+        """
         if isinstance(self.config, list):
             raise NotImplementedError("Not implemented")
+
+        # config의 모든 item을 순회
         for item in self.config.values():
+            # item이 dict 타입인 경우
             if isinstance(item, dict):
                 if item["name"] == macro_name:
                     if item.get("value_candidates"):
-                        item["value"] = random.choice(item["value_candidates"])
+                        if value:
+                            item["value"] = value  # 지정된 값으로 변경
+                        else:
+                            item["value"] = random.choice(item["value_candidates"])  # 랜덤 값으로 변경
                     return
+
+            # item이 Config 타입인 경우
             if isinstance(item, Config):
                 if item.name == macro_name:
                     if item.value_candidates:
-                        item.value = random.choice(item.value_candidates)
+                        if value:
+                            item.value = value  # 지정된 값으로 변경
+                        else:
+                            item.value = random.choice(item.value_candidates)  # 랜덤 값으로 변경
                     return
 
     def random_select_config(self):
@@ -153,3 +175,9 @@ class ConfigFactory:
                         # file.write(f"#endif\n")
                         file.write(f"#define {macro} {value}\n")
         return os.path.abspath(dst)
+
+    def dump_config(self) -> dict:
+        data = {}
+        for macro in self.config.values():
+            data[macro.name] = macro.value
+        return data

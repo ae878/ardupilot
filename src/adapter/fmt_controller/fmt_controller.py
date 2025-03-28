@@ -36,6 +36,7 @@ class FMTControllerAdapter(BaseAdapter):
         thread_functions_file_path: str = "",
         analyze_result_dir="./analyze_fmtcontroller",
         verbose: bool = False,
+        build_base: str = "",
     ):
         """
         FMTControllerAdapter class
@@ -64,6 +65,8 @@ class FMTControllerAdapter(BaseAdapter):
         self.thread_functions = []
         # Function results
         self.function_results = []
+        # Build base
+        self.build_base = build_base
 
         self.name = "fmt-controller"
 

@@ -19,6 +19,7 @@ class BaseAdapter(ABC):
         thread_functions_file_path: str,
         analyze_result_dir: str,
         verbose: bool = False,
+        build_base: str = "",
     ):
         self.base = base
         self.build_commands = build_commands
@@ -31,12 +32,12 @@ class BaseAdapter(ABC):
             }
         ]
         """
-        self.thread_functions: list[dict] = []
+        self.thread_functions: list[dict[str, str]] = []
         self.thread_functions_file_path = thread_functions_file_path
         self.analyze_result_dir = analyze_result_dir
         self.verbose = verbose
         self.name = ""
-
+        self.build_base = build_base
         # For the analyzer
         self.function_results: list[dict] = []
         self.visited_functions: dict[str, set] = {}
@@ -92,7 +93,7 @@ class BaseAdapter(ABC):
         else:
             parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
             parser.parse()
-        print(parser.functions)
+        # print(parser.functions)
         try:
             function = parser.find_function(target_function)
             result = parser.bfs(function)
@@ -112,8 +113,7 @@ class BaseAdapter(ABC):
         Analyze the project by given build result
 
         """
-        if self.verbose:
-            logger.debug(f"[+] ================ Analyze Start ================")
+        logger.debug(f"[+] ================ Analyze Start ================")
         try:
             os.makedirs(self.analyze_result_dir, exist_ok=True)
         except OSError:
@@ -123,22 +123,27 @@ class BaseAdapter(ABC):
         for file in os.listdir(self.analyze_result_dir):
             os.remove(os.path.join(self.analyze_result_dir, file))
 
+        parser_base = self.build_base if self.build_base else self.base
         parser = Parser(
-            self.base, "", self.analyze_result_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False
+            parser_base, "", self.analyze_result_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False
         )
 
         parser.parse()
 
         # analyze it
         function_results = []
-        for function_name in self.thread_functions:
+        for function_info in self.thread_functions:
+            function_name = function_info.get("thread")
+            function_size = function_info.get("size")
             try:
+                logger.info(f"[+] Analyzing {function_name}")
                 function = parser.find_function(function_name)
                 result = parser.bfs(function)
                 print(result)
                 function_results.append(
                     {
                         "name": function_name,
+                        "source_size": function_size,
                         "biggest_stack": result["biggest_stack"],
                         "deepest_stack": result["deepest_stack"],
                         "max_depth": result["max_depth"],
@@ -146,35 +151,20 @@ class BaseAdapter(ABC):
                 )
 
             except:
+                logger.warning(f"[-] Analyze Failed: {function_name}")
                 function_results.append(
                     {
                         "name": function_name,
-                        "biggest_stack": 0,
-                        "deepest_stack": 0,
-                        "max_depth": 0,
+                        "source_size": function_size,
+                        "biggest_stack": -1,
+                        "deepest_stack": -1,
+                        "max_depth": -1,
                     }
                 )
         self.function_results = function_results
-        input()
+        logger.debug(f"[+] ================ Analyze End ================")
         return function_results
 
-    def dump_result(self, save_file_name: str = "function_results", format: Literal["csv", "json"] = "csv"):
+    def dump_result(self) -> list[dict]:
         # get absolute path
-        save_file_name = os.path.abspath(save_file_name)
-
-        # create directory if not exists
-        os.makedirs(os.path.dirname(save_file_name), exist_ok=True)
-
-        if format == "csv":
-            with open(f"{save_file_name}.csv", "w") as f:
-                writer = csv.writer(f)
-                writer.writerow(["name", "biggest_stack", "deepest_stack", "max_depth"])
-                for result in self.function_results:
-                    writer.writerow(
-                        [result["name"], result["biggest_stack"], result["deepest_stack"], result["max_depth"]]
-                    )
-        elif format == "json":
-            with open(f"{save_file_name}.json", "w") as f:
-                json.dump(self.function_results, f, indent=4)
-        else:
-            raise ValueError(f"Invalid format: {format}")
+        return self.function_results

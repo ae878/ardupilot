@@ -2,6 +2,8 @@ import copy
 import os.path
 import os
 import random
+import time
+import json
 from typing import Union
 
 # from mutator.mutate import related_based_mutate
@@ -16,11 +18,54 @@ from src.utils.logging import logger
 
 # from logging import logger
 class FuzzerStep:
-    def __init__(self, build_result: bool, function_results: list, step: int, config: ConfigFactory):
+    def __init__(
+        self,
+        build_result: bool,
+        function_results: list,
+        step: int,
+        config: ConfigFactory,
+        start_time: float,
+        apply_time: float,
+        build_time: float,
+        analyze_time: float,
+        end_time: float,
+    ):
         self.build_result = build_result
         self.function_results = function_results
         self.step = step
-        self.config = config
+        self.config = copy.deepcopy(config)
+        self.start_time = start_time
+        self.apply_time = apply_time
+        self.build_time = build_time
+        self.analyze_time = analyze_time
+        self.end_time = end_time
+
+    def dump_result_to_file(self, output_base_filename: str):
+        function_file_name = f"{output_base_filename}_function_results.json"
+        config_file_name = f"{output_base_filename}_config_results.json"
+        meta_file_name = f"{output_base_filename}_meta_results.json"
+        # create directory if not exists
+        os.makedirs(os.path.dirname(output_base_filename), exist_ok=True)
+
+        with open(function_file_name, "w") as f:
+            json.dump(self.function_results, f, indent=4)
+
+        with open(config_file_name, "w") as f:
+            json.dump(self.config.dump_config(), f, indent=4)
+
+        with open(meta_file_name, "w") as f:
+            json.dump(
+                {
+                    "build_result": self.build_result,
+                    "start_time": self.start_time,
+                    "apply_time": self.apply_time,
+                    "build_time": self.build_time,
+                    "analyze_time": self.analyze_time,
+                    "end_time": self.end_time,
+                    "total_time": self.end_time - self.start_time,
+                },
+                f,
+            )
 
 
 class Fuzzer:
@@ -31,6 +76,7 @@ class Fuzzer:
         seed_macro_file: Union[str, None] = None,
         config: Union[ConfigFactory, None] = None,
         verbose: bool = False,
+        threshold: int = 2,
     ):
         if not seed_macro_file and not config:
             raise ValueError("seed_macro_file or config must be provided")
@@ -44,7 +90,7 @@ class Fuzzer:
         self.output_base_dir = "output"
         self.adapter = adapter
         self.verbose = verbose
-
+        self.threshold = threshold
         # 특정 스레드 함수의 callgraph에 해당하는 파일들
         # self.initial_analyze 를 먼저해야함
         # dict["function_name": set[File]]
@@ -99,11 +145,13 @@ class Fuzzer:
         # exit()
 
     def fuzz(self):
+
         function_results = []
         related_files = []
         output_dir = f"{self.output_base_dir}/{self.adapter.name}_{self.steps_count}"
 
-        # 1. create config file
+        start_time = time.time()
+        # 1. Apply configs
         target_configs = []
         for key in self.related_macros_per_function.keys():
             for macro in self.related_macros_per_function[key]:
@@ -111,7 +159,7 @@ class Fuzzer:
 
         if self.applyer:
             self.applyer.apply(self.current_config, target_configs)
-
+        apply_time = time.time()
         # config_file = self.current_config.create_config_header(
         #     f"{output_dir}/config.h",
         #     target_configs,
@@ -119,31 +167,42 @@ class Fuzzer:
 
         # 2. set config file, result dir to adapter
         self.adapter.set_analyze_result_dir(output_dir)
-        # self.adapter.set_config_file_src(config_file)
 
         dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
-        # build result
-        build_result = self.adapter.build(self.current_config)
 
-        # build_result = True
+        # 3. Build
+        build_result = self.adapter.build(self.current_config)
+        build_time = time.time()
+        function_results = []
+        # 4. Analyze
         if build_result:
             function_results = self.adapter.analyze()
-            self.adapter.dump_result(f"{self.output_base_dir}/{dump_result_filename}", "json")
-
-            # dump steps
-            self.steps.append(
-                FuzzerStep(
-                    build_result=build_result,
-                    function_results=function_results,
-                    step=self.steps_count,
-                    config=copy.deepcopy(self.current_config),
-                )
+            analyze_time = time.time()
+        else:
+            analyze_time = time.time()
+        self.steps.append(
+            FuzzerStep(
+                build_result=build_result,
+                function_results=function_results,
+                step=self.steps_count,
+                config=copy.deepcopy(self.current_config),
+                start_time=start_time,
+                apply_time=apply_time,
+                build_time=build_time,
+                analyze_time=analyze_time,
+                end_time=time.time(),
             )
+        )
+        self.steps[-1].dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
+        logger.info(
+            f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
+        )
         self.steps_count += 1
 
         if self.verbose:
             print(f"[+] Step {self.steps_count} done. Build Result: ({build_result})")
 
+        # 5. Revert
         if self.applyer:
             self.applyer.revert()
 
@@ -156,7 +215,7 @@ class Fuzzer:
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
     def mutate(self, target_function: str, methods: list[str] = ["related", "stack", "use-codesize"]):
-        threshold = 2
+
         for method in methods:
             if method not in ["related", "stack", "use-codesize"]:
                 raise ValueError(f"Invalid method: {method}")
@@ -216,8 +275,11 @@ class Fuzzer:
             if mutation_config:
                 self.current_config = mutation_config
 
-        for i in range(threshold):
-            print(target_macros)
+        """
+            랜덤하게 2개 mutate
+        """
+        for i in range(self.threshold):
+            # print(target_macros)
             random_macro = random.choice(target_macros)
             self.current_config.change_config(random_macro.name)
 
