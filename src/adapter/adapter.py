@@ -42,6 +42,7 @@ class BaseAdapter(ABC):
         self.function_results: list[dict] = []
         self.visited_functions: dict[str, set] = {}
         self.initial_analyze_result: dict[str, Union[set, int, list, dict]] = {}
+        self.parser: Union[Parser, None] = None
 
     def get_thread_functions(self):
         thread_functions = []
@@ -68,7 +69,7 @@ class BaseAdapter(ABC):
         """
         pass
 
-    def initial_analyze(self, target_function: str, output_dir: str = "initial_analyze"):
+    def initial_analyze(self, output_dir: str = "initial_analyze"):
         """
         In this method, fuzzer will initially analyze the project
         this makes a callgraph of the project, and it gives hint to the fuzzer
@@ -87,25 +88,37 @@ class BaseAdapter(ABC):
         # parse the project
         parser = None
         if os.path.exists(f"{output_dir}/phase2.pkl"):
-            parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
-            parser.load_from_pkl(f"phase2.pkl")
+            logger.debug(f"[+] Found Pickle File: {output_dir}/phase2.pkl")
+            self.parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
+            self.parser.load_from_pkl(f"phase2.pkl")
             logger.debug(f"[+] ================ Load from Pickle ================")
         else:
-            parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
-            parser.parse()
+            self.parser = Parser(self.base, "", output_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False)
+            self.parser.parse()
         # print(parser.functions)
-        try:
-            function = parser.find_function(target_function)
-            result = parser.bfs(function)
-            self.initial_analyze_result = result
-        except Exception as e:
-            logger.error(f"[-] Initial Analyze Failed: {e}")
-            raise e
+        # try:
+        #     function = parser.find_function(target_function)
+        #     result = parser.bfs(function)
+        #     self.initial_analyze_result = result
+        # except Exception as e:
+        #     logger.error(f"[-] Initial Analyze Failed: {e}")
+        #     raise e
 
         if self.verbose:
             logger.debug(f"[+] ================ Initial Analyze End ================")
 
-        return self.initial_analyze_result
+        return
+
+    def initial_adapter_get_analyze_result(self, target_function) -> dict:
+        if self.parser is None:
+            raise Exception("Parser is not initialized")
+        try:
+            function = self.parser.find_function(target_function)
+            result = self.parser.bfs(function)
+            return result
+        except Exception as e:
+            logger.error(f"[-] Initial Analyze Failed: {e}")
+            raise e
 
     # @abstractmethod
     def analyze(self):

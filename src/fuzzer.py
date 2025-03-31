@@ -12,6 +12,7 @@ from src.config.config import Config, ConfigFactory
 from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
+from src.ir2dot.irlib.exceptions import FunctionNotFoundException
 from src.applier.applier import Applier
 from src.utils.logging import logger
 
@@ -105,7 +106,7 @@ class Fuzzer:
         # 퍼징 시 매크로를 찾을때, 해당 line 이상 영향력을 끼치는 매크로들만 수정합니다.
         self.fuzzer_line_threshold = 30
 
-    def initial_analyze(self, target_function: str, initial_analyze_result_dir: str = "initial_analyze"):
+    def initial_analyze(self, target_functions: list[str], initial_analyze_result_dir: str = "initial_analyze"):
         """
         이 함수는 특정 함수에 대해 초기 분석을 진행합니다
         소스코드를 이용해 만든 macros.json 파일을 이용해 분석을 진행합니다
@@ -113,34 +114,44 @@ class Fuzzer:
         이를 이용해, 특정 함수와 관련있는 파일들과, 매크로들을 찾아 저장합니다
         """
         logger.info(f"[+] Initial analyze of the fuzzer {self.base}")
-        self.adapter.initial_analyze(target_function, initial_analyze_result_dir)
-        # 방문한 함수들에 해당하는 파일들 모두 추가
-        visited_functions: list[Function] = self.adapter.initial_analyze_result.get("visited", [])
-        if not self.related_files_per_function.get(target_function):
-            self.related_files_per_function[target_function] = set()
-        if not self.related_macros_per_function.get(target_function):
-            self.related_macros_per_function[target_function] = set()
+        self.adapter.initial_analyze(initial_analyze_result_dir)
+        for target_function in target_functions:
+            initial_analyze_result = {}
+            try:
+                initial_analyze_result = self.adapter.initial_adapter_get_analyze_result(target_function)
+            except FunctionNotFoundException as e:
+                logger.warning(f"[-] Function {target_function} not found")
+                continue
+            except Exception as e:
+                logger.error(f"[-] Error occurred while initial analyzing {target_function}: {e}")
+                continue
+            # 방문한 함수들에 해당하는 파일들 모두 추가
+            visited_functions: list[Function] = initial_analyze_result.get("visited", [])
+            if not self.related_files_per_function.get(target_function):
+                self.related_files_per_function[target_function] = set()
+            if not self.related_macros_per_function.get(target_function):
+                self.related_macros_per_function[target_function] = set()
 
-        # 특정 함수가 방문하는 파일들 리스트로 추가
-        for function in visited_functions:
-            self.related_files_per_function[target_function].add(function.parent_file)
+            # 특정 함수가 방문하는 파일들 리스트로 추가
+            for function in visited_functions:
+                self.related_files_per_function[target_function].add(function.parent_file)
 
-        # 특정 스레드 함수가 사용하는 macro 리스트
-        for file in list(self.related_files_per_function[target_function]):
-            analyzer_file_name = os.path.basename(file.name)
-            analyzer_file_name = ".".join(analyzer_file_name.split(".")[:2])
+            # 특정 스레드 함수가 사용하는 macro 리스트
+            for file in list(self.related_files_per_function[target_function]):
+                analyzer_file_name = os.path.basename(file.name)
+                analyzer_file_name = ".".join(analyzer_file_name.split(".")[:2])
 
-            if isinstance(self.seed.config, list):
-                raise NotImplementedError("list type config is not supported")
+                if isinstance(self.seed.config, list):
+                    raise NotImplementedError("list type config is not supported")
 
-            elif isinstance(self.seed.config, dict):
-                for macro_name, macro_info in self.seed.config.items():
-                    # 특정 macro가 해당 macro를 실제로 쓰는경우
-                    for filename in macro_info.used_in:
-                        filename = os.path.basename(filename)
-                        if analyzer_file_name in filename:
-                            self.related_macros_per_function[target_function].add(macro_info)
-                            break
+                elif isinstance(self.seed.config, dict):
+                    for macro_name, macro_info in self.seed.config.items():
+                        # 특정 macro가 해당 macro를 실제로 쓰는경우
+                        for filename in macro_info.used_in:
+                            filename = os.path.basename(filename)
+                            if analyzer_file_name in filename:
+                                self.related_macros_per_function[target_function].add(macro_info)
+                                break
 
         # exit()
 
@@ -214,14 +225,16 @@ class Fuzzer:
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
-    def mutate(self, target_function: str, methods: list[str] = ["related", "stack", "use-codesize"]):
+    def mutate(self, target_functions: list[str], methods: list[str] = ["related", "stack", "use-codesize"]):
 
+        # Check method/target_functions are valid
         for method in methods:
             if method not in ["related", "stack", "use-codesize"]:
                 raise ValueError(f"Invalid method: {method}")
 
-        if target_function not in self.adapter.get_thread_functions():
-            raise TargetFunctionNotFoundException(f"Target function {target_function} not found")
+        for target_function in target_functions:
+            if target_function not in self.adapter.get_thread_functions():
+                logger.warning(f"Target function {target_function} not found")
 
         target_macros: list[Config] = []
 
@@ -229,8 +242,14 @@ class Fuzzer:
         # if related method is used, fuzz related macros with the target function
         # else, fuzz all macros
         if "related" in methods:
-            target_macros = list(self.related_macros_per_function[target_function])
-        else:
+            for target_function in target_functions:
+                target_macro_list = list(self.related_macros_per_function.get(target_function, set()))
+                if not target_macro_list:
+                    logger.warning(f"No related macros found for {target_function}, so I'll not include them.")
+                else:
+                    target_macros.extend(target_macro_list)
+
+        if len(target_macros) == 0:
             if isinstance(self.current_config.config, list):
                 raise NotImplementedError("list type config is not supported")
             for key, macro in self.current_config.config.items():

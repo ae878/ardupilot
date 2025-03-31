@@ -7,6 +7,19 @@ fmt_firmware_base = "/home/ubuntu/lab/FMT-Firmware"
 fmt_firmware_build_base = "/home/ubuntu/lab/FMT-Firmware/target/amov/icf5/build"
 thread_functions_file_path = "src/adapter/fmt_controller/thread_functions.json"
 
+target_thread_functions = [
+    "task_status_entry",
+    "task_mavgcs_entry",
+    "task_mavobc_entry",
+    "task_logger_entry",
+    "task_vehicle_entry",
+    "task_fmtio_entry",
+    "gps_probe_entry",
+    "rt_init_thread_entry",
+    "workqueue_executor",
+    "thread_entry",
+    "task_dronecan_entry",
+]
 # Set config file path for creating config.h
 config = ConfigFactory("src/adapter/fmt_controller/macros.json")
 
@@ -19,16 +32,27 @@ adapter = FMTControllerAdapter(
     build_base=fmt_firmware_build_base,
 )
 
-
 fuzzer = Fuzzer(fmt_firmware_base, adapter, config=config, verbose=True)
-# fuzzer.initial_analyze("task_mavobc_entry")
+fuzzer.initial_analyze(target_thread_functions)
+
+# 24시간(86400초) 제한 설정
+start_program = time.time()
+MAX_RUNTIME = 86400  # 24시간을 초단위로 표시
+
 while True:
+    # 전체 실행 시간 체크
+    if time.time() - start_program > MAX_RUNTIME:
+        print("24시간이 경과하여 프로그램을 종료합니다.")
+        break
+
     start_time = time.time()
     fuzzer.fuzz()
     end_time = time.time()
     print(f"Time taken: {end_time - start_time} seconds")
 
-    input(
-        "Press Enter to continue...",
-    )
-    fuzzer.mutate("task_mavobc_entry", methods=[])
+    # input(
+    #     "Press Enter to continue...",
+    # )
+
+    for target_function in target_thread_functions:
+        fuzzer.mutate(target_function, methods=["related"])
