@@ -85,7 +85,9 @@ class Fuzzer:
         self.base = base
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
         self.current_config: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
-        self.steps: list[FuzzerStep] = []
+        # For the memory issue, we use recent_step instead of steps
+        # self.steps: list[FuzzerStep] = []
+        self.recent_step: FuzzerStep = None
         self.applyer: Applier = Applier(self.base)
         self.steps_count = 0
         self.output_base_dir = "output"
@@ -182,7 +184,11 @@ class Fuzzer:
         dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
 
         # 3. Build
-        build_result = self.adapter.build(self.current_config)
+        try:
+            build_result = self.adapter.build(self.current_config)
+        except Exception as e:
+            logger.error(f"[-] Error occurred while building: {e}")
+            build_result = False
         build_time = time.time()
         function_results = []
         # 4. Analyze
@@ -191,20 +197,19 @@ class Fuzzer:
             analyze_time = time.time()
         else:
             analyze_time = time.time()
-        self.steps.append(
-            FuzzerStep(
-                build_result=build_result,
-                function_results=function_results,
-                step=self.steps_count,
-                config=copy.deepcopy(self.current_config),
-                start_time=start_time,
-                apply_time=apply_time,
-                build_time=build_time,
-                analyze_time=analyze_time,
-                end_time=time.time(),
-            )
+        self.recent_step = FuzzerStep(
+            build_result=build_result,
+            function_results=function_results,
+            step=self.steps_count,
+            config=copy.deepcopy(self.current_config),
+            start_time=start_time,
+            apply_time=apply_time,
+            build_time=build_time,
+            analyze_time=analyze_time,
+            end_time=time.time(),
         )
-        self.steps[-1].dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
+
+        self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
         logger.info(
             f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
         )
