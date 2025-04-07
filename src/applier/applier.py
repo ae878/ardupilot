@@ -85,8 +85,10 @@ class Applier:
             for file_path in file_paths:
                 # Update progress description with current file
                 progress.update(main_task, description=f"[cyan]Processing {os.path.basename(file_path)}")
-
-                self._apply_file(file_path, config, target_macros)
+                try:
+                    self._apply_file(file_path, config, target_macros)
+                except Exception as e:
+                    logger.error(f"Error applying file {file_path}: {str(e)}")
                 progress.advance(main_task)
 
     def _apply_file(self, file_path: str, config: ConfigFactory, target_macros: list[str]):

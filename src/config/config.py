@@ -39,6 +39,70 @@ class Config:
         self.child_configs: list[Config] = config.get("child_configs", [])
         self.parent_configs: list[Config] = config.get("parent_configs", [])
 
+    def solve_condition(self, condition_line: str) -> list:
+        """
+        Parse condition line and return valid value candidates
+
+        Args:
+            condition_line (str): Condition line like "#if RT_THREAD_PRIORITY_MAX > 32"
+
+        Returns:
+            list: List of valid value candidates that satisfy the condition
+        """
+        # Remove comments if exists
+        if "/*" in condition_line:
+            condition_line = condition_line[: condition_line.index("/*")].strip()
+
+        # Remove #if or #ifdef
+        condition = condition_line.replace("#if", "").replace("#ifdef", "").strip()
+
+        # Remove parentheses
+        condition = condition.replace("(", "").replace(")", "").strip()
+
+        # Handle simple defined check (e.g. #if MAVLINK_COMMAND_24BIT)
+        if " " not in condition:
+            # For boolean configs, return [1] as it needs to be defined/true
+            return [1]
+
+        # Handle multiple conditions with && or ||
+        if "&&" in condition or "||" in condition:
+            # For now, we'll just handle the first condition
+            condition = condition.split("&&")[0].split("||")[0].strip()
+
+        # Parse comparison
+        try:
+            # Split by spaces and filter out empty strings
+            parts = [p.strip() for p in condition.split() if p.strip()]
+
+            if len(parts) != 3:  # Must have var, operator, value
+                return []
+
+            var_name, operator, value = parts
+            value = float(value)  # Convert to number
+
+            # Get current config's value candidates
+            candidates = self.value_candidates
+
+            # Filter based on operator
+            if operator == ">":
+                return [c for c in candidates if float(c) > value]
+            elif operator == ">=":
+                return [c for c in candidates if float(c) >= value]
+            elif operator == "<":
+                return [c for c in candidates if float(c) < value]
+            elif operator == "<=":
+                return [c for c in candidates if float(c) <= value]
+            elif operator == "==":
+                return [c for c in candidates if float(c) == value]
+            elif operator == "!=":
+                return [c for c in candidates if float(c) != value]
+
+        except (ValueError, IndexError):
+            # If parsing fails, return empty list
+            return []
+
+        return []
+
 
 class ConfigFactory:
     def __init__(
@@ -121,6 +185,32 @@ class ConfigFactory:
             return self.config[random_item]
         else:
             raise Exception("Invalid config type")
+
+    def set_config_to_highest_stack(self):
+
+        for config in self.config.values():
+            name = config.name
+            tmp_value = config.value
+            max_scope_size = -1
+
+            # 모든 Conditional_scope를 찾으면서, 커버하는 scope_size가 큰 경우
+            # 그와 valid한 value를 찾아 그걸 set함
+            for conditional_scope in config.conditional_scopes:
+                if max_scope_size < conditional_scope.get("scope_size", 0):
+                    max_scope_size = conditional_scope.get("scope_size", 0)
+                    original_condition = conditional_scope.get("original_condition", "")
+                    try:
+                        valid_value_candidates = config.solve_condition(original_condition)
+                        valid_value = random.choice(valid_value_candidates)
+                        tmp_value = valid_value
+                    except Exception as e:
+                        logger.warning(f"[-] Error occurred while solving condition: {e}")
+                        continue
+
+            config.value = tmp_value
+
+            self.config[name] = config
+        return
 
     def validate_configuration(self, condition_threshold: float = -1):
         satisfied_count = 0
