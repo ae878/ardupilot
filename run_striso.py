@@ -1,31 +1,27 @@
-from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
+from src.adapter.striso.striso import StrisoAdapter
 from src.config.config import ConfigFactory
 from src.fuzzer import Fuzzer
 import time
 import json
 
-fmt_firmware_base = "/home/ubuntu/lab/FMT-Firmware"
-fmt_firmware_build_base = "/home/ubuntu/lab/FMT-Firmware/target/amov/icf5/build"
-thread_functions_file_path = "src/adapter/fmt_controller/thread_functions.json"
+fmt_firmware_base = "/home/ubuntu/lab/striso-control-firmware"
+fmt_firmware_build_base = "/home/ubuntu/lab/striso-control-firmware/build"
+thread_functions_file_path = "src/adapter/striso/thread_functions.json"
 
 target_thread_functions = [
-    "task_status_entry",
-    "task_mavgcs_entry",
-    "task_mavobc_entry",
-    "task_logger_entry",
-    "task_vehicle_entry",
-    "task_fmtio_entry",
-    "gps_probe_entry",
-    "rt_init_thread_entry",
-    "workqueue_executor",
-    "thread_entry",
-    "task_dronecan_entry",
+    "synthThread",
+    "ThreadReadButtons",
+    "synthThread",
+    "AuxJack",
+    "ThreadSend",
+    "Thread1",
+    "main",
 ]
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/fmt_controller/macros.json")
+config = ConfigFactory("src/adapter/striso/macros.json")
 
 build_commands = []
-adapter = FMTControllerAdapter(
+adapter = StrisoAdapter(
     fmt_firmware_base,
     build_commands,
     thread_functions_file_path=thread_functions_file_path,
