@@ -50,6 +50,7 @@ class FMTControllerAdapter(BaseAdapter):
             analyze_result_dir (str): The directory to save the analyze result.
             verbose (bool): The verbose mode.
         """
+        super().__init__(base, build_commands, thread_functions_file_path, analyze_result_dir, verbose, build_base)
         self.base = base
         # Compile commands
         self.build_commands = build_commands
