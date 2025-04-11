@@ -19,7 +19,6 @@
 [x] heuristic rules - Check codesize when fuzzing
 [x] (low priority) ir parser optimization
 [x] Builder (Compile) optimization
-[ ] writing paper (Deadline for CCS ~ Apr. 15)
 
 
 1. build success rate

@@ -24,8 +24,7 @@ class Config:
         # files that #define is defined in
         self.defined_in: list[str] = config.get("defined_in", [])
         # 매크로가 사용된 파일들 list
-        # files that #define is used in
-        # users
+        # files that #define is used in users
         self.used_in: list[str] = config.get("used_in", [])
         # 매크로가 사용된 함수들 dict
         # functions that #define is used in

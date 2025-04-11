@@ -84,7 +84,7 @@ class Fuzzer:
 
         self.base = base
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
-        self.current_config: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
+        self.current_config: ConfigFactory = self.seed
         # For the memory issue, we use recent_step instead of steps
         # self.steps: list[FuzzerStep] = []
         self.recent_step: FuzzerStep = None
@@ -140,20 +140,23 @@ class Fuzzer:
 
             # 특정 스레드 함수가 사용하는 macro 리스트
             for file in list(self.related_files_per_function[target_function]):
-                analyzer_file_name = os.path.basename(file.name)
-                analyzer_file_name = ".".join(analyzer_file_name.split(".")[:2])
+                if file:
+                    analyzer_file_name = os.path.basename(file.name)
+                    analyzer_file_name = ".".join(analyzer_file_name.split(".")[:2])
 
-                if isinstance(self.seed.config, list):
-                    raise NotImplementedError("list type config is not supported")
+                    if isinstance(self.seed.config, list):
+                        raise NotImplementedError("list type config is not supported")
 
-                elif isinstance(self.seed.config, dict):
-                    for macro_name, macro_info in self.seed.config.items():
-                        # 특정 macro가 해당 macro를 실제로 쓰는경우
-                        for filename in macro_info.used_in:
-                            filename = os.path.basename(filename)
-                            if analyzer_file_name in filename:
-                                self.related_macros_per_function[target_function].add(macro_info)
-                                break
+                    elif isinstance(self.seed.config, dict):
+                        for macro_name, macro_info in self.seed.config.items():
+                            # 특정 macro가 해당 macro를 실제로 쓰는경우
+                            for filename in macro_info.used_in:
+                                filename = os.path.basename(filename)
+                                if analyzer_file_name in filename:
+                                    self.related_macros_per_function[target_function].add(macro_info)
+                                    break
+                else:
+                    logger.warning(f"[-] File {file.name} not found")
 
         # exit()
 
@@ -161,7 +164,7 @@ class Fuzzer:
 
         function_results = []
         related_files = []
-        output_dir = f"{self.output_base_dir}/{self.adapter.name}_{self.steps_count}"
+        output_dir = os.path.join(self.output_base_dir, f"{self.adapter.name}_{self.steps_count}")
 
         start_time = time.time()
         # 1. Apply configs
@@ -226,7 +229,6 @@ class Fuzzer:
         self.current_config = config
         self.seed = config
 
-    # TODO: mutate 휴리스틱 룰 정리해놓기
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현

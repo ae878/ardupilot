@@ -186,9 +186,11 @@ class ArdupilotAdapter(BaseAdapter):
                     )
                     if result.returncode == -1:
                         logger.error(f"[-] Command failed: {compile_arguments}")
+                        os.chdir(original_cwd)
                         raise BuildErrorException(f"Command failed: {compile_arguments}")
                 except subprocess.CalledProcessError:
                     logger.error(f"[-] Command failed: {compile_arguments}")
+                    os.chdir(original_cwd)
                     raise BuildErrorException(f"Command failed: {compile_arguments}")
                 finally:
                     progress.update(task, advance=1)

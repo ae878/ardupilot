@@ -21,6 +21,7 @@ class StrisoAdapter(BaseAdapter):
         thread_functions_file_path: str = "",
         analyze_result_dir: str = "./analyze_striso",
         verbose: bool = False,
+        build_base: str = "",
     ):
         """
         StrisoAdapter class
@@ -50,6 +51,8 @@ class StrisoAdapter(BaseAdapter):
         # Function results
         self.function_results = []
 
+        self.build_base = build_base
+
         self.name = "striso"
 
         # build_includes.txt 파일의 절대 경로 생성
@@ -66,9 +69,19 @@ class StrisoAdapter(BaseAdapter):
         os.chdir(self.base)
 
         # Run as subprocess
-        subprocess.run(["make"], check=True)
-
-        os.chdir(original_cwd)
+        try:
+            subprocess.run(["make"], check=True)
+        except subprocess.CalledProcessError as e:
+            if e.stdout:
+                logger.debug(f"stdout: {e.stdout.decode()}")
+            if e.stderr:
+                logger.debug(f"stderr: {e.stderr.decode()}")
+            # logger.error(f"Error occurred while building: {e}")
+            raise BuildErrorException(f"Build failed: {e}")
+        finally:
+            # Change the cwd back to original
+            os.chdir(original_cwd)
+        # os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True

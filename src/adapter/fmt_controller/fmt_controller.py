@@ -133,9 +133,11 @@ class FMTControllerAdapter(BaseAdapter):
                         logger.error(f"[red]stdout: {e.stdout}")
                     if e.stderr:
                         logger.error(f"[red]stderr: {e.stderr}")
+                    os.chdir(original_cwd)
                     raise BuildErrorException(f"Build failed: {str(e)}")
                 except Exception as e:
                     logger.error(f"[red]Unexpected error during build: {str(e)}")
+                    os.chdir(original_cwd)
                     raise e
 
                 progress.advance(build_task)
