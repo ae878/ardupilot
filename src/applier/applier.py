@@ -138,6 +138,7 @@ class Applier:
                 modified_lines[i - 1] = new_line
                 # Store applied change
                 self.apply_items.append(FileItem(file_path, i, new_line))
+                logger.debug(f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}")
             except Exception:
                 # Skip if macro not found in config
                 continue

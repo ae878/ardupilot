@@ -1,0 +1,70 @@
+[
+    {
+      "thread": "px4::WorkQueueManagerRun",
+      "size": 1280
+    },
+    {
+      "thread": "ModuleBase<GPS>::run_trampoline",
+      "size": 2040
+    },
+    {
+      "thread": "GPS::run_trampoline_secondary",
+      "size": 1400
+    },
+    {
+      "thread": "frsky_telemetry_thread_main",
+      "size": 1024
+    },
+    {
+      "thread": "hott_sensors_thread_main",
+      "size": 1024
+    },
+    {
+      "thread": "hott_telemetry_thread_main",
+      "size": 1500
+    },
+    {
+      "thread": "ModuleBase<Commander>::run_trampoline",
+      "size": 3250
+    },
+    {
+      "thread": "task_main",
+      "size": 1420
+    },
+    {
+      "thread": "gimbal_thread_main",
+      "size": 2100
+    },
+    {
+      "thread": "landing_target_estimator::landing_target_estimator_thread_main",
+      "size": 2100
+    },
+    {
+      "thread": "ModuleBase<px4::logger::Logger>::run_trampoline",
+      "size": 3700
+    },
+    {
+      "thread": "MavlinkShell::shell_start_thread",
+      "size": 2048
+    },
+    {
+      "thread": "Mavlink::start_helper",
+      "size": 2896
+    },
+    {
+      "thread": "ModuleBase<Navigator>::run_trampoline",
+      "size": 2160
+    },
+    {
+      "thread": "ModuleBase<Sih>::run_trampoline",
+      "size": 1560
+    },
+    {
+      "thread": "TemperatureCalibration::do_temperature_calibration",
+      "size": 5800
+    },
+    {
+      "thread": "ModuleBase<UxrceddsClient>::run_trampoline",
+      "size": 12000
+    }
+  ]
