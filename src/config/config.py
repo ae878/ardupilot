@@ -3,7 +3,9 @@ import os
 import random
 from typing import Union
 from src.config.conditional_config import Condition
-from src.utils.logging import logger
+from src.utils.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 class Config:

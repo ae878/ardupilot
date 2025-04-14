@@ -37,18 +37,19 @@ start_program = time.time()
 MAX_RUNTIME = 86400  # 24시간을 초단위로 표시
 
 while True:
-    # 전체 실행 시간 체크
-    if time.time() - start_program > MAX_RUNTIME:
-        print("24시간이 경과하여 프로그램을 종료합니다.")
-        break
+    for target_thread in target_thread_functions:
+        # 전체 실행 시간 체크
+        if time.time() - start_program > MAX_RUNTIME:
+            print("24시간이 경과하여 프로그램을 종료합니다.")
+            break
 
-    start_time = time.time()
-    fuzzer.fuzz()
-    end_time = time.time()
-    print(f"Time taken: {end_time - start_time} seconds")
+        start_time = time.time()
+        fuzzer.fuzz()
+        end_time = time.time()
+        print(f"Time taken: {end_time - start_time} seconds")
 
-    # input(
-    #     "Press Enter to continue...",
-    # )
+        # input(
+        #     "Press Enter to continue...",
+        # )
 
-    fuzzer.mutate(target_thread_functions, methods=[])
+        fuzzer.mutate([target_thread], methods=["related"])

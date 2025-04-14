@@ -1,11 +1,15 @@
 from src.ir2dot.irlib.function import Function
 from src.ir2dot.irlib.file import File
 from src.config.config import Config, ConfigFactory
-from src.utils.logging import logging as logger
+from src.utils.logging import get_logger
 from typing import Union
 import os
 import re
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.console import Console
+import logging as lg
+
+logger = get_logger(__name__, level=lg.DEBUG)
 
 
 class FileItem:
@@ -62,9 +66,11 @@ class Applier:
                     macro_config = target_macro
                 for file_path in macro_config.used_in:
                     total_files_set.add(file_path)
+                for file_path in macro_config.defined_in:
+                    total_files_set.add(file_path)
             file_paths = list(total_files_set)
         else:
-            logger.debug(f"[+] ================ Apply All Macros ================")
+            logger.debug("=============== Apply All Macros ================")
             for root, _, files in os.walk(self.base):
                 for file in files:
                     if not any(file.endswith(ext) for ext in self.apply_extensions):
@@ -72,11 +78,14 @@ class Applier:
                     file_paths.append(os.path.join(root, file))
 
         total_files = len(file_paths)
+        # Create a separate console for progress display
+        progress_console = Console(stderr=True)
         with Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
             BarColumn(),
             TaskProgressColumn(),
+            console=progress_console,
         ) as progress:
             # Create main task
             main_task = progress.add_task("[cyan]Processing files...", total=total_files)
@@ -100,14 +109,16 @@ class Applier:
             config (ConfigFactory): Config factory instance
             target_macros (list[str]): List of target macros
         """
+        # print(f"[+] Applying {file_path}..")
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             lines = f.readlines()
 
         modified_lines = lines.copy()
         # 정규식 패턴: #define으로 시작하고, 하나 이상의 공백, 매크로 이름, 하나 이상의 공백, 값으로 구성
-        define_pattern = re.compile(r"^\s*#define\s+(\w+)\s+(.+?)\s*$")
+        define_pattern = re.compile(r"^\s*#define\s+(\w+)\s+([^\s/]+)")
 
         for i, line in enumerate(lines, 1):
+            # print(line)
             # Store original line
             self.original_items.append(FileItem(file_path, i, line))
 
@@ -141,6 +152,7 @@ class Applier:
                 logger.debug(f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}")
             except Exception:
                 # Skip if macro not found in config
+                # print(f"[-] Macro {macro_name} not found in config")
                 continue
 
         # Write modified content back to file

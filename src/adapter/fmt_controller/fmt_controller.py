@@ -6,13 +6,16 @@ import copy
 import csv
 import json
 from typing import Literal, Union
-from src.utils.logging import logging as logger, console
+from src.utils.logging import get_logger
+
 from src.config.config import ConfigFactory
 from src.utils.exception import BuildErrorException
 from src.adapter.adapter import BaseAdapter
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 from rich.console import Console
 from rich.logging import RichHandler
+
+logger = get_logger(__name__)
 
 
 def remove_duplicate_include_flags(arguments):
@@ -98,11 +101,7 @@ class FMTControllerAdapter(BaseAdapter):
         logger.info(f"[yellow]Changed working directory to: {build_dir}")
 
         with Progress(
-            SpinnerColumn(),
-            TextColumn("[progress.description]{task.description}"),
-            BarColumn(),
-            TaskProgressColumn(),
-            console=console,
+            SpinnerColumn(), TextColumn("[progress.description]{task.description}"), BarColumn(), TaskProgressColumn()
         ) as progress:
             # Create main build task
             build_task = progress.add_task("[cyan]Building...", total=len(self.build_commands))

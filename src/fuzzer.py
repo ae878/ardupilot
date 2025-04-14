@@ -14,7 +14,9 @@ from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
 from src.ir2dot.irlib.exceptions import FunctionNotFoundException
 from src.applier.applier import Applier
-from src.utils.logging import logger
+from src.utils.logging import get_logger
+
+logger = get_logger(__name__)
 
 
 # from logging import logger
@@ -160,7 +162,7 @@ class Fuzzer:
 
         # exit()
 
-    def fuzz(self):
+    def fuzz(self, methods: list[str] = ["related"]):
 
         function_results = []
         related_files = []
@@ -169,13 +171,18 @@ class Fuzzer:
         start_time = time.time()
         # 1. Apply configs
         target_configs = []
-        for key in self.related_macros_per_function.keys():
-            for macro in self.related_macros_per_function[key]:
-                target_configs.append(macro)
+        if "related" in methods:
+            for key in self.related_macros_per_function.keys():
+                for macro in self.related_macros_per_function[key]:
+                    target_configs.append(macro)
+        else:
+            target_configs = list(self.current_config.config.values())
 
         if self.applyer:
             self.applyer.apply(self.current_config, target_configs)
         apply_time = time.time()
+        # print(target_configs)
+
         # config_file = self.current_config.create_config_header(
         #     f"{output_dir}/config.h",
         #     target_configs,

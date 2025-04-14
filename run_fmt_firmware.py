@@ -33,21 +33,24 @@ adapter = FMTControllerAdapter(
     build_base=fmt_firmware_build_base,
 )
 
+
 fuzzer = Fuzzer(fmt_firmware_base, adapter, config=config, verbose=True)
-fuzzer.initial_analyze(target_thread_functions)
+# fuzzer.applyer.apply(config, target_macros=["FMT_LOG_LEVEL"])
+fuzzer.initial_analyze(target_thread_functions, "initial_analyze_fmt")
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()
 MAX_RUNTIME = 86400  # 24시간을 초단위로 표시
 
 while True:
+    # for target_thread in target_thread_functions:
     # 전체 실행 시간 체크
     if time.time() - start_program > MAX_RUNTIME:
         print("24시간이 경과하여 프로그램을 종료합니다.")
         break
 
     start_time = time.time()
-    fuzzer.fuzz()
+    fuzzer.fuzz(methods=["related"])
     end_time = time.time()
     print(f"Time taken: {end_time - start_time} seconds")
 

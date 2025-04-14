@@ -5,9 +5,9 @@ import json
 import os
 from src.config.config import ConfigFactory
 from src.ir2dot.gccir2dot import Parser
-import logging
+from src.utils.logging import get_logger
 
-logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 class BaseAdapter(ABC):
