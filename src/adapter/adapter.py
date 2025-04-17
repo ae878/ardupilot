@@ -160,6 +160,7 @@ class BaseAdapter(ABC):
                         "biggest_stack": result["biggest_stack"],
                         "deepest_stack": result["deepest_stack"],
                         "max_depth": result["max_depth"],
+                        "biggest_path": result["biggest_path"],
                     }
                 )
 
@@ -172,6 +173,7 @@ class BaseAdapter(ABC):
                         "biggest_stack": -1,
                         "deepest_stack": -1,
                         "max_depth": -1,
+                        "biggest_path": [],
                     }
                 )
         self.function_results = function_results

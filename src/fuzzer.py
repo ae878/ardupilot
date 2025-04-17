@@ -13,6 +13,7 @@ from src.adapter.adapter import BaseAdapter
 from src.utils.exception import TargetFunctionNotFoundException
 from src.ir2dot.gccir2dot import Function
 from src.ir2dot.irlib.exceptions import FunctionNotFoundException
+from src.ir2dot.irlib.encoder import FunctionEncoder
 from src.applier.applier import Applier
 from src.utils.logging import get_logger
 
@@ -32,6 +33,7 @@ class FuzzerStep:
         build_time: float,
         analyze_time: float,
         end_time: float,
+        unique_stack_smash_count: int,
     ):
         self.build_result = build_result
         self.function_results = function_results
@@ -42,6 +44,7 @@ class FuzzerStep:
         self.build_time = build_time
         self.analyze_time = analyze_time
         self.end_time = end_time
+        self.unique_stack_smash_count = unique_stack_smash_count
 
     def dump_result_to_file(self, output_base_filename: str):
         function_file_name = f"{output_base_filename}_function_results.json"
@@ -51,7 +54,7 @@ class FuzzerStep:
         os.makedirs(os.path.dirname(output_base_filename), exist_ok=True)
 
         with open(function_file_name, "w") as f:
-            json.dump(self.function_results, f, indent=4)
+            json.dump(self.function_results, f, indent=4, cls=FunctionEncoder)
 
         with open(config_file_name, "w") as f:
             json.dump(self.config.dump_config(), f, indent=4)
@@ -66,6 +69,7 @@ class FuzzerStep:
                     "analyze_time": self.analyze_time,
                     "end_time": self.end_time,
                     "total_time": self.end_time - self.start_time,
+                    "unique_stack_smash_count": self.unique_stack_smash_count,
                 },
                 f,
             )
@@ -111,6 +115,10 @@ class Fuzzer:
         # fuzzer stting
         # 퍼징 시 매크로를 찾을때, 해당 line 이상 영향력을 끼치는 매크로들만 수정합니다.
         self.fuzzer_line_threshold = 30
+
+        # Unique stack smash that found
+        self.unique_stack_smash_count = 0
+        self.unique_stack_smashes = set()
 
     def initial_analyze(self, target_functions: list[str], initial_analyze_result_dir: str = "initial_analyze"):
         """
@@ -209,6 +217,15 @@ class Fuzzer:
             analyze_time = time.time()
         else:
             analyze_time = time.time()
+
+        for function_result in function_results:
+            biggest_stack = function_result["biggest_stack"]
+            source_size = function_result["source_size"]
+            biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
+            if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
+                self.unique_stack_smash_count += 1
+                self.unique_stack_smashes.add(biggest_path)
+
         self.recent_step = FuzzerStep(
             build_result=build_result,
             function_results=function_results,
@@ -219,6 +236,7 @@ class Fuzzer:
             build_time=build_time,
             analyze_time=analyze_time,
             end_time=time.time(),
+            unique_stack_smash_count=self.unique_stack_smash_count,
         )
 
         # Add to recent_steps and maintain only last max_recent_steps steps

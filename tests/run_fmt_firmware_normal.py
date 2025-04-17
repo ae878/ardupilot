@@ -41,7 +41,7 @@ adapter = FMTControllerAdapter(
 
 fuzzer = Fuzzer(fmt_firmware_base, adapter, config=config, verbose=True)
 # fuzzer.applyer.apply(config, target_macros=["FMT_LOG_LEVEL"])
-fuzzer.initial_analyze(target_thread_functions, "initial_analyze_fmt")
+# fuzzer.initial_analyze(target_thread_functions, "initial_analyze_fmt")
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()
