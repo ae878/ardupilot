@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
 from src.config.config import ConfigFactory
 from src.fuzzer import Fuzzer
@@ -50,7 +55,7 @@ while True:
         break
 
     start_time = time.time()
-    fuzzer.fuzz(methods=["related"])
+    fuzzer.fuzz(methods=["sat-validate"])
     end_time = time.time()
     print(f"Time taken: {end_time - start_time} seconds")
 
@@ -58,4 +63,4 @@ while True:
     #     "Press Enter to continue...",
     # )
 
-    fuzzer.mutate(target_thread_functions, methods=["related"])
+    fuzzer.mutate(target_thread_functions, methods=["sat-validate"])

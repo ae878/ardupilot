@@ -246,8 +246,14 @@ class Fuzzer:
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
-    def mutate(self, target_functions: list[str], methods: list[str] = ["related", "stack", "use-codesize"]):
-
+    def mutate(self, target_functions: list[str], methods: list[str] = ["related"]):
+        """
+        Support methods:
+        - related: fuzz related macros with the target function
+        - stack: Use greedy-methods for searching stacks, and mutate the biggest stack
+        - use-codesize: Target macros that actually change the code size
+        - sat-validate: Validate the configuration with SAT solver
+        """
         # Check method/target_functions are valid
         for method in methods:
             if method not in ["related", "stack", "use-codesize"]:
