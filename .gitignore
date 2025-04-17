@@ -1,4 +1,5 @@
-
+*.dot.txt
+*.dot
 classes
 output/*
 *.csv

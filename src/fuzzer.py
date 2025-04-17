@@ -87,9 +87,11 @@ class Fuzzer:
         self.base = base
         self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
         self.current_config: ConfigFactory = self.seed
-        # For the memory issue, we use recent_step instead of steps
+        # For the memory issue, we use recent_steps instead of steps
         # self.steps: list[FuzzerStep] = []
-        self.recent_step: FuzzerStep = None
+        self.max_recent_steps = 10  # Maximum number of recent steps to store
+        self.recent_steps: list[FuzzerStep] = []  # Store up to max_recent_steps steps
+        self.recent_step: FuzzerStep = None  # For backward compatibility
         self.applyer: Applier = Applier(self.base)
         self.steps_count = 0
         self.output_base_dir = "output"
@@ -219,6 +221,11 @@ class Fuzzer:
             end_time=time.time(),
         )
 
+        # Add to recent_steps and maintain only last max_recent_steps steps
+        self.recent_steps.append(self.recent_step)
+        if len(self.recent_steps) > self.max_recent_steps:
+            self.recent_steps.pop(0)
+
         self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
         logger.info(
             f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
@@ -282,16 +289,24 @@ class Fuzzer:
                 raise ValueError("No macros to fuzz")
             target_macros = new_target_macros
 
+        # Check if the most recent build failed and revert to previous config if needed
+        if len(self.recent_steps) >= 1 and not self.recent_steps[-1].build_result:
+            if len(self.recent_steps) >= 2:
+                self.current_config = self.recent_steps[-2].config
+                logger.info("[+] Reverting to previous configuration due to build failure")
+            else:
+                logger.warning("[-] No previous configuration to revert to")
+
         mutation_config = None
 
         """
             2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
         """
         if "stack" in methods:
-            if len(self.steps) >= 2:
+            if len(self.recent_steps) >= 2:
                 # 이전 결과
-                current_function_results = self.steps[-1].function_results
-                before_function_results = self.steps[-2].function_results
+                current_function_results = self.recent_steps[-1].function_results
+                before_function_results = self.recent_steps[-2].function_results
 
                 current_target_function_result = [
                     result for result in current_function_results if result["name"] == target_function
@@ -301,9 +316,9 @@ class Fuzzer:
                 ][0]
 
                 if current_target_function_result["biggest_stack"] >= before_target_function_result["biggest_stack"]:
-                    mutation_config = self.steps[-1].config
+                    mutation_config = self.recent_steps[-1].config
                 else:
-                    mutation_config = self.steps[-2].config
+                    mutation_config = self.recent_steps[-2].config
 
             if mutation_config:
                 self.current_config = mutation_config
