@@ -185,6 +185,17 @@ class Fuzzer:
             for key in self.related_macros_per_function.keys():
                 for macro in self.related_macros_per_function[key]:
                     target_configs.append(macro)
+            # Randomly add two configs
+            random_candidates = list(self.current_config.config.values())
+            random.shuffle(random_candidates)
+            added = 0
+            # Add two random configs if it is not in target_configs
+            for candidate in random_candidates:
+                if candidate not in target_configs:
+                    target_configs.append(candidate)
+                    added += 1
+                if added == 2:
+                    break
         else:
             target_configs = list(self.current_config.config.values())
 
