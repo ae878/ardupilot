@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
 from src.config.config import ConfigFactory
+from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
 import time
 import json
@@ -27,7 +28,8 @@ target_thread_functions = [
     "task_dronecan_entry",
 ]
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/fmt_controller/macros.json")
+condition = Condition("src/adapter/fmt_controller/condition_analysis_result.json")
+config = ConfigFactory("src/adapter/fmt_controller/macros.json", condition=condition)
 
 build_commands = []
 adapter = FMTControllerAdapter(

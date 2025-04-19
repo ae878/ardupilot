@@ -272,87 +272,101 @@ class Fuzzer:
         - use-codesize: Target macros that actually change the code size
         - sat-validate: Validate the configuration with SAT solver
         """
+
         # Check method/target_functions are valid
         for method in methods:
-            if method not in ["related", "stack", "use-codesize"]:
+            if method not in ["related", "stack", "use-codesize", "sat-validate"]:
                 raise ValueError(f"Invalid method: {method}")
-
-        for target_function in target_functions:
-            if target_function not in self.adapter.get_thread_functions():
-                logger.warning(f"Target function {target_function} not found")
-
-        target_macros: list[Config] = []
-
-        # Check [related] method
-        # if related method is used, fuzz related macros with the target function
-        # else, fuzz all macros
-        if "related" in methods:
-            for target_function in target_functions:
-                target_macro_list = list(self.related_macros_per_function.get(target_function, set()))
-                if not target_macro_list:
-                    logger.warning(f"No related macros found for {target_function}, so I'll not include them.")
-                else:
-                    target_macros.extend(target_macro_list)
-
-        if len(target_macros) == 0:
-            if isinstance(self.current_config.config, list):
-                raise NotImplementedError("list type config is not supported")
-            for key, macro in self.current_config.config.items():
-                target_macros.append(macro)
-
-        # Check [use-codesize] method
-        if "use-codesize" in methods:
-            new_target_macros = []
-            for target_macro in target_macros:
-                scope_size = 0
-                for scope in target_macro.conditional_scopes:
-                    scope_size += scope["scope_size"]
-                if scope_size > self.fuzzer_line_threshold:
-                    new_target_macros.append(target_macro)
-            if len(new_target_macros) == 0:
-                raise ValueError("No macros to fuzz")
-            target_macros = new_target_macros
 
         # Check if the most recent build failed and revert to previous config if needed
         if len(self.recent_steps) >= 1 and not self.recent_steps[-1].build_result:
             if len(self.recent_steps) >= 2:
-                self.current_config = self.recent_steps[-2].config
+                self.current_config = copy.deepcopy(self.recent_steps[-2].config)
                 logger.info("[+] Reverting to previous configuration due to build failure")
             else:
                 logger.warning("[-] No previous configuration to revert to")
 
-        mutation_config = None
+        while True:
+            for target_function in target_functions:
+                if target_function not in self.adapter.get_thread_functions():
+                    logger.warning(f"Target function {target_function} not found")
 
-        """
-            2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
-        """
-        if "stack" in methods:
-            if len(self.recent_steps) >= 2:
-                # 이전 결과
-                current_function_results = self.recent_steps[-1].function_results
-                before_function_results = self.recent_steps[-2].function_results
+            target_macros: list[Config] = []
 
-                current_target_function_result = [
-                    result for result in current_function_results if result["name"] == target_function
-                ][0]
-                before_target_function_result = [
-                    result for result in before_function_results if result["name"] == target_function
-                ][0]
+            # Check [related] method
+            # if related method is used, fuzz related macros with the target function
+            # else, fuzz all macros
+            if "related" in methods:
+                for target_function in target_functions:
+                    target_macro_list = list(self.related_macros_per_function.get(target_function, set()))
+                    if not target_macro_list:
+                        logger.warning(f"No related macros found for {target_function}, so I'll not include them.")
+                    else:
+                        target_macros.extend(target_macro_list)
 
-                if current_target_function_result["biggest_stack"] >= before_target_function_result["biggest_stack"]:
-                    mutation_config = self.recent_steps[-1].config
+            if len(target_macros) == 0:
+                if isinstance(self.current_config.config, list):
+                    raise NotImplementedError("list type config is not supported")
+                for key, macro in self.current_config.config.items():
+                    target_macros.append(macro)
+
+            # Check [use-codesize] method
+            if "use-codesize" in methods:
+                new_target_macros = []
+                for target_macro in target_macros:
+                    scope_size = 0
+                    for scope in target_macro.conditional_scopes:
+                        scope_size += scope["scope_size"]
+                    if scope_size > self.fuzzer_line_threshold:
+                        new_target_macros.append(target_macro)
+                if len(new_target_macros) == 0:
+                    raise ValueError("No macros to fuzz")
+                target_macros = new_target_macros
+
+            mutation_config = None
+
+            """
+                2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
+            """
+            if "stack" in methods:
+                if len(self.recent_steps) >= 2:
+                    # 이전 결과
+                    current_function_results = self.recent_steps[-1].function_results
+                    before_function_results = self.recent_steps[-2].function_results
+
+                    current_target_function_result = [
+                        result for result in current_function_results if result["name"] == target_function
+                    ][0]
+                    before_target_function_result = [
+                        result for result in before_function_results if result["name"] == target_function
+                    ][0]
+
+                    if (
+                        current_target_function_result["biggest_stack"]
+                        >= before_target_function_result["biggest_stack"]
+                    ):
+                        mutation_config = self.recent_steps[-1].config
+                    else:
+                        mutation_config = self.recent_steps[-2].config
+
+                if mutation_config:
+                    self.current_config = mutation_config
+
+            """
+                랜덤하게 2개 mutate
+            """
+            for i in range(self.threshold):
+                # print(target_macros)
+                random_macro = random.choice(target_macros)
+                self.current_config.change_config(random_macro.name)
+
+            if "sat-validate" in methods:
+                if not self.current_config.validate_configuration():
+                    logger.warning("[-] SAT validate failed, Trying another configuration..")
+                    continue
                 else:
-                    mutation_config = self.recent_steps[-2].config
+                    break
+            else:
+                break
 
-            if mutation_config:
-                self.current_config = mutation_config
-
-        """
-            랜덤하게 2개 mutate
-        """
-        for i in range(self.threshold):
-            # print(target_macros)
-            random_macro = random.choice(target_macros)
-            self.current_config.change_config(random_macro.name)
-
-        # TODO: 영향 받는것만 추가로 퍼징
+        return

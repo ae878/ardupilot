@@ -1,30 +1,68 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
 from src.config.config import ConfigFactory
-from src.adapter.ardupilot.ardupilot import ArdupilotAdapter
+from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
+import time
 import json
 
-ardupilot_base = "/home/ubuntu/ardupilot/build/AnyleafH7"
-thread_functions_file_path = "src/adapter/ardupilot/thread_functions.json"
+fmt_firmware_base = "/home/ubuntu/lab/FMT-Firmware"
+fmt_firmware_build_base = "/home/ubuntu/lab/FMT-Firmware/target/amov/icf5/build"
+thread_functions_file_path = "src/adapter/fmt_controller/thread_functions.json"
 
+
+target_thread_functions = [
+    "task_status_entry",
+    "task_mavgcs_entry",
+    "task_mavobc_entry",
+    "task_logger_entry",
+    "task_vehicle_entry",
+    "task_fmtio_entry",
+    "gps_probe_entry",
+    "rt_init_thread_entry",
+    "workqueue_executor",
+    "thread_entry",
+    "task_dronecan_entry",
+]
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/ardupilot/macros.json")
-header_file = config.create_config_header()
-
-
-json_datas = []
-with open("/home/ubuntu/ardupilot/build/AnyleafH7/compile_commands.json", "r") as file:
-    json_datas = json.load(file)
+condition = Condition("src/adapter/fmt_controller/condition_analysis_result.json")
+config = ConfigFactory("src/adapter/fmt_controller/macros.json", condition=condition)
 
 build_commands = []
+adapter = FMTControllerAdapter(
+    fmt_firmware_base,
+    build_commands,
+    thread_functions_file_path=thread_functions_file_path,
+    verbose=True,
+    build_base=fmt_firmware_build_base,
+)
 
-for data in json_datas:
-    build_commands.append(data["arguments"])
-adapter = ArdupilotAdapter(ardupilot_base, build_commands,
-                           thread_functions_file_path=thread_functions_file_path,
-                           verbose=True)
 
+fuzzer = Fuzzer(fmt_firmware_base, adapter, config=config, verbose=True)
+fuzzer.mutate(target_thread_functions, methods=["sat-validate"])
+exit()
+# 24시간(86400초) 제한 설정
+start_program = time.time()
+MAX_RUNTIME = 86400  # 24시간을 초단위로 표시
 
-fuzzer = Fuzzer(ardupilot_base, "src/adapter/ardupilot/macros.json", adapter, verbose=True)
 while True:
-    fuzzer.fuzz()
-    fuzzer.mutate("AP_OSD::osd_thread")
+    # for target_thread in target_thread_functions:
+    # 전체 실행 시간 체크
+    if time.time() - start_program > MAX_RUNTIME:
+        print("24시간이 경과하여 프로그램을 종료합니다.")
+        break
+
+    start_time = time.time()
+    fuzzer.fuzz(methods=["sat-validate"])
+    end_time = time.time()
+    print(f"Time taken: {end_time - start_time} seconds")
+
+    # input(
+    #     "Press Enter to continue...",
+    # )
+
+    fuzzer.mutate(target_thread_functions, methods=["sat-validate"])

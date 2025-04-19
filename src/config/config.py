@@ -112,7 +112,6 @@ class ConfigFactory:
         """
         self.config: dict[str, Config] = [Config Name]: [Config]
         """
-        print(config_json_file)
         self.config_json_file = os.path.abspath(config_json_file)
         self.config: dict[str, Config] = self.load_config()
         self.condition: Union[Condition, None] = condition
@@ -213,7 +212,7 @@ class ConfigFactory:
             self.config[name] = config
         return
 
-    def validate_configuration(self, condition_threshold: float = -1):
+    def validate_configuration(self, condition_threshold: float = -1) -> bool:
         satisfied_count = 0
         non_satisfied_count = 0
         if condition_threshold == -1:
@@ -228,8 +227,12 @@ class ConfigFactory:
                     non_satisfied_count += 1
                 else:
                     satisfied_count += 1
-
-        if satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold:
+        is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
+        satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
+        logger.info(
+            f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) ({satisfied_count}/{satisfied_count + non_satisfied_count})"
+        )
+        if is_satisfied:
             return True
         else:
             return False
