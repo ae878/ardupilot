@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.adapter.librepilot.librepilot import LibrepilotAdapter
 from src.config.config import ConfigFactory
+from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
 import json
 import time
@@ -57,7 +58,8 @@ target_thread_functions = [
     "gpspSystemTask",
 ]
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/librepilot/macros.json")
+condition = Condition("src/adapter/librepilot/condition_analysis_result.json")
+config = ConfigFactory("src/adapter/librepilot/macros.json", condition=condition)
 # header_file = config.create_config_header()
 
 
@@ -72,7 +74,7 @@ adapter = LibrepilotAdapter(
 
 
 fuzzer = Fuzzer(librepilot_base, adapter, config=config, verbose=True)
-
+fuzzer.initial_analyze(target_thread_functions)
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()
@@ -91,4 +93,4 @@ while True:
     print(f"Time taken: {end_time - start_time} seconds")
 
     # input("Press Enter to continue...")
-    fuzzer.mutate(target_thread_functions, methods=[])
+    fuzzer.mutate(target_thread_functions, methods=["related", "sat-validate"])

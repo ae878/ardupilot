@@ -21,8 +21,7 @@ adapter = FlipperZeroAdapter(
 
 fuzzer = Fuzzer(ardupilot_base, "src/adapter/ardupilot/macros.json", adapter, verbose=True)
 fuzzer.initial_analyze("AP_InertialSensor_ADIS1647x::loop", initial_analyze_result_dir="initial_analyze_ardupilot")
-# with open("fuzzer.json", "w") as f:
-#     json.dump(list(fuzzer.related_files_per_function["task_mavobc_entry"]), f)
+
 while True:
     start_time = time.time()
     fuzzer.fuzz()
