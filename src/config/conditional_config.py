@@ -37,3 +37,6 @@ class ConditionItem:
 
     def __str__(self):
         return self.expression
+
+    def __contains__(self, item: str) -> bool:
+        return item in self.listed_macros

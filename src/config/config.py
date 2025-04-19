@@ -1,11 +1,12 @@
 import json
 import os
 import random
+import logging as lg
 from typing import Union
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
 
-logger = get_logger(__name__)
+logger = get_logger(__name__, lg.DEBUG)
 
 
 class Config:
@@ -107,7 +108,7 @@ class Config:
 
 class ConfigFactory:
     def __init__(
-        self, config_json_file: str, condition: Union[Condition, None] = None, condition_threshold: float = 0.5
+        self, config_json_file: str, condition: Union[Condition, None] = None, condition_threshold: float = 0.12
     ):
         """
         self.config: dict[str, Config] = [Config Name]: [Config]
@@ -222,11 +223,22 @@ class ConfigFactory:
             return True
 
         for macro in self.config.values():
-            if macro.name in self.condition.condition_analysis:
-                if macro.value not in self.condition.condition_analysis[macro.name].satisfying_values:
-                    non_satisfied_count += 1
-                else:
-                    satisfied_count += 1
+            macro_name = macro.name
+            macro_value = macro.value
+            if macro_value is None:
+                continue
+            for condition_item in self.condition.condition_analysis.values():
+                if macro_name in condition_item:
+                    logger.debug(
+                        f"[-] {macro_name} in {condition_item}, {macro_value} in {condition_item.satisfying_values}"
+                    )
+                    if str(macro_value) == str(condition_item.satisfying_values[macro_name]):
+                        satisfied_count += 1
+                    else:
+                        non_satisfied_count += 1
+        if satisfied_count + non_satisfied_count == 0:
+            logger.warning("[-] SAT validate failed, No condition analysis result")
+            return True
         is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
         satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
         logger.info(
