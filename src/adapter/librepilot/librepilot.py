@@ -71,7 +71,8 @@ class LibrepilotAdapter(BaseAdapter):
             subprocess.run(["make", "fw_sparky2"], check=True)
         except subprocess.CalledProcessError as e:
             raise BuildErrorException(f"Build failed: {e}")
-        os.chdir(original_cwd)
+        finally:
+            os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True

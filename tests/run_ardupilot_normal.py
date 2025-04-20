@@ -46,7 +46,8 @@ target_thread_functions = [
     "GCS_MAVLINK::ftp_worker",
     "FlightAxis::socket_creator",
 ]
-ardupilot_base = "/home/ubuntu/lab/ardupilot/build/R9Pilot"
+ardupilot_base = "/home/ubuntu/lab/ardupilot"
+build_base = "/home/ubuntu/lab/ardupilot/build/R9Pilot"
 thread_functions_file_path = "src/adapter/ardupilot/thread_functions.json"
 
 

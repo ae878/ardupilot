@@ -74,9 +74,12 @@ class PX4Adapter(BaseAdapter):
         os.chdir(self.base)
 
         # Run as subprocess
-        subprocess.run(["make", *additional_args], check=True)
-
-        os.chdir(original_cwd)
+        try:
+            subprocess.run(["make", *additional_args], check=True)
+        except subprocess.CalledProcessError as e:
+            raise BuildErrorException(f"Build failed: {e}")
+        finally:
+            os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True
