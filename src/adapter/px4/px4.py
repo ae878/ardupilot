@@ -62,8 +62,8 @@ class PX4Adapter(BaseAdapter):
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
 
-        if not os.path.exists(os.path.join(self.build_base, "Makefile")):
-            raise BuildErrorException(f"Makefile not found in {self.build_base}")
+        if not os.path.exists(os.path.join(self.base, "Makefile")):
+            raise BuildErrorException(f"Makefile not found in {self.base}")
 
     def build(self, config: Union[ConfigFactory, str, None] = None, additional_args: list[str] = []) -> bool:
         if self.verbose:
@@ -75,7 +75,7 @@ class PX4Adapter(BaseAdapter):
 
         # Run as subprocess
         try:
-            subprocess.run(["make", *additional_args], check=True)
+            subprocess.run(["make", "cuav_7-nano", *additional_args], check=True)
         except subprocess.CalledProcessError as e:
             raise BuildErrorException(f"Build failed: {e}")
         finally:
