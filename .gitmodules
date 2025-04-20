@@ -1,6 +1,6 @@
 [submodule "src/ir2dot"]
 	path = src/ir2dot
-	url = https://github.com/mirusu400/ir2dot
+	url = https://github.com/stacksmash-vuln/ir2dot
 [submodule "preprocessor/macro-parser"]
 	path = preprocessor/macro-parser
 	url = https://github.com/stacksmash-vuln/macro-parser

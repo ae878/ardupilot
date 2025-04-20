@@ -283,6 +283,7 @@ class Fuzzer:
         - use-codesize: Target macros that actually change the code size
         - sat-validate: Validate the configuration with SAT solver
         """
+        max_validate_retry = 10
 
         # Check method/target_functions are valid
         for method in methods:
@@ -297,7 +298,7 @@ class Fuzzer:
             else:
                 logger.warning("[-] No previous configuration to revert to")
 
-        while True:
+        for _ in range(max_validate_retry):
             for target_function in target_functions:
                 if target_function not in self.adapter.get_thread_functions():
                     logger.warning(f"Target function {target_function} not found")
@@ -372,8 +373,19 @@ class Fuzzer:
                 self.current_config.change_config(random_macro.name)
 
             if "sat-validate" in methods:
-                if not self.current_config.validate_configuration():
-                    logger.warning("[-] SAT validate failed, Trying another configuration..")
+                is_satisfied, unsatisfied_macros = self.current_config.validate_configuration()
+                if not is_satisfied:
+                    logger.warning("[-] SAT validate failed, Trying to fix some unsatisfied macros..")
+                    # Randomly select some macros to fix
+                    num_to_fix = max(
+                        1, len(unsatisfied_macros) // 2
+                    )  # Fix at least 1, at most half of unsatisfied macros
+                    macros_to_fix = random.sample(unsatisfied_macros, num_to_fix)
+
+                    # Fix selected macros
+                    for macro_name, current_value, expected_value in macros_to_fix:
+                        logger.info(f"[-] Fixing {macro_name}: {current_value} -> {expected_value}")
+                        self.current_config.change_config(macro_name, expected_value)
                     continue
                 else:
                     break

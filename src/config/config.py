@@ -6,7 +6,7 @@ from typing import Union
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
 
-logger = get_logger(__name__, lg.DEBUG)
+logger = get_logger(__name__)
 
 
 class Config:
@@ -213,14 +213,15 @@ class ConfigFactory:
             self.config[name] = config
         return
 
-    def validate_configuration(self, condition_threshold: float = -1) -> bool:
+    def validate_configuration(self, condition_threshold: float = -1) -> tuple[bool, list[tuple[str, str, str]]]:
         satisfied_count = 0
         non_satisfied_count = 0
+        unsatisfied_macros = []
         if condition_threshold == -1:
             condition_threshold = self.condition_threshold
 
         if not self.condition:
-            return True
+            return True, []
 
         for macro in self.config.values():
             macro_name = macro.name
@@ -236,18 +237,18 @@ class ConfigFactory:
                         satisfied_count += 1
                     else:
                         non_satisfied_count += 1
+                        unsatisfied_macros.append(
+                            (macro_name, str(macro_value), str(condition_item.satisfying_values[macro_name]))
+                        )
         if satisfied_count + non_satisfied_count == 0:
             logger.warning("[-] SAT validate failed, No condition analysis result")
-            return True
+            return True, []
         is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
         satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
         logger.info(
             f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) ({satisfied_count}/{satisfied_count + non_satisfied_count})"
         )
-        if is_satisfied:
-            return True
-        else:
-            return False
+        return is_satisfied, unsatisfied_macros
 
     def create_config_header(self, dst="config.h", target_configs: list = []) -> str:
         raise NotImplementedError("Deprecated Function")
