@@ -168,7 +168,7 @@ class Fuzzer:
                                     self.related_macros_per_function[target_function].add(macro_info)
                                     break
                 else:
-                    logger.warning(f"[-] File {file.name} not found")
+                    logger.warning(f"[-] File for target function {target_function} not found")
 
         # exit()
 
