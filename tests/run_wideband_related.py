@@ -53,10 +53,10 @@ adapter = WidebandAdapter(
     verbose=True,
     build_base=wideband_build_dir,
 )
-adapter.initial_analyze(target_thread_functions)
 
 
 fuzzer = Fuzzer(wideband_base, adapter, config=config, verbose=True)
+fuzzer.initial_analyze(target_thread_functions, "initial_analyze_wideband")
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()

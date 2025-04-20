@@ -70,10 +70,10 @@ adapter = TaulabsAdapter(
     verbose=True,
     build_base=taulabs_build_dir,
 )
-adapter.initial_analyze(target_thread_functions)
 
 
 fuzzer = Fuzzer(taulabs_base, adapter, config=config, verbose=True)
+fuzzer.initial_analyze(target_thread_functions, "initial_analyze_taulabs")
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()
