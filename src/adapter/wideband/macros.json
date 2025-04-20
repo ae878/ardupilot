@@ -1,10 +1,1007 @@
 {
-    "BOARD": {
+    "EGT_CHANNELS": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/wideband_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/wideband_board_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/wideband_board_config.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "EGT_CHANNELS",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/wideband_config.h",
+            "/home/ubuntu/lab/wideband/firmware/max3185x.h",
+            "/home/ubuntu/lab/wideband/firmware/max3185x.cpp",
+            "/home/ubuntu/lab/wideband/firmware/main.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/wideband_config.h",
+                "start_line": 8,
+                "end_line": 10,
+                "scope_size": 2,
+                "directive_type": "ifndef",
+                "original_condition": "#ifndef EGT_CHANNELS"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/max3185x.h",
+                "start_line": 36,
+                "end_line": 77,
+                "scope_size": 41,
+                "directive_type": "if",
+                "original_condition": "#if (EGT_CHANNELS > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/max3185x.cpp",
+                "start_line": 9,
+                "end_line": 267,
+                "scope_size": 258,
+                "directive_type": "if",
+                "original_condition": "#if (EGT_CHANNELS > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/main.cpp",
+                "start_line": 48,
+                "end_line": 50,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if (EGT_CHANNELS > 0)"
+            }
+        ]
+    },
+    "EFI_BLUETOOTH_SETUP": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio.cpp"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "EFI_BLUETOOTH_SETUP",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio.cpp",
+                "start_line": 79,
+                "end_line": 81,
+                "scope_size": 2,
+                "directive_type": "ifndef",
+                "original_condition": "#ifndef EFI_BLUETOOTH_SETUP"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio.cpp",
+                "start_line": 347,
+                "end_line": 351,
+                "scope_size": 4,
+                "directive_type": "if",
+                "original_condition": "#if EFI_BLUETOOTH_SETUP"
+            }
+        ]
+    },
+    "AFR_CHANNELS": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/wideband_board_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f0_module/wideband_board_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/wideband_board_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/wideband_board_config.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/wideband_board_config.h"
+        ],
+        "value": 1,
+        "type": "integer",
+        "name": "AFR_CHANNELS",
+        "value_candidates": [
+            0,
+            0,
+            1,
+            2,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/pump_control.cpp",
+            "/home/ubuntu/lab/wideband/firmware/heater_thread.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/pump_control.cpp",
+                "start_line": 18,
+                "end_line": 22,
+                "scope_size": 4,
+                "directive_type": "if",
+                "original_condition": "#if (AFR_CHANNELS > 1)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_thread.cpp",
+                "start_line": 49,
+                "end_line": 51,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if AFR_CHANNELS >= 2"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_thread.cpp",
+                "start_line": 107,
+                "end_line": 109,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if (AFR_CHANNELS > 1)"
+            }
+        ]
+    },
+    "BOOT_CPU_USER_PROGRAM_START_HOOK": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "BOOT_CPU_USER_PROGRAM_START_HOOK",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+                "start_line": 161,
+                "end_line": 166,
+                "scope_size": 5,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_CPU_USER_PROGRAM_START_HOOK > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+                "start_line": 161,
+                "end_line": 166,
+                "scope_size": 5,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_CPU_USER_PROGRAM_START_HOOK > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+                "start_line": 161,
+                "end_line": 166,
+                "scope_size": 5,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_CPU_USER_PROGRAM_START_HOOK > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 48,
+                "end_line": 77,
+                "scope_size": 29,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_CPU_USER_PROGRAM_START_HOOK > 0)"
+            }
+        ]
+    },
+    "BOOT_COM_CAN_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 1,
+        "type": "integer",
+        "name": "BOOT_COM_CAN_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            1,
+            2,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+                "start_line": 146,
+                "end_line": 159,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+                "start_line": 186,
+                "end_line": 189,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+                "start_line": 146,
+                "end_line": 159,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+                "start_line": 186,
+                "end_line": 189,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+                "start_line": 146,
+                "end_line": 159,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+                "start_line": 186,
+                "end_line": 189,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_CAN_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_COM_RS232_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 1,
+        "type": "integer",
+        "name": "BOOT_COM_RS232_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            1,
+            2,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+                "start_line": 131,
+                "end_line": 144,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/main.c",
+                "start_line": 191,
+                "end_line": 194,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+                "start_line": 131,
+                "end_line": 144,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/main.c",
+                "start_line": 191,
+                "end_line": 194,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+                "start_line": 131,
+                "end_line": 144,
+                "scope_size": 13,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/main.c",
+                "start_line": 191,
+                "end_line": 194,
+                "scope_size": 3,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COM_RS232_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_BACKDOOR_HOOKS_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "BOOT_BACKDOOR_HOOKS_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 14,
+                "end_line": 41,
+                "scope_size": 27,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_BACKDOOR_HOOKS_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_NVM_HOOKS_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "BOOT_NVM_HOOKS_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 125,
+                "end_line": 196,
+                "scope_size": 71,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_NVM_HOOKS_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_NVM_SIZE_KB": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 128,
+        "type": "integer",
+        "name": "BOOT_NVM_SIZE_KB",
+        "value_candidates": [
+            0,
+            127,
+            128,
+            129,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/flash_layout.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/flash_layout.c",
+                "start_line": 21,
+                "end_line": 30,
+                "scope_size": 9,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_NVM_SIZE_KB > 16)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/flash_layout.c",
+                "start_line": 49,
+                "end_line": 82,
+                "scope_size": 33,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_NVM_SIZE_KB > 64)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/flash_layout.c",
+                "start_line": 149,
+                "end_line": 151,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_NVM_SIZE_KB > 256)"
+            }
+        ]
+    },
+    "BOOT_NVM_CHECKSUM_HOOKS_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "BOOT_NVM_CHECKSUM_HOOKS_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 199,
+                "end_line": 224,
+                "scope_size": 25,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_NVM_CHECKSUM_HOOKS_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_COP_HOOKS_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 1,
+        "type": "integer",
+        "name": "BOOT_COP_HOOKS_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            1,
+            2,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 84,
+                "end_line": 118,
+                "scope_size": 34,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_COP_HOOKS_ENABLE > 0)"
+            }
+        ]
+    },
+    "BOOT_XCP_SEED_KEY_ENABLE": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/openblt/blt_conf.h",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/openblt/blt_conf.h"
+        ],
+        "value": 0,
+        "type": "integer",
+        "name": "BOOT_XCP_SEED_KEY_ENABLE",
+        "value_candidates": [
+            0,
+            0,
+            0,
+            1,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/openblt/hooks.c",
+                "start_line": 231,
+                "end_line": 283,
+                "scope_size": 52,
+                "directive_type": "if",
+                "original_condition": "#if (BOOT_XCP_SEED_KEY_ENABLE > 0)"
+            }
+        ]
+    },
+    "HEATER_FAST_HEATING_THRESHOLD_T": {
+        "defined_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/wideband_board_config.h"
+        ],
+        "value": 550,
+        "type": "integer",
+        "name": "HEATER_FAST_HEATING_THRESHOLD_T",
+        "value_candidates": [
+            0,
+            549,
+            550,
+            551,
+            255,
+            65535,
+            4294967295
+        ],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/heater_control.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_control.cpp",
+                "start_line": 73,
+                "end_line": 83,
+                "scope_size": 10,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef HEATER_FAST_HEATING_THRESHOLD_T"
+            }
+        ]
+    },
+    "BATTERY_INPUT_DIVIDER": {
         "defined_in": [],
-        "used_in": [],
-        "name": "BOARD",
-        "type": "string",
-        "value": "f0_module",
-        "value_candidates": ["f0_module", "f1_common", "f1_dual", "f1_dual_rev1", "f1_rev2", "f1_rev3"]
+        "value": null,
+        "type": "unknown",
+        "name": "BATTERY_INPUT_DIVIDER",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/sampling.h",
+            "/home/ubuntu/lab/wideband/firmware/sampling.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/sampling.h",
+                "start_line": 39,
+                "end_line": 41,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef BATTERY_INPUT_DIVIDER"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/sampling.cpp",
+                "start_line": 42,
+                "end_line": 54,
+                "scope_size": 12,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef BATTERY_INPUT_DIVIDER"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/sampling.cpp",
+                "start_line": 117,
+                "end_line": 119,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef BATTERY_INPUT_DIVIDER"
+            }
+        ]
+    },
+    "HAL_USE_DAC": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "HAL_USE_DAC",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/dac.h",
+            "/home/ubuntu/lab/wideband/firmware/dac.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/dac.h",
+                "start_line": 7,
+                "end_line": 23,
+                "scope_size": 16,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_DAC"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/dac.cpp",
+                "start_line": 7,
+                "end_line": 31,
+                "scope_size": 24,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_DAC"
+            }
+        ]
+    },
+    "AUXOUT_DAC_PWM_DEVICE": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "AUXOUT_DAC_PWM_DEVICE",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/auxout.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/auxout.cpp",
+                "start_line": 15,
+                "end_line": 93,
+                "scope_size": 78,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef AUXOUT_DAC_PWM_DEVICE"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/auxout.cpp",
+                "start_line": 121,
+                "end_line": 194,
+                "scope_size": 73,
+                "directive_type": "if",
+                "original_condition": "#if (defined(AUXOUT_DAC_PWM_DEVICE) || defined(AUXOUT_DAC_DEVICE))"
+            }
+        ]
+    },
+    "AUXOUT_DAC_DEVICE": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "AUXOUT_DAC_DEVICE",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/auxout.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/auxout.cpp",
+                "start_line": 95,
+                "end_line": 119,
+                "scope_size": 24,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef AUXOUT_DAC_DEVICE"
+            }
+        ]
+    },
+    "HEATER_MAX_DUTY": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "HEATER_MAX_DUTY",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/heater_control.h",
+            "/home/ubuntu/lab/wideband/firmware/heater_control.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_control.h",
+                "start_line": 60,
+                "end_line": 62,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef HEATER_MAX_DUTY"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_control.cpp",
+                "start_line": 195,
+                "end_line": 203,
+                "scope_size": 8,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef HEATER_MAX_DUTY"
+            }
+        ]
+    },
+    "STM32_PWM_USE_ADVANCED": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "STM32_PWM_USE_ADVANCED",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/heater_thread.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/heater_thread.cpp",
+                "start_line": 21,
+                "end_line": 23,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if STM32_PWM_USE_ADVANCED"
+            }
+        ]
+    },
+    "DEBUG_SERIAL_PORT": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "DEBUG_SERIAL_PORT",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/uart.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/uart.cpp",
+                "start_line": 15,
+                "end_line": 73,
+                "scope_size": 58,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef DEBUG_SERIAL_PORT"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/uart.cpp",
+                "start_line": 117,
+                "end_line": 119,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef DEBUG_SERIAL_PORT"
+            }
+        ]
+    },
+    "TS_SECONDARY_SERIAL_PORT": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "TS_SECONDARY_SERIAL_PORT",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/uart.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/uart.cpp",
+                "start_line": 122,
+                "end_line": 124,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef TS_SECONDARY_SERIAL_PORT"
+            }
+        ]
+    },
+    "PUMP_DAC_PWM_DEVICE": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "PUMP_DAC_PWM_DEVICE",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp",
+                "start_line": 9,
+                "end_line": 44,
+                "scope_size": 35,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef PUMP_DAC_PWM_DEVICE"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp",
+                "start_line": 74,
+                "end_line": 76,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef PUMP_DAC_PWM_DEVICE"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp",
+                "start_line": 113,
+                "end_line": 115,
+                "scope_size": 2,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef PUMP_DAC_PWM_DEVICE"
+            }
+        ]
+    },
+    "PUMP_DAC_DAC_DEVICE_0": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "PUMP_DAC_DAC_DEVICE_0",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/pump_dac.cpp",
+                "start_line": 46,
+                "end_line": 64,
+                "scope_size": 18,
+                "directive_type": "ifdef",
+                "original_condition": "#ifdef PUMP_DAC_DAC_DEVICE_0"
+            }
+        ]
+    },
+    "HAL_USE_SERIAL": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "HAL_USE_SERIAL",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io_serial.cpp",
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io.h"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io_serial.cpp",
+                "start_line": 12,
+                "end_line": 246,
+                "scope_size": 234,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_SERIAL"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io.h",
+                "start_line": 94,
+                "end_line": 117,
+                "scope_size": 23,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_SERIAL"
+            }
+        ]
+    },
+    "HAL_USE_UART": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "HAL_USE_UART",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io_serial.cpp",
+            "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io.h"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io_serial.cpp",
+                "start_line": 248,
+                "end_line": 284,
+                "scope_size": 36,
+                "directive_type": "if",
+                "original_condition": "#if (HAL_USE_UART == TRUE) && (UART_USE_WAIT == TRUE)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/console/binary/tunerstudio_io.h",
+                "start_line": 119,
+                "end_line": 136,
+                "scope_size": 17,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_UART"
+            }
+        ]
+    },
+    "HAL_USE_PAL": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "HAL_USE_PAL",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/board.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/board.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/board.c",
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/board.c"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev3/board.c",
+                "start_line": 24,
+                "end_line": 36,
+                "scope_size": 12,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_PAL || defined(__DOXYGEN__)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_rev2/board.c",
+                "start_line": 24,
+                "end_line": 33,
+                "scope_size": 9,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_PAL || defined(__DOXYGEN__)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/board.c",
+                "start_line": 24,
+                "end_line": 35,
+                "scope_size": 11,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_PAL || defined(__DOXYGEN__)"
+            },
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/board.c",
+                "start_line": 24,
+                "end_line": 33,
+                "scope_size": 9,
+                "directive_type": "if",
+                "original_condition": "#if HAL_USE_PAL || defined(__DOXYGEN__)"
+            }
+        ]
+    },
+    "BOARD_DEFAULT_SENSOR_TYPE": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "BOARD_DEFAULT_SENSOR_TYPE",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/boards/f1_common/f1_port.cpp"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/boards/f1_common/f1_port.cpp",
+                "start_line": 47,
+                "end_line": 49,
+                "scope_size": 2,
+                "directive_type": "ifndef",
+                "original_condition": "#ifndef BOARD_DEFAULT_SENSOR_TYPE"
+            }
+        ]
+    },
+    "CH_CFG_USE_REGISTRY": {
+        "defined_in": [],
+        "value": null,
+        "type": "unknown",
+        "name": "CH_CFG_USE_REGISTRY",
+        "value_candidates": [],
+        "used_in": [
+            "/home/ubuntu/lab/wideband/firmware/util/thread_controller.h"
+        ],
+        "conditional_scopes": [
+            {
+                "file": "/home/ubuntu/lab/wideband/firmware/util/thread_controller.h",
+                "start_line": 63,
+                "end_line": 65,
+                "scope_size": 2,
+                "directive_type": "if",
+                "original_condition": "#if CH_CFG_USE_REGISTRY"
+            }
+        ]
     }
 }

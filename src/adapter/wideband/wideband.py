@@ -86,14 +86,14 @@ class WidebandAdapter(BaseAdapter):
         os.chdir(self.base)
 
         # Run the build commands
-        board_name = config.get_config("BOARD").get("value")
+        # board_name = config.get_config("BOARD").get("value")
 
         # Call make command with export board name
         # ifeq ($(BOARD),)
         # BOARD = f0_module
         # endif
         # make env
-        subprocess.run(["make", "-j4", f"BOARD={board_name}"], check=True)
+        subprocess.run(["make", "-j4", f"BOARD=f1_dual"], check=True)
 
         os.chdir(original_cwd)
         if self.verbose:
