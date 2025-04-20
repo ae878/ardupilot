@@ -3,9 +3,9 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from adapter.wideband.wideband import WidebandAdapter
+from src.adapter.wideband.wideband import WidebandAdapter
 from src.config.config import ConfigFactory
-from src.adapter.ardupilot.ardupilot import ArdupilotAdapter
+from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
 import json
 import time
@@ -44,8 +44,8 @@ target_thread_functions = [
 ]
 
 # Set config file path for creating config.h
-config = ConfigFactory("src/adapter/wideband/macros.json")
-header_file = config.create_config_header()
+condition = Condition("src/adapter/wideband/condition_analysis_result.json")
+config = ConfigFactory("src/adapter/wideband/macros.json", condition)
 
 
 build_commands = []
@@ -56,10 +56,10 @@ adapter = WidebandAdapter(
     verbose=True,
     build_base=wideband_build_dir,
 )
-# adapter.initial_analyze(target_thread_functions)
+adapter.initial_analyze(target_thread_functions)
 
 
-fuzzer = Fuzzer(wideband_base, adapter, config, verbose=True)
+fuzzer = Fuzzer(wideband_base, adapter, config=config, verbose=True)
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()

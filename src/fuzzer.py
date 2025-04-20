@@ -230,12 +230,13 @@ class Fuzzer:
             analyze_time = time.time()
 
         for function_result in function_results:
-            biggest_stack = function_result["biggest_stack"]
-            source_size = function_result["source_size"]
+            biggest_stack = int(function_result["biggest_stack"])
+            source_size = int(function_result["source_size"])
             biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
-            if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
-                self.unique_stack_smash_count += 1
-                self.unique_stack_smashes.add(biggest_path)
+            if biggest_stack > 0:
+                if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
+                    self.unique_stack_smash_count += 1
+                    self.unique_stack_smashes.add(biggest_path)
 
         self.recent_step = FuzzerStep(
             build_result=build_result,

@@ -3,11 +3,9 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from adapter.wideband.wideband import WidebandAdapter
+from src.adapter.wideband.wideband import WidebandAdapter
 from src.config.config import ConfigFactory
-from src.adapter.ardupilot.ardupilot import ArdupilotAdapter
 from src.fuzzer import Fuzzer
-import json
 import time
 
 wideband_base = "/home/ubuntu/lab/wideband/firmware"
@@ -45,7 +43,7 @@ target_thread_functions = [
 
 # Set config file path for creating config.h
 config = ConfigFactory("src/adapter/wideband/macros.json")
-header_file = config.create_config_header()
+# header_file = config.create_config_header()
 
 
 build_commands = []
@@ -58,7 +56,7 @@ adapter = WidebandAdapter(
 )
 
 
-fuzzer = Fuzzer(wideband_base, adapter, config, verbose=True)
+fuzzer = Fuzzer(wideband_base, adapter, config=config, verbose=True)
 
 # 24시간(86400초) 제한 설정
 start_program = time.time()

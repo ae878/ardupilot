@@ -34,6 +34,7 @@ class WidebandAdapter(BaseAdapter):
         thread_functions_file_path: str = "",
         analyze_result_dir="./analyze_wideband",
         verbose: bool = False,
+        build_base: str = "",
     ):
         """
         WidebandAdapter class
@@ -63,15 +64,12 @@ class WidebandAdapter(BaseAdapter):
         # Function results
         self.function_results = []
 
+        self.build_base = build_base
+
         self.name = "wideband"
 
         # build_includes.txt 파일의 절대 경로 생성
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        build_includes_path = os.path.join(current_dir, "build_includes.txt")
-
-        with open(build_includes_path, "r", encoding="utf-8") as file:
-            include_flags = file.readlines()
-            self.build_includes = [flag.strip() for flag in include_flags if flag.strip()]
 
         with open(self.thread_functions_file_path, "r", encoding="utf-8") as file:
             self.thread_functions = json.load(file)
