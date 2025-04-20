@@ -21,6 +21,7 @@ class DroninAdapter(BaseAdapter):
         thread_functions_file_path: str = "",
         analyze_result_dir: str = "./analyze_dronin",
         verbose: bool = False,
+        build_base: str = "",
     ):
         """
         DroninAdapter class
@@ -49,8 +50,10 @@ class DroninAdapter(BaseAdapter):
         self.thread_functions = []
         # Function results
         self.function_results = []
+        # Build base
+        self.build_base = build_base
 
-        self.name = "librepilot"
+        self.name = "dronin"
 
         # build_includes.txt 파일의 절대 경로 생성
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -65,10 +68,14 @@ class DroninAdapter(BaseAdapter):
         # Change the cwd to the base directory
         os.chdir(self.base)
 
-        # Run as subprocess
-        subprocess.run(["make", "fw_sparky2"], check=True)
-
-        os.chdir(original_cwd)
+        try:
+            # Run as subprocess
+            subprocess.run(["make", "fw_sparky2"], check=True)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"[-] Build failed: {e}")
+            raise BuildErrorException(f"Build failed: {str(e)}")
+        finally:
+            os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True
