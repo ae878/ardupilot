@@ -10,8 +10,8 @@ from src.fuzzer import Fuzzer
 import json
 import time
 
-taulabs_base = "/home/ubuntu/lab/taulabs/firmware"
-taulabs_build_dir = "/home/ubuntu/lab/taulabs/firmware/build"
+taulabs_base = "/home/ubuntu/lab/TauLabs"
+taulabs_build_dir = "/home/ubuntu/lab/TauLabs/build"
 thread_functions_file_path = "src/adapter/taulabs/thread_functions.json"
 
 target_thread_functions = [
