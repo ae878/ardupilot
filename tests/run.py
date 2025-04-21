@@ -50,8 +50,8 @@ base_configuration = {
         "result_file_name": "result_fmt-controller",
     },
     "librepilot": {
-        "base": "/home/ubuntu/lab/librepilot",
-        "build_base": "/home/ubuntu/lab/librepilot/build",
+        "base": "/home/ubuntu/lab/LibrePilot",
+        "build_base": "/home/ubuntu/lab/LibrePilot/build",
         "thread_functions_file_path": "src/adapter/librepilot/thread_functions.json",
         "condition_json_path": "src/adapter/librepilot/condition_analysis_result.json",
         "macros_json_path": "src/adapter/librepilot/macros.json",
