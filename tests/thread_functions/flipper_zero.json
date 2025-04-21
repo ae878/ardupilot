@@ -1,0 +1,13 @@
+[
+    "task_status_entry",
+    "task_mavgcs_entry",
+    "task_mavobc_entry",
+    "task_logger_entry",
+    "task_vehicle_entry",
+    "task_fmtio_entry",
+    "gps_probe_entry",
+    "rt_init_thread_entry",
+    "workqueue_executor",
+    "thread_entry",
+    "task_dronecan_entry"
+]

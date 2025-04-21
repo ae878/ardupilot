@@ -1,0 +1,19 @@
+[
+    "px4::WorkQueueManagerRun",
+    "ModuleBase<GPS>::run_trampoline",
+    "GPS::run_trampoline_secondary",
+    "frsky_telemetry_thread_main",
+    "hott_sensors_thread_main",
+    "hott_telemetry_thread_main",
+    "ModuleBase<Commander>::run_trampoline",
+    "task_main",
+    "gimbal_thread_main",
+    "landing_target_estimator::landing_target_estimator_thread_main",
+    "ModuleBase<px4::logger::Logger>::run_trampoline",
+    "MavlinkShell::shell_start_thread",
+    "Mavlink::start_helper",
+    "ModuleBase<Navigator>::run_trampoline",
+    "ModuleBase<Sih>::run_trampoline",
+    "TemperatureCalibration::do_temperature_calibration",
+    "ModuleBase<UxrceddsClient>::run_trampoline"
+]
