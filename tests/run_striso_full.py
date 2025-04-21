@@ -1,3 +1,8 @@
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from src.adapter.striso.striso import StrisoAdapter
 from src.config.config import ConfigFactory
 from src.fuzzer import Fuzzer
@@ -44,7 +49,7 @@ while True:
             break
 
         start_time = time.time()
-        fuzzer.fuzz()
+        fuzzer.fuzz(methods=["related"])
         end_time = time.time()
         print(f"Time taken: {end_time - start_time} seconds")
 
