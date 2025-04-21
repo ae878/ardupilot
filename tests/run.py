@@ -227,6 +227,7 @@ def main():
         remaining_time = MAX_RUNTIME - total_previous_time
         print(f"[+] Remaining time: {remaining_time} seconds")
         start_step = last_step + 1
+    print(f"[+] Target: {target}\tUse related: {use_related}\tUse sat: {use_sat}")
     input("[-] Press Enter to continue...")
     fuzzer = Fuzzer(firmware_base, adapter, config=config, verbose=True)
     if use_related:
