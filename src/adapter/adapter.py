@@ -138,7 +138,7 @@ class BaseAdapter(ABC):
 
         parser_base = self.build_base if self.build_base else self.base
         parser = Parser(
-            parser_base, "", self.analyze_result_dir, is_save_pkl=True, is_load_pkl=False, is_only_test=False
+            parser_base, "", self.analyze_result_dir, is_save_pkl=False, is_load_pkl=False, is_only_test=False
         )
 
         parser.parse()
