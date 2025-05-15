@@ -35,13 +35,16 @@ def get_random_condition():
     return all_conditions
 
 
+fmt_macros = "unit_test/assets/fmt_macros.json"
+ardupilot_macros = "unit_test/assets/ardupilot_macros.json"
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Test Z3 config solver")
     parser.add_argument("-f", "--fuzz", action="store_true", help="Fuzz test with random condition")
     args = parser.parse_args()
 
-    condition = Condition(conditional_analysis)
-    config_factory = ConfigFactory("unit_test/assets/fmt_macros.json", condition)
+    # condition = Condition(conditional_analysis)
+    config_factory = ConfigFactory(ardupilot_macros)
     z3_config_solver = Z3ConfigSolver(config_factory)
 
     if args.fuzz:

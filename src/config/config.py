@@ -2,7 +2,7 @@ import json
 import os
 import random
 import logging as lg
-from typing import Union
+from typing import Union, List, Dict, Optional
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
 
@@ -22,24 +22,41 @@ class Config:
         self.value: Union[str, int, float] = config.get("value", "")
         # 매크로 값이 될 수 있는 값들
         # value candidates of #define
-        self.value_candidates: list[Union[str, int, float]] = config.get("value_candidates", [])
+        self.value_candidates: List[Union[str, int, float]] = config.get("value_candidates", [])
         # 매크로가 정의된 파일들 list
         # files that #define is defined in
-        self.defined_in: list[str] = config.get("defined_in", [])
+        self.defined_in: List[str] = config.get("defined_in", [])
         # 매크로가 사용된 파일들 list
         # files that #define is used in users
-        self.used_in: list[str] = config.get("used_in", [])
+        self.used_in: List[str] = config.get("used_in", [])
         # 매크로가 사용된 함수들 dict
         # functions that #define is used in
-        self.used_in_functions: dict[str, list[str]] = config.get("used_in_functions", {})
+        self.used_in_functions: Dict[str, List[str]] = config.get("used_in_functions", {})
 
         # 매크로가 사용된 범위들
         # scopes that #define is used in
-        self.conditional_scopes: list[dict] = config.get("conditional_scopes", [])
+        self.conditional_scopes: List[ConfigBlock] = []
 
         # The child/parent of the config (dependent between nodes)
-        self.child_configs: list[Config] = config.get("child_configs", [])
-        self.parent_configs: list[Config] = config.get("parent_configs", [])
+        self.child_configs: List[Config] = config.get("child_configs", [])
+        self.parent_configs: List[Config] = config.get("parent_configs", [])
+
+        for conditional_scope in config.get("conditional_scopes", []):
+            self.conditional_scopes.append(ConfigBlock(conditional_scope))
+
+    def __json__(self):
+        return {
+            "name": self.name,
+            "type": self.type,
+            "value": self.value,
+            "value_candidates": self.value_candidates,
+            "defined_in": self.defined_in,
+            "used_in": self.used_in,
+            "used_in_functions": self.used_in_functions,
+            "conditional_scopes": [scope.__json__() for scope in self.conditional_scopes],
+            "child_configs": [child.__json__() for child in self.child_configs],
+            "parent_configs": [parent.__json__() for parent in self.parent_configs],
+        }
 
     def solve_condition(self, condition_line: str) -> list:
         """
@@ -104,6 +121,72 @@ class Config:
             return []
 
         return []
+
+
+class ConfigBlock:
+    """
+    #if ... #elif ... #else ... #endif 자체의 하나의 블럭
+    여러 Config 아이템과 연관되어 있을 수 있으므로, unique 하게 관리되야 될듯 함
+    """
+
+    def __init__(self, scope_data: dict):
+        self.file: str = scope_data.get("file", "")
+        self.block_start: int = scope_data.get("block_start", 0)
+        self.block_end: int = scope_data.get("block_end", 0)
+        self.total_block_lines: int = scope_data.get("total_block_lines", 0)
+
+        self.branch_type: str = scope_data.get("branch_type", "")
+        self.branch_condition: str = scope_data.get("branch_condition", "")
+
+        self.branch_start: int = scope_data.get("branch_start", 0)
+        self.branch_end: int = scope_data.get("branch_end", 0)
+        self.executable_lines: int = scope_data.get("executable_lines", 0)
+
+        self.nesting_level: int = scope_data.get("nesting_level", 0)
+        self.block_structure: ConfigBlockStructure = ConfigBlockStructure(scope_data.get("block_structure", {}))
+
+    def __json__(self):
+        return {
+            "file": self.file,
+            "block_start": self.block_start,
+            "block_end": self.block_end,
+            "total_block_lines": self.total_block_lines,
+            "branch_type": self.branch_type,
+            "branch_condition": self.branch_condition,
+            "branch_start": self.branch_start,
+            "branch_end": self.branch_end,
+            "executable_lines": self.executable_lines,
+            "nesting_level": self.nesting_level,
+            "block_structure": self.block_structure.__json__(),
+        }
+
+
+class ConfigBlockStructure:
+    """
+    특정 config가 실제로 영향받는 Scope
+    """
+
+    def __init__(self, scope_data: dict):
+        self.start_line: int = scope_data.get("start_line", 0)
+        self.end_line: int = scope_data.get("end_line", 0)
+        self.nesting_level: int = scope_data.get("nesting_level", 0)
+        self.total_lines: int = scope_data.get("total_lines", 0)
+        self.branches: List[Dict] = scope_data.get("branches", [])
+
+        self.child_blocks: List[ConfigBlockStructure] = []
+
+        for child_block in scope_data.get("child_blocks", []):
+            self.child_blocks.append(ConfigBlockStructure(child_block))
+
+    def __json__(self):
+        return {
+            "start_line": self.start_line,
+            "end_line": self.end_line,
+            "nesting_level": self.nesting_level,
+            "total_lines": self.total_lines,
+            "branches": self.branches,
+            "child_blocks": [child.__json__() for child in self.child_blocks],
+        }
 
 
 class ConfigFactory:

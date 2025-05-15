@@ -131,6 +131,8 @@ class Z3ConfigSolver:
                         if right.isdigit():
                             right_val = int(right)
                         elif right.startswith("0x"):
+                            # Remove UL suffix if present
+                            right = right.replace("U", "").replace("L", "")
                             right_val = int(right, 16)
                         else:
                             right_val = self.macro_vars.get(right, Int(right))
