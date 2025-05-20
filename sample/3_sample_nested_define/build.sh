@@ -1,0 +1,1 @@
+arm-none-eabi-gcc -o sample.elf sample.c -O0 -g -fstack-usage -fdump-tree-optimized-graph
