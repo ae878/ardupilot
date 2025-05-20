@@ -5,14 +5,25 @@ from src.utils.logging import get_logger
 from typing import Union
 import os
 import re
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.progress import (
+    Progress,
+    SpinnerColumn,
+    TextColumn,
+    BarColumn,
+    TaskProgressColumn,
+)
 from rich.console import Console
 import logging as lg
 
-logger = get_logger(__name__, level=lg.DEBUG)
+# logger = get_logger(__name__, level=lg.DEBUG)
 
 
 class FileItem:
+    """
+    FileItem Class
+    Used for saving changed file line information
+    """
+
     def __init__(self, file_path: str, line_number: int, content: str):
         self.file_path = file_path
         self.line_number = line_number
@@ -20,7 +31,9 @@ class FileItem:
 
 
 class Applier:
-    def __init__(self, base: str, apply_extensions: list[str] = [".c", ".h", ".cpp", ".hpp"]):
+    def __init__(
+        self, base: str, apply_extensions: list[str] = [".c", ".h", ".cpp", ".hpp"]
+    ):
         """
         Applyer class
         This class is used to apply the changes to the files.
@@ -35,7 +48,11 @@ class Applier:
         self.original_items = []
         self.apply_items = []
 
-    def apply(self, config: ConfigFactory, target_macros: list[Union[str, Config]] = []):
+        self.logger = get_logger(__name__, level=lg.DEBUG)
+
+    def apply(
+        self, config: ConfigFactory, target_macros: list[Union[str, Config]] = []
+    ):
         """
         Apply config into the project
 
@@ -69,8 +86,12 @@ class Applier:
                 for file_path in macro_config.defined_in:
                     total_files_set.add(file_path)
             file_paths = list(total_files_set)
+            self.logger.debug(
+                f"=============== Apply {len(file_paths)} files ================"
+            )
+            self.logger.debug(str(file_paths))
         else:
-            logger.debug("=============== Apply All Macros ================")
+            self.logger.debug("=============== Apply All Macros ================")
             for root, _, files in os.walk(self.base):
                 for file in files:
                     if not any(file.endswith(ext) for ext in self.apply_extensions):
@@ -78,6 +99,8 @@ class Applier:
                     file_paths.append(os.path.join(root, file))
 
         total_files = len(file_paths)
+        # for file_path in file_paths:
+        #     self._apply_file(file_path, config, target_macros)
         # Create a separate console for progress display
         progress_console = Console(stderr=True)
         with Progress(
@@ -88,19 +111,29 @@ class Applier:
             console=progress_console,
         ) as progress:
             # Create main task
-            main_task = progress.add_task("[cyan]Processing files...", total=total_files)
+            main_task = progress.add_task(
+                "[cyan]Processing files...", total=total_files
+            )
 
             # Walk through the base directory
             for file_path in file_paths:
                 # Update progress description with current file
-                progress.update(main_task, description=f"[cyan]Processing {os.path.basename(file_path)}")
+                progress.update(
+                    main_task,
+                    description=f"[cyan]Processing {os.path.basename(file_path)}",
+                )
                 try:
                     self._apply_file(file_path, config, target_macros)
                 except Exception as e:
-                    logger.error(f"Error applying file {file_path}: {str(e)}")
+                    self.logger.error(f"Error applying file {file_path}: {str(e)}")
                 progress.advance(main_task)
 
-    def _apply_file(self, file_path: str, config: ConfigFactory, target_macros: list[str]):
+    def _apply_file(
+        self,
+        file_path: str,
+        config: ConfigFactory,
+        target_macros: list[Union[str, Config]],
+    ):
         """
         Process single file and apply changes
 
@@ -113,20 +146,23 @@ class Applier:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             lines = f.readlines()
 
+        self.logger.debug(f"[+] Checking {file_path}.. has {len(lines)} lines")
+
         modified_lines = lines.copy()
         # 정규식 패턴: #define으로 시작하고, 하나 이상의 공백, 매크로 이름, 하나 이상의 공백, 값으로 구성
         define_pattern = re.compile(r"^\s*#define\s+(\w+)\s+([^\s/]+)")
 
         for i, line in enumerate(lines, 1):
+            if line.endswith("\n"):
+                line = line[:-1]
             # print(line)
             # Store original line
             self.original_items.append(FileItem(file_path, i, line))
 
             # Check if line contains #define using regex
-            match = define_pattern.match(line.strip())
+            match = define_pattern.match(line)
             if not match:
                 continue
-
             macro_name = match.group(1)
 
             # Skip if macro is not in target_macros (when target_macros is not empty)
@@ -145,14 +181,20 @@ class Applier:
                     leading_space = leading_space.group()
                 else:
                     leading_space = ""
-                new_line = f"{leading_space}#define {macro_name:<24} {macro_config.value}\n"
+                new_line = (
+                    f"{leading_space}#define {macro_name:<24} {macro_config.value}\n"
+                )
                 modified_lines[i - 1] = new_line
                 # Store applied change
                 self.apply_items.append(FileItem(file_path, i, new_line))
-                logger.debug(f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}")
-            except Exception:
+                self.logger.debug(
+                    f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}"
+                )
+            except Exception as e:
                 # Skip if macro not found in config
-                # print(f"[-] Macro {macro_name} not found in config")
+                self.logger.debug(
+                    f"[-] Macro {macro_name} not found in config: {str(e)}"
+                )
                 continue
 
         # Write modified content back to file
@@ -179,6 +221,8 @@ class Applier:
 
                 # 변경된 줄 되돌리기
                 for line_number, original_content in changes.items():
+                    if not original_content.endswith("\n"):
+                        original_content += "\n"
                     lines[line_number - 1] = original_content
 
                 # 파일 쓰기

@@ -431,12 +431,13 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/wideband_board_config.h",
             "/home/ubuntu/lab/wideband/test/wideband_board_config.h"
         ],
-        "value": true,
-        "type": "boolean",
+        "value": 2,
+        "type": "integer",
         "name": "AFR_CHANNELS",
         "value_candidates": [
-            true,
-            false
+            0,
+            1,
+            2
         ],
         "used_in": [
             "/home/ubuntu/lab/wideband/firmware/auxout.cpp",
