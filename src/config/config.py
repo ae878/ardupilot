@@ -124,10 +124,7 @@ class Config:
 
 
 class ConfigBlock:
-    """
-    #if ... #elif ... #else ... #endif 자체의 하나의 블럭
-    여러 Config 아이템과 연관되어 있을 수 있으므로, unique 하게 관리되야 될듯 함
-    """
+
 
     def __init__(self, scope_data: dict):
         self.file: str = scope_data.get("file", "")

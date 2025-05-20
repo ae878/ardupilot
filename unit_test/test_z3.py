@@ -49,8 +49,8 @@ if __name__ == "__main__":
 
     if args.fuzz:
         random_conditions = get_random_condition()
-        print(random_conditions)
-        input()
+        # print(random_conditions)
+        # input()
         if random_conditions:
             print(f"Testing random condition: {random_conditions}")
             print(z3_config_solver.validate_current_values(random_conditions))
