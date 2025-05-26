@@ -54,10 +54,10 @@ class FuzzerStep:
         os.makedirs(os.path.dirname(output_base_filename), exist_ok=True)
 
         with open(function_file_name, "w") as f:
-            json.dump(self.function_results, f, indent=4, cls=FunctionEncoder)
+            json.dump(self.function_results, f, indent=2, cls=FunctionEncoder)
 
         with open(config_file_name, "w") as f:
-            json.dump(self.config.dump_config(), f, indent=4)
+            json.dump(self.config.dump_config(), f, indent=2)
 
         with open(meta_file_name, "w") as f:
             json.dump(
@@ -89,7 +89,9 @@ class Fuzzer:
             raise ValueError("seed_macro_file or config must be provided")
 
         self.base = base
-        self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
+        self.seed: ConfigFactory = (
+            ConfigFactory(seed_macro_file) if seed_macro_file else config
+        )
         self.current_config: ConfigFactory = self.seed
         # For the memory issue, we use recent_steps instead of steps
         # self.steps: list[FuzzerStep] = []
@@ -120,7 +122,11 @@ class Fuzzer:
         self.unique_stack_smash_count = 0
         self.unique_stack_smashes = set()
 
-    def initial_analyze(self, target_functions: list[str], initial_analyze_result_dir: str = "initial_analyze"):
+    def initial_analyze(
+        self,
+        target_functions: list[str],
+        initial_analyze_result_dir: str = "initial_analyze",
+    ):
         """
         이 함수는 특정 함수에 대해 초기 분석을 진행합니다
         소스코드를 이용해 만든 macros.json 파일을 이용해 분석을 진행합니다
@@ -132,15 +138,21 @@ class Fuzzer:
         for target_function in target_functions:
             initial_analyze_result = {}
             try:
-                initial_analyze_result = self.adapter.initial_adapter_get_analyze_result(target_function)
+                initial_analyze_result = (
+                    self.adapter.initial_adapter_get_analyze_result(target_function)
+                )
             except FunctionNotFoundException as e:
                 logger.warning(f"[-] Function {target_function} not found")
                 continue
             except Exception as e:
-                logger.error(f"[-] Error occurred while initial analyzing {target_function}: {e}")
+                logger.error(
+                    f"[-] Error occurred while initial analyzing {target_function}: {e}"
+                )
                 continue
             # 방문한 함수들에 해당하는 파일들 모두 추가
-            visited_functions: list[Function] = initial_analyze_result.get("visited", [])
+            visited_functions: list[Function] = initial_analyze_result.get(
+                "visited", []
+            )
             if not self.related_files_per_function.get(target_function):
                 self.related_files_per_function[target_function] = set()
             if not self.related_macros_per_function.get(target_function):
@@ -148,7 +160,9 @@ class Fuzzer:
 
             # 특정 함수가 방문하는 파일들 리스트로 추가
             for function in visited_functions:
-                self.related_files_per_function[target_function].add(function.parent_file)
+                self.related_files_per_function[target_function].add(
+                    function.parent_file
+                )
 
             # 특정 스레드 함수가 사용하는 macro 리스트
             for file in list(self.related_files_per_function[target_function]):
@@ -165,10 +179,14 @@ class Fuzzer:
                             for filename in macro_info.used_in:
                                 filename = os.path.basename(filename)
                                 if analyzer_file_name in filename:
-                                    self.related_macros_per_function[target_function].add(macro_info)
+                                    self.related_macros_per_function[
+                                        target_function
+                                    ].add(macro_info)
                                     break
                 else:
-                    logger.warning(f"[-] File for target function {target_function} not found")
+                    logger.warning(
+                        f"[-] File for target function {target_function} not found"
+                    )
 
         # exit()
 
@@ -176,7 +194,9 @@ class Fuzzer:
 
         function_results = []
         related_files = []
-        output_dir = os.path.join(self.output_base_dir, f"{self.adapter.name}_{self.steps_count}")
+        output_dir = os.path.join(
+            self.output_base_dir, f"{self.adapter.name}_{self.steps_count}"
+        )
 
         start_time = time.time()
         # 1. Apply configs
@@ -232,9 +252,14 @@ class Fuzzer:
         for function_result in function_results:
             biggest_stack = int(function_result["biggest_stack"])
             source_size = int(function_result["source_size"])
-            biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
+            biggest_path = str(
+                json.dumps(function_result["biggest_path"], cls=FunctionEncoder)
+            )
             if biggest_stack > 0:
-                if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
+                if (
+                    biggest_stack > source_size
+                    and biggest_path not in self.unique_stack_smashes
+                ):
                     self.unique_stack_smash_count += 1
                     self.unique_stack_smashes.add(biggest_path)
 
@@ -256,7 +281,9 @@ class Fuzzer:
         if len(self.recent_steps) > self.max_recent_steps:
             self.recent_steps.pop(0)
 
-        self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
+        self.recent_step.dump_result_to_file(
+            f"{self.output_base_dir}/{dump_result_filename}"
+        )
         logger.info(
             f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
         )
@@ -295,7 +322,9 @@ class Fuzzer:
         if len(self.recent_steps) >= 1 and not self.recent_steps[-1].build_result:
             if len(self.recent_steps) >= 2:
                 self.current_config = copy.deepcopy(self.recent_steps[-2].config)
-                logger.info("[+] Reverting to previous configuration due to build failure")
+                logger.info(
+                    "[+] Reverting to previous configuration due to build failure"
+                )
             else:
                 logger.warning("[-] No previous configuration to revert to")
 
@@ -311,9 +340,13 @@ class Fuzzer:
             # else, fuzz all macros
             if "related" in methods:
                 for target_function in target_functions:
-                    target_macro_list = list(self.related_macros_per_function.get(target_function, set()))
+                    target_macro_list = list(
+                        self.related_macros_per_function.get(target_function, set())
+                    )
                     if not target_macro_list:
-                        logger.warning(f"No related macros found for {target_function}, so I'll not include them.")
+                        logger.warning(
+                            f"No related macros found for {target_function}, so I'll not include them."
+                        )
                     else:
                         target_macros.extend(target_macro_list)
 
@@ -348,10 +381,14 @@ class Fuzzer:
                     before_function_results = self.recent_steps[-2].function_results
 
                     current_target_function_result = [
-                        result for result in current_function_results if result["name"] == target_function
+                        result
+                        for result in current_function_results
+                        if result["name"] == target_function
                     ][0]
                     before_target_function_result = [
-                        result for result in before_function_results if result["name"] == target_function
+                        result
+                        for result in before_function_results
+                        if result["name"] == target_function
                     ][0]
 
                     if (
@@ -374,9 +411,13 @@ class Fuzzer:
                 self.current_config.change_config(random_macro.name)
 
             if "sat-validate" in methods:
-                is_satisfied, unsatisfied_macros = self.current_config.validate_configuration()
+                is_satisfied, unsatisfied_macros = (
+                    self.current_config.validate_configuration()
+                )
                 if not is_satisfied:
-                    logger.warning("[-] SAT validate failed, Trying to fix some unsatisfied macros..")
+                    logger.warning(
+                        "[-] SAT validate failed, Trying to fix some unsatisfied macros.."
+                    )
                     # Randomly select some macros to fix
                     num_to_fix = max(
                         1, len(unsatisfied_macros) // 2
@@ -385,7 +426,9 @@ class Fuzzer:
 
                     # Fix selected macros
                     for macro_name, current_value, expected_value in macros_to_fix:
-                        logger.info(f"[-] Fixing {macro_name}: {current_value} -> {expected_value}")
+                        logger.info(
+                            f"[-] Fixing {macro_name}: {current_value} -> {expected_value}"
+                        )
                         self.current_config.change_config(macro_name, expected_value)
                     continue
                 else:

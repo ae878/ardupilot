@@ -5,6 +5,8 @@ import logging as lg
 from typing import Union, List, Dict, Optional
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
+from src.config.configblock import ConfigBlock
+from src.config.configblockstructure import ConfigBlockStructure
 
 logger = get_logger(__name__)
 
@@ -22,7 +24,9 @@ class Config:
         self.value: Union[str, int, float] = config.get("value", "")
         # 매크로 값이 될 수 있는 값들
         # value candidates of #define
-        self.value_candidates: List[Union[str, int, float]] = config.get("value_candidates", [])
+        self.value_candidates: List[Union[str, int, float]] = config.get(
+            "value_candidates", []
+        )
         # 매크로가 정의된 파일들 list
         # files that #define is defined in
         self.defined_in: List[str] = config.get("defined_in", [])
@@ -31,7 +35,9 @@ class Config:
         self.used_in: List[str] = config.get("used_in", [])
         # 매크로가 사용된 함수들 dict
         # functions that #define is used in
-        self.used_in_functions: Dict[str, List[str]] = config.get("used_in_functions", {})
+        self.used_in_functions: Dict[str, List[str]] = config.get(
+            "used_in_functions", {}
+        )
 
         # 매크로가 사용된 범위들
         # scopes that #define is used in
@@ -53,7 +59,9 @@ class Config:
             "defined_in": self.defined_in,
             "used_in": self.used_in,
             "used_in_functions": self.used_in_functions,
-            "conditional_scopes": [scope.__json__() for scope in self.conditional_scopes],
+            "conditional_scopes": [
+                scope.__json__() for scope in self.conditional_scopes
+            ],
             "child_configs": [child.__json__() for child in self.child_configs],
             "parent_configs": [parent.__json__() for parent in self.parent_configs],
         }
@@ -123,72 +131,18 @@ class Config:
         return []
 
 
-class ConfigBlock:
-
-
-    def __init__(self, scope_data: dict):
-        self.file: str = scope_data.get("file", "")
-        self.block_start: int = scope_data.get("block_start", 0)
-        self.block_end: int = scope_data.get("block_end", 0)
-        self.total_block_lines: int = scope_data.get("total_block_lines", 0)
-
-        self.branch_type: str = scope_data.get("branch_type", "")
-        self.branch_condition: str = scope_data.get("branch_condition", "")
-
-        self.branch_start: int = scope_data.get("branch_start", 0)
-        self.branch_end: int = scope_data.get("branch_end", 0)
-        self.executable_lines: int = scope_data.get("executable_lines", 0)
-
-        self.nesting_level: int = scope_data.get("nesting_level", 0)
-        self.block_structure: ConfigBlockStructure = ConfigBlockStructure(scope_data.get("block_structure", {}))
-
-    def __json__(self):
-        return {
-            "file": self.file,
-            "block_start": self.block_start,
-            "block_end": self.block_end,
-            "total_block_lines": self.total_block_lines,
-            "branch_type": self.branch_type,
-            "branch_condition": self.branch_condition,
-            "branch_start": self.branch_start,
-            "branch_end": self.branch_end,
-            "executable_lines": self.executable_lines,
-            "nesting_level": self.nesting_level,
-            "block_structure": self.block_structure.__json__(),
-        }
-
-
-class ConfigBlockStructure:
-    """
-    특정 config가 실제로 영향받는 Scope
-    """
-
-    def __init__(self, scope_data: dict):
-        self.start_line: int = scope_data.get("start_line", 0)
-        self.end_line: int = scope_data.get("end_line", 0)
-        self.nesting_level: int = scope_data.get("nesting_level", 0)
-        self.total_lines: int = scope_data.get("total_lines", 0)
-        self.branches: List[Dict] = scope_data.get("branches", [])
-
-        self.child_blocks: List[ConfigBlockStructure] = []
-
-        for child_block in scope_data.get("child_blocks", []):
-            self.child_blocks.append(ConfigBlockStructure(child_block))
-
-    def __json__(self):
-        return {
-            "start_line": self.start_line,
-            "end_line": self.end_line,
-            "nesting_level": self.nesting_level,
-            "total_lines": self.total_lines,
-            "branches": self.branches,
-            "child_blocks": [child.__json__() for child in self.child_blocks],
-        }
-
+    def select_block(self, min_executable_line: int) -> list[str]:
+        """
+        입력: 최소 실행가능한 라인
+        출력: SMT로 풀수있는 식 리스트
+        """
 
 class ConfigFactory:
     def __init__(
-        self, config_json_file: str, condition: Union[Condition, None] = None, condition_threshold: float = 0.12
+        self,
+        config_json_file: str,
+        condition: Union[Condition, None] = None,
+        condition_threshold: float = 0.12,
     ):
         """
         self.config: dict[str, Config] = [Config Name]: [Config]
@@ -244,7 +198,9 @@ class ConfigFactory:
                         if value:
                             item["value"] = value  # 지정된 값으로 변경
                         else:
-                            item["value"] = random.choice(item["value_candidates"])  # 랜덤 값으로 변경
+                            item["value"] = random.choice(
+                                item["value_candidates"]
+                            )  # 랜덤 값으로 변경
                     return
 
             # item이 Config 타입인 경우
@@ -254,7 +210,9 @@ class ConfigFactory:
                         if value:
                             item.value = value  # 지정된 값으로 변경
                         else:
-                            item.value = random.choice(item.value_candidates)  # 랜덤 값으로 변경
+                            item.value = random.choice(
+                                item.value_candidates
+                            )  # 랜덤 값으로 변경
                     return
 
     def random_select_config(self):
@@ -281,11 +239,15 @@ class ConfigFactory:
                     max_scope_size = conditional_scope.get("scope_size", 0)
                     original_condition = conditional_scope.get("original_condition", "")
                     try:
-                        valid_value_candidates = config.solve_condition(original_condition)
+                        valid_value_candidates = config.solve_condition(
+                            original_condition
+                        )
                         valid_value = random.choice(valid_value_candidates)
                         tmp_value = valid_value
                     except Exception as e:
-                        logger.warning(f"[-] Error occurred while solving condition: {e}")
+                        logger.warning(
+                            f"[-] Error occurred while solving condition: {e}"
+                        )
                         continue
 
             config.value = tmp_value
@@ -293,7 +255,9 @@ class ConfigFactory:
             self.config[name] = config
         return
 
-    def validate_configuration(self, condition_threshold: float = -1) -> tuple[bool, list[tuple[str, str, str]]]:
+    def validate_configuration(
+        self, condition_threshold: float = -1
+    ) -> tuple[bool, list[tuple[str, str, str]]]:
         satisfied_count = 0
         non_satisfied_count = 0
         unsatisfied_macros = []
@@ -313,18 +277,29 @@ class ConfigFactory:
                     logger.debug(
                         f"[-] {macro_name} in {condition_item}, {macro_value} in {condition_item.satisfying_values}"
                     )
-                    if str(macro_value) == str(condition_item.satisfying_values[macro_name]):
+                    if str(macro_value) == str(
+                        condition_item.satisfying_values[macro_name]
+                    ):
                         satisfied_count += 1
                     else:
                         non_satisfied_count += 1
                         unsatisfied_macros.append(
-                            (macro_name, str(macro_value), str(condition_item.satisfying_values[macro_name]))
+                            (
+                                macro_name,
+                                str(macro_value),
+                                str(condition_item.satisfying_values[macro_name]),
+                            )
                         )
         if satisfied_count + non_satisfied_count == 0:
             logger.warning("[-] SAT validate failed, No condition analysis result")
             return True, []
-        is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
-        satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
+        is_satisfied = (
+            satisfied_count / (satisfied_count + non_satisfied_count)
+            >= self.condition_threshold
+        )
+        satisfied_percentage = round(
+            satisfied_count / (satisfied_count + non_satisfied_count), 2
+        )
         logger.info(
             f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) ({satisfied_count}/{satisfied_count + non_satisfied_count})"
         )
