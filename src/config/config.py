@@ -2,6 +2,7 @@ import json
 import os
 import random
 import logging as lg
+from collections import deque
 from typing import Union, List, Dict, Optional
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
@@ -50,21 +51,7 @@ class Config:
         for conditional_scope in config.get("conditional_scopes", []):
             self.conditional_scopes.append(ConfigBlock(conditional_scope))
 
-    def __json__(self):
-        return {
-            "name": self.name,
-            "type": self.type,
-            "value": self.value,
-            "value_candidates": self.value_candidates,
-            "defined_in": self.defined_in,
-            "used_in": self.used_in,
-            "used_in_functions": self.used_in_functions,
-            "conditional_scopes": [
-                scope.__json__() for scope in self.conditional_scopes
-            ],
-            "child_configs": [child.__json__() for child in self.child_configs],
-            "parent_configs": [parent.__json__() for parent in self.parent_configs],
-        }
+        self.logger = get_logger(f"Config_{self.name}", level=lg.DEBUG)
 
     def solve_condition(self, condition_line: str) -> list:
         """
@@ -130,12 +117,103 @@ class Config:
 
         return []
 
+    def _recurse_select_block_in_nested_scope(
+        self,
+        min_executable_line: int,
+        target_configblock_structure: ConfigBlockStructure,
+    ) -> list[str]:
+        """
+        해당 ConfigBlockStructure 내에서 Valid 할때
+        재귀적으로 Nested 한 Config까지 따져가면서
+        최종적으로 특정 line수를 만족시키기 위한 SMT 식들을 반환
+        """
+        return_smt_equations = []
+        candidate_branch_items = []
+        target_branch = target_configblock_structure.branches[0]
 
-    def select_block(self, min_executable_line: int) -> list[str]:
+        # 실제로 min_executable_line 이상인 branch 중 하나를 선택택
+        for idx, branch in enumerate(target_configblock_structure.branches):
+            if branch.get("executable_lines", 0) >= min_executable_line:
+                candidate_branch_items.append(branch)
+
+        if len(candidate_branch_items) == 0:
+            target_branch = random.choice(target_configblock_structure.branches)
+        else:
+            target_branch = random.choice(candidate_branch_items)
+
+        target_branch_type = target_branch.get("type", "")
+        target_branch_condition = target_branch.get("condition", "")
+
+        if (
+            target_branch_type == "if"
+            or target_branch_type == "ifdef"
+            or target_branch_type == "ifndef"
+        ):
+            return_smt_equations.append(
+                f"#{target_branch_type} {target_branch_condition}"
+            )
+        elif target_branch_type == "elif":
+            return_smt_equations.append(f"#if {target_branch_condition})")
+        elif target_branch_type == "else":
+            # else 일때 -> 지금까지의 식에 NOT을 붙임
+            for idx2, branch in enumerate(target_configblock_structure.branches):
+                if idx2 == idx:
+                    continue
+                temp_branch_condition = branch.get("condition", "")
+                if temp_branch_condition:
+                    return_smt_equations.append(f"#if !({temp_branch_condition})")
+
+        if target_branch.get("child_blocks", []):
+            for child_block in target_branch.get("child_blocks", []):
+                return_smt_equations.extend(
+                    self._recurse_select_block_in_nested_scope(
+                        min_executable_line, child_block
+                    )
+                )
+        return return_smt_equations
+
+    def select_block(
+        self, min_executable_line: int, methods: list[str] = ["lines"]
+    ) -> list[str]:
         """
         입력: 최소 실행가능한 라인
         출력: SMT로 풀수있는 식 리스트
         """
+        total_smt_equations = []
+
+        # Validate methods
+        for method in methods:
+            if method not in ["lines"]:
+                raise Exception(f"Invalid method: {method}")
+
+        if "lines" in methods:
+            """
+            방법 1. 최소 라인수 기준 선택
+            min_executable_line 이상인 라인을 가진 브랜치를 선택
+
+            """
+            # 라인 수 기반으로 선택택
+            for target_configblock in self.conditional_scopes:
+                d: deque[ConfigBlockStructure] = deque()
+                for (
+                    target_configblock_structure
+                ) in target_configblock.block_structure.child_blocks:
+                    d.append(target_configblock_structure)
+                while d:
+
+                    current_configblock_structure = d.popleft()
+                    self.logger.debug(
+                        f"[-] current_configblock_structure: {current_configblock_structure}"
+                    )
+                    for block_structure in current_configblock_structure.child_blocks:
+                        d.append(block_structure)
+                    if current_configblock_structure.total_lines >= min_executable_line:
+                        total_smt_equations.extend(
+                            self._recurse_select_block_in_nested_scope(
+                                min_executable_line, current_configblock_structure
+                            )
+                        )
+
 
 class ConfigFactory:
     def __init__(
@@ -343,3 +421,25 @@ class ConfigFactory:
         for macro in self.config.values():
             data[macro.name] = macro.value
         return data
+
+    def __json__(self):
+        return {
+            "name": self.name,
+            "type": self.type,
+            "value": self.value,
+            "value_candidates": self.value_candidates,
+            "defined_in": self.defined_in,
+            "used_in": self.used_in,
+            "used_in_functions": self.used_in_functions,
+            "conditional_scopes": [
+                scope.__json__() for scope in self.conditional_scopes
+            ],
+            "child_configs": [child.__json__() for child in self.child_configs],
+            "parent_configs": [parent.__json__() for parent in self.parent_configs],
+        }
+
+    def __str__(self):
+        return f"Config(name={self.name}, type={self.type}, value={self.value}, value_candidates={self.value_candidates}, defined_in={self.defined_in}, used_in={self.used_in}, used_in_functions={self.used_in_functions}, conditional_scopes={self.conditional_scopes}, child_configs={self.child_configs}, parent_configs={self.parent_configs})"
+
+    def __repr__(self):
+        return self.__str__()

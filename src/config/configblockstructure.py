@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+
 class ConfigBlockStructure:
     """
     특정 config가 실제로 영향받는 Scope
@@ -27,3 +28,20 @@ class ConfigBlockStructure:
             "child_blocks": [child.__json__() for child in self.child_blocks],
         }
 
+    def __str__(self):
+        return f"ConfigBlockStructure(start_line={self.start_line}, end_line={self.end_line}, nesting_level={self.nesting_level}, total_lines={self.total_lines}, branches={self.branches}, child_blocks={self.child_blocks})"
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __hash__(self):
+        return hash(
+            (
+                self.start_line,
+                self.end_line,
+                self.nesting_level,
+                self.total_lines,
+                self.branches,
+                self.child_blocks,
+            )
+        )
