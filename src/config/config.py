@@ -25,9 +25,7 @@ class Config:
         self.value: Union[str, int, float] = config.get("value", "")
         # 매크로 값이 될 수 있는 값들
         # value candidates of #define
-        self.value_candidates: List[Union[str, int, float]] = config.get(
-            "value_candidates", []
-        )
+        self.value_candidates: List[Union[str, int, float]] = config.get("value_candidates", [])
         # 매크로가 정의된 파일들 list
         # files that #define is defined in
         self.defined_in: List[str] = config.get("defined_in", [])
@@ -36,9 +34,7 @@ class Config:
         self.used_in: List[str] = config.get("used_in", [])
         # 매크로가 사용된 함수들 dict
         # functions that #define is used in
-        self.used_in_functions: Dict[str, List[str]] = config.get(
-            "used_in_functions", {}
-        )
+        self.used_in_functions: Dict[str, List[str]] = config.get("used_in_functions", {})
 
         # 매크로가 사용된 범위들
         # scopes that #define is used in
@@ -144,14 +140,8 @@ class Config:
         target_branch_type = target_branch.get("type", "")
         target_branch_condition = target_branch.get("condition", "")
 
-        if (
-            target_branch_type == "if"
-            or target_branch_type == "ifdef"
-            or target_branch_type == "ifndef"
-        ):
-            return_smt_equations.append(
-                f"#{target_branch_type} {target_branch_condition}"
-            )
+        if target_branch_type == "if" or target_branch_type == "ifdef" or target_branch_type == "ifndef":
+            return_smt_equations.append(f"#{target_branch_type} {target_branch_condition}")
         elif target_branch_type == "elif":
             return_smt_equations.append(f"#if {target_branch_condition})")
         elif target_branch_type == "else":
@@ -166,15 +156,11 @@ class Config:
         if target_branch.get("child_blocks", []):
             for child_block in target_branch.get("child_blocks", []):
                 return_smt_equations.extend(
-                    self._recurse_select_block_in_nested_scope(
-                        min_executable_line, child_block
-                    )
+                    self._recurse_select_block_in_nested_scope(min_executable_line, child_block)
                 )
         return return_smt_equations
 
-    def select_block(
-        self, min_executable_line: int, methods: list[str] = ["lines"]
-    ) -> list[str]:
+    def select_block(self, min_executable_line: int, methods: list[str] = ["lines"]) -> list[str]:
         """
         입력: 최소 실행가능한 라인
         출력: SMT로 풀수있는 식 리스트
@@ -192,19 +178,15 @@ class Config:
             min_executable_line 이상인 라인을 가진 브랜치를 선택
 
             """
-            # 라인 수 기반으로 선택택
+            # 라인 수 기반으로 선택
             for target_configblock in self.conditional_scopes:
                 d: deque[ConfigBlockStructure] = deque()
-                for (
-                    target_configblock_structure
-                ) in target_configblock.block_structure.child_blocks:
+                for target_configblock_structure in target_configblock.block_structure.child_blocks:
                     d.append(target_configblock_structure)
                 while d:
 
                     current_configblock_structure = d.popleft()
-                    self.logger.debug(
-                        f"[-] current_configblock_structure: {current_configblock_structure}"
-                    )
+                    self.logger.debug(f"[-] current_configblock_structure: {current_configblock_structure}")
                     for block_structure in current_configblock_structure.child_blocks:
                         d.append(block_structure)
                     if current_configblock_structure.total_lines >= min_executable_line:
@@ -276,9 +258,7 @@ class ConfigFactory:
                         if value:
                             item["value"] = value  # 지정된 값으로 변경
                         else:
-                            item["value"] = random.choice(
-                                item["value_candidates"]
-                            )  # 랜덤 값으로 변경
+                            item["value"] = random.choice(item["value_candidates"])  # 랜덤 값으로 변경
                     return
 
             # item이 Config 타입인 경우
@@ -288,9 +268,7 @@ class ConfigFactory:
                         if value:
                             item.value = value  # 지정된 값으로 변경
                         else:
-                            item.value = random.choice(
-                                item.value_candidates
-                            )  # 랜덤 값으로 변경
+                            item.value = random.choice(item.value_candidates)  # 랜덤 값으로 변경
                     return
 
     def random_select_config(self):
@@ -317,15 +295,11 @@ class ConfigFactory:
                     max_scope_size = conditional_scope.get("scope_size", 0)
                     original_condition = conditional_scope.get("original_condition", "")
                     try:
-                        valid_value_candidates = config.solve_condition(
-                            original_condition
-                        )
+                        valid_value_candidates = config.solve_condition(original_condition)
                         valid_value = random.choice(valid_value_candidates)
                         tmp_value = valid_value
                     except Exception as e:
-                        logger.warning(
-                            f"[-] Error occurred while solving condition: {e}"
-                        )
+                        logger.warning(f"[-] Error occurred while solving condition: {e}")
                         continue
 
             config.value = tmp_value
@@ -333,9 +307,7 @@ class ConfigFactory:
             self.config[name] = config
         return
 
-    def validate_configuration(
-        self, condition_threshold: float = -1
-    ) -> tuple[bool, list[tuple[str, str, str]]]:
+    def validate_configuration(self, condition_threshold: float = -1) -> tuple[bool, list[tuple[str, str, str]]]:
         satisfied_count = 0
         non_satisfied_count = 0
         unsatisfied_macros = []
@@ -355,9 +327,7 @@ class ConfigFactory:
                     logger.debug(
                         f"[-] {macro_name} in {condition_item}, {macro_value} in {condition_item.satisfying_values}"
                     )
-                    if str(macro_value) == str(
-                        condition_item.satisfying_values[macro_name]
-                    ):
+                    if str(macro_value) == str(condition_item.satisfying_values[macro_name]):
                         satisfied_count += 1
                     else:
                         non_satisfied_count += 1
@@ -371,13 +341,8 @@ class ConfigFactory:
         if satisfied_count + non_satisfied_count == 0:
             logger.warning("[-] SAT validate failed, No condition analysis result")
             return True, []
-        is_satisfied = (
-            satisfied_count / (satisfied_count + non_satisfied_count)
-            >= self.condition_threshold
-        )
-        satisfied_percentage = round(
-            satisfied_count / (satisfied_count + non_satisfied_count), 2
-        )
+        is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
+        satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
         logger.info(
             f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) ({satisfied_count}/{satisfied_count + non_satisfied_count})"
         )
@@ -431,9 +396,7 @@ class ConfigFactory:
             "defined_in": self.defined_in,
             "used_in": self.used_in,
             "used_in_functions": self.used_in_functions,
-            "conditional_scopes": [
-                scope.__json__() for scope in self.conditional_scopes
-            ],
+            "conditional_scopes": [scope.__json__() for scope in self.conditional_scopes],
             "child_configs": [child.__json__() for child in self.child_configs],
             "parent_configs": [parent.__json__() for parent in self.parent_configs],
         }

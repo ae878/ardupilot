@@ -22,9 +22,7 @@ class ConfigBlock:
         self.executable_lines: int = scope_data.get("executable_lines", 0)
 
         self.nesting_level: int = scope_data.get("nesting_level", 0)
-        self.block_structure: ConfigBlockStructure = ConfigBlockStructure(
-            scope_data.get("block_structure", {})
-        )
+        self.block_structure: ConfigBlockStructure = ConfigBlockStructure(scope_data.get("block_structure", {}))
 
     def __json__(self):
         return {
@@ -40,4 +38,3 @@ class ConfigBlock:
             "nesting_level": self.nesting_level,
             "block_structure": self.block_structure.__json__(),
         }
-

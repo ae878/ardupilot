@@ -6,7 +6,7 @@ from src.config.config import ConfigFactory
 from src.utils.logging import get_logger
 
 
-class Z3ConfigSolver:
+class Z3ConfigValidator:
     def __init__(self, config_factory: ConfigFactory):
         self.solver = Solver()
         self.config_factory = config_factory
@@ -44,9 +44,7 @@ class Z3ConfigSolver:
                     elif isinstance(candidate, str) and candidate.startswith("0x"):
                         candidates.append(int(candidate, 16))
                     else:
-                        self.logger.warning(
-                            f"Unsupported candidate type: {candidate} for macro {macro_name}"
-                        )
+                        self.logger.warning(f"Unsupported candidate type: {candidate} for macro {macro_name}")
 
                 self.solver.add(Or(*[var == c for c in candidates]))
 
@@ -80,9 +78,7 @@ class Z3ConfigSolver:
         if "defined" in condition:
             # Extract macro name from defined() or defined MACRO
             if "(" in condition:
-                macro_name = condition[
-                    condition.index("(") + 1 : condition.index(")")
-                ].strip()
+                macro_name = condition[condition.index("(") + 1 : condition.index(")")].strip()
             else:
                 macro_name = condition.replace("defined", "").strip()
             self.logger.debug(f"defined() check for macro: {macro_name}")
@@ -98,24 +94,12 @@ class Z3ConfigSolver:
                     paren_count += 1
                 elif char == ")":
                     paren_count -= 1
-                elif (
-                    char == "&"
-                    and i + 1 < len(condition)
-                    and condition[i + 1] == "&"
-                    and paren_count == 0
-                ):
+                elif char == "&" and i + 1 < len(condition) and condition[i + 1] == "&" and paren_count == 0:
                     left = condition[:i].strip()
                     right = condition[i + 2 :].strip()
                     self.logger.debug(f"And condition: {left} && {right}")
-                    return And(
-                        self._parse_condition(left), self._parse_condition(right)
-                    )
-                elif (
-                    char == "|"
-                    and i + 1 < len(condition)
-                    and condition[i + 1] == "|"
-                    and paren_count == 0
-                ):
+                    return And(self._parse_condition(left), self._parse_condition(right))
+                elif char == "|" and i + 1 < len(condition) and condition[i + 1] == "|" and paren_count == 0:
                     left = condition[:i].strip()
                     right = condition[i + 2 :].strip()
                     self.logger.debug(f"Or condition: {left} || {right}")
@@ -233,9 +217,7 @@ class Z3ConfigSolver:
                     else:
                         value = int(config.value)
                 except ValueError:
-                    self.logger.warning(
-                        f"Invalid value for macro {macro_name}: {config.value}"
-                    )
+                    self.logger.warning(f"Invalid value for macro {macro_name}: {config.value}")
                     continue
 
             self.logger.debug(f"Adding constraint: {macro_name} == {value}")
@@ -324,3 +306,7 @@ class Z3ConfigSolver:
                         results[condition] = solution
 
         return results
+
+
+class Z3ConfigSolver:
+    pass
