@@ -1,6 +1,9 @@
-from z3 import Solver, Int, Bool, And, Or, Not
+from z3 import Solver, Int, Bool, And, Or, Not, Implies, BoolSort, is_true
 from typing import Dict, Union, List, Tuple
 import logging as lg
+import json
+import os
+from datetime import datetime
 
 from src.config.config import ConfigFactory
 from src.utils.logging import get_logger
@@ -309,4 +312,455 @@ class Z3ConfigValidator:
 
 
 class Z3ConfigSolver:
-    pass
+    def __init__(self, macro_info_file, nested_macros_file=None, results_dir=None):
+        """
+        Z3 기반 설정 솔버 초기화
+        
+        Args:
+            macro_info_file: 매크로 정보가 담긴 JSON 파일 경로
+            nested_macros_file: 중첩된 매크로 정보가 담긴 JSON 파일 경로 (선택사항)
+            results_dir: 결과를 저장할 디렉토리 경로 (선택사항)
+        """
+        self.macro_info_file = macro_info_file
+        self.nested_macros_file = nested_macros_file
+        self.macros = {}
+        self.nested_macros = {}
+        self.macro_vars = {}  # Z3 변수 저장
+        self.solver = Solver() # z3.Solver() 대신 Solver()를 사용합니다. (이미 from z3 import Solver 되어 있음)
+        
+        # 결과 저장 디렉토리 설정
+        if results_dir:
+            self.results_dir = results_dir
+        else:
+            # 기본 결과 디렉토리: 매크로 정보 파일이 있는 디렉토리 내의 z3_results 폴더
+            self.results_dir = os.path.join(os.path.dirname(macro_info_file), "z3_results")
+            
+        if not os.path.exists(self.results_dir):
+            os.makedirs(self.results_dir, exist_ok=True)
+            
+        self._init_macro_variables()
+        
+    def _init_macro_variables(self):
+        """매크로 정보를 로드하고 Z3 변수로 초기화합니다."""
+        # 매크로 정보 로드
+        with open(self.macro_info_file, 'r', encoding='utf-8') as f:
+            self.macros = json.load(f)
+        
+        # 중첩된 매크로 정보 로드 (있는 경우)
+        if self.nested_macros_file and os.path.exists(self.nested_macros_file):
+            with open(self.nested_macros_file, 'r', encoding='utf-8') as f:
+                self.nested_macros = json.load(f)
+        
+        print(f"매크로 개수: {len(self.macros)}")
+        print(f"중첩된 매크로 개수: {len(self.nested_macros)}")
+        
+        # 각 매크로에 대한 Z3 변수 생성
+        for macro_name, info in self.macros.items():
+            value_type = info.get('type', 'unknown')
+            
+            if value_type == 'boolean':
+                self.macro_vars[macro_name] = Bool(macro_name) # z3.Bool 대신 Bool 사용
+            elif value_type in ['integer', 'hex']:
+                self.macro_vars[macro_name] = Int(macro_name) # z3.Int 대신 Int 사용
+            else:
+                # 문자열이나 알 수 없는 타입은 정수형으로 처리
+                self.macro_vars[macro_name] = Int(macro_name) # z3.Int 대신 Int 사용
+    
+    def _add_value_candidates_constraint(self, macro_name):
+        """매크로의 가능한 값들에 대한 제약 조건을 추가합니다."""
+        if macro_name not in self.macros or macro_name not in self.macro_vars:
+            return
+        
+        info = self.macros[macro_name]
+        value_type = info.get('type', 'unknown')
+        candidates = info.get('value_candidates', [])
+        
+        if not candidates:
+            return
+        
+        if value_type == 'boolean':
+            # Boolean 타입은 True/False만 가능
+            pass
+        elif value_type in ['integer', 'hex']:
+            # 정수형 후보값 제약
+            constraints = []
+            for candidate in candidates:
+                if isinstance(candidate, str) and candidate.startswith('0x'):
+                    candidate = int(candidate, 16)
+                constraints.append(self.macro_vars[macro_name] == candidate)
+                
+            if constraints:
+                self.solver.add(Or(constraints)) # z3.Or 대신 Or 사용
+    
+    def _add_nested_define_constraints(self):
+        """중첩된 #define 매크로에 대한 제약 조건을 추가합니다."""
+        print(f"중첩된 매크로 제약 조건 추가 (매크로 개수: {len(self.nested_macros)})")
+        
+        for macro_name, info in self.nested_macros.items():
+            # 모든 조건부 정의 처리
+            all_condition_blocks = info.get('defined_in_conditional_blocks', [])
+            
+            for block_info in all_condition_blocks:
+                parent_condition = block_info.get('parent_condition')
+                value = block_info.get('value')
+                
+                if parent_condition and '==' in parent_condition:
+                    parts = parent_condition.split('==')
+                    left = parts[0].strip()
+                    right = parts[1].strip()
+                    
+                    if left in self.macro_vars:
+                        try:
+                            if right.startswith('0x'):
+                                right_val = int(right, 16)
+                            else:
+                                right_val = int(right)
+                                
+                            # 부모 매크로가 특정 값일 때 현재 매크로의 값 설정
+                            condition_expr = (self.macro_vars[left] == right_val) # condition -> condition_expr로 변경 (예약어 충돌 방지)
+                            
+                            if isinstance(value, bool):
+                                if value:
+                                    self.solver.add(Implies(condition_expr, self.macro_vars[macro_name])) # z3.Implies 대신 Implies 사용
+                                else:
+                                    self.solver.add(Implies(condition_expr, Not(self.macro_vars[macro_name]))) # z3.Implies, z3.Not 대신 Implies, Not 사용
+                            else:
+                                self.solver.add(Implies(condition_expr, self.macro_vars[macro_name] == value)) # z3.Implies 대신 Implies 사용
+                        except ValueError:
+                            pass
+    
+    def _add_value_constraints(self):
+        """매크로의 기본값에 대한 제약 조건을 추가합니다."""
+        for macro_name, info in self.macros.items():
+            if 'value' in info and macro_name in self.macro_vars:
+                value = info['value']
+                value_type = info.get('type', 'unknown')
+                
+                if value_type == 'boolean':
+                    if value:
+                        self.solver.add(self.macro_vars[macro_name])
+                    else:
+                        self.solver.add(Not(self.macro_vars[macro_name])) # z3.Not 대신 Not 사용
+                elif value_type in ['integer', 'hex']:
+                    self.solver.add(self.macro_vars[macro_name] == value)
+    
+    def _parse_condition(self, condition_str, file_path=None): # condition -> condition_str로 변경
+        """조건문을 Z3 표현식으로 변환합니다."""
+        if not condition_str:
+            return None
+            
+        # 간단한 매크로 이름만 있는 경우 (ifdef/ifndef)
+        if condition_str in self.macro_vars:
+            return self.macro_vars[condition_str]
+            
+        # 복잡한 조건 처리
+        # == 연산자 처리
+        if '==' in condition_str:
+            parts = condition_str.split('==')
+            left = parts[0].strip()
+            right = parts[1].strip()
+            
+            if left in self.macro_vars:
+                try:
+                    if right.startswith('0x'):
+                        right_val = int(right, 16)
+                    else:
+                        right_val = int(right)
+                    return self.macro_vars[left] == right_val
+                except ValueError:
+                    pass
+                    
+        # && 연산자 처리
+        if '&&' in condition_str:
+            parts = condition_str.split('&&')
+            subconditions = []
+            for part in parts:
+                subexpr = self._parse_condition(part.strip(), file_path)
+                if subexpr is not None:
+                    subconditions.append(subexpr)
+            
+            if subconditions:
+                return And(subconditions) # z3.And 대신 And 사용
+                
+        # || 연산자 처리
+        if '||' in condition_str:
+            parts = condition_str.split('||')
+            subconditions = []
+            for part in parts:
+                subexpr = self._parse_condition(part.strip(), file_path)
+                if subexpr is not None:
+                    subconditions.append(subexpr)
+            
+            if subconditions:
+                return Or(subconditions) # z3.Or 대신 Or 사용
+                
+        return None
+    
+    def _add_conditional_block_constraints(self):
+        """조건부 블록 구조에 대한 제약 조건을 추가합니다."""
+        for macro_name, info in self.macros.items():
+            if 'conditional_scopes' in info:
+                for scope in info['conditional_scopes']:
+                    branch_type = scope.get('branch_type')
+                    branch_condition = scope.get('branch_condition')
+                    file_path = scope.get('file')
+                    
+                    if branch_type == 'ifdef':
+                        if macro_name in self.macro_vars:
+                            # #ifdef 매크로 - 매크로가 정의되어 있어야 함
+                            # 아무 작업 필요 없음 (매크로 이름이 이미 Z3 변수로 존재)
+                            pass
+                    elif branch_type == 'ifndef':
+                        if macro_name in self.macro_vars:
+                            # #ifndef 매크로 - 매크로가 정의되지 않아야 함
+                            # Z3에서는 이를 Not(매크로)로 표현할 수 있음
+                            pass
+                    elif branch_type == 'if' or branch_type == 'elif':
+                        # #if나 #elif 조건을 Z3 제약으로 변환
+                        z3_expr = self._parse_condition(branch_condition, file_path)
+                        if z3_expr is not None:
+                            # 이 제약 조건을 직접 추가하지는 않음
+                            # 특정 조건 추가 시 필요한 경우 활용
+                            pass
+    
+    def _save_result(self, query_type, args, solution):
+        """솔버 결과를 파일로 저장합니다."""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # 쿼리 정보 문자열 생성
+        if query_type == 's1':
+            query_info = f"{args[0]}_{args[1]}"
+        elif query_type == 's2':
+            query_info = f"{args[0]}_{args[1]}_{args[2]}_{args[3]}"
+        elif query_type == 's3':
+            query_info = args[0].replace(' ', '_').replace('==', 'eq').replace('&&', 'and').replace('||', 'or')
+        else:
+            query_info = "unknown"
+            
+        # 결과 파일 경로
+        result_file = os.path.join(self.results_dir, f"z3_result_{query_type}_{query_info}_{timestamp}.json")
+        
+        # 결과 데이터 구성
+        result_data = {
+            "query_type": query_type,
+            "query_args": args,
+            "timestamp": timestamp,
+            "solution": solution
+        }
+        
+        # 파일로 저장
+        with open(result_file, 'w', encoding='utf-8') as f:
+            json.dump(result_data, f, indent=2, ensure_ascii=False)
+            
+        print(f"결과 저장 완료: {result_file}")
+        return result_file
+    
+    def _nested_config_solve_s1(self, target_macro, target_value):
+        """중첩된 설정 구조에서 특정 매크로가 특정 값을 가지기 위한 조건을 찾습니다."""
+        print(f"\n[S1 쿼리] {target_macro} = {target_value}일 때의 조건 찾기")
+        
+        if target_macro not in self.macro_vars:
+            raise ValueError(f"매크로 '{target_macro}'가 정의되지 않았습니다.")
+            
+        # 기본 값 제약 조건 추가
+        self._add_value_constraints()
+        
+        # 조건부 블록 제약 조건 추가
+        self._add_conditional_block_constraints()
+        
+        # 중첩 매크로 제약 조건 추가
+        self._add_nested_define_constraints()
+        
+        # 대상 매크로 값 제약 추가
+        target_info = self.macros.get(target_macro, {})
+        value_type = target_info.get('type', 'unknown')
+        
+        if value_type == 'boolean':
+            if target_value:
+                self.solver.add(self.macro_vars[target_macro])
+            else:
+                self.solver.add(Not(self.macro_vars[target_macro])) # z3.Not 대신 Not 사용
+        else:
+            self.solver.add(self.macro_vars[target_macro] == target_value)
+            
+        # Z3 Solver로 해결
+        result = self.solver.check()
+        if str(result) == "sat": # z3.sat 대신 "sat" 문자열 비교
+            model = self.solver.model()
+            solution = {}
+            for var_decl in model.decls(): # model -> model.decls() 로 변경, var -> var_decl로 변경
+                name = var_decl.name() # str(var) -> var_decl.name()
+                value = model[var_decl] # model[var] -> model[var_decl]
+                
+                # Z3 결과값을 Python 값으로 변환
+                if value.sort() == BoolSort(): # z3.BoolSort() 대신 BoolSort() 사용 (z3 임포트 방식에 따라 다를 수 있음)
+                    solution[name] = is_true(value) # z3.is_true 대신 is_true 사용
+                else:
+                    solution[name] = value.as_long()
+            
+            print(f"해결 가능: {target_macro} = {target_value}일 때의 해결책 찾음")
+            # 결과 파일 저장
+            result_file = self._save_result('s1', (target_macro, target_value), solution)
+            return solution
+        else:
+            print(f"해결 불가능: {target_macro} = {target_value}일 때의 해결책 없음")
+            return None
+    
+    def _nested_config_solve_s2(self, target_macro1, target_value1, target_macro2, target_value2):
+        """두 개의 대상 매크로가 동시에 특정 값을 가지기 위한 조건을 찾습니다."""
+        print(f"\n[S2 쿼리] {target_macro1} = {target_value1} 및 {target_macro2} = {target_value2}일 때의 조건 찾기")
+        
+        if target_macro1 not in self.macro_vars or target_macro2 not in self.macro_vars:
+            raise ValueError(f"매크로 '{target_macro1}' 또는 '{target_macro2}'가 정의되지 않았습니다.")
+            
+        # 기본 값 제약 조건 추가
+        self._add_value_constraints()
+        
+        # 조건부 블록 제약 조건 추가
+        self._add_conditional_block_constraints()
+        
+        # 중첩 매크로 제약 조건 추가
+        self._add_nested_define_constraints()
+        
+        # 첫 번째 대상 매크로 값 제약 추가
+        target1_info = self.macros.get(target_macro1, {})
+        value_type1 = target1_info.get('type', 'unknown')
+        
+        if value_type1 == 'boolean':
+            if target_value1:
+                self.solver.add(self.macro_vars[target_macro1])
+            else:
+                self.solver.add(Not(self.macro_vars[target_macro1])) # z3.Not 대신 Not 사용
+        else:
+            self.solver.add(self.macro_vars[target_macro1] == target_value1)
+            
+        # 두 번째 대상 매크로 값 제약 추가
+        target2_info = self.macros.get(target_macro2, {})
+        value_type2 = target2_info.get('type', 'unknown')
+        
+        if value_type2 == 'boolean':
+            if target_value2:
+                self.solver.add(self.macro_vars[target_macro2])
+            else:
+                self.solver.add(Not(self.macro_vars[target_macro2])) # z3.Not 대신 Not 사용
+        else:
+            self.solver.add(self.macro_vars[target_macro2] == target_value2)
+            
+        # Z3 Solver로 해결
+        result = self.solver.check()
+        if str(result) == "sat": # z3.sat 대신 "sat" 문자열 비교
+            model = self.solver.model()
+            solution = {}
+            for var_decl in model.decls(): # model -> model.decls() 로 변경, var -> var_decl로 변경
+                name = var_decl.name() # str(var) -> var_decl.name()
+                value = model[var_decl] # model[var] -> model[var_decl]
+
+                # Z3 결과값을 Python 값으로 변환
+                if value.sort() == BoolSort(): # z3.BoolSort() 대신 BoolSort() 사용
+                    solution[name] = is_true(value) # z3.is_true 대신 is_true 사용
+                else:
+                    solution[name] = value.as_long()
+            
+            print(f"해결 가능: {target_macro1} = {target_value1} 및 {target_macro2} = {target_value2}일 때의 해결책 찾음")
+            # 결과 파일 저장
+            result_file = self._save_result('s2', (target_macro1, target_value1, target_macro2, target_value2), solution)
+            return solution
+        else:
+            print(f"해결 불가능: {target_macro1} = {target_value1} 및 {target_macro2} = {target_value2}일 때의 해결책 없음")
+            return None
+    
+    def _nested_config_solve_s3(self, target_condition):
+        """주어진 조건이 충족되기 위한 매크로 설정을 찾습니다."""
+        print(f"\n[S3 쿼리] 조건 '{target_condition}'이 충족되기 위한 설정 찾기")
+        
+        # 기본 값 제약 조건 추가
+        self._add_value_constraints()
+        
+        # 조건부 블록 제약 조건 추가
+        self._add_conditional_block_constraints()
+        
+        # 중첩 매크로 제약 조건 추가
+        self._add_nested_define_constraints()
+        
+        # 대상 조건 제약 추가
+        z3_expr = self._parse_condition(target_condition)
+        if z3_expr is not None:
+            self.solver.add(z3_expr)
+        else:
+            error_msg = f"조건 '{target_condition}'을 Z3 표현식으로 변환할 수 없습니다."
+            print(f"오류: {error_msg}")
+            raise ValueError(error_msg)
+            
+        # Z3 Solver로 해결
+        result = self.solver.check()
+        if str(result) == "sat": # z3.sat 대신 "sat" 문자열 비교
+            model = self.solver.model()
+            solution = {}
+            for var_decl in model.decls(): # model -> model.decls() 로 변경, var -> var_decl로 변경
+                name = var_decl.name() # str(var) -> var_decl.name()
+                value = model[var_decl] # model[var] -> model[var_decl]
+
+                # Z3 결과값을 Python 값으로 변환
+                if value.sort() == BoolSort(): # z3.BoolSort() 대신 BoolSort() 사용
+                    solution[name] = is_true(value) # z3.is_true 대신 is_true 사용
+                else:
+                    solution[name] = value.as_long()
+            
+            print(f"해결 가능: 조건 '{target_condition}'이 충족되는 해결책 찾음")
+            # 결과 파일 저장
+            result_file = self._save_result('s3', (target_condition,), solution)
+            return solution
+        else:
+            print(f"해결 불가능: 조건 '{target_condition}'이 충족되는 해결책 없음")
+            return None
+    
+    def solve(self, query_type, *args):
+        """설정 쿼리를 해결합니다."""
+        if query_type == 's1':
+            if len(args) != 2:
+                raise ValueError("S1 쿼리는 2개의 인자(target_macro, target_value)가 필요합니다.")
+            return self._nested_config_solve_s1(args[0], args[1])
+        elif query_type == 's2':
+            if len(args) != 4:
+                raise ValueError("S2 쿼리는 4개의 인자(target_macro1, target_value1, target_macro2, target_value2)가 필요합니다.")
+            return self._nested_config_solve_s2(args[0], args[1], args[2], args[3])
+        elif query_type == 's3':
+            if len(args) != 1:
+                raise ValueError("S3 쿼리는 1개의 인자(target_condition)가 필요합니다.")
+            return self._nested_config_solve_s3(args[0])
+        else:
+            raise ValueError(f"알 수 없는 쿼리 타입: {query_type}")
+
+# 사용 예시
+# if __name__ == "__main__":
+#     # 매크로 정보 파일과 중첩 매크로 정보 파일 경로
+#     current_dir = os.path.abspath(os.path.dirname(__file__))
+#     macro_dir = os.path.join(os.path.dirname(current_dir), "analysis_results", "macro_based")
+    
+#     macro_info_file = os.path.join(macro_dir, "macro_info.json")
+#     nested_macros_file = os.path.join(macro_dir, "nested_macros.json")
+    
+#     # 결과 저장 디렉토리
+#     results_dir = os.path.join(os.path.dirname(current_dir), "z3_results")
+    
+#     # Z3ConfigSolver 초기화
+#     solver = Z3ConfigSolver(macro_info_file, nested_macros_file, results_dir)
+    
+#     print("\n=== Z3 솔버 테스트 ===")
+#     print(f"매크로 정보 파일: {macro_info_file}")
+#     print(f"중첩 매크로 파일: {nested_macros_file}")
+#     print(f"결과 저장 디렉토리: {results_dir}")
+    
+#     # S1 쿼리 예시: 특정 매크로가 특정 값을 가지도록 하는 설정 찾기
+#     result_s1 = solver.solve('s1', 'TEST_NESTED_DEFINE', 1)
+#     print(f"S1 결과 요약: {result_s1 is not None}")
+    
+#     # S2 쿼리 예시: 두 매크로가 동시에 특정 값을 가지도록 하는 설정 찾기
+#     result_s2 = solver.solve('s2', 'TEST_NESTED_DEFINE', 1, 'SIBLING_CONFIG', 1)
+#     print(f"S2 결과 요약: {result_s2 is not None}")
+    
+#     # S3 쿼리 예시: 특정 조건이 충족되도록 하는 설정 찾기
+#     result_s3 = solver.solve('s3', 'TEST_NESTED_DEFINE == 1 && SIBLING_CONFIG == 1')
+#     print(f"S3 결과 요약: {result_s3 is not None}")
+    
+#     print("\n모든 테스트 완료!")
