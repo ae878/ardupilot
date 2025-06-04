@@ -7,6 +7,12 @@ from src.utils.logging import get_logger
 
 
 class Z3ConfigValidator:
+    """
+    특정 configuration 세팅이랑
+    특정 SMT 식이 있을때
+    해당 configuration 이 식에 대해서 validate 한지 검사함
+    """
+
     def __init__(self, config_factory: ConfigFactory):
         self.solver = Solver()
         self.config_factory = config_factory
