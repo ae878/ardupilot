@@ -19,6 +19,7 @@ if __name__ == "__main__":
     # args = parser.parse_args()
 
     config_factory = ConfigFactory(macro_path)
-    sample_config = config_factory.get_config("ENABLE_LOAD_TEST")
-    print(str(sample_config))
-    print(sample_config.select_block(0))
+    # sample_config = config_factory.get_config("ENABLE_LOAD_TEST")
+    # print(str(sample_config))
+    # print(sample_config.select_block(0))
+    print(config_factory.select_blocks_with_codesize(10))

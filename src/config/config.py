@@ -36,6 +36,8 @@ class Config:
         # functions that #define is used in
         self.used_in_functions: Dict[str, List[str]] = config.get("used_in_functions", {})
 
+        self.parent_condition: Union[str, None] = config.get("parent_condition", None)
+
         # 매크로가 사용된 범위들
         # scopes that #define is used in
         self.conditional_scopes: List[ConfigBlock] = []
@@ -133,8 +135,11 @@ class Config:
                 candidate_branch_items.append(branch)
 
         if len(candidate_branch_items) == 0:
-            target_branch = random.choice(target_configblock_structure.branches)
+            # self.logger.warning(f"[-] No candidate branch items found in {target_configblock_structure}")
+            return return_smt_equations
+            # target_branch = random.choice(target_configblock_structure.branches)
         else:
+            # TODO: 가장 큰것부터 Permutation 을 통해 모든 경우의 수 찾아서 선택
             target_branch = random.choice(candidate_branch_items)
 
         target_branch_type = target_branch.get("type", "")
@@ -184,9 +189,8 @@ class Config:
                 for target_configblock_structure in target_configblock.block_structure.child_blocks:
                     d.append(target_configblock_structure)
                 while d:
-
                     current_configblock_structure = d.popleft()
-                    self.logger.debug(f"[-] current_configblock_structure: {current_configblock_structure}")
+                    # self.logger.debugs(f"[-] current_configblock_structure: {current_configblock_structure}")
                     for block_structure in current_configblock_structure.child_blocks:
                         d.append(block_structure)
                     if current_configblock_structure.total_lines >= min_executable_line:
@@ -195,6 +199,9 @@ class Config:
                                 min_executable_line, current_configblock_structure
                             )
                         )
+        if self.parent_condition:
+            total_smt_equations.append(self.parent_condition)
+        return total_smt_equations
 
 
 class ConfigFactory:
@@ -211,6 +218,10 @@ class ConfigFactory:
         self.config: dict[str, Config] = self.load_config()
         self.condition: Union[Condition, None] = condition
         self.condition_threshold: float = condition_threshold
+
+        # Select_block 시에 상태 저장 용도로 사용
+        self.queue = []
+        self.logger = get_logger(__name__, level=lg.DEBUG)
 
     def get_config(self, key) -> Config:
         try:
@@ -380,6 +391,21 @@ class ConfigFactory:
                         # file.write(f"#endif\n")
                         file.write(f"#define {macro} {value}\n")
         return os.path.abspath(dst)
+
+    def select_blocks_with_codesize(self, min_codesize: int, target_configs: list[Config] = []) -> list[str]:
+        """
+        코드 크기가 min_codesize 이상인 브랜치를 선택합니다.
+        """
+        return_smt_equations = []
+        if len(target_configs) > 0:
+            for idx, target_config in enumerate(target_configs):
+                self.logger.debug(f"[-][{idx+1}/{len(target_configs)}] config: {target_config}")
+                return_smt_equations.extend(target_config.select_block(min_codesize))
+        else:
+            for idx, config in enumerate(self.config.values()):
+                self.logger.debug(f"[-][{idx+1}/{len(self.config)}] config: {config.name}")
+            return_smt_equations.extend(config.select_block(min_codesize))
+        return return_smt_equations
 
     def dump_config(self) -> dict:
         data = {}

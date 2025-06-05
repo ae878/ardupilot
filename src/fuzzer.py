@@ -15,12 +15,12 @@ from src.ir2dot.gccir2dot import Function
 from src.ir2dot.irlib.exceptions import FunctionNotFoundException
 from src.ir2dot.irlib.encoder import FunctionEncoder
 from src.applier.applier import Applier
+from src.config.z3_config_solver import Z3ConfigSolver, Z3ConfigValidator
 from src.utils.logging import get_logger
+from src.utils.logging import lg
 
-logger = get_logger(__name__)
 
-
-# from logging import logger
+# from logging import self.logge
 class FuzzerStep:
     def __init__(
         self,
@@ -84,14 +84,16 @@ class Fuzzer:
         config: Union[ConfigFactory, None] = None,
         verbose: bool = False,
         threshold: int = 2,
+        sat_acquire_min_codesize: int = 10,
     ):
-        if not seed_macro_file and not config:
-            raise ValueError("seed_macro_file or config must be provided")
+        if not seed_macro_file:
+            raise ValueError("seed_macro_file must be provided")
+
+        if not config:
+            raise ValueError("config must be provided")
 
         self.base = base
-        self.seed: ConfigFactory = (
-            ConfigFactory(seed_macro_file) if seed_macro_file else config
-        )
+        self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
         self.current_config: ConfigFactory = self.seed
         # For the memory issue, we use recent_steps instead of steps
         # self.steps: list[FuzzerStep] = []
@@ -104,6 +106,7 @@ class Fuzzer:
         self.adapter = adapter
         self.verbose = verbose
         self.threshold = threshold
+        self.sat_acquire_min_codesize = sat_acquire_min_codesize
         # 특정 스레드 함수의 callgraph에 해당하는 파일들
         # self.initial_analyze 를 먼저해야함
         # dict["function_name": set[File]]
@@ -122,6 +125,10 @@ class Fuzzer:
         self.unique_stack_smash_count = 0
         self.unique_stack_smashes = set()
 
+        self.z3_config_solver = Z3ConfigSolver(seed_macro_file)
+
+        self.logger = get_logger(__name__, level=lg.DEBUG)
+
     def initial_analyze(
         self,
         target_functions: list[str],
@@ -133,26 +140,20 @@ class Fuzzer:
 
         이를 이용해, 특정 함수와 관련있는 파일들과, 매크로들을 찾아 저장합니다
         """
-        logger.info(f"[+] Initial analyze of the fuzzer {self.base}")
+        self.logger.info(f"[+] Initial analyze of the fuzzer {self.base}")
         self.adapter.initial_analyze(initial_analyze_result_dir)
         for target_function in target_functions:
             initial_analyze_result = {}
             try:
-                initial_analyze_result = (
-                    self.adapter.initial_adapter_get_analyze_result(target_function)
-                )
+                initial_analyze_result = self.adapter.initial_adapter_get_analyze_result(target_function)
             except FunctionNotFoundException as e:
-                logger.warning(f"[-] Function {target_function} not found")
+                self.logger.warning(f"[-] Function {target_function} not found")
                 continue
             except Exception as e:
-                logger.error(
-                    f"[-] Error occurred while initial analyzing {target_function}: {e}"
-                )
+                self.logger.error(f"[-] Error occurred while initial analyzing {target_function}: {e}")
                 continue
             # 방문한 함수들에 해당하는 파일들 모두 추가
-            visited_functions: list[Function] = initial_analyze_result.get(
-                "visited", []
-            )
+            visited_functions: list[Function] = initial_analyze_result.get("visited", [])
             if not self.related_files_per_function.get(target_function):
                 self.related_files_per_function[target_function] = set()
             if not self.related_macros_per_function.get(target_function):
@@ -160,9 +161,7 @@ class Fuzzer:
 
             # 특정 함수가 방문하는 파일들 리스트로 추가
             for function in visited_functions:
-                self.related_files_per_function[target_function].add(
-                    function.parent_file
-                )
+                self.related_files_per_function[target_function].add(function.parent_file)
 
             # 특정 스레드 함수가 사용하는 macro 리스트
             for file in list(self.related_files_per_function[target_function]):
@@ -179,14 +178,10 @@ class Fuzzer:
                             for filename in macro_info.used_in:
                                 filename = os.path.basename(filename)
                                 if analyzer_file_name in filename:
-                                    self.related_macros_per_function[
-                                        target_function
-                                    ].add(macro_info)
+                                    self.related_macros_per_function[target_function].add(macro_info)
                                     break
                 else:
-                    logger.warning(
-                        f"[-] File for target function {target_function} not found"
-                    )
+                    self.logger.warning(f"[-] File for target function {target_function} not found")
 
         # exit()
 
@@ -194,9 +189,7 @@ class Fuzzer:
 
         function_results = []
         related_files = []
-        output_dir = os.path.join(
-            self.output_base_dir, f"{self.adapter.name}_{self.steps_count}"
-        )
+        output_dir = os.path.join(self.output_base_dir, f"{self.adapter.name}_{self.steps_count}")
 
         start_time = time.time()
         # 1. Apply configs
@@ -238,7 +231,7 @@ class Fuzzer:
         try:
             build_result = self.adapter.build(self.current_config)
         except Exception as e:
-            logger.error(f"[-] Error occurred while building: {e}")
+            self.logger.error(f"[-] Error occurred while building: {e}")
             build_result = False
         build_time = time.time()
         function_results = []
@@ -252,14 +245,9 @@ class Fuzzer:
         for function_result in function_results:
             biggest_stack = int(function_result["biggest_stack"])
             source_size = int(function_result["source_size"])
-            biggest_path = str(
-                json.dumps(function_result["biggest_path"], cls=FunctionEncoder)
-            )
+            biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
             if biggest_stack > 0:
-                if (
-                    biggest_stack > source_size
-                    and biggest_path not in self.unique_stack_smashes
-                ):
+                if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
                     self.unique_stack_smash_count += 1
                     self.unique_stack_smashes.add(biggest_path)
 
@@ -281,10 +269,8 @@ class Fuzzer:
         if len(self.recent_steps) > self.max_recent_steps:
             self.recent_steps.pop(0)
 
-        self.recent_step.dump_result_to_file(
-            f"{self.output_base_dir}/{dump_result_filename}"
-        )
-        logger.info(
+        self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
+        self.logger.info(
             f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
         )
         self.steps_count += 1
@@ -303,35 +289,49 @@ class Fuzzer:
     # Stage 1. 코드 파싱 단계
     # Stage 2. Feedback을 통한 mutation 단계
     # 스택(파일)과 관련있는 macro들만 퍼징할수있게끔 구현
-    def mutate(self, target_functions: list[str], methods: list[str] = ["related"]):
+    def mutate(
+        self, target_functions: list[str], methods: list[str] = ["related"], sat_acquire_min_codesize: int = -1
+    ):
         """
         Support methods:
         - related: fuzz related macros with the target function
         - stack: Use greedy-methods for searching stacks, and mutate the biggest stack
         - use-codesize: Target macros that actually change the code size
         - sat-validate: Validate the configuration with SAT solver
+        - sat-solve: Solve the configuration with SAT solver
+
+
+        Support methods:
+        - related: fuzz related macros with the target function
+        - stack: Use greedy-methods for searching stacks, and mutate the biggest stack
+        - use-codesize: Target macros that actually change the code size
+        - sat-validate: Validate the configuration with SAT solver
+        - sat-solve: 특정 codesize 이상인 Branch 중 하나를 랜덤하게 선택함함
+
+
+
         """
         max_validate_retry = 10
+        if sat_acquire_min_codesize == -1:
+            sat_acquire_min_codesize = self.sat_acquire_min_codesize
 
         # Check method/target_functions are valid
         for method in methods:
-            if method not in ["related", "stack", "use-codesize", "sat-validate"]:
+            if method not in ["related", "stack", "use-codesize", "sat-validate", "sat-solve"]:
                 raise ValueError(f"Invalid method: {method}")
 
         # Check if the most recent build failed and revert to previous config if needed
         if len(self.recent_steps) >= 1 and not self.recent_steps[-1].build_result:
             if len(self.recent_steps) >= 2:
                 self.current_config = copy.deepcopy(self.recent_steps[-2].config)
-                logger.info(
-                    "[+] Reverting to previous configuration due to build failure"
-                )
+                self.logger.info("[+] Reverting to previous configuration due to build failure")
             else:
-                logger.warning("[-] No previous configuration to revert to")
+                self.logger.warning("[-] No previous configuration to revert to")
 
         for _ in range(max_validate_retry):
             for target_function in target_functions:
                 if target_function not in self.adapter.get_thread_functions():
-                    logger.warning(f"Target function {target_function} not found")
+                    self.logger.warning(f"Target function {target_function} not found")
 
             target_macros: list[Config] = []
 
@@ -340,11 +340,9 @@ class Fuzzer:
             # else, fuzz all macros
             if "related" in methods:
                 for target_function in target_functions:
-                    target_macro_list = list(
-                        self.related_macros_per_function.get(target_function, set())
-                    )
+                    target_macro_list = list(self.related_macros_per_function.get(target_function, set()))
                     if not target_macro_list:
-                        logger.warning(
+                        self.logger.warning(
                             f"No related macros found for {target_function}, so I'll not include them."
                         )
                     else:
@@ -370,6 +368,7 @@ class Fuzzer:
                 target_macros = new_target_macros
 
             mutation_config = None
+            self.logger.debug(f"[+] target_macros: {target_macros}")
 
             """
                 2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
@@ -381,14 +380,10 @@ class Fuzzer:
                     before_function_results = self.recent_steps[-2].function_results
 
                     current_target_function_result = [
-                        result
-                        for result in current_function_results
-                        if result["name"] == target_function
+                        result for result in current_function_results if result["name"] == target_function
                     ][0]
                     before_target_function_result = [
-                        result
-                        for result in before_function_results
-                        if result["name"] == target_function
+                        result for result in before_function_results if result["name"] == target_function
                     ][0]
 
                     if (
@@ -410,14 +405,26 @@ class Fuzzer:
                 random_macro = random.choice(target_macros)
                 self.current_config.change_config(random_macro.name)
 
+            if "sat-solve" in methods:
+                smt_equations = []
+                for target_macro in target_macros:
+                    smt_equations.extend(target_macro.select_block(sat_acquire_min_codesize))
+                if len(smt_equations) == 0:
+                    self.logger.warning("[-] No macros to fuzz")
+                    # continue
+                print(smt_equations)
+                with open("./total_smt_equations.json", "w") as f:
+                    json.dump(smt_equations, f, indent=2)
+                solution = self.z3_config_solver.solve("s4", (smt_equations))
+
+                print(solution)
+                exit()
+                # self.current_config.change_config(smt_equations)
+
             if "sat-validate" in methods:
-                is_satisfied, unsatisfied_macros = (
-                    self.current_config.validate_configuration()
-                )
+                is_satisfied, unsatisfied_macros = self.current_config.validate_configuration()
                 if not is_satisfied:
-                    logger.warning(
-                        "[-] SAT validate failed, Trying to fix some unsatisfied macros.."
-                    )
+                    self.logger.warning("[-] SAT validate failed, Trying to fix some unsatisfied macros..")
                     # Randomly select some macros to fix
                     num_to_fix = max(
                         1, len(unsatisfied_macros) // 2
@@ -426,9 +433,7 @@ class Fuzzer:
 
                     # Fix selected macros
                     for macro_name, current_value, expected_value in macros_to_fix:
-                        logger.info(
-                            f"[-] Fixing {macro_name}: {current_value} -> {expected_value}"
-                        )
+                        self.logger.info(f"[-] Fixing {macro_name}: {current_value} -> {expected_value}")
                         self.current_config.change_config(macro_name, expected_value)
                     continue
                 else:
