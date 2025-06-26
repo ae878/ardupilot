@@ -3,7 +3,7 @@ import os
 import random
 import logging as lg
 from collections import deque
-from typing import Union, List, Dict, Optional
+from typing import Union, List, Dict
 from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
 from src.config.configblock import ConfigBlock
@@ -203,6 +203,13 @@ class Config:
             total_smt_equations.append(self.parent_condition)
         return total_smt_equations
 
+    def __eq__(self, other: Union[str, "Config"]) -> bool:
+        if isinstance(other, str):
+            return self.name == other
+        elif isinstance(other, Config):
+            return self.name == other.name
+        return False
+
 
 class ConfigFactory:
     def __init__(
@@ -261,26 +268,33 @@ class ConfigFactory:
             raise NotImplementedError("Not implemented")
 
         # config의 모든 item을 순회
-        for item in self.config.values():
-            # item이 dict 타입인 경우
-            if isinstance(item, dict):
-                if item["name"] == macro_name:
-                    if item.get("value_candidates"):
-                        if value:
-                            item["value"] = value  # 지정된 값으로 변경
-                        else:
-                            item["value"] = random.choice(item["value_candidates"])  # 랜덤 값으로 변경
-                    return
+        target_config = self.config.get(macro_name, None)
+        if target_config is None:
+            raise KeyError(f"Macro {macro_name} not found in config")
 
-            # item이 Config 타입인 경우
-            if isinstance(item, Config):
-                if item.name == macro_name:
-                    if item.value_candidates:
-                        if value:
-                            item.value = value  # 지정된 값으로 변경
-                        else:
-                            item.value = random.choice(item.value_candidates)  # 랜덤 값으로 변경
-                    return
+        if isinstance(target_config, dict):
+            if target_config["name"] == macro_name:
+                if value:
+                    target_config["value"] = value  # 지정된 값으로 변경
+                else:
+                    if target_config["value_candidates"]:
+                        target_config["value"] = random.choice(target_config["value_candidates"])  # 랜덤 값으로 변경
+                    else:
+                        target_config["value"] = random.randint(0, 1)
+        # item이 Config 타입인 경우
+        elif isinstance(target_config, Config):
+            if target_config.name == macro_name:
+                if value:
+                    target_config.value = value  # 지정된 값으로 변경
+                else:
+                    if target_config.value_candidates:
+                        target_config.value = random.choice(target_config.value_candidates)  # 랜덤 값으로 변경
+                    else:
+                        target_config.value = random.randint(0, 1)
+        else:
+            raise TypeError(f"Unsupported config type: {type(target_config)}")
+
+        return
 
     def random_select_config(self):
         if isinstance(self.config, list):
@@ -355,7 +369,8 @@ class ConfigFactory:
         is_satisfied = satisfied_count / (satisfied_count + non_satisfied_count) >= self.condition_threshold
         satisfied_percentage = round(satisfied_count / (satisfied_count + non_satisfied_count), 2)
         logger.info(
-            f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) ({satisfied_count}/{satisfied_count + non_satisfied_count})"
+            f"[-] SAT validate Percentage: {satisfied_percentage} ({is_satisfied}) "
+            f"({satisfied_count}/{satisfied_count + non_satisfied_count})"
         )
         return is_satisfied, unsatisfied_macros
 
@@ -366,7 +381,7 @@ class ConfigFactory:
         try:
             if not os.path.exists(os.path.dirname(dst)):
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
-        except Exception as e:
+        except Exception:
             pass
         with open(dst, "w") as file:
             if isinstance(self.config, dict):
@@ -428,7 +443,23 @@ class ConfigFactory:
         }
 
     def __str__(self):
-        return f"Config(name={self.name}, type={self.type}, value={self.value}, value_candidates={self.value_candidates}, defined_in={self.defined_in}, used_in={self.used_in}, used_in_functions={self.used_in_functions}, conditional_scopes={self.conditional_scopes}, child_configs={self.child_configs}, parent_configs={self.parent_configs})"
+        return (
+            f"Config(name={self.name}, type={self.type}, value={self.value}, "
+            f"value_candidates={self.value_candidates}, defined_in={self.defined_in}, "
+            f"used_in={self.used_in}, used_in_functions={self.used_in_functions}, "
+            f"conditional_scopes={self.conditional_scopes}, child_configs={self.child_configs}, "
+            f"parent_configs={self.parent_configs})"
+        )
 
     def __repr__(self):
         return self.__str__()
+
+    def __eq__(self, other):
+        if isinstance(other, Config):
+            return self.name == other.name
+        if isinstance(other, str):
+            return self.name == other
+        return False
+
+    def __hash__(self):
+        return hash(self.name)

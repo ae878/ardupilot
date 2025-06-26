@@ -31,9 +31,7 @@ class FileItem:
 
 
 class Applier:
-    def __init__(
-        self, base: str, apply_extensions: list[str] = [".c", ".h", ".cpp", ".hpp"]
-    ):
+    def __init__(self, base: str, apply_extensions: list[str] = [".c", ".h", ".cpp", ".hpp"]):
         """
         Applyer class
         This class is used to apply the changes to the files.
@@ -48,11 +46,9 @@ class Applier:
         self.original_items = []
         self.apply_items = []
 
-        self.logger = get_logger(__name__, level=lg.DEBUG)
+        self.logger = get_logger(__name__, level=lg.INFO)
 
-    def apply(
-        self, config: ConfigFactory, target_macros: list[Union[str, Config]] = []
-    ):
+    def apply(self, config: ConfigFactory, target_macros: list[Union[str, Config]] = []):
         """
         Apply config into the project
 
@@ -86,9 +82,7 @@ class Applier:
                 for file_path in macro_config.defined_in:
                     total_files_set.add(file_path)
             file_paths = list(total_files_set)
-            self.logger.debug(
-                f"=============== Apply {len(file_paths)} files ================"
-            )
+            self.logger.debug(f"=============== Apply {len(file_paths)} files ================")
             self.logger.debug(str(file_paths))
         else:
             self.logger.debug("=============== Apply All Macros ================")
@@ -111,9 +105,7 @@ class Applier:
             console=progress_console,
         ) as progress:
             # Create main task
-            main_task = progress.add_task(
-                "[cyan]Processing files...", total=total_files
-            )
+            main_task = progress.add_task("[cyan]Processing files...", total=total_files)
 
             # Walk through the base directory
             for file_path in file_paths:
@@ -142,6 +134,8 @@ class Applier:
             config (ConfigFactory): Config factory instance
             target_macros (list[str]): List of target macros
         """
+        if "wideband_config.h" in file_path:
+            print(f"[+] Applying {file_path}..")
         # print(f"[+] Applying {file_path}..")
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             lines = f.readlines()
@@ -163,10 +157,11 @@ class Applier:
             match = define_pattern.match(line)
             if not match:
                 continue
-            macro_name = match.group(1)
 
+            macro_name = match.group(1)
             # Skip if macro is not in target_macros (when target_macros is not empty)
             if target_macros and macro_name not in target_macros:
+                self.logger.debug(f"[-] Skipping {macro_name} in {file_path}:{i}")
                 continue
 
             try:
@@ -181,20 +176,14 @@ class Applier:
                     leading_space = leading_space.group()
                 else:
                     leading_space = ""
-                new_line = (
-                    f"{leading_space}#define {macro_name:<24} {macro_config.value}\n"
-                )
+                new_line = f"{leading_space}#define {macro_name:<24} {macro_config.value}\n"
                 modified_lines[i - 1] = new_line
                 # Store applied change
                 self.apply_items.append(FileItem(file_path, i, new_line))
-                self.logger.debug(
-                    f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}"
-                )
+                self.logger.info(f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}")
             except Exception as e:
                 # Skip if macro not found in config
-                self.logger.debug(
-                    f"[-] Macro {macro_name} not found in config: {str(e)}"
-                )
+                self.logger.debug(f"[-] Macro {macro_name} not found in config: {str(e)}")
                 continue
 
         # Write modified content back to file

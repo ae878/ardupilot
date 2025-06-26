@@ -229,7 +229,7 @@ def main():
         start_step = last_step + 1
     print(f"[+] Target: {target}\tUse related: {use_related}\tUse sat: {use_sat}")
     input("[-] Press Enter to continue...")
-    fuzzer = Fuzzer(firmware_base, adapter, config=config, verbose=True)
+    fuzzer = Fuzzer(firmware_base, adapter, seed_macro_file=macros_json_path, config=config, verbose=True)
     if use_related:
         fuzzer.initial_analyze(target_thread_functions, "initial_analyze_fmt")
 
@@ -240,7 +240,7 @@ def main():
 
     mutate_methods = []
     if use_sat:
-        mutate_methods.append("sat-validate")
+        mutate_methods.append("sat-solve")
     if use_related:
         mutate_methods.append("related")
 

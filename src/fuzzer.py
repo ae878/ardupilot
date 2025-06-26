@@ -4,6 +4,8 @@ import os
 import random
 import time
 import json
+import math
+import random
 from typing import Union
 
 # from mutator.mutate import related_based_mutate
@@ -214,6 +216,7 @@ class Fuzzer:
 
         if self.applyer:
             self.applyer.apply(self.current_config, target_configs)
+        exit()
         apply_time = time.time()
         # print(target_configs)
 
@@ -397,14 +400,6 @@ class Fuzzer:
                 if mutation_config:
                     self.current_config = mutation_config
 
-            """
-                랜덤하게 2개 mutate
-            """
-            for i in range(self.threshold):
-                # print(target_macros)
-                random_macro = random.choice(target_macros)
-                self.current_config.change_config(random_macro.name)
-
             if "sat-solve" in methods:
                 smt_equations = []
                 for target_macro in target_macros:
@@ -412,14 +407,33 @@ class Fuzzer:
                 if len(smt_equations) == 0:
                     self.logger.warning("[-] No macros to fuzz")
                     # continue
-                print(smt_equations)
                 with open("./total_smt_equations.json", "w") as f:
                     json.dump(smt_equations, f, indent=2)
-                solution = self.z3_config_solver.solve("s4", (smt_equations))
 
-                print(solution)
-                exit()
-                # self.current_config.change_config(smt_equations)
+                current_equations = smt_equations.copy()
+                solution = self.z3_config_solver.solve("s4", current_equations)
+                while not solution and len(current_equations) > 1:
+                    remove_count = max(1, math.ceil(len(current_equations) * 0.1))
+                    remove_indices = random.sample(range(len(current_equations)), remove_count)
+                    current_equations = [eq for i, eq in enumerate(current_equations) if i not in remove_indices]
+                    self.logger.info(f"No solution found, retrying with {len(current_equations)} equations...")
+                    solution = self.z3_config_solver.solve("s4", current_equations)
+                if not solution:
+                    self.logger.warning(
+                        "[-] No solution found, it means the equations are unsatisfiable... Something wrong with Z3 Solver?"
+                    )
+                else:
+                    self.logger.info(f"[+] Solution found")
+                    for solution_key in solution.keys():
+                        self.logger.info(f"    {solution_key}: {solution[solution_key]}")
+                        self.current_config.change_config(solution_key, solution[solution_key])
+            """
+                랜덤하게 2개 mutate
+            """
+            for i in range(self.threshold):
+                # print(target_macros)
+                random_macro = random.choice(target_macros)
+                self.current_config.change_config(random_macro.name)
 
             if "sat-validate" in methods:
                 is_satisfied, unsatisfied_macros = self.current_config.validate_configuration()

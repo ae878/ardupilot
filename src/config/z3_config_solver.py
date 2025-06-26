@@ -332,8 +332,9 @@ class Z3ConfigSolver:
         self.macros = {}
         self.nested_macros = {}
         self.macro_vars = {}  # Z3 변수 저장
+        self.is_initialized = False
         self.solver = Solver()  # z3.Solver() 대신 Solver()를 사용합니다. (이미 from z3 import Solver 되어 있음)
-        self.logger = get_logger(__name__, level=lg.DEBUG)
+        self.logger = get_logger(__name__, level=lg.INFO)
         # 결과 저장 디렉토리 설정
         if results_dir:
             self.results_dir = results_dir
@@ -469,45 +470,48 @@ class Z3ConfigSolver:
 
         # 복잡한 조건 처리
         # == 연산자 처리
-        if "==" in condition_str:
-            parts = condition_str.split("==")
-            left = parts[0].strip()
-            right = parts[1].strip()
+        try:
+            if "==" in condition_str:
+                parts = condition_str.split("==")
+                left = parts[0].strip()
+                right = parts[1].strip()
 
-            if left in self.macro_vars:
-                try:
-                    if right.startswith("0x"):
-                        right_val = int(right, 16)
-                    else:
-                        right_val = int(right)
-                    return self.macro_vars[left] == right_val
-                except ValueError:
-                    pass
+                if left in self.macro_vars:
+                    try:
+                        if right.startswith("0x"):
+                            right_val = int(right, 16)
+                        else:
+                            right_val = int(right)
+                        return self.macro_vars[left] == right_val
+                    except ValueError:
+                        pass
 
-        # && 연산자 처리
-        if "&&" in condition_str:
-            parts = condition_str.split("&&")
-            subconditions = []
-            for part in parts:
-                subexpr = self._parse_condition(part.strip(), file_path)
-                if subexpr is not None:
-                    subconditions.append(subexpr)
+            # && 연산자 처리
+            if "&&" in condition_str:
+                parts = condition_str.split("&&")
+                subconditions = []
+                for part in parts:
+                    subexpr = self._parse_condition(part.strip(), file_path)
+                    if subexpr is not None:
+                        subconditions.append(subexpr)
 
-            if subconditions:
-                return And(subconditions)  # z3.And 대신 And 사용
+                if subconditions:
+                    return And(subconditions)  # z3.And 대신 And 사용
 
-        # || 연산자 처리
-        if "||" in condition_str:
-            parts = condition_str.split("||")
-            subconditions = []
-            for part in parts:
-                subexpr = self._parse_condition(part.strip(), file_path)
-                if subexpr is not None:
-                    subconditions.append(subexpr)
+            # || 연산자 처리
+            if "||" in condition_str:
+                parts = condition_str.split("||")
+                subconditions = []
+                for part in parts:
+                    subexpr = self._parse_condition(part.strip(), file_path)
+                    if subexpr is not None:
+                        subconditions.append(subexpr)
 
-            if subconditions:
-                return Or(subconditions)  # z3.Or 대신 Or 사용
-
+                if subconditions:
+                    return Or(subconditions)  # z3.Or 대신 Or 사용
+        except Exception as e:
+            self.logger.warning(f"조건 파싱 오류: {condition_str} ({e})")
+            return None
         return None
 
     def _add_conditional_block_constraints(self):
@@ -571,14 +575,16 @@ class Z3ConfigSolver:
         if target_macro not in self.macro_vars:
             raise ValueError(f"매크로 '{target_macro}'가 정의되지 않았습니다.")
 
-        # 기본 값 제약 조건 추가
-        self._add_value_constraints()
+        if not self.is_initialized:
+            # 기본 값 제약 조건 추가
+            self._add_value_constraints()
 
-        # 조건부 블록 제약 조건 추가
-        self._add_conditional_block_constraints()
+            # 조건부 블록 제약 조건 추가
+            self._add_conditional_block_constraints()
 
-        # 중첩 매크로 제약 조건 추가
-        self._add_nested_define_constraints()
+            # 중첩 매크로 제약 조건 추가
+            self._add_nested_define_constraints()
+            self.is_initialized = True
 
         # 대상 매크로 값 제약 추가
         target_info = self.macros.get(target_macro, {})
@@ -624,14 +630,16 @@ class Z3ConfigSolver:
         if target_macro1 not in self.macro_vars or target_macro2 not in self.macro_vars:
             raise ValueError(f"매크로 '{target_macro1}' 또는 '{target_macro2}'가 정의되지 않았습니다.")
 
-        # 기본 값 제약 조건 추가
-        self._add_value_constraints()
+        if not self.is_initialized:
+            # 기본 값 제약 조건 추가
+            self._add_value_constraints()
 
-        # 조건부 블록 제약 조건 추가
-        self._add_conditional_block_constraints()
+            # 조건부 블록 제약 조건 추가
+            self._add_conditional_block_constraints()
 
-        # 중첩 매크로 제약 조건 추가
-        self._add_nested_define_constraints()
+            # 중첩 매크로 제약 조건 추가
+            self._add_nested_define_constraints()
+            self.is_initialized = True
 
         # 첫 번째 대상 매크로 값 제약 추가
         target1_info = self.macros.get(target_macro1, {})
@@ -690,14 +698,17 @@ class Z3ConfigSolver:
         """주어진 조건이 충족되기 위한 매크로 설정을 찾습니다."""
         print(f"\n[S3 쿼리] 조건 '{target_condition}'이 충족되기 위한 설정 찾기")
 
-        # 기본 값 제약 조건 추가
-        self._add_value_constraints()
+        if not self.is_initialized:
+            # 기본 값 제약 조건 추가
+            self._add_value_constraints()
 
-        # 조건부 블록 제약 조건 추가
-        self._add_conditional_block_constraints()
+            # 조건부 블록 제약 조건 추가
+            self._add_conditional_block_constraints()
 
-        # 중첩 매크로 제약 조건 추가
-        self._add_nested_define_constraints()
+            # 중첩 매크로 제약 조건 추가
+            self._add_nested_define_constraints()
+
+            self.is_initialized = True
 
         # 대상 조건 제약 추가
         z3_expr = self._parse_condition(target_condition)
@@ -735,14 +746,16 @@ class Z3ConfigSolver:
         """여러 조건들이 모두 충족되기 위한 매크로 설정을 찾습니다."""
         print(f"\n[S4 쿼리] {len(target_conditions)}개의 조건이 모두 충족되기 위한 설정 찾기")
 
-        # 기본 값 제약 조건 추가
-        self._add_value_constraints()
+        if not self.is_initialized:
+            # 기본 값 제약 조건 추가
+            self._add_value_constraints()
 
-        # 조건부 블록 제약 조건 추가
-        self._add_conditional_block_constraints()
+            # 조건부 블록 제약 조건 추가
+            self._add_conditional_block_constraints()
 
-        # 중첩 매크로 제약 조건 추가
-        self._add_nested_define_constraints()
+            # 중첩 매크로 제약 조건 추가
+            self._add_nested_define_constraints()
+            self.is_initialized = True
 
         # 모든 조건에 대한 제약 추가
         for condition in target_conditions:
@@ -765,7 +778,8 @@ class Z3ConfigSolver:
                 )
                 continue
 
-            self.solver.add(z3_expr)
+            if z3_expr:
+                self.solver.add(z3_expr)
 
         # Z3 Solver로 해결
         result = self.solver.check()
