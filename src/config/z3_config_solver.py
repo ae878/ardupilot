@@ -466,7 +466,11 @@ class Z3ConfigSolver:
 
         # 간단한 매크로 이름만 있는 경우 (ifdef/ifndef)
         if condition_str in self.macro_vars:
-            return self.macro_vars[condition_str]
+            var = self.macro_vars[condition_str]
+            # Int 타입인 경우 0보다 큰지 확인하여 Bool로 변환
+            if hasattr(var, 'sort') and str(var.sort()) == 'Int':
+                return var > 0
+            return var
 
         # 복잡한 조건 처리
         # == 연산자 처리
@@ -476,36 +480,56 @@ class Z3ConfigSolver:
                 left = parts[0].strip()
                 right = parts[1].strip()
 
+            if left in self.macro_vars:
+                try:
+                    if right.startswith("0x"):
+                        right_val = int(right, 16)
+                    else:
+                        right_val = int(right)
+                    return self.macro_vars[left] == right_val
+                except ValueError:
+                    pass
+        
+        # > 연산자 처리 (>= 제외)
+        if ">" in condition_str and ">=" not in condition_str:
+            parts = condition_str.split(">")
+            if len(parts) == 2:
+                left = parts[0].strip()
+                right = parts[1].strip()
+                
                 if left in self.macro_vars:
                     try:
-                        if right.startswith("0x"):
-                            right_val = int(right, 16)
-                        else:
-                            right_val = int(right)
-                        return self.macro_vars[left] == right_val
+                        right_val = int(right)
+                        return self.macro_vars[left] > right_val
                     except ValueError:
                         pass
 
-            # && 연산자 처리
-            if "&&" in condition_str:
-                parts = condition_str.split("&&")
-                subconditions = []
-                for part in parts:
-                    subexpr = self._parse_condition(part.strip(), file_path)
-                    if subexpr is not None:
-                        subconditions.append(subexpr)
+        # && 연산자 처리
+        if "&&" in condition_str:
+            parts = condition_str.split("&&")
+            subconditions = []
+            for part in parts:
+                subexpr = self._parse_condition(part.strip(), file_path)
+                if subexpr is not None:
+                    # Int 타입이면 Bool로 변환
+                    if hasattr(subexpr, 'sort') and str(subexpr.sort()) == 'Int':
+                        subexpr = subexpr > 0
+                    subconditions.append(subexpr)
 
                 if subconditions:
                     return And(subconditions)  # z3.And 대신 And 사용
 
-            # || 연산자 처리
-            if "||" in condition_str:
-                parts = condition_str.split("||")
-                subconditions = []
-                for part in parts:
-                    subexpr = self._parse_condition(part.strip(), file_path)
-                    if subexpr is not None:
-                        subconditions.append(subexpr)
+        # || 연산자 처리
+        if "||" in condition_str:
+            parts = condition_str.split("||")
+            subconditions = []
+            for part in parts:
+                subexpr = self._parse_condition(part.strip(), file_path)
+                if subexpr is not None:
+                    # Int 타입이면 Bool로 변환
+                    if hasattr(subexpr, 'sort') and str(subexpr.sort()) == 'Int':
+                        subexpr = subexpr > 0
+                    subconditions.append(subexpr)
 
                 if subconditions:
                     return Or(subconditions)  # z3.Or 대신 Or 사용
@@ -768,13 +792,21 @@ class Z3ConfigSolver:
             elif condition.startswith("#ifndef "):
                 condition = condition[8:].strip()
 
-            z3_expr = None
             self.logger.debug(f"[-] 조건 '{condition}'을 Z3 표현식으로 변환합니다.")
+            
+            z3_expr = None
             try:
-                self._parse_condition(condition)
+                z3_expr = self._parse_condition(condition)
             except Exception as e:
                 self.logger.warning(
                     f"[-] 조건 '{condition}'을 Z3 표현식으로 변환할 수 없습니다. 이 조건은 무시됩니다."
+                )
+                continue
+            
+            # None 체크 추가
+            if z3_expr is None:
+                self.logger.warning(
+                    f"[-] 조건 '{condition}'이 None을 반환했습니다. 이 조건은 무시됩니다."
                 )
                 continue
 
