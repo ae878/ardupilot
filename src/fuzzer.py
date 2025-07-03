@@ -422,9 +422,9 @@ class Fuzzer:
                         "[-] No solution found, it means the equations are unsatisfiable... Something wrong with Z3 Solver?"
                     )
                 else:
-                    self.logger.info(f"[+] Solution found")
+                    self.logger.info(f"[+] Solution found: Total {len(solution.keys())} macros")
                     for solution_key in solution.keys():
-                        self.logger.info(f"    {solution_key}: {solution[solution_key]}")
+                        self.logger.debug(f"    {solution_key}: {solution[solution_key]}")
                         self.current_config.change_config(solution_key, solution[solution_key])
             """
                 랜덤하게 2개 mutate

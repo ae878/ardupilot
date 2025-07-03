@@ -210,6 +210,9 @@ class Config:
             return self.name == other.name
         return False
 
+    def __hash__(self):
+        return hash(self.name)
+
 
 class ConfigFactory:
     def __init__(

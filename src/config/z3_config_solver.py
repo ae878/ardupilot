@@ -807,9 +807,7 @@ class Z3ConfigSolver:
             if z3_expr is None:
                 self.logger.warning(f"[-] 조건 '{condition}'이 None을 반환했습니다. 이 조건은 무시됩니다.")
                 continue
-
-            if z3_expr:
-                self.solver.add(z3_expr)
+            self.solver.add(z3_expr)
 
         # Z3 Solver로 해결
         result = self.solver.check()
