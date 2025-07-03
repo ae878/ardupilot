@@ -216,7 +216,6 @@ class Fuzzer:
 
         if self.applyer:
             self.applyer.apply(self.current_config, target_configs)
-        exit()
         apply_time = time.time()
         # print(target_configs)
 

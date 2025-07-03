@@ -34,6 +34,7 @@ class ArdupilotAdapter(BaseAdapter):
         thread_functions_file_path: str = "",
         analyze_result_dir: str = "./analyze_ardupilot",
         verbose: bool = False,
+        build_base: str = "",
     ):
         """
         ArdupilotAdapter class
@@ -62,6 +63,8 @@ class ArdupilotAdapter(BaseAdapter):
         self.thread_functions = []
         # Function results
         self.function_results = []
+
+        self.build_base = build_base
 
         self.name = "ardupilot"
 

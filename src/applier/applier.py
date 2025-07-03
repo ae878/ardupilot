@@ -176,11 +176,14 @@ class Applier:
                     leading_space = leading_space.group()
                 else:
                     leading_space = ""
-                new_line = f"{leading_space}#define {macro_name:<24} {macro_config.value}\n"
+                value = macro_config.value
+                if value is True:
+                    value = "true"
+                new_line = f"{leading_space}#define {macro_name:<24} {value}\n"
                 modified_lines[i - 1] = new_line
                 # Store applied change
                 self.apply_items.append(FileItem(file_path, i, new_line))
-                self.logger.info(f"[+] Applied {file_path}:{i} {macro_name} {macro_config.value}")
+                self.logger.info(f"[+] Applied {file_path}:{i} {macro_name} {value}")
             except Exception as e:
                 # Skip if macro not found in config
                 self.logger.debug(f"[-] Macro {macro_name} not found in config: {str(e)}")

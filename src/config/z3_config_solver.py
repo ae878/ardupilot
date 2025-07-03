@@ -468,7 +468,7 @@ class Z3ConfigSolver:
         if condition_str in self.macro_vars:
             var = self.macro_vars[condition_str]
             # Int 타입인 경우 0보다 큰지 확인하여 Bool로 변환
-            if hasattr(var, 'sort') and str(var.sort()) == 'Int':
+            if hasattr(var, "sort") and str(var.sort()) == "Int":
                 return var > 0
             return var
 
@@ -480,59 +480,59 @@ class Z3ConfigSolver:
                 left = parts[0].strip()
                 right = parts[1].strip()
 
-            if left in self.macro_vars:
-                try:
-                    if right.startswith("0x"):
-                        right_val = int(right, 16)
-                    else:
-                        right_val = int(right)
-                    return self.macro_vars[left] == right_val
-                except ValueError:
-                    pass
-        
-        # > 연산자 처리 (>= 제외)
-        if ">" in condition_str and ">=" not in condition_str:
-            parts = condition_str.split(">")
-            if len(parts) == 2:
-                left = parts[0].strip()
-                right = parts[1].strip()
-                
                 if left in self.macro_vars:
                     try:
-                        right_val = int(right)
-                        return self.macro_vars[left] > right_val
+                        if right.startswith("0x"):
+                            right_val = int(right, 16)
+                        else:
+                            right_val = int(right)
+                        return self.macro_vars[left] == right_val
                     except ValueError:
                         pass
 
-        # && 연산자 처리
-        if "&&" in condition_str:
-            parts = condition_str.split("&&")
-            subconditions = []
-            for part in parts:
-                subexpr = self._parse_condition(part.strip(), file_path)
-                if subexpr is not None:
-                    # Int 타입이면 Bool로 변환
-                    if hasattr(subexpr, 'sort') and str(subexpr.sort()) == 'Int':
-                        subexpr = subexpr > 0
-                    subconditions.append(subexpr)
+            # > 연산자 처리 (>= 제외)
+            if ">" in condition_str and ">=" not in condition_str:
+                parts = condition_str.split(">")
+                if len(parts) == 2:
+                    left = parts[0].strip()
+                    right = parts[1].strip()
 
-                if subconditions:
-                    return And(subconditions)  # z3.And 대신 And 사용
+                    if left in self.macro_vars:
+                        try:
+                            right_val = int(right)
+                            return self.macro_vars[left] > right_val
+                        except ValueError:
+                            pass
 
-        # || 연산자 처리
-        if "||" in condition_str:
-            parts = condition_str.split("||")
-            subconditions = []
-            for part in parts:
-                subexpr = self._parse_condition(part.strip(), file_path)
-                if subexpr is not None:
-                    # Int 타입이면 Bool로 변환
-                    if hasattr(subexpr, 'sort') and str(subexpr.sort()) == 'Int':
-                        subexpr = subexpr > 0
-                    subconditions.append(subexpr)
+            # && 연산자 처리
+            if "&&" in condition_str:
+                parts = condition_str.split("&&")
+                subconditions = []
+                for part in parts:
+                    subexpr = self._parse_condition(part.strip(), file_path)
+                    if subexpr is not None:
+                        # Int 타입이면 Bool로 변환
+                        if hasattr(subexpr, "sort") and str(subexpr.sort()) == "Int":
+                            subexpr = subexpr > 0
+                        subconditions.append(subexpr)
 
-                if subconditions:
-                    return Or(subconditions)  # z3.Or 대신 Or 사용
+                    if subconditions:
+                        return And(subconditions)  # z3.And 대신 And 사용
+
+            # || 연산자 처리
+            if "||" in condition_str:
+                parts = condition_str.split("||")
+                subconditions = []
+                for part in parts:
+                    subexpr = self._parse_condition(part.strip(), file_path)
+                    if subexpr is not None:
+                        # Int 타입이면 Bool로 변환
+                        if hasattr(subexpr, "sort") and str(subexpr.sort()) == "Int":
+                            subexpr = subexpr > 0
+                        subconditions.append(subexpr)
+
+                    if subconditions:
+                        return Or(subconditions)  # z3.Or 대신 Or 사용
         except Exception as e:
             self.logger.warning(f"조건 파싱 오류: {condition_str} ({e})")
             return None
@@ -766,7 +766,7 @@ class Z3ConfigSolver:
             print(f"해결 불가능: 조건 '{target_condition}'이 충족되는 해결책 없음")
             return None
 
-    def _nested_config_solve_s4(self, target_conditions):
+    def _nested_config_solve_s4(self, target_conditions, is_save_result=False):
         """여러 조건들이 모두 충족되기 위한 매크로 설정을 찾습니다."""
         print(f"\n[S4 쿼리] {len(target_conditions)}개의 조건이 모두 충족되기 위한 설정 찾기")
 
@@ -793,7 +793,7 @@ class Z3ConfigSolver:
                 condition = condition[8:].strip()
 
             self.logger.debug(f"[-] 조건 '{condition}'을 Z3 표현식으로 변환합니다.")
-            
+
             z3_expr = None
             try:
                 z3_expr = self._parse_condition(condition)
@@ -802,12 +802,10 @@ class Z3ConfigSolver:
                     f"[-] 조건 '{condition}'을 Z3 표현식으로 변환할 수 없습니다. 이 조건은 무시됩니다."
                 )
                 continue
-            
+
             # None 체크 추가
             if z3_expr is None:
-                self.logger.warning(
-                    f"[-] 조건 '{condition}'이 None을 반환했습니다. 이 조건은 무시됩니다."
-                )
+                self.logger.warning(f"[-] 조건 '{condition}'이 None을 반환했습니다. 이 조건은 무시됩니다.")
                 continue
 
             if z3_expr:
@@ -830,7 +828,8 @@ class Z3ConfigSolver:
 
             print(f"해결 가능: {len(target_conditions)}개의 조건이 모두 충족되는 해결책 찾음")
             # 결과 파일 저장
-            result_file = self._save_result("s4", (str(target_conditions),), solution)
+            if is_save_result:
+                result_file = self._save_result("s4", (str(target_conditions),), solution)
             return solution
         else:
             print(f"해결 불가능: {len(target_conditions)}개의 조건이 모두 충족되는 해결책 없음")

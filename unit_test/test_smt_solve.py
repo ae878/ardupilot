@@ -3,6 +3,7 @@ import os
 import sys
 import argparse
 import random
+import math
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -25,4 +26,12 @@ if __name__ == "__main__":
     # sample_config = config_factory.get_config("ENABLE_LOAD_TEST")
     # print(str(sample_config))
     # print(sample_config.select_block(0))
-    solution = z3_solver.solve("s4", equations)
+    current_equations = equations.copy()
+    solution = z3_solver.solve("s4", current_equations)
+    while not solution and len(current_equations) > 1:
+        remove_count = max(1, math.ceil(len(current_equations) * 0.1))
+        remove_indices = random.sample(range(len(current_equations)), remove_count)
+        current_equations = [eq for i, eq in enumerate(current_equations) if i not in remove_indices]
+        print(f"No solution found, retrying with {len(current_equations)} equations...")
+        solution = z3_solver.solve("s4", current_equations)
+    print("Final solution:", solution)
