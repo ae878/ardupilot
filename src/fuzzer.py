@@ -310,8 +310,6 @@ class Fuzzer:
         - sat-validate: Validate the configuration with SAT solver
         - sat-solve: 특정 codesize 이상인 Branch 중 하나를 랜덤하게 선택함함
 
-
-
         """
         max_validate_retry = 10
         if sat_acquire_min_codesize == -1:
@@ -401,8 +399,18 @@ class Fuzzer:
 
             if "sat-solve" in methods:
                 smt_equations = []
+                # 타겟하는 함수와 연관있는 파일만 sat-solve 경로 내에 포함
+                target_files: set[File] = set()
+                for target_function in target_functions:
+                    temp_files = self.related_files_per_function.get(target_function, set())
+                    if temp_files:
+                        target_files.update(temp_files)
+                print("====================")
+                print(f"[+] Target files: {target_files}")
+                print("=====================")
                 for target_macro in target_macros:
-                    smt_equations.extend(target_macro.select_block(sat_acquire_min_codesize))
+                    # TODO: Apply only related files
+                    smt_equations.extend(target_macro.select_block(sat_acquire_min_codesize, target_files))
                 if len(smt_equations) == 0:
                     self.logger.warning("[-] No macros to fuzz")
                     # continue

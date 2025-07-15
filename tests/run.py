@@ -230,8 +230,8 @@ def main():
     print(f"[+] Target: {target}\tUse related: {use_related}\tUse sat: {use_sat}")
     input("[-] Press Enter to continue...")
     fuzzer = Fuzzer(firmware_base, adapter, seed_macro_file=macros_json_path, config=config, verbose=True)
-    if use_related:
-        fuzzer.initial_analyze(target_thread_functions, "initial_analyze_fmt")
+    if use_related or use_sat:
+        fuzzer.initial_analyze(target_thread_functions, f"initial_analyze_{target}")
 
     # Set the starting step number
     fuzzer.steps_count = start_step

@@ -82,6 +82,7 @@ class WidebandAdapter(BaseAdapter):
         original_cwd = os.getcwd()
         # Change the cwd to the base directory
         os.chdir(self.base)
+        print(f"[+] Building Wideband project in {os.getcwd()}")
 
         # Run the build commands
         # board_name = config.get_config("BOARD").get("value")
@@ -91,9 +92,10 @@ class WidebandAdapter(BaseAdapter):
         # BOARD = f0_module
         # endif
         # make env
-        subprocess.run(["make", "-j4", f"BOARD=f1_dual"], check=True)
+        subprocess.run(["make", "-j4", "BOARDS=f1_dual"], check=True)
 
         os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
+
         return True

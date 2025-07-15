@@ -8,6 +8,8 @@ from src.config.conditional_config import Condition
 from src.utils.logging import get_logger
 from src.config.configblock import ConfigBlock
 from src.config.configblockstructure import ConfigBlockStructure
+from src.ir2dot.irlib.file import File
+
 
 logger = get_logger(__name__)
 
@@ -165,7 +167,9 @@ class Config:
                 )
         return return_smt_equations
 
-    def select_block(self, min_executable_line: int, methods: list[str] = ["lines"]) -> list[str]:
+    def select_block(
+        self, min_executable_line: int, target_related_files: set[File], methods: list[str] = ["lines"]
+    ) -> list[str]:
         """
         입력: 최소 실행가능한 라인
         출력: SMT로 풀수있는 식 리스트
@@ -186,6 +190,25 @@ class Config:
             # 라인 수 기반으로 선택
             for target_configblock in self.conditional_scopes:
                 d: deque[ConfigBlockStructure] = deque()
+                is_targeted = False
+                # target_files 사용하는경우
+                if len(target_related_files) > 0:
+                    for target_related_file in list(target_related_files):
+                        target_related_file_name = target_related_file.name.split("/")[-1].split(".")[0]
+                        target_file_name = target_configblock.file.split("/")[-1].split(".")[0]
+                        if target_related_file_name == target_file_name:
+                            is_targeted = True
+                            self.logger.debug(
+                                f"[-] Targeted configblock_structure: {target_configblock.file} "
+                                f"for file: {target_related_file_name}"
+                            )
+                            break
+                else:
+                    is_targeted = True
+
+                if not is_targeted:
+                    continue
+
                 for target_configblock_structure in target_configblock.block_structure.child_blocks:
                     d.append(target_configblock_structure)
                 while d:

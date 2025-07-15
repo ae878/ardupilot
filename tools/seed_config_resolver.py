@@ -80,8 +80,6 @@ def resolve_macros_bfs_repeat(macros, max_rounds=10):
 
             try:
                 val = eval(expr, {"__builtins__": {}})
-                if curr == "TIM_CCMR2_IC4F_Msk":
-                    print(f"Resolved {curr}: {val}")
                 resolved[curr] = val
                 del unresolved[curr]
                 progress = True

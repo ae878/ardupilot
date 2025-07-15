@@ -179,6 +179,15 @@ class Applier:
                 value = macro_config.value
                 if value is True:
                     value = "true"
+                if str(value) == "1" or str(value) == "0":
+                    value_candidate = macro_config.value_candidate
+                    for value_candidate in value_candidate:
+                        if str(value) == "1" and value_candidate is True:
+                            value = "true"
+                            break
+                        elif str(value) == "0" and value_candidate is False:
+                            value = "false"
+                            break
                 new_line = f"{leading_space}#define {macro_name:<24} {value}\n"
                 modified_lines[i - 1] = new_line
                 # Store applied change
