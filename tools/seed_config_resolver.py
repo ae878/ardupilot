@@ -99,14 +99,16 @@ def collect_macros_from_o_files(directory):
     macros = {}
     define_re = re.compile(r"#define\s+(\w+)\s+(.*)")
 
-    for fname in os.listdir(directory):
-        if fname.endswith(".o"):
-            with open(os.path.join(directory, fname), "r", encoding="utf-8") as f:
-                for line in f:
-                    match = define_re.match(line.strip())
-                    if match:
-                        name, value = match.groups()
-                        macros[name] = value.strip()
+    for root, _, files in os.walk(directory):
+        for fname in files:
+            if fname.endswith(".o"):
+                file_path = os.path.join(root, fname)
+                with open(file_path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        match = define_re.match(line.strip())
+                        if match:
+                            name, value = match.groups()
+                            macros[name] = value.strip()
     return macros
 
 
@@ -116,6 +118,17 @@ def main():
     macros = collect_macros_from_o_files(directory)
     resolved = resolve_macros_bfs_repeat(macros)
 
+    def convert_sets(obj):
+        if isinstance(obj, dict):
+            return {k: convert_sets(v) for k, v in obj.items()}
+        elif isinstance(obj, set):
+            return [convert_sets(v) for v in obj]
+        elif isinstance(obj, (list, tuple)):
+            return [convert_sets(v) for v in obj]
+        else:
+            return obj
+
+    resolved = convert_sets(resolved)
     with open("resolved.json", "w") as f:
         import json
 

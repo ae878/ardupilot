@@ -22,4 +22,4 @@ for macro in macros.keys():
             macros[macro]["value"] = macro_value
 
 with open("./macros_out.json", "w", encoding="utf-8") as f:
-    json.dump(macros, f, indent=4)
+    json.dump(macros, f)

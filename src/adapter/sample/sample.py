@@ -70,10 +70,12 @@ class SampleAdapter(BaseAdapter):
         os.chdir(build_dir)
 
         logger.info(f"[yellow]Changed working directory to: {build_dir}")
-
-        subprocess.run(build_command, check=True)
-
-        os.chdir(original_cwd)
+        try:
+            subprocess.run(build_command, check=True)
+        except subprocess.CalledProcessError as e:
+            raise BuildErrorException(f"Build failed: {e}")
+        finally:
+            os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
         return True

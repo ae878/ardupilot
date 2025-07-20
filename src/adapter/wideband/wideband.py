@@ -92,9 +92,13 @@ class WidebandAdapter(BaseAdapter):
         # BOARD = f0_module
         # endif
         # make env
-        subprocess.run(["make", "-j4", "BOARDS=f1_dual"], check=True)
-
-        os.chdir(original_cwd)
+        try:
+            subprocess.run(["make", "-j4", "BOARDS=f1_dual"], check=True)
+        except subprocess.CalledProcessError as e:
+            logger.error(f"[-] Build failed: {e}")
+            raise e
+        finally:
+            os.chdir(original_cwd)
         if self.verbose:
             logger.debug(f"[+] ================ Build End ================")
 

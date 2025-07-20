@@ -150,13 +150,14 @@ class Applier:
             if line.endswith("\n"):
                 line = line[:-1]
             # print(line)
-            # Store original line
-            self.original_items.append(FileItem(file_path, i, line))
 
             # Check if line contains #define using regex
             match = define_pattern.match(line)
             if not match:
                 continue
+
+            # Store original line only for #define lines that might be modified
+            self.original_items.append(FileItem(file_path, i, line))
 
             macro_name = match.group(1)
             # Skip if macro is not in target_macros (when target_macros is not empty)
@@ -220,7 +221,7 @@ class Applier:
                 with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                     lines = f.readlines()
 
-                # 변경된 줄 되돌리기
+                # 변경된 줄만 되돌리기 (이제 #define 라인만 저장되어 있음)
                 for line_number, original_content in changes.items():
                     if not original_content.endswith("\n"):
                         original_content += "\n"
@@ -230,9 +231,12 @@ class Applier:
                 with open(file_path, "w") as f:
                     f.writelines(lines)
 
+                self.logger.info(f"Reverted {len(changes)} lines in {file_path}")
+
             except Exception as e:
-                print(f"Error reverting file {file_path}: {str(e)}")
+                self.logger.error(f"Error reverting file {file_path}: {str(e)}")
 
         # 변경 이력 초기화
         self.original_items.clear()
         self.apply_items.clear()
+        self.logger.info("Revert completed")

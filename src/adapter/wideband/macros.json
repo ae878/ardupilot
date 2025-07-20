@@ -5,7 +5,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/wideband_board_config.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/wideband_board_config.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "EGT_CHANNELS",
         "value_candidates": [
@@ -6460,7 +6460,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "HAL_USE_PAL",
         "value_candidates": [
@@ -6791,7 +6791,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "HAL_USE_ADC",
         "value_candidates": [
@@ -6998,7 +6998,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "HAL_USE_CAN",
         "value_candidates": [
@@ -7205,7 +7205,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_CRY",
         "value_candidates": [
@@ -7412,7 +7412,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_DAC",
         "value_candidates": [
@@ -7681,7 +7681,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_EFL",
         "value_candidates": [
@@ -7888,7 +7888,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_GPT",
         "value_candidates": [
@@ -8095,7 +8095,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_I2C",
         "value_candidates": [
@@ -8302,7 +8302,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_I2S",
         "value_candidates": [
@@ -8509,7 +8509,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_ICU",
         "value_candidates": [
@@ -8716,7 +8716,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_MAC",
         "value_candidates": [
@@ -8923,7 +8923,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_MMC_SPI",
         "value_candidates": [
@@ -9130,7 +9130,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "HAL_USE_PWM",
         "value_candidates": [
@@ -9337,7 +9337,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_RTC",
         "value_candidates": [
@@ -9544,7 +9544,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_SDC",
         "value_candidates": [
@@ -9751,7 +9751,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_SERIAL",
         "value_candidates": [
@@ -10055,7 +10055,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_SERIAL_USB",
         "value_candidates": [
@@ -10262,7 +10262,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_SIO",
         "value_candidates": [
@@ -10469,7 +10469,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_SPI",
         "value_candidates": [
@@ -10707,7 +10707,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_TRNG",
         "value_candidates": [
@@ -10914,7 +10914,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_UART",
         "value_candidates": [
@@ -11183,7 +11183,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_USB",
         "value_candidates": [
@@ -11390,7 +11390,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_WDG",
         "value_candidates": [
@@ -11596,7 +11596,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "HAL_USE_WSPI",
         "value_candidates": [
@@ -11772,7 +11772,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "PAL_USE_CALLBACKS",
         "value_candidates": [
@@ -11979,7 +11979,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "PAL_USE_WAIT",
         "value_candidates": [
@@ -12186,7 +12186,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "ADC_USE_WAIT",
         "value_candidates": [
@@ -12393,7 +12393,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "ADC_USE_MUTUAL_EXCLUSION",
         "value_candidates": [
@@ -12600,7 +12600,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CAN_USE_SLEEP_MODE",
         "value_candidates": [
@@ -12807,7 +12807,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CAN_ENFORCE_USE_CALLBACKS",
         "value_candidates": [
@@ -16443,7 +16443,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "SPI_USE_WAIT",
         "value_candidates": [
@@ -16650,7 +16650,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "SPI_USE_CIRCULAR",
         "value_candidates": [
@@ -16857,7 +16857,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "SPI_USE_MUTUAL_EXCLUSION",
         "value_candidates": [
@@ -17064,7 +17064,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "UART_USE_WAIT",
         "value_candidates": [
@@ -17302,7 +17302,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/halconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/halconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "UART_USE_MUTUAL_EXCLUSION",
         "value_candidates": [
@@ -19370,7 +19370,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/mcuconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/mcuconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "STM32_PWM_USE_ADVANCED",
         "value_candidates": [
@@ -25938,7 +25938,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_TIME_QUANTUM",
         "value_candidates": [
@@ -26145,7 +26145,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_NO_IDLE_THREAD",
         "value_candidates": [
@@ -26352,7 +26352,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "CH_CFG_OPTIMIZE_SPEED",
         "value_candidates": [
@@ -26559,7 +26559,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_TM",
         "value_candidates": [
@@ -26766,7 +26766,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "CH_CFG_USE_TIMESTAMP",
         "value_candidates": [
@@ -26973,7 +26973,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_REGISTRY",
         "value_candidates": [
@@ -27211,7 +27211,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_WAITEXIT",
         "value_candidates": [
@@ -27418,7 +27418,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_SEMAPHORES",
         "value_candidates": [
@@ -27625,7 +27625,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_SEMAPHORES_PRIORITY",
         "value_candidates": [
@@ -27832,7 +27832,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MUTEXES",
         "value_candidates": [
@@ -28039,7 +28039,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MUTEXES_RECURSIVE",
         "value_candidates": [
@@ -28246,7 +28246,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_CONDVARS",
         "value_candidates": [
@@ -28453,7 +28453,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_CONDVARS_TIMEOUT",
         "value_candidates": [
@@ -28660,7 +28660,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_EVENTS",
         "value_candidates": [
@@ -28867,7 +28867,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_EVENTS_TIMEOUT",
         "value_candidates": [
@@ -29074,7 +29074,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MESSAGES",
         "value_candidates": [
@@ -29281,7 +29281,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MESSAGES_PRIORITY",
         "value_candidates": [
@@ -29488,7 +29488,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_DYNAMIC",
         "value_candidates": [
@@ -29695,7 +29695,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MAILBOXES",
         "value_candidates": [
@@ -29902,7 +29902,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MEMCORE",
         "value_candidates": [
@@ -30109,7 +30109,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_MEMCORE_SIZE",
         "value_candidates": [
@@ -30316,7 +30316,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_HEAP",
         "value_candidates": [
@@ -30523,7 +30523,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_MEMPOOLS",
         "value_candidates": [
@@ -30730,7 +30730,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_OBJ_FIFOS",
         "value_candidates": [
@@ -30937,7 +30937,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_PIPES",
         "value_candidates": [
@@ -31144,7 +31144,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_OBJ_CACHES",
         "value_candidates": [
@@ -31351,7 +31351,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_DELEGATES",
         "value_candidates": [
@@ -31558,7 +31558,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_JOBS",
         "value_candidates": [
@@ -31765,7 +31765,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_USE_FACTORY",
         "value_candidates": [
@@ -32184,7 +32184,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_OBJECTS_REGISTRY",
         "value_candidates": [
@@ -32391,7 +32391,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_GENERIC_BUFFERS",
         "value_candidates": [
@@ -32598,7 +32598,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_SEMAPHORES",
         "value_candidates": [
@@ -32805,7 +32805,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_MAILBOXES",
         "value_candidates": [
@@ -33012,7 +33012,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_OBJ_FIFOS",
         "value_candidates": [
@@ -33219,7 +33219,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_CFG_FACTORY_PIPES",
         "value_candidates": [
@@ -33426,7 +33426,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_DBG_STATISTICS",
         "value_candidates": [
@@ -33633,7 +33633,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 0,
         "type": "boolean",
         "name": "CH_DBG_SYSTEM_STATE_CHECK",
         "value_candidates": [
@@ -33840,7 +33840,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "CH_DBG_ENABLE_CHECKS",
         "value_candidates": [
@@ -34047,7 +34047,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "CH_DBG_ENABLE_ASSERTS",
         "value_candidates": [
@@ -34466,7 +34466,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": true,
+        "value": 1,
         "type": "boolean",
         "name": "CH_DBG_ENABLE_STACK_CHECK",
         "value_candidates": [
@@ -34673,7 +34673,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_DBG_FILL_THREADS",
         "value_candidates": [
@@ -34880,7 +34880,7 @@
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual_rev1/chconf.h",
             "/home/ubuntu/lab/wideband/firmware/boards/f1_dual/chconf.h"
         ],
-        "value": false,
+        "value": 0,
         "type": "boolean",
         "name": "CH_DBG_THREADS_PROFILING",
         "value_candidates": [
@@ -38521,7 +38521,7 @@
     },
     "__CORTEX_M": {
         "defined_in": [],
-        "value": null,
+        "value": 0,
         "type": "unknown",
         "name": "__CORTEX_M",
         "value_candidates": [],
@@ -71977,7 +71977,7 @@
     },
     "TRUE": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "TRUE",
         "value_candidates": [],
@@ -72194,7 +72194,7 @@
     },
     "WB_PROD": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "WB_PROD",
         "value_candidates": [],
@@ -82812,7 +82812,7 @@
     },
     "__cplusplus": {
         "defined_in": [],
-        "value": null,
+        "value": 201703,
         "type": "unknown",
         "name": "__cplusplus",
         "value_candidates": [],
@@ -83657,7 +83657,7 @@
     },
     "__ASSEMBLER__": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "__ASSEMBLER__",
         "value_candidates": [],
@@ -83823,7 +83823,7 @@
     },
     "CH_DBG_TRACE_MASK": {
         "defined_in": [],
-        "value": null,
+        "value": 255,
         "type": "unknown",
         "name": "CH_DBG_TRACE_MASK",
         "value_candidates": [],
@@ -84020,7 +84020,7 @@
     },
     "STM32_HAS_GPIOA": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "STM32_HAS_GPIOA",
         "value_candidates": [],
@@ -84213,7 +84213,7 @@
     },
     "STM32_HAS_GPIOB": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "STM32_HAS_GPIOB",
         "value_candidates": [],
@@ -84406,7 +84406,7 @@
     },
     "STM32_HAS_GPIOC": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "STM32_HAS_GPIOC",
         "value_candidates": [],
@@ -84599,7 +84599,7 @@
     },
     "STM32_HAS_GPIOF": {
         "defined_in": [],
-        "value": null,
+        "value": 1,
         "type": "unknown",
         "name": "STM32_HAS_GPIOF",
         "value_candidates": [],
