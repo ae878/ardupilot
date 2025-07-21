@@ -238,6 +238,10 @@ class Fuzzer:
             build_time = time.time()
             function_results = []
             # 4. Analyze
+            if is_dry_run:
+                self.logger.info("[+] Dry run mode, skipping analysis")
+                build_result = True
+                return
             if build_result:
                 function_results = self.adapter.analyze()
                 analyze_time = time.time()
