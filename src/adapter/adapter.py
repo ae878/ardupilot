@@ -152,7 +152,6 @@ class BaseAdapter(ABC):
                 logger.info(f"[+] Analyzing {function_name}")
                 function = parser.find_function(function_name)
                 result = parser.bfs(function)
-                print(result)
                 function_results.append(
                     {
                         "name": function_name,
