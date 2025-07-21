@@ -19,6 +19,7 @@ from src.adapter.wideband.wideband import WidebandAdapter
 from src.config.config import ConfigFactory
 from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
+from src.applier.applier import Applier
 from utils.utils import calculate_previous_runtime
 
 base_configuration = {
@@ -105,11 +106,17 @@ def main():
     parser.add_argument("-t", "--target", type=str, help="Target project to run")
     parser.add_argument("-s", "--use-sat", action="store_true", help="Use SAT to fuzz")
     parser.add_argument("-r", "--use-related", action="store_true", help="Use related to fuzz")
+    parser.add_argument("-d", "--dry-run", action="store_true", help="Dry run mode, only testing build commands")
     args = parser.parse_args()
+    if not args.target:
+        # Show help
+        parser.print_help()
+        sys.exit(1)
 
     target = args.target
     use_sat = args.use_sat
     use_related = args.use_related
+    dry_run = args.dry_run
 
     use_continue = args.continue_status
 
@@ -227,7 +234,7 @@ def main():
         remaining_time = MAX_RUNTIME - total_previous_time
         print(f"[+] Remaining time: {remaining_time} seconds")
         start_step = last_step + 1
-    print(f"[+] Target: {target}\tUse related: {use_related}\tUse sat: {use_sat}")
+    print(f"[+] Target: {target}\tUse related: {use_related}\tUse sat: {use_sat}\tDry run: {dry_run}")
     input("[-] Press Enter to continue...")
     fuzzer = Fuzzer(firmware_base, adapter, seed_macro_file=macros_json_path, config=config, verbose=True)
     if use_related or use_sat:
@@ -251,12 +258,14 @@ def main():
 
         start_time = time.time()
         if use_related:
-            fuzzer.fuzz(methods=["related-validate"])
+            fuzzer.fuzz(methods=["related-validate"], is_dry_run=dry_run)
         else:
-            fuzzer.fuzz(methods=[])
+            fuzzer.fuzz(methods=[], is_dry_run=dry_run)
         end_time = time.time()
         print(f"[+] Time taken: {end_time - start_time} seconds")
-
+        if dry_run:
+            print("[+] Dry run mode, skipping mutation step")
+            break
         fuzzer.mutate(target_thread_functions, methods=mutate_methods)
 
 

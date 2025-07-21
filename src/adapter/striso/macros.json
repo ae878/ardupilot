@@ -1,1507 +1,1507 @@
 {
     "__MIDI_SERIAL_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi_serial.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "__MIDI_SERIAL_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi_serial.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/midi_serial.h",
-                "start_line": 17,
-                "end_line": 39,
-                "scope_size": 22,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef __MIDI_SERIAL_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi_serial.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "__MIDI_SERIAL_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi_serial.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/midi_serial.h",
+          "start_line": 17,
+          "end_line": 39,
+          "scope_size": 22,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef __MIDI_SERIAL_H"
+        }
+      ]
     },
     "_MIDI_USB_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi_usb.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_MIDI_USB_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi_usb.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/midi_usb.h",
-                "start_line": 28,
-                "end_line": 196,
-                "scope_size": 168,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _MIDI_USB_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi_usb.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_MIDI_USB_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi_usb.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/midi_usb.h",
+          "start_line": 28,
+          "end_line": 196,
+          "scope_size": 168,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _MIDI_USB_H_"
+        }
+      ]
     },
     "__EXCEPTIONS_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/exceptions.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "__EXCEPTIONS_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/exceptions.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/exceptions.h",
-                "start_line": 18,
-                "end_line": 29,
-                "scope_size": 11,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef __EXCEPTIONS_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/exceptions.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "__EXCEPTIONS_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/exceptions.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/exceptions.h",
+          "start_line": 18,
+          "end_line": 29,
+          "scope_size": 11,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef __EXCEPTIONS_H"
+        }
+      ]
     },
     "_STRISO_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/striso.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_STRISO_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/striso.h",
-            "/home/ubuntu/lab/striso-control-firmware/utils/striso.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/striso.h",
-                "start_line": 17,
-                "end_line": 67,
-                "scope_size": 50,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _STRISO_H"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/utils/striso.h",
-                "start_line": 17,
-                "end_line": 67,
-                "scope_size": 50,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _STRISO_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/striso.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_STRISO_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/striso.h",
+        "/home/ubuntu/lab/striso-control-firmware/utils/striso.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/striso.h",
+          "start_line": 17,
+          "end_line": 67,
+          "scope_size": 50,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _STRISO_H"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/utils/striso.h",
+          "start_line": 17,
+          "end_line": 67,
+          "scope_size": 50,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _STRISO_H"
+        }
+      ]
     },
     "_AUX_JACK_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/aux_jack.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_AUX_JACK_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/aux_jack.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.h",
-                "start_line": 1,
-                "end_line": 13,
-                "scope_size": 12,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _AUX_JACK_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/aux_jack.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_AUX_JACK_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/aux_jack.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.h",
+          "start_line": 1,
+          "end_line": 13,
+          "scope_size": 12,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _AUX_JACK_H_"
+        }
+      ]
     },
     "_MESSAGING_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/messaging.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_MESSAGING_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/messaging.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/messaging.h",
-                "start_line": 17,
-                "end_line": 27,
-                "scope_size": 10,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _MESSAGING_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/messaging.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_MESSAGING_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/messaging.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/messaging.h",
+          "start_line": 17,
+          "end_line": 27,
+          "scope_size": 10,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _MESSAGING_H_"
+        }
+      ]
     },
     "_VERSION_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/version.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_VERSION_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/version.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/version.h",
-                "start_line": 0,
-                "end_line": 7,
-                "scope_size": 7,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _VERSION_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/version.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_VERSION_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/version.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/version.h",
+          "start_line": 0,
+          "end_line": 7,
+          "scope_size": 7,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _VERSION_H"
+        }
+      ]
     },
     "SYNTH_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "SYNTH_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth.h",
-                "start_line": 17,
-                "end_line": 60,
-                "scope_size": 43,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef SYNTH_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "SYNTH_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth.h",
+          "start_line": 17,
+          "end_line": 60,
+          "scope_size": 43,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef SYNTH_H_"
+        }
+      ]
     },
     "_LSM6DSL_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_LSM6DSL_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h",
-                "start_line": 24,
-                "end_line": 423,
-                "scope_size": 399,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _LSM6DSL_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_LSM6DSL_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/lsm6dsl.h",
+          "start_line": 24,
+          "end_line": 423,
+          "scope_size": 399,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _LSM6DSL_H_"
+        }
+      ]
     },
     "_AIC3X_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_AIC3X_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h",
-                "start_line": 14,
-                "end_line": 293,
-                "scope_size": 279,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _AIC3X_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_AIC3X_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x.h",
+          "start_line": 14,
+          "end_line": 293,
+          "scope_size": 279,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _AIC3X_H"
+        }
+      ]
     },
     "_BULK_USB_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_BULK_USB_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h",
-                "start_line": 28,
-                "end_line": 192,
-                "scope_size": 164,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _BULK_USB_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_BULK_USB_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/bulk_usb.h",
+          "start_line": 28,
+          "end_line": 192,
+          "scope_size": 164,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _BULK_USB_H_"
+        }
+      ]
     },
     "_BUTTON_READ_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/button_read.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_BUTTON_READ_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/button_read.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.h",
-                "start_line": 17,
-                "end_line": 25,
-                "scope_size": 8,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _BUTTON_READ_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/button_read.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_BUTTON_READ_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/button_read.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.h",
+          "start_line": 17,
+          "end_line": 25,
+          "scope_size": 8,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _BUTTON_READ_H_"
+        }
+      ]
     },
     "_MOTIONSENSOR_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/motionsensor.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_MOTIONSENSOR_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/motionsensor.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.h",
-                "start_line": 17,
-                "end_line": 26,
-                "scope_size": 9,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _MOTIONSENSOR_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/motionsensor.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_MOTIONSENSOR_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/motionsensor.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.h",
+          "start_line": 17,
+          "end_line": 26,
+          "scope_size": 9,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _MOTIONSENSOR_H_"
+        }
+      ]
     },
     "__CODEC_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/codec.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "__CODEC_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/codec.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/codec.h",
-                "start_line": 18,
-                "end_line": 40,
-                "scope_size": 22,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef __CODEC_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/codec.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "__CODEC_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/codec.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/codec.h",
+          "start_line": 18,
+          "end_line": 40,
+          "scope_size": 22,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef __CODEC_H"
+        }
+      ]
     },
     "_CONFIG_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_CONFIG_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/config.h",
-                "start_line": 17,
-                "end_line": 1167,
-                "scope_size": 1150,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _CONFIG_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_CONFIG_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/config.h",
+          "start_line": 17,
+          "end_line": 1167,
+          "scope_size": 1150,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _CONFIG_H_"
+        }
+      ]
     },
     "USE_USB": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_USB",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/main.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 181,
-                "end_line": 183,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_USB"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 233,
-                "end_line": 235,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_USB"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_USB",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/main.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 181,
+          "end_line": 183,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_USB"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 233,
+          "end_line": 235,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_USB"
+        }
+      ]
     },
     "USE_AUX_BUTTONS": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_AUX_BUTTONS",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/button_read.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 215,
-                "end_line": 225,
-                "scope_size": 10,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_AUX_BUTTONS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1055,
-                "end_line": 1073,
-                "scope_size": 18,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_AUX_BUTTONS"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_AUX_BUTTONS",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/button_read.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 215,
+          "end_line": 225,
+          "scope_size": 10,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_AUX_BUTTONS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1055,
+          "end_line": 1073,
+          "scope_size": 18,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_AUX_BUTTONS"
+        }
+      ]
     },
     "USE_MIDI_OUT": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_MIDI_OUT",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/main.c",
-            "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-            "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 210,
-                "end_line": 213,
-                "scope_size": 3,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 174,
-                "end_line": 261,
-                "scope_size": 87,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 595,
-                "end_line": 710,
-                "scope_size": 115,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 903,
-                "end_line": 908,
-                "scope_size": 5,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 941,
-                "end_line": 964,
-                "scope_size": 23,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 985,
-                "end_line": 1067,
-                "scope_size": 82,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 2140,
-                "end_line": 2171,
-                "scope_size": 31,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
-                "start_line": 550,
-                "end_line": 556,
-                "scope_size": 6,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
-                "start_line": 589,
-                "end_line": 597,
-                "scope_size": 8,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
-                "start_line": 622,
-                "end_line": 708,
-                "scope_size": 86,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_OUT"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_MIDI_OUT",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/main.c",
+        "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+        "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 210,
+          "end_line": 213,
+          "scope_size": 3,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 174,
+          "end_line": 261,
+          "scope_size": 87,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 595,
+          "end_line": 710,
+          "scope_size": 115,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 903,
+          "end_line": 908,
+          "scope_size": 5,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 941,
+          "end_line": 964,
+          "scope_size": 23,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 985,
+          "end_line": 1067,
+          "scope_size": 82,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 2140,
+          "end_line": 2171,
+          "scope_size": 31,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
+          "start_line": 550,
+          "end_line": 556,
+          "scope_size": 6,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
+          "start_line": 589,
+          "end_line": 597,
+          "scope_size": 8,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
+          "start_line": 622,
+          "end_line": 708,
+          "scope_size": 86,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_OUT"
+        }
+      ]
     },
     "USE_MIDI_SERIAL": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_MIDI_SERIAL",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
-            "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
-                "start_line": 389,
-                "end_line": 391,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_SERIAL"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
-                "start_line": 413,
-                "end_line": 417,
-                "scope_size": 4,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_SERIAL"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 58,
-                "end_line": 60,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_SERIAL"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 65,
-                "end_line": 67,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_SERIAL"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 72,
-                "end_line": 74,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_MIDI_SERIAL"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_MIDI_SERIAL",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
+        "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
+          "start_line": 389,
+          "end_line": 391,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_SERIAL"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/aux_jack.c",
+          "start_line": 413,
+          "end_line": 417,
+          "scope_size": 4,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_SERIAL"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 58,
+          "end_line": 60,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_SERIAL"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 65,
+          "end_line": 67,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_SERIAL"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 72,
+          "end_line": 74,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_MIDI_SERIAL"
+        }
+      ]
     },
     "USE_INTERNAL_SYNTH": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_INTERNAL_SYNTH",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/main.c",
-            "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-            "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
-            "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 197,
-                "end_line": 200,
-                "scope_size": 3,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 976,
-                "end_line": 983,
-                "scope_size": 7,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 1078,
-                "end_line": 1083,
-                "scope_size": 5,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
-                "start_line": 1113,
-                "end_line": 1117,
-                "scope_size": 4,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
-                "start_line": 295,
-                "end_line": 307,
-                "scope_size": 12,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
-                "start_line": 613,
-                "end_line": 620,
-                "scope_size": 7,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_INTERNAL_SYNTH"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_INTERNAL_SYNTH",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/main.c",
+        "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+        "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
+        "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 197,
+          "end_line": 200,
+          "scope_size": 3,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 976,
+          "end_line": 983,
+          "scope_size": 7,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 1078,
+          "end_line": 1083,
+          "scope_size": 5,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth_control.cpp",
+          "start_line": 1113,
+          "end_line": 1117,
+          "scope_size": 4,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
+          "start_line": 295,
+          "end_line": 307,
+          "scope_size": 12,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/utils/stribri.cpp",
+          "start_line": 613,
+          "end_line": 620,
+          "scope_size": 7,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_INTERNAL_SYNTH"
+        }
+      ]
     },
     "USE_LSM6DSL": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_LSM6DSL",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/motionsensor.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
-                "start_line": 81,
-                "end_line": 152,
-                "scope_size": 71,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_LSM6DSL"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_LSM6DSL",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/motionsensor.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/motionsensor.c",
+          "start_line": 81,
+          "end_line": 152,
+          "scope_size": 71,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_LSM6DSL"
+        }
+      ]
     },
     "CODEC_ENABLE_INPUT": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "CODEC_ENABLE_INPUT",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
-                "start_line": 249,
-                "end_line": 251,
-                "scope_size": 2,
-                "directive_type": "if",
-                "original_condition": "#if CODEC_ENABLE_INPUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
-                "start_line": 258,
-                "end_line": 260,
-                "scope_size": 2,
-                "directive_type": "if",
-                "original_condition": "#if CODEC_ENABLE_INPUT"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
-                "start_line": 263,
-                "end_line": 265,
-                "scope_size": 2,
-                "directive_type": "if",
-                "original_condition": "#if CODEC_ENABLE_INPUT"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": 1,
+      "type": "boolean",
+      "name": "CODEC_ENABLE_INPUT",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
+          "start_line": 249,
+          "end_line": 251,
+          "scope_size": 2,
+          "directive_type": "if",
+          "original_condition": "#if CODEC_ENABLE_INPUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
+          "start_line": 258,
+          "end_line": 260,
+          "scope_size": 2,
+          "directive_type": "if",
+          "original_condition": "#if CODEC_ENABLE_INPUT"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/codec_tlv320aic3x_SAI.c",
+          "start_line": 263,
+          "end_line": 265,
+          "scope_size": 2,
+          "directive_type": "if",
+          "original_condition": "#if CODEC_ENABLE_INPUT"
+        }
+      ]
     },
     "USE_BAS": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_BAS",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/button_read.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 129,
-                "end_line": 154,
-                "scope_size": 25,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 190,
-                "end_line": 206,
-                "scope_size": 16,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 209,
-                "end_line": 211,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 770,
-                "end_line": 956,
-                "scope_size": 186,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1091,
-                "end_line": 1093,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1096,
-                "end_line": 1098,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1107,
-                "end_line": 1109,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1112,
-                "end_line": 1114,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 1177,
-                "end_line": 1184,
-                "scope_size": 7,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_BAS"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_BAS",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/button_read.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 129,
+          "end_line": 154,
+          "scope_size": 25,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 190,
+          "end_line": 206,
+          "scope_size": 16,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 209,
+          "end_line": 211,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 770,
+          "end_line": 956,
+          "scope_size": 186,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1091,
+          "end_line": 1093,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1096,
+          "end_line": 1098,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1107,
+          "end_line": 1109,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1112,
+          "end_line": 1114,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 1177,
+          "end_line": 1184,
+          "scope_size": 7,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_BAS"
+        }
+      ]
     },
     "USE_UART": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "USE_UART",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/main.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 66,
-                "end_line": 73,
-                "scope_size": 7,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_UART"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 131,
-                "end_line": 133,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_UART"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
-                "start_line": 167,
-                "end_line": 169,
-                "scope_size": 2,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef USE_UART"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "USE_UART",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/main.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 66,
+          "end_line": 73,
+          "scope_size": 7,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_UART"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 131,
+          "end_line": 133,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_UART"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/main.c",
+          "start_line": 167,
+          "end_line": 169,
+          "scope_size": 2,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef USE_UART"
+        }
+      ]
     },
     "FAUSTPOWER": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "FAUSTPOWER",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
-                "start_line": 9,
-                "end_line": 20,
-                "scope_size": 11,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef FAUSTPOWER"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "FAUSTPOWER",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
+          "start_line": 9,
+          "end_line": 20,
+          "scope_size": 11,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef FAUSTPOWER"
+        }
+      ]
     },
     "WS2812_EXTERNAL_PULLUP": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/ws2812.c"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "WS2812_EXTERNAL_PULLUP",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/ws2812.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/ws2812.c",
-                "start_line": 212,
-                "end_line": 216,
-                "scope_size": 4,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef WS2812_EXTERNAL_PULLUP"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/ws2812.c"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "WS2812_EXTERNAL_PULLUP",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/ws2812.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/ws2812.c",
+          "start_line": 212,
+          "end_line": 216,
+          "scope_size": 4,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef WS2812_EXTERNAL_PULLUP"
+        }
+      ]
     },
     "SRC_CHUTIL_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/chutil.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "SRC_CHUTIL_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/chutil.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/chutil.h",
-                "start_line": 21,
-                "end_line": 57,
-                "scope_size": 36,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef SRC_CHUTIL_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/chutil.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "SRC_CHUTIL_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/chutil.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/chutil.h",
+          "start_line": 21,
+          "end_line": 57,
+          "scope_size": 36,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef SRC_CHUTIL_H_"
+        }
+      ]
     },
     "_LED_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/led.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_LED_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/led.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/led.h",
-                "start_line": 0,
-                "end_line": 16,
-                "scope_size": 16,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _LED_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/led.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_LED_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/led.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/led.h",
+          "start_line": 0,
+          "end_line": 16,
+          "scope_size": 16,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _LED_H_"
+        }
+      ]
     },
     "_CONFIGSTORE_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config_store.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_CONFIGSTORE_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/config_store.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/config_store.h",
-                "start_line": 0,
-                "end_line": 26,
-                "scope_size": 26,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _CONFIGSTORE_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config_store.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_CONFIGSTORE_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/config_store.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/config_store.h",
+          "start_line": 0,
+          "end_line": 26,
+          "scope_size": 26,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _CONFIGSTORE_H_"
+        }
+      ]
     },
     "WS2812_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/ws2812.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "WS2812_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/ws2812.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/ws2812.h",
-                "start_line": 13,
-                "end_line": 74,
-                "scope_size": 61,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef WS2812_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/ws2812.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "WS2812_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/ws2812.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/ws2812.h",
+          "start_line": 13,
+          "end_line": 74,
+          "scope_size": 61,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef WS2812_H_"
+        }
+      ]
     },
     "__PCONNECTION_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/pconnection.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "__PCONNECTION_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/pconnection.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/pconnection.h",
-                "start_line": 19,
-                "end_line": 30,
-                "scope_size": 11,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef __PCONNECTION_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/pconnection.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "__PCONNECTION_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/pconnection.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/pconnection.h",
+          "start_line": 19,
+          "end_line": 30,
+          "scope_size": 11,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef __PCONNECTION_H"
+        }
+      ]
     },
     "__MIDI_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "__MIDI_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/midi.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/midi.h",
-                "start_line": 17,
-                "end_line": 123,
-                "scope_size": 106,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef __MIDI_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "__MIDI_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/midi.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/midi.h",
+          "start_line": 17,
+          "end_line": 123,
+          "scope_size": 106,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef __MIDI_H"
+        }
+      ]
     },
     "_USBCFG_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/usbcfg.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_USBCFG_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/usbcfg.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/usbcfg.h",
-                "start_line": 16,
-                "end_line": 41,
-                "scope_size": 25,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _USBCFG_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/usbcfg.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_USBCFG_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/usbcfg.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/usbcfg.h",
+          "start_line": 16,
+          "end_line": 41,
+          "scope_size": 25,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _USBCFG_H_"
+        }
+      ]
     },
     "_MPU6050_H_": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/MPU6050.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "_MPU6050_H_",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/MPU6050.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/MPU6050.h",
-                "start_line": 41,
-                "end_line": 420,
-                "scope_size": 379,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef _MPU6050_H_"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/MPU6050.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "_MPU6050_H_",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/MPU6050.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/MPU6050.h",
+          "start_line": 41,
+          "end_line": 420,
+          "scope_size": 379,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef _MPU6050_H_"
+        }
+      ]
     },
     "HALCONF_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "HALCONF_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h",
-                "start_line": 27,
-                "end_line": 528,
-                "scope_size": 501,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef HALCONF_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "HALCONF_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h",
+          "start_line": 27,
+          "end_line": 528,
+          "scope_size": 501,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef HALCONF_H"
+        }
+      ]
     },
     "HAL_USE_MMC_SPI": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
-        ],
-        "value": false,
-        "type": "boolean",
-        "name": "HAL_USE_MMC_SPI",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/board/board.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/board/board.c",
-                "start_line": 237,
-                "end_line": 257,
-                "scope_size": 20,
-                "directive_type": "if",
-                "original_condition": "#if HAL_USE_MMC_SPI || defined(__DOXYGEN__)"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
+      ],
+      "value": 0,
+      "type": "boolean",
+      "name": "HAL_USE_MMC_SPI",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/board/board.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/board/board.c",
+          "start_line": 237,
+          "end_line": 257,
+          "scope_size": 20,
+          "directive_type": "if",
+          "original_condition": "#if HAL_USE_MMC_SPI || defined(__DOXYGEN__)"
+        }
+      ]
     },
     "HAL_USE_SDC": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
-        ],
-        "value": false,
-        "type": "boolean",
-        "name": "HAL_USE_SDC",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/board/board.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/board/board.c",
-                "start_line": 215,
-                "end_line": 235,
-                "scope_size": 20,
-                "directive_type": "if",
-                "original_condition": "#if HAL_USE_SDC || defined(__DOXYGEN__)"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/halconf.h"
+      ],
+      "value": 0,
+      "type": "boolean",
+      "name": "HAL_USE_SDC",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/board/board.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/board/board.c",
+          "start_line": 215,
+          "end_line": 235,
+          "scope_size": 20,
+          "directive_type": "if",
+          "original_condition": "#if HAL_USE_SDC || defined(__DOXYGEN__)"
+        }
+      ]
     },
     "MCUCONF_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "MCUCONF_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h",
-                "start_line": 16,
-                "end_line": 489,
-                "scope_size": 473,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef MCUCONF_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "MCUCONF_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h",
+          "start_line": 16,
+          "end_line": 489,
+          "scope_size": 473,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef MCUCONF_H"
+        }
+      ]
     },
     "STM32_ADC_USE_ADC3": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "STM32_ADC_USE_ADC3",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/adc_multi.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
-                "start_line": 77,
-                "end_line": 79,
-                "scope_size": 2,
-                "directive_type": "if",
-                "original_condition": "#if STM32_ADC_USE_ADC3"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
-                "start_line": 102,
-                "end_line": 107,
-                "scope_size": 5,
-                "directive_type": "if",
-                "original_condition": "#if STM32_ADC_USE_ADC3"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
-                "start_line": 141,
-                "end_line": 144,
-                "scope_size": 3,
-                "directive_type": "if",
-                "original_condition": "#if STM32_ADC_USE_ADC3"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/mcuconf.h"
+      ],
+      "value": 1,
+      "type": "boolean",
+      "name": "STM32_ADC_USE_ADC3",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/adc_multi.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
+          "start_line": 77,
+          "end_line": 79,
+          "scope_size": 2,
+          "directive_type": "if",
+          "original_condition": "#if STM32_ADC_USE_ADC3"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
+          "start_line": 102,
+          "end_line": 107,
+          "scope_size": 5,
+          "directive_type": "if",
+          "original_condition": "#if STM32_ADC_USE_ADC3"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/adc_multi.c",
+          "start_line": 141,
+          "end_line": 144,
+          "scope_size": 3,
+          "directive_type": "if",
+          "original_condition": "#if STM32_ADC_USE_ADC3"
+        }
+      ]
     },
     "CHCONF_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "CHCONF_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h",
-                "start_line": 27,
-                "end_line": 755,
-                "scope_size": 728,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef CHCONF_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "CHCONF_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h",
+          "start_line": 27,
+          "end_line": 755,
+          "scope_size": 728,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef CHCONF_H"
+        }
+      ]
     },
     "CH_DBG_ENABLE_STACK_CHECK": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "CH_DBG_ENABLE_STACK_CHECK",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/pconnection.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/pconnection.c",
-                "start_line": 62,
-                "end_line": 66,
-                "scope_size": 4,
-                "directive_type": "if",
-                "original_condition": "#if (CH_DBG_ENABLE_STACK_CHECK == TRUE) || (CH_CFG_USE_DYNAMIC == TRUE)"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/cfg/chconf.h"
+      ],
+      "value": 1,
+      "type": "boolean",
+      "name": "CH_DBG_ENABLE_STACK_CHECK",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/pconnection.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/pconnection.c",
+          "start_line": 62,
+          "end_line": 66,
+          "scope_size": 4,
+          "directive_type": "if",
+          "original_condition": "#if (CH_DBG_ENABLE_STACK_CHECK == TRUE) || (CH_CFG_USE_DYNAMIC == TRUE)"
+        }
+      ]
     },
     "UF2FORMAT_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "UF2FORMAT_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h",
-                "start_line": 29,
-                "end_line": 62,
-                "scope_size": 33,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef UF2FORMAT_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "UF2FORMAT_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/uf2/uf2.h",
+          "start_line": 29,
+          "end_line": 62,
+          "scope_size": 33,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef UF2FORMAT_H"
+        }
+      ]
     },
     "P32": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "P32",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c",
-                "start_line": 883,
-                "end_line": 886,
-                "scope_size": 3,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef P32"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "P32",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/windows/hid.c",
+          "start_line": 883,
+          "end_line": 886,
+          "scope_size": 3,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef P32"
+        }
+      ]
     },
     "MAC_SUPPORT_H__": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "MAC_SUPPORT_H__",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h",
-                "start_line": 8,
-                "end_line": 16,
-                "scope_size": 8,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef MAC_SUPPORT_H__"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "MAC_SUPPORT_H__",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/testgui/mac_support.h",
+          "start_line": 8,
+          "end_line": 16,
+          "scope_size": 8,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef MAC_SUPPORT_H__"
+        }
+      ]
     },
     "HIDAPI_H__": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "HIDAPI_H__",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h",
-                "start_line": 26,
-                "end_line": 389,
-                "scope_size": 363,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef HIDAPI_H__"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "HIDAPI_H__",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/uf2/hidapi/hidapi/hidapi.h",
+          "start_line": 26,
+          "end_line": 389,
+          "scope_size": 363,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef HIDAPI_H__"
+        }
+      ]
     },
     "BOARD_H": {
-        "defined_in": [
-            "/home/ubuntu/lab/striso-control-firmware/board/board.h"
-        ],
-        "value": true,
-        "type": "boolean",
-        "name": "BOARD_H",
-        "value_candidates": [
-            true,
-            false
-        ],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/board/board.h"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/board/board.h",
-                "start_line": 21,
-                "end_line": 1690,
-                "scope_size": 1669,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef BOARD_H"
-            }
-        ]
+      "defined_in": [
+        "/home/ubuntu/lab/striso-control-firmware/board/board.h"
+      ],
+      "value": true,
+      "type": "boolean",
+      "name": "BOARD_H",
+      "value_candidates": [
+        true,
+        false
+      ],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/board/board.h"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/board/board.h",
+          "start_line": 21,
+          "end_line": 1690,
+          "scope_size": 1669,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef BOARD_H"
+        }
+      ]
     },
     "DETECT_STUCK_NOTES": {
-        "defined_in": [],
-        "value": null,
-        "type": "unknown",
-        "name": "DETECT_STUCK_NOTES",
-        "value_candidates": [],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/button_read.c"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 656,
-                "end_line": 675,
-                "scope_size": 19,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef DETECT_STUCK_NOTES"
-            },
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
-                "start_line": 968,
-                "end_line": 995,
-                "scope_size": 27,
-                "directive_type": "ifdef",
-                "original_condition": "#ifdef DETECT_STUCK_NOTES"
-            }
-        ]
+      "defined_in": [],
+      "value": null,
+      "type": "unknown",
+      "name": "DETECT_STUCK_NOTES",
+      "value_candidates": [],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/button_read.c"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 656,
+          "end_line": 675,
+          "scope_size": 19,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef DETECT_STUCK_NOTES"
+        },
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/button_read.c",
+          "start_line": 968,
+          "end_line": 995,
+          "scope_size": 27,
+          "directive_type": "ifdef",
+          "original_condition": "#ifdef DETECT_STUCK_NOTES"
+        }
+      ]
     },
     "FAUSTFLOAT": {
-        "defined_in": [],
-        "value": null,
-        "type": "unknown",
-        "name": "FAUSTFLOAT",
-        "value_candidates": [],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
-                "start_line": 58,
-                "end_line": 60,
-                "scope_size": 2,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef FAUSTFLOAT"
-            }
-        ]
+      "defined_in": [],
+      "value": null,
+      "type": "unknown",
+      "name": "FAUSTFLOAT",
+      "value_candidates": [],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
+          "start_line": 58,
+          "end_line": 60,
+          "scope_size": 2,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef FAUSTFLOAT"
+        }
+      ]
     },
     "FAUSTCLASS": {
-        "defined_in": [],
-        "value": null,
-        "type": "unknown",
-        "name": "FAUSTCLASS",
-        "value_candidates": [],
-        "used_in": [
-            "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
-        ],
-        "conditional_scopes": [
-            {
-                "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
-                "start_line": 63,
-                "end_line": 65,
-                "scope_size": 2,
-                "directive_type": "ifndef",
-                "original_condition": "#ifndef FAUSTCLASS"
-            }
-        ]
+      "defined_in": [],
+      "value": null,
+      "type": "unknown",
+      "name": "FAUSTCLASS",
+      "value_candidates": [],
+      "used_in": [
+        "/home/ubuntu/lab/striso-control-firmware/synth.cpp"
+      ],
+      "conditional_scopes": [
+        {
+          "file": "/home/ubuntu/lab/striso-control-firmware/synth.cpp",
+          "start_line": 63,
+          "end_line": 65,
+          "scope_size": 2,
+          "directive_type": "ifndef",
+          "original_condition": "#ifndef FAUSTCLASS"
+        }
+      ]
     }
-}
+  }

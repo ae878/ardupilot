@@ -103,12 +103,15 @@ def collect_macros_from_o_files(directory):
         for fname in files:
             if fname.endswith(".o"):
                 file_path = os.path.join(root, fname)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    for line in f:
-                        match = define_re.match(line.strip())
-                        if match:
-                            name, value = match.groups()
-                            macros[name] = value.strip()
+                try:
+                    with open(file_path, "r", encoding="utf-8") as f:
+                        for line in f:
+                            match = define_re.match(line.strip())
+                            if match:
+                                name, value = match.groups()
+                                macros[name] = value.strip()
+                except:
+                    pass
     return macros
 
 
