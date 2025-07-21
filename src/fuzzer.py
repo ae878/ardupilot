@@ -187,7 +187,7 @@ class Fuzzer:
 
         # exit()
 
-    def fuzz(self, methods: list[str] = ["related"]):
+    def fuzz(self, methods: list[str] = ["related"], is_dry_run: bool = False):
 
         function_results = []
         related_files = []
@@ -213,76 +213,79 @@ class Fuzzer:
                     break
         else:
             target_configs = list(self.current_config.config.values())
-
-        if self.applyer:
-            self.applyer.apply(self.current_config, target_configs)
-        apply_time = time.time()
-        # print(target_configs)
-
-        # config_file = self.current_config.create_config_header(
-        #     f"{output_dir}/config.h",
-        #     target_configs,
-        # )
-
-        # 2. set config file, result dir to adapter
-        self.adapter.set_analyze_result_dir(output_dir)
-
-        dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
-
-        # 3. Build
         try:
-            build_result = self.adapter.build(self.current_config)
+            if self.applyer:
+                self.applyer.apply(self.current_config, target_configs)
+            apply_time = time.time()
+            # print(target_configs)
+
+            # config_file = self.current_config.create_config_header(
+            #     f"{output_dir}/config.h",
+            #     target_configs,
+            # )
+
+            # 2. set config file, result dir to adapter
+            self.adapter.set_analyze_result_dir(output_dir)
+
+            dump_result_filename = f"result_{self.adapter.name}_{self.steps_count}.json"
+
+            # 3. Build
+            try:
+                build_result = self.adapter.build(self.current_config)
+            except Exception as e:
+                self.logger.error(f"[-] Error occurred while building: {e}")
+                build_result = False
+            build_time = time.time()
+            function_results = []
+            # 4. Analyze
+            if build_result:
+                function_results = self.adapter.analyze()
+                analyze_time = time.time()
+            else:
+                analyze_time = time.time()
+
+            for function_result in function_results:
+                biggest_stack = int(function_result["biggest_stack"])
+                source_size = int(function_result["source_size"])
+                biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
+                if biggest_stack > 0:
+                    if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
+                        self.unique_stack_smash_count += 1
+                        self.unique_stack_smashes.add(biggest_path)
+
+            self.recent_step = FuzzerStep(
+                build_result=build_result,
+                function_results=function_results,
+                step=self.steps_count,
+                config=copy.deepcopy(self.current_config),
+                start_time=start_time,
+                apply_time=apply_time,
+                build_time=build_time,
+                analyze_time=analyze_time,
+                end_time=time.time(),
+                unique_stack_smash_count=self.unique_stack_smash_count,
+            )
+
+            # Add to recent_steps and maintain only last max_recent_steps steps
+            self.recent_steps.append(self.recent_step)
+            if len(self.recent_steps) > self.max_recent_steps:
+                self.recent_steps.pop(0)
+
+            self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
+            self.logger.info(
+                f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
+            )
+            self.steps_count += 1
+
+            if self.verbose:
+                print(f"[+] Step {self.steps_count} done. Build Result: ({build_result})")
+
+            # 5. Revert
         except Exception as e:
-            self.logger.error(f"[-] Error occurred while building: {e}")
-            build_result = False
-        build_time = time.time()
-        function_results = []
-        # 4. Analyze
-        if build_result:
-            function_results = self.adapter.analyze()
-            analyze_time = time.time()
-        else:
-            analyze_time = time.time()
-
-        for function_result in function_results:
-            biggest_stack = int(function_result["biggest_stack"])
-            source_size = int(function_result["source_size"])
-            biggest_path = str(json.dumps(function_result["biggest_path"], cls=FunctionEncoder))
-            if biggest_stack > 0:
-                if biggest_stack > source_size and biggest_path not in self.unique_stack_smashes:
-                    self.unique_stack_smash_count += 1
-                    self.unique_stack_smashes.add(biggest_path)
-
-        self.recent_step = FuzzerStep(
-            build_result=build_result,
-            function_results=function_results,
-            step=self.steps_count,
-            config=copy.deepcopy(self.current_config),
-            start_time=start_time,
-            apply_time=apply_time,
-            build_time=build_time,
-            analyze_time=analyze_time,
-            end_time=time.time(),
-            unique_stack_smash_count=self.unique_stack_smash_count,
-        )
-
-        # Add to recent_steps and maintain only last max_recent_steps steps
-        self.recent_steps.append(self.recent_step)
-        if len(self.recent_steps) > self.max_recent_steps:
-            self.recent_steps.pop(0)
-
-        self.recent_step.dump_result_to_file(f"{self.output_base_dir}/{dump_result_filename}")
-        self.logger.info(
-            f"[+] Step {self.steps_count} done. Build Result: ({build_result})\tSave into: {self.output_base_dir}/{dump_result_filename}"
-        )
-        self.steps_count += 1
-
-        if self.verbose:
-            print(f"[+] Step {self.steps_count} done. Build Result: ({build_result})")
-
-        # 5. Revert
-        if self.applyer:
-            self.applyer.revert()
+            self.logger.error(f"[-] Error occurred during fuzzing: {e}")
+        finally:
+            if self.applyer:
+                self.applyer.revert()
 
     def change_config_with_seed(self, config: ConfigFactory):
         self.current_config = config
