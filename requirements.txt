@@ -6,5 +6,4 @@ networkx==3.4.2
 Pygments==2.19.1
 pygraphviz==1.11
 rich==14.0.0
-SCons==4.9.1
 typing_extensions==4.13.0

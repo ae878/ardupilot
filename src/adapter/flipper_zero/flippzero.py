@@ -10,7 +10,13 @@ from src.utils.logging import logging as logger, console
 from src.config.config import ConfigFactory
 from src.utils.exception import BuildErrorException
 from src.adapter.adapter import BaseAdapter
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.progress import (
+    Progress,
+    SpinnerColumn,
+    TextColumn,
+    BarColumn,
+    TaskProgressColumn,
+)
 from rich.console import Console
 from rich.logging import RichHandler
 
@@ -91,7 +97,9 @@ class FlipperZeroAdapter(BaseAdapter):
             console=console,
         ) as progress:
             # Create main build task
-            build_task = progress.add_task("[cyan]Building...", total=len(self.build_commands))
+            build_task = progress.add_task(
+                "[cyan]Building...", total=len(self.build_commands)
+            )
 
             # Build each command from build_commands.json
             for i, build_command in enumerate(self.build_commands, 1):
@@ -105,6 +113,9 @@ class FlipperZeroAdapter(BaseAdapter):
 
                 # Split command into list
                 build_command_list = command.split()
+                if "-o" not in build_command_list:
+                    build_command_list.append("-o")
+                    build_command_list.append(output)
 
                 # Update progress description
                 progress.update(
@@ -115,7 +126,11 @@ class FlipperZeroAdapter(BaseAdapter):
                 try:
                     # Execute build command
                     result = subprocess.run(
-                        build_command_list, check=True, capture_output=True, text=True, cwd=directory
+                        build_command_list,
+                        check=True,
+                        capture_output=True,
+                        text=True,
+                        cwd=directory,
                     )
 
                     if self.verbose:
@@ -124,7 +139,9 @@ class FlipperZeroAdapter(BaseAdapter):
                             logger.debug(f"[dim]{result.stdout}")
 
                 except subprocess.CalledProcessError as e:
-                    logger.error(f"[red]Build command failed: {' '.join(build_command_list)}")
+                    logger.error(
+                        f"[red]Build command failed: {' '.join(build_command_list)}"
+                    )
                     if e.stdout:
                         logger.error(f"[red]stdout: {e.stdout}")
                     if e.stderr:
