@@ -75,6 +75,10 @@ rm "$TMP_FILE"
 EXTRACTED_DIR=$(find "$INSTALL_DIR" -maxdepth 1 -type d -name "gcc-arm-none-eabi-*")
 EXTRACTED_DIR=$(echo "$EXTRACTED_DIR" | head -n 1)
 
+# Copy all things for compatable with build_commands
+mkdir -p "/opt/gcc-arm-none-eabi-10-2020-q4-major/"
+cp -R "$EXTRACTED_DIR/bin" "/opt/gcc-arm-none-eabi-10-2020-q4-major/"
+
 echo "export EXEC_PATH=\"$EXTRACTED_DIR/bin\"" >> "$HOME/.bashrc"
 echo "export RTT_EXEC_PATH=\"$EXTRACTED_DIR/bin\"" >> "$HOME/.bashrc"
 echo "export PATH=\"\$EXEC_PATH:\$PATH\"" >> "$HOME/.bashrc"

@@ -1,7 +1,14 @@
 
 # Configuration Fuzzer - Conffuzz
 
-### Usage
+### Usage - Docker
+```
+docker build --build-arg SCRIPT_TO_RUN=ardupilot -t fuzz_ardupilot .
+docker run -d --name fuzz_ardupilot_normal ardupilot_fuzz
+```
+
+
+### Usage - Add new adapter
 1. Use preprocessor/macro-parser for parsing macros
 2. Make a custom script - use `run.py`
 
