@@ -289,7 +289,12 @@ class Fuzzer:
             self.logger.error(f"[-] Error occurred during fuzzing: {e}")
         finally:
             if self.applyer:
-                self.applyer.revert()
+                if is_dry_run:
+                    is_really_revert = input("Dry run ended. Do you want to revert applier? (N/y)")
+                    if is_really_revert.lower() == "y":
+                        self.applyer.revert()
+                else:
+                    self.applyer.revert()
 
     def change_config_with_seed(self, config: ConfigFactory):
         self.current_config = config
