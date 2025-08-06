@@ -143,66 +143,59 @@ class Applier:
         self.logger.debug(f"[+] Checking {file_path}.. has {len(lines)} lines")
 
         modified_lines = lines.copy()
-        # 정규식 패턴: #define으로 시작하고, 하나 이상의 공백, 매크로 이름, 하나 이상의 공백, 값으로 구성
-        define_pattern = re.compile(r"^\s*#define\s+(\w+)\s+([^\s/]+)")
+        # 정규식 패턴: 프리픽스(prefix), 매크로 이름, 기존 값(old), 그리고 뒤의 모든(주석·백슬래시 등) suffix
+        prefix_re = re.compile(r'(^\s*#define\s+)(\w+)(\s+)')
 
         for i, line in enumerate(lines, 1):
-            if line.endswith("\n"):
-                line = line[:-1]
-            # print(line)
-
-            # Check if line contains #define using regex
-            match = define_pattern.match(line)
+            text = line.rstrip("\n")
+            match = prefix_re.match(text)
             if not match:
                 continue
 
-            # Store original line only for #define lines that might be modified
-            self.original_items.append(FileItem(file_path, i, line))
+            # store original
+            self.original_items.append(FileItem(file_path, i, text))
 
-            macro_name = match.group(1)
-            # Skip if macro is not in target_macros (when target_macros is not empty)
+            macro_name = match.group(2)
             if target_macros and macro_name not in target_macros:
                 self.logger.debug(f"[-] Skipping {macro_name} in {file_path}:{i}")
                 continue
 
             try:
-                # Get config for macro
                 macro_config = config.get_config(macro_name)
-                if not macro_config or not macro_config.value:
+                if not macro_config or macro_config.value is None:
                     continue
 
-                # Create new define line with updated value, preserving original spacing
-                leading_space = re.match(r"^\s*", line)
-                if leading_space:  # None 체크 추가
-                    leading_space = leading_space.group()
-                else:
-                    leading_space = ""
+                # compute new value (True/False → "true"/"false", etc.)
                 value = macro_config.value
                 if value is True:
                     value = "true"
-                if str(value) == "1" or str(value) == "0":
-                    value_candidate = macro_config.value_candidate
-                    for value_candidate in value_candidate:
-                        if str(value) == "1" and value_candidate is True:
-                            value = "true"
-                            break
-                        elif str(value) == "0" and value_candidate is False:
-                            value = "false"
-                            break
-                new_line = f"{leading_space}#define {macro_name:<24} {value}\n"
+                elif value is False:
+                    value = "false"
+                # (additional 1/0 mapping logic can go here)
+
+                prefix, name, post_name_ws = match.groups()
+                # split off any "/* ... */" comment
+                rest = text[match.end():]
+                code_part, sep, comment_part = rest.partition("/*")
+                comment = f"/*{comment_part}" if sep else ""
+                # preserve only the trailing spaces before the comment
+                trailing_spaces = len(code_part) - len(code_part.rstrip(" "))
+                
+                # rebuild the line: drop the old cast/value junk, keep original spacing & comment
+                if comment:
+                    new_line = f"{prefix}{name}{post_name_ws}{value}{' ' * trailing_spaces}{comment}\n"
+                else:
+                    new_line = f"{prefix}{name}{post_name_ws}{value}\n"
+
                 modified_lines[i - 1] = new_line
-                # Store applied change
                 self.apply_items.append(FileItem(file_path, i, new_line))
                 self.logger.debug(f"[+] Applied {file_path}:{i} {macro_name} {value}")
+
             except Exception as e:
-                # Skip if macro not found in config
                 self.logger.debug(f"[-] Macro {macro_name} not found in config: {str(e)}")
-                continue
-
-        # Write modified content back to file
-        with open(file_path, "w") as f:
+                continue # 변경된 라인 덮어쓰기
+        with open(file_path, "w", encoding="utf-8") as f:
             f.writelines(modified_lines)
-
     def revert(self):
         """
         Revert the changes to the original files.
