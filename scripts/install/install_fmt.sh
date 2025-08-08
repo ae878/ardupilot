@@ -5,7 +5,7 @@
 LAB_PATH="/home/ubuntu/lab"
 REPO_URL="https://github.com/stacksmash-vuln/FMT-Firmware"
 TIME_ZONE="Asia/Seoul"
-DOWNLOAD_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm/7-2018q2/gcc-arm-none-eabi-7-2018-q2-update-linux.tar.bz2"
+DOWNLOAD_URL="https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2"
 INSTALL_DIR="$HOME/arm-none-eabi-gcc"
 
 
