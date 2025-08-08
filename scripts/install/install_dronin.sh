@@ -39,6 +39,21 @@ $SUDO apt install -y curl wget make bzip2 git build-essential vim
 $SUDO dpkg --add-architecture i386
 $SUDO apt-get install -y gcc-multilib
 
+# 1.5. Install Python 3.7
+echo "[STEP 1.5] Installing Python 3.7..."
+$SUDO apt install -y software-properties-common
+$SUDO add-apt-repository ppa:deadsnakes/ppa -y
+$SUDO apt update
+$SUDO apt install -y python3.7 python3.7-dev python3.7-distutils python3.7-venv
+$SUDO apt install -y python3-pip
+
+# Set Python 3.7 as default python3
+$SUDO update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+$SUDO update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
+
+# Verify Python installation
+echo "[INFO] Python version: $(python --version)"
+echo "[INFO] Python3 version: $(python3 --version)"
 
 # 2. Create working directory
 echo "[STEP 2] Creating lab directory at $LAB_PATH"
@@ -61,7 +76,7 @@ cd dRonin
 
 # 4. Install dRonin dependencies
 echo "[STEP 4] Installing Qt dependencies..."
-$SUDO apt-get install -y python3 qt5-qmake qtbase5-dev qtbase5-dev-tools libqt5svg5-dev libqt5webenginewidgets5 libqt5webchannel5-dev qtwebengine5-dev
+$SUDO apt-get install -y qt5-qmake qtbase5-dev qtbase5-dev-tools libqt5svg5-dev libqt5webenginewidgets5 libqt5webchannel5-dev qtwebengine5-dev
 $SUDO apt-get install -y python-is-python3
 
 # 5. Install ARM SDK
