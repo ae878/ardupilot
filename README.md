@@ -5,6 +5,8 @@
 ```
 docker build --build-arg SCRIPT_TO_RUN=ardupilot -t fuzz_ardupilot .
 docker run -d --name fuzz_ardupilot_normal ardupilot_fuzz
+docker exec -it fuzz_ardupilot_normal /bin/bash
+
 ```
 
 
