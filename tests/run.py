@@ -25,7 +25,7 @@ from utils.utils import calculate_previous_runtime
 base_configuration = {
     "ardupilot": {
         "base": "/home/ubuntu/lab/ardupilot",
-        "build_base": "/home/ubuntu/lab/ardupilot/build/AIRLink",
+        "build_base": "/home/ubuntu/lab/ardupilot/build/R9Pilot",
         "thread_functions_file_path": "src/adapter/ardupilot/thread_functions.json",
         "condition_json_path": "src/adapter/ardupilot/condition_analysis_result.json",
         "macros_json_path": "src/adapter/ardupilot/macros.json",
