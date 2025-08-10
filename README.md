@@ -5,6 +5,8 @@
 ```
 docker build --build-arg SCRIPT_TO_RUN=ardupilot -t fuzz_ardupilot .
 docker run -d --name fuzz_ardupilot_normal ardupilot_fuzz
+docker exec -it fuzz_ardupilot_normal /bin/bash
+
 ```
 
 
@@ -31,3 +33,7 @@ docker run -d --name fuzz_ardupilot_normal ardupilot_fuzz
 1. build success rate
 2. code size (of the binary)
 3. maximum stack size (of each thread function)
+
+
+
+python3 run_improved.py --skip-initial --timeout 3600 -r -s --threads 5 > /conffuzz/long_run.log

@@ -74,14 +74,7 @@ echo "[STEP 5] Configuring waf for airlink board..."
 
 # 6. Build firmware (전체 빌드)
 echo "[STEP 6] Building all targets..."
-# 먼저 clean build 시도
-./waf clean
-./waf build -j4 || {
-    echo "[WARNING] Full build failed, trying specific targets..."
-    # 특정 타겟만 빌드 시도
-    ./waf --target bin/arducopter || true
-    ./waf --target bin/arduplane || true
-}
+./waf build -j4
 
 # 7. Generate compile_commands.json
 echo "[STEP 7] Generating compile_commands.json..."

@@ -1,0 +1,119 @@
+================================================================================
+ConfigFuzz Build Failure Analysis - 2025-08-10 11:27:55.412818
+================================================================================
+
+1. ENVIRONMENT INFORMATION
+--------------------------------------------------
+Compiler: arm-none-eabi-g++ (15:10.3-2021.07-4) 10.3.1 20210621 (release)
+Current directory: /conffuzz
+
+2. MACRO CONFIGURATION
+--------------------------------------------------
+Total macros: 5316
+
+Important macros:
+
+Recent changed macros (5316 total):
+  ENABLE_LOAD_TEST = 0
+  FW_MAJOR = 4
+  FORCE_VERSION_H_INCLUDE = True
+  AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED = 1
+  RC_FAST_SPEED = 125
+  MAV_SYSTEM_ID = 1
+  AUTOTUNE_ENABLED = 1
+  AC_NAV_GUIDED = 1
+  MODE_ACRO_ENABLED = 1
+  MODE_AUTO_ENABLED = 1
+
+3. BUILD COMMAND ANALYSIS
+--------------------------------------------------
+Target file: ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp
+Working directory: /home/ubuntu/lab/ardupilot/build/airlink
+Fixed directory: /home/ubuntu/lab/ardupilot/build/AIRLink
+Output file: -olibraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp.0.o
+
+Total arguments: 211
+
+Compiler flags:
+  Warning: -Werror=implicit-fallthrough
+  Feature: -fsingle-precision-constant
+  Warning: -Wno-psabi
+  Feature: -fdump-tree-optimized-graph
+  Feature: -fstack-usage
+  Feature: -fdump-lang-class
+  Feature: -fdata-sections
+  Feature: -ffunction-sections
+  Feature: -fno-exceptions
+  Feature: -fsigned-char
+  Warning: -Wall
+  Warning: -Wextra
+  Warning: -Wpointer-arith
+  Warning: -Wno-unused-parameter
+  Warning: -Wno-missing-field-initializers
+  Warning: -Wno-redundant-decls
+  Warning: -Wno-unknown-pragmas
+  Warning: -Wno-expansion-to-defined
+  Warning: -Werror=reorder
+  Warning: -Werror=cast-align
+
+Include paths:
+  -Ilibraries
+  -Ilibraries/GCS_MAVLink
+  -I.
+  -I../../libraries
+  -I../../libraries/AP_Common/missing
+  -I../../libraries/AP_GyroFFT/CMSIS_5/include
+  -I../../modules/lwip/src/include/compat/posix
+  -I../../modules/lwip/src/include
+  -I../../libraries/AP_Networking/config
+  -I../../libraries/AP_Networking/lwip_hal/include
+
+4. BUILD EXECUTION
+--------------------------------------------------
+Changed to: /home/ubuntu/lab/ardupilot/build/AIRLink
+
+Executing build command...
+Command: arm-none-eabi-g++ -Werror=implicit-fallthrough -fsingle-precision-constant ... (총 211개 인자)
+
+Build completed in 0.27 seconds
+Return code: 1
+
+5. BUILD RESULT ANALYSIS
+--------------------------------------------------
+BUILD FAILED!
+
+Standard error (full):
+----------------------------------------
+In file included from ../../libraries/AC_AttitudeControl/AC_AttitudeControl.h:6,
+                 from ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.h:6,
+                 from ../../libraries/AC_AttitudeControl/AC_AttitudeControl_Heli.cpp:1:
+../../libraries/AP_Common/AP_Common.h:29:16: error: expected identifier before 'true'
+   29 | #define PACKED true
+      |                ^~~~
+../../libraries/AP_Param/AP_Param.h:679:12: note: in expansion of macro 'PACKED'
+  679 |     struct PACKED param_defaults_struct {
+      |            ^~~~~~
+compilation terminated due to -Wfatal-errors.
+
+
+6. ERROR ANALYSIS
+--------------------------------------------------
+
+ERROR: (1 occurrences):
+  ../../libraries/AP_Common/AP_Common.h:29:16: error: expected identifier before 'true'
+
+7. ROOT CAUSE ANALYSIS
+--------------------------------------------------
+
+8. SUMMARY
+--------------------------------------------------
+This analysis shows how ConfigFuzz modifies macros and attempts to rebuild.
+Most builds fail because:
+  1. Incompatible macro combinations
+  2. Broken conditional compilation dependencies
+  3. Missing type definitions or declarations
+  4. Violated assumptions in the code
+
+This is NORMAL behavior for fuzzing!
+
+Full analysis saved to: /conffuzz/failed.log
