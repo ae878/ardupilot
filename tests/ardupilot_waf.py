@@ -872,18 +872,18 @@ def main():
         epilog="""
 Examples:
   # Start new session
-  python3 configfuzz_waf_runner_v2.py --hours 6
+  python3 ardupilot_waf.py --hours 6
   
   # Resume previous session
-  python3 configfuzz_waf_runner_v2.py --resume output_waf_v2_20250812_135802 --hours 3
+  python3 ardupilot_waf.py --resume output_waf_v2_20250812_135802 --hours 3
   
   # Resume with just directory name
-  python3 configfuzz_waf_runner_v2.py --resume output_waf_v2_20250812_135802
+  python3 ardupilot_waf.py --resume output_waf_v2_20250812_135802
   
   # Other options
-  python3 configfuzz_waf_runner_v2.py --minutes 30      # Run for 30 minutes
-  python3 configfuzz_waf_runner_v2.py --no-cache        # Disable cache
-  python3 configfuzz_waf_runner_v2.py --threshold 256   # Use 256 byte threshold
+  python3 ardupilot_waf.py --minutes 30      # Run for 30 minutes
+  python3 ardupilot_waf.pyy --no-cache        # Disable cache
+  python3 ardupilot_waf.py --threshold 256   # Use 256 byte threshold
         """
     )
     
