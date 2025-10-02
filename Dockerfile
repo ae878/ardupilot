@@ -2,11 +2,15 @@
 # BuildKit 구문 사용을 명시하여 --mount=type=ssh 등의 기능 활용 가능
 
 # --- 빌드 아규먼트 선언 ---
+
 FROM --platform=linux/x86_64 ubuntu:22.04
 
 ARG SCRIPT_TO_RUN="wideband" # 기본값을 'base'로 설정
 ARG GIT_TOKEN             # Git 토큰을 받을 변수
 ENV ACTIVE_SCRIPT=${SCRIPT_TO_RUN}
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
 
 RUN echo "Running with $ACTIVE_SCRIPT" 
 
