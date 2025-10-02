@@ -8,6 +8,7 @@ from typing import Tuple
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+from src.adapter.fmt_new.fmt_new import FmtNewAdapter
 from src.adapter.fmt_controller.fmt_controller import FMTControllerAdapter
 from src.adapter.librepilot.librepilot import LibrepilotAdapter
 from src.adapter.dronin.dronin import DroninAdapter
@@ -49,6 +50,15 @@ base_configuration = {
         "macros_json_path": "src/adapter/fmt_controller/macros.json",
         "build_commands_json_path": None,
         "result_file_name": "result_fmt-controller",
+    },
+    "fmt-firmware-new": {
+        "base": "/home/ubuntu/lab/FMT-Firmware-new",
+        "build_base": "/home/ubuntu/lab/FMT-Firmware-new/target/amov/icf5/build",
+        "thread_functions_file_path": "src/adapter/fmt_new/thread_functions.json",
+        "condition_json_path": "src/adapter/fmt_new/condition_analysis_result.json",
+        "macros_json_path": "src/adapter/fmt_new/macros.json",
+        "build_commands_json_path": None,
+        "result_file_name": "result_fmt-new",
     },
     "librepilot": {
         "base": "/home/ubuntu/lab/LibrePilot",
@@ -95,6 +105,16 @@ base_configuration = {
         "build_commands_json_path": None,
         "result_file_name": "result_wideband",
     },
+    "flipper-zero": {
+            "base": "/home/ubuntu/lab/flipperzero-firmware",
+            "build_base": "/home/ubuntu/lab/flipperzero-firmware/build", 
+            "thread_functions_file_path": "src/adapter/flipper_zero/thread_functions.json",
+            "condition_json_path": "src/adapter/flipper_zero/condition_analysis_result.json",
+            "macros_json_path": "src/adapter/flipper_zero/macros.json",
+            "build_commands_json_path": None,
+            "result_file_name": "result_flipper-zero"
+            }
+
 }
 
 
@@ -180,6 +200,14 @@ def main():
             verbose=True,
             build_base=firmware_build_base,
         )
+    elif target == "fmt-firmware-new":
+        adapter = FmtNewAdapter(
+            firmware_base,
+            build_commands,
+            thread_functions_file_path=thread_functions_file_path,
+            verbose=True,
+            build_base=firmware_build_base,
+    )
     elif target == "librepilot":
         adapter = LibrepilotAdapter(
             firmware_base,
@@ -212,6 +240,13 @@ def main():
         )
     elif target == "wideband":
         adapter = WidebandAdapter(
+            firmware_base,
+            build_commands,
+            thread_functions_file_path=thread_functions_file_path,
+            verbose=True,
+        )
+    elif target == "flipper":
+        adapter = FlipperZeroAdapter(
             firmware_base,
             build_commands,
             thread_functions_file_path=thread_functions_file_path,
@@ -255,8 +290,10 @@ def main():
         if time.time() - start_program > remaining_time:
             print(f"[+] Remaining time ({remaining_time} seconds) has elapsed. Program will exit.")
             break
-
+       
         start_time = time.time()
+        print("Star Time :", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time)))
+        
         if use_related:
             fuzzer.fuzz(methods=["related-validate"], is_dry_run=dry_run)
         else:
@@ -267,6 +304,8 @@ def main():
             print("[+] Dry run mode, skipping mutation step")
             break
         fuzzer.mutate(target_thread_functions, methods=mutate_methods)
+
+        print("End Time : ", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(end_time)))
 
 
 if __name__ == "__main__":
