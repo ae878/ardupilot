@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 30,
+    "timestamp": "2025-10-09T20:48:57.945386",
+    "macro_changes": {
+      "AP_CRASHDUMP_ENABLED": 0,
+      "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+      "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+      "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+    },
+    "build_success": false,
+    "build_time": 190.5079574584961,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

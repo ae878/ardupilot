@@ -1,0 +1,13 @@
+{
+  "test_id": 745,
+  "timestamp": "2025-10-11T07:19:08.903531",
+  "macro_changes": {
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "HAL_USB_VENDOR_ID": 0,
+    "MODE_RTL_ENABLED": 0,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1
+  }
+}

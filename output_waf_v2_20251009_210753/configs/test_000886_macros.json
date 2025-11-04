@@ -1,0 +1,10 @@
+{
+  "test_id": 886,
+  "timestamp": "2025-10-11T14:14:10.174718",
+  "macro_changes": {
+    "HAL_WITH_DRONECAN": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "AP_RSSI_ENABLED": 0,
+    "MODE_AUTOROTATE_ENABLED": 1
+  }
+}

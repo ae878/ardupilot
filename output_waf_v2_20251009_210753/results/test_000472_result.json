@@ -1,0 +1,15 @@
+{
+  "test_id": 472,
+  "timestamp": "2025-10-10T18:24:20.371707",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1
+  },
+  "build_success": false,
+  "build_time": 70.46570539474487,
+  "build_result": false,
+  "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+}

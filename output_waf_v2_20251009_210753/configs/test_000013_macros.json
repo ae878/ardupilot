@@ -1,0 +1,13 @@
+{
+  "test_id": 13,
+  "timestamp": "2025-10-09T21:41:46.724928",
+  "macro_changes": {
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "TOY_MODE_ENABLED": 0,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "AP_SIGNED_FIRMWARE": 1
+  }
+}

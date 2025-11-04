@@ -1,0 +1,14 @@
+{
+  "test_id": 830,
+  "timestamp": "2025-10-11T11:32:35.363016",
+  "macro_changes": {
+    "HAL_BUTTON_ENABLED": 0,
+    "HAL_GPIO_ALT": 0,
+    "MAVLINK_ENABLED_ICAROUS": 1,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "HAL_USB_VENDOR_ID": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "RANGEFINDER_MAX_INSTANCES": 1
+  }
+}

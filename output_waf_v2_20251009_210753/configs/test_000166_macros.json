@@ -1,0 +1,15 @@
+{
+  "test_id": 166,
+  "timestamp": "2025-10-10T04:23:26.395902",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "AP_ICENGINE_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "MAVLINK_ENABLED_STANDARD": 1,
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "HAL_PWM_COUNT": 0
+  }
+}

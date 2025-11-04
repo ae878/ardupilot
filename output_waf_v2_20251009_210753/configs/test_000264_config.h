@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #264 */
+
+/* ConfigFuzz: AP_RANGEFINDER_LUA_TIMEOUT_MS */
+#ifdef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#undef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#endif
+#define AP_RANGEFINDER_LUA_TIMEOUT_MS 0
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 1
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 0
+
+/* ConfigFuzz: HAL_WITH_UAVCAN */
+#ifdef HAL_WITH_UAVCAN
+#undef HAL_WITH_UAVCAN
+#endif
+#define HAL_WITH_UAVCAN 1
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 32
+
+/* ConfigFuzz: METADATA_MAX_i */
+#ifdef METADATA_MAX_i
+#undef METADATA_MAX_i
+#endif
+#define METADATA_MAX_i 1
+
+/* ConfigFuzz: AP_HAL_SHARED_DMA_ENABLED */
+#ifdef AP_HAL_SHARED_DMA_ENABLED
+#undef AP_HAL_SHARED_DMA_ENABLED
+#endif
+#define AP_HAL_SHARED_DMA_ENABLED 1
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 0
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 16
+
+/* ConfigFuzz: MAVLINK_ENABLED_DEVELOPMENT */
+#ifdef MAVLINK_ENABLED_DEVELOPMENT
+#undef MAVLINK_ENABLED_DEVELOPMENT
+#endif
+#define MAVLINK_ENABLED_DEVELOPMENT 0
+
+#endif /* _AP_CONFIG_H_ */

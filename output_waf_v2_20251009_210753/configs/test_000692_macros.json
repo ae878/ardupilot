@@ -1,0 +1,10 @@
+{
+  "test_id": 692,
+  "timestamp": "2025-10-11T04:49:54.971675",
+  "macro_changes": {
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "CONFIG_LWIP_STATS": 0,
+    "AP_MISSION_ENABLED": 1,
+    "HAL_UART_IOMCU_IDX": 1
+  }
+}

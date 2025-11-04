@@ -1,0 +1,10 @@
+{
+  "test_id": 56,
+  "timestamp": "2025-10-09T23:38:46.267750",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "MAVLINK_ENABLED_MINIMAL": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_USE_HW_RNG": 0
+  }
+}

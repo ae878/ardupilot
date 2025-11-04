@@ -1,0 +1,13 @@
+{
+  "test_id": 289,
+  "timestamp": "2025-10-10T10:09:33.196869",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "LEDDARONE_DETECTIONS_MAX": 32,
+    "HAL_GENERATOR_ENABLED": 1,
+    "AP_AIS_ENABLED": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "MODE_CIRCLE_ENABLED": 1
+  }
+}

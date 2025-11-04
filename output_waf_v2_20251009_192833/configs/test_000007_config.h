@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #7 */
+
+/* ConfigFuzz: HAL_HAVE_HARDWARE_DOUBLE */
+#ifdef HAL_HAVE_HARDWARE_DOUBLE
+#undef HAL_HAVE_HARDWARE_DOUBLE
+#endif
+#define HAL_HAVE_HARDWARE_DOUBLE 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 0
+
+/* ConfigFuzz: MODE_ACRO_ENABLED */
+#ifdef MODE_ACRO_ENABLED
+#undef MODE_ACRO_ENABLED
+#endif
+#define MODE_ACRO_ENABLED 1
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 2
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 0
+
+/* ConfigFuzz: HAL_COMPASS_AUTO_ROT_DEFAULT */
+#ifdef HAL_COMPASS_AUTO_ROT_DEFAULT
+#undef HAL_COMPASS_AUTO_ROT_DEFAULT
+#endif
+#define HAL_COMPASS_AUTO_ROT_DEFAULT 0
+
+#endif /* _AP_CONFIG_H_ */

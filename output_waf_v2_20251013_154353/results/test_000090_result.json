@@ -1,0 +1,17 @@
+{
+  "test_id": 90,
+  "timestamp": "2025-10-13T20:00:35.143986",
+  "macro_changes": {
+    "BACKEND_SAMPLE_RATE_MAX": 4,
+    "HAL_SPRAYER_ENABLED": 0,
+    "AP_MISSION_NAV_PAYLOAD_PLACE_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 0,
+    "FSYNC_CONFIG_EXT_SYNC_AX": 1,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "RPM_MAX_INSTANCES": 16
+  },
+  "build_success": false,
+  "build_time": 170.1022069454193,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+}

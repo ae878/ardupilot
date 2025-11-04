@@ -1,0 +1,12 @@
+{
+  "test_id": 249,
+  "timestamp": "2025-10-10T08:14:12.286720",
+  "macro_changes": {
+    "FFT_MAX_MISSED_UPDATES": 2,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "HAL_GPIO_INPUT": 1,
+    "MAVLINK_ENABLED_STANDARD": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 656,
+  "timestamp": "2025-10-11T02:59:25.151182",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "AP_RSSI_ENABLED": 0,
+    "MODE_AUTOROTATE_ENABLED": 0
+  }
+}

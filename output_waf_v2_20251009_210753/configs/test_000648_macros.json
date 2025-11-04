@@ -1,0 +1,12 @@
+{
+  "test_id": 648,
+  "timestamp": "2025-10-11T02:33:33.274310",
+  "macro_changes": {
+    "HAL_BUTTON_ENABLED": 0,
+    "AP_RSSI_ENABLED": 0,
+    "MAVLINK_ENABLED_UALBERTA": 0,
+    "HAL_USE_FATFS": 1,
+    "AP_AIS_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0
+  }
+}

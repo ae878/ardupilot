@@ -1,0 +1,88 @@
+{
+  "test_id": 25,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:421:6:void AP_IOMCU::read_erpm()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:645:10:static uint16_t AP_ESC_Telem::merge_edt2_status(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:657:10:static uint16_t AP_ESC_Telem::merge_edt2_stress(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:447:6:void AP_IOMCU::read_telem()",
+        "stack_size": 88
+      }
+    ],
+    "removed_functions": [],
+    "increased": [
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:669:6:void AP_ESC_Telem::update()",
+        "baseline": 144,
+        "current": 160,
+        "diff": 16
+      }
+    ],
+    "decreased": [],
+    "unchanged": 15899
+  },
+  "total_functions_analyzed": 15920
+}

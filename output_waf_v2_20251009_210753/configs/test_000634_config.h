@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #634 */
+
+/* ConfigFuzz: MODE_FLIP_ENABLED */
+#ifdef MODE_FLIP_ENABLED
+#undef MODE_FLIP_ENABLED
+#endif
+#define MODE_FLIP_ENABLED 1
+
+/* ConfigFuzz: FFT_MAX_MISSED_UPDATES */
+#ifdef FFT_MAX_MISSED_UPDATES
+#undef FFT_MAX_MISSED_UPDATES
+#endif
+#define FFT_MAX_MISSED_UPDATES 2
+
+/* ConfigFuzz: CONFIG_NEWLIB_NANO_FORMAT */
+#ifdef CONFIG_NEWLIB_NANO_FORMAT
+#undef CONFIG_NEWLIB_NANO_FORMAT
+#endif
+#define CONFIG_NEWLIB_NANO_FORMAT 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 1
+
+/* ConfigFuzz: AP_SOCKET_NATIVE_ENABLED */
+#ifdef AP_SOCKET_NATIVE_ENABLED
+#undef AP_SOCKET_NATIVE_ENABLED
+#endif
+#define AP_SOCKET_NATIVE_ENABLED 0
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS 0
+
+#endif /* _AP_CONFIG_H_ */

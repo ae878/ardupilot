@@ -1,0 +1,12 @@
+{
+  "test_id": 666,
+  "timestamp": "2025-10-11T03:28:38.333115",
+  "macro_changes": {
+    "AP_FEATURE_SBUS_OUT": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "HAL_GPIO_LED_ON": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 672,
+  "timestamp": "2025-10-11T03:47:26.297450",
+  "macro_changes": {
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 143,
+  "timestamp": "2025-10-10T03:27:38.714170",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ICAROUS": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0
+  }
+}

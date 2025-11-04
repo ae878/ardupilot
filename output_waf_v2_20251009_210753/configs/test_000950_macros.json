@@ -1,0 +1,14 @@
+{
+  "test_id": 950,
+  "timestamp": "2025-10-11T17:17:51.135283",
+  "macro_changes": {
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "HAL_USE_SDMMC": 1,
+    "SUMD_MAX_CHANNELS": 16,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "HAL_WITH_DRONECAN": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "AP_CAMERA_ENABLED": 0,
+    "AP_FEATURE_SBUS_OUT": 0
+  }
+}

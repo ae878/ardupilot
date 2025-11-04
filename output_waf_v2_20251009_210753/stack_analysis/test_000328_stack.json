@@ -1,0 +1,525 @@
+{
+  "test_id": 328,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:222:6:void AP_Generator_IE_2400::decode_v2_data()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.h:24:7:AP_Generator_RichenPower::~AP_Generator_RichenPower()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:189:6:bool AP_Generator_RichenPower::generator_ok_to_run() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:140:26:AP_BattMonitor::Failsafe AP_Generator::update_failsafes()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:205:6:void AP_Generator_RichenPower::check_maintenance_required()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:15:13:AP_Generator_Backend::~AP_Generator_Backend()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.h:93:18:virtual void AP_Generator_IE_FuelCell::log_write()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:15:13:virtual AP_Generator_Backend::~AP_Generator_Backend()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:1081:12:MAV_RESULT GCS_MAVLINK_Copter::handle_MAV_CMD_SOLO_BTN_PAUSE_CLICK(const mavlink_command_int_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.h:9:7:AP_Generator_IE_2400::~AP_Generator_IE_2400()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:158:6:void AP_Generator_IE_2400::decode_data_packet()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.cpp:117:26:virtual AP_BattMonitor::Failsafe AP_Generator_IE_650_800::update_failsafes() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:384:6:bool AP_Generator_IE_2400::is_low_error(uint32_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:179:15:static AP_Generator* AP_Generator::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:408:6:virtual bool AP_Generator_IE_2400::check_for_err_code(char*, uint8_t) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:56:6:void AP_Generator_RichenPower::move_header_in_buffer(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:103:6:virtual bool AP_BattMonitor_Generator_Elec::has_consumed_energy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:146:26:virtual AP_BattMonitor::Failsafe AP_BattMonitor_Generator_Elec::update_failsafes()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:21:18:virtual bool AP_Generator_Backend::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:33:18:virtual bool AP_Generator_Backend::run()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.h:32:7:virtual AP_BattMonitor_Generator_FuelLevel::~AP_BattMonitor_Generator_FuelLevel()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:72:6:bool AP_Generator_RichenPower::get_reading()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RPM/RPM_Generator.h:23:7:AP_RPM_Generator::~AP_RPM_Generator()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:116:6:virtual void AP_BattMonitor_Generator_Elec::read()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:36:6:virtual bool AP_BattMonitor_Generator_FuelLevel::has_consumed_energy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:27:6:virtual void AP_Generator_IE_2400::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:35:6:virtual void AP_Generator_RichenPower::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:62:6:void AP_Generator::init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.h:11:7:AP_BattMonitor_Generator_Elec::~AP_BattMonitor_Generator_Elec()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:199:6:virtual bool AP_Generator_IE_FuelCell::is_running() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:121:6:bool AP_Generator::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.h:9:7:virtual AP_Generator_IE_2400::~AP_Generator_IE_2400()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:1047:12:MAV_RESULT GCS_MAVLINK_Copter::handle_MAV_CMD_SOLO_BTN_FLY_CLICK(const mavlink_command_int_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.h:7:7:AP_Generator_IE_650_800::~AP_Generator_IE_650_800()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RPM/RPM_Generator.cpp:23:6:virtual void AP_RPM_Generator::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:353:6:virtual bool AP_Generator_RichenPower::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:511:6:virtual bool AP_Generator_IE_2400::is_running() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:106:25:AP_Generator::Type AP_Generator::type() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:36:18:virtual void AP_Generator_Backend::send_generator_status(const GCS_MAVLINK&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:169:6:bool AP_Generator::run()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:29:6:virtual bool AP_BattMonitor_Generator_FuelLevel::has_current() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.h:18:10:virtual void AP_BattMonitor_Generator_Elec::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:424:6:virtual bool AP_Generator_IE_2400::check_for_warning_code(char*, uint8_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.h:11:7:virtual AP_BattMonitor_Generator_Elec::~AP_BattMonitor_Generator_Elec()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:165:6:void AP_Generator_RichenPower::update_heat()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:160:6:bool AP_Generator::idle()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:510:6:virtual bool AP_Generator_RichenPower::stop()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.cpp:57:6:virtual void AP_Generator_IE_650_800::decode_latest_term()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.h:24:7:virtual AP_Generator_RichenPower::~AP_Generator_RichenPower()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:346:26:virtual AP_BattMonitor::Failsafe AP_Generator_IE_2400::update_failsafes() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:569:14:virtual MAV_SEVERITY AP_Generator_IE_2400::get_mav_severity(uint32_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:227:6:virtual void AP_Generator_RichenPower::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:1060:12:MAV_RESULT GCS_MAVLINK_Copter::handle_MAV_CMD_SOLO_BTN_FLY_HOLD(const mavlink_command_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:77:6:bool AP_Generator_IE_FuelCell::decode(char)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.cpp:37:6:virtual void AP_Generator_IE_650_800::assign_measurements(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:440:6:virtual void AP_Generator_RichenPower::send_generator_status(const GCS_MAVLINK&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:123:6:virtual bool AP_Generator_IE_FuelCell::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:60:6:virtual void AP_BattMonitor_Generator_FuelLevel::read()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:295:6:void AP_Generator_IE_2400::decode_info_packet()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:24:38:virtual AP_BattMonitor::Failsafe AP_Generator_Backend::update_failsafes() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.h:123:26:virtual MAV_SEVERITY AP_Generator_IE_FuelCell::get_mav_severity(uint32_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.h:21:10:virtual bool AP_Generator_IE_FuelCell::healthy() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:138:6:virtual void AP_Generator_IE_2400::decode_latest_term()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.h:32:7:AP_BattMonitor_Generator_FuelLevel::~AP_BattMonitor_Generator_FuelLevel()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:91:6:virtual bool AP_BattMonitor_Generator_Elec::has_current() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:522:6:virtual bool AP_Generator_RichenPower::run()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:39:6:virtual void AP_Generator_IE_2400::assign_measurements(uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.cpp:24:6:virtual void AP_Generator_IE_650_800::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:205:6:virtual void AP_Generator_IE_FuelCell::update_state_msg()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:458:6:virtual void AP_Generator_IE_2400::log_write()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:26:6:virtual void AP_Generator_IE_FuelCell::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:187:19:AP_Generator* AP::generator()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:414:6:void AP_Generator_RichenPower::update_frontend_readings()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:31:18:virtual bool AP_Generator_Backend::stop()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:150:6:bool AP_Generator::stop()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:539:6:virtual void AP_Generator_IE_2400::update_state_msg()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:169:6:void AP_Generator_IE_2400::decode_legacy_data()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.cpp:22:1:AP_Generator_Backend::AP_Generator_Backend(AP_Generator&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:94:6:void AP_Generator::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.h:7:7:virtual AP_Generator_IE_650_800::~AP_Generator_IE_650_800()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:321:6:void AP_Generator_RichenPower::Log_Write()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:426:6:virtual bool AP_Generator_RichenPower::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:155:6:void AP_Generator_IE_FuelCell::check_status(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_650_800.cpp:104:6:virtual bool AP_Generator_IE_650_800::check_for_err_code(char*, uint8_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:362:6:bool AP_Generator_IE_2400::is_critical_error(uint32_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:112:6:void AP_Generator::send_generator_status(const GCS_MAVLINK&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator.cpp:49:1:AP_Generator::AP_Generator()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:39:6:virtual void AP_Generator_IE_FuelCell::update()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.h:32:18:virtual bool AP_Generator_Backend::idle()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:516:6:virtual bool AP_Generator_RichenPower::idle()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.h:110:18:virtual bool AP_Generator_IE_FuelCell::check_for_warning_code(char*, uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RPM/RPM_Generator.h:23:7:virtual AP_RPM_Generator::~AP_RPM_Generator()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.cpp:175:6:void AP_Generator_IE_FuelCell::check_for_err_code_if_changed()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Generator.cpp:49:6:virtual void AP_BattMonitor_Generator_FuelLevel::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_Backend.cpp:28:6:void AP_Generator_Backend::update_frontend()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:252:6:void AP_Generator_RichenPower::update_runstate()",
+        "stack_size": 8
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [],
+    "unchanged": 15800
+  },
+  "total_functions_analyzed": 15820
+}

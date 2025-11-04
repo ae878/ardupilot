@@ -1,0 +1,12 @@
+{
+  "test_id": 414,
+  "timestamp": "2025-10-10T15:45:11.417468",
+  "macro_changes": {
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 1,
+    "HAL_DSHOT_ENABLED": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "HAL_USE_HW_RNG": 0
+  }
+}

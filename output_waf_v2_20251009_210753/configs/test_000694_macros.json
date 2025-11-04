@@ -1,0 +1,10 @@
+{
+  "test_id": 694,
+  "timestamp": "2025-10-11T04:56:28.948298",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "HAL_INS_NONE": 1
+  }
+}

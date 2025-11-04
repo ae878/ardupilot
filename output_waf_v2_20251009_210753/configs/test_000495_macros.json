@@ -1,0 +1,12 @@
+{
+  "test_id": 495,
+  "timestamp": "2025-10-10T19:23:54.022625",
+  "macro_changes": {
+    "AP_SRV_CHANNELS_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_GREEN": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+  }
+}

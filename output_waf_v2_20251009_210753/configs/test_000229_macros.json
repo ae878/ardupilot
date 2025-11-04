@@ -1,0 +1,16 @@
+{
+  "test_id": 229,
+  "timestamp": "2025-10-10T07:16:07.356305",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 1,
+    "HAL_GPIO_OUTPUT": 1,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "HAL_USE_FATFS": 1,
+    "HAL_USE_HW_RNG": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 0,
+    "MAX_PWMS": 32,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "MODE_THROW_ENABLED": 1
+  }
+}

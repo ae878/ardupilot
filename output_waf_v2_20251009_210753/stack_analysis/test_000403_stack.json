@@ -1,0 +1,694 @@
+{
+  "test_id": 403,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 1040,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../modules/lwip/src/netif/ppp/utils.c:605:13:ppp_logit.constprop",
+      "stack_size": 1032,
+      "file": "utils.c.0.su"
+    },
+    {
+      "function": "../../libraries/AP_CheckFirmware/monocypher.cpp:2439:5:int crypto_check_final(crypto_check_ctx_abstract*)",
+      "stack_size": 1024,
+      "file": "monocypher.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_PosVelFusion.cpp:1410:6:void NavEKF3_core::FuseBodyVel()",
+      "stack_size": 1016,
+      "file": "AP_NavEKF3_PosVelFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp:274:6:void NavEKF3_core::FuseSideslip()",
+      "stack_size": 976,
+      "file": "AP_NavEKF3_AirDataFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.h:259:20:decltype (((one < two) ? one :  two)) MIN(const A&, const B&) [with A = float; B = int]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:447:6:void AP_IOMCU::read_telem()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.h:65:13:bool is_positive(T) [with T = float]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Math/vector3.h:323:24:bool Vector3<T>::is_zero() const [with T = float]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:645:10:static uint16_t AP_ESC_Telem::merge_edt2_status(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:657:10:static uint16_t AP_ESC_Telem::merge_edt2_stress(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.h:252:7:) [with T = float; U = float; Params = {float}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:421:6:void AP_IOMCU::read_erpm()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:160:7:float AP_Baro::get_altitude_from_pressure(float) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:235:7:float AP_Baro::get_EAS2TAS_extended(float) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:251:7:static float AP_Baro::get_EAS2TAS_for_alt_amsl(float)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:126:7:static float AP_Baro::geopotential_alt_to_geometric(float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.cpp:223:8:double wrap_360_cd(double)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:131:7:static float AP_Baro::geometric_alt_to_geopotential(float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.cpp:194:8:double wrap_360(double)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.cpp:160:3:T wrap_180_cd(T) [with T = double]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:149:7:static float AP_Baro::get_temperature_by_altitude_layer(float, int8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:313:7:static float AP_Baro::get_temperatureC_for_alt_amsl(float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:139:7:float AP_Baro::get_temperature_from_altitude(float) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.cpp:150:3:T wrap_180(T) [with T = double]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:321:7:static float AP_Baro::get_pressure_for_alt_amsl(float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:187:6:static void AP_Baro::get_pressure_temperature_for_alt_amsl(float, float&, float&)",
+        "stack_size": 16
+      },
+      {
+        "function": "/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/cmath:619:3:constexpr bool std::isnan(double)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:211:7:static float AP_Baro::get_air_density_for_alt_amsl(float)",
+        "stack_size": 16
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:669:6:void AP_ESC_Telem::update()",
+        "baseline": 144,
+        "current": 160,
+        "diff": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:335:7:float AP_Baro::get_sealevel_pressure(float, float) const",
+        "baseline": 48,
+        "current": 64,
+        "diff": 16
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_atmosphere.cpp:299:7:float AP_Baro::_get_EAS2TAS() const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+        "baseline": 1496,
+        "current": 528,
+        "diff": -968
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp:274:6:void NavEKF3_core::FuseSideslip()",
+        "baseline": 976,
+        "current": 464,
+        "diff": -512
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp:243:6:void NavEKF2_core::FuseSideslip()",
+        "baseline": 880,
+        "current": 424,
+        "diff": -456
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp:475:6:void NavEKF3_core::FuseDragForces()",
+        "baseline": 664,
+        "current": 304,
+        "diff": -360
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_AirDataFusion.cpp:20:6:void NavEKF2_core::FuseAirspeed()",
+        "baseline": 488,
+        "current": 200,
+        "diff": -288
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:322:6:void NavEKF2_core::FuseMagnetometer()",
+        "baseline": 784,
+        "current": 512,
+        "diff": -272
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:727:6:void NavEKF2_core::calcOutputStates()",
+        "baseline": 584,
+        "current": 336,
+        "diff": -248
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp:20:6:void NavEKF3_core::FuseAirspeed()",
+        "baseline": 416,
+        "current": 216,
+        "diff": -200
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp:95:6:void NavEKF3_core::FuseRngBcn()",
+        "baseline": 368,
+        "current": 200,
+        "diff": -168
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:720:6:void NavEKF2_core::fuseEulerYaw()",
+        "baseline": 272,
+        "current": 136,
+        "diff": -136
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:398:6:bool EKFGSF_yaw::correct(uint8_t, const Vector2F&, ftype)",
+        "baseline": 256,
+        "current": 120,
+        "diff": -136
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:246:6:void NavEKF2_core::FuseRngBcnStatic()",
+        "baseline": 216,
+        "current": 88,
+        "diff": -128
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp:337:6:void NavEKF3_core::FuseRngBcnStatic()",
+        "baseline": 216,
+        "current": 96,
+        "diff": -120
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:1586:13:QuaternionF NavEKF2_core::calcQuatAndFieldStates(ftype, ftype)",
+        "baseline": 256,
+        "current": 144,
+        "diff": -112
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:194:6:void EKFGSF_yaw::predictAHRS(uint8_t)",
+        "baseline": 280,
+        "current": 168,
+        "diff": -112
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:1209:6:void NavEKF2_core::resetQuatStateYawOnly(ftype, ftype, bool)",
+        "baseline": 248,
+        "current": 136,
+        "diff": -112
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:27:6:void NavEKF2_core::FuseRngBcn()",
+        "baseline": 216,
+        "current": 104,
+        "diff": -112
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:462:6:void NavEKF2_core::CalcRangeBeaconPosDownOffset(ftype, Vector3F&, bool)",
+        "baseline": 136,
+        "current": 32,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:14:6:void NavEKF2_core::controlMagYawReset()",
+        "baseline": 240,
+        "current": 136,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp:575:6:void NavEKF3_core::CalcRangeBeaconPosDownOffset(ftype, Vector3F&, bool)",
+        "baseline": 144,
+        "current": 40,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:560:6:void NavEKF2_core::FuseVelPosNED()",
+        "baseline": 248,
+        "current": 160,
+        "diff": -88
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:174:6:void NavEKF3_core::writeOptFlowMeas(uint8_t, const Vector2f&, const Vector2f&, uint32_t, const Vector3f&, float)",
+        "baseline": 184,
+        "current": 104,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:251:6:void EKFGSF_yaw::alignTilt()",
+        "baseline": 200,
+        "current": 120,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:659:6:void NavEKF2_core::UpdateStrapdownEquationsNED()",
+        "baseline": 152,
+        "current": 88,
+        "diff": -64
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:996:6:void NavEKF2_core::learnInactiveBiases()",
+        "baseline": 160,
+        "current": 96,
+        "diff": -64
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:1360:6:void NavEKF3_core::updateMovementCheck()",
+        "baseline": 168,
+        "current": 112,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:380:6:void NavEKF3_core::readIMUData(bool)",
+        "baseline": 184,
+        "current": 128,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:1269:6:void NavEKF3_core::learnInactiveBiases()",
+        "baseline": 152,
+        "current": 96,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:314:6:void NavEKF2_core::CorrectGPSForAntennaOffset(NavEKF2_core::gps_elements&) const",
+        "baseline": 112,
+        "current": 64,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:1057:6:void NavEKF3_core::writeExtNavData(const Vector3f&, const Quaternion&, float, float, uint32_t, uint16_t, uint32_t)",
+        "baseline": 144,
+        "current": 96,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:30:6:void EKFGSF_yaw::update(const Vector3F&, const Vector3F&, ftype, ftype, bool, ftype)",
+        "baseline": 144,
+        "current": 96,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_Math/quaternion.cpp:555:6:void QuaternionT<T>::rotate_fast(const Vector3<T>&) [with T = double]",
+        "baseline": 72,
+        "current": 24,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:143:6:void NavEKF3_core::writeWheelOdom(float, float, uint32_t, const Vector3f&, float)",
+        "baseline": 96,
+        "current": 48,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:318:6:0(uint8_t)",
+        "baseline": 104,
+        "current": 56,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:327:6:void NavEKF2_core::readIMUData()",
+        "baseline": 184,
+        "current": 136,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:988:6:void NavEKF2_core::FuseDeclination(ftype)",
+        "baseline": 96,
+        "current": 56,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:374:6:bool NavEKF2_core::InitialiseFilterBootstrap()",
+        "baseline": 112,
+        "current": 72,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:943:6:void NavEKF2_core::selectHeightForFusion()",
+        "baseline": 96,
+        "current": 56,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:227:6:void NavEKF2_core::readMagData()",
+        "baseline": 112,
+        "current": 72,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:73:6:void NavEKF2_core::ResetPosition()",
+        "baseline": 128,
+        "current": 88,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:607:10:Matrix3F EKFGSF_yaw::updateRotMat(const Matrix3F&, const Vector3F&) const",
+        "baseline": 80,
+        "current": 40,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_Math/AP_Math.cpp:389:10:Vector3F get_vel_correction_for_sensor_offset(const Vector3F&, const Matrix3F&, const Vector3F&)",
+        "baseline": 104,
+        "current": 64,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:15:6:void NavEKF2_core::ResetVelocity()",
+        "baseline": 104,
+        "current": 72,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Control.cpp:50:6:void NavEKF2_core::setWindMagStateLearningMode()",
+        "baseline": 72,
+        "current": 40,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp:232:6:void NavEKF3_core::setAidingMode()",
+        "baseline": 144,
+        "current": 112,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp:739:6:void NavEKF3_core::checkGyroCalStatus()",
+        "baseline": 72,
+        "current": 40,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:285:6:void NavEKF3_core::readMagData()",
+        "baseline": 104,
+        "current": 72,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:358:6:void NavEKF2_core::CorrectExtNavVelForSensorOffset(Vector3F&) const",
+        "baseline": 88,
+        "current": 56,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_Common/Location.cpp:332:10:Vector2F Location::get_distance_NE_ftype(const Location&) const",
+        "baseline": 64,
+        "current": 40,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:905:6:void NavEKF3_core::readRngBcnData()",
+        "baseline": 88,
+        "current": 64,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_Common/Location.cpp:377:6:void Location::offset_bearing_and_pitch(ftype, ftype, ftype)",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:180:6:void NavEKF2_core::realignYawGPS()",
+        "baseline": 80,
+        "current": 56,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:1111:6:void NavEKF3_core::writeExtNavVelData(const Vector3f&, float, uint32_t, uint16_t)",
+        "baseline": 88,
+        "current": 64,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:118:6:void NavEKF2_core::writeOptFlowMeas(uint8_t, const Vector2f&, const Vector2f&, uint32_t, const Vector3f&, float)",
+        "baseline": 88,
+        "current": 64,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Control.cpp:468:6:bool NavEKF2_core::checkGyroCalStatus()",
+        "baseline": 64,
+        "current": 40,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:120:6:void NavEKF2_core::InitialiseVariables()",
+        "baseline": 104,
+        "current": 80,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp:60:6:void NavEKF3_core::setWindMagStateLearningMode()",
+        "baseline": 88,
+        "current": 64,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_Math/vector3.cpp:459:6:void Vector3<T>::offset_bearing(T, T, T) [with T = float]",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_PosVelFusion.cpp:339:6:void NavEKF2_core::CorrectExtNavForSensorOffset(Vector3F&) const",
+        "baseline": 64,
+        "current": 40,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp:224:6:bool NavEKF3_core::getPosNE(Vector2f&) const",
+        "baseline": 80,
+        "current": 56,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_Common/Location.cpp:349:6:void Location::offset(ftype, ftype)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:136:6:void EKFGSF_yaw::fuseVelData(const Vector2F&, ftype)",
+        "baseline": 88,
+        "current": 64,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:18:6:void NavEKF2_core::readRangeFinder()",
+        "baseline": 64,
+        "current": 48,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Outputs.cpp:177:6:bool NavEKF2_core::getAirSpdVec(Vector3f&) const",
+        "baseline": 88,
+        "current": 72,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Control.cpp:824:6:void NavEKF3_core::runYawEstimatorCorrection()",
+        "baseline": 48,
+        "current": 32,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:493:6:void NavEKF2_core::readGpsData()",
+        "baseline": 72,
+        "current": 56,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Outputs.cpp:184:6:bool NavEKF3_core::getAirSpdVec(Vector3f&) const",
+        "baseline": 88,
+        "current": 72,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Outputs.cpp:380:6:bool NavEKF2_core::getMagOffsets(uint8_t, Vector3f&) const",
+        "baseline": 56,
+        "current": 40,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_Measurements.cpp:17:6:void NavEKF3_core::readRangeFinder()",
+        "baseline": 64,
+        "current": 48,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Math/vector3.cpp:459:6:void Vector3<T>::offset_bearing(T, T, T) [with T = double]",
+        "baseline": 48,
+        "current": 32,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_yaw.cpp:290:6:void EKFGSF_yaw::alignYaw()",
+        "baseline": 56,
+        "current": 40,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:1114:6:void NavEKF2_core::alignMagStateDeclination()",
+        "baseline": 64,
+        "current": 48,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_MagFusion.cpp:1161:6:bool NavEKF2_core::EKFGSF_resetMainFilterYaw()",
+        "baseline": 56,
+        "current": 40,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15692
+  },
+  "total_functions_analyzed": 15908
+}

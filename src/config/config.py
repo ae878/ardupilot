@@ -9,12 +9,15 @@ from src.utils.logging import get_logger
 from src.config.configblock import ConfigBlock
 from src.config.configblockstructure import ConfigBlockStructure
 from src.ir2dot.irlib.file import File
-
-
+from itertools import product
+from collections import deque
+import re 
+from src.macro_registry import known_macros
 logger = get_logger(__name__)
 
 
 class Config:
+    global_seen_blocks = set()
     def __init__(self, config: dict):
         # define 매크로 명
         # name of #define
@@ -37,6 +40,8 @@ class Config:
         # 매크로가 사용된 함수들 dict
         # functions that #define is used in
         self.used_in_functions: Dict[str, List[str]] = config.get("used_in_functions", {})
+
+        self.literal_suffix: str | None = config.get("literal_suffix", None)
 
         self.parent_condition: Union[str, None] = config.get("parent_condition", None)
 
@@ -117,10 +122,35 @@ class Config:
 
         return []
 
+    def _has_known_macro(self,expr: str) -> bool:
+        if not expr:
+            return False
+        
+        print("-------------------------")
+        print(expr)
+        macros = re.findall(r'!?defined\s*\(\s*([A-Za-z_]\w*)\s*\)', expr)
+
+        extra = re.findall(r'\b([A-Za-z_]\w*)\b', expr)
+        for tok in extra:
+            if tok not in macros:
+                macros.append(tok)
+
+        macros = set(macros)
+        for tok in macros:
+            if tok in known_macros():
+                return True
+
+        for tok in macros:
+            print(tok)
+        print("-------------skip-------------")
+
+        return False
+
+
     def _recurse_select_block_in_nested_scope(
         self,
-        min_executable_line: int,
         target_configblock_structure: ConfigBlockStructure,
+        prefer_rank : int = 0
     ) -> list[str]:
         """
         해당 ConfigBlockStructure 내에서 Valid 할때
@@ -131,40 +161,63 @@ class Config:
         candidate_branch_items = []
         target_branch = target_configblock_structure.branches[0]
 
-        # 실제로 min_executable_line 이상인 branch 중 하나를 선택택
-        for idx, branch in enumerate(target_configblock_structure.branches):
-            if branch.get("executable_lines", 0) >= min_executable_line:
-                candidate_branch_items.append(branch)
 
-        if len(candidate_branch_items) == 0:
+        if len(target_configblock_structure.branches) == 0:
             # self.logger.warning(f"[-] No candidate branch items found in {target_configblock_structure}")
             return return_smt_equations
-            # target_branch = random.choice(target_configblock_structure.branches)
         else:
-            # TODO: 가장 큰것부터 Permutation 을 통해 모든 경우의 수 찾아서 선택
-            target_branch = random.choice(candidate_branch_items)
+            candidate_branch_items = sorted(
+                    target_configblock_structure.branches,
+                    key=lambda b: b.get("executable_lines", 0),
+                    reverse=True)
+
+            target_branch = candidate_branch_items[prefer_rank]
 
         target_branch_type = target_branch.get("type", "")
         target_branch_condition = target_branch.get("condition", "")
 
+        if target_branch_type != "else":
+            if not self._has_known_macro(target_branch_condition):
+                return None
+
+        all_branches = target_configblock_structure.branches
+        idx_in_all = all_branches.index(target_branch)
+    
+
         if target_branch_type == "if" or target_branch_type == "ifdef" or target_branch_type == "ifndef":
             return_smt_equations.append(f"#{target_branch_type} {target_branch_condition}")
         elif target_branch_type == "elif":
-            return_smt_equations.append(f"#if {target_branch_condition})")
+            for prev in all_branches[:idx_in_all]:
+                pt = prev.get("type", "")
+                pc = prev.get("condition", "")
+
+                if (not pc) or (pt in ("if","elif","ifdef","ifndef") and not self._has_known_macro(pc)): 
+                    continue
+                if pt == "ifdef":
+                    return_smt_equations.append(f"#if !defined({pc})")
+                elif pt == "ifndef":
+                    return_smt_equations.append(f"#if defined({pc})")
+                elif pt in ("if", "elif"):
+                    return_smt_equations.append(f"#if !({pc})")
+        
+            return_smt_equations.append(f"#if {target_branch_condition}")
         elif target_branch_type == "else":
             # else 일때 -> 지금까지의 식에 NOT을 붙임
-            for idx2, branch in enumerate(target_configblock_structure.branches):
-                if idx2 == idx:
+            for prev in all_branches[:idx_in_all]:
+                pt = prev.get("type", "")
+                pc = prev.get("condition", "")
+           
+                if (not pc) or (pt in ("if","elif","ifdef","ifndef") and not self._has_known_macro(pc)):
                     continue
-                temp_branch_condition = branch.get("condition", "")
-                if temp_branch_condition:
-                    return_smt_equations.append(f"#if !({temp_branch_condition})")
-
-        if target_branch.get("child_blocks", []):
-            for child_block in target_branch.get("child_blocks", []):
-                return_smt_equations.extend(
-                    self._recurse_select_block_in_nested_scope(min_executable_line, child_block)
-                )
+                if pt == "ifdef":
+                    return_smt_equations.append(f"#if !defined({pc})")
+                elif pt == "ifndef":
+                    return_smt_equations.append(f"#if defined({pc})")
+                elif pt in ("if", "elif"):
+                    return_smt_equations.append(f"#if !({pc})")
+        
+        if not return_smt_equations:
+            return None 
         return return_smt_equations
 
     def select_block(
@@ -175,7 +228,7 @@ class Config:
         출력: SMT로 풀수있는 식 리스트
         """
         total_smt_equations = []
-
+       
         # Validate methods
         for method in methods:
             if method not in ["lines"]:
@@ -187,6 +240,8 @@ class Config:
             min_executable_line 이상인 라인을 가진 브랜치를 선택
 
             """
+            candidate_blocks: list[ConfigBlockStructure] = []
+
             # 라인 수 기반으로 선택
             for target_configblock in self.conditional_scopes:
                 d: deque[ConfigBlockStructure] = deque()
@@ -209,22 +264,148 @@ class Config:
                 if not is_targeted:
                     continue
 
-                for target_configblock_structure in target_configblock.block_structure.child_blocks:
-                    d.append(target_configblock_structure)
+                d.append(target_configblock.block_structure)
+                
+                
                 while d:
                     current_configblock_structure = d.popleft()
-                    # self.logger.debugs(f"[-] current_configblock_structure: {current_configblock_structure}")
-                    for block_structure in current_configblock_structure.child_blocks:
-                        d.append(block_structure)
-                    if current_configblock_structure.total_lines >= min_executable_line:
-                        total_smt_equations.extend(
-                            self._recurse_select_block_in_nested_scope(
-                                min_executable_line, current_configblock_structure
-                            )
-                        )
-        if self.parent_condition:
-            total_smt_equations.append(self.parent_condition)
-        return total_smt_equations
+
+                    parent_pass = any((br.get("type","") != "else") and self._has_known_macro(br.get("condition",""))
+                        for br in current_configblock_structure.branches)
+                    if parent_pass :
+                        if current_configblock_structure.total_lines >= min_executable_line:
+                            fname = target_configblock.file
+                            start = getattr(current_configblock_structure, "start_line", None)
+                            end   = getattr(current_configblock_structure, "end_line", None)
+
+                            blk_key = (fname, start, end)  # �~X~E �~L~L�~]��~L�~@ �~O��~U�
+
+                            if blk_key in Config.global_seen_blocks:
+                                continue
+                            Config.global_seen_blocks.add(blk_key)
+
+                            setattr(current_configblock_structure, "_origin_file", fname)
+                            candidate_blocks.append(current_configblock_structure)
+
+            if not candidate_blocks:
+                if self.parent_condition:
+                    total_smt_equations.append(self.parent_condition)
+                return total_smt_equations
+
+            candidate_blocks.sort(key=lambda b: b.total_lines, reverse=True)
+
+            options_per_block = []
+
+            group_index: dict[tuple[tuple[str, ...], ...], int] = {}
+
+            coalesce = {}
+            eq_index: dict[tuple[str, ...], tuple[int, int]] = {}
+            t = 0
+            for block in candidate_blocks:
+                if not any(br.get("type") == "else" for br in block.branches):
+                    block.branches.append({
+                     "type": "else",
+                     "condition": "",
+                     "child_blocks": [],
+                     "executable_lines": 0 })
+
+                valid_branches = sorted(
+                        block.branches,
+                        key=lambda b: b.get("executable_lines", 0),
+                        reverse=True)
+
+                if len(valid_branches) == 0 :
+                    continue
+
+                opts = []
+                opts_map = {}
+                opts_order = []
+                for rank, br in enumerate(valid_branches):
+                    eqs = self._recurse_select_block_in_nested_scope(block, prefer_rank=rank)
+                    if not eqs:
+                        continue
+                    eqs = list(dict.fromkeys(eqs))
+                    lines = br.get("executable_lines", 0)
+                    opts.append((lines, eqs))
+            
+                    key = tuple(eqs)                # �~X~E �| ~U�~Y~U�~^~H �~O~Y�~]��~U|  �~U~L�~L �~U��~X기 (�| ~U�| �/strip X)
+                    print(key)
+
+                    if key in opts_map:
+                        opts_map[key] += int(lines or 0)
+                    else:
+                        opts_map[key] = int(lines or 0)
+                        opts_order.append(key)
+               
+                print(f"[BLOCK] file={getattr(block,'_origin_file','?')} branches={len(valid_branches)}")
+                for k in opts_order:
+                    print(f"  [LOCAL] lines={opts_map[k]} eqs={list(k)}")
+                opts = [(opts_map[k], list(k)) for k in opts_order]
+                
+                local_opts = opts
+                if not local_opts:
+                    continue
+
+                
+                group_key = tuple(sorted(tuple(eqs) for _, eqs in local_opts))  # �~H~\�~D~\ 무�~K~\
+
+                if group_key in group_index:
+                    bidx = group_index[group_key]
+                    print(f"[MERGE_GROUP] -> block#{bidx}")
+                    for lines_val, eqs_list in local_opts:
+                        target = tuple(eqs_list)
+                        for i, (old_lines, old_eqs) in enumerate(options_per_block[bidx]):
+                            if tuple(old_eqs) == target:        # 문�~^~P 그�~L~@�~\ �~O~Y�~]��~U|  �~U~L�~L
+                                new_lines = old_lines + int(lines_val or 0)
+                                print(f"  [MERGE_OPT] opt#{i} before={old_lines} +add={int(lines_val or 0)} -> after={new_lines} eqs={old_eqs}")
+                                options_per_block[bidx][i] = (old_lines + int(lines_val or 0), old_eqs)
+                                break
+                else:
+                     src = getattr(block, "_origin_file", "<unknown>")
+                     import os
+                     print(f"[NEW_OPTS from {os.path.basename(src)}]")
+                     print(local_opts)
+                     options_per_block.append(local_opts)
+                     group_index[group_key] = len(options_per_block) - 1  
+            print("--------------------------")           
+            if not options_per_block:
+                if self.parent_condition:
+                    total_smt_equations.append(self.parent_condition)
+                return total_smt_equations
+            
+            combos = []
+            for combo in product(*options_per_block):  # 각 블록에서 한 가지(branch)씩 선택
+                total_lines = 0
+                eqs_flat = []
+                for lines, eqs in combo:
+                    total_lines += lines
+                    if eqs:
+                        eqs_flat.extend(eqs)
+
+                eqs_flat = list(dict.fromkeys(eqs_flat))   
+                _eq_pat = re.compile(r'^#if\s+([A-Za-z_]\w*)\s*==\s*(-?\d+)\s*$')
+
+                def _is_contradictory(_eqs: list[str]) -> bool:
+                    seen = {}
+                    for _e in _eqs:
+                        m = _eq_pat.match(_e.strip())
+                        if not m:
+                            continue
+                        var, val = m.group(1), m.group(2)
+                        if var in seen and seen[var] != val:
+                            return True
+                        seen[var] = val
+                    return False
+                if _is_contradictory(eqs_flat):
+                    continue                
+                combos.append((total_lines, eqs_flat))
+            combos.sort(key=lambda x: x[0], reverse=True)
+
+            if self.parent_condition:
+                combos = [(lines, eqs + [self.parent_condition]) for (lines, eqs) in combos]
+           
+            return combos
+            
 
     def __eq__(self, other: Union[str, "Config"]) -> bool:
         if isinstance(other, str):
@@ -300,7 +481,7 @@ class ConfigFactory:
 
         if isinstance(target_config, dict):
             if target_config["name"] == macro_name:
-                if value:
+                if value is not None:
                     target_config["value"] = value  # 지정된 값으로 변경
                 else:
                     if target_config["value_candidates"]:
@@ -310,7 +491,7 @@ class ConfigFactory:
         # item이 Config 타입인 경우
         elif isinstance(target_config, Config):
             if target_config.name == macro_name:
-                if value:
+                if value is not None:
                     target_config.value = value  # 지정된 값으로 변경
                 else:
                     if target_config.value_candidates:

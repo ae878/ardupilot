@@ -1,0 +1,15 @@
+{
+  "test_id": 129,
+  "timestamp": "2025-10-10T02:49:36.053507",
+  "macro_changes": {
+    "FS_THR_DISABLED": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "HAL_USB_VENDOR_ID": 0,
+    "WEATHERVANE_ENABLED": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0
+  }
+}

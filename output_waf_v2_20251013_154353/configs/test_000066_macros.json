@@ -1,0 +1,13 @@
+{
+  "test_id": 66,
+  "timestamp": "2025-10-13T18:48:10.486025",
+  "macro_changes": {
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "HAL_USE_FATFS": 0,
+    "HAL_USE_SDMMC": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "AP_BEACON_ENABLED": 0,
+    "AP_SRV_CHANNELS_ENABLED": 0
+  }
+}

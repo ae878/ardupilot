@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 216,
+    "timestamp": "2025-10-10T06:42:21.078582",
+    "macro_changes": {
+      "FS_THR_ENABLED_ALWAYS_LAND": 0,
+      "AP_SIGNED_FIRMWARE": 1,
+      "HAL_SUPPORT_RCOUT_SERIAL": 1,
+      "HAL_HAVE_SERVO_VOLTAGE": 1,
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+      "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0
+    },
+    "build_success": false,
+    "build_time": 98.06701374053955,
+    "build_result": false,
+    "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+  }
+]

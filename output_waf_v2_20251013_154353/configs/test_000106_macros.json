@@ -1,0 +1,14 @@
+{
+  "test_id": 106,
+  "timestamp": "2025-10-13T20:45:36.993194",
+  "macro_changes": {
+    "AP_CRASHDUMP_ENABLED": 1,
+    "HAL_INS_VRBRAIN": 0,
+    "MODE_AUTO_ENABLED": 0,
+    "HAL_SOARING_ENABLED": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "AP_PERIPH_BATTERY_ENABLED": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AP_STATS_ENABLED": 0
+  }
+}

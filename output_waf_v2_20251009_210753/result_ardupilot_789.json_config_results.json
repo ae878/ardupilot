@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 790,
+    "timestamp": "2025-10-11T09:33:15.934216",
+    "macro_changes": {
+      "MAVLINK_ENABLED_STANDARD": 1,
+      "AP_SOCKET_NATIVE_ENABLED": 1,
+      "AP_SRV_CHANNELS_ENABLED": 0,
+      "MODE_ZIGZAG_ENABLED": 1,
+      "HAL_DSHOT_ENABLED": 0,
+      "HAL_RALLY_ENABLED": 0,
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+      "HAL_INS_RATE_LOOP": 1,
+      "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1
+    },
+    "build_success": false,
+    "build_time": 135.3223261833191,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+  }
+]

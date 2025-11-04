@@ -1,0 +1,13 @@
+{
+  "test_id": 478,
+  "timestamp": "2025-10-10T18:39:46.507313",
+  "macro_changes": {
+    "HAL_UART_IOMCU_IDX": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "METADATA_MAX_i": 32,
+    "AP_AIRSPEED_ENABLED": 1,
+    "AP_GRIPPER_ENABLED": 1,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0
+  }
+}

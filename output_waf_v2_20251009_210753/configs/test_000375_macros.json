@@ -1,0 +1,11 @@
+{
+  "test_id": 375,
+  "timestamp": "2025-10-10T13:51:47.764854",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_USE_SDMMC": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  }
+}

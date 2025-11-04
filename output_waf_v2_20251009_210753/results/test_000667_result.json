@@ -1,0 +1,19 @@
+{
+  "test_id": 667,
+  "timestamp": "2025-10-11T03:31:21.542581",
+  "macro_changes": {
+    "HAL_LOGGING_ENABLED": 0,
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "WEATHERVANE_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 163.20707774162292,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 565,
+  "timestamp": "2025-10-10T22:45:52.730704",
+  "macro_changes": {
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

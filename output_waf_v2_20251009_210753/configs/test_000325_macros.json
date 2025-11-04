@@ -1,0 +1,10 @@
+{
+  "test_id": 325,
+  "timestamp": "2025-10-10T11:37:18.101486",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AP_MODULE_SUPPORTED": 1,
+    "HAL_USE_HW_RNG": 1
+  }
+}

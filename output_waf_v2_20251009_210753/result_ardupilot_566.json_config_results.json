@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 567,
+    "timestamp": "2025-10-10T22:48:50.048807",
+    "macro_changes": {
+      "TAP_ESC_MAX_MOTOR_NUM": 2,
+      "HAL_CAN_DRIVER_DEFAULT": 0,
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+      "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 0,
+      "HAL_BATT_VOLT_PIN": 0,
+      "RC_INPUT_MAX_PULSEWIDTH": 2,
+      "HAL_ENABLE_THREAD_STATISTICS": 1
+    },
+    "build_success": false,
+    "build_time": 103.13045859336853,
+    "build_result": false,
+    "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+  }
+]

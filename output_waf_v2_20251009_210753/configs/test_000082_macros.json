@@ -1,0 +1,13 @@
+{
+  "test_id": 82,
+  "timestamp": "2025-10-10T00:49:33.360031",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "HAL_USE_SDMMC": 0,
+    "FFT_MAX_MISSED_UPDATES": 32,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "AP_FOLLOW_ENABLED": 0,
+    "TOY_MODE_ENABLED": 0,
+    "HAL_HAVE_IMU_HEATER": 1
+  }
+}

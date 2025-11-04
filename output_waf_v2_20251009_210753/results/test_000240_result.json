@@ -1,0 +1,18 @@
+{
+  "test_id": 240,
+  "timestamp": "2025-10-10T07:46:22.762762",
+  "macro_changes": {
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "AP_MISSION_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 2,
+    "MODE_FLIP_ENABLED": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0
+  },
+  "build_success": false,
+  "build_time": 161.61097288131714,
+  "build_result": false,
+  "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+}

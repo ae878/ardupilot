@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 440,
+    "timestamp": "2025-10-10T16:53:02.613260",
+    "macro_changes": {
+      "HAL_FLASH_PROTECTION": 1,
+      "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+      "RC_INPUT_MAX_PULSEWIDTH": 8,
+      "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+      "HAL_QUADPLANE_ENABLED": 0,
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+      "MAVLINK_ENABLED_STANDARD": 0,
+      "MODE_CIRCLE_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 87.68468642234802,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+  }
+]

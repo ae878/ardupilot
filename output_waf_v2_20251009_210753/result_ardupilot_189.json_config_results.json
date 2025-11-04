@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 190,
+    "timestamp": "2025-10-10T05:29:50.889447",
+    "macro_changes": {
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0,
+      "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+      "AP_AIS_ENABLED": 1,
+      "FS_THR_ENABLED_ALWAYS_RTL": 0,
+      "HAL_ENABLE_THREAD_STATISTICS": 1
+    },
+    "build_success": false,
+    "build_time": 185.29320764541626,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

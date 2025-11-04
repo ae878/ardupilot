@@ -1,0 +1,19 @@
+{
+  "test_id": 102,
+  "timestamp": "2025-10-13T20:37:20.563098",
+  "macro_changes": {
+    "HAL_USE_FATFS": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "HAL_UART_IOMCU_IDX": 0,
+    "HAL_QUADPLANE_ENABLED": 1,
+    "MPUREG_CONFIG_EXT_SYNC_GX": 0,
+    "BACKEND_SAMPLE_RATE_MAX": 4,
+    "MPUREG_CONFIG_EXT_SYNC_SHIFT": 1,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "AP_RADIO_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 110.47296643257141,
+  "build_result": false,
+  "error": "../../libraries/AP_Radio/driver_bk2425.cpp:43:2: error: #error This configuration is not supported."
+}

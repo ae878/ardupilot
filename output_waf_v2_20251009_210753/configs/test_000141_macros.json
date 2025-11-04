@@ -1,0 +1,9 @@
+{
+  "test_id": 141,
+  "timestamp": "2025-10-10T03:21:26.746569",
+  "macro_changes": {
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1,
+    "HAL_GPIO_ALT": 0
+  }
+}

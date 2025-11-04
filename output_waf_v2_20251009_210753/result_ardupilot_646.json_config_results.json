@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 647,
+    "timestamp": "2025-10-11T02:30:16.671545",
+    "macro_changes": {
+      "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+      "MAXSONAR_SERIAL_LV_BAUD_RATE": 2,
+      "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+      "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+      "HAL_NUM_CAN_IFACES": 1,
+      "HAL_SEMAPHORE_BLOCK_FOREVER": 1
+    },
+    "build_success": false,
+    "build_time": 185.38551259040833,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "test_id": 700,
+  "timestamp": "2025-10-11T05:15:55.746063",
+  "macro_changes": {
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 16,
+    "HAL_NUM_CAN_IFACES": 0,
+    "MODE_AUTO_ENABLED": 0,
+    "MODE_LOITER_ENABLED": 0,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

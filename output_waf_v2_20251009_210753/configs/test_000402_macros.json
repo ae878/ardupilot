@@ -1,0 +1,10 @@
+{
+  "test_id": 402,
+  "timestamp": "2025-10-10T15:09:20.648823",
+  "macro_changes": {
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 1,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "MODE_ZIGZAG_ENABLED": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 26,
+  "timestamp": "2025-10-09T20:36:32.806556",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "MODE_LOITER_ENABLED": 0
+  }
+}

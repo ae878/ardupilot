@@ -7,6 +7,7 @@ import json
 import math
 import random
 from typing import Union
+from itertools import product
 
 # from mutator.mutate import related_based_mutate
 from src.ir2dot.irlib.file import File
@@ -86,7 +87,7 @@ class Fuzzer:
         config: Union[ConfigFactory, None] = None,
         verbose: bool = False,
         threshold: int = 2,
-        sat_acquire_min_codesize: int = 10,
+        sat_acquire_min_codesize: int = 1,
     ):
         if not seed_macro_file:
             raise ValueError("seed_macro_file must be provided")
@@ -95,7 +96,11 @@ class Fuzzer:
             raise ValueError("config must be provided")
 
         self.base = base
-        self.seed: ConfigFactory = ConfigFactory(seed_macro_file) if seed_macro_file else config
+        self.seed: ConfigFactory = ConfigFactory(seed_macro_file)
+        #self.seed : ConfigFactory = ConfigFactory(seed_macro_file)
+        self._global_combo_rank = 0
+
+        self.macro_set = set()
         self.current_config: ConfigFactory = self.seed
         # For the memory issue, we use recent_steps instead of steps
         # self.steps: list[FuzzerStep] = []
@@ -163,6 +168,10 @@ class Fuzzer:
 
             # 특정 함수가 방문하는 파일들 리스트로 추가
             for function in visited_functions:
+                if getattr(function, "parent_file", None) is None:
+                    self.logger.warning("[-] %s: visited function has no parent_file (func=%s)", target_function, getattr(function, "name", "<unknown>"))
+                    continue
+
                 self.related_files_per_function[target_function].add(function.parent_file)
 
             # 특정 스레드 함수가 사용하는 macro 리스트
@@ -323,6 +332,7 @@ class Fuzzer:
         - sat-solve: 특정 codesize 이상인 Branch 중 하나를 랜덤하게 선택함함
 
         """
+        Config.global_seen_blocks.clear()
         max_validate_retry = 10
         if sat_acquire_min_codesize == -1:
             sat_acquire_min_codesize = self.sat_acquire_min_codesize
@@ -358,7 +368,22 @@ class Fuzzer:
                             f"No related macros found for {target_function}, so I'll not include them."
                         )
                     else:
-                        target_macros.extend(target_macro_list)
+                        self.logger.warning(
+                         "found for %s: %d -> %s",
+                          target_function,
+                          len(target_macro_list),
+                          [getattr(x, "name", x.get("name") if isinstance(x, dict) else repr(x)) for x in target_macro_list]
+                         
+                         )
+
+                        seen = {getattr(m, "name", None) for m in target_macros}
+
+                        for new_macro in target_macro_list:
+                            key = getattr(new_macro, "name", None)
+                            if key in seen:
+                                continue
+                            seen.add(key)
+                            target_macros.append(new_macro)
 
             if len(target_macros) == 0:
                 if isinstance(self.current_config.config, list):
@@ -380,7 +405,8 @@ class Fuzzer:
                 target_macros = new_target_macros
 
             mutation_config = None
-            self.logger.debug(f"[+] target_macros: {target_macros}")
+            for target_macro in target_macros:
+                self.logger.debug(f"[+] target_macro: {target_macro.name}")
 
             """
                 2회 이상 빌드했을때, 스택 사이즈가 더 큰 것을 찾아 해당 Configuration을 가져와 퍼징
@@ -410,47 +436,119 @@ class Fuzzer:
                     self.current_config = mutation_config
 
             if "sat-solve" in methods:
-                smt_equations = []
                 # 타겟하는 함수와 연관있는 파일만 sat-solve 경로 내에 포함
                 target_files: set[File] = set()
                 for target_function in target_functions:
                     temp_files = self.related_files_per_function.get(target_function, set())
                     if temp_files:
                         target_files.update(temp_files)
-                print("====================")
-                print(f"[+] Target files: {target_files}")
-                print("=====================")
+                
+                macro_combos_list = []
                 for target_macro in target_macros:
-                    # TODO: Apply only related files
-                    smt_equations.extend(target_macro.select_block(sat_acquire_min_codesize, target_files))
-                if len(smt_equations) == 0:
-                    self.logger.warning("[-] No macros to fuzz")
-                    # continue
-                with open("./total_smt_equations.json", "w") as f:
-                    json.dump(smt_equations, f, indent=2)
+                    print(target_macro.name)
+                    combos = target_macro.select_block(sat_acquire_min_codesize, target_files)
+                    if combos:
+                        for i, (lines, eqs) in enumerate(combos, 1):
+                            print(f"    - combo#{i}: lines={lines}, constraints={len(eqs)}")
+                            for j, eq in enumerate(eqs, 1):
+                                print(f"        [{j}] {eq}")
+                        
+                        macro_combos_list.append(combos)
+                    print("-------------------------------------------------")
+                
+                global_combos = []
+                seen_keys = set()
+                seen = {}
 
-                current_equations = smt_equations.copy()
-                solution = self.z3_config_solver.solve("s4", current_equations)
-                while not solution and len(current_equations) > 1:
-                    remove_count = max(1, math.ceil(len(current_equations) * 0.1))
-                    remove_indices = random.sample(range(len(current_equations)), remove_count)
-                    current_equations = [eq for i, eq in enumerate(current_equations) if i not in remove_indices]
-                    self.logger.info(f"No solution found, retrying with {len(current_equations)} equations...")
+                if macro_combos_list:
+                    for combo in product(*macro_combos_list):  # 전역 카테시안 조합
+                        tot = sum(t for t, _ in combo)
+                        eqs = []
+                        for _, e in combo:
+                            eqs.extend(e)
+                       
+                        eqs = list(dict.fromkeys(eqs))
+                        key = tuple(sorted(set(eqs)))
+
+                        prev = seen.get(key)
+                        if prev is None or tot > prev[0]:
+                            seen[key] = (tot, eqs)
+
+                    global_combos = list(seen.values())    
+                    global_combos.sort(key=lambda x: x[0], reverse=True)
+
+                total_combo_len = len(global_combos)
+                
+
+                for _ in range(total_combo_len):
+                    smt_equations = []
+                    idx = self._global_combo_rank % len(global_combos)
+                    chosen_total_lines, chosen_eqs = global_combos[idx]
+                    print(
+                        f"[mutate] GLOBAL rank={idx+1}/{len(global_combos)}, "
+                        f"lines={chosen_total_lines}, constraints={len(chosen_eqs)}"
+                        )
+
+                    self._global_combo_rank = (self._global_combo_rank + 1) % len(global_combos)
+                    smt_equations.extend(chosen_eqs)
+                    print(f"[mutate] GLOBAL selected code lines = {chosen_total_lines}, constraints = {len(chosen_eqs)}")
+
+
+                    MAX_SHOW = 50  # 너무 길면 처음 50개만 보기 (원하면 조정)
+                    print("[mutate] CHOSEN constraints:")
+                    for i, eq in enumerate(chosen_eqs[:MAX_SHOW], 1):
+                        print(f"    [{i}] {eq}")
+                    if len(chosen_eqs) > MAX_SHOW:
+                        print(f"    ... and {len(chosen_eqs) - MAX_SHOW} more")
+
+
+                    if len(smt_equations) == 0:
+                        self.logger.warning("[-] No macros to fuzz")
+                    # continue
+                    with open("./total_smt_equations.json", "w") as f:
+                        json.dump(smt_equations, f, indent=2)
+
+                    current_equations = smt_equations.copy()
                     solution = self.z3_config_solver.solve("s4", current_equations)
-                if not solution:
-                    self.logger.warning(
+                    if not solution:
+                        self.logger.warning(
                         "[-] No solution found, it means the equations are unsatisfiable... Something wrong with Z3 Solver?"
-                    )
-                else:
-                    self.logger.info(f"[+] Solution found: Total {len(solution.keys())} macros")
-                    for solution_key in solution.keys():
-                        self.logger.debug(f"    {solution_key}: {solution[solution_key]}")
-                        self.current_config.change_config(solution_key, solution[solution_key])
+                        )
+                    else:
+                        self.logger.info(f"[+] Solution found: Total {len(solution.keys())} macros")
+                        
+                        solution_macro = {}
+
+                        for k, v in solution.items():
+                            name = k
+                            val = v
+                            if k.startswith("DEF_"):
+                                base = k[4:]
+        
+                                if base in self.current_config.config:
+                                    name = base
+                                    val = 1 if str(v) in ("True", "true", "1") else 0
+                                else:
+                                    self.logger.warning(f"[apply] skip '{k}': base macro '{base}' not in config")
+                                    continue
+                            
+                            solution_macro[name] = val
+                       
+                        key = frozenset(solution_macro.items())
+                        if key in self.macro_set:
+                            continue
+                        self.macro_set.add(key)
+                        
+                        for name,val in solution_macro.items() :
+                            print(f"[apply] set {name} = {val} ")
+                            self.current_config.change_config(name,val)
+
+                        break
+                        
             """
                 랜덤하게 2개 mutate
             """
             for i in range(self.threshold):
-                # print(target_macros)
                 random_macro = random.choice(target_macros)
                 self.current_config.change_config(random_macro.name)
 

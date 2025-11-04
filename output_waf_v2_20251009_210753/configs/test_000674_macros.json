@@ -1,0 +1,10 @@
+{
+  "test_id": 674,
+  "timestamp": "2025-10-11T03:53:59.666355",
+  "macro_changes": {
+    "AP_AIS_ENABLED": 1,
+    "HAL_GPIO_OUTPUT": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0
+  }
+}

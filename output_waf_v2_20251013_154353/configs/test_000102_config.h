@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #102 */
+
+/* ConfigFuzz: HAL_USE_FATFS */
+#ifdef HAL_USE_FATFS
+#undef HAL_USE_FATFS
+#endif
+#define HAL_USE_FATFS 0
+
+/* ConfigFuzz: CONFIG_LWIP_DHCP_RESTORE_LAST_IP */
+#ifdef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#undef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#endif
+#define CONFIG_LWIP_DHCP_RESTORE_LAST_IP 1
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 0
+
+/* ConfigFuzz: HAL_QUADPLANE_ENABLED */
+#ifdef HAL_QUADPLANE_ENABLED
+#undef HAL_QUADPLANE_ENABLED
+#endif
+#define HAL_QUADPLANE_ENABLED 1
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_GX */
+#ifdef MPUREG_CONFIG_EXT_SYNC_GX
+#undef MPUREG_CONFIG_EXT_SYNC_GX
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_GX 0
+
+/* ConfigFuzz: BACKEND_SAMPLE_RATE_MAX */
+#ifdef BACKEND_SAMPLE_RATE_MAX
+#undef BACKEND_SAMPLE_RATE_MAX
+#endif
+#define BACKEND_SAMPLE_RATE_MAX 4
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_SHIFT */
+#ifdef MPUREG_CONFIG_EXT_SYNC_SHIFT
+#undef MPUREG_CONFIG_EXT_SYNC_SHIFT
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_SHIFT 1
+
+/* ConfigFuzz: MODE_SMARTRTL_ENABLED */
+#ifdef MODE_SMARTRTL_ENABLED
+#undef MODE_SMARTRTL_ENABLED
+#endif
+#define MODE_SMARTRTL_ENABLED 0
+
+/* ConfigFuzz: AP_RADIO_ENABLED */
+#ifdef AP_RADIO_ENABLED
+#undef AP_RADIO_ENABLED
+#endif
+#define AP_RADIO_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

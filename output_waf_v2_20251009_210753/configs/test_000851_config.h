@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #851 */
+
+/* ConfigFuzz: AP_STATS_ENABLED */
+#ifdef AP_STATS_ENABLED
+#undef AP_STATS_ENABLED
+#endif
+#define AP_STATS_ENABLED 1
+
+/* ConfigFuzz: HAL_DEFAULT_INS_FAST_SAMPLE */
+#ifdef HAL_DEFAULT_INS_FAST_SAMPLE
+#undef HAL_DEFAULT_INS_FAST_SAMPLE
+#endif
+#define HAL_DEFAULT_INS_FAST_SAMPLE 1
+
+/* ConfigFuzz: AP_SRV_CHANNELS_ENABLED */
+#ifdef AP_SRV_CHANNELS_ENABLED
+#undef AP_SRV_CHANNELS_ENABLED
+#endif
+#define AP_SRV_CHANNELS_ENABLED 0
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 1
+
+/* ConfigFuzz: HAL_SERIAL_ESC_COMM_ENABLED */
+#ifdef HAL_SERIAL_ESC_COMM_ENABLED
+#undef HAL_SERIAL_ESC_COMM_ENABLED
+#endif
+#define HAL_SERIAL_ESC_COMM_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_UALBERTA */
+#ifdef MAVLINK_ENABLED_UALBERTA
+#undef MAVLINK_ENABLED_UALBERTA
+#endif
+#define MAVLINK_ENABLED_UALBERTA 0
+
+/* ConfigFuzz: FFT_MAX_MISSED_UPDATES */
+#ifdef FFT_MAX_MISSED_UPDATES
+#undef FFT_MAX_MISSED_UPDATES
+#endif
+#define FFT_MAX_MISSED_UPDATES 1
+
+#endif /* _AP_CONFIG_H_ */

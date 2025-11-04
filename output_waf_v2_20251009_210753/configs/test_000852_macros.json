@@ -1,0 +1,10 @@
+{
+  "test_id": 852,
+  "timestamp": "2025-10-11T12:39:39.163370",
+  "macro_changes": {
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "AUTOTUNE_ENABLED": 0
+  }
+}

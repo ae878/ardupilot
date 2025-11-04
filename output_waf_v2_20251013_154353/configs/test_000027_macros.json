@@ -1,0 +1,9 @@
+{
+  "test_id": 27,
+  "timestamp": "2025-10-13T17:00:40.611537",
+  "macro_changes": {
+    "BACKEND_SAMPLE_RATE_MAX": 1,
+    "MPUREG_GYRO_CONFIG": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1
+  }
+}

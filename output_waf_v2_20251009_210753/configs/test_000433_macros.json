@@ -1,0 +1,12 @@
+{
+  "test_id": 433,
+  "timestamp": "2025-10-10T16:38:43.741497",
+  "macro_changes": {
+    "WEATHERVANE_ENABLED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "USER_PARAMS_ENABLED": 0,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "AP_GRIPPER_ENABLED": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1
+  }
+}

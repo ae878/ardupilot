@@ -1,0 +1,10 @@
+{
+  "test_id": 782,
+  "timestamp": "2025-10-11T09:12:20.915086",
+  "macro_changes": {
+    "HAL_USE_HW_RNG": 1,
+    "RANGEFINDER_MAX_INSTANCES": 4,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0
+  }
+}

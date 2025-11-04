@@ -1,0 +1,11 @@
+{
+  "test_id": 702,
+  "timestamp": "2025-10-11T05:22:30.192334",
+  "macro_changes": {
+    "HAL_WITH_DRONECAN": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "HAL_USE_SDMMC": 0
+  }
+}

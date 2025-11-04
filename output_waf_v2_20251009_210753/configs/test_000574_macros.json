@@ -1,0 +1,12 @@
+{
+  "test_id": 574,
+  "timestamp": "2025-10-10T23:10:37.841854",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "HAL_HAVE_IMU_HEATER": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "HAL_PWM_COUNT": 1,
+    "HAL_GPIO_ALT": 0
+  }
+}

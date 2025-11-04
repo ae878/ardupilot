@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #5 */
+
+/* ConfigFuzz: HAL_DEFAULT_INS_FAST_SAMPLE */
+#ifdef HAL_DEFAULT_INS_FAST_SAMPLE
+#undef HAL_DEFAULT_INS_FAST_SAMPLE
+#endif
+#define HAL_DEFAULT_INS_FAST_SAMPLE 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 0
+
+/* ConfigFuzz: HAL_MEMORY_TOTAL_KB */
+#ifdef HAL_MEMORY_TOTAL_KB
+#undef HAL_MEMORY_TOTAL_KB
+#endif
+#define HAL_MEMORY_TOTAL_KB 1
+
+/* ConfigFuzz: HAL_BATT_VOLT_PIN */
+#ifdef HAL_BATT_VOLT_PIN
+#undef HAL_BATT_VOLT_PIN
+#endif
+#define HAL_BATT_VOLT_PIN 1
+
+/* ConfigFuzz: HAL_GPIO_INPUT */
+#ifdef HAL_GPIO_INPUT
+#undef HAL_GPIO_INPUT
+#endif
+#define HAL_GPIO_INPUT 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC 1
+
+/* ConfigFuzz: LEDDARONE_SERIAL_PORT_MAX */
+#ifdef LEDDARONE_SERIAL_PORT_MAX
+#undef LEDDARONE_SERIAL_PORT_MAX
+#endif
+#define LEDDARONE_SERIAL_PORT_MAX 8
+
+/* ConfigFuzz: MAXSONAR_SERIAL_LV_BAUD_RATE */
+#ifdef MAXSONAR_SERIAL_LV_BAUD_RATE
+#undef MAXSONAR_SERIAL_LV_BAUD_RATE
+#endif
+#define MAXSONAR_SERIAL_LV_BAUD_RATE 4
+
+#endif /* _AP_CONFIG_H_ */

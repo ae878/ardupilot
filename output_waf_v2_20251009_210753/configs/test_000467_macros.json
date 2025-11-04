@@ -1,0 +1,11 @@
+{
+  "test_id": 467,
+  "timestamp": "2025-10-10T18:11:37.091360",
+  "macro_changes": {
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_NUM_CAN_IFACES": 0
+  }
+}

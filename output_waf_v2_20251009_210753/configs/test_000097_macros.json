@@ -1,0 +1,9 @@
+{
+  "test_id": 97,
+  "timestamp": "2025-10-10T01:26:39.839043",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1
+  }
+}

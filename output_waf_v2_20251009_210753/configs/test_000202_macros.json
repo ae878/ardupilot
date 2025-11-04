@@ -1,0 +1,10 @@
+{
+  "test_id": 202,
+  "timestamp": "2025-10-10T06:02:33.224202",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "HAL_GENERATOR_ENABLED": 1,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1,
+    "HAL_MOUNT_ENABLED": 0
+  }
+}

@@ -1,0 +1,1648 @@
+{
+  "test_id": 163,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:951:6:0(uint32_t)",
+        "stack_size": 176
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:791:16:virtual SetFocusResult AP_Mount_Viewpro::set_focus(FocusType, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:757:6:void AP_Mount_Topotek::request_gimbal_attitude()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:886:6:void AP_Mount::send_camera_capture_status(uint8_t, mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:1012:6:void AP_Mount::handle_gimbal_device_attitude_status(const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:666:6:bool AP_Mount::pre_arm_checks(char*, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:814:6:bool AP_Mount_Siyi::send_zoom_mult(float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:928:6:virtual bool AP_Mount_Siyi::set_lens(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:183:18:virtual void AP_Mount_Backend::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:53:6:virtual bool AP_Camera_Mount::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:1138:6:virtual void GCS_MAVLINK_Copter::handle_mount_message(const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.cpp:16:6:virtual void AP_Mount_CADDX::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:144:6:virtual bool AP_Mount_Viewpro::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:296:6:0(float, float, float, bool) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:833:6:bool AP_Mount::set_tracking(uint8_t, TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:128:6:0(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:603:6:void AP_Mount_Topotek::read_incoming_packets()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:322:12:MAV_RESULT AP_Mount::handle_command_do_mount_configure(const mavlink_command_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:920:6:bool AP_Mount_Xacti::request_capabilities(uint32_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:209:18:virtual bool AP_Mount_Backend::get_rangefinder_distance(float&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:788:6:void AP_Mount_Topotek::request_gimbal_model_name()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:759:6:bool AP_Mount_Xacti::get_param_string(AP_Mount_Xacti::Param)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1149:6:bool AP_Mount_Topotek::send_variablelen_packet(AP_Mount_Topotek::HeaderType, AP_Mount_Topotek::AddressByte, const char*, bool, const uint8_t*, uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:509:6:0(mavlink_channel_t) const",
+        "stack_size": 400
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:55:5:Canard::Subscriber<msgtype>::~Subscriber() [with msgtype = com_xacti_GnssStatusReq]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = com_xacti_GimbalAttitudeStatus]",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:197:6:void AP_Mount_Siyi::read_incoming_packets()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:775:6:bool AP_Mount_Xacti::process_set_param_int32_queue()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:86:6:virtual void AP_Camera_Mount::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:133:6:virtual bool AP_Mount_Servo::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1098:6:void AP_Mount_Topotek::gimbal_model_name_analyse()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:637:6:bool AP_Mount::get_attitude_quaternion(uint8_t, Quaternion&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:127:6:virtual bool AP_Mount_Servo::has_pan_control() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:393:6:virtual bool AP_Mount_Xacti::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:748:6:virtual bool AP_Mount_Siyi::record_video(bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.h:52:10:virtual bool AP_Mount_Viewpro::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:846:6:virtual bool AP_Mount_Siyi::set_zoom(ZoomType, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:356:12:MAV_RESULT AP_Mount_Backend::handle_command_do_gimbal_manager_configure(const mavlink_command_int_t&, const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:916:6:0(mavlink_channel_t) const",
+        "stack_size": 400
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:892:6:bool AP_Mount_Topotek::send_location_info()",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:856:6:0(uint32_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:643:6:bool AP_Mount_Siyi::send_1byte_packet(AP_Mount_Siyi::SiyiCommandId, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:276:6:void AP_Mount_Gremsy::send_gimbal_device_set_rate(float, float, float, bool) const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:742:6:virtual bool AP_Mount_Viewpro::set_zoom(ZoomType, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:731:6:virtual bool AP_Mount_Viewpro::record_video(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:virtual Canard::ArgCallback<AP_DroneCAN, com_xacti_GnssStatusReq>::~ArgCallback()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:381:6:virtual void AP_Mount_Xacti::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:754:6:void AP_Mount::set_target_sysid(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32.cpp:16:6:virtual void AP_Mount_SToRM32::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:204:6:void AP_Mount::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.cpp:93:6:virtual bool AP_Mount_Scripting::get_location_target(Location&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:897:6:void AP_Mount::send_camera_thermal_range(uint8_t, mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:429:6:void AP_Mount_Xacti::register_backend()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:856:6:virtual bool AP_Mount_Viewpro::set_lens(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:756:7:float AP_Mount_Backend::MountTarget::get_ef_yaw() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:485:6:bool AP_Mount_Viewpro::send_comm_config_cmd(AP_Mount_Viewpro::CommConfigCmd)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:36:6:void AP_Mount_Backend::set_dev_id(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:127:6:virtual bool AP_Camera_Mount::change_setting(CameraSetting, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:75:6:virtual bool AP_Camera_Mount::set_camera_source(AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:596:6:virtual bool AP_Mount_Topotek::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:425:6:bool AP_Mount_Topotek::cancel_tracking()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:30:6:virtual bool AP_Camera_Mount::set_zoom(ZoomType, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:284:6:void AP_Mount::set_yaw_lock(uint8_t, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:42:6:virtual bool AP_Mount_Backend::has_roll_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:501:6:bool AP_Mount_Viewpro::send_target_rates(float, float, bool)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:261:6:void AP_Mount::set_mode_to_default(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:186:18:virtual void AP_Mount_Backend::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:955:6:void AP_Mount_Topotek::gimbal_angle_analyse()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:735:6:bool AP_Mount_Backend::get_angle_target_to_roi(AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:398:6:bool AP_Mount_Viewpro::send_packet(const uint8_t*, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:35:6:virtual void AP_Mount_Viewpro::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:789:6:bool AP_Mount::take_picture(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:648:6:bool AP_Mount::get_attitude_euler(uint8_t, float&, float&, float&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:638:6:bool AP_Mount_Viewpro::send_tracking_command2(AP_Mount_Viewpro::TrackingCommand2, int16_t, int16_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:188:6:virtual bool AP_Mount_Siyi::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:743:6:void AP_Mount::write_log(uint8_t, uint64_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:171:18:virtual bool AP_Mount_Backend::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:853:6:bool AP_Mount_Backend::get_angle_target_to_home(AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:458:17:static AP_Mount_Xacti* AP_Mount_Xacti::get_dronecan_backend(AP_DroneCAN*, uint8_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:130:6:void AP_Mount_Gremsy::find_gimbal()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:972:6:void AP_Mount_Topotek::gimbal_record_analyse()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:183:9:uint8_t AP_Mount_SToRM32_serial::get_reply_size(AP_Mount_SToRM32_serial::ReplyType)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:212:18:virtual bool AP_Mount_Backend::set_rangefinder_enable(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:63:6:virtual void AP_Mount_Xacti::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:262:18:virtual bool AP_Mount_Backend::suppress_heartbeat() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:121:6:virtual bool AP_Mount_Servo::has_pitch_control() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:585:6:bool AP_Mount_Siyi::send_packet(AP_Mount_Siyi::SiyiCommandId, const uint8_t*, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.h:30:10:virtual bool AP_Mount_Gremsy::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:95:6:virtual void AP_Camera_Mount::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:271:6:void AP_Mount::set_mode(uint8_t, MAV_MOUNT_MODE)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1159:13:const char* AP_Mount_Siyi::get_model_name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:197:6:void AP_Mount_SToRM32_serial::read_incoming()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:509:6:static void AP_Mount_Xacti::handle_gnss_status_req(AP_DroneCAN*, const CanardRxTransfer&, const com_xacti_GnssStatusReq&)",
+        "stack_size": 184
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:570:6:virtual bool AP_Mount_Topotek::get_rangefinder_distance(float&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:144:18:virtual bool AP_Mount_Backend::get_location_target(Location&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:261:6:void AP_Mount_Backend::send_gimbal_manager_information(mavlink_channel_t)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:611:6:void AP_Mount::send_gimbal_manager_status(mavlink_channel_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:999:6:void AP_Mount_Topotek::gimbal_track_analyse()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1040:6:virtual void AP_Mount_Siyi::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1027:6:void AP_Mount_Topotek::gimbal_dist_info_analyse()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:145:18:virtual void AP_Mount_Backend::set_attitude_euler(float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:104:10:void Canard::ArgCallback<T, msgtype>::operator()(const CanardRxTransfer&, const msgtype&) [with T = AP_DroneCAN; msgtype = com_xacti_GnssStatusReq]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:20:6:virtual void AP_Mount_Backend::init()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.cpp:109:6:void AP_Mount_CADDX::send_target_angles(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:553:6:bool AP_Mount_Xacti::handle_param_get_set_response_int(AP_DroneCAN*, uint8_t, const char*, int32_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:318:6:void AP_Mount_Siyi::process_packet()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.cpp:85:6:virtual bool AP_Mount_Scripting::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:916:6:virtual void AP_Mount_Viewpro::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:1028:1:cpp)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:865:12:virtual MAV_RESULT GCS_MAVLINK_Copter::handle_command_mount(const mavlink_command_int_t&, const mavlink_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:37:1:AP_Mount_Xacti::AP_Mount_Xacti(AP_Mount&, AP_Mount_Params&, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:798:6:bool AP_Mount_Siyi::send_zoom_rate(float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:150:6:void AP_Mount_Backend::set_roi_target(const Location&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:587:6:void AP_Mount_Backend::set_rctargeting_on_rcinput_change()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:40:6:virtual void AP_Mount_Siyi::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:876:6:void AP_Mount::send_camera_settings(uint8_t, mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32.cpp:99:6:virtual bool AP_Mount_SToRM32::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:775:6:void AP_Mount::clear_roi_target(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:795:6:void AP_Mount_Topotek::send_angle_target(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:56:6:void AP_Mount::init()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:811:6:bool AP_Camera::set_lens(uint8_t, uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Mount::update_fast; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:707:6:void AP_Mount_Xacti::handle_param_save_response(AP_DroneCAN*, uint8_t, bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:virtual Canard::ArgCallback<AP_DroneCAN, com_xacti_GimbalAttitudeStatus>::~ArgCallback()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:55:5:Canard::Subscriber<msgtype>::~Subscriber() [with msgtype = com_xacti_GimbalAttitudeStatus]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:204:6:virtual bool AP_Mount_Topotek::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1236:6:void AP_Mount_Siyi::request_thermal_minmax()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:276:6:void AP_Mount_Backend::send_gimbal_manager_status(mavlink_channel_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:267:16:virtual SetFocusResult AP_Mount_Xacti::set_focus(FocusType, float)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:798:6:void AP_Mount_Xacti::send_gimbal_control(uint8_t, int16_t, int16_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:51:6:virtual void AP_Mount_Xacti::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:866:6:void AP_Mount::send_camera_information(uint8_t, mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:48:6:virtual bool AP_Mount_Backend::has_pitch_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:221:6:void AP_Mount_Gremsy::request_gimbal_device_information() const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:903:6:bool AP_Mount_Xacti::request_firmware_version(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:624:6:bool AP_Mount::get_poi(uint8_t, Quaternion&, Location&, Location&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:416:6:void AP_Mount_Backend::write_log(uint64_t)",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:741:6:virtual bool AP_Mount_Siyi::take_picture()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:486:6:void AP_Mount::handle_gimbal_manager_set_pitchyaw(const mavlink_message_t&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:703:6:bool AP_Mount::get_angle_target(uint8_t, float&, float&, float&, bool&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:961:6:void AP_Mount::handle_message(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:194:6:void AP_Mount_Backend::send_gimbal_device_attitude_status(mavlink_channel_t)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:495:6:static void AP_Mount_Xacti::handle_gimbal_attitude_status(AP_DroneCAN*, const CanardRxTransfer&, const com_xacti_GimbalAttitudeStatus&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:112:6:virtual bool AP_Mount_SToRM32_serial::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:674:6:void AP_Camera::send_camera_thermal_range(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:744:7:float AP_Mount_Backend::MountTarget::get_bf_yaw() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:93:18:virtual bool AP_Camera_Backend::set_camera_source(AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:419:6:static bool AP_Mount_Xacti::subscribe_msgs(AP_DroneCAN*)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:668:6:bool AP_Mount_Siyi::set_motion_mode(AP_Mount_Siyi::GimbalMotionMode, bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:401:6:void AP_Mount_Xacti::send_target_rates(float, float, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:64:6:bool AP_Mount_Backend::set_mode(MAV_MOUNT_MODE)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:764:6:void AP_Mount_Topotek::request_gimbal_sdcard_info()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:1002:6:void AP_Mount::handle_gimbal_device_information(const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:208:6:virtual void AP_Mount_Gremsy::handle_gimbal_device_attitude_status(const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:991:6:void AP_Mount::handle_param_value(const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1141:6:bool AP_Mount_Topotek::send_fixedlen_packet(AP_Mount_Topotek::AddressByte, const char*, bool, uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1169:6:virtual bool AP_Mount_Siyi::get_rangefinder_distance(float&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:929:6:bool AP_Mount::set_rangefinder_enable(uint8_t, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:237:6:void AP_Mount_SToRM32_serial::parse_reply()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../ArduCopter/mode_auto.cpp:1981:6:void ModeAuto::do_mount_control(const AP_Mission::Mission_Command&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:248:16:MAV_MOUNT_MODE AP_Mount::get_mode(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:132:18:virtual void AP_Mount_Backend::handle_gimbal_device_information(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:768:6:void AP_Mount_Backend::MountTarget::set(const Vector3f&, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:189:18:virtual void AP_Mount_Backend::send_camera_capture_status(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:509:6:virtual void AP_Mount_Topotek::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1258:6:void AP_Mount_Siyi::send_attitude_position()",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend_Serial.cpp:10:6:virtual void AP_Mount_Backend_Serial::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:1120:11:AP_Mount* AP::mount()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:590:6:bool AP_Mount_Viewpro::send_camera_command2(AP_Mount_Viewpro::CameraCommand2, uint16_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:447:6:void AP_Mount_Viewpro::send_handshake()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:983:6:virtual bool AP_Mount_Siyi::set_camera_source(uint8_t, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.cpp:112:6:virtual bool AP_Mount_Scripting::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:162:18:virtual bool AP_Mount_Backend::set_zoom(ZoomType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:856:6:bool AP_Mount_Xacti::update_zoom_rate_control(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:839:6:void AP_Mount_Topotek::send_rate_target(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:876:6:virtual bool AP_Mount_Viewpro::set_camera_source(uint8_t, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:890:6:bool AP_Mount_Backend::get_angle_target(float&, float&, float&, bool&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:228:10:virtual uint32_t AP_Mount_Backend::get_gimbal_manager_capability_flags() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.cpp:19:6:virtual void AP_Mount_Scripting::update()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.h:50:10:virtual bool AP_Mount_Topotek::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:158:6:void AP_Mount_Servo::update_angle_outputs(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:823:6:0(uint32_t)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:552:12:MAV_RESULT AP_Mount::handle_command(const mavlink_command_int_t&, const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.cpp:103:6:virtual void AP_Mount_Scripting::set_attitude_euler(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:114:6:virtual void AP_Camera_Mount::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:Canard::ArgCallback<AP_DroneCAN, com_xacti_GnssStatusReq>::~ArgCallback()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:466:6:bool AP_Mount_Backend::get_poi(uint8_t, Quaternion&, Location&, Location&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:226:16:AP_Mount::Type AP_Mount::get_mount_type(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:722:6:void AP_Mount::set_attitude_euler(uint8_t, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:95:6:virtual bool AP_Mount_Gremsy::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:795:6:0(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1119:9:uint8_t AP_Mount_Topotek::hex2char(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:169:6:void AP_Mount_SToRM32_serial::get_angles()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:800:6:bool AP_Mount::record_video(uint8_t, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:131:6:void AP_Mount_Backend::set_rate_target(float, float, float, bool)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:135:18:virtual void AP_Mount_Backend::handle_gimbal_device_attitude_status(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:1022:6:void AP_Mount::convert_params()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1212:6:bool AP_Mount_Topotek::set_gimbal_lock(bool)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:166:6:void AP_Mount_Backend::clear_roi_target()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:807:10:uint16_t AP_Mount_Backend::get_gimbal_device_flags() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:172:6:void AP_Mount_Alexmos::get_angles()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:123:18:virtual void AP_Mount_Backend::handle_gimbal_report(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:871:6:bool AP_Mount_Topotek::send_time_to_gimbal()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:378:9:uint8_t AP_Mount_Viewpro::calc_crc(const uint8_t*, uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:259:6:void AP_Mount_Gremsy::send_gimbal_device_retract() const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.cpp:101:6:virtual bool AP_Mount_CADDX::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:141:18:virtual void AP_Camera_Backend::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1040:6:0(mavlink_channel_t) const",
+        "stack_size": 408
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1143:6:virtual bool AP_Mount_Siyi::change_setting(CameraSetting, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:1010:6:bool AP_Mount_Xacti::is_safe_to_send(uint32_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:56:18:virtual bool AP_Mount_Backend::healthy() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:298:6:void AP_Mount_Alexmos::read_incoming()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:843:6:bool AP_Mount::set_lens(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:897:16:virtual SetFocusResult AP_Mount_Siyi::set_focus(FocusType, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:903:6:void AP_Mount_Backend::send_warning_to_GCS(const char*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:20:6:virtual bool AP_Camera_Mount::record_video(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1099:6:virtual void AP_Mount_Siyi::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:717:13:const char* AP_Mount_Xacti::get_param_name_str(AP_Mount_Xacti::Param) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:701:6:void AP_Mount_Siyi::send_target_angles(float, float, bool)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:311:6:void AP_Mount::set_rate_target(uint8_t, float, float, float, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:658:6:void AP_Mount_Backend::get_rc_target(AP_Mount_Backend::MountTargetType&, AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:172:6:virtual void AP_Mount_Gremsy::handle_gimbal_device_information(const mavlink_message_t&)",
+        "stack_size": 208
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:528:6:bool AP_Mount_Viewpro::send_target_angles(float, float, bool)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:825:6:bool AP_Camera::set_camera_source(uint8_t, AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:713:6:bool AP_Mount::get_location_target(uint8_t, Location&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:461:6:virtual bool AP_Mount_Topotek::set_camera_source(uint8_t, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:733:6:void AP_Mount::write_log()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:71:18:virtual bool AP_Mount_Backend::get_angular_velocity(Vector3f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:9:6:virtual bool AP_Camera_Mount::trigger_pic()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:399:6:bool AP_Mount_Backend::handle_global_position_int(uint8_t, const mavlink_global_position_int_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:17:6:virtual void AP_Mount_Gremsy::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:553:6:virtual void AP_Mount_Topotek::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:491:6:void AP_Mount_Backend::calculate_poi()",
+        "stack_size": 160
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:31:6:virtual void AP_Mount_Servo::update()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:634:6:void AP_Mount_Backend::get_rc_input(float&, float&, float&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:155:6:virtual bool AP_Mount_Alexmos::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:179:6:void AP_Mount_Backend::set_target_sysid(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:183:6:virtual bool AP_Mount_Xacti::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:589:6:void AP_Mount::send_gimbal_device_attitude_status(mavlink_channel_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:864:6:bool AP_Mount_Backend::get_angle_target_to_sysid(AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.h:51:10:virtual bool AP_Mount_Siyi::has_roll_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:115:6:virtual bool AP_Mount_Servo::has_roll_control() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:58:6:virtual void AP_Mount_Topotek::update()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:155:18:virtual bool AP_Mount_Backend::take_picture()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:877:6:bool AP_Mount_Backend::get_rate_target(float&, float&, float&, bool&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:409:6:void AP_Mount_Xacti::send_target_angles(float, float, bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:773:6:void AP_Mount_Topotek::request_track_status()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:214:6:virtual bool AP_Mount_Xacti::record_video(bool)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:264:6:void AP_Mount_Alexmos::parse_body()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:292:6:virtual bool AP_Mount_Xacti::set_lens(uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:174:18:virtual bool AP_Mount_Backend::set_lens(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.h:111:10:virtual bool AP_Mount_Siyi::get_angular_velocity(Vector3f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.h:54:10:virtual bool AP_Mount_Siyi::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:207:6:void AP_Mount_Alexmos::control_axis(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:951:6:bool AP_Mount_Xacti::set_datetime(uint32_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:149:6:virtual bool AP_Mount_Alexmos::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:74:6:void AP_Mount_Backend::update_mnt_target_from_rc_target()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:232:6:void AP_Mount_Alexmos::write_params()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:571:6:void AP_Mount::handle_global_position_int(const mavlink_message_t&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:118:6:bool AP_Mount_SToRM32_serial::can_send(bool)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:166:28:virtual SetFocusResult AP_Mount_Backend::set_focus(FocusType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32.h:26:10:virtual bool AP_Mount_SToRM32::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:389:9:uint8_t AP_Mount_Viewpro::get_length_and_frame_count_byte(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.cpp:109:6:0(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:991:6:virtual bool AP_Mount_Viewpro::set_rangefinder_enable(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:440:6:virtual bool AP_Mount_Topotek::set_lens(uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:997:6:bool AP_Mount_Xacti::request_status(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:296:6:void AP_Mount_Gremsy::send_gimbal_device_set_attitude(float, float, float, bool) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:60:6:virtual void AP_Mount_Alexmos::init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:546:12:MAV_RESULT AP_Mount::handle_command_do_set_roi_sysid(const mavlink_command_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:919:6:bool AP_Mount::get_rangefinder_distance(uint8_t, float&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:693:6:bool AP_Mount::get_rate_target(uint8_t, float&, float&, float&, bool&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:421:6:void AP_Mount::handle_gimbal_manager_set_attitude(const mavlink_message_t&)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:236:6:bool AP_Mount::has_pan_control(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:53:18:virtual void AP_Mount_Backend::update_fast()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:583:6:virtual bool AP_Mount_Topotek::set_rangefinder_enable(bool)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:826:7:float AP_Mount_Siyi::get_zoom_mult_max() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:295:12:MAV_RESULT AP_Mount_Backend::handle_command_do_mount_control(const mavlink_command_int_t&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:243:6:0(uint8_t, uint8_t*, uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:159:18:virtual bool AP_Mount_Backend::record_video(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:600:6:void AP_Mount::send_gimbal_manager_information(mavlink_channel_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:12:6:virtual void AP_Mount_SToRM32_serial::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:74:6:virtual void AP_Mount_Alexmos::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Mount_Xacti::handle_param_get_set_response_string; RetType = bool; Args = {AP_DroneCAN*, const unsigned char, const char*, AP_DroneCAN::string&}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1109:9:uint8_t AP_Mount_Topotek::calculate_crc(const uint8_t*, uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:909:6:bool AP_Mount::change_setting(uint8_t, CameraSetting, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:958:6:virtual void AP_Mount_Viewpro::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32.cpp:106:6:void AP_Mount_SToRM32::find_gimbal()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:204:6:void AP_Mount_Servo::move_servo(uint8_t, int16_t, int16_t, int16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:104:10:void Canard::ArgCallback<T, msgtype>::operator()(const CanardRxTransfer&, const msgtype&) [with T = AP_DroneCAN; msgtype = com_xacti_GimbalAttitudeStatus]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:828:6:virtual bool AP_Mount_Viewpro::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:781:6:void AP_Mount_Topotek::request_gimbal_version()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:692:6:void AP_Mount_Siyi::send_target_rates(float, float, bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:217:6:virtual bool AP_Mount_Topotek::take_picture()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:801:6:bool AP_Camera::set_lens(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:938:19:AP_Mount_Backend* AP_Mount::get_primary() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Mount_Backend::calculate_poi; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.h:27:10:virtual bool AP_Mount_CADDX::has_roll_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:295:6:void AP_Camera_Backend::send_camera_fov_status(mavlink_channel_t) const",
+        "stack_size": 176
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:855:6:bool AP_Mount::set_camera_source(uint8_t, uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:877:6:void AP_Mount_Siyi::update_zoom_control()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:162:6:virtual bool AP_Mount_Viewpro::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Mount_Xacti::handle_param_get_set_response_int; RetType = bool; Args = {AP_DroneCAN*, const unsigned char, const char*, long int&}]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:304:6:virtual bool AP_Mount_Xacti::set_camera_source(uint8_t, uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:53:6:bool AP_Mount_Backend::valid_mode(MAV_MOUNT_MODE) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1130:9:int16_t AP_Mount_Topotek::hexchar4_to_int16(char, char, char, char) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:41:16:virtual SetFocusResult AP_Camera_Mount::set_focus(FocusType, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.h:44:10:virtual bool AP_Mount_Xacti::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:1044:6:void AP_Mount_Topotek::gimbal_version_analyse()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:193:18:virtual void AP_Mount_Backend::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:245:6:bool AP_Mount_Gremsy::start_sending_attitude_to_gimbal()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:979:6:void AP_Mount_Topotek::gimbal_sdcard_analyse()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:650:6:void AP_Mount_Siyi::rotate_gimbal(int8_t, int8_t, bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Gremsy.cpp:123:6:virtual bool AP_Mount_Gremsy::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:179:18:virtual bool AP_Mount_Backend::set_camera_source(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:655:6:bool AP_Mount_Viewpro::send_m_ahrs()",
+        "stack_size": 152
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:779:6:void AP_Mount_Backend::update_angle_target_from_rate(const AP_Mount_Backend::MountTarget&, AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:646:6:void AP_Camera::send_camera_fov_status(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:Canard::ArgCallback<AP_DroneCAN, com_xacti_GimbalAttitudeStatus>::~ArgCallback()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.h:24:10:virtual bool AP_Mount_CADDX::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:698:6:bool AP_Mount_Backend::get_angle_target_to_location(const Location&, AP_Mount_Backend::MountTarget&) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:126:18:virtual void AP_Mount_Backend::handle_param_value(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.h:197:18:virtual bool AP_Mount_Backend::change_setting(CameraSetting, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:181:6:void AP_Mount_Alexmos::set_motor(bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = com_xacti_GnssStatusReq]",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:810:6:bool AP_Mount::set_zoom(uint8_t, ZoomType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:978:6:virtual bool AP_Mount_Viewpro::get_rangefinder_distance(float&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Mount_Xacti::handle_param_save_response; RetType = void; Args = {AP_DroneCAN*, const unsigned char, bool}]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32.cpp:128:6:void AP_Mount_SToRM32::send_do_mount_control(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:243:6:void AP_Mount_Alexmos::send_command(uint8_t, uint8_t*, uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:565:6:bool AP_Mount_Viewpro::send_camera_command(AP_Mount_Viewpro::ImageSensor, AP_Mount_Viewpro::CameraCommand, uint8_t, AP_Mount_Viewpro::LRFCommand)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:402:12:MAV_RESULT AP_Mount::handle_command_do_gimbal_manager_configure(const mavlink_command_int_t&, const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:64:6:virtual bool AP_Camera_Mount::set_lens(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Scripting.h:34:10:virtual bool AP_Mount_Scripting::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1119:6:virtual void AP_Mount_Siyi::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:461:6:bool AP_Mount_Viewpro::set_lock(bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:42:1:AP_Mount::AP_Mount()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:285:16:virtual SetFocusResult AP_Mount_Topotek::set_focus(FocusType, float)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:765:6:void AP_Mount::set_roi_target(uint8_t, const Location&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:170:6:void AP_Mount_Viewpro::read_incoming_packets()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:223:6:void AP_Mount_Alexmos::read_params(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:821:16:SetFocusResult AP_Mount::set_focus(uint8_t, FocusType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:215:6:void AP_Mount::update_fast()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:1187:6:void AP_Mount_Siyi::check_firmware_version() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:345:6:virtual void AP_Mount_Xacti::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:719:6:virtual bool AP_Mount_Viewpro::take_picture()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:220:6:virtual bool AP_Mount_Xacti::set_zoom(ZoomType, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.cpp:128:6:void AP_Mount_SToRM32_serial::send_target_angles(const AP_Mount_Backend::MountTarget&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:606:6:bool AP_Mount_Viewpro::send_tracking_command(AP_Mount_Viewpro::TrackingCommand, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Servo.cpp:13:6:virtual void AP_Mount_Servo::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:943:19:AP_Mount_Backend* AP_Mount::get_instance(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:345:6:0(mavlink_channel_t) const",
+        "stack_size": 400
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Alexmos.cpp:195:6:void AP_Mount_Alexmos::get_boardinfo()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:99:6:void AP_Mount_Backend::set_angle_target(float, float, float, bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:345:12:MAV_RESULT AP_Mount::handle_command_do_gimbal_manager_pitchyaw(const mavlink_command_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:630:6:bool AP_Mount_Xacti::handle_param_get_set_response_string(AP_DroneCAN*, uint8_t, const char*, AP_DroneCAN::string&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.cpp:274:6:void AP_Mount_Viewpro::process_packet()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:236:6:virtual bool AP_Mount_Topotek::record_video(bool)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:254:6:virtual bool AP_Mount_Topotek::set_zoom(ZoomType, float)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:335:12:MAV_RESULT AP_Mount::handle_command_do_mount_control(const mavlink_command_int_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:823:6:bool AP_Mount_Xacti::send_copter_att_status(uint32_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Topotek.cpp:332:6:virtual bool AP_Mount_Topotek::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:952:6:void AP_Mount::handle_gimbal_report(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:298:6:void AP_Mount::set_angle_target(uint8_t, float, float, float, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Viewpro.h:49:10:virtual bool AP_Mount_Viewpro::has_roll_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_CADDX.h:30:10:virtual bool AP_Mount_CADDX::has_pitch_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Siyi.cpp:170:6:virtual bool AP_Mount_Siyi::healthy() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:104:6:virtual void AP_Camera_Mount::send_camera_capture_status(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:201:6:virtual bool AP_Mount_Xacti::take_picture()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:728:6:bool AP_Mount_Xacti::set_param_int32(AP_Mount_Xacti::Param, int32_t)",
+        "stack_size": 12
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SToRM32_serial.h:29:10:virtual bool AP_Mount_SToRM32_serial::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Xacti.cpp:739:6:bool AP_Mount_Xacti::set_param_string(AP_Mount_Xacti::Param, const AP_DroneCAN::string&)",
+        "stack_size": 24
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../ArduCopter/mode_circle.cpp:11:6:virtual bool ModeCircle::init(bool)",
+        "baseline": 56,
+        "current": 16,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:307:6:bool AP_Mission::start_command_do_gimbal_manager_pitchyaw(const AP_Mission::Mission_Command&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:5199:12:virtual MAV_RESULT GCS_MAVLINK::handle_command_do_set_roi(const Location&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15518
+  },
+  "total_functions_analyzed": 15544
+}

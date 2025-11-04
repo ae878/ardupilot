@@ -1,0 +1,9 @@
+{
+  "test_id": 447,
+  "timestamp": "2025-10-10T17:15:28.572070",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 1,
+    "MAVLINK_ENABLED_ALL": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  }
+}

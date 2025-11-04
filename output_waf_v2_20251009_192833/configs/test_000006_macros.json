@@ -1,0 +1,16 @@
+{
+  "test_id": 6,
+  "timestamp": "2025-10-09T19:46:21.324779",
+  "macro_changes": {
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1,
+    "HAL_GENERATOR_ENABLED": 0,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "AP_STATS_ENABLED": 0,
+    "HAL_USE_FATFS": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "AP_MODULE_SUPPORTED": 0,
+    "MODE_FLIP_ENABLED": 1
+  }
+}

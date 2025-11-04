@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #105 */
+
+/* ConfigFuzz: HAL_GPIO_INPUT */
+#ifdef HAL_GPIO_INPUT
+#undef HAL_GPIO_INPUT
+#endif
+#define HAL_GPIO_INPUT 0
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS 1
+
+/* ConfigFuzz: TELEM_TIME_SLOT_MAX */
+#ifdef TELEM_TIME_SLOT_MAX
+#undef TELEM_TIME_SLOT_MAX
+#endif
+#define TELEM_TIME_SLOT_MAX 2
+
+/* ConfigFuzz: HAL_PERIPH_ENABLE_NOTIFY */
+#ifdef HAL_PERIPH_ENABLE_NOTIFY
+#undef HAL_PERIPH_ENABLE_NOTIFY
+#endif
+#define HAL_PERIPH_ENABLE_NOTIFY 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE 0
+
+/* ConfigFuzz: AP_SRV_CHANNELS_ENABLED */
+#ifdef AP_SRV_CHANNELS_ENABLED
+#undef AP_SRV_CHANNELS_ENABLED
+#endif
+#define AP_SRV_CHANNELS_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

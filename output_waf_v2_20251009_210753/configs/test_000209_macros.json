@@ -1,0 +1,12 @@
+{
+  "test_id": 209,
+  "timestamp": "2025-10-10T06:24:07.475621",
+  "macro_changes": {
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "AP_FENCE_ENABLED": 1,
+    "HAL_UART_IOMCU_IDX": 1,
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "TOY_MODE_ENABLED": 0
+  }
+}

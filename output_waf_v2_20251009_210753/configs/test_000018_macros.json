@@ -1,0 +1,10 @@
+{
+  "test_id": 18,
+  "timestamp": "2025-10-09T21:57:09.394711",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 1,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 1,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0
+  }
+}

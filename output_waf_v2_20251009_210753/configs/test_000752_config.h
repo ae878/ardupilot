@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #752 */
+
+/* ConfigFuzz: AP_COPTER_AHRS_AUTO_TRIM_ENABLED */
+#ifdef AP_COPTER_AHRS_AUTO_TRIM_ENABLED
+#undef AP_COPTER_AHRS_AUTO_TRIM_ENABLED
+#endif
+#define AP_COPTER_AHRS_AUTO_TRIM_ENABLED 1
+
+/* ConfigFuzz: HAL_USE_WSPI_DEFAULT_CFG */
+#ifdef HAL_USE_WSPI_DEFAULT_CFG
+#undef HAL_USE_WSPI_DEFAULT_CFG
+#endif
+#define HAL_USE_WSPI_DEFAULT_CFG 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ARDUPILOTMEGA */
+#ifdef MAVLINK_ENABLED_ARDUPILOTMEGA
+#undef MAVLINK_ENABLED_ARDUPILOTMEGA
+#endif
+#define MAVLINK_ENABLED_ARDUPILOTMEGA 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 1
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 1
+
+/* ConfigFuzz: HAL_SERIAL_ESC_COMM_ENABLED */
+#ifdef HAL_SERIAL_ESC_COMM_ENABLED
+#undef HAL_SERIAL_ESC_COMM_ENABLED
+#endif
+#define HAL_SERIAL_ESC_COMM_ENABLED 1
+
+/* ConfigFuzz: HAL_CANFD_SUPPORTED */
+#ifdef HAL_CANFD_SUPPORTED
+#undef HAL_CANFD_SUPPORTED
+#endif
+#define HAL_CANFD_SUPPORTED 0
+
+/* ConfigFuzz: HAL_GPIO_OUTPUT */
+#ifdef HAL_GPIO_OUTPUT
+#undef HAL_GPIO_OUTPUT
+#endif
+#define HAL_GPIO_OUTPUT 1
+
+#endif /* _AP_CONFIG_H_ */

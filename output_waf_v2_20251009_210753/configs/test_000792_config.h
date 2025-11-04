@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #792 */
+
+/* ConfigFuzz: HAL_WITH_UAVCAN */
+#ifdef HAL_WITH_UAVCAN
+#undef HAL_WITH_UAVCAN
+#endif
+#define HAL_WITH_UAVCAN 1
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED */
+#ifdef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#undef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#endif
+#define CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 1
+
+/* ConfigFuzz: AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED */
+#ifdef AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED
+#undef AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED
+#endif
+#define AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED 0
+
+/* ConfigFuzz: FLOW_CONTROL_ENABLED */
+#ifdef FLOW_CONTROL_ENABLED
+#undef FLOW_CONTROL_ENABLED
+#endif
+#define FLOW_CONTROL_ENABLED 0
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 1
+
+/* ConfigFuzz: HAL_DSHOT_ENABLED */
+#ifdef HAL_DSHOT_ENABLED
+#undef HAL_DSHOT_ENABLED
+#endif
+#define HAL_DSHOT_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_ICAROUS */
+#ifdef MAVLINK_ENABLED_ICAROUS
+#undef MAVLINK_ENABLED_ICAROUS
+#endif
+#define MAVLINK_ENABLED_ICAROUS 0
+
+#endif /* _AP_CONFIG_H_ */

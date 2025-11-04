@@ -1,0 +1,10 @@
+{
+  "test_id": 56,
+  "timestamp": "2025-10-13T18:18:38.929601",
+  "macro_changes": {
+    "AP_INERTIALSENSOR_KILL_IMU_ENABLED": 0,
+    "AP_RSSI_ENABLED": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "AP_FENCE_ENABLED": 1
+  }
+}

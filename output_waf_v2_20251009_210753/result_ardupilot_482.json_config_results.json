@@ -1,0 +1,80 @@
+[
+  {
+    "test_id": 483,
+    "timestamp": "2025-10-10T18:55:33.670398",
+    "macro_changes": {
+      "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+      "ESC_CHANNEL_MAP_CHANNEL": 0,
+      "AP_BEACON_ENABLED": 0,
+      "MAVLINK_ENABLED_UAVIONIX": 0,
+      "USER_PARAMS_ENABLED": 0,
+      "AC_PAYLOAD_PLACE_ENABLED": 0,
+      "NOOPLOOP_DIST_MAX_MM": 8,
+      "TELEM_TIME_SLOT_MAX": 4,
+      "AP_COMPASS_OFFSETS_MAX_DEFAULT": 2
+    },
+    "build_success": true,
+    "build_time": 190.7770700454712,
+    "build_result": true,
+    "high_stack_functions": [
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+        "stack_size": 2152,
+        "file": "AP_NavEKF3_core.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+        "stack_size": 2152,
+        "file": "AP_NavEKF3_core.cpp.7.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+        "stack_size": 1496,
+        "file": "AP_NavEKF2_core.cpp.0.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+        "stack_size": 1120,
+        "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+        "stack_size": 1120,
+        "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+        "stack_size": 1072,
+        "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+        "stack_size": 1072,
+        "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+        "stack_size": 1064,
+        "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+        "stack_size": 1048,
+        "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+        "stack_size": 1048,
+        "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+      }
+    ],
+    "stack_overflow_risk": 20,
+    "stack_changes_summary": {
+      "new_functions": 14,
+      "removed_functions": 59,
+      "increased_stack": 3,
+      "decreased_stack": 0,
+      "unchanged": 15837
+    }
+  }
+]

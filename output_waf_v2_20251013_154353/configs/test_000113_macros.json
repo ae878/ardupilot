@@ -1,0 +1,15 @@
+{
+  "test_id": 113,
+  "timestamp": "2025-10-13T21:01:28.410013",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 1,
+    "HAL_USB_PRODUCT_ID": 1,
+    "HAL_NO_FLASH_SUPPORT": 1,
+    "MODE_DRIFT_ENABLED": 0,
+    "HAL_WITH_IO_MCU": 0,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "FSYNC_CONFIG_EXT_SYNC_AZ": 1
+  }
+}

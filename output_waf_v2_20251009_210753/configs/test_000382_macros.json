@@ -1,0 +1,11 @@
+{
+  "test_id": 382,
+  "timestamp": "2025-10-10T14:12:17.612182",
+  "macro_changes": {
+    "HAL_WITH_RAMTRON": 1,
+    "HAL_WITH_UAVCAN": 0,
+    "MODE_ACRO_ENABLED": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "AP_ICENGINE_ENABLED": 1
+  }
+}

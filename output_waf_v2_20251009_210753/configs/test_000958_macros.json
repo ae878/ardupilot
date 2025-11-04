@@ -1,0 +1,11 @@
+{
+  "test_id": 958,
+  "timestamp": "2025-10-11T17:42:38.970628",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "AP_FOLLOW_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1
+  }
+}

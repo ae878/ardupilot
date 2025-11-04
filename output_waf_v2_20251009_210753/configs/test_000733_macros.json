@@ -1,0 +1,12 @@
+{
+  "test_id": 733,
+  "timestamp": "2025-10-11T06:47:37.518081",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 16,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 1
+  }
+}

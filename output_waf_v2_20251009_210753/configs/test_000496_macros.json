@@ -1,0 +1,15 @@
+{
+  "test_id": 496,
+  "timestamp": "2025-10-10T19:27:07.983934",
+  "macro_changes": {
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "MODE_LOITER_ENABLED": 0,
+    "HAL_BUTTON_ENABLED": 0,
+    "MODE_ACRO_ENABLED": 1,
+    "MODE_THROW_ENABLED": 0,
+    "AP_STATS_ENABLED": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1
+  }
+}

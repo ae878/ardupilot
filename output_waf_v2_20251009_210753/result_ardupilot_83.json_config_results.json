@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 84,
+    "timestamp": "2025-10-10T00:54:21.248580",
+    "macro_changes": {
+      "FLOW_CONTROL_ENABLED": 0,
+      "MODE_CIRCLE_ENABLED": 1,
+      "CONFIG_NEWLIB_NANO_FORMAT": 1,
+      "NOOPLOOP_DIST_MAX_MM": 8,
+      "MODE_AUTO_ENABLED": 1,
+      "HAL_WITH_RAMTRON": 0,
+      "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+      "HAL_INS_VRBRAIN": 0
+    },
+    "build_success": false,
+    "build_time": 125.46780443191528,
+    "build_result": false,
+    "error": "arm-none-eabi-gcc: fatal error: cannot execute '/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as': execv: Text file busy"
+  }
+]

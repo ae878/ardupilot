@@ -1,0 +1,15 @@
+{
+  "test_id": 20,
+  "timestamp": "2025-10-13T16:39:10.099896",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_SIM_ENABLED": 1,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0
+  },
+  "build_success": false,
+  "build_time": 201.6975769996643,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

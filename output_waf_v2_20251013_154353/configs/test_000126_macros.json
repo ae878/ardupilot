@@ -1,0 +1,12 @@
+{
+  "test_id": 126,
+  "timestamp": "2025-10-13T21:44:35.654079",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 1,
+    "AP_INERTIALSENSOR_KILL_IMU_ENABLED": 1,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_WITH_IO_MCU": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1
+  }
+}

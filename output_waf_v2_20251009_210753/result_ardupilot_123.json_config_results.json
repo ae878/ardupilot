@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 124,
+    "timestamp": "2025-10-10T02:37:03.919095",
+    "macro_changes": {
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+      "RANGEFINDER_MAX_INSTANCES": 16,
+      "AP_BEACON_ENABLED": 1,
+      "HAL_USE_WSPI_DEFAULT_CFG": 0,
+      "HAL_USE_HW_RNG": 0,
+      "HAL_COMPASS_AUTO_ROT_DEFAULT": 1
+    },
+    "build_success": false,
+    "build_time": 97.72290778160095,
+    "build_result": false,
+    "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+  }
+]

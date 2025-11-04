@@ -1,0 +1,10 @@
+{
+  "test_id": 183,
+  "timestamp": "2025-10-10T05:11:17.071703",
+  "macro_changes": {
+    "MODE_AUTO_ENABLED": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0
+  }
+}

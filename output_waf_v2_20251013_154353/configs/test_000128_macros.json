@@ -1,0 +1,13 @@
+{
+  "test_id": 128,
+  "timestamp": "2025-10-13T21:51:14.080109",
+  "macro_changes": {
+    "MAX_PWMS": 32,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0
+  }
+}

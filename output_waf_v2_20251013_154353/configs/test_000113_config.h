@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #113 */
+
+/* ConfigFuzz: HAL_GPIO_INPUT */
+#ifdef HAL_GPIO_INPUT
+#undef HAL_GPIO_INPUT
+#endif
+#define HAL_GPIO_INPUT 1
+
+/* ConfigFuzz: HAL_USB_PRODUCT_ID */
+#ifdef HAL_USB_PRODUCT_ID
+#undef HAL_USB_PRODUCT_ID
+#endif
+#define HAL_USB_PRODUCT_ID 1
+
+/* ConfigFuzz: HAL_NO_FLASH_SUPPORT */
+#ifdef HAL_NO_FLASH_SUPPORT
+#undef HAL_NO_FLASH_SUPPORT
+#endif
+#define HAL_NO_FLASH_SUPPORT 1
+
+/* ConfigFuzz: MODE_DRIFT_ENABLED */
+#ifdef MODE_DRIFT_ENABLED
+#undef MODE_DRIFT_ENABLED
+#endif
+#define MODE_DRIFT_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_IO_MCU */
+#ifdef HAL_WITH_IO_MCU
+#undef HAL_WITH_IO_MCU
+#endif
+#define HAL_WITH_IO_MCU 0
+
+/* ConfigFuzz: AP_CRASHDUMP_ENABLED */
+#ifdef AP_CRASHDUMP_ENABLED
+#undef AP_CRASHDUMP_ENABLED
+#endif
+#define AP_CRASHDUMP_ENABLED 1
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND */
+#ifdef FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#undef FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#endif
+#define FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL 1
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_AZ */
+#ifdef FSYNC_CONFIG_EXT_SYNC_AZ
+#undef FSYNC_CONFIG_EXT_SYNC_AZ
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_AZ 1
+
+#endif /* _AP_CONFIG_H_ */

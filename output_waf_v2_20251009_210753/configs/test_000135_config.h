@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #135 */
+
+/* ConfigFuzz: HAL_WITH_IO_MCU_BIDIR_DSHOT */
+#ifdef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#undef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#endif
+#define HAL_WITH_IO_MCU_BIDIR_DSHOT 1
+
+/* ConfigFuzz: HAL_WITH_DRONECAN */
+#ifdef HAL_WITH_DRONECAN
+#undef HAL_WITH_DRONECAN
+#endif
+#define HAL_WITH_DRONECAN 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 1
+
+/* ConfigFuzz: METADATA_MAX_i */
+#ifdef METADATA_MAX_i
+#undef METADATA_MAX_i
+#endif
+#define METADATA_MAX_i 1
+
+/* ConfigFuzz: KDECAN_MAX_NUM_ESCS */
+#ifdef KDECAN_MAX_NUM_ESCS
+#undef KDECAN_MAX_NUM_ESCS
+#endif
+#define KDECAN_MAX_NUM_ESCS 4
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 8
+
+/* ConfigFuzz: AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED */
+#ifdef AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED
+#undef AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED
+#endif
+#define AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED 0
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 0
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,9 @@
+{
+  "test_id": 273,
+  "timestamp": "2025-10-10T09:22:14.548683",
+  "macro_changes": {
+    "AP_FENCE_ENABLED": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "ESC_CHANNEL_MAP_CHANNEL": 0
+  }
+}

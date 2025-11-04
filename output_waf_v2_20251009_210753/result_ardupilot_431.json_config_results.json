@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 432,
+    "timestamp": "2025-10-10T16:35:26.509352",
+    "macro_changes": {
+      "TAP_ESC_MAX_MOTOR_NUM": 1,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+      "AP_MISSION_ENABLED": 0,
+      "HAL_GPIO_LED_ON": 1,
+      "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1,
+      "HAL_RCOUT_RGBLED_BLUE": 0,
+      "HAL_USB_VENDOR_ID": 0
+    },
+    "build_success": false,
+    "build_time": 170.09386920928955,
+    "build_result": false,
+    "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+  }
+]

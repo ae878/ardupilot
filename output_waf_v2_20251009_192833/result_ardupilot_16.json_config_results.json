@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 17,
+    "timestamp": "2025-10-09T20:14:32.729734",
+    "macro_changes": {
+      "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+      "NOOPLOOP_DIST_MAX_MM": 32,
+      "CONFIG_LWIP_STATS": 1,
+      "AP_RELAY_ENABLED": 0,
+      "HAL_INS_RATE_LOOP": 0,
+      "AC_PRECLAND_ENABLED": 1,
+      "AP_SERIALMANAGER_ENABLED": 0,
+      "AP_COMPASS_OFFSETS_MAX_DEFAULT": 32,
+      "HAL_WITH_MCU_MONITORING": 1,
+      "HAL_GENERATOR_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 9.697120666503906,
+    "build_result": false,
+    "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+  }
+]

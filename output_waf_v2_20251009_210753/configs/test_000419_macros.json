@@ -1,0 +1,10 @@
+{
+  "test_id": 419,
+  "timestamp": "2025-10-10T15:59:48.916068",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1
+  }
+}

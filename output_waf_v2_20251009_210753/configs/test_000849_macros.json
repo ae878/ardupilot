@@ -1,0 +1,11 @@
+{
+  "test_id": 849,
+  "timestamp": "2025-10-11T12:29:47.535759",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_RALLY_ENABLED": 1,
+    "HAL_USE_FATFS": 1,
+    "HAL_USE_HW_RNG": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 540,
+    "timestamp": "2025-10-10T21:39:39.958884",
+    "macro_changes": {
+      "HAL_NUM_CAN_IFACES": 0,
+      "USER_PARAMS_ENABLED": 0,
+      "HAL_ENABLE_THREAD_STATISTICS": 1,
+      "HAL_GENERATOR_ENABLED": 1,
+      "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+      "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+      "MAVLINK_ENABLED_CSAIRLINK": 0,
+      "TELEM_TIME_SLOT_MAX": 2
+    },
+    "build_success": false,
+    "build_time": 87.9309241771698,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+  }
+]

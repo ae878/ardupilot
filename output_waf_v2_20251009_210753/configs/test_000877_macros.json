@@ -1,0 +1,12 @@
+{
+  "test_id": 877,
+  "timestamp": "2025-10-11T13:50:13.059952",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "SUMD_MAX_CHANNELS": 32
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 318,
+    "timestamp": "2025-10-10T11:18:08.658285",
+    "macro_changes": {
+      "FS_GCS_ENABLED_ALWAYS_RTL": 1,
+      "AP_COMPASS_OFFSETS_MAX_DEFAULT": 2,
+      "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+      "MODE_ACRO_ENABLED": 1,
+      "MODE_CIRCLE_ENABLED": 1,
+      "BENCH_DEFINE_MAP_IMPLICIT": 1,
+      "AP_FEATURE_RTSCTS": 0,
+      "MODE_FLIP_ENABLED": 0,
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+      "AP_SRV_CHANNELS_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 29.52055311203003,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+  }
+]

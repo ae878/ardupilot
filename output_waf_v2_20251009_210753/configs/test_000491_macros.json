@@ -1,0 +1,13 @@
+{
+  "test_id": 491,
+  "timestamp": "2025-10-10T19:10:54.667521",
+  "macro_changes": {
+    "HAL_GPIO_LED_ON": 1,
+    "HAL_WITH_UAVCAN": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "MODE_AUTO_ENABLED": 0,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 895,
+  "timestamp": "2025-10-11T14:40:11.510749",
+  "macro_changes": {
+    "HAL_USB_PRODUCT_ID": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "AP_CRASHDUMP_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 196.22510361671448,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

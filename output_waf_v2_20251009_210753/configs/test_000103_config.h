@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #103 */
+
+/* ConfigFuzz: FS_GCS_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_GCS_ENABLED_BRAKE_OR_LAND
+#undef FS_GCS_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_GCS_ENABLED_BRAKE_OR_LAND 1
+
+/* ConfigFuzz: HAL_BUTTON_ENABLED */
+#ifdef HAL_BUTTON_ENABLED
+#undef HAL_BUTTON_ENABLED
+#endif
+#define HAL_BUTTON_ENABLED 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 0
+
+/* ConfigFuzz: HAL_SPEKTRUM_TELEM_ENABLED */
+#ifdef HAL_SPEKTRUM_TELEM_ENABLED
+#undef HAL_SPEKTRUM_TELEM_ENABLED
+#endif
+#define HAL_SPEKTRUM_TELEM_ENABLED 1
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 0
+
+/* ConfigFuzz: HAL_DEFAULT_INS_FAST_SAMPLE */
+#ifdef HAL_DEFAULT_INS_FAST_SAMPLE
+#undef HAL_DEFAULT_INS_FAST_SAMPLE
+#endif
+#define HAL_DEFAULT_INS_FAST_SAMPLE 1
+
+/* ConfigFuzz: AP_ICENGINE_ENABLED */
+#ifdef AP_ICENGINE_ENABLED
+#undef AP_ICENGINE_ENABLED
+#endif
+#define AP_ICENGINE_ENABLED 1
+
+/* ConfigFuzz: HAL_WITH_SPI_RAMTRON */
+#ifdef HAL_WITH_SPI_RAMTRON
+#undef HAL_WITH_SPI_RAMTRON
+#endif
+#define HAL_WITH_SPI_RAMTRON 0
+
+/* ConfigFuzz: HAL_USB_PRODUCT_ID */
+#ifdef HAL_USB_PRODUCT_ID
+#undef HAL_USB_PRODUCT_ID
+#endif
+#define HAL_USB_PRODUCT_ID 1
+
+#endif /* _AP_CONFIG_H_ */

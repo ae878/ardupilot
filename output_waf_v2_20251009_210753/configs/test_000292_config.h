@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #292 */
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 1
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 2
+
+/* ConfigFuzz: MAVLINK_ENABLED_CUBEPILOT */
+#ifdef MAVLINK_ENABLED_CUBEPILOT
+#undef MAVLINK_ENABLED_CUBEPILOT
+#endif
+#define MAVLINK_ENABLED_CUBEPILOT 1
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 1
+
+/* ConfigFuzz: HAL_EXTERNAL_AHRS_DEFAULT */
+#ifdef HAL_EXTERNAL_AHRS_DEFAULT
+#undef HAL_EXTERNAL_AHRS_DEFAULT
+#endif
+#define HAL_EXTERNAL_AHRS_DEFAULT 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_GEOMETRY */
+#ifdef BENCH_DEFINE_MAP_GEOMETRY
+#undef BENCH_DEFINE_MAP_GEOMETRY
+#endif
+#define BENCH_DEFINE_MAP_GEOMETRY 0
+
+/* ConfigFuzz: HAL_HAVE_SAFETY_SWITCH */
+#ifdef HAL_HAVE_SAFETY_SWITCH
+#undef HAL_HAVE_SAFETY_SWITCH
+#endif
+#define HAL_HAVE_SAFETY_SWITCH 1
+
+/* ConfigFuzz: HAL_WITH_IO_MCU */
+#ifdef HAL_WITH_IO_MCU
+#undef HAL_WITH_IO_MCU
+#endif
+#define HAL_WITH_IO_MCU 0
+
+/* ConfigFuzz: HAL_IMUHEAT_P_DEFAULT */
+#ifdef HAL_IMUHEAT_P_DEFAULT
+#undef HAL_IMUHEAT_P_DEFAULT
+#endif
+#define HAL_IMUHEAT_P_DEFAULT 1
+
+/* ConfigFuzz: HAL_WITH_IO_MCU_BIDIR_DSHOT */
+#ifdef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#undef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#endif
+#define HAL_WITH_IO_MCU_BIDIR_DSHOT 0
+
+#endif /* _AP_CONFIG_H_ */

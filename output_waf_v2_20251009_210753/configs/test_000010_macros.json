@@ -1,0 +1,12 @@
+{
+  "test_id": 10,
+  "timestamp": "2025-10-09T21:34:36.677649",
+  "macro_changes": {
+    "HAL_GPIO_ALT": 1,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_GENERATOR_ENABLED": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+  }
+}

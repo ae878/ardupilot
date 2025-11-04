@@ -1,0 +1,12 @@
+{
+  "test_id": 305,
+  "timestamp": "2025-10-10T10:51:18.694563",
+  "macro_changes": {
+    "MAX_PWMS": 4,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 88,
+  "timestamp": "2025-10-13T19:54:27.533860",
+  "macro_changes": {
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "AP_OPTICALFLOW_ENABLED": 1,
+    "AP_NETWORKING_NUM_PORTS": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0
+  }
+}

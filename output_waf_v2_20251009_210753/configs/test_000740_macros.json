@@ -1,0 +1,11 @@
+{
+  "test_id": 740,
+  "timestamp": "2025-10-11T07:04:24.252431",
+  "macro_changes": {
+    "HAL_BARO_NONE": 1,
+    "MODE_BRAKE_ENABLED": 1,
+    "AC_PRECLAND_ENABLED": 1,
+    "AP_SIGNED_FIRMWARE": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1
+  }
+}

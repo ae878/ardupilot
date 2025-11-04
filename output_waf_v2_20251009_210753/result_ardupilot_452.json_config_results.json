@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 453,
+    "timestamp": "2025-10-10T17:32:29.935632",
+    "macro_changes": {
+      "HAL_CANFD_SUPPORTED": 0,
+      "HAL_RCOUT_RGBLED_RED": 1,
+      "BENCH_DEFINE_MAP_GEOMETRY": 1,
+      "HAL_GPIO_ALT": 0,
+      "HAL_HAVE_HARDWARE_DOUBLE": 1
+    },
+    "build_success": false,
+    "build_time": 32.67125964164734,
+    "build_result": false,
+    "error": "arm-none-eabi-g++: fatal error: cannot execute '/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as': execv: Text file busy"
+  }
+]

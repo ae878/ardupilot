@@ -1,0 +1,13 @@
+{
+  "test_id": 851,
+  "timestamp": "2025-10-11T12:36:22.990495",
+  "macro_changes": {
+    "AP_STATS_ENABLED": 1,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "TOY_MODE_ENABLED": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "MAVLINK_ENABLED_UALBERTA": 0,
+    "FFT_MAX_MISSED_UPDATES": 1
+  }
+}

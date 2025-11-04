@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 747,
+    "timestamp": "2025-10-11T07:24:40.631274",
+    "macro_changes": {
+      "AP_HAL_SHARED_DMA_ENABLED": 0,
+      "MAVLINK_ENABLED_AVSSUAS": 0,
+      "HAL_GPIO_ALT": 0,
+      "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+      "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+      "AUTOTUNE_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 134.72605872154236,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/SPIDevice.cpp:88:97: error: invalid use of incomplete type 'class ChibiOS::Shared_DMA'"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "test_id": 58,
+  "timestamp": "2025-10-13T18:24:46.541481",
+  "macro_changes": {
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "INS_MAX_GYRO_WINDOW_SAMPLES": 4,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "AP_DEVO_TELEM_ENABLED": 1,
+    "MODE_GUIDED_ENABLED": 0,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 1,
+    "AP_MISSION_ENABLED": 1
+  }
+}

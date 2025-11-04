@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 802,
+    "timestamp": "2025-10-11T10:09:25.387499",
+    "macro_changes": {
+      "HAL_FLASH_ALLOW_UPDATE": 1,
+      "MAXSONAR_SERIAL_LV_BAUD_RATE": 4,
+      "MODE_GUIDED_ENABLED": 1,
+      "USER_PARAMS_ENABLED": 0,
+      "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+      "AP_SIM_ENABLED": 1,
+      "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+      "MAVLINK_ENABLED_UAVIONIX": 1,
+      "HAL_INS_VRBRAIN": 1,
+      "HAL_WITH_DRONECAN": 0
+    },
+    "build_success": false,
+    "build_time": 200.48772263526917,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

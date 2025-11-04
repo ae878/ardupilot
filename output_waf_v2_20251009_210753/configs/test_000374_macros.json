@@ -1,0 +1,11 @@
+{
+  "test_id": 374,
+  "timestamp": "2025-10-10T13:48:42.001225",
+  "macro_changes": {
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "AP_CAMERA_ENABLED": 1,
+    "RANGEFINDER_MAX_INSTANCES": 16,
+    "MODE_THROW_ENABLED": 1
+  }
+}

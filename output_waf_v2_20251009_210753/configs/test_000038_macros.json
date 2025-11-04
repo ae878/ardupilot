@@ -1,0 +1,9 @@
+{
+  "test_id": 38,
+  "timestamp": "2025-10-09T22:46:02.078395",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "AP_CAMERA_ENABLED": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1
+  }
+}

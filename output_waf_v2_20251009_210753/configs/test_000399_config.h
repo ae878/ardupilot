@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #399 */
+
+/* ConfigFuzz: MODE_GUIDED_NOGPS_ENABLED */
+#ifdef MODE_GUIDED_NOGPS_ENABLED
+#undef MODE_GUIDED_NOGPS_ENABLED
+#endif
+#define MODE_GUIDED_NOGPS_ENABLED 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 0
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 0
+
+/* ConfigFuzz: MODE_AUTOROTATE_ENABLED */
+#ifdef MODE_AUTOROTATE_ENABLED
+#undef MODE_AUTOROTATE_ENABLED
+#endif
+#define MODE_AUTOROTATE_ENABLED 1
+
+/* ConfigFuzz: MODE_RTL_ENABLED */
+#ifdef MODE_RTL_ENABLED
+#undef MODE_RTL_ENABLED
+#endif
+#define MODE_RTL_ENABLED 1
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 0
+
+/* ConfigFuzz: HAL_MOUNT_ENABLED */
+#ifdef HAL_MOUNT_ENABLED
+#undef HAL_MOUNT_ENABLED
+#endif
+#define HAL_MOUNT_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 0
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 32
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND 0
+
+#endif /* _AP_CONFIG_H_ */

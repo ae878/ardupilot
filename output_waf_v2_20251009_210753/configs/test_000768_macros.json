@@ -1,0 +1,10 @@
+{
+  "test_id": 768,
+  "timestamp": "2025-10-11T08:28:03.172663",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 4,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0
+  }
+}

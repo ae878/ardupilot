@@ -1,0 +1,11 @@
+{
+  "test_id": 2,
+  "timestamp": "2025-10-09T21:14:06.255215",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "HAL_WITH_DRONECAN": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1
+  }
+}

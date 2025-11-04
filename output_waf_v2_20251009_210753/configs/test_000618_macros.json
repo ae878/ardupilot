@@ -1,0 +1,13 @@
+{
+  "test_id": 618,
+  "timestamp": "2025-10-11T01:08:58.946930",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "MAVLINK_ENABLED_MINIMAL": 0,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_GREEN": 0
+  }
+}

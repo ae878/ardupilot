@@ -1,0 +1,14 @@
+{
+  "test_id": 63,
+  "timestamp": "2025-10-09T23:57:38.202423",
+  "macro_changes": {
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "HAL_NUM_CAN_IFACES": 1,
+    "MODE_THROW_ENABLED": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

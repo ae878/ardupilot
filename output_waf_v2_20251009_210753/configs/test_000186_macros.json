@@ -1,0 +1,10 @@
+{
+  "test_id": 186,
+  "timestamp": "2025-10-10T05:20:23.862106",
+  "macro_changes": {
+    "HAL_BUTTON_ENABLED": 0,
+    "SUMD_MAX_CHANNELS": 16,
+    "HAL_INS_VRBRAIN": 1,
+    "TELEM_TIME_SLOT_MAX": 4
+  }
+}

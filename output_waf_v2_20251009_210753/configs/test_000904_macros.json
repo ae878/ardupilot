@@ -1,0 +1,9 @@
+{
+  "test_id": 904,
+  "timestamp": "2025-10-11T15:02:16.098654",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1
+  }
+}

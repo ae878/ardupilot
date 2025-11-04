@@ -1,0 +1,14 @@
+{
+  "test_id": 178,
+  "timestamp": "2025-10-10T04:56:09.824965",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0,
+    "HAL_WITH_IO_MCU": 0,
+    "AP_ICENGINE_ENABLED": 0,
+    "HAL_WITH_RAMTRON": 1,
+    "USER_PARAMS_ENABLED": 0
+  }
+}

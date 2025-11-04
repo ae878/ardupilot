@@ -1,0 +1,9 @@
+{
+  "test_id": 776,
+  "timestamp": "2025-10-11T08:52:48.027953",
+  "macro_changes": {
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_WITH_UAVCAN": 0
+  }
+}

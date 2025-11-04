@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 250,
+    "timestamp": "2025-10-10T08:17:18.651486",
+    "macro_changes": {
+      "AP_BEACON_ENABLED": 1,
+      "HAL_GENERATOR_ENABLED": 1,
+      "MODE_FLIP_ENABLED": 1,
+      "MODE_GUIDED_NOGPS_ENABLED": 1,
+      "MAVLINK_ENABLED_AVSSUAS": 1,
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "BENCH_DEFINE_MAP_COUNT": 1,
+      "RC_INPUT_MAX_PULSEWIDTH": 8,
+      "AP_CRASHDUMP_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 186.3534173965454,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

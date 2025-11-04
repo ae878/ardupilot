@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #72 */
+
+/* ConfigFuzz: HAL_SPRAYER_ENABLED */
+#ifdef HAL_SPRAYER_ENABLED
+#undef HAL_SPRAYER_ENABLED
+#endif
+#define HAL_SPRAYER_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_CSAIRLINK */
+#ifdef MAVLINK_ENABLED_CSAIRLINK
+#undef MAVLINK_ENABLED_CSAIRLINK
+#endif
+#define MAVLINK_ENABLED_CSAIRLINK 1
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL 0
+
+/* ConfigFuzz: AP_AIS_ENABLED */
+#ifdef AP_AIS_ENABLED
+#undef AP_AIS_ENABLED
+#endif
+#define AP_AIS_ENABLED 1
+
+/* ConfigFuzz: HAL_IMUHEAT_P_DEFAULT */
+#ifdef HAL_IMUHEAT_P_DEFAULT
+#undef HAL_IMUHEAT_P_DEFAULT
+#endif
+#define HAL_IMUHEAT_P_DEFAULT 1
+
+/* ConfigFuzz: HAL_FLASH_ALLOW_UPDATE */
+#ifdef HAL_FLASH_ALLOW_UPDATE
+#undef HAL_FLASH_ALLOW_UPDATE
+#endif
+#define HAL_FLASH_ALLOW_UPDATE 0
+
+/* ConfigFuzz: MODE_RTL_ENABLED */
+#ifdef MODE_RTL_ENABLED
+#undef MODE_RTL_ENABLED
+#endif
+#define MODE_RTL_ENABLED 0
+
+/* ConfigFuzz: HAL_USE_HW_RNG */
+#ifdef HAL_USE_HW_RNG
+#undef HAL_USE_HW_RNG
+#endif
+#define HAL_USE_HW_RNG 1
+
+/* ConfigFuzz: CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY */
+#ifdef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#undef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#endif
+#define CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY 0
+
+#endif /* _AP_CONFIG_H_ */

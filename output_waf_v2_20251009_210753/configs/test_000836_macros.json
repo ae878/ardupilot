@@ -1,0 +1,9 @@
+{
+  "test_id": 836,
+  "timestamp": "2025-10-11T11:51:50.804023",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 0,
+    "AP_MODULE_SUPPORTED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  }
+}

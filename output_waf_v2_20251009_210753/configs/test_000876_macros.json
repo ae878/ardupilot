@@ -1,0 +1,15 @@
+{
+  "test_id": 876,
+  "timestamp": "2025-10-11T13:46:55.355736",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 1,
+    "TOY_MODE_ENABLED": 0,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_BARO_NONE": 0,
+    "AUTOTUNE_ENABLED": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "AP_CAMERA_ENABLED": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "MAVLINK_ENABLED_UALBERTA": 0
+  }
+}

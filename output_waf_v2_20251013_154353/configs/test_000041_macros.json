@@ -1,0 +1,11 @@
+{
+  "test_id": 41,
+  "timestamp": "2025-10-13T17:42:26.127935",
+  "macro_changes": {
+    "HAL_PARACHUTE_ENABLED": 1,
+    "MPUREG_CONFIG_EXT_SYNC_GX": 1,
+    "FFT_MAX_MISSED_UPDATES": 8,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0
+  }
+}

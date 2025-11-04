@@ -1,0 +1,14 @@
+{
+  "test_id": 566,
+  "timestamp": "2025-10-10T22:47:06.913793",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 0,
+    "RANGEFINDER_MAX_INSTANCES": 4,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "HAL_INS_VRBRAIN": 0,
+    "AP_FOLLOW_ENABLED": 1,
+    "BENCH_DEFINE_MAP_COUNT": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 396,
+  "timestamp": "2025-10-10T14:51:10.949439",
+  "macro_changes": {
+    "AP_FOLLOW_ENABLED": 0,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1
+  }
+}

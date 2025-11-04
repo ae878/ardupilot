@@ -1,0 +1,10 @@
+{
+  "test_id": 353,
+  "timestamp": "2025-10-10T12:53:39.240248",
+  "macro_changes": {
+    "LEDDARONE_DETECTIONS_MAX": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "RPMMAX": 16,
+    "HAL_BUTTON_ENABLED": 0
+  }
+}

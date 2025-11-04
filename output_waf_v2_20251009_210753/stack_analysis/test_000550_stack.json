@@ -1,0 +1,546 @@
+{
+  "test_id": 550,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:239:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::allocate_update_resources()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAVisGraph.cpp:23:1:AP_OAVisGraph::AP_OAVisGraph()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:72:6:virtual bool AC_WPNav_OA::update_wpnav()",
+        "stack_size": 256
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:40:6:void AP_OADijkstra::Write_OADijkstra(uint8_t, uint8_t, uint8_t, uint8_t, const Location&, const Location&) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../ArduCopter/fence.cpp:9:6:void Copter::fence_check()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:319:6:bool AP_OADijkstra::create_inclusion_polygon_with_margin(float, AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:292:6:void AP_OADijkstra::report_error(AP_OADijkstra::AP_OADijkstra_Error)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:90:10:virtual uint16_t MissionItemProtocol_Fence::item_count() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:124:6:bool AP_OAPathPlanner::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:15:6:static bool MissionItemProtocol_Fence::get_item_as_mission_item(uint16_t, mavlink_mission_item_int_t&)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:77:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::get_item(uint16_t, mavlink_mission_item_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:241:6:bool AP_OADijkstra::some_fences_enabled() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:177:37:AP_OAPathPlanner::OAPathPlannerUsed AP_OAPathPlanner::map_bendytype_to_pathplannerused(AP_OABendyRuler::OABendyType)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:203:10:virtual uint16_t MissionItemProtocol_Fence::max_items() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:16:6:virtual bool AC_WPNav_OA::get_oa_wp_destination(Location&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:37:6:virtual void ModeFollow::exit()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:31:6:virtual bool AC_WPNav_OA::set_wp_destination(const Vector3f&, bool)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::fence_check; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:50:36:AP_OADijkstra::AP_OADijkstra_State AP_OADijkstra::update(const Location&, const Location&, const Location&, Location&, Location&, Location&, bool&)",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:196:31:AP_OAPathPlanner::OA_RetState AP_OAPathPlanner::mission_avoidance(const Location&, const Location&, const Location&, const Location&, Location&, Location&, Location&, bool&, AP_OAPathPlanner::OAPathPlannerUsed&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:419:6:bool AP_OADijkstra::create_exclusion_polygon_with_margin(float, AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:153:6:bool AP_OAPathPlanner::start_thread()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:879:6:bool AP_OADijkstra::calc_shortest_path(const Location&, const Location&, AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Frsky_Telem/AP_Frsky_MAVliteMsgHandler.cpp:147:12:MAV_RESULT AP_Frsky_MAVliteMsgHandler::handle_command_do_fence_enable(const mavlink_command_long_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1894:10:virtual bool ModeFollow::requires_GPS() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:999:6:bool AP_OADijkstra::convert_node_to_point(const AP_OAVisGraph::OAItemID&, Vector2f&) const",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:307:6:bool AP_OADijkstra::check_inclusion_polygon_updated() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:681:6:bool AP_OADijkstra::create_fence_visgraph(AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:728:6:bool AP_OADijkstra::update_visgraph(AP_OAVisGraph&, const AP_OAVisGraph::OAItemID&, const Vector2f&, bool, Vector2f)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_OAPathPlanner::avoidance_thread; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:9:1:AC_WPNav_OA::AC_WPNav_OA(const AP_InertialNav&, const AP_AHRS_View&, AC_PosControl&, const AC_AttitudeControl&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:218:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::allocate_receive_resources(uint16_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:760:6:0(AP_OADijkstra::node_index)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:74:6:void AC_Avoid::Write_SimpleAvoidance(uint8_t, const Vector3f&, const Vector3f&, bool) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:166:6:virtual bool ModeFollow::get_wp(Location&) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:213:6:virtual bool MissionItemProtocol_Fence::clear_all_items()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Filesystem/AP_Filesystem_Mission.cpp:452:6:bool AP_Filesystem_Mission::finish_upload_fence(const AP_Filesystem_Mission::header&, const AP_Filesystem_Mission::rfile&, const uint8_t*)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:56:9:virtual int32_t AC_WPNav_OA::get_wp_bearing_to_destination() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:580:6:bool AP_OADijkstra::get_point(uint16_t, Vector2f&) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:45:7:virtual float AC_WPNav_OA::get_wp_distance_to_destination() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:612:6:bool AP_OADijkstra::intersects_fence(const Vector2f&, const Vector2f&) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:176:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::complete(const GCS_MAVLINK&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:760:6:void AP_OADijkstra::update_visible_node_distances(AP_OADijkstra::node_index)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1888:12:virtual Mode::Number ModeFollow::mode_number() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:143:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::replace_item(const mavlink_mission_item_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:17:6:virtual bool ModeFollow::init(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:153:10:virtual uint32_t ModeFollow::wp_distance() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:198:6:virtual void MissionItemProtocol_Fence::timeout()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:98:20:static MAV_MISSION_RESULT MissionItemProtocol_Fence::convert_MISSION_ITEM_INT_to_AC_PolyFenceItem(const mavlink_mission_item_int_t&, AC_PolyFenceItem&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:86:6:void AP_OAPathPlanner::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1896:10:virtual bool ModeFollow::allows_arming(AP_Arming::Method) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:36:1:AP_OADijkstra::AP_OADijkstra(AP_Int16&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:408:6:bool AP_OADijkstra::check_exclusion_polygon_updated() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:986:6:bool AP_OADijkstra::get_shortest_path_point(uint8_t, Vector2f&) const",
+        "stack_size": 12
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1901:17:virtual const char* ModeFollow::name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:509:6:bool AP_OADijkstra::check_exclusion_circle_updated() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:42:6:virtual void ModeFollow::run()",
+        "stack_size": 144
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:163:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Fence::append_item(const mavlink_mission_item_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:12:6:void AP_OABendyRuler::Write_OABendyRuler(uint8_t, bool, float, float, bool, float, const Location&, const Location&) const",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:681:6:0(AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.h:14:22:virtual MAV_MISSION_TYPE MissionItemProtocol_Fence::mission_type() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_follow.cpp:158:9:virtual int32_t ModeFollow::wp_bearing() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AdvancedFailsafe/AP_AdvancedFailsafe.cpp:364:1:0()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:78:1:AP_OAPathPlanner::AP_OAPathPlanner()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:59:6:void AP_OADijkstra::Write_Visgraph_point(uint8_t, uint8_t, int32_t, int32_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AC_WPNav/AC_WPNav_OA.cpp:66:6:virtual bool AC_WPNav_OA::reached_wp_destination() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:208:6:virtual void MissionItemProtocol_Fence::truncate(const mavlink_mission_count_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:804:6:bool AP_OADijkstra::find_node_from_id(const AP_OAVisGraph::OAItemID&, AP_OADijkstra::node_index&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.h:31:16:virtual ap_message MissionItemProtocol_Fence::next_item_ap_message_id() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1895:10:virtual bool ModeFollow::has_manual_throttle() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:433:19:AP_OAPathPlanner* AP::ap_oapathplanner()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:256:13:const char* AP_OADijkstra::get_error_msg(AP_OADijkstra::AP_OADijkstra_Error) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAPathPlanner.cpp:257:6:void AP_OAPathPlanner::avoidance_thread()",
+        "stack_size": 176
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:836:6:bool AP_OADijkstra::find_closest_node_idx(AP_OADijkstra::node_index&) const",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:574:10:uint16_t AP_OADijkstra::total_numpoints() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OAVisGraph.cpp:29:6:bool AP_OAVisGraph::add_item(const AP_OAVisGraph::OAItemID&, const AP_OAVisGraph::OAItemID&, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1897:10:virtual bool ModeFollow::is_autopilot() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Fence.cpp:168:6:virtual void MissionItemProtocol_Fence::free_upload_resources()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:521:6:bool AP_OADijkstra::create_exclusion_circle_with_margin(float, AP_OADijkstra::AP_OADijkstra_Error&)",
+        "stack_size": 144
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1902:17:virtual const char* ModeFollow::name4() const",
+        "stack_size": 0
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_AdvancedFailsafe/AP_AdvancedFailsafe.cpp:364:1:bool AP_AdvancedFailsafe::check_altlimit()",
+        "baseline": 0,
+        "current": 16,
+        "diff": 16
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../ArduCopter/AP_Arming_Copter.cpp:316:6:bool AP_Arming_Copter::oa_checks(bool)",
+        "baseline": 120,
+        "current": 0,
+        "diff": -120
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoid.cpp:386:6:void AC_Avoid::adjust_velocity_z(float, float, float&, float&, float)",
+        "baseline": 80,
+        "current": 0,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_Proximity/AP_Proximity_Backend.cpp:122:6:static void AP_Proximity_Backend::database_push(float, float, float, uint32_t, const Vector3f&, const Matrix3f&)",
+        "baseline": 80,
+        "current": 0,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_Proximity/AP_Proximity_Backend.cpp:110:6:static void AP_Proximity_Backend::database_push(float, float, float)",
+        "baseline": 72,
+        "current": 0,
+        "diff": -72
+      },
+      {
+        "function": "../../ArduCopter/AP_Arming_Copter.cpp:413:6:virtual bool AP_Arming_Copter::proximity_checks(bool) const",
+        "baseline": 48,
+        "current": 16,
+        "diff": -32
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:343:6:bool ModeGuided::set_destination(const Vector3f&, bool, float, bool, float, bool, bool)",
+        "baseline": 112,
+        "current": 88,
+        "diff": -24
+      },
+      {
+        "function": "../../ArduCopter/avoidance.cpp:4:6:void Copter::low_alt_avoidance()",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoid.cpp:373:6:void AC_Avoid::adjust_velocity_z(float, float, float&, float)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/mode.cpp:937:7:float Mode::get_avoidance_adjusted_climbrate(float)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:351:6:bool AP_Mission::start_command_fence(const AP_Mission::Mission_Command&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Proximity/AP_Proximity_Backend.cpp:89:6:static bool AP_Proximity_Backend::database_prepare_for_push(Vector3f&, Matrix3f&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:594:6:bool ModeGuided::set_destination_posvelaccel(const Vector3f&, const Vector3f&, const Vector3f&, bool, float, bool, float, bool)",
+        "baseline": 96,
+        "current": 80,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoid.cpp:137:6:void AC_Avoid::adjust_velocity_fence(float, float, Vector3f&, Vector3f&, float, float, float)",
+        "baseline": 144,
+        "current": 128,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15796
+  },
+  "total_functions_analyzed": 15836
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 841,
+  "timestamp": "2025-10-11T12:06:20.198084",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MODE_DRIFT_ENABLED": 1,
+    "AP_SIM_ENABLED": 1,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "AUTOTUNE_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 199.97996497154236,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

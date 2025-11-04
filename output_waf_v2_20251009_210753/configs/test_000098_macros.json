@@ -1,0 +1,12 @@
+{
+  "test_id": 98,
+  "timestamp": "2025-10-10T01:29:47.568444",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_RED": 0,
+    "HAL_WITH_UAVCAN": 0,
+    "FFT_MAX_MISSED_UPDATES": 32,
+    "AUTOTUNE_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "AP_FOLLOW_ENABLED": 1
+  }
+}

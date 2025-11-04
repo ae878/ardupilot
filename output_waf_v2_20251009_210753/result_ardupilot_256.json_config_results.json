@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 257,
+    "timestamp": "2025-10-10T08:34:42.446641",
+    "macro_changes": {
+      "HAL_IMUHEAT_P_DEFAULT": 0,
+      "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+      "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+      "BENCH_DEFINE_MAP_EXPLICIT": 0,
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+      "MAVLINK_ENABLED_MINIMAL": 0,
+      "CONFIG_LWIP_PPP_SUPPORT": 0,
+      "AP_MISSION_ENABLED": 1,
+      "HAL_HNF_MAX_FILTERS": 16
+    },
+    "build_success": false,
+    "build_time": 69.96802711486816,
+    "build_result": false,
+    "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+  }
+]

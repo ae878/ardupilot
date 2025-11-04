@@ -1,0 +1,10 @@
+{
+  "test_id": 645,
+  "timestamp": "2025-10-11T02:23:54.020422",
+  "macro_changes": {
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "USER_PARAMS_ENABLED": 0
+  }
+}

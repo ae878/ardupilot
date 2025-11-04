@@ -1,0 +1,14 @@
+{
+  "test_id": 665,
+  "timestamp": "2025-10-11T03:25:21.779247",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_WITH_RAMTRON": 0,
+    "HAL_HNF_MAX_FILTERS": 1,
+    "HAL_WITH_DRONECAN": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "MODE_ZIGZAG_ENABLED": 1
+  }
+}

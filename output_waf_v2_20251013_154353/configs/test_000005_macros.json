@@ -1,0 +1,10 @@
+{
+  "test_id": 5,
+  "timestamp": "2025-10-13T15:55:16.677867",
+  "macro_changes": {
+    "HAL_NO_ROMFS_SUPPORT": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1
+  }
+}

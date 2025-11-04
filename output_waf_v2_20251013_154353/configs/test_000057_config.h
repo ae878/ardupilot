@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #57 */
+
+/* ConfigFuzz: MAX_PWMS */
+#ifdef MAX_PWMS
+#undef MAX_PWMS
+#endif
+#define MAX_PWMS 16
+
+/* ConfigFuzz: AP_COPTER_ADVANCED_FAILSAFE_ENABLED */
+#ifdef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#undef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#endif
+#define AP_COPTER_ADVANCED_FAILSAFE_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_MOUNT_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#undef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_MOUNT_CONFIGURE 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 1
+
+/* ConfigFuzz: AP_PERIPH_BATTERY_ENABLED */
+#ifdef AP_PERIPH_BATTERY_ENABLED
+#undef AP_PERIPH_BATTERY_ENABLED
+#endif
+#define AP_PERIPH_BATTERY_ENABLED 0
+
+/* ConfigFuzz: MODE_DRIFT_ENABLED */
+#ifdef MODE_DRIFT_ENABLED
+#undef MODE_DRIFT_ENABLED
+#endif
+#define MODE_DRIFT_ENABLED 0
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 1
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_GY */
+#ifdef FSYNC_CONFIG_EXT_SYNC_GY
+#undef FSYNC_CONFIG_EXT_SYNC_GY
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_GY 0
+
+#endif /* _AP_CONFIG_H_ */

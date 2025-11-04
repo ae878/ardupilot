@@ -1,0 +1,14 @@
+{
+  "test_id": 832,
+  "timestamp": "2025-10-11T11:39:06.775096",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_RED": 1,
+    "AP_BEACON_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "MODE_SPORT_ENABLED": 0,
+    "TOY_MODE_ENABLED": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0
+  }
+}

@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #309 */
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 4
+
+/* ConfigFuzz: AP_EXTERNAL_CONTROL_ENABLED */
+#ifdef AP_EXTERNAL_CONTROL_ENABLED
+#undef AP_EXTERNAL_CONTROL_ENABLED
+#endif
+#define AP_EXTERNAL_CONTROL_ENABLED 0
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 1
+
+/* ConfigFuzz: FLOW_CONTROL_ENABLED */
+#ifdef FLOW_CONTROL_ENABLED
+#undef FLOW_CONTROL_ENABLED
+#endif
+#define FLOW_CONTROL_ENABLED 1
+
+/* ConfigFuzz: FS_THR_DISABLED */
+#ifdef FS_THR_DISABLED
+#undef FS_THR_DISABLED
+#endif
+#define FS_THR_DISABLED 1
+
+/* ConfigFuzz: HAL_AHRS_EKF_TYPE_DEFAULT */
+#ifdef HAL_AHRS_EKF_TYPE_DEFAULT
+#undef HAL_AHRS_EKF_TYPE_DEFAULT
+#endif
+#define HAL_AHRS_EKF_TYPE_DEFAULT 1
+
+/* ConfigFuzz: METADATA_MAX_i */
+#ifdef METADATA_MAX_i
+#undef METADATA_MAX_i
+#endif
+#define METADATA_MAX_i 16
+
+/* ConfigFuzz: AP_SCHEDULER_OVERTIME_MARGIN_US */
+#ifdef AP_SCHEDULER_OVERTIME_MARGIN_US
+#undef AP_SCHEDULER_OVERTIME_MARGIN_US
+#endif
+#define AP_SCHEDULER_OVERTIME_MARGIN_US 0
+
+/* ConfigFuzz: MODE_AUTO_ENABLED */
+#ifdef MODE_AUTO_ENABLED
+#undef MODE_AUTO_ENABLED
+#endif
+#define MODE_AUTO_ENABLED 1
+
+/* ConfigFuzz: HAL_USE_HW_RNG */
+#ifdef HAL_USE_HW_RNG
+#undef HAL_USE_HW_RNG
+#endif
+#define HAL_USE_HW_RNG 1
+
+#endif /* _AP_CONFIG_H_ */

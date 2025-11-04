@@ -1,0 +1,11 @@
+{
+  "test_id": 173,
+  "timestamp": "2025-10-10T04:42:39.306145",
+  "macro_changes": {
+    "MODE_THROW_ENABLED": 1,
+    "MAVLINK_ENABLED_ALL": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "HAL_GPIO_INPUT": 0
+  }
+}

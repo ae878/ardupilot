@@ -1,0 +1,15 @@
+{
+  "test_id": 43,
+  "timestamp": "2025-10-09T23:01:48.761858",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "HAL_MOUNT_ENABLED": 1,
+    "WEATHERVANE_ENABLED": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_USE_FATFS": 1,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 8,
+    "AP_AIS_ENABLED": 1,
+    "HAL_BUTTON_ENABLED": 0,
+    "FS_THR_DISABLED": 0
+  }
+}

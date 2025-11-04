@@ -1,0 +1,11 @@
+{
+  "test_id": 25,
+  "timestamp": "2025-10-09T20:33:26.370830",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "HAL_SOARING_ENABLED": 0,
+    "TELEM_TIME_SLOT_MAX": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 189,
+  "timestamp": "2025-10-10T05:26:45.593289",
+  "macro_changes": {
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "AUTOTUNE_ENABLED": 1,
+    "HAL_BATT_CURR_PIN": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_WITH_SPI_RAMTRON": 1
+  }
+}

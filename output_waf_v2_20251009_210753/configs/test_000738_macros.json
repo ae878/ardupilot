@@ -1,0 +1,10 @@
+{
+  "test_id": 738,
+  "timestamp": "2025-10-11T07:00:56.657054",
+  "macro_changes": {
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 2,
+    "LEDDARONE_DETECTIONS_MAX": 16,
+    "AC_PAYLOAD_PLACE_ENABLED": 0,
+    "HAL_INS_RATE_LOOP": 1
+  }
+}

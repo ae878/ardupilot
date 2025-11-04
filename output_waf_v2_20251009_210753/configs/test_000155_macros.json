@@ -1,0 +1,14 @@
+{
+  "test_id": 155,
+  "timestamp": "2025-10-10T03:55:44.611854",
+  "macro_changes": {
+    "HAL_USB_PRODUCT_ID": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "FLOW_CONTROL_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "AP_RELAY_ENABLED": 1,
+    "AP_ICENGINE_ENABLED": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 562,
+  "timestamp": "2025-10-10T22:42:25.255627",
+  "macro_changes": {
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "FS_THR_DISABLED": 0,
+    "HAL_GPIO_INPUT": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0,
+    "HAL_GPIO_LED_ON": 1
+  }
+}

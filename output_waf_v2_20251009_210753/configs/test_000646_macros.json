@@ -1,0 +1,12 @@
+{
+  "test_id": 646,
+  "timestamp": "2025-10-11T02:27:11.269772",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "HAL_WITH_DRONECAN": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "HAL_RALLY_ENABLED": 1,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "HAL_GPIO_OUTPUT": 1
+  }
+}

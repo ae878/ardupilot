@@ -1,0 +1,18 @@
+{
+  "test_id": 15,
+  "timestamp": "2025-10-09T20:11:16.497231",
+  "macro_changes": {
+    "HAL_INS_VRBRAIN": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_HEATER_GPIO_ON": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "MODE_DRIFT_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0
+  },
+  "build_success": false,
+  "build_time": 161.0583655834198,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

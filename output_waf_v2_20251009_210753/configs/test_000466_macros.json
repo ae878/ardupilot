@@ -1,0 +1,13 @@
+{
+  "test_id": 466,
+  "timestamp": "2025-10-10T18:08:28.107181",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0,
+    "RPMMAX": 16,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "MAVLINK_ENABLED_STANDARD": 1
+  }
+}

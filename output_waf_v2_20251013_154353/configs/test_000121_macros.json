@@ -1,0 +1,12 @@
+{
+  "test_id": 121,
+  "timestamp": "2025-10-13T21:28:03.514960",
+  "macro_changes": {
+    "AP_PERIPH_MAG_ENABLED": 0,
+    "HAL_INS_HIGHRES_SAMPLE": 0,
+    "HAL_USB_PRODUCT_ID": 1,
+    "AP_WINCH_ENABLED": 1,
+    "TOY_MODE_ENABLED": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1
+  }
+}

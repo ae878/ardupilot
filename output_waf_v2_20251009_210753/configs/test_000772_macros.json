@@ -1,0 +1,12 @@
+{
+  "test_id": 772,
+  "timestamp": "2025-10-11T08:40:05.553218",
+  "macro_changes": {
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "HAL_BATT_VOLT_PIN": 1,
+    "AP_RELAY_ENABLED": 0,
+    "HAL_GENERATOR_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1
+  }
+}

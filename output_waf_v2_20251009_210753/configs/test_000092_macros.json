@@ -1,0 +1,16 @@
+{
+  "test_id": 92,
+  "timestamp": "2025-10-10T01:14:51.885584",
+  "macro_changes": {
+    "HAL_RALLY_ENABLED": 1,
+    "HAL_WITH_RAMTRON": 0,
+    "HAL_INS_NONE": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "HAL_SPRAYER_ENABLED": 0,
+    "KDECAN_MAX_NUM_ESCS": 8,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "MAVLINK_ENABLED_ALL": 0,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1
+  }
+}

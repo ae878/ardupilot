@@ -1,0 +1,9 @@
+{
+  "test_id": 154,
+  "timestamp": "2025-10-10T03:52:38.678862",
+  "macro_changes": {
+    "HAL_WITH_MCU_MONITORING": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 2,
+    "MAVLINK_ENABLED_COMMON": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 826,
+  "timestamp": "2025-10-11T11:19:25.674555",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0
+  }
+}

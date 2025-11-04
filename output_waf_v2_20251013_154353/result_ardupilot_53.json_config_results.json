@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 54,
+    "timestamp": "2025-10-13T18:13:08.555269",
+    "macro_changes": {
+      "HAL_INS_VRBRAIN": 0,
+      "HAL_USB_VENDOR_ID": 0,
+      "HAL_NO_ROMFS_SUPPORT": 1,
+      "AP_SCHEDULER_ENABLED": 1,
+      "MODE_RTL_ENABLED": 0,
+      "AP_MISSION_ENABLED": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+      "AP_RC_CHANNEL_ENABLED": 0,
+      "HAL_INS_CONVERGANCE_MS": 0,
+      "MODE_SMARTRTL_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 10.198261499404907,
+    "build_result": false,
+    "error": "../../libraries/AC_AutoTune/AC_AutoTune.h:65:32: error: 'RC_Channel' does not name a type; did you mean 'SRV_Channel'?"
+  }
+]

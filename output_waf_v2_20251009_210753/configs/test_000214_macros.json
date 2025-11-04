@@ -1,0 +1,9 @@
+{
+  "test_id": 214,
+  "timestamp": "2025-10-10T06:37:36.618489",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_USE_SDMMC": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 839,
+  "timestamp": "2025-10-11T11:59:38.902010",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 1,
+    "HAL_DSHOT_ENABLED": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+    "HAL_NUM_CAN_IFACES": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0
+  }
+}

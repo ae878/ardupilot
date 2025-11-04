@@ -1,0 +1,11 @@
+{
+  "test_id": 968,
+  "timestamp": "2025-10-11T18:12:18.378586",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "MODE_ZIGZAG_ENABLED": 1,
+    "HAL_QUADPLANE_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1
+  }
+}

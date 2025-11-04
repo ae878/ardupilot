@@ -1,0 +1,12 @@
+{
+  "test_id": 29,
+  "timestamp": "2025-10-13T17:07:14.674900",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "HAL_PERIPH_ENABLE_NOTIFY": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "AP_FOLLOW_ENABLED": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "HAL_WITH_RAMTRON": 0
+  }
+}

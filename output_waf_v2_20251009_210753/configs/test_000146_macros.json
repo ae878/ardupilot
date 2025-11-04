@@ -1,0 +1,12 @@
+{
+  "test_id": 146,
+  "timestamp": "2025-10-10T03:35:01.467846",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "METADATA_MAX_i": 16,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "MODE_THROW_ENABLED": 1,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1
+  }
+}

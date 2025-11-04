@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #287 */
+
+/* ConfigFuzz: CONFIG_LWIP_STATS */
+#ifdef CONFIG_LWIP_STATS
+#undef CONFIG_LWIP_STATS
+#endif
+#define CONFIG_LWIP_STATS 0
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 0
+
+/* ConfigFuzz: HAL_DEFAULT_INS_FAST_SAMPLE */
+#ifdef HAL_DEFAULT_INS_FAST_SAMPLE
+#undef HAL_DEFAULT_INS_FAST_SAMPLE
+#endif
+#define HAL_DEFAULT_INS_FAST_SAMPLE 0
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 1
+
+/* ConfigFuzz: HAL_NUM_CAN_IFACES */
+#ifdef HAL_NUM_CAN_IFACES
+#undef HAL_NUM_CAN_IFACES
+#endif
+#define HAL_NUM_CAN_IFACES 1
+
+/* ConfigFuzz: HAL_INS_NONE */
+#ifdef HAL_INS_NONE
+#undef HAL_INS_NONE
+#endif
+#define HAL_INS_NONE 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_COUNT */
+#ifdef BENCH_DEFINE_MAP_COUNT
+#undef BENCH_DEFINE_MAP_COUNT
+#endif
+#define BENCH_DEFINE_MAP_COUNT 1
+
+/* ConfigFuzz: USER_PARAMS_ENABLED */
+#ifdef USER_PARAMS_ENABLED
+#undef USER_PARAMS_ENABLED
+#endif
+#define USER_PARAMS_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,10 @@
+{
+  "test_id": 245,
+  "timestamp": "2025-10-10T08:01:51.416226",
+  "macro_changes": {
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 1,
+    "AP_RSSI_ENABLED": 1,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "MODE_BRAKE_ENABLED": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 882,
+  "timestamp": "2025-10-11T14:01:10.115483",
+  "macro_changes": {
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "AP_AIS_ENABLED": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1
+  }
+}

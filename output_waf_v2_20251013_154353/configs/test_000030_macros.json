@@ -1,0 +1,9 @@
+{
+  "test_id": 30,
+  "timestamp": "2025-10-13T17:10:24.070559",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "HAL_LOGGING_ENABLED": 0
+  }
+}

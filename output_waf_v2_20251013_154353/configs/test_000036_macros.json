@@ -1,0 +1,14 @@
+{
+  "test_id": 36,
+  "timestamp": "2025-10-13T17:29:08.211185",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "HAL_USB_VENDOR_ID": 0,
+    "HAL_LOGGING_ENABLED": 1,
+    "AC_PRECLAND_ENABLED": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "AP_PERIPH_RANGEFINDER_ENABLED": 0
+  }
+}

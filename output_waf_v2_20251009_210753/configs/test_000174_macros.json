@@ -1,0 +1,10 @@
+{
+  "test_id": 174,
+  "timestamp": "2025-10-10T04:44:45.488778",
+  "macro_changes": {
+    "KDECAN_MAX_NUM_ESCS": 8,
+    "AP_FEATURE_RTSCTS": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 0
+  }
+}

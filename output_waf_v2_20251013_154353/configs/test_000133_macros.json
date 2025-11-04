@@ -1,0 +1,13 @@
+{
+  "test_id": 133,
+  "timestamp": "2025-10-13T22:04:39.070777",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "HAL_SPRAYER_ENABLED": 0,
+    "MPUREG_CONFIG_EXT_SYNC_GX": 1,
+    "MODE_THROW_ENABLED": 0,
+    "AP_PERIPH_RCIN_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "AP_NETWORKING_NUM_PORTS": 0
+  }
+}

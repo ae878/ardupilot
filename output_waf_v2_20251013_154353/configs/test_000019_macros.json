@@ -1,0 +1,12 @@
+{
+  "test_id": 19,
+  "timestamp": "2025-10-13T16:35:48.394967",
+  "macro_changes": {
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "MODE_RTL_ENABLED": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "MPUREG_GYRO_CONFIG": 1,
+    "AP_HEATER_IMU_INSTANCE": 0,
+    "HAL_INS_NONE": 0
+  }
+}

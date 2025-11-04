@@ -1,0 +1,15 @@
+{
+  "test_id": 246,
+  "timestamp": "2025-10-10T08:04:54.795808",
+  "macro_changes": {
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "AP_AIRSPEED_ENABLED": 1,
+    "HAL_USE_FATFS": 0,
+    "HAL_PWM_COUNT": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "AP_FEATURE_SBUS_OUT": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "AP_FENCE_ENABLED": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+  }
+}

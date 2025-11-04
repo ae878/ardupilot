@@ -1,0 +1,9 @@
+{
+  "test_id": 785,
+  "timestamp": "2025-10-11T09:19:25.772826",
+  "macro_changes": {
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "HAL_RALLY_ENABLED": 1
+  }
+}

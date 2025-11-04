@@ -1,0 +1,14 @@
+{
+  "test_id": 59,
+  "timestamp": "2025-10-09T23:45:10.145656",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "HAL_GPIO_INPUT": 0,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "HAL_UART_IOMCU_IDX": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "HAL_SOARING_ENABLED": 1
+  }
+}

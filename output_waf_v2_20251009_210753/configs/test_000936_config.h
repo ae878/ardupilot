@@ -1,0 +1,41 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #936 */
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 2
+
+/* ConfigFuzz: HAL_MEMORY_TOTAL_KB */
+#ifdef HAL_MEMORY_TOTAL_KB
+#undef HAL_MEMORY_TOTAL_KB
+#endif
+#define HAL_MEMORY_TOTAL_KB 0
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED */
+#ifdef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#undef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#endif
+#define CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 1
+
+#endif /* _AP_CONFIG_H_ */

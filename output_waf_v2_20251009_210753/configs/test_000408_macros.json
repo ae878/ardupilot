@@ -1,0 +1,15 @@
+{
+  "test_id": 408,
+  "timestamp": "2025-10-10T15:26:35.180221",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "METADATA_MAX_i": 32,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_INS_NONE": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "WEATHERVANE_ENABLED": 0,
+    "MODE_LOITER_ENABLED": 1,
+    "MAVLINK_ENABLED_COMMON": 1
+  }
+}

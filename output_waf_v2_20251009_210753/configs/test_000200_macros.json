@@ -1,0 +1,13 @@
+{
+  "test_id": 200,
+  "timestamp": "2025-10-10T05:58:08.242203",
+  "macro_changes": {
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "HAL_BATT_VOLT_PIN": 1,
+    "MAVLINK_ENABLED_MINIMAL": 0,
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0,
+    "HAL_WITH_UAVCAN": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1
+  }
+}

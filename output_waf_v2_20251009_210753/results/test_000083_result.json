@@ -1,0 +1,16 @@
+{
+  "test_id": 83,
+  "timestamp": "2025-10-10T00:52:15.772238",
+  "macro_changes": {
+    "MAX_PWMS": 32,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 162.40542101860046,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

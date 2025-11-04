@@ -1,0 +1,10 @@
+{
+  "test_id": 130,
+  "timestamp": "2025-10-10T02:52:42.039435",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ICAROUS": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "RPMMAX": 4,
+    "HAL_CANFD_SUPPORTED": 1
+  }
+}

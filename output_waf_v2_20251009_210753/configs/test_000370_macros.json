@@ -1,0 +1,11 @@
+{
+  "test_id": 370,
+  "timestamp": "2025-10-10T13:36:21.813723",
+  "macro_changes": {
+    "NOOPLOOP_DIST_MAX_MM": 1,
+    "AP_RSSI_ENABLED": 0,
+    "HAL_PWM_COUNT": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 1
+  }
+}

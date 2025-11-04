@@ -1,0 +1,14 @@
+{
+  "test_id": 932,
+  "timestamp": "2025-10-11T16:24:42.218828",
+  "macro_changes": {
+    "HAL_USE_HW_RNG": 0,
+    "MODE_RTL_ENABLED": 1,
+    "FFT_MAX_MISSED_UPDATES": 8,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "AP_SIGNED_FIRMWARE": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "METADATA_MAX_i": 16
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 868,
+  "timestamp": "2025-10-11T13:22:15.937834",
+  "macro_changes": {
+    "MAVLINK_ENABLED_STANDARD": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "HAL_GPIO_ALT": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 1
+  }
+}

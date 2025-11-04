@@ -1,0 +1,20 @@
+{
+  "test_id": 808,
+  "timestamp": "2025-10-11T10:23:48.987283",
+  "macro_changes": {
+    "TAP_ESC_MAX_MOTOR_NUM": 4,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "MODE_LOITER_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 1,
+    "AP_MISSION_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  },
+  "build_success": false,
+  "build_time": 170.03194117546082,
+  "build_result": false,
+  "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+}

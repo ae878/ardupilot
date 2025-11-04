@@ -1,0 +1,11 @@
+{
+  "test_id": 157,
+  "timestamp": "2025-10-10T03:59:19.815602",
+  "macro_changes": {
+    "AP_ICENGINE_ENABLED": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0
+  }
+}

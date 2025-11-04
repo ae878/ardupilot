@@ -1,0 +1,14 @@
+{
+  "test_id": 91,
+  "timestamp": "2025-10-13T20:03:52.816572",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "AP_ICENGINE_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "MPUREG_CONFIG_FIFO_MODE_STOP": 1,
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_USE_HW_RNG": 1,
+    "HAL_FLASH_PROTECTION": 0
+  }
+}

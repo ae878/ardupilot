@@ -1,0 +1,15 @@
+{
+  "test_id": 261,
+  "timestamp": "2025-10-10T08:47:06.281574",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 16,
+    "HAL_BUTTON_ENABLED": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "HAL_USE_SDMMC": 1,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_USE_FATFS": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 0
+  }
+}

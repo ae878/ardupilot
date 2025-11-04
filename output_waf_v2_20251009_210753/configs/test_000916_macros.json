@@ -1,0 +1,12 @@
+{
+  "test_id": 916,
+  "timestamp": "2025-10-11T15:36:24.144856",
+  "macro_changes": {
+    "MAX_PWMS": 2,
+    "HAL_FLASH_PROTECTION": 0,
+    "LEDDARONE_DETECTIONS_MAX": 16,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "MODE_AUTO_ENABLED": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 1
+  }
+}

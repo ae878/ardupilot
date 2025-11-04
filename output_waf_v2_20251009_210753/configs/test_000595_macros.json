@@ -1,0 +1,9 @@
+{
+  "test_id": 595,
+  "timestamp": "2025-10-11T00:08:17.279500",
+  "macro_changes": {
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 0
+  }
+}

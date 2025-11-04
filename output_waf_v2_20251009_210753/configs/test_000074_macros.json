@@ -1,0 +1,12 @@
+{
+  "test_id": 74,
+  "timestamp": "2025-10-10T00:27:32.650231",
+  "macro_changes": {
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "MODE_ACRO_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0
+  }
+}

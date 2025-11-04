@@ -1,0 +1,14 @@
+{
+  "test_id": 340,
+  "timestamp": "2025-10-10T12:18:36.343979",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 1,
+    "AP_BEACON_ENABLED": 0,
+    "RANGEFINDER_MAX_INSTANCES": 8,
+    "AP_AIS_ENABLED": 0,
+    "AP_ICENGINE_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_OPTICALFLOW_ENABLED": 0
+  }
+}

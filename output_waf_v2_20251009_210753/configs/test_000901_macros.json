@@ -1,0 +1,14 @@
+{
+  "test_id": 901,
+  "timestamp": "2025-10-11T14:53:58.515799",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "MAVLINK_ENABLED_STANDARD": 1,
+    "AP_FEATURE_SBUS_OUT": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "MAX_PWMS": 8
+  }
+}

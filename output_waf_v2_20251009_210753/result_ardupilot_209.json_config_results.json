@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 210,
+    "timestamp": "2025-10-10T06:26:16.625165",
+    "macro_changes": {
+      "HAL_DSHOT_ENABLED": 0,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+      "AP_RSSI_ENABLED": 1,
+      "MODE_RTL_ENABLED": 1,
+      "RC_INPUT_MAX_PULSEWIDTH": 2,
+      "HAL_UART_IOMCU_IDX": 0,
+      "HAL_MEMORY_TOTAL_KB": 0,
+      "MAVLINK_ENABLED_CSAIRLINK": 0
+    },
+    "build_success": false,
+    "build_time": 129.1343207359314,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+  }
+]

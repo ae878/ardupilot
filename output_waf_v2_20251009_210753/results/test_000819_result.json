@@ -1,0 +1,18 @@
+{
+  "test_id": 819,
+  "timestamp": "2025-10-11T10:56:22.075303",
+  "macro_changes": {
+    "HAL_WITH_RAMTRON": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "AP_MISSION_ENABLED": 0,
+    "RPMMAX": 1,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1
+  },
+  "build_success": false,
+  "build_time": 169.80477094650269,
+  "build_result": false,
+  "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+}

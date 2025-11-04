@@ -1,0 +1,12 @@
+{
+  "test_id": 59,
+  "timestamp": "2025-10-13T18:28:09.071094",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "HAL_USB_VENDOR_ID": 1,
+    "AP_RC_CHANNEL_ENABLED": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_USE_FATFS": 1
+  }
+}

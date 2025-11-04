@@ -1,0 +1,15 @@
+{
+  "test_id": 321,
+  "timestamp": "2025-10-10T11:26:38.577701",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_RED": 1,
+    "FLOW_CONTROL_ENABLED": 0,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "AC_PRECLAND_ENABLED": 0,
+    "MODE_LOITER_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AP_SIM_ENABLED": 0
+  }
+}

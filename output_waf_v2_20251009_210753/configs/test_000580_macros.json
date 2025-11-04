@@ -1,0 +1,11 @@
+{
+  "test_id": 580,
+  "timestamp": "2025-10-10T23:27:02.784843",
+  "macro_changes": {
+    "FS_THR_DISABLED": 0,
+    "AP_STATS_ENABLED": 1,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+    "HAL_GPIO_ALT": 1,
+    "AP_ICENGINE_ENABLED": 1
+  }
+}

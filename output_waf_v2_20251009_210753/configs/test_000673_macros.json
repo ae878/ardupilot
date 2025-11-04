@@ -1,0 +1,11 @@
+{
+  "test_id": 673,
+  "timestamp": "2025-10-11T03:50:42.369231",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 0,
+    "AP_STATS_ENABLED": 0,
+    "METADATA_MAX_i": 1,
+    "HAL_SPRAYER_ENABLED": 1,
+    "RANGEFINDER_MAX_INSTANCES": 16
+  }
+}

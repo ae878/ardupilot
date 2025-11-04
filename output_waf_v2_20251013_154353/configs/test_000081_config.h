@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #81 */
+
+/* ConfigFuzz: HAL_USE_FATFS */
+#ifdef HAL_USE_FATFS
+#undef HAL_USE_FATFS
+#endif
+#define HAL_USE_FATFS 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_EXPLICIT */
+#ifdef BENCH_DEFINE_MAP_EXPLICIT
+#undef BENCH_DEFINE_MAP_EXPLICIT
+#endif
+#define BENCH_DEFINE_MAP_EXPLICIT 0
+
+/* ConfigFuzz: MODE_AUTO_ENABLED */
+#ifdef MODE_AUTO_ENABLED
+#undef MODE_AUTO_ENABLED
+#endif
+#define MODE_AUTO_ENABLED 0
+
+/* ConfigFuzz: AP_PERIPH_RCIN_ENABLED */
+#ifdef AP_PERIPH_RCIN_ENABLED
+#undef AP_PERIPH_RCIN_ENABLED
+#endif
+#define AP_PERIPH_RCIN_ENABLED 1
+
+/* ConfigFuzz: AP_PERIPH_AIRSPEED_ENABLED */
+#ifdef AP_PERIPH_AIRSPEED_ENABLED
+#undef AP_PERIPH_AIRSPEED_ENABLED
+#endif
+#define AP_PERIPH_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_GCS_ENABLED_BRAKE_OR_LAND
+#undef FS_GCS_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_GCS_ENABLED_BRAKE_OR_LAND 1
+
+/* ConfigFuzz: CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY */
+#ifdef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#undef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#endif
+#define CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY 1
+
+/* ConfigFuzz: HAL_BATT_CURR_PIN */
+#ifdef HAL_BATT_CURR_PIN
+#undef HAL_BATT_CURR_PIN
+#endif
+#define HAL_BATT_CURR_PIN 1
+
+#endif /* _AP_CONFIG_H_ */

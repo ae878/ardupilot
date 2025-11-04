@@ -1,0 +1,728 @@
+{
+  "test_id": 50,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS.cpp:948:6:0(float&, AP_AHRS::AirspeedEstimateType&) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:48:6:bool AP_Airspeed_SDP3X::_send_command(uint16_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.cpp:5:1:AP_Airspeed_External::AP_Airspeed_External(AP_Airspeed&, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.cpp:77:6:bool AP_Airspeed_ASP5033::confirm_sensor_id()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:37:1:AP_Airspeed_DLVR::AP_Airspeed_DLVR(AP_Airspeed&, uint8_t, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:181:6:void AP_Airspeed::send_airspeed_calibration(const Vector3f&)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:206:6:void AP_Airspeed_AUAV::_timer()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:37:1:AP_Airspeed_MS4525::AP_Airspeed_MS4525(AP_Airspeed&, uint8_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.h:18:10:virtual bool AP_Airspeed_External::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:140:7:float AP_Airspeed_MS4525::_get_temperature(int16_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.h:36:5:AP_Airspeed_MS4525::~AP_Airspeed_MS4525()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.h:23:10:virtual bool AP_Airspeed_Analog::get_temperature(float&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.h:13:7:virtual AP_Airspeed_External::~AP_Airspeed_External()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.cpp:26:6:virtual bool AP_Airspeed_MSP::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Health.cpp:23:6:void AP_Airspeed::check_sensor_ahrs_wind_max_failures(uint8_t)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.h:37:7:virtual AP_Airspeed_SDP3X::~AP_Airspeed_SDP3X()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.cpp:5:1:AP_Airspeed_MSP::AP_Airspeed_MSP(AP_Airspeed&, uint8_t, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.h:11:7:AP_Airspeed_DroneCAN::~AP_Airspeed_DroneCAN()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:62:6:virtual bool AP_Airspeed_MS4525::init()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:177:6:bool AP_Airspeed_AUAV::_read_coefficients()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.h:36:5:AP_Airspeed_AUAV::~AP_Airspeed_AUAV()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:309:6:virtual bool AP_Airspeed_SDP3X::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:146:6:virtual bool AP_Airspeed_DLVR::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:126:7:float AP_Airspeed_MS4525::_get_pressure(int16_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:251:6:virtual bool AP_Airspeed_MS4525::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.h:11:7:virtual AP_Airspeed_DroneCAN::~AP_Airspeed_DroneCAN()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_ASP5033::timer; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:290:6:virtual bool AP_Airspeed_SDP3X::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:122:6:bool AP_Airspeed_MS5525::read_prom()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.cpp:38:6:virtual void AP_Airspeed_MSP::handle_msp(const MSP::msp_airspeed_data_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:267:6:virtual bool AP_Airspeed_MS5525::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:220:6:void AP_Airspeed_MS4525::_voltage_correction(float&, float&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:270:6:virtual bool AP_Airspeed_MS4525::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.h:19:10:virtual bool AP_Airspeed_MSP::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:237:6:void AP_Airspeed_MS4525::_timer()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:154:6:virtual bool AP_Airspeed_DroneCAN::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.h:49:18:virtual bool AP_Airspeed_Backend::get_airspeed(float&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Health.cpp:14:6:void AP_Airspeed::check_sensor_failures()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:117:10:uint16_t AP_Airspeed_MS5525::crc4_prom()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:virtual Canard::ArgCallback<AP_DroneCAN, uavcan_equipment_air_data_RawAirData>::~ArgCallback()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:55:6:virtual bool AP_Airspeed_SDP3X::init()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:104:10:void Canard::ArgCallback<T, msgtype>::operator()(const CanardRxTransfer&, const msgtype&) [with T = AP_DroneCAN; msgtype = uavcan_equipment_air_data_RawAirData]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.h:26:7:virtual AP_Airspeed_ASP5033::~AP_Airspeed_ASP5033()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:Canard::ArgCallback<AP_DroneCAN, dronecan_sensors_hygrometer_Hygrometer>::~ArgCallback()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.cpp:96:6:void AP_Airspeed_ASP5033::timer()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:65:6:virtual bool AP_Airspeed_MS5525::init()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:169:6:void AP_Airspeed::update_calibration(const Vector3f&, int16_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.h:11:7:AP_Airspeed_Analog::~AP_Airspeed_Analog()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:69:6:virtual bool AP_Airspeed_AUAV::init()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:22:1:Airspeed_Calibration::Airspeed_Calibration()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:158:6:void AP_Airspeed_SDP3X::_timer()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = dronecan_sensors_hygrometer_Hygrometer]",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_SDP3X::_timer; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:37:1:virtual AP_Airspeed_Backend::~AP_Airspeed_Backend()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:44:7:float Airspeed_Calibration::update(float, const Vector3f&, int16_t)",
+        "stack_size": 224
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:109:6:void AP_Airspeed_MS4525::_measure()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.h:36:5:virtual AP_Airspeed_MS4525::~AP_Airspeed_MS4525()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:37:1:AP_Airspeed_Backend::~AP_Airspeed_Backend()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:56:9:uint8_t AP_Airspeed_Backend::get_bus() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:virtual Canard::ArgCallback<AP_DroneCAN, dronecan_sensors_hygrometer_Hygrometer>::~ArgCallback()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:50:6:bool AP_Airspeed_AUAV::probe(uint8_t, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_MS5525::timer; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:66:6:void AP_Airspeed_Backend::set_bus_id(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.h:38:5:AP_Airspeed_DLVR::~AP_Airspeed_DLVR()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_DLVR::timer; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.h:42:5:AP_Airspeed_MS5525::~AP_Airspeed_MS5525()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:117:6:void AP_Airspeed::update_calibration(uint8_t, const Vector3f&, int16_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.cpp:39:6:virtual bool AP_Airspeed_Analog::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:43:1:AP_Airspeed_AUAV::AP_Airspeed_AUAV(AP_Airspeed&, uint8_t, float)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:174:6:virtual bool AP_Airspeed_DroneCAN::get_hygrometer(uint32_t&, float&, float&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.cpp:25:6:virtual bool AP_Airspeed_External::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.h:46:18:virtual bool AP_Airspeed_Backend::has_airspeed()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:42:8:int8_t AP_Airspeed_Backend::get_pin() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:45:22:static AP_Airspeed_Backend* AP_Airspeed_DLVR::probe(AP_Airspeed&, uint8_t, AP_HAL::OwnPtr<AP_HAL::I2CDevice>, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:103:6:void AP_Airspeed_AUAV::_collect()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.cpp:33:1:AP_Airspeed_Analog::AP_Airspeed_Analog(AP_Airspeed&, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.cpp:12:6:virtual bool AP_Airspeed_External::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.h:11:7:virtual AP_Airspeed_Analog::~AP_Airspeed_Analog()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:58:1:AP_Airspeed_MS5525::AP_Airspeed_MS5525(AP_Airspeed&, uint8_t, AP_Airspeed_MS5525::MS5525_ADDR)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.cpp:37:6:virtual void AP_Airspeed_External::handle_external(const AP_ExternalAHRS::airspeed_data_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.cpp:42:6:virtual bool AP_Airspeed_ASP5033::init()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.cpp:162:6:virtual bool AP_Airspeed_ASP5033::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:177:6:void AP_Airspeed_MS5525::calculate()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.h:14:7:AP_Airspeed_MSP::~AP_Airspeed_MSP()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.h:38:5:virtual AP_Airspeed_DLVR::~AP_Airspeed_DLVR()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.h:14:7:virtual AP_Airspeed_MSP::~AP_Airspeed_MSP()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:214:6:void AP_Airspeed_MS5525::timer()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MSP.cpp:13:6:virtual bool AP_Airspeed_MSP::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.h:26:7:AP_Airspeed_ASP5033::~AP_Airspeed_ASP5033()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:165:9:int32_t AP_Airspeed_MS5525::read_adc()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:330:6:bool AP_Airspeed_SDP3X::_crc(const uint8_t*, uint8_t, uint8_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:55:5:Canard::Subscriber<msgtype>::~Subscriber() [with msgtype = dronecan_sensors_hygrometer_Hygrometer]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:51:7:float AP_Airspeed_Backend::get_psi_range() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:184:1:cpp)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:63:6:void AP_Airspeed_DLVR::setup()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_ASP5033.cpp:140:6:virtual bool AP_Airspeed_ASP5033::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:93:6:void AP_Airspeed_AUAV::_measure()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.cpp:196:7:float AP_Airspeed_SDP3X::_correct_pressure(float)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:27:22:static AP_Airspeed_Backend* AP_Airspeed_DroneCAN::probe(AP_Airspeed&, uint8_t, uint32_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:147:6:void AP_Airspeed_MS4525::_collect()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_SDP3X.h:37:7:AP_Airspeed_SDP3X::~AP_Airspeed_SDP3X()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS4525.cpp:43:6:bool AP_Airspeed_MS4525::probe(uint8_t, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:61:6:bool AP_Airspeed_Backend::bus_is_configured() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.h:36:5:virtual AP_Airspeed_AUAV::~AP_Airspeed_AUAV()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:16:6:static bool AP_Airspeed_DroneCAN::subscribe_msgs(AP_DroneCAN*)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:286:6:virtual bool AP_Airspeed_MS5525::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:Canard::ArgCallback<AP_DroneCAN, uavcan_equipment_air_data_RawAirData>::~ArgCallback()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_analog.cpp:45:6:virtual bool AP_Airspeed_Analog::get_differential_pressure(float&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_External.h:13:7:AP_Airspeed_External::~AP_Airspeed_External()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = uavcan_equipment_air_data_RawAirData]",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:162:10:uint32_t AP_Airspeed_AUAV::_read_register(uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.h:42:5:virtual AP_Airspeed_MS5525::~AP_Airspeed_MS5525()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:76:6:virtual bool AP_Airspeed_DLVR::init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_MS4525::_timer; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:96:6:void AP_Airspeed_DLVR::timer()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:141:6:virtual bool AP_Airspeed_DroneCAN::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DLVR.cpp:165:6:virtual bool AP_Airspeed_DLVR::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_MS5525.cpp:214:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:65:23:static AP_Airspeed_DroneCAN* AP_Airspeed_DroneCAN::get_dronecan_backend(AP_DroneCAN*, uint8_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Airspeed_AUAV::_timer; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:104:10:void Canard::ArgCallback<T, msgtype>::operator()(const CanardRxTransfer&, const msgtype&) [with T = AP_DroneCAN; msgtype = dronecan_sensors_hygrometer_Hygrometer]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/Airspeed_Calibration.cpp:35:6:void Airspeed_Calibration::init(float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:219:6:virtual bool AP_Airspeed_AUAV::get_differential_pressure(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_Backend.cpp:31:1:AP_Airspeed_Backend::AP_Airspeed_Backend(AP_Airspeed&, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:135:6:virtual bool AP_Airspeed_DroneCAN::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:101:6:static void AP_Airspeed_DroneCAN::handle_airspeed(AP_DroneCAN*, const CanardRxTransfer&, const uavcan_equipment_air_data_RawAirData&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_DroneCAN.cpp:120:6:static void AP_Airspeed_DroneCAN::handle_hygrometer(AP_DroneCAN*, const CanardRxTransfer&, const dronecan_sensors_hygrometer_Hygrometer&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:55:5:Canard::Subscriber<msgtype>::~Subscriber() [with msgtype = uavcan_equipment_air_data_RawAirData]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Airspeed/AP_Airspeed_AUAV.cpp:227:6:virtual bool AP_Airspeed_AUAV::get_temperature(float&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_Backend.cpp:596:6:void AP_MSP_Telem_Backend::msp_handle_airspeed(const MSP::msp_airspeed_data_message_t&)",
+        "stack_size": 8
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2345:6:void GCS_MAVLINK::send_scaled_pressure2()",
+        "baseline": 0,
+        "current": 48,
+        "diff": 48
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2350:6:virtual void GCS_MAVLINK::send_scaled_pressure3()",
+        "baseline": 0,
+        "current": 48,
+        "diff": 48
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2340:6:void GCS_MAVLINK::send_scaled_pressure()",
+        "baseline": 0,
+        "current": 48,
+        "diff": 48
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:6071:6:virtual bool GCS_MAVLINK::try_send_message(ap_message)",
+        "baseline": 40,
+        "current": 56,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS.cpp:948:6:bool AP_AHRS::_airspeed_EAS(float&, AP_AHRS::AirspeedEstimateType&) const",
+        "baseline": 80,
+        "current": 4,
+        "diff": -76
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_Airspeed.cpp:15:6:void AP_DAL_Airspeed::start_frame()",
+        "baseline": 48,
+        "current": 0,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2294:6:void GCS_MAVLINK::send_scaled_pressure_instance(uint8_t, void (*)(mavlink_channel_t, uint32_t, float, float, int16_t, int16_t))",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS.cpp:926:6:bool AP_AHRS::_should_use_airspeed_sensor(uint8_t) const",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:7189:8:int8_t GCS_MAVLINK::high_latency_air_temperature() const",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:4643:12:virtual MAV_RESULT GCS_MAVLINK::_handle_command_preflight_calibration_baro(const mavlink_message_t&)",
+        "baseline": 24,
+        "current": 8,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS.cpp:3236:9:uint8_t AP_AHRS::get_active_airspeed_index() const",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15753
+  },
+  "total_functions_analyzed": 15788
+}

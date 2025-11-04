@@ -1,0 +1,15 @@
+{
+  "test_id": 862,
+  "timestamp": "2025-10-11T13:04:34.449472",
+  "macro_changes": {
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "HAL_MOUNT_ENABLED": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "AP_AIS_ENABLED": 0,
+    "HAL_USE_SDMMC": 0
+  }
+}

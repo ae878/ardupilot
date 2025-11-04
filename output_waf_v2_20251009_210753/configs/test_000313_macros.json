@@ -1,0 +1,14 @@
+{
+  "test_id": 313,
+  "timestamp": "2025-10-10T11:09:33.352124",
+  "macro_changes": {
+    "HAL_WITH_DRONECAN": 1,
+    "HAL_GPIO_INPUT": 0,
+    "LEDDARONE_DETECTIONS_MAX": 16,
+    "AP_FEATURE_RTSCTS": 0,
+    "HAL_GPIO_LED_ON": 0,
+    "HAL_GPIO_ALT": 0,
+    "AP_CAMERA_ENABLED": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 260,
+  "timestamp": "2025-10-10T08:44:00.443391",
+  "macro_changes": {
+    "AC_PRECLAND_ENABLED": 1,
+    "CONFIG_LWIP_STATS": 1,
+    "HAL_INS_RATE_LOOP": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 944,
+  "timestamp": "2025-10-11T17:00:56.562922",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU": 0,
+    "MODE_THROW_ENABLED": 0,
+    "MODE_RTL_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_RED": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1
+  }
+}

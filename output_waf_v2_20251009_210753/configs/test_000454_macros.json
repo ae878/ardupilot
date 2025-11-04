@@ -1,0 +1,13 @@
+{
+  "test_id": 454,
+  "timestamp": "2025-10-10T17:35:38.009778",
+  "macro_changes": {
+    "HAL_MOUNT_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+    "HAL_WITH_RAMTRON": 0,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 16,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "HAL_GPIO_LED_ON": 1
+  }
+}

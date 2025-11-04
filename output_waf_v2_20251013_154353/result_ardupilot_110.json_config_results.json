@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 111,
+    "timestamp": "2025-10-13T20:56:19.472966",
+    "macro_changes": {
+      "AP_PERIPH_RPM_ENABLED": 1,
+      "CONFIG_LWIP_STATS": 1,
+      "HAL_GCS_ENABLED": 0,
+      "AP_RADIO_ENABLED": 1,
+      "HAL_GENERATOR_ENABLED": 1,
+      "HAL_RALLY_ENABLED": 1,
+      "BENCH_DEFINE_MAP_EXPLICIT": 1
+    },
+    "build_success": false,
+    "build_time": 10.397779941558838,
+    "build_result": false,
+    "error": "../../libraries/AC_Autorotation/RSC_Autorotation.cpp:127:21: error: 'constrain_float' was not declared in this scope"
+  }
+]

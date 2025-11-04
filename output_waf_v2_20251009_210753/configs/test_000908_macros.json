@@ -1,0 +1,13 @@
+{
+  "test_id": 908,
+  "timestamp": "2025-10-11T15:15:01.058450",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MAX_PWMS": 32,
+    "AP_AIRSPEED_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "MODE_ZIGZAG_ENABLED": 1
+  }
+}

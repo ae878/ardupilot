@@ -1,0 +1,9 @@
+{
+  "test_id": 927,
+  "timestamp": "2025-10-11T16:08:17.795504",
+  "macro_changes": {
+    "USER_PARAMS_ENABLED": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "HAL_CANFD_SUPPORTED": 0
+  }
+}

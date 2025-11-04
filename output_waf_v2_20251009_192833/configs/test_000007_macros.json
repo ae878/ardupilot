@@ -1,0 +1,13 @@
+{
+  "test_id": 7,
+  "timestamp": "2025-10-09T19:49:27.662341",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "HAL_HEATER_GPIO_ON": 0,
+    "MODE_ACRO_ENABLED": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 2,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0
+  }
+}

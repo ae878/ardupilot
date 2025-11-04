@@ -1,0 +1,14 @@
+{
+  "test_id": 125,
+  "timestamp": "2025-10-10T02:40:10.359117",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 0,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "MODE_THROW_ENABLED": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "HAL_UART_IOMCU_IDX": 0,
+    "HAL_GPIO_OUTPUT": 0
+  }
+}

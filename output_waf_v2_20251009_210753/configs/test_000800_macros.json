@@ -1,0 +1,15 @@
+{
+  "test_id": 800,
+  "timestamp": "2025-10-11T10:05:57.441735",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MODE_SPORT_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "AP_SIM_ENABLED": 0,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_PWM_COUNT": 1,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "TAP_ESC_MAX_MOTOR_NUM": 16,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0
+  }
+}

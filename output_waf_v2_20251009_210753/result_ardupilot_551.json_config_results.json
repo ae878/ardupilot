@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 552,
+    "timestamp": "2025-10-10T22:11:09.317101",
+    "macro_changes": {
+      "HAL_PWM_COUNT": 0,
+      "MODE_LOITER_ENABLED": 0,
+      "HAL_WITH_MCU_MONITORING": 1,
+      "FS_THR_ENABLED_ALWAYS_LAND": 0,
+      "BENCH_DEFINE_MAP_IMPLICIT": 1,
+      "HAL_MOUNT_ENABLED": 1,
+      "MAVLINK_ENABLED_LOWEHEISER": 0,
+      "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+      "HAL_USB_PRODUCT_ID": 0,
+      "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1
+    },
+    "build_success": false,
+    "build_time": 135.92930793762207,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+  }
+]

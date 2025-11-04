@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #552 */
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 0
+
+/* ConfigFuzz: MODE_LOITER_ENABLED */
+#ifdef MODE_LOITER_ENABLED
+#undef MODE_LOITER_ENABLED
+#endif
+#define MODE_LOITER_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_MCU_MONITORING */
+#ifdef HAL_WITH_MCU_MONITORING
+#undef HAL_WITH_MCU_MONITORING
+#endif
+#define HAL_WITH_MCU_MONITORING 1
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_LAND */
+#ifdef FS_THR_ENABLED_ALWAYS_LAND
+#undef FS_THR_ENABLED_ALWAYS_LAND
+#endif
+#define FS_THR_ENABLED_ALWAYS_LAND 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 1
+
+/* ConfigFuzz: HAL_MOUNT_ENABLED */
+#ifdef HAL_MOUNT_ENABLED
+#undef HAL_MOUNT_ENABLED
+#endif
+#define HAL_MOUNT_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_LOWEHEISER */
+#ifdef MAVLINK_ENABLED_LOWEHEISER
+#undef MAVLINK_ENABLED_LOWEHEISER
+#endif
+#define MAVLINK_ENABLED_LOWEHEISER 0
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 1
+
+/* ConfigFuzz: HAL_USB_PRODUCT_ID */
+#ifdef HAL_USB_PRODUCT_ID
+#undef HAL_USB_PRODUCT_ID
+#endif
+#define HAL_USB_PRODUCT_ID 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_ADAP_TUNING_CRC */
+#ifdef MAVLINK_MSG_ID_ADAP_TUNING_CRC
+#undef MAVLINK_MSG_ID_ADAP_TUNING_CRC
+#endif
+#define MAVLINK_MSG_ID_ADAP_TUNING_CRC 1
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,13 @@
+{
+  "test_id": 970,
+  "timestamp": "2025-10-11T20:31:00.483146",
+  "macro_changes": {
+    "HAL_QUADPLANE_ENABLED": 1,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "HAL_WITH_DRONECAN": 1,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 4,
+    "AP_FOLLOW_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 16
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 661,
+  "timestamp": "2025-10-11T03:14:46.542478",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1
+  }
+}

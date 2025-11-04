@@ -1,0 +1,18 @@
+{
+  "test_id": 506,
+  "timestamp": "2025-10-10T19:57:33.780093",
+  "macro_changes": {
+    "KDECAN_MAX_NUM_ESCS": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 4
+  },
+  "build_success": false,
+  "build_time": 131.7869746685028,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/SPIDevice.cpp:88:97: error: invalid use of incomplete type 'class ChibiOS::Shared_DMA'"
+}

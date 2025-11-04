@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 67,
+    "timestamp": "2025-10-10T00:06:24.588159",
+    "macro_changes": {
+      "HAL_USB_PRODUCT_ID": 1,
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+      "AP_SERIALMANAGER_ENABLED": 0,
+      "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+      "HAL_SPRAYER_ENABLED": 0,
+      "ESC_CHANNEL_MAP_CHANNEL": 1,
+      "LEDDARONE_DETECTIONS_MAX": 4,
+      "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+      "MODE_DRIFT_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 9.797462224960327,
+    "build_result": false,
+    "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+  }
+]

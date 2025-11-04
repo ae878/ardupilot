@@ -1,0 +1,12 @@
+{
+  "test_id": 643,
+  "timestamp": "2025-10-11T02:17:20.614850",
+  "macro_changes": {
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "AP_MISSION_ENABLED": 1,
+    "KDECAN_MAX_NUM_ESCS": 4,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "HAL_USE_SDMMC": 1
+  }
+}

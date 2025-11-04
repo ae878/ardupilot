@@ -1,0 +1,12 @@
+{
+  "test_id": 610,
+  "timestamp": "2025-10-11T00:47:59.111468",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ALL": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 1
+  }
+}

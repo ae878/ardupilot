@@ -1,0 +1,14 @@
+{
+  "test_id": 389,
+  "timestamp": "2025-10-10T14:30:27.169001",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 0,
+    "HAL_WITH_IO_MCU": 1,
+    "HAL_FLASH_PROTECTION": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "AP_FENCE_ENABLED": 0,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  }
+}

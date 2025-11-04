@@ -1,0 +1,191 @@
+{
+  "test_id": 68,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:382:6:bool AP_Button::arming_checks(size_t, char*) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:239:6:void AP_Button::run_aux_functions(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:130:1:AP_Button::AP_Button()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:143:6:void AP_Button::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:287:6:bool AP_Button::get_button_state(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:347:6:void AP_Button::send_report() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:void AP_Button::timer_update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Button::timer_update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:364:6:void AP_Button::setup_pins()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:403:12:AP_Button& AP::button()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:304:9:uint8_t AP_Button::get_mask()",
+        "stack_size": 32
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:186:6:virtual void MissionItemProtocol_Rally::timeout()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:44:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Rally::complete(const GCS_MAVLINK&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:31:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Rally::append_item(const mavlink_mission_item_int_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Filesystem/AP_Filesystem_Mission.cpp:500:6:bool AP_Filesystem_Mission::finish_upload_rally(const AP_Filesystem_Mission::header&, const AP_Filesystem_Mission::rfile&, const uint8_t*)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:173:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Rally::replace_item(const mavlink_mission_item_int_t&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:169:10:virtual uint16_t MissionItemProtocol_Rally::max_items() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/AP_Rally.cpp:26:6:virtual bool AP_Rally_Copter::is_valid(const Location&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:108:6:static bool MissionItemProtocol_Rally::get_item_as_mission_item(uint16_t, mavlink_mission_item_int_t&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Terrain/TerrainMission.cpp:121:6:void AP_Terrain::update_rally_data()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:52:6:virtual bool MissionItemProtocol_Rally::clear_all_items()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.h:14:22:virtual MAV_MISSION_TYPE MissionItemProtocol_Rally::mission_type() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:165:10:virtual uint16_t MissionItemProtocol_Rally::item_count() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:58:20:static MAV_MISSION_RESULT MissionItemProtocol_Rally::convert_MISSION_ITEM_INT_to_RallyLocation(const mavlink_mission_item_int_t&, RallyLocation&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:153:20:virtual MAV_MISSION_RESULT MissionItemProtocol_Rally::get_item(uint16_t, mavlink_mission_item_int_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.h:28:16:virtual ap_message MissionItemProtocol_Rally::next_item_ap_message_id() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/MissionItemProtocol_Rally.cpp:191:6:virtual void MissionItemProtocol_Rally::truncate(const mavlink_mission_count_t&)",
+        "stack_size": 0
+      }
+    ],
+    "increased": [],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_Arming/AP_Arming.cpp:863:6:virtual bool AP_Arming::mission_checks(bool)",
+        "baseline": 120,
+        "current": 88,
+        "diff": -32
+      },
+      {
+        "function": "../../ArduCopter/mode_rtl.cpp:401:6:void ModeRTL::compute_return_target()",
+        "baseline": 56,
+        "current": 40,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15885
+  },
+  "total_functions_analyzed": 15900
+}

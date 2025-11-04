@@ -1,0 +1,13 @@
+{
+  "test_id": 266,
+  "timestamp": "2025-10-10T09:01:47.018002",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "MODE_GUIDED_ENABLED": 0,
+    "HAL_INS_RATE_LOOP": 1,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 0
+  }
+}

@@ -4,7 +4,7 @@ import logging as lg
 import json
 import os
 from datetime import datetime
-
+import re
 from src.config.config import ConfigFactory
 from src.utils.logging import get_logger
 
@@ -83,6 +83,7 @@ class Z3ConfigValidator:
         elif condition.startswith("#if"):
             condition = condition[3:].strip()
 
+        print(condition)
         # Handle defined() checks
         if "defined" in condition:
             # Extract macro name from defined() or defined MACRO
@@ -169,8 +170,9 @@ class Z3ConfigValidator:
 
         # Handle ! operator
         if condition.startswith("!"):
-            self.logger.debug(f"Not condition: {condition}")
+            print(f"Not condition: {condition}")
             var = self._parse_condition(condition[1:].strip())
+            print(var)
             # For ! operator, we always want to work with a boolean
             return Not(Bool(str(var)))
 
@@ -457,12 +459,62 @@ class Z3ConfigSolver:
                     else:
                         self.solver.add(Not(self.macro_vars[macro_name]))  # z3.Not 대신 Not 사용
                 elif value_type in ["integer", "hex"]:
+                    if value_type == "hex":
+                        value = int(value,16)
                     self.solver.add(self.macro_vars[macro_name] == value)
 
     def _parse_condition(self, condition_str, file_path=None):  # condition -> condition_str로 변경
         """조건문을 Z3 표현식으로 변환합니다."""
         if not condition_str:
             return None
+        
+        condition_str = condition_str.strip()
+
+        def _is_wrapped_by_parens(s: str) -> bool:
+            if not (s.startswith('(') and s.endswith(')')):
+                return False
+            depth = 0
+            for i, ch in enumerate(s):
+                if ch == '(':
+                    depth += 1
+                elif ch == ')':
+                   depth -= 1
+                   if depth == 0 and i != len(s) - 1:
+                       return False
+            return True
+
+        def _split_top_level(s: str, op: str) -> list[str]:
+            parts, depth, last, i, olen = [], 0, 0, 0, len(op)
+            while i < len(s):
+                ch = s[i]
+                if ch == '(':
+                    depth += 1; i += 1; continue
+                if ch == ')':
+                    depth -= 1; i += 1; continue
+                if depth == 0 and s.startswith(op, i):
+                    parts.append(s[last:i].strip()); i += olen; last = i; continue
+                i += 1
+            if last == 0:
+                return [s.strip()]
+            parts.append(s[last:].strip())
+            return parts
+
+        while _is_wrapped_by_parens(condition_str):
+             condition_str = condition_str[1:-1].strip()
+
+        m = re.match(r'^defined\s*\(?\s*([A-Za-z_]\w*)\s*\)?$', condition_str)
+        if m:
+            name = m.group(1)
+            return Bool(f"DEF_{name}")  # '정의 여부'를 나타내는 Bool
+
+        m = re.match(r'^!\s*defined\s*\(?\s*([A-Za-z_]\w*)\s*\)?$', condition_str)
+        if m:
+            name = m.group(1)
+            return Not(Bool(f"DEF_{name}"))
+
+        if condition_str.startswith('!') and _is_wrapped_by_parens(condition_str[1:].strip()):
+            inner = self._parse_condition(condition_str[1:].strip()[1:-1].strip(), file_path)
+            return None if inner is None else Not(inner)
 
         # 간단한 매크로 이름만 있는 경우 (ifdef/ifndef)
         if condition_str in self.macro_vars:
@@ -475,8 +527,31 @@ class Z3ConfigSolver:
         # 복잡한 조건 처리
         # == 연산자 처리
         try:
+            parts_or = _split_top_level(condition_str, '||')
+            if len(parts_or) > 1:
+                subs = []
+                for p in parts_or:
+                   e = self._parse_condition(p, file_path)
+                   if e is not None and hasattr(e, "sort") and str(e.sort()) == "Int":
+                        e = e > 0
+                   if e is not None:
+                        subs.append(e)
+                if subs:
+                    return Or(*subs)
+
+            parts_and = _split_top_level(condition_str, '&&')
+            if len(parts_and) > 1:
+                subs = []
+                for p in parts_and:
+                    e = self._parse_condition(p, file_path)
+                    if e is not None and hasattr(e, "sort") and str(e.sort()) == "Int":
+                        e = e > 0
+                    if e is not None:
+                        subs.append(e)
+                if subs:
+                    return And(*subs)
             if "==" in condition_str:
-                parts = condition_str.split("==")
+                parts = condition_str.split("==",1)
                 left = parts[0].strip()
                 right = parts[1].strip()
 
@@ -489,10 +564,9 @@ class Z3ConfigSolver:
                         return self.macro_vars[left] == right_val
                     except ValueError:
                         pass
-
             # > 연산자 처리 (>= 제외)
             if ">" in condition_str and ">=" not in condition_str:
-                parts = condition_str.split(">")
+                parts = condition_str.split(">",1)
                 if len(parts) == 2:
                     left = parts[0].strip()
                     right = parts[1].strip()
@@ -504,35 +578,6 @@ class Z3ConfigSolver:
                         except ValueError:
                             pass
 
-            # && 연산자 처리
-            if "&&" in condition_str:
-                parts = condition_str.split("&&")
-                subconditions = []
-                for part in parts:
-                    subexpr = self._parse_condition(part.strip(), file_path)
-                    if subexpr is not None:
-                        # Int 타입이면 Bool로 변환
-                        if hasattr(subexpr, "sort") and str(subexpr.sort()) == "Int":
-                            subexpr = subexpr > 0
-                        subconditions.append(subexpr)
-
-                    if subconditions:
-                        return And(subconditions)  # z3.And 대신 And 사용
-
-            # || 연산자 처리
-            if "||" in condition_str:
-                parts = condition_str.split("||")
-                subconditions = []
-                for part in parts:
-                    subexpr = self._parse_condition(part.strip(), file_path)
-                    if subexpr is not None:
-                        # Int 타입이면 Bool로 변환
-                        if hasattr(subexpr, "sort") and str(subexpr.sort()) == "Int":
-                            subexpr = subexpr > 0
-                        subconditions.append(subexpr)
-
-                    if subconditions:
-                        return Or(subconditions)  # z3.Or 대신 Or 사용
         except Exception as e:
             self.logger.warning(f"조건 파싱 오류: {condition_str} ({e})")
             return None
@@ -599,16 +644,14 @@ class Z3ConfigSolver:
         if target_macro not in self.macro_vars:
             raise ValueError(f"매크로 '{target_macro}'가 정의되지 않았습니다.")
 
-        if not self.is_initialized:
-            # 기본 값 제약 조건 추가
-            self._add_value_constraints()
+        self.solver.reset() 
 
-            # 조건부 블록 제약 조건 추가
-            self._add_conditional_block_constraints()
+        # 조건부 블록 제약 조건 추가
+        #self._add_conditional_block_constraints()
 
-            # 중첩 매크로 제약 조건 추가
-            self._add_nested_define_constraints()
-            self.is_initialized = True
+        # 중첩 매크로 제약 조건 추가
+        self._add_nested_define_constraints()
+        self.is_initialized = True
 
         # 대상 매크로 값 제약 추가
         target_info = self.macros.get(target_macro, {})
@@ -734,6 +777,7 @@ class Z3ConfigSolver:
 
             self.is_initialized = True
 
+
         # 대상 조건 제약 추가
         z3_expr = self._parse_condition(target_condition)
         if z3_expr is not None:
@@ -766,20 +810,18 @@ class Z3ConfigSolver:
             print(f"해결 불가능: 조건 '{target_condition}'이 충족되는 해결책 없음")
             return None
 
-    def _nested_config_solve_s4(self, target_conditions, is_save_result=False):
+    def _nested_config_solve_s4(self, target_conditions, is_save_result=True):
         """여러 조건들이 모두 충족되기 위한 매크로 설정을 찾습니다."""
         print(f"\n[S4 쿼리] {len(target_conditions)}개의 조건이 모두 충족되기 위한 설정 찾기")
 
-        if not self.is_initialized:
-            # 기본 값 제약 조건 추가
-            self._add_value_constraints()
+        self.solver.reset() 
+        
+        # 조건부 블록 제약 조건 추가
+        #self._add_conditional_block_constraints()
 
-            # 조건부 블록 제약 조건 추가
-            self._add_conditional_block_constraints()
-
-            # 중첩 매크로 제약 조건 추가
-            self._add_nested_define_constraints()
-            self.is_initialized = True
+        # 중첩 매크로 제약 조건 추가
+        self._add_nested_define_constraints()
+        self.is_initialized = True
 
         # 모든 조건에 대한 제약 추가
         for condition in target_conditions:
@@ -788,19 +830,22 @@ class Z3ConfigSolver:
             if condition.startswith("#if "):
                 condition = condition[4:].strip()
             elif condition.startswith("#ifdef "):
-                condition = condition[7:].strip()
+                macro = condition[7:].strip()
+                condition = f"defined({macro})"
             elif condition.startswith("#ifndef "):
-                condition = condition[8:].strip()
-
-            self.logger.debug(f"[-] 조건 '{condition}'을 Z3 표현식으로 변환합니다.")
+                macro = condition[8:].strip()
+                condition = f"!defined({macro})"
 
             z3_expr = None
             try:
+                print("-------------------HH_------------------")
+                print(condition)
                 z3_expr = self._parse_condition(condition)
             except Exception as e:
                 self.logger.warning(
                     f"[-] 조건 '{condition}'을 Z3 표현식으로 변환할 수 없습니다. 이 조건은 무시됩니다."
                 )
+                print(e)
                 continue
 
             # None 체크 추가
@@ -808,6 +853,7 @@ class Z3ConfigSolver:
                 self.logger.warning(f"[-] 조건 '{condition}'이 None을 반환했습니다. 이 조건은 무시됩니다.")
                 continue
             self.solver.add(z3_expr)
+            print(f"[S4] add: {condition}  =>  {getattr(z3_expr, 'sexpr', lambda: str(z3_expr))()}")
 
         # Z3 Solver로 해결
         result = self.solver.check()
@@ -828,6 +874,11 @@ class Z3ConfigSolver:
             # 결과 파일 저장
             if is_save_result:
                 result_file = self._save_result("s4", (str(target_conditions),), solution)
+
+            unlocked = {mn for mn, info in self.macros.items() if "value" not in info}  # 기본값 제약 안 걸린 애들
+            affected_only = {k: v for k, v in solution.items() if k in unlocked}
+            print("[S4] affected-only (no default):", affected_only)
+            
             return solution
         else:
             print(f"해결 불가능: {len(target_conditions)}개의 조건이 모두 충족되는 해결책 없음")

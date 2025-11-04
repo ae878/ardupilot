@@ -1,0 +1,10 @@
+{
+  "test_id": 64,
+  "timestamp": "2025-10-10T00:00:44.734219",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "HAL_MOUNT_ENABLED": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0
+  }
+}

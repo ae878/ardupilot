@@ -1,0 +1,12 @@
+{
+  "test_count": 1,
+  "success_count": 0,
+  "fail_count": 0,
+  "cache_hits": 0,
+  "original_start_time": 1760043956.9286988,
+  "elapsed_time": 170703.56922745705,
+  "baseline_stack_map": {},
+  "stack_changes_count": 0,
+  "significant_changes": [],
+  "last_update": "2025-10-11T20:31:00.497927"
+}

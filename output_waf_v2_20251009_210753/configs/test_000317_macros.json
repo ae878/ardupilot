@@ -1,0 +1,11 @@
+{
+  "test_id": 317,
+  "timestamp": "2025-10-10T11:17:39.134508",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "AP_FEATURE_SBUS_OUT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": 234,
+  "timestamp": "2025-10-10T07:31:37.391317",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "HAL_INS_VRBRAIN": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "HAL_USE_HW_RNG": 1,
+    "HAL_GPIO_OUTPUT": 1,
+    "AC_PRECLAND_ENABLED": 0
+  }
+}

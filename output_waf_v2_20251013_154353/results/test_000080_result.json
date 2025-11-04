@@ -1,0 +1,15 @@
+{
+  "test_id": 80,
+  "timestamp": "2025-10-13T19:31:18.228718",
+  "macro_changes": {
+    "HAL_QUADPLANE_ENABLED": 1,
+    "HAL_UART_IOMCU_IDX": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "TOY_MODE_ENABLED": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0
+  },
+  "build_success": false,
+  "build_time": 198.23492527008057,
+  "build_result": false,
+  "error": "libraries/GCS_MAVLink/include/mavlink/v2.0/all/../protocol.h:178:9: error: 'void* memcpy(void*, const void*, size_t)' forming offset 9 is out of the bounds [0, 9] [-Werror=array-bounds]"
+}

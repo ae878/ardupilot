@@ -1,0 +1,11 @@
+{
+  "test_id": 628,
+  "timestamp": "2025-10-11T01:36:48.472822",
+  "macro_changes": {
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "AP_RSSI_ENABLED": 0,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "HAL_BATT_VOLT_PIN": 0,
+    "MODE_LOITER_ENABLED": 0
+  }
+}

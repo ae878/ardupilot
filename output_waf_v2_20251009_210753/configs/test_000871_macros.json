@@ -1,0 +1,12 @@
+{
+  "test_id": 871,
+  "timestamp": "2025-10-11T13:30:33.502829",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "HAL_WITH_DRONECAN": 1,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1
+  }
+}

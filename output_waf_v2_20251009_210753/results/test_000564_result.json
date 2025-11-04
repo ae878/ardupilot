@@ -1,0 +1,16 @@
+{
+  "test_id": 564,
+  "timestamp": "2025-10-10T22:42:39.482730",
+  "macro_changes": {
+    "RC_OUTPUT_MAX_PULSEWIDTH": 2,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0,
+    "HAL_USE_FATFS": 1,
+    "HAL_GPIO_LED_ON": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1
+  },
+  "build_success": false,
+  "build_time": 7.138022422790527,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL/AP_HAL_Boards.h:393:2: error: #error \"Do not specify HAL_GPIO_LED_ON if you are setting it to the default, 0\""
+}

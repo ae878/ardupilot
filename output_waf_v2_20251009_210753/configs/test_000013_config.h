@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #13 */
+
+/* ConfigFuzz: HAL_IMUHEAT_P_DEFAULT */
+#ifdef HAL_IMUHEAT_P_DEFAULT
+#undef HAL_IMUHEAT_P_DEFAULT
+#endif
+#define HAL_IMUHEAT_P_DEFAULT 0
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_LOWEHEISER */
+#ifdef MAVLINK_ENABLED_LOWEHEISER
+#undef MAVLINK_ENABLED_LOWEHEISER
+#endif
+#define MAVLINK_ENABLED_LOWEHEISER 1
+
+/* ConfigFuzz: HAL_HAVE_SAFETY_SWITCH */
+#ifdef HAL_HAVE_SAFETY_SWITCH
+#undef HAL_HAVE_SAFETY_SWITCH
+#endif
+#define HAL_HAVE_SAFETY_SWITCH 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_EXPLICIT */
+#ifdef BENCH_DEFINE_MAP_EXPLICIT
+#undef BENCH_DEFINE_MAP_EXPLICIT
+#endif
+#define BENCH_DEFINE_MAP_EXPLICIT 1
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN 0
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 1
+
+#endif /* _AP_CONFIG_H_ */

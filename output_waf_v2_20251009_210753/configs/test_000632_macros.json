@@ -1,0 +1,10 @@
+{
+  "test_id": 632,
+  "timestamp": "2025-10-11T01:49:29.791797",
+  "macro_changes": {
+    "TOY_MODE_ENABLED": 0,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0
+  }
+}

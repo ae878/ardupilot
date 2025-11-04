@@ -1,0 +1,17 @@
+{
+  "test_id": 114,
+  "timestamp": "2025-10-10T02:08:59.358219",
+  "macro_changes": {
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1,
+    "HAL_MOUNT_ENABLED": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "HAL_BATT_CURR_PIN": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0
+  },
+  "build_success": false,
+  "build_time": 9.697401762008667,
+  "build_result": false,
+  "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+}

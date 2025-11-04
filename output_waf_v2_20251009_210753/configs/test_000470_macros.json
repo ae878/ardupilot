@@ -1,0 +1,13 @@
+{
+  "test_id": 470,
+  "timestamp": "2025-10-10T18:21:00.460272",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "HAL_UART_IOMCU_IDX": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 780,
+  "timestamp": "2025-10-11T09:05:49.996715",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 16,
+    "MODE_AUTO_ENABLED": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "HAL_WITH_MCU_MONITORING": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 0
+  }
+}

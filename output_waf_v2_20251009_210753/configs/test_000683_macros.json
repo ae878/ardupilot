@@ -1,0 +1,11 @@
+{
+  "test_id": 683,
+  "timestamp": "2025-10-11T04:20:21.084067",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 1,
+    "MAVLINK_ENABLED_MINIMAL": 0,
+    "HAL_USE_SDMMC": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0,
+    "AP_SIM_ENABLED": 1
+  }
+}

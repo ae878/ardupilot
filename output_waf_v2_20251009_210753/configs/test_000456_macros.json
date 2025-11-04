@@ -1,0 +1,9 @@
+{
+  "test_id": 456,
+  "timestamp": "2025-10-10T17:41:51.653922",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 1,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0
+  }
+}

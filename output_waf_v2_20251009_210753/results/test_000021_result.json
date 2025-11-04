@@ -1,0 +1,14 @@
+{
+  "test_id": 21,
+  "timestamp": "2025-10-09T22:03:52.282822",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "CONFIG_LWIP_STATS": 0
+  },
+  "build_success": false,
+  "build_time": 29.51854968070984,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

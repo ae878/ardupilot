@@ -1,0 +1,10 @@
+{
+  "test_id": 18,
+  "timestamp": "2025-10-09T20:17:34.432337",
+  "macro_changes": {
+    "HAL_LOGGING_ENABLED": 0,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 0
+  }
+}

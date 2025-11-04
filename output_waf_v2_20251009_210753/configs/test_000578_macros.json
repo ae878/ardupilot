@@ -1,0 +1,11 @@
+{
+  "test_id": 578,
+  "timestamp": "2025-10-10T23:20:29.253734",
+  "macro_changes": {
+    "HAL_USE_HW_RNG": 0,
+    "MODE_RTL_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "AP_RELAY_ENABLED": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0
+  }
+}

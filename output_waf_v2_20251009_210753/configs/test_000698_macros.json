@@ -1,0 +1,10 @@
+{
+  "test_id": 698,
+  "timestamp": "2025-10-11T05:09:29.781022",
+  "macro_changes": {
+    "TOY_MODE_ENABLED": 0,
+    "HAL_RALLY_ENABLED": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1
+  }
+}

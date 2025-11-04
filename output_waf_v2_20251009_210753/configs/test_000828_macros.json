@@ -1,0 +1,12 @@
+{
+  "test_id": 828,
+  "timestamp": "2025-10-11T11:26:00.590149",
+  "macro_changes": {
+    "HAL_INS_NONE": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "AP_STATS_ENABLED": 1
+  }
+}

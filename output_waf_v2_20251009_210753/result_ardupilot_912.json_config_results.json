@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 913,
+    "timestamp": "2025-10-11T15:28:41.946383",
+    "macro_changes": {
+      "MAVLINK_ENABLED_ALL": 1,
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+      "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+      "TELEM_TIME_SLOT_MAX": 4
+    },
+    "build_success": false,
+    "build_time": 31.82020902633667,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+  }
+]

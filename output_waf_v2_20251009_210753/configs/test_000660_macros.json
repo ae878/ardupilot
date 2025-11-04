@@ -1,0 +1,9 @@
+{
+  "test_id": 660,
+  "timestamp": "2025-10-11T03:11:29.706477",
+  "macro_changes": {
+    "HAL_MOUNT_ENABLED": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "HAL_DSHOT_ENABLED": 0
+  }
+}

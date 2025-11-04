@@ -1,0 +1,9 @@
+{
+  "test_id": 299,
+  "timestamp": "2025-10-10T10:38:15.033981",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 0,
+    "TOY_MODE_ENABLED": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1
+  }
+}

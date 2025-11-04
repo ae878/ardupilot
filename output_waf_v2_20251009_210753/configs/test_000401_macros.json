@@ -1,0 +1,10 @@
+{
+  "test_id": 401,
+  "timestamp": "2025-10-10T15:06:15.128438",
+  "macro_changes": {
+    "MODE_AUTO_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0
+  }
+}

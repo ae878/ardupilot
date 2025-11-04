@@ -1,0 +1,14 @@
+{
+  "test_id": 149,
+  "timestamp": "2025-10-10T03:42:05.607284",
+  "macro_changes": {
+    "HAL_ENABLE_THREAD_STATISTICS": 1,
+    "AP_SRV_CHANNELS_ENABLED": 1,
+    "HAL_LOGGING_ENABLED": 0,
+    "HAL_USE_SDMMC": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0
+  }
+}

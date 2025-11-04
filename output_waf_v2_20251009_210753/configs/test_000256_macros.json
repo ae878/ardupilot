@@ -1,0 +1,11 @@
+{
+  "test_id": 256,
+  "timestamp": "2025-10-10T08:33:32.472594",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "AP_FOLLOW_ENABLED": 0,
+    "WEATHERVANE_ENABLED": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 32
+  }
+}

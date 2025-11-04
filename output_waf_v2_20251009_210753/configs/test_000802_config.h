@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #802 */
+
+/* ConfigFuzz: HAL_FLASH_ALLOW_UPDATE */
+#ifdef HAL_FLASH_ALLOW_UPDATE
+#undef HAL_FLASH_ALLOW_UPDATE
+#endif
+#define HAL_FLASH_ALLOW_UPDATE 1
+
+/* ConfigFuzz: MAXSONAR_SERIAL_LV_BAUD_RATE */
+#ifdef MAXSONAR_SERIAL_LV_BAUD_RATE
+#undef MAXSONAR_SERIAL_LV_BAUD_RATE
+#endif
+#define MAXSONAR_SERIAL_LV_BAUD_RATE 4
+
+/* ConfigFuzz: MODE_GUIDED_ENABLED */
+#ifdef MODE_GUIDED_ENABLED
+#undef MODE_GUIDED_ENABLED
+#endif
+#define MODE_GUIDED_ENABLED 1
+
+/* ConfigFuzz: USER_PARAMS_ENABLED */
+#ifdef USER_PARAMS_ENABLED
+#undef USER_PARAMS_ENABLED
+#endif
+#define USER_PARAMS_ENABLED 0
+
+/* ConfigFuzz: HAL_SPEKTRUM_TELEM_ENABLED */
+#ifdef HAL_SPEKTRUM_TELEM_ENABLED
+#undef HAL_SPEKTRUM_TELEM_ENABLED
+#endif
+#define HAL_SPEKTRUM_TELEM_ENABLED 1
+
+/* ConfigFuzz: AP_SIM_ENABLED */
+#ifdef AP_SIM_ENABLED
+#undef AP_SIM_ENABLED
+#endif
+#define AP_SIM_ENABLED 1
+
+/* ConfigFuzz: AP_COPTER_ADVANCED_FAILSAFE_ENABLED */
+#ifdef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#undef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#endif
+#define AP_COPTER_ADVANCED_FAILSAFE_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 1
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 1
+
+/* ConfigFuzz: HAL_WITH_DRONECAN */
+#ifdef HAL_WITH_DRONECAN
+#undef HAL_WITH_DRONECAN
+#endif
+#define HAL_WITH_DRONECAN 0
+
+#endif /* _AP_CONFIG_H_ */

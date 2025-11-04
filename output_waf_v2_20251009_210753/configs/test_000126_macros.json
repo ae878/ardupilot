@@ -1,0 +1,11 @@
+{
+  "test_id": 126,
+  "timestamp": "2025-10-10T02:43:17.099270",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "AP_RSSI_ENABLED": 1,
+    "HAL_SOARING_ENABLED": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 1
+  }
+}

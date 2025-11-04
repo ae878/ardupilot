@@ -1,0 +1,10 @@
+{
+  "test_id": 516,
+  "timestamp": "2025-10-10T20:29:36.425584",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "HAL_USE_HW_RNG": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "AP_ICENGINE_ENABLED": 0
+  }
+}

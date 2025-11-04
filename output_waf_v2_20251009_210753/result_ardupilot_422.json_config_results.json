@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 423,
+    "timestamp": "2025-10-10T16:06:31.554292",
+    "macro_changes": {
+      "HAL_GPIO_ALT": 1,
+      "HAL_BATT_VOLT_PIN": 1,
+      "AP_FOLLOW_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 17.07086706161499,
+    "build_result": false,
+    "error": "arm-none-eabi-g++: fatal error: cannot execute '/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus': execv: Text file busy"
+  }
+]

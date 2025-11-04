@@ -1,0 +1,9 @@
+{
+  "test_id": 751,
+  "timestamp": "2025-10-11T07:36:43.734467",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 1,
+    "HAL_WITH_DRONECAN": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0
+  }
+}

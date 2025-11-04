@@ -1,0 +1,9 @@
+{
+  "test_id": 24,
+  "timestamp": "2025-10-13T16:50:47.014971",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "HAL_LOGGING_ENABLED": 1
+  }
+}

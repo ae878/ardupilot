@@ -1,0 +1,11 @@
+{
+  "test_id": 963,
+  "timestamp": "2025-10-11T17:55:58.622595",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "AP_STATS_ENABLED": 1,
+    "USER_PARAMS_ENABLED": 1
+  }
+}

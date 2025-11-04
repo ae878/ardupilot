@@ -1,0 +1,13 @@
+{
+  "test_id": 783,
+  "timestamp": "2025-10-11T09:15:37.857900",
+  "macro_changes": {
+    "AP_SIGNED_FIRMWARE": 1,
+    "AP_RSSI_ENABLED": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 16,
+    "HAL_RCOUT_RGBLED_RED": 1,
+    "FS_THR_DISABLED": 1
+  }
+}

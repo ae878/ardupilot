@@ -1,0 +1,12 @@
+{
+  "test_id": 15,
+  "timestamp": "2025-10-09T21:47:50.342843",
+  "macro_changes": {
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "HAL_USE_HW_RNG": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "METADATA_MAX_i": 4
+  }
+}

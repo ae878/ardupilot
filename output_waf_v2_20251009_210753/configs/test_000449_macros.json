@@ -1,0 +1,11 @@
+{
+  "test_id": 449,
+  "timestamp": "2025-10-10T17:22:04.670612",
+  "macro_changes": {
+    "USER_PARAMS_ENABLED": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1
+  }
+}

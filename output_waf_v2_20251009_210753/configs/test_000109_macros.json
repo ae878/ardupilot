@@ -1,0 +1,11 @@
+{
+  "test_id": 109,
+  "timestamp": "2025-10-10T02:00:08.990505",
+  "macro_changes": {
+    "AP_ICENGINE_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+    "KDECAN_MAX_NUM_ESCS": 2,
+    "HAL_DSHOT_ENABLED": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0
+  }
+}

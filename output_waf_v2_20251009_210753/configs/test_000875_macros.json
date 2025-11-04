@@ -1,0 +1,13 @@
+{
+  "test_id": 875,
+  "timestamp": "2025-10-11T13:43:40.558645",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "AP_SIGNED_FIRMWARE": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "AP_CAMERA_ENABLED": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "AP_AIS_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1
+  }
+}

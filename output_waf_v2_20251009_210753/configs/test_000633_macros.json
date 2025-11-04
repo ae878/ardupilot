@@ -1,0 +1,13 @@
+{
+  "test_id": 633,
+  "timestamp": "2025-10-11T01:52:45.345592",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 1,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 2,
+    "HAL_WITH_UAVCAN": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "MODE_FLIP_ENABLED": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 163,
+  "timestamp": "2025-10-10T04:14:51.540892",
+  "macro_changes": {
+    "HAL_USE_WSPI_DEFAULT_CFG": 1,
+    "CONFIG_LWIP_STATS": 1,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "HAL_GPIO_ALT": 1,
+    "HAL_MOUNT_ENABLED": 0
+  }
+}

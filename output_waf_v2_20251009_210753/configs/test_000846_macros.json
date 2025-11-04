@@ -1,0 +1,9 @@
+{
+  "test_id": 846,
+  "timestamp": "2025-10-11T12:20:42.314921",
+  "macro_changes": {
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 4,
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0
+  }
+}

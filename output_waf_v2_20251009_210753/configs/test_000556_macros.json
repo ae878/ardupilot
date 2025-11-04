@@ -1,0 +1,10 @@
+{
+  "test_id": 556,
+  "timestamp": "2025-10-10T22:22:40.237001",
+  "macro_changes": {
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "CONFIG_LWIP_STATS": 0,
+    "MAX_PWMS": 1
+  }
+}

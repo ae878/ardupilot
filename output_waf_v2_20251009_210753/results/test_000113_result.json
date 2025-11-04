@@ -1,0 +1,17 @@
+{
+  "test_id": 113,
+  "timestamp": "2025-10-10T02:08:49.658491",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MAX_PWMS": 8,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "MODE_AUTO_ENABLED": 0,
+    "HAL_USE_FATFS": 0,
+    "AUTOTUNE_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 29.570188522338867,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

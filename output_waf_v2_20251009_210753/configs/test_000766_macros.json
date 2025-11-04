@@ -1,0 +1,11 @@
+{
+  "test_id": 766,
+  "timestamp": "2025-10-11T08:21:28.910908",
+  "macro_changes": {
+    "HAL_USE_FATFS": 1,
+    "HAL_GPIO_INPUT": 0,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 0,
+    "HAL_PWM_COUNT": 0,
+    "HAL_RCOUT_RGBLED_RED": 0
+  }
+}

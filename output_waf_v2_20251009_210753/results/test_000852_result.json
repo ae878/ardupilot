@@ -1,0 +1,14 @@
+{
+  "test_id": 852,
+  "timestamp": "2025-10-11T12:39:39.163865",
+  "macro_changes": {
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "AUTOTUNE_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 196.1655728816986,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

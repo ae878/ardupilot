@@ -1,0 +1,11 @@
+{
+  "test_id": 872,
+  "timestamp": "2025-10-11T13:33:50.671105",
+  "macro_changes": {
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0
+  }
+}

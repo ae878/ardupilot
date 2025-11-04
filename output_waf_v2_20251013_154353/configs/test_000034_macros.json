@@ -1,0 +1,12 @@
+{
+  "test_id": 34,
+  "timestamp": "2025-10-13T17:22:32.134765",
+  "macro_changes": {
+    "HAL_INS_CONVERGANCE_MS": 1,
+    "FS_THR_DISABLED": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "AP_PERIPH_RPM_ENABLED": 1,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "INS_MAX_GYRO_WINDOW_SAMPLES": 32
+  }
+}

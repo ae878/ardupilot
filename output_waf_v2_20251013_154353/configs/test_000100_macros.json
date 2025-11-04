@@ -1,0 +1,11 @@
+{
+  "test_id": 100,
+  "timestamp": "2025-10-13T20:32:08.797719",
+  "macro_changes": {
+    "AP_PERIPH_MAG_ENABLED": 1,
+    "AP_RELAY_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MODE_RTL_ENABLED": 1,
+    "AP_GRIPPER_ENABLED": 0
+  }
+}

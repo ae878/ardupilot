@@ -1,0 +1,10 @@
+{
+  "test_id": 734,
+  "timestamp": "2025-10-11T06:50:58.222311",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ASLUAV": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AC_PRECLAND_ENABLED": 0,
+    "HAL_WITH_UAVCAN": 0
+  }
+}

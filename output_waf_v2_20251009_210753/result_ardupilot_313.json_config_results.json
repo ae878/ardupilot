@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 314,
+    "timestamp": "2025-10-10T11:12:16.081563",
+    "macro_changes": {
+      "AP_GRIPPER_ENABLED": 1,
+      "HAL_COMPASS_AUTO_ROT_DEFAULT": 1,
+      "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+      "USER_PARAMS_ENABLED": 1,
+      "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+      "FS_THR_ENABLED_ALWAYS_RTL": 1
+    },
+    "build_success": false,
+    "build_time": 162.71801352500916,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

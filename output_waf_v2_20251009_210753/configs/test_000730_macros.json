@@ -1,0 +1,9 @@
+{
+  "test_id": 730,
+  "timestamp": "2025-10-11T06:37:47.237266",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 1,
+    "MAVLINK_ENABLED_ALL": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+  }
+}

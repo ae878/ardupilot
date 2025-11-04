@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #92 */
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_EXPLICIT */
+#ifdef BENCH_DEFINE_MAP_EXPLICIT
+#undef BENCH_DEFINE_MAP_EXPLICIT
+#endif
+#define BENCH_DEFINE_MAP_EXPLICIT 1
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_ENABLE_COUNTERS */
+#ifdef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#undef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#endif
+#define CONFIG_SPI_FLASH_ENABLE_COUNTERS 1
+
+/* ConfigFuzz: MPUREG_GYRO_CONFIG */
+#ifdef MPUREG_GYRO_CONFIG
+#undef MPUREG_GYRO_CONFIG
+#endif
+#define MPUREG_GYRO_CONFIG 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_GCS_ENABLED_BRAKE_OR_LAND
+#undef FS_GCS_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_GCS_ENABLED_BRAKE_OR_LAND 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 0
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_AY */
+#ifdef MPUREG_CONFIG_EXT_SYNC_AY
+#undef MPUREG_CONFIG_EXT_SYNC_AY
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_AY 0
+
+#endif /* _AP_CONFIG_H_ */

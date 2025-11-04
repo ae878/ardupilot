@@ -1,0 +1,9 @@
+{
+  "test_id": 743,
+  "timestamp": "2025-10-11T07:14:08.065952",
+  "macro_changes": {
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+    "NOOPLOOP_DIST_MAX_MM": 4,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0
+  }
+}

@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #367 */
+
+/* ConfigFuzz: FS_THR_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_THR_ENABLED_AUTO_RTL_OR_RTL 1
+
+/* ConfigFuzz: AP_FENCE_ENABLED */
+#ifdef AP_FENCE_ENABLED
+#undef AP_FENCE_ENABLED
+#endif
+#define AP_FENCE_ENABLED 0
+
+/* ConfigFuzz: AP_EXTERNAL_CONTROL_ENABLED */
+#ifdef AP_EXTERNAL_CONTROL_ENABLED
+#undef AP_EXTERNAL_CONTROL_ENABLED
+#endif
+#define AP_EXTERNAL_CONTROL_ENABLED 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 0
+
+/* ConfigFuzz: AP_RANGEFINDER_LUA_TIMEOUT_MS */
+#ifdef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#undef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#endif
+#define AP_RANGEFINDER_LUA_TIMEOUT_MS 1
+
+/* ConfigFuzz: HAL_AHRS_EKF_TYPE_DEFAULT */
+#ifdef HAL_AHRS_EKF_TYPE_DEFAULT
+#undef HAL_AHRS_EKF_TYPE_DEFAULT
+#endif
+#define HAL_AHRS_EKF_TYPE_DEFAULT 1
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_GCS_ENABLED_BRAKE_OR_LAND
+#undef FS_GCS_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_GCS_ENABLED_BRAKE_OR_LAND 1
+
+#endif /* _AP_CONFIG_H_ */

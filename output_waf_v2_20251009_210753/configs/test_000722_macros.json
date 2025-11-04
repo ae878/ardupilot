@@ -1,0 +1,12 @@
+{
+  "test_id": 722,
+  "timestamp": "2025-10-11T06:20:34.513778",
+  "macro_changes": {
+    "USER_PARAMS_ENABLED": 0,
+    "AP_FOLLOW_ENABLED": 1,
+    "HAL_BATT_CURR_PIN": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 4,
+    "AP_MODULE_SUPPORTED": 1
+  }
+}

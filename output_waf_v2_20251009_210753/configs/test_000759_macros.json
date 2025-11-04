@@ -1,0 +1,14 @@
+{
+  "test_id": 759,
+  "timestamp": "2025-10-11T07:58:55.831228",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "MAVLINK_ENABLED_UALBERTA": 1,
+    "AUTOTUNE_ENABLED": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1,
+    "CONFIG_LWIP_STATS": 1,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1
+  }
+}

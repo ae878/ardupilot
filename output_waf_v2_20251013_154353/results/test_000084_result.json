@@ -1,0 +1,17 @@
+{
+  "test_id": 84,
+  "timestamp": "2025-10-13T19:43:55.044693",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "AP_STATS_ENABLED": 0,
+    "AP_NETWORKING_NUM_PORTS": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "AP_PERIPH_IMU_ENABLED": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "USER_PARAMS_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 172.2723205089569,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

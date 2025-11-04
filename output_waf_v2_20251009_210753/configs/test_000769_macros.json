@@ -1,0 +1,11 @@
+{
+  "test_id": 769,
+  "timestamp": "2025-10-11T08:30:18.975825",
+  "macro_changes": {
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "MAVLINK_ENABLED_ALL": 0,
+    "HAL_USE_SDMMC": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 669,
+  "timestamp": "2025-10-11T03:37:31.454411",
+  "macro_changes": {
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 0,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 2,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1
+  },
+  "build_success": false,
+  "build_time": 171.49585914611816,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

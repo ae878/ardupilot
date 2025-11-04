@@ -1,0 +1,9 @@
+{
+  "test_id": 26,
+  "timestamp": "2025-10-09T22:19:24.639533",
+  "macro_changes": {
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0,
+    "RPMMAX": 4,
+    "HAL_GPIO_INPUT": 0
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 886,
+    "timestamp": "2025-10-11T14:14:10.174887",
+    "macro_changes": {
+      "HAL_WITH_DRONECAN": 1,
+      "BENCH_DEFINE_MAP_OVERRIDE": 1,
+      "AP_RSSI_ENABLED": 0,
+      "MODE_AUTOROTATE_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 185.48870635032654,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

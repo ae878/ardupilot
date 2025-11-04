@@ -1,0 +1,17 @@
+{
+  "test_id": 381,
+  "timestamp": "2025-10-10T14:09:11.837541",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "MODE_LOITER_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 1,
+    "SUMD_MAX_CHANNELS": 2,
+    "HAL_RALLY_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 1
+  },
+  "build_success": false,
+  "build_time": 127.77614688873291,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

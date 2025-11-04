@@ -1,0 +1,9 @@
+{
+  "test_id": 959,
+  "timestamp": "2025-10-11T17:45:56.268890",
+  "macro_changes": {
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 1,
+    "FLOW_CONTROL_ENABLED": 1
+  }
+}

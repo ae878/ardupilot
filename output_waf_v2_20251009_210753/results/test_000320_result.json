@@ -1,0 +1,20 @@
+{
+  "test_id": 320,
+  "timestamp": "2025-10-10T11:23:56.557773",
+  "macro_changes": {
+    "USER_PARAMS_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_BUTTON_ENABLED": 1,
+    "HAL_WITH_RAMTRON": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+    "HAL_GPIO_INPUT": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 163.0115294456482,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

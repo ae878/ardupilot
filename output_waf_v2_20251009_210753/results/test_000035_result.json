@@ -1,0 +1,18 @@
+{
+  "test_id": 35,
+  "timestamp": "2025-10-09T22:41:30.410586",
+  "macro_changes": {
+    "AP_FEATURE_SBUS_OUT": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAL_PWM_COUNT": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "AP_AIS_ENABLED": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1
+  },
+  "build_success": false,
+  "build_time": 29.520047187805176,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

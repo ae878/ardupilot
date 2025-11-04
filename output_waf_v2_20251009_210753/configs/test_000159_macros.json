@@ -1,0 +1,13 @@
+{
+  "test_id": 159,
+  "timestamp": "2025-10-10T04:02:55.719444",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 8,
+    "RPMMAX": 32,
+    "MAVLINK_ENABLED_ALL": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 0,
+    "HAL_INS_VRBRAIN": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0
+  }
+}

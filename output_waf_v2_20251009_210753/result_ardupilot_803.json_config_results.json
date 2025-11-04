@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 804,
+    "timestamp": "2025-10-11T10:12:48.803651",
+    "macro_changes": {
+      "HAL_GPIO_LED_ON": 0,
+      "HAL_RCOUT_RGBLED_RED": 1,
+      "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+      "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+      "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+      "AC_PRECLAND_ENABLED": 0,
+      "HAL_GPIO_OUTPUT": 0
+    },
+    "build_success": false,
+    "build_time": 7.087215185165405,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL/AP_HAL_Boards.h:393:2: error: #error \"Do not specify HAL_GPIO_LED_ON if you are setting it to the default, 0\""
+  }
+]

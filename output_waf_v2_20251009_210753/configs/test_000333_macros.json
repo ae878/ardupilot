@@ -1,0 +1,9 @@
+{
+  "test_id": 333,
+  "timestamp": "2025-10-10T11:59:33.072290",
+  "macro_changes": {
+    "HAL_BARO_NONE": 0,
+    "HAL_HEATER_GPIO_ON": 0,
+    "MODE_RTL_ENABLED": 1
+  }
+}

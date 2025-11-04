@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 617,
+    "timestamp": "2025-10-11T01:05:45.329768",
+    "macro_changes": {
+      "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+      "HAL_QUADPLANE_ENABLED": 0,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+      "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+      "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 0,
+      "AP_SERVORELAYEVENTS_ENABLED": 1,
+      "AP_SRV_CHANNELS_ENABLED": 1,
+      "KDECAN_MAX_NUM_ESCS": 16
+    },
+    "build_success": false,
+    "build_time": 74.08109927177429,
+    "build_result": false,
+    "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+  }
+]

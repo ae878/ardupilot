@@ -1,0 +1,10 @@
+{
+  "test_id": 284,
+  "timestamp": "2025-10-10T09:54:26.979496",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "MODE_GUIDED_ENABLED": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 464,
+  "timestamp": "2025-10-10T18:02:13.917114",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 1,
+    "NOOPLOOP_DIST_MAX_MM": 2,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 0,
+    "AP_SIM_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 0,
+    "MODE_GUIDED_ENABLED": 0,
+    "BENCH_DEFINE_MAP_COUNT": 0
+  }
+}

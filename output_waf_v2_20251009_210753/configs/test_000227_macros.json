@@ -1,0 +1,10 @@
+{
+  "test_id": 227,
+  "timestamp": "2025-10-10T07:10:52.930132",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MODE_DRIFT_ENABLED": 1,
+    "AP_OPTICALFLOW_ENABLED": 0
+  }
+}

@@ -1,0 +1,857 @@
+{
+  "test_id": 786,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:128:6:bool AP_Camera::take_multiple_pictures(uint32_t, int16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:66:1:AP_Camera::AP_Camera(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:53:6:virtual bool AP_Camera_Mount::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:101:18:virtual void AP_Camera_Backend::handle_message(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:773:6:bool AP_Camera::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:150:6:bool AP_Camera::take_multiple_pictures(uint8_t, uint32_t, int16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:11:6:virtual void AP_Camera_MAVLinkCamV2::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:412:6:void AP_Camera_Backend::check_feedback()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:632:6:void AP_Camera::send_camera_settings(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Camera_Backend::feedback_pin_timer; RetType = void; Args = {}]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:743:6:void AP_RunCam::receive()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:112:9:uint8_t AP_Camera_Backend::get_mount_instance() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:194:6:bool AP_Camera::record_video(bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLink.cpp:22:6:virtual void AP_Camera_MAVLink::configure(float, float, float, float, int32_t, int32_t, float)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:233:6:virtual void AP_RunCam::update()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:185:6:bool AP_RunCam::simulate_camera_button(AP_RunCam::ControlOperation, uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:174:6:void AP_Camera_Backend::stop_capture()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:452:6:void AP_RunCam::handle_in_menu(AP_RunCam::Event)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:680:6:void AP_RunCam::handle_5_key_simulation_response(const AP_RunCam::Request&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:869:6:void AP_Camera::set_camera_information(mavlink_camera_information_t)",
+        "stack_size": 248
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:8:6:virtual bool AP_Camera_Scripting::trigger_pic()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:513:6:void AP_Camera::set_trigger_distance(uint8_t, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:704:6:bool AP_Camera::record_video(uint8_t, bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:86:6:virtual void AP_Camera_Mount::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:96:6:bool AP_Camera::take_picture()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:157:6:virtual void AP_Camera_MAVLinkCamV2::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 304
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:879:6:void AP_Camera::set_camera_information(uint8_t, mavlink_camera_information_t)",
+        "stack_size": 248
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Relay.cpp:25:6:virtual bool AP_Camera_Relay::trigger_pic()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:464:6:bool AP_Camera::send_mavlink_message(GCS_MAVLINK&, ap_message)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:690:6:void AP_Camera::update()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLink.cpp:42:6:virtual void AP_Camera_MAVLink::control(float, float, float, float, int32_t, int32_t)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:189:6:void AP_Camera_Backend::send_camera_feedback(mavlink_channel_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:127:6:virtual bool AP_Camera_Mount::change_setting(CameraSetting, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:75:6:virtual bool AP_Camera_Mount::set_camera_source(AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:180:6:virtual void AP_Camera_Backend::control(float, float, float, float, int32_t, int32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:23:6:virtual bool AP_Camera_MAVLinkCamV2::trigger_pic()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:30:6:virtual bool AP_Camera_Mount::set_zoom(ZoomType, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:395:6:void AP_RunCam::handle_ready(AP_RunCam::Event)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:168:6:void AP_Camera_Backend::take_multiple_pictures(uint32_t, int16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:800:6:void AP_RunCam::start_uart()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:346:6:virtual void AP_Camera_Backend::send_camera_capture_status(mavlink_channel_t) const",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1003:6:bool AP_RunCam::request_pending(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:991:6:void AP_RunCam::simulation_OSD_cable_failed(const AP_RunCam::Request&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:106:6:bool AP_Mission::start_command_camera(const AP_Mission::Mission_Command&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Relay.cpp:8:6:virtual void AP_Camera_Relay::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:184:6:void AP_Camera_MAVLinkCamV2::find_camera()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1051:9:uint8_t AP_RunCam::Request::get_crc() const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1152:12:AP_RunCam* AP::runcam()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:220:6:void AP_RunCam::exit_osd()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:961:6:void AP_RunCam::parse_device_info(const AP_RunCam::Request&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:95:6:virtual void AP_Camera_Mount::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:391:6:void AP_Camera_Backend::feedback_pin_isr(uint8_t, bool, uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:250:6:bool AP_RunCam::pre_arm_check(char*, uint8_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:533:6:void AP_RunCam::handle_2_key_simulation_process(AP_RunCam::Event)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1136:6:virtual void AP_RunCam::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:463:18:AP_RunCam::Event AP_RunCam::map_rc_input_to_event() const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1075:6:virtual bool AP_RunCam::healthy() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:33:6:virtual void AP_Camera_Backend::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:95:16:virtual SetFocusResult AP_Camera_MAVLinkCamV2::set_focus(FocusType, float)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_RunCam::parse_device_info; RetType = void; Args = {const AP_RunCam::Request&}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:89:18:virtual bool AP_Camera_Backend::set_lens(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:74:18:virtual bool AP_Camera_Backend::record_video(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:618:6:void AP_Camera::send_video_stream_information(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:206:6:void AP_RunCam::stop_recording()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:619:6:void AP_RunCam::exit_2_key_osd_menu()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:323:6:void AP_RunCam::update_state_machine_disarmed()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:85:6:void AP_Camera::cam_mode_toggle()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:274:6:void AP_RunCam::update_osd()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:74:6:void AP_Camera::set_trigger_distance(float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:811:6:bool AP_Camera::set_lens(uint8_t, uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:180:6:bool AP_Camera::stop_capture(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:551:6:void AP_Camera::configure(uint8_t, float, float, float, float, int32_t, int32_t, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:745:16:SetFocusResult AP_Camera::set_focus(FocusType, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:147:18:virtual bool AP_Camera_Backend::get_state(AP_Camera::camera_state_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:786:6:bool AP_Camera::set_tracking(uint8_t, TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:674:6:void AP_Camera::send_camera_thermal_range(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:854:6:bool AP_Camera::change_setting(uint8_t, CameraSetting, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:17:6:virtual bool AP_Camera_Scripting::record_video(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:93:18:virtual bool AP_Camera_Backend::set_camera_source(AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:883:6:void AP_RunCam::open_5_key_OSD_cable_connection(AP_RunCam::parse_func_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:660:6:void AP_Camera::send_camera_capture_status(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:734:29:AP_RunCam::ControlOperation AP_RunCam::stop_recording_command() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:565:6:void AP_Camera::control(float, float, float, float, int32_t, int32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:21:6:virtual void AP_Camera_Backend::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Servo.cpp:47:6:virtual void AP_Camera_Servo::configure(float, float, float, float, int32_t, int32_t, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:812:6:void AP_RunCam::get_device_info()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:897:6:void AP_RunCam::simulate_5_key_OSD_cable_button_press(AP_RunCam::SimulationOperation, AP_RunCam::parse_func_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1093:6:virtual void AP_RunCam::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 432
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:890:6:void AP_RunCam::close_5_key_OSD_cable_connection(AP_RunCam::parse_func_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:527:6:void AP_Camera::cam_mode_toggle(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:275:6:void AP_Camera_Backend::set_stream_information(mavlink_video_stream_information_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:982:6:bool AP_RunCam::camera_ready() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:850:6:void AP_RunCam::send_5_key_OSD_cable_simulation_event(AP_RunCam::Event, uint32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1087:6:virtual bool AP_RunCam::trigger_pic()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1081:6:virtual void AP_RunCam::cam_mode_toggle()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:790:6:void AP_RunCam::drain()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Camera_Backend::feedback_pin_isr; RetType = void; Args = {unsigned char, bool, long unsigned int}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:282:6:virtual void AP_Camera_Backend::send_camera_settings(mavlink_channel_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:122:9:uint8_t AP_Camera_Backend::get_gimbal_device_id() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:53:6:virtual bool AP_Camera_Scripting::get_state(AP_Camera::camera_state_t&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.h:110:10:virtual bool AP_RunCam::record_video(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:309:12:MAV_RESULT AP_Camera::handle_command(const mavlink_command_int_t&)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_RunCam::handle_5_key_simulation_response; RetType = void; Args = {const AP_RunCam::Request&}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:114:6:virtual void AP_Camera_Mount::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:902:6:void AP_Camera::set_stream_information(uint8_t, mavlink_video_stream_information_t)",
+        "stack_size": 232
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:129:1:AP_RunCam::AP_RunCam(AP_Camera&, AP_Camera_Params&, uint8_t, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:138:6:bool AP_Camera_Backend::take_picture()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:15:1:AP_Camera_Backend::AP_Camera_Backend(AP_Camera&, AP_Camera_Params&, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:757:16:SetFocusResult AP_Camera::set_focus(uint8_t, FocusType, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:365:6:void AP_Camera_Backend::setup_feedback_callback()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:12:6:void AP_Camera_Backend::Write_CameraInfo(LogMessages, uint64_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:141:18:virtual void AP_Camera_Backend::send_camera_thermal_range(mavlink_channel_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:77:18:virtual bool AP_Camera_Backend::set_zoom(ZoomType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:24:6:virtual bool AP_Camera_Scripting::set_zoom(ZoomType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:374:6:void AP_RunCam::handle_initialized(AP_RunCam::Event)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:20:6:virtual bool AP_Camera_Mount::record_video(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:743:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:86:18:virtual bool AP_Camera_Backend::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:33:16:virtual SetFocusResult AP_Camera_Scripting::set_focus(FocusType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:825:6:bool AP_Camera::set_camera_source(uint8_t, AP_Camera::CameraSource, AP_Camera::CameraSource)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:9:6:virtual bool AP_Camera_Mount::trigger_pic()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:1049:12:AP_Camera* AP::camera()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:263:6:virtual void AP_Camera_Backend::send_video_stream_information(mavlink_channel_t) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:423:6:void AP_RunCam::handle_recording(AP_RunCam::Event)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:81:28:virtual SetFocusResult AP_Camera_Backend::set_focus(FocusType, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:227:6:void AP_RunCam::osd_option()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLink.cpp:9:6:virtual bool AP_Camera_MAVLink::trigger_pic()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1061:9:uint8_t AP_RunCam::Request::get_expected_response_length(AP_RunCam::Command) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:296:6:void AP_RunCam::update_state_machine_armed()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:199:6:void AP_RunCam::start_recording()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:254:6:void AP_Camera_Backend::set_camera_information(mavlink_camera_information_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:57:18:virtual void AP_Camera_Backend::cam_mode_toggle()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:88:6:void AP_Camera_Backend::Write_Trigger()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:168:6:void AP_Camera::stop_capture()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:432:6:void AP_Camera_Backend::prep_mavlink_msg_camera_feedback(uint64_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:729:6:bool AP_Camera::set_zoom(uint8_t, ZoomType, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:725:29:AP_RunCam::ControlOperation AP_RunCam::start_recording_command() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:288:6:void AP_Camera::handle_message(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:144:6:virtual void AP_RunCam::init()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:801:6:bool AP_Camera::set_lens(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:295:6:void AP_Camera_Backend::send_camera_fov_status(mavlink_channel_t) const",
+        "stack_size": 176
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:12:6:0(LogMessages, uint64_t)",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:41:16:virtual SetFocusResult AP_Camera_Mount::set_focus(FocusType, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:1035:1:AP_RunCam::Request::Request(AP_RunCam*, AP_RunCam::Command, uint8_t, uint32_t, uint16_t, AP_RunCam::parse_func_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:930:6:void AP_RunCam::send_packet(AP_RunCam::Command, uint8_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:892:6:void AP_Camera::set_stream_information(mavlink_video_stream_information_t)",
+        "stack_size": 232
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:718:6:bool AP_Camera::set_zoom(ZoomType, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:604:6:void AP_Camera::send_camera_information(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:43:6:virtual bool AP_Camera_MAVLinkCamV2::record_video(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:646:6:void AP_Camera::send_camera_fov_status(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:150:18:virtual bool AP_Camera_Backend::change_setting(CameraSetting, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:591:6:void AP_Camera::send_feedback(mavlink_channel_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:213:6:void AP_RunCam::enter_osd()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:205:6:void AP_Camera::init()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:68:6:virtual bool AP_Camera_MAVLinkCamV2::set_zoom(ZoomType, float)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:909:6:void AP_RunCam::simulate_5_key_OSD_cable_button_release(AP_RunCam::parse_func_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:635:6:void AP_RunCam::handle_5_key_simulation_process(AP_RunCam::Event)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:575:6:void AP_Camera::control(uint8_t, float, float, float, float, int32_t, int32_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Servo.cpp:10:6:virtual void AP_Camera_Servo::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:819:32:AP_RunCam::SimulationOperation AP_RunCam::map_key_to_protocol_operation(AP_RunCam::Event) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:449:6:void AP_Camera_Backend::log_picture()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:64:6:virtual bool AP_Camera_Mount::set_lens(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:399:6:void AP_Camera_Backend::feedback_pin_timer()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:926:6:void AP_Camera::convert_params()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Scripting.cpp:43:6:virtual bool AP_Camera_Scripting::set_tracking(TrackingType, const Vector2f&, const Vector2f&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_RunCam.cpp:918:6:void AP_RunCam::send_request_and_waiting_response(AP_RunCam::Command, uint8_t, uint32_t, uint16_t, AP_RunCam::parse_func_t)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:54:18:virtual bool AP_Camera_Backend::healthy() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:842:6:bool AP_Camera::get_state(uint8_t, AP_Camera::camera_state_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:222:6:void AP_Camera_MAVLinkCamV2::request_camera_information() const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:917:20:AP_Camera_Backend* AP_Camera::get_instance(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:82:6:void AP_Camera_Backend::Write_Camera(uint64_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:224:6:virtual void AP_Camera_Backend::send_camera_information(mavlink_channel_t) const",
+        "stack_size": 264
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:112:6:bool AP_Camera::take_picture(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:541:6:void AP_Camera::configure(float, float, float, float, int32_t, int32_t, float)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Servo.cpp:31:6:virtual bool AP_Camera_Servo::trigger_pic()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera.cpp:1024:6:bool AP_Camera::get_legacy_relay_index(int8_t&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:127:6:virtual void AP_Camera_MAVLinkCamV2::handle_message(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Mount.cpp:104:6:virtual void AP_Camera_Mount::send_camera_capture_status(mavlink_channel_t) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.h:104:18:virtual void AP_Camera_Backend::configure(float, float, float, float, int32_t, int32_t, float)",
+        "stack_size": 0
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [],
+    "unchanged": 15716
+  },
+  "total_functions_analyzed": 15737
+}

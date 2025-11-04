@@ -1,0 +1,9 @@
+{
+  "test_id": 810,
+  "timestamp": "2025-10-11T10:30:22.981649",
+  "macro_changes": {
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "HAL_BARO_NONE": 1
+  }
+}

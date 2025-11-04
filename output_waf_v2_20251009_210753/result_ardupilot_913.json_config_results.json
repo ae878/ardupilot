@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 914,
+    "timestamp": "2025-10-11T15:29:56.190314",
+    "macro_changes": {
+      "MODE_SMARTRTL_ENABLED": 1,
+      "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+      "BENCH_DEFINE_MAP_GEOMETRY": 0,
+      "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+      "HAL_WITH_RAMTRON": 1,
+      "AP_SIGNED_FIRMWARE": 1,
+      "HAL_GENERATOR_ENABLED": 1,
+      "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+      "MAVLINK_ENABLED_CSAIRLINK": 1,
+      "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0
+    },
+    "build_success": false,
+    "build_time": 74.23924016952515,
+    "build_result": false,
+    "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+  }
+]

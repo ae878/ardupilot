@@ -1,0 +1,10 @@
+{
+  "test_id": 205,
+  "timestamp": "2025-10-10T06:11:52.487592",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1
+  }
+}

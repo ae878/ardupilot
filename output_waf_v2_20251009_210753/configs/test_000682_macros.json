@@ -1,0 +1,9 @@
+{
+  "test_id": 682,
+  "timestamp": "2025-10-11T04:17:00.102551",
+  "macro_changes": {
+    "HAL_NUM_CAN_IFACES": 0,
+    "RC_INPUT_MAX_PULSEWIDTH": 2,
+    "HAL_BATT_CURR_PIN": 1
+  }
+}

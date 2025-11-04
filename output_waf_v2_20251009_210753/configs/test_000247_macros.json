@@ -1,0 +1,12 @@
+{
+  "test_id": 247,
+  "timestamp": "2025-10-10T08:08:00.023896",
+  "macro_changes": {
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "LEDDARONE_DETECTIONS_MAX": 8,
+    "AP_ICENGINE_ENABLED": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "AP_SIM_ENABLED": 0,
+    "NOOPLOOP_DIST_MAX_MM": 4
+  }
+}

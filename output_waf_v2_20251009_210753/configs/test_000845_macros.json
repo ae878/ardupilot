@@ -1,0 +1,12 @@
+{
+  "test_id": 845,
+  "timestamp": "2025-10-11T12:19:28.765356",
+  "macro_changes": {
+    "HAL_USE_HW_RNG": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "HAL_USB_VENDOR_ID": 0,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_SOCKET_NATIVE_ENABLED": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 103,
+  "timestamp": "2025-10-13T20:40:41.563818",
+  "macro_changes": {
+    "HAL_FLASH_PROTECTION": 1,
+    "BACKEND_SAMPLE_RATE_MAX": 4,
+    "AP_FOLLOW_ENABLED": 1
+  }
+}

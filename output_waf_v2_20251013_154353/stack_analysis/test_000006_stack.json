@@ -1,0 +1,297 @@
+{
+  "test_id": 6,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:382:6:bool AP_Button::arming_checks(size_t, char*) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:239:6:void AP_Button::run_aux_functions(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:130:1:AP_Button::AP_Button()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:143:6:void AP_Button::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:287:6:bool AP_Button::get_button_state(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:347:6:void AP_Button::send_report() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:void AP_Button::timer_update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Button::timer_update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:364:6:void AP_Button::setup_pins()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:403:12:AP_Button& AP::button()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:304:9:uint8_t AP_Button::get_mask()",
+        "stack_size": 32
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Backend.h:40:18:virtual bool AP_Gripper_Backend::valid() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:49:6:virtual void AP_Gripper_EPM::grab()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Backend.cpp:13:6:void AP_Gripper_Backend::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/crash_check.cpp:241:6:void Copter::parachute_check()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:183:6:void AP_Parachute::set_sink_rate(float)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:171:13:AP_Gripper& AP::gripper()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/crash_check.cpp:344:6:void Copter::parachute_manual_release()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:204:6:void AP_Parachute::check_sink_rate()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/crash_check.cpp:331:6:void Copter::parachute_release()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:107:6:virtual void AP_Gripper_EPM::update_gripper()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:248:6:bool AP_Parachute::get_legacy_relay_index(int8_t&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:82:1:AP_Gripper::AP_Gripper()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:114:6:virtual bool AP_Gripper_Servo::valid() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:164:1:bool AP_Gripper::released() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:144:6:virtual bool AP_Gripper_EPM::grabbed() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:27:1:AP_Gripper_EPM::AP_Gripper_EPM(AP_Gripper::Backend_Config&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Backend.h:52:18:virtual void AP_Gripper_Backend::update_gripper()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.cpp:985:12:MAV_RESULT GCS_MAVLINK_Copter::handle_MAV_CMD_DO_PARACHUTE(const mavlink_command_int_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:91:6:virtual bool AP_Gripper_Servo::released() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:30:6:virtual void AP_Gripper_EPM::init_gripper()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:274:15:AP_Parachute* AP::parachute()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:101:6:void AP_Parachute::release()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:73:6:virtual void AP_Gripper_EPM::release()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:145:1:void AP_Gripper::release()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:97:6:void AP_Gripper_EPM::neutral()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:144:1:void AP_Gripper::grab()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:163:1:bool AP_Gripper::valid() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:71:6:bool AP_Gripper_Servo::has_state_pwm(uint16_t) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_EPM.cpp:128:15:UAVCANCommand AP_Gripper_EPM::make_uavcan_command(uint16_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Backend.cpp:7:6:void AP_Gripper_Backend::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:21:6:virtual void AP_Gripper_Servo::grab()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:218:6:bool AP_Parachute::arming_checks(size_t, char*) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:165:1:bool AP_Gripper::grabbed() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:99:13:static AP_Gripper* AP_Gripper::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:96:6:virtual bool AP_Gripper_Servo::grabbed() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:46:6:virtual void AP_Gripper_Servo::release()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:101:6:0()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:129:6:void AP_Parachute::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Parachute/AP_Parachute.cpp:90:6:void AP_Parachute::enabled(bool)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:104:6:void AP_Gripper::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:40:6:bool AP_Mission::start_command_do_gripper(const AP_Mission::Mission_Command&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:102:6:virtual void AP_Gripper_Servo::update_gripper()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper.cpp:146:1:void AP_Gripper::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Gripper/AP_Gripper_Servo.cpp:15:6:virtual void AP_Gripper_Servo::init_gripper()",
+        "stack_size": 0
+      }
+    ],
+    "increased": [],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:235:6:bool AP_Mission::start_command_parachute(const AP_Mission::Mission_Command&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15856
+  },
+  "total_functions_analyzed": 15872
+}

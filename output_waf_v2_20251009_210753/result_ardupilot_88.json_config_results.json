@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 89,
+    "timestamp": "2025-10-10T01:05:33.220694",
+    "macro_changes": {
+      "MODE_RTL_ENABLED": 0,
+      "NOOPLOOP_DIST_MAX_MM": 2,
+      "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+      "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+      "HAL_SOLO_GIMBAL_ENABLED": 0,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+      "HAL_IMUHEAT_P_DEFAULT": 1
+    },
+    "build_success": false,
+    "build_time": 161.90318846702576,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+  }
+]

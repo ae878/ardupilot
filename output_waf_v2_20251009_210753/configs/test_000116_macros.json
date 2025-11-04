@@ -1,0 +1,11 @@
+{
+  "test_id": 116,
+  "timestamp": "2025-10-10T02:15:11.523138",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_ON": 1,
+    "MODE_ZIGZAG_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "AP_SRV_CHANNELS_ENABLED": 1,
+    "MAVLINK_ENABLED_COMMON": 0
+  }
+}

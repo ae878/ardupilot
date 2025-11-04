@@ -1,0 +1,11 @@
+{
+  "test_id": 535,
+  "timestamp": "2025-10-10T21:28:17.437483",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0
+  }
+}

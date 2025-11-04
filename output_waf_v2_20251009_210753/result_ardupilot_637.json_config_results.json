@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 638,
+    "timestamp": "2025-10-11T02:02:02.879106",
+    "macro_changes": {
+      "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+      "MODE_CIRCLE_ENABLED": 0,
+      "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+      "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+      "AP_HAL_UARTDRIVER_ENABLED": 1,
+      "MODE_GUIDED_ENABLED": 0,
+      "FFT_MAX_MISSED_UPDATES": 16,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+    },
+    "build_success": false,
+    "build_time": 87.08635783195496,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+  }
+]

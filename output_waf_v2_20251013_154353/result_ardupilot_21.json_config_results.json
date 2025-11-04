@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 22,
+    "timestamp": "2025-10-13T16:44:12.401323",
+    "macro_changes": {
+      "AP_NETWORKING_NUM_PORTS": 1,
+      "HAL_BARO_NONE": 0,
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0,
+      "AP_RADIO_ENABLED": 1,
+      "HAL_SOLO_GIMBAL_ENABLED": 0,
+      "HAL_MOUNT_ENABLED": 0,
+      "MPUREG_GYRO_CONFIG": 0,
+      "HAL_NO_FLASH_SUPPORT": 1
+    },
+    "build_success": false,
+    "build_time": 104.84036183357239,
+    "build_result": false,
+    "error": "../../libraries/AP_Radio/AP_Radio_cc2500.cpp:366:32: error: 'HAL_GPIO_RADIO_IRQ' was not declared in this scope"
+  }
+]

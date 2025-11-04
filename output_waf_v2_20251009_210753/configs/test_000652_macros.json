@@ -1,0 +1,16 @@
+{
+  "test_id": 652,
+  "timestamp": "2025-10-11T02:46:16.688300",
+  "macro_changes": {
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "HAL_BUTTON_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "USER_PARAMS_ENABLED": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "HAL_WITH_IO_MCU": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_WITH_DRONECAN": 0,
+    "AP_FEATURE_RTSCTS": 1
+  }
+}

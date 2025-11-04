@@ -1,0 +1,10 @@
+{
+  "test_id": 930,
+  "timestamp": "2025-10-11T16:18:08.391252",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_BATT_VOLT_PIN": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 97,
+  "timestamp": "2025-10-13T20:22:15.398920",
+  "macro_changes": {
+    "MODE_SMARTRTL_ENABLED": 0,
+    "FFT_MAX_MISSED_UPDATES": 4,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "AP_PERIPH_RPM_ENABLED": 1,
+    "MODE_ACRO_ENABLED": 1,
+    "AP_MISSION_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 170.44749855995178,
+  "build_result": false,
+  "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+}

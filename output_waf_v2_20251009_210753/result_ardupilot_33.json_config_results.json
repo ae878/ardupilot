@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 34,
+    "timestamp": "2025-10-09T22:41:00.886907",
+    "macro_changes": {
+      "MAVLINK_MSG_ID_AP_ADC": 1,
+      "MODE_CIRCLE_ENABLED": 0,
+      "HAL_WITH_IO_MCU": 1,
+      "HAL_DSHOT_ENABLED": 1,
+      "MAVLINK_ENABLED_ICAROUS": 0,
+      "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0,
+      "METADATA_MAX_i": 32,
+      "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+      "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+      "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0
+    },
+    "build_success": false,
+    "build_time": 163.49690747261047,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+  }
+]

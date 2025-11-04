@@ -1,0 +1,9 @@
+{
+  "test_id": 762,
+  "timestamp": "2025-10-11T08:08:20.261132",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MAVLINK_ENABLED_STANDARD": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0
+  }
+}

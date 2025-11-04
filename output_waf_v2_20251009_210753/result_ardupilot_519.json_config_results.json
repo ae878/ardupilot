@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 520,
+    "timestamp": "2025-10-10T20:42:23.068092",
+    "macro_changes": {
+      "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1,
+      "HAL_HAVE_SAFETY_SWITCH": 0,
+      "HAL_BATT_VOLT_PIN": 0,
+      "MODE_CIRCLE_ENABLED": 1,
+      "USER_PARAMS_ENABLED": 1,
+      "AP_ICENGINE_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 171.4323718547821,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

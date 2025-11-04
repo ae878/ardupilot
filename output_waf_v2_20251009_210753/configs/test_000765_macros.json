@@ -1,0 +1,9 @@
+{
+  "test_id": 765,
+  "timestamp": "2025-10-11T08:18:12.342830",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_USB_PRODUCT_ID": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "test_id": 833,
+  "timestamp": "2025-10-11T11:42:24.047658",
+  "macro_changes": {
+    "AP_AIS_ENABLED": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "HAL_GPIO_ALT": 0,
+    "HAL_QUADPLANE_ENABLED": 1,
+    "HAL_INS_VRBRAIN": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "MODE_SPORT_ENABLED": 0
+  }
+}

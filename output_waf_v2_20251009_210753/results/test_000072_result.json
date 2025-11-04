@@ -1,0 +1,20 @@
+{
+  "test_id": 72,
+  "timestamp": "2025-10-10T00:21:31.496147",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "HAL_PWM_COUNT": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "AP_AIS_ENABLED": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 0,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_USE_HW_RNG": 1,
+    "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0
+  },
+  "build_success": false,
+  "build_time": 161.79934811592102,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

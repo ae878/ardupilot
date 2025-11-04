@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 280,
+    "timestamp": "2025-10-10T09:43:30.081818",
+    "macro_changes": {
+      "MODE_ACRO_ENABLED": 1,
+      "HAL_HAVE_SERVO_VOLTAGE": 1,
+      "AP_CAMERA_ENABLED": 1,
+      "HAL_PWM_COUNT": 0,
+      "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1,
+      "MODE_GUIDED_ENABLED": 0,
+      "MODE_RTL_ENABLED": 0,
+      "AP_SOCKET_NATIVE_ENABLED": 0,
+      "HAL_RCOUT_RGBLED_BLUE": 0
+    },
+    "build_success": false,
+    "build_time": 161.65598464012146,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:542:4: error: #error ModeAuto requires ModeGuided which is disabled"
+  }
+]

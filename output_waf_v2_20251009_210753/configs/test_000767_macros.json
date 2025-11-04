@@ -1,0 +1,13 @@
+{
+  "test_id": 767,
+  "timestamp": "2025-10-11T08:24:45.812638",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 1,
+    "LEDDARONE_DETECTIONS_MAX": 32,
+    "TAP_ESC_MAX_MOTOR_NUM": 2,
+    "KDECAN_MAX_NUM_ESCS": 8,
+    "MODE_SPORT_ENABLED": 0,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1
+  }
+}

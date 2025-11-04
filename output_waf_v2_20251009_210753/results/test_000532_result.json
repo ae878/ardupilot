@@ -1,0 +1,13 @@
+{
+  "test_id": 532,
+  "timestamp": "2025-10-10T21:20:35.596717",
+  "macro_changes": {
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "AP_AIRSPEED_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 196.62712574005127,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

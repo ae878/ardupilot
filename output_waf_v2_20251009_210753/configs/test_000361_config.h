@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #361 */
+
+/* ConfigFuzz: HAL_CANFD_SUPPORTED */
+#ifdef HAL_CANFD_SUPPORTED
+#undef HAL_CANFD_SUPPORTED
+#endif
+#define HAL_CANFD_SUPPORTED 1
+
+/* ConfigFuzz: HAL_GPIO_LED_ON */
+#ifdef HAL_GPIO_LED_ON
+#undef HAL_GPIO_LED_ON
+#endif
+#define HAL_GPIO_LED_ON 0
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 1
+
+/* ConfigFuzz: HAL_USE_FATFS */
+#ifdef HAL_USE_FATFS
+#undef HAL_USE_FATFS
+#endif
+#define HAL_USE_FATFS 0
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED */
+#ifdef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#undef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#endif
+#define CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 1
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 1
+
+/* ConfigFuzz: MODE_FLIP_ENABLED */
+#ifdef MODE_FLIP_ENABLED
+#undef MODE_FLIP_ENABLED
+#endif
+#define MODE_FLIP_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

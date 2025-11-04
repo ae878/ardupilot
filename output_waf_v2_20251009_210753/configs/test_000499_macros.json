@@ -1,0 +1,14 @@
+{
+  "test_id": 499,
+  "timestamp": "2025-10-10T19:36:49.615423",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 4,
+    "MODE_ACRO_ENABLED": 1,
+    "MODE_GUIDED_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_RCOUT_RGBLED_RED": 1
+  }
+}

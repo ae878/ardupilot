@@ -1,0 +1,9 @@
+{
+  "test_id": 497,
+  "timestamp": "2025-10-10T19:30:20.550366",
+  "macro_changes": {
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_BATT_VOLT_PIN": 1
+  }
+}

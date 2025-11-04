@@ -1,0 +1,12 @@
+{
+  "test_id": 73,
+  "timestamp": "2025-10-13T19:08:03.597403",
+  "macro_changes": {
+    "HAL_INS_VRBRAIN": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "AP_PERIPH_RTC_ENABLED": 0,
+    "AP_DEVO_TELEM_ENABLED": 0,
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_GCS_ENABLED": 1
+  }
+}

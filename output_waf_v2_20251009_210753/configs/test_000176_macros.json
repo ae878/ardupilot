@@ -1,0 +1,10 @@
+{
+  "test_id": 176,
+  "timestamp": "2025-10-10T04:50:57.357970",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 1,
+    "AP_SIM_ENABLED": 0
+  }
+}

@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #679 */
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 1
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED */
+#ifdef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#undef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#endif
+#define AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED 1
+
+/* ConfigFuzz: MODE_CIRCLE_ENABLED */
+#ifdef MODE_CIRCLE_ENABLED
+#undef MODE_CIRCLE_ENABLED
+#endif
+#define MODE_CIRCLE_ENABLED 0
+
+/* ConfigFuzz: HAL_IMUHEAT_P_DEFAULT */
+#ifdef HAL_IMUHEAT_P_DEFAULT
+#undef HAL_IMUHEAT_P_DEFAULT
+#endif
+#define HAL_IMUHEAT_P_DEFAULT 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC 0
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 0
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_BLUE */
+#ifdef HAL_RCOUT_RGBLED_BLUE
+#undef HAL_RCOUT_RGBLED_BLUE
+#endif
+#define HAL_RCOUT_RGBLED_BLUE 0
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 1
+
+#endif /* _AP_CONFIG_H_ */

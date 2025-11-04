@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #1 */
+
+/* ConfigFuzz: HAL_USE_WSPI_DEFAULT_CFG */
+#ifdef HAL_USE_WSPI_DEFAULT_CFG
+#undef HAL_USE_WSPI_DEFAULT_CFG
+#endif
+#define HAL_USE_WSPI_DEFAULT_CFG 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC_CRC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC_CRC 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_ADAP_TUNING_CRC */
+#ifdef MAVLINK_MSG_ID_ADAP_TUNING_CRC
+#undef MAVLINK_MSG_ID_ADAP_TUNING_CRC
+#endif
+#define MAVLINK_MSG_ID_ADAP_TUNING_CRC 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC 0
+
+/* ConfigFuzz: TELEM_TIME_SLOT_MAX */
+#ifdef TELEM_TIME_SLOT_MAX
+#undef TELEM_TIME_SLOT_MAX
+#endif
+#define TELEM_TIME_SLOT_MAX 2
+
+/* ConfigFuzz: MODE_DRIFT_ENABLED */
+#ifdef MODE_DRIFT_ENABLED
+#undef MODE_DRIFT_ENABLED
+#endif
+#define MODE_DRIFT_ENABLED 1
+
+/* ConfigFuzz: HAL_AHRS_EKF_TYPE_DEFAULT */
+#ifdef HAL_AHRS_EKF_TYPE_DEFAULT
+#undef HAL_AHRS_EKF_TYPE_DEFAULT
+#endif
+#define HAL_AHRS_EKF_TYPE_DEFAULT 1
+
+/* ConfigFuzz: RC_OUTPUT_MAX_PULSEWIDTH */
+#ifdef RC_OUTPUT_MAX_PULSEWIDTH
+#undef RC_OUTPUT_MAX_PULSEWIDTH
+#endif
+#define RC_OUTPUT_MAX_PULSEWIDTH 8
+
+#endif /* _AP_CONFIG_H_ */

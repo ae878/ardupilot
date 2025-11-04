@@ -1,0 +1,10 @@
+{
+  "test_id": 156,
+  "timestamp": "2025-10-10T03:58:50.745665",
+  "macro_changes": {
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_BARO_NONE": 1
+  }
+}

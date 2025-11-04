@@ -1,0 +1,12 @@
+{
+  "test_id": 764,
+  "timestamp": "2025-10-11T08:14:53.695726",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "AP_STATS_ENABLED": 1,
+    "HAL_HNF_MAX_FILTERS": 16,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 32,
+    "timestamp": "2025-10-13T17:15:57.576518",
+    "macro_changes": {
+      "HAL_DSHOT_ENABLED": 0,
+      "HAL_NO_ROMFS_SUPPORT": 1,
+      "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+      "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+      "HAL_GPIO_OUTPUT": 1,
+      "HAL_BARO_NONE": 0,
+      "HAL_HAVE_HARDWARE_DOUBLE": 1,
+      "HAL_UART_IOMCU_IDX": 0
+    },
+    "build_success": false,
+    "build_time": 135.7902593612671,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+  }
+]

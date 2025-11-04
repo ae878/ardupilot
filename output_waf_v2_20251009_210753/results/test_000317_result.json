@@ -1,0 +1,15 @@
+{
+  "test_id": 317,
+  "timestamp": "2025-10-10T11:17:39.134693",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "AP_FEATURE_SBUS_OUT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 1
+  },
+  "build_success": false,
+  "build_time": 69.67120814323425,
+  "build_result": false,
+  "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+}

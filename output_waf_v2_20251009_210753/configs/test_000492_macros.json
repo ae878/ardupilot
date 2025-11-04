@@ -1,0 +1,16 @@
+{
+  "test_id": 492,
+  "timestamp": "2025-10-10T19:14:08.935763",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 1,
+    "AP_RSSI_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "HAL_GPIO_INPUT": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "AP_SIGNED_FIRMWARE": 1,
+    "HAL_FLASH_PROTECTION": 0,
+    "AC_PRECLAND_ENABLED": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 0
+  }
+}

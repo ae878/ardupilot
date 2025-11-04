@@ -1,0 +1,9 @@
+{
+  "test_id": 63,
+  "timestamp": "2025-10-13T18:38:18.669637",
+  "macro_changes": {
+    "AP_RADIO_ENABLED": 1,
+    "AP_INERTIALSENSOR_KILL_IMU_ENABLED": 1,
+    "AP_PERIPH_RANGEFINDER_ENABLED": 1
+  }
+}

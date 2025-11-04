@@ -1,0 +1,9 @@
+{
+  "test_id": 463,
+  "timestamp": "2025-10-10T17:59:30.133503",
+  "macro_changes": {
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0
+  }
+}

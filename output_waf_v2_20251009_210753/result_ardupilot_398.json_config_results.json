@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 399,
+    "timestamp": "2025-10-10T15:00:10.127736",
+    "macro_changes": {
+      "MODE_GUIDED_NOGPS_ENABLED": 0,
+      "HAL_HEATER_GPIO_ON": 0,
+      "HAL_INS_VRBRAIN": 0,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "MODE_RTL_ENABLED": 1,
+      "AP_AIRSPEED_ENABLED": 0,
+      "HAL_MOUNT_ENABLED": 1,
+      "MAVLINK_ENABLED_MINIMAL": 0,
+      "RC_INPUT_MAX_PULSEWIDTH": 32,
+      "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0
+    },
+    "build_success": false,
+    "build_time": 173.43551635742188,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

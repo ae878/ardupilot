@@ -1,0 +1,11 @@
+{
+  "test_id": 777,
+  "timestamp": "2025-10-11T08:56:08.396536",
+  "macro_changes": {
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "MODE_BRAKE_ENABLED": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 0
+  }
+}

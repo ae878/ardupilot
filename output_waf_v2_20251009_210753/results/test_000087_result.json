@@ -1,0 +1,18 @@
+{
+  "test_id": 87,
+  "timestamp": "2025-10-10T01:00:42.314689",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "HAL_GPIO_ALT": 0,
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0
+  },
+  "build_success": false,
+  "build_time": 89.41905093193054,
+  "build_result": false,
+  "error": "arm-none-eabi-g++: fatal error: cannot execute '/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as': execv: Text file busy"
+}

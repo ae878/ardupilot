@@ -1,0 +1,11 @@
+{
+  "test_id": 288,
+  "timestamp": "2025-10-10T10:06:26.751840",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 0,
+    "AP_BEACON_ENABLED": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "HAL_BATT_VOLT_PIN": 1,
+    "HAL_GPIO_ALT": 1
+  }
+}

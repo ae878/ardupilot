@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 209,
+    "timestamp": "2025-10-10T06:24:07.475721",
+    "macro_changes": {
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 1,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "AP_FENCE_ENABLED": 1,
+      "HAL_UART_IOMCU_IDX": 1,
+      "FS_THR_ENABLED_ALWAYS_RTL": 0,
+      "TOY_MODE_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 175.61059594154358,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

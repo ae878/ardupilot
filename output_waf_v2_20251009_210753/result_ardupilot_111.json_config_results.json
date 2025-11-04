@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 112,
+    "timestamp": "2025-10-10T02:08:20.084898",
+    "macro_changes": {
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+      "MODE_LOITER_ENABLED": 1,
+      "HAL_USE_WSPI_DEFAULT_CFG": 0,
+      "AC_PRECLAND_ENABLED": 1,
+      "HAL_BARO_NONE": 0,
+      "TELEM_TIME_SLOT_MAX": 4,
+      "HAL_USB_VENDOR_ID": 0,
+      "HAL_SUPPORT_RCOUT_SERIAL": 0,
+      "AP_HAL_UARTDRIVER_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 143.49484300613403,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

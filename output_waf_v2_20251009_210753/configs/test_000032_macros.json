@@ -1,0 +1,11 @@
+{
+  "test_id": 32,
+  "timestamp": "2025-10-09T22:35:07.652158",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 0,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "HAL_USE_HW_RNG": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0
+  }
+}

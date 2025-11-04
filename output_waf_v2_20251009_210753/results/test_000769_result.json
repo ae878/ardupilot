@@ -1,0 +1,15 @@
+{
+  "test_id": 769,
+  "timestamp": "2025-10-11T08:30:18.976015",
+  "macro_changes": {
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "MAVLINK_ENABLED_ALL": 0,
+    "HAL_USE_SDMMC": 1
+  },
+  "build_success": false,
+  "build_time": 135.79485774040222,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

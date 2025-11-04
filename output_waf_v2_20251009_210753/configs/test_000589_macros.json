@@ -1,0 +1,14 @@
+{
+  "test_id": 589,
+  "timestamp": "2025-10-10T23:51:45.356110",
+  "macro_changes": {
+    "MAVLINK_ENABLED_STANDARD": 0,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 0,
+    "HAL_GPIO_LED_ON": 1,
+    "AP_RSSI_ENABLED": 0
+  }
+}

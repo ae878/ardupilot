@@ -1,0 +1,9 @@
+{
+  "test_id": 936,
+  "timestamp": "2025-10-11T16:37:51.555695",
+  "macro_changes": {
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 2,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1
+  }
+}

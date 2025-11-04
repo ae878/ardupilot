@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #10 */
+
+/* ConfigFuzz: HAL_GPIO_ALT */
+#ifdef HAL_GPIO_ALT
+#undef HAL_GPIO_ALT
+#endif
+#define HAL_GPIO_ALT 1
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 0
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 1
+
+/* ConfigFuzz: AP_HAL_SHARED_DMA_ENABLED */
+#ifdef AP_HAL_SHARED_DMA_ENABLED
+#undef AP_HAL_SHARED_DMA_ENABLED
+#endif
+#define AP_HAL_SHARED_DMA_ENABLED 1
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED */
+#ifdef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#undef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#endif
+#define CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP 1
+
+#endif /* _AP_CONFIG_H_ */

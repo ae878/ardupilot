@@ -1,0 +1,13 @@
+{
+  "test_id": 201,
+  "timestamp": "2025-10-10T05:59:30.401175",
+  "macro_changes": {
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1
+  },
+  "build_success": false,
+  "build_time": 82.06520438194275,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+}

@@ -1,0 +1,18 @@
+{
+  "test_id": 184,
+  "timestamp": "2025-10-10T05:14:12.042693",
+  "macro_changes": {
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "TELEM_TIME_SLOT_MAX": 4,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "MAVLINK_ENABLED_DEVELOPMENT": 1,
+    "LEDDARONE_SERIAL_PORT_MAX": 8,
+    "HAL_GPIO_INPUT": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 174.96005654335022,
+  "build_result": false,
+  "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+}

@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #276 */
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC 1
+
+/* ConfigFuzz: HAL_BATT_CURR_PIN */
+#ifdef HAL_BATT_CURR_PIN
+#undef HAL_BATT_CURR_PIN
+#endif
+#define HAL_BATT_CURR_PIN 0
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_GREEN */
+#ifdef HAL_RCOUT_RGBLED_GREEN
+#undef HAL_RCOUT_RGBLED_GREEN
+#endif
+#define HAL_RCOUT_RGBLED_GREEN 0
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 1
+
+/* ConfigFuzz: HAL_DSHOT_ENABLED */
+#ifdef HAL_DSHOT_ENABLED
+#undef HAL_DSHOT_ENABLED
+#endif
+#define HAL_DSHOT_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 0
+
+/* ConfigFuzz: RC_OUTPUT_MAX_PULSEWIDTH */
+#ifdef RC_OUTPUT_MAX_PULSEWIDTH
+#undef RC_OUTPUT_MAX_PULSEWIDTH
+#endif
+#define RC_OUTPUT_MAX_PULSEWIDTH 4
+
+/* ConfigFuzz: USER_PARAMS_ENABLED */
+#ifdef USER_PARAMS_ENABLED
+#undef USER_PARAMS_ENABLED
+#endif
+#define USER_PARAMS_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 0
+
+#endif /* _AP_CONFIG_H_ */

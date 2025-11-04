@@ -1,0 +1,20 @@
+{
+  "test_id": 238,
+  "timestamp": "2025-10-10T07:40:34.906408",
+  "macro_changes": {
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "HAL_INS_RATE_LOOP": 1,
+    "AP_MODULE_SUPPORTED": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 0
+  },
+  "build_success": false,
+  "build_time": 82.61249136924744,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+}

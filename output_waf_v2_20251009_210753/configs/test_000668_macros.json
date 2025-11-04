@@ -1,0 +1,15 @@
+{
+  "test_id": 668,
+  "timestamp": "2025-10-11T03:34:39.954083",
+  "macro_changes": {
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "HAL_USB_VENDOR_ID": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "AP_MODULE_SUPPORTED": 0,
+    "METADATA_MAX_i": 4
+  }
+}

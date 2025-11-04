@@ -1,0 +1,11 @@
+{
+  "test_id": 736,
+  "timestamp": "2025-10-11T06:54:22.473616",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "HAL_HEATER_GPIO_PIN": 0
+  }
+}

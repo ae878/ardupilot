@@ -1,0 +1,13 @@
+{
+  "test_id": 267,
+  "timestamp": "2025-10-10T09:04:50.646010",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "HAL_MOUNT_ENABLED": 0,
+    "HAL_HAVE_IMU_HEATER": 0,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1
+  }
+}

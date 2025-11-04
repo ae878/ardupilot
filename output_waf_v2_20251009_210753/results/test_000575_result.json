@@ -1,0 +1,17 @@
+{
+  "test_id": 575,
+  "timestamp": "2025-10-10T23:11:09.302829",
+  "macro_changes": {
+    "USER_PARAMS_ENABLED": 1,
+    "MODE_ACRO_ENABLED": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1
+  },
+  "build_success": false,
+  "build_time": 31.458611011505127,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

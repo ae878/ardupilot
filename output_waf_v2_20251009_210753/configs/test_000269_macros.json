@@ -1,0 +1,11 @@
+{
+  "test_id": 269,
+  "timestamp": "2025-10-10T09:10:37.159578",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "TOY_MODE_ENABLED": 1,
+    "MODE_THROW_ENABLED": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "AP_CRASHDUMP_ENABLED": 0
+  }
+}

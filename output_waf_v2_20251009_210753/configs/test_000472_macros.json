@@ -1,0 +1,11 @@
+{
+  "test_id": 472,
+  "timestamp": "2025-10-10T18:24:20.371524",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1
+  }
+}

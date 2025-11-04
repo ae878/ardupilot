@@ -1,0 +1,10 @@
+{
+  "test_id": 961,
+  "timestamp": "2025-10-11T17:52:30.960538",
+  "macro_changes": {
+    "HAL_BARO_NONE": 0,
+    "HAL_GPIO_ALT": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0
+  }
+}

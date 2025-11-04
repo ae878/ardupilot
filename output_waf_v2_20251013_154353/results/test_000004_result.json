@@ -1,0 +1,16 @@
+{
+  "test_id": 4,
+  "timestamp": "2025-10-13T15:54:02.679483",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 1,
+    "FFT_MAX_MISSED_UPDATES": 1,
+    "HAL_GPIO_OUTPUT": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "FSYNC_CONFIG_EXT_SYNC_AY": 0,
+    "HAL_GCS_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 10.596285104751587,
+  "build_result": false,
+  "error": "../../libraries/AC_Autorotation/RSC_Autorotation.cpp:127:21: error: 'constrain_float' was not declared in this scope"
+}

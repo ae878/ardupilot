@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 750,
+    "timestamp": "2025-10-11T07:33:26.877571",
+    "macro_changes": {
+      "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+      "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+      "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+      "MODE_GUIDED_NOGPS_ENABLED": 1,
+      "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+      "HAL_DSHOT_ENABLED": 0,
+      "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+      "AP_SERVORELAYEVENTS_ENABLED": 1,
+      "HAL_WITH_MCU_MONITORING": 1
+    },
+    "build_success": false,
+    "build_time": 133.27593278884888,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+  }
+]

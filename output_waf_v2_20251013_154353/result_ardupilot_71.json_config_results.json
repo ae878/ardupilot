@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 72,
+    "timestamp": "2025-10-13T19:04:45.413744",
+    "macro_changes": {
+      "AP_FEATURE_SBUS_OUT": 0,
+      "HAL_PARACHUTE_ENABLED": 1,
+      "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+      "AP_BEACON_ENABLED": 1,
+      "FS_THR_ENABLED_ALWAYS_RTL": 1,
+      "AP_SCHEDULER_ENABLED": 0,
+      "AP_DEVO_TELEM_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 8.292642831802368,
+    "build_result": false,
+    "error": "../../libraries/AC_AttitudeControl/AC_AttitudeControl_Multi.cpp:330:31: error: 'scheduler' is not a member of 'AP'"
+  }
+]

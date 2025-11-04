@@ -1,0 +1,11 @@
+{
+  "test_id": 85,
+  "timestamp": "2025-10-13T19:47:16.717145",
+  "macro_changes": {
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "AP_FOLLOW_ENABLED": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 16,
+    "FFT_MAX_MISSED_UPDATES": 1,
+    "HAL_DISABLE_ADC_DRIVER": 1
+  }
+}

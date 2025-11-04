@@ -1,0 +1,11 @@
+{
+  "test_id": 898,
+  "timestamp": "2025-10-11T14:50:02.523496",
+  "macro_changes": {
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "HAL_HEATER_GPIO_ON": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 0
+  }
+}

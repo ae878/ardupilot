@@ -1,0 +1,13 @@
+{
+  "test_id": 12,
+  "timestamp": "2025-10-13T16:14:43.261938",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "AP_AIRSPEED_ENABLED": 1,
+    "FSYNC_CONFIG_EXT_SYNC_GX": 0,
+    "TELEM_TIME_SLOT_MAX": 32,
+    "AP_BEACON_ENABLED": 1,
+    "FSYNC_CONFIG_EXT_SYNC_TEMP": 1,
+    "HAL_INS_VRBRAIN": 1
+  }
+}

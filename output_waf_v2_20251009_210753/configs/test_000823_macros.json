@@ -1,0 +1,9 @@
+{
+  "test_id": 823,
+  "timestamp": "2025-10-11T11:09:33.750380",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 0,
+    "HAL_LOGGING_ENABLED": 1,
+    "AP_OPTICALFLOW_ENABLED": 1
+  }
+}

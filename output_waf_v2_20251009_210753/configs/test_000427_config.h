@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #427 */
+
+/* ConfigFuzz: RANGEFINDER_MAX_INSTANCES */
+#ifdef RANGEFINDER_MAX_INSTANCES
+#undef RANGEFINDER_MAX_INSTANCES
+#endif
+#define RANGEFINDER_MAX_INSTANCES 8
+
+/* ConfigFuzz: MODE_GUIDED_ENABLED */
+#ifdef MODE_GUIDED_ENABLED
+#undef MODE_GUIDED_ENABLED
+#endif
+#define MODE_GUIDED_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_OVERRIDE */
+#ifdef BENCH_DEFINE_MAP_OVERRIDE
+#undef BENCH_DEFINE_MAP_OVERRIDE
+#endif
+#define BENCH_DEFINE_MAP_OVERRIDE 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN 0
+
+/* ConfigFuzz: METADATA_MAX_i */
+#ifdef METADATA_MAX_i
+#undef METADATA_MAX_i
+#endif
+#define METADATA_MAX_i 4
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 32
+
+#endif /* _AP_CONFIG_H_ */

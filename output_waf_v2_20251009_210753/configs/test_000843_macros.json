@@ -1,0 +1,9 @@
+{
+  "test_id": 843,
+  "timestamp": "2025-10-11T12:12:54.840914",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "MODE_SPORT_ENABLED": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 8
+  }
+}

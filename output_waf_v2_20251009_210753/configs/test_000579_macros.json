@@ -1,0 +1,9 @@
+{
+  "test_id": 579,
+  "timestamp": "2025-10-10T23:23:45.907247",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 1,
+    "HAL_RALLY_ENABLED": 1,
+    "AP_SIGNED_FIRMWARE": 1
+  }
+}

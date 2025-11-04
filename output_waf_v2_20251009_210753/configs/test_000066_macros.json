@@ -1,0 +1,9 @@
+{
+  "test_id": 66,
+  "timestamp": "2025-10-10T00:06:14.788481",
+  "macro_changes": {
+    "AP_CRASHDUMP_ENABLED": 0,
+    "AP_CAMERA_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0
+  }
+}

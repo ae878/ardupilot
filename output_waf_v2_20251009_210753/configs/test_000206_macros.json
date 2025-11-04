@@ -1,0 +1,11 @@
+{
+  "test_id": 206,
+  "timestamp": "2025-10-10T06:14:58.764407",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 641,
+  "timestamp": "2025-10-11T02:11:14.678533",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_LOGGING_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0
+  }
+}

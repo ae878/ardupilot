@@ -1,0 +1,12 @@
+{
+  "test_id": 611,
+  "timestamp": "2025-10-11T00:51:15.425052",
+  "macro_changes": {
+    "MODE_THROW_ENABLED": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "AP_ICENGINE_ENABLED": 1,
+    "HAL_LOGGING_ENABLED": 1,
+    "MAVLINK_ENABLED_ICAROUS": 0
+  }
+}

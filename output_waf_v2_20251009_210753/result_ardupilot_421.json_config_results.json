@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 422,
+    "timestamp": "2025-10-10T16:06:14.481420",
+    "macro_changes": {
+      "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+      "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+      "AP_SERIALMANAGER_ENABLED": 0,
+      "MODE_AUTO_ENABLED": 0,
+      "MAVLINK_ENABLED_UALBERTA": 0
+    },
+    "build_success": false,
+    "build_time": 9.693835735321045,
+    "build_result": false,
+    "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+  }
+]

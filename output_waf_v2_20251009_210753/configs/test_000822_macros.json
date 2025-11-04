@@ -1,0 +1,12 @@
+{
+  "test_id": 822,
+  "timestamp": "2025-10-11T11:06:16.747545",
+  "macro_changes": {
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 8,
+    "MODE_SPORT_ENABLED": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "AP_BEACON_ENABLED": 1
+  }
+}

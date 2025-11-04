@@ -1,0 +1,12 @@
+{
+  "test_id": 331,
+  "timestamp": "2025-10-10T11:53:20.464514",
+  "macro_changes": {
+    "MODE_FLIP_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "WEATHERVANE_ENABLED": 0,
+    "HAL_USE_FATFS": 0
+  }
+}

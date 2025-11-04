@@ -1,0 +1,11 @@
+{
+  "test_id": 160,
+  "timestamp": "2025-10-10T04:06:01.700228",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "MODE_ACRO_ENABLED": 1,
+    "MODE_DRIFT_ENABLED": 0,
+    "HAL_USE_SDMMC": 0
+  }
+}

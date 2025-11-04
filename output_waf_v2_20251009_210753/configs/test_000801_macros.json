@@ -1,0 +1,15 @@
+{
+  "test_id": 801,
+  "timestamp": "2025-10-11T10:06:04.893479",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "HAL_GPIO_LED_ON": 0,
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "HAL_HEATER_GPIO_ON": 1,
+    "AP_FENCE_ENABLED": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "AP_GRIPPER_ENABLED": 1
+  }
+}

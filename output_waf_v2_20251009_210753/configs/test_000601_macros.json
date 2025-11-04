@@ -1,0 +1,9 @@
+{
+  "test_id": 601,
+  "timestamp": "2025-10-11T00:22:41.155201",
+  "macro_changes": {
+    "HAL_NUM_CAN_IFACES": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "FS_THR_DISABLED": 0
+  }
+}

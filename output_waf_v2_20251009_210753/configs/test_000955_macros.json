@@ -1,0 +1,15 @@
+{
+  "test_id": 955,
+  "timestamp": "2025-10-11T17:33:14.977247",
+  "macro_changes": {
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "AP_FENCE_ENABLED": 1,
+    "HAL_INS_VRBRAIN": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "KDECAN_MAX_NUM_ESCS": 8,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "HAL_NUM_CAN_IFACES": 0
+  }
+}

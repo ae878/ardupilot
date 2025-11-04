@@ -1,0 +1,10 @@
+{
+  "test_id": 707,
+  "timestamp": "2025-10-11T05:37:45.550390",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0
+  }
+}

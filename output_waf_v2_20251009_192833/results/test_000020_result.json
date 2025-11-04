@@ -1,0 +1,20 @@
+{
+  "test_id": 20,
+  "timestamp": "2025-10-09T20:19:39.629156",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_GREEN": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 8,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "AP_FOLLOW_ENABLED": 1,
+    "AP_CAMERA_ENABLED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+    "HAL_PWM_COUNT": 1,
+    "AP_FENCE_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 94.86212992668152,
+  "build_result": false,
+  "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+}

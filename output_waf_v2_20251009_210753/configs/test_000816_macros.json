@@ -1,0 +1,12 @@
+{
+  "test_id": 816,
+  "timestamp": "2025-10-11T10:46:58.734190",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "MODE_SPORT_ENABLED": 0,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0
+  }
+}

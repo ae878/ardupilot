@@ -1,0 +1,74 @@
+[
+  {
+    "test_id": 26,
+    "timestamp": "2025-10-09T20:36:32.806609",
+    "macro_changes": {
+      "FS_THR_ENABLED_ALWAYS_RTL": 1,
+      "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+      "MODE_LOITER_ENABLED": 0
+    },
+    "build_success": true,
+    "build_time": 186.302659034729,
+    "build_result": true,
+    "high_stack_functions": [
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+        "stack_size": 2152,
+        "file": "AP_NavEKF3_core.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+        "stack_size": 2152,
+        "file": "AP_NavEKF3_core.cpp.7.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+        "stack_size": 1496,
+        "file": "AP_NavEKF2_core.cpp.0.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+        "stack_size": 1120,
+        "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+        "stack_size": 1120,
+        "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+        "stack_size": 1072,
+        "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+        "stack_size": 1072,
+        "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+        "stack_size": 1064,
+        "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+        "stack_size": 1048,
+        "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+        "stack_size": 1048,
+        "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+      }
+    ],
+    "stack_overflow_risk": 20,
+    "stack_changes_summary": {
+      "new_functions": 0,
+      "removed_functions": 16,
+      "increased_stack": 0,
+      "decreased_stack": 0,
+      "unchanged": 15900
+    }
+  }
+]

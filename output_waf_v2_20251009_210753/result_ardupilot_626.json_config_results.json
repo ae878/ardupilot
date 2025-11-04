@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 627,
+    "timestamp": "2025-10-11T01:33:32.410713",
+    "macro_changes": {
+      "MODE_AUTO_ENABLED": 1,
+      "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+      "AC_PAYLOAD_PLACE_ENABLED": 1,
+      "TAP_ESC_MAX_MOTOR_NUM": 32,
+      "AP_MODULE_SUPPORTED": 0,
+      "AP_SERIALMANAGER_ENABLED": 0,
+      "AP_AIRSPEED_ENABLED": 1,
+      "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+      "MODE_SMARTRTL_ENABLED": 1,
+      "LEDDARONE_SERIAL_PORT_MAX": 1
+    },
+    "build_success": false,
+    "build_time": 10.246755361557007,
+    "build_result": false,
+    "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+  }
+]

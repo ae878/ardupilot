@@ -1,0 +1,12 @@
+{
+  "test_id": 29,
+  "timestamp": "2025-10-09T22:27:15.731732",
+  "macro_changes": {
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1
+  }
+}

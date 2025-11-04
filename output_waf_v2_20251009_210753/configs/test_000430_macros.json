@@ -1,0 +1,12 @@
+{
+  "test_id": 430,
+  "timestamp": "2025-10-10T16:29:18.026784",
+  "macro_changes": {
+    "MODE_CIRCLE_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MODE_BRAKE_ENABLED": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 0
+  }
+}

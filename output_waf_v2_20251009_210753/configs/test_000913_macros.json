@@ -1,0 +1,10 @@
+{
+  "test_id": 913,
+  "timestamp": "2025-10-11T15:28:41.946205",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ALL": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "TELEM_TIME_SLOT_MAX": 4
+  }
+}

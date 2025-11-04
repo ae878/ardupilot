@@ -1,0 +1,12 @@
+{
+  "test_id": 917,
+  "timestamp": "2025-10-11T15:39:40.866737",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 1,
+    "TOY_MODE_ENABLED": 1,
+    "USER_PARAMS_ENABLED": 0,
+    "AP_RSSI_ENABLED": 1,
+    "AP_SIM_ENABLED": 0,
+    "HAL_NUM_CAN_IFACES": 0
+  }
+}

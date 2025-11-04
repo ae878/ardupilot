@@ -1,0 +1,9 @@
+{
+  "test_id": 12,
+  "timestamp": "2025-10-09T20:02:25.318973",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 0,
+    "HAL_HNF_MAX_FILTERS": 1,
+    "HAL_RCOUT_RGBLED_GREEN": 1
+  }
+}

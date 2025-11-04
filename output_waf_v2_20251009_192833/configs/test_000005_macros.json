@@ -1,0 +1,10 @@
+{
+  "test_id": 5,
+  "timestamp": "2025-10-09T19:43:15.786864",
+  "macro_changes": {
+    "AC_PAYLOAD_PLACE_ENABLED": 0,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "MAX_PWMS": 32,
+    "AP_FENCE_ENABLED": 0
+  }
+}

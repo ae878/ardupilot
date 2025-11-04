@@ -1,0 +1,15 @@
+{
+  "test_id": 302,
+  "timestamp": "2025-10-10T10:44:36.947785",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "AP_STATS_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "AP_RSSI_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "MODE_FLIP_ENABLED": 1
+  }
+}

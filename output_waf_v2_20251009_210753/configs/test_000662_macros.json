@@ -1,0 +1,10 @@
+{
+  "test_id": 662,
+  "timestamp": "2025-10-11T03:18:00.136605",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "SUMD_MAX_CHANNELS": 8,
+    "AP_RELAY_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 0
+  }
+}

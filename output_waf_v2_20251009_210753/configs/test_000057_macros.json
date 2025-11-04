@@ -1,0 +1,15 @@
+{
+  "test_id": 57,
+  "timestamp": "2025-10-09T23:41:53.054332",
+  "macro_changes": {
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "HAL_PWM_COUNT": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "HAL_CANFD_SUPPORTED": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "HAL_WITH_UAVCAN": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "HAL_INS_NONE": 1,
+    "MAVLINK_ENABLED_MINIMAL": 0
+  }
+}

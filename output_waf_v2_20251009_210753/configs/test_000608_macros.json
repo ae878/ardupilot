@@ -1,0 +1,10 @@
+{
+  "test_id": 608,
+  "timestamp": "2025-10-11T00:44:33.604531",
+  "macro_changes": {
+    "HAL_WITH_UAVCAN": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "HAL_BARO_NONE": 1,
+    "AP_SERIALMANAGER_ENABLED": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": 275,
+  "timestamp": "2025-10-10T09:28:27.175833",
+  "macro_changes": {
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_BUTTON_ENABLED": 1,
+    "HAL_USB_PRODUCT_ID": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "AP_RSSI_ENABLED": 1
+  }
+}

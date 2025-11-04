@@ -1,0 +1,9 @@
+{
+  "test_id": 139,
+  "timestamp": "2025-10-10T03:15:14.648202",
+  "macro_changes": {
+    "MAVLINK_ENABLED_MINIMAL": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "TOY_MODE_ENABLED": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 522,
+  "timestamp": "2025-10-10T20:48:29.992922",
+  "macro_changes": {
+    "MODE_SPORT_ENABLED": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0
+  }
+}

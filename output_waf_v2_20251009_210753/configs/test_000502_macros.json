@@ -1,0 +1,9 @@
+{
+  "test_id": 502,
+  "timestamp": "2025-10-10T19:45:52.183458",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 0
+  }
+}

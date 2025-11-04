@@ -1,0 +1,13 @@
+{
+  "test_id": 553,
+  "timestamp": "2025-10-10T22:12:50.378543",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "MAX_PWMS": 32,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 4
+  }
+}

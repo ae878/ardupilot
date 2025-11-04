@@ -1,0 +1,9 @@
+{
+  "test_id": 110,
+  "timestamp": "2025-10-13T20:56:09.073395",
+  "macro_changes": {
+    "AP_RC_CHANNEL_ENABLED": 1,
+    "HAL_USE_HW_RNG": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1
+  }
+}

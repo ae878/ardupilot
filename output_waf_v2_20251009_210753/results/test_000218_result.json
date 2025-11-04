@@ -1,0 +1,18 @@
+{
+  "test_id": 218,
+  "timestamp": "2025-10-10T06:48:32.825243",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 8,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1
+  },
+  "build_success": false,
+  "build_time": 185.4435694217682,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

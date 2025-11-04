@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 631,
+    "timestamp": "2025-10-11T01:46:13.338338",
+    "macro_changes": {
+      "USER_PARAMS_ENABLED": 1,
+      "HAL_HAVE_SERVO_VOLTAGE": 0,
+      "HAL_USE_HW_RNG": 1,
+      "ESC_CHANNEL_MAP_CHANNEL": 1
+    },
+    "build_success": false,
+    "build_time": 173.68574357032776,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

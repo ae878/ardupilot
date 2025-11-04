@@ -1,0 +1,9 @@
+{
+  "test_id": 584,
+  "timestamp": "2025-10-10T23:37:23.559226",
+  "macro_changes": {
+    "FS_THR_DISABLED": 1,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1
+  }
+}

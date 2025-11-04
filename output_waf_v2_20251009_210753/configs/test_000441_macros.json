@@ -1,0 +1,10 @@
+{
+  "test_id": 441,
+  "timestamp": "2025-10-10T16:56:20.190705",
+  "macro_changes": {
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "HAL_BATT_CURR_PIN": 0
+  }
+}

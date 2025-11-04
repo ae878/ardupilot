@@ -1,0 +1,14 @@
+{
+  "test_id": 162,
+  "timestamp": "2025-10-10T04:11:49.115771",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "HAL_GPIO_INPUT": 1,
+    "USER_PARAMS_ENABLED": 1,
+    "AP_CAMERA_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 162.3002324104309,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

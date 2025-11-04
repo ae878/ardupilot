@@ -1,0 +1,16 @@
+{
+  "test_id": 663,
+  "timestamp": "2025-10-11T03:20:49.775799",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 0,
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "RPMMAX": 1,
+    "MODE_CIRCLE_ENABLED": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 169.63626527786255,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 97,
+    "timestamp": "2025-10-10T01:26:39.839222",
+    "macro_changes": {
+      "AP_HAL_UARTDRIVER_ENABLED": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+      "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1
+    },
+    "build_success": false,
+    "build_time": 144.88925957679749,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

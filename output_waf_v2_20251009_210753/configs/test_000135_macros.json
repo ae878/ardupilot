@@ -1,0 +1,14 @@
+{
+  "test_id": 135,
+  "timestamp": "2025-10-10T03:07:30.114659",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "HAL_WITH_DRONECAN": 1,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "METADATA_MAX_i": 1,
+    "KDECAN_MAX_NUM_ESCS": 4,
+    "RC_INPUT_MAX_PULSEWIDTH": 8,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "HAL_INS_RATE_LOOP": 0
+  }
+}

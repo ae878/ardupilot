@@ -1,0 +1,9 @@
+{
+  "test_id": 123,
+  "timestamp": "2025-10-10T02:35:26.188910",
+  "macro_changes": {
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0
+  }
+}

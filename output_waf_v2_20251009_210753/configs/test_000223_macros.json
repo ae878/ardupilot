@@ -1,0 +1,13 @@
+{
+  "test_id": 223,
+  "timestamp": "2025-10-10T07:00:15.853832",
+  "macro_changes": {
+    "HAL_DSHOT_ENABLED": 0,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "AP_BEACON_ENABLED": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "HAL_USE_SDMMC": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "MODE_AUTOROTATE_ENABLED": 0
+  }
+}

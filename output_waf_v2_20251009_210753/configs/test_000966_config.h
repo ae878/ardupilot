@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #966 */
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS 0
+
+/* ConfigFuzz: HAL_MEMORY_TOTAL_KB */
+#ifdef HAL_MEMORY_TOTAL_KB
+#undef HAL_MEMORY_TOTAL_KB
+#endif
+#define HAL_MEMORY_TOTAL_KB 1
+
+/* ConfigFuzz: FLOW_CONTROL_ENABLED */
+#ifdef FLOW_CONTROL_ENABLED
+#undef FLOW_CONTROL_ENABLED
+#endif
+#define FLOW_CONTROL_ENABLED 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_LAND */
+#ifdef FS_GCS_ENABLED_ALWAYS_LAND
+#undef FS_GCS_ENABLED_ALWAYS_LAND
+#endif
+#define FS_GCS_ENABLED_ALWAYS_LAND 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_AVSSUAS */
+#ifdef MAVLINK_ENABLED_AVSSUAS
+#undef MAVLINK_ENABLED_AVSSUAS
+#endif
+#define MAVLINK_ENABLED_AVSSUAS 1
+
+/* ConfigFuzz: AP_BEACON_ENABLED */
+#ifdef AP_BEACON_ENABLED
+#undef AP_BEACON_ENABLED
+#endif
+#define AP_BEACON_ENABLED 1
+
+/* ConfigFuzz: MODE_ZIGZAG_ENABLED */
+#ifdef MODE_ZIGZAG_ENABLED
+#undef MODE_ZIGZAG_ENABLED
+#endif
+#define MODE_ZIGZAG_ENABLED 1
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_ENABLE_COUNTERS */
+#ifdef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#undef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#endif
+#define CONFIG_SPI_FLASH_ENABLE_COUNTERS 0
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 0
+
+/* ConfigFuzz: HAL_BARO_NONE */
+#ifdef HAL_BARO_NONE
+#undef HAL_BARO_NONE
+#endif
+#define HAL_BARO_NONE 0
+
+#endif /* _AP_CONFIG_H_ */

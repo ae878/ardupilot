@@ -1,0 +1,16 @@
+{
+  "test_id": 40,
+  "timestamp": "2025-10-09T22:52:12.490617",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 1,
+    "SUMD_MAX_CHANNELS": 32,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 32,
+    "HAL_GENERATOR_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 177.17171168327332,
+  "build_result": false,
+  "error": "arm-none-eabi-g++: fatal error: cannot execute '/root/arm-none-eabi-gcc/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus': execv: Text file busy"
+}

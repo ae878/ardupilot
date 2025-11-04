@@ -1,0 +1,19 @@
+{
+  "test_id": 404,
+  "timestamp": "2025-10-10T15:14:33.451390",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 2,
+    "HAL_SOARING_ENABLED": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0
+  },
+  "build_success": false,
+  "build_time": 127.22461748123169,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/SPIDevice.cpp:88:97: error: invalid use of incomplete type 'class ChibiOS::Shared_DMA'"
+}

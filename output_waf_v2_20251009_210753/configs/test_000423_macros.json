@@ -1,0 +1,9 @@
+{
+  "test_id": 423,
+  "timestamp": "2025-10-10T16:06:31.554120",
+  "macro_changes": {
+    "HAL_GPIO_ALT": 1,
+    "HAL_BATT_VOLT_PIN": 1,
+    "AP_FOLLOW_ENABLED": 0
+  }
+}

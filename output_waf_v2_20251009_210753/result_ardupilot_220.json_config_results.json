@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 221,
+    "timestamp": "2025-10-10T06:55:02.378470",
+    "macro_changes": {
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+      "HAL_HAVE_IMU_HEATER": 0,
+      "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+      "HAL_RCOUT_RGBLED_RED": 1,
+      "MAVLINK_ENABLED_MINIMAL": 0
+    },
+    "build_success": false,
+    "build_time": 29.22044348716736,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 153,
+    "timestamp": "2025-10-10T03:49:32.590239",
+    "macro_changes": {
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "HAL_PWM_COUNT": 0,
+      "AP_OPTICALFLOW_ENABLED": 1,
+      "MODE_FLIP_ENABLED": 1,
+      "MODE_CIRCLE_ENABLED": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+      "AP_EXTERNAL_CONTROL_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 162.0610637664795,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+  }
+]

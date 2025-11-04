@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 709,
+    "timestamp": "2025-10-11T05:44:09.308044",
+    "macro_changes": {
+      "MAVLINK_ENABLED_ICAROUS": 1,
+      "AC_PAYLOAD_PLACE_ENABLED": 1,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+      "RC_OUTPUT_MAX_PULSEWIDTH": 16,
+      "MODE_ACRO_ENABLED": 0,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+      "HAL_HAVE_IMU_HEATER": 1
+    },
+    "build_success": false,
+    "build_time": 185.52895593643188,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

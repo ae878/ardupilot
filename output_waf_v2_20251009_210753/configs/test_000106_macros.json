@@ -1,0 +1,13 @@
+{
+  "test_id": 106,
+  "timestamp": "2025-10-10T01:52:44.808060",
+  "macro_changes": {
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "MAX_PWMS": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1,
+    "LEDDARONE_DETECTIONS_MAX": 1,
+    "HAL_USB_PRODUCT_ID": 0
+  }
+}

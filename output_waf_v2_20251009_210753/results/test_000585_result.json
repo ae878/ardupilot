@@ -1,0 +1,13 @@
+{
+  "test_id": 585,
+  "timestamp": "2025-10-10T23:39:39.136672",
+  "macro_changes": {
+    "HAL_GPIO_ALT": 1,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_WITH_MCU_MONITORING": 1
+  },
+  "build_success": false,
+  "build_time": 135.57288026809692,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

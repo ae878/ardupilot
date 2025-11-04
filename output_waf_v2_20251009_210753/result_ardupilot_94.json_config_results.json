@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 95,
+    "timestamp": "2025-10-10T01:21:04.219953",
+    "macro_changes": {
+      "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "HAL_USE_SDMMC": 0,
+      "HAL_USB_PRODUCT_ID": 1
+    },
+    "build_success": false,
+    "build_time": 177.86021280288696,
+    "build_result": false,
+    "error": "../../ArduCopter/mode_autorotate.cpp:76:17: error: 'class AP_MotorsMulticopter' has no member named 'autorotation_bailout'"
+  }
+]

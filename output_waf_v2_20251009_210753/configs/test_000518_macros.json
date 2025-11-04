@@ -1,0 +1,12 @@
+{
+  "test_id": 518,
+  "timestamp": "2025-10-10T20:36:14.476534",
+  "macro_changes": {
+    "FFT_MAX_MISSED_UPDATES": 8,
+    "HAL_DSHOT_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 32,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1
+  }
+}

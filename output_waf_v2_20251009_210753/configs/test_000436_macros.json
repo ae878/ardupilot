@@ -1,0 +1,10 @@
+{
+  "test_id": 436,
+  "timestamp": "2025-10-10T16:43:45.523441",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0
+  }
+}

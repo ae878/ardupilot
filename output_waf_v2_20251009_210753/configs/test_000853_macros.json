@@ -1,0 +1,10 @@
+{
+  "test_id": 853,
+  "timestamp": "2025-10-11T12:42:56.170218",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "HAL_GPIO_ALT": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1
+  }
+}

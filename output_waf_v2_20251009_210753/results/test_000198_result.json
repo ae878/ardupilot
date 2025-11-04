@@ -1,0 +1,20 @@
+{
+  "test_id": 198,
+  "timestamp": "2025-10-10T05:51:56.074279",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "HAL_BATT_CURR_PIN": 1,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "TOY_MODE_ENABLED": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "HAL_HEATER_GPIO_ON": 0
+  },
+  "build_success": false,
+  "build_time": 27.51137113571167,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

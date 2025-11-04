@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #857 */
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC */
+#ifdef MAVLINK_MSG_ID_AP_ADC
+#undef MAVLINK_MSG_ID_AP_ADC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC 1
+
+/* ConfigFuzz: AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED */
+#ifdef AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED
+#undef AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED
+#endif
+#define AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED 0
+
+/* ConfigFuzz: AP_NOTIFY_DISCO_LED_ENABLED */
+#ifdef AP_NOTIFY_DISCO_LED_ENABLED
+#undef AP_NOTIFY_DISCO_LED_ENABLED
+#endif
+#define AP_NOTIFY_DISCO_LED_ENABLED 0
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 0
+
+/* ConfigFuzz: AP_FEATURE_RTSCTS */
+#ifdef AP_FEATURE_RTSCTS
+#undef AP_FEATURE_RTSCTS
+#endif
+#define AP_FEATURE_RTSCTS 0
+
+#endif /* _AP_CONFIG_H_ */

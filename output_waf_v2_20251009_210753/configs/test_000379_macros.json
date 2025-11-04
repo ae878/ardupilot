@@ -1,0 +1,9 @@
+{
+  "test_id": 379,
+  "timestamp": "2025-10-10T14:03:58.692163",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0
+  }
+}

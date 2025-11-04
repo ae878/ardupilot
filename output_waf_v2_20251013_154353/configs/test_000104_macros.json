@@ -1,0 +1,15 @@
+{
+  "test_id": 104,
+  "timestamp": "2025-10-13T20:41:13.385625",
+  "macro_changes": {
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_USE_HW_RNG": 0,
+    "AP_MISSION_NAV_PAYLOAD_PLACE_ENABLED": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "HAL_WITH_RAMTRON": 1,
+    "FSYNC_CONFIG_EXT_SYNC_AX": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1
+  }
+}

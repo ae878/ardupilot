@@ -1,0 +1,13 @@
+{
+  "test_id": 1,
+  "timestamp": "2025-10-11T20:31:00.482780",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 0,
+    "HAL_HNF_MAX_FILTERS": 16,
+    "HAL_ENABLE_THREAD_STATISTICS": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "TAP_ESC_MAX_MOTOR_NUM": 8,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

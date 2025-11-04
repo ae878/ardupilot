@@ -1,0 +1,11 @@
+{
+  "test_id": 469,
+  "timestamp": "2025-10-10T18:17:50.891407",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ICAROUS": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  }
+}

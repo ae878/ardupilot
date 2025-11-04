@@ -1,0 +1,14 @@
+{
+  "test_id": 76,
+  "timestamp": "2025-10-13T19:17:56.140385",
+  "macro_changes": {
+    "MPUREG_CONFIG_FIFO_MODE_STOP": 0,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "MODE_FLIP_ENABLED": 0,
+    "AP_HEATER_IMU_INSTANCE": 0,
+    "BACKEND_SAMPLE_RATE_MAX": 8,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0
+  }
+}

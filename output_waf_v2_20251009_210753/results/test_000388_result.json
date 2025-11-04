@@ -1,0 +1,15 @@
+{
+  "test_id": 388,
+  "timestamp": "2025-10-10T14:27:35.432260",
+  "macro_changes": {
+    "MAX_PWMS": 4,
+    "FS_THR_DISABLED": 1,
+    "AP_SIM_ENABLED": 1,
+    "HAL_PWM_COUNT": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 188.79034614562988,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

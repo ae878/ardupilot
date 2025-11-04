@@ -1,0 +1,14 @@
+{
+  "test_id": 795,
+  "timestamp": "2025-10-11T09:49:40.770485",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "HAL_USB_VENDOR_ID": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "MODE_LOITER_ENABLED": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "HAL_CAN_DRIVER_DEFAULT": 0
+  }
+}

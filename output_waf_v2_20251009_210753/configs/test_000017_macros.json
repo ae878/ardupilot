@@ -1,0 +1,10 @@
+{
+  "test_id": 17,
+  "timestamp": "2025-10-09T21:54:03.061748",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "AP_AIS_ENABLED": 0,
+    "MODE_AUTO_ENABLED": 1,
+    "MAVLINK_ENABLED_ALL": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 798,
+  "timestamp": "2025-10-11T09:59:34.879089",
+  "macro_changes": {
+    "HAL_USE_SDMMC": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "FS_THR_DISABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "RPMMAX": 16
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "test_id": 271,
+  "timestamp": "2025-10-10T09:16:07.335796",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0
+  },
+  "build_success": false,
+  "build_time": 143.12852120399475,
+  "build_result": false,
+  "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+}

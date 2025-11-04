@@ -1,0 +1,75 @@
+{
+  "test_id": 81,
+  "timestamp": "2025-10-10T00:48:23.587338",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  },
+  "build_success": true,
+  "build_time": 182.92984676361084,
+  "build_result": true,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 1040,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../modules/lwip/src/netif/ppp/utils.c:605:13:ppp_logit.constprop",
+      "stack_size": 1032,
+      "file": "utils.c.0.su"
+    },
+    {
+      "function": "../../libraries/AP_CheckFirmware/monocypher.cpp:2439:5:int crypto_check_final(crypto_check_ctx_abstract*)",
+      "stack_size": 1024,
+      "file": "monocypher.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_PosVelFusion.cpp:1410:6:void NavEKF3_core::FuseBodyVel()",
+      "stack_size": 1016,
+      "file": "AP_NavEKF3_PosVelFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_AirDataFusion.cpp:274:6:void NavEKF3_core::FuseSideslip()",
+      "stack_size": 976,
+      "file": "AP_NavEKF3_AirDataFusion.cpp.7.su"
+    }
+  ],
+  "stack_overflow_risk": 20,
+  "stack_changes_summary": {
+    "new_functions": 19,
+    "removed_functions": 154,
+    "increased_stack": 9,
+    "decreased_stack": 80,
+    "unchanged": 15558
+  }
+}

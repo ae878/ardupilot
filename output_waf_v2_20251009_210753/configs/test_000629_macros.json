@@ -1,0 +1,14 @@
+{
+  "test_id": 629,
+  "timestamp": "2025-10-11T01:40:02.063927",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "MAX_PWMS": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "MODE_FLIP_ENABLED": 1,
+    "AP_FENCE_ENABLED": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  }
+}

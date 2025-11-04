@@ -1,0 +1,16 @@
+{
+  "test_id": 735,
+  "timestamp": "2025-10-11T06:51:05.410143",
+  "macro_changes": {
+    "MODE_GUIDED_ENABLED": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "AP_SIGNED_FIRMWARE": 0,
+    "HAL_MOUNT_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "MODE_THROW_ENABLED": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "MODE_ACRO_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 0
+  }
+}

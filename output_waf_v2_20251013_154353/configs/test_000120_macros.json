@@ -1,0 +1,9 @@
+{
+  "test_id": 120,
+  "timestamp": "2025-10-13T21:24:45.279649",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "AUTOTUNE_ENABLED": 1,
+    "MPUREG_CONFIG": 0
+  }
+}

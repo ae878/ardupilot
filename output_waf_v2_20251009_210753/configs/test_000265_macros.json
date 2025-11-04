@@ -1,0 +1,10 @@
+{
+  "test_id": 265,
+  "timestamp": "2025-10-10T08:59:05.355608",
+  "macro_changes": {
+    "HAL_USB_VENDOR_ID": 0,
+    "AP_SIM_ENABLED": 0,
+    "MAVLINK_ENABLED_STANDARD": 1,
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 0
+  }
+}

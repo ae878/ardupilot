@@ -1,0 +1,805 @@
+{
+  "test_id": 25,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:382:1:sys_prot_t sys_arch_protect()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &ThreadWrapper::run; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:179:6:void AP_Networking::Port::udp_client_loop()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:343:6:bool AP_Networking::sendfile(SocketAPM*, int)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:396:13:const char* SocketAPM::last_recv_address(char*, uint8_t, uint16_t&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:124:6:void AP_Networking::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:117:6:void AP_Networking::Port::udp_client_init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:225:6:void AP_Networking::announce_address_changes()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:993:5:int SocketAPM_recv(lua_State*)",
+        "stack_size": 32
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12157:12:int SocketAPM_set_blocking(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:309:9:ssize_t SocketAPM::sendto(const void*, size_t, uint32_t, uint16_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:320:1:void sys_sem_free(sys_sem**)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:382:6:bool AP_Button::arming_checks(size_t, char*) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::Port::udp_client_loop; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:68:6:void AP_Networking::ports_init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:411:6:bool SocketAPM::last_recv_address(uint32_t&, uint16_t&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:657:10:static uint16_t AP_ESC_Telem::merge_edt2_stress(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:1499:12:int AP_Networking_address_to_str(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:105:6:void sys_mark_tcpip_thread()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:1073:5:int SocketAPM_string_to_ipv4_addr(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:110:1:AP_Networking::AP_Networking()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.h:274:18:virtual uint32_t AP_Networking::Port::bw_in_bytes_per_second() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:1058:5:int SocketAPM_ipv4_addr_to_string(lua_State*)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:524:6:bool SocketAPM::is_multicast_address(sockaddr_in&) const",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12184:12:int SocketAPM_sendto(lua_State*)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:239:6:void AP_Button::run_aux_functions(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:130:1:AP_Button::AP_Button()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:476:6:bool AP_Networking::Port::init_buffers(uint32_t, uint32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:256:10:static uint32_t AP_Networking::convert_netmask_bitcount_to_ip(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:153:6:void AP_Networking::Port::tcp_server_init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:143:6:void AP_Button::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:234:6:void AP_Networking::Port::tcp_server_loop()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_macaddr.cpp:84:6:void AP_Networking_MAC::set_default_address_byte(uint8_t, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:81:1:SocketAPM::~SocketAPM()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:359:1:void sys_mutex_free(sys_mutex**)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:287:6:bool AP_Button::get_button_state(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.h:268:14:virtual void AP_Networking::Port::_end()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:347:6:void AP_Button::send_report() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:324:6:void AP_Networking::startup_wait() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_macaddr.cpp:77:6:void AP_Networking_MAC::get_address(uint8_t*) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:486:6:bool SocketAPM::listen(uint16_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:135:6:void AP_Networking::Port::udp_server_init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:264:9:static uint8_t AP_Networking::convert_netmask_ip_to_bitcount(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:61:1:SocketAPM::SocketAPM(bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:109:6:void sys_check_core_locking()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:278:6:void AP_Networking::Port::tcp_client_loop()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:303:1:u32_t sys_arch_sem_wait(sys_sem**, u32_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:386:6:void SocketAPM::last_recv_address(const char*&, uint16_t&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:392:6:void AP_Networking::sendfile_check()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:248:6:bool SocketAPM::reuseaddress() const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:447:6:void AP_IOMCU::read_telem()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:472:6:void ap_networking_platform_assert(const char*, int, const char*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:501:39:virtual AP_HAL::UARTDriver::flow_control AP_Networking::Port::get_flow_control()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:91:6:void SocketAPM::make_sockaddr(const char*, uint16_t, sockaddr_in&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:283:6:bool SocketAPM::set_cloexec() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:207:6:void AP_Networking::Port::udp_server_loop()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:167:6:void AP_Networking::Port::tcp_client_init()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:447:8:virtual size_t AP_Networking::Port::_write(const uint8_t*, size_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:498:20:SocketAPM* SocketAPM::accept(uint32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:923:5:int lua_get_SocketAPM(lua_State*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:220:1:u32_t sys_arch_mbox_tryfetch(sys_mbox**, void**)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:466:6:virtual bool AP_Networking::Port::_discard_input()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:562:13:static const char* SocketAPM::inet_addr_to_str(uint32_t, char*, uint16_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_macaddr.cpp:66:1:AP_Networking_MAC::AP_Networking_MAC(const char*)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:136:1:void sys_mbox_free(sys_mbox**)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:569:10:static uint32_t SocketAPM::inet_str_to_addr(const char*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_PPP.cpp:175:6:void AP_Networking_PPP::ppp_loop()",
+        "stack_size": 1048
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:1032:5:int SocketAPM_accept(lua_State*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:389:1:void sys_arch_unprotect(sys_prot_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:371:1:u32_t sys_jiffies()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking_PPP::ppp_loop; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12118:12:int SocketAPM_pollin(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_PPP.cpp:34:10:static uint32_t AP_Networking_PPP::ppp_output_cb(ppp_pcb*, const void*, uint32_t, void*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:313:1:void sys_sem_signal(sys_sem**)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:68:1:SocketAPM::SocketAPM(bool, int)",
+        "stack_size": 32
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:784:14:SocketAPM** check_SocketAPM(lua_State*, int)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:293:1:err_t sys_sem_new(sys_sem**, u8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12222:12:int SocketAPM_bind(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:250:1:u32_t sys_arch_mbox_fetch(sys_mbox**, void**, u32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:342:9:ssize_t SocketAPM::recv(void*, size_t, uint32_t)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12132:12:int SocketAPM_pollout(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:280:6:static bool AP_Networking::convert_str_to_macaddr(const char*, uint8_t*)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:548:20:SocketAPM* SocketAPM::duplicate()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:311:10:uint32_t AP_Networking::get_netmask_active() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:107:6:bool SocketAPM::connect(const char*, uint16_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_PPP.cpp:131:6:virtual bool AP_Networking_PPP::init()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:440:6:virtual void AP_Networking::Port::_begin(uint32_t, uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:393:1:cpp)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:86:1:void* sys_thread_new(const char*, lwip_thread_fn, void*, int, int)",
+        "stack_size": 48
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:728:14:SocketAPM** new_SocketAPM(lua_State*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:532:6:void SocketAPM::close()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:118:1:err_t sys_mbox_new(sys_mbox**, int)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:459:10:virtual uint32_t AP_Networking::Port::_available()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:970:5:int SocketAPM_sendfile(lua_State*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:381:6:void AP_Networking::SendFile::close()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::sendfile_check; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.h:243:14:virtual bool AP_Networking::Port::tx_pending()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:365:1:u32_t sys_now()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:void AP_Button::timer_update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:146:1:err_t sys_mbox_trypost(sys_mbox**, void*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:431:16:AP_Networking& AP::network()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:247:6:void AP_Networking::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_address.cpp:49:1:AP_Networking_IPV4::AP_Networking_IPV4(const char*)",
+        "stack_size": 24
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12107:12:int SocketAPM_reuseaddress(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:100:6:void sys_unlock_tcpip_core()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:434:10:virtual uint32_t AP_Networking::Port::txspace()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::Port::tcp_server_loop; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_address.cpp:55:10:uint32_t AP_Networking_IPV4::get_uint32() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:465:13:static const char* AP_Networking::address_to_str(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:183:1:void sys_mbox_post(sys_mbox**, void*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:351:1:void sys_mutex_unlock(sys_mutex**)",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12170:12:int SocketAPM_listen(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:851:17:AP_Networking* check_AP_Networking(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:195:6:bool SocketAPM::connect_timeout(const char*, uint16_t, uint32_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_PPP.cpp:92:6:static void AP_Networking_PPP::ppp_status_callback(ppp_pcb_s*, int, void*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:95:6:void sys_lock_tcpip_core()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:343:1:void sys_mutex_lock(sys_mutex**)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Button::timer_update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:463:6:bool SocketAPM::pollout(uint32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.h:240:14:virtual bool AP_Networking::Port::is_initialized()",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12565:12:int SocketAPM_index(lua_State*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:645:10:static uint16_t AP_ESC_Telem::merge_edt2_status(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:1535:12:int AP_Networking_get_ip_active(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12206:12:int SocketAPM_send(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:329:9:ssize_t SocketAPM::sendto(const void*, size_t, const char*, uint16_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:260:6:bool SocketAPM::set_blocking(bool) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:364:6:void AP_Button::setup_pins()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::Port::udp_server_loop; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:229:6:bool SocketAPM::bind(const char*, uint16_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:440:5:)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:305:10:uint32_t AP_Networking::get_ip_active() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:403:12:AP_Button& AP::button()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_address.cpp:65:6:void AP_Networking_IPV4::set_default_uint32(uint32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:1513:12:int AP_Networking_get_gateway_active(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:331:1:err_t sys_mutex_new(sys_mutex**)",
+        "stack_size": 16
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12238:12:int SocketAPM_connect(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:453:9:virtual ssize_t AP_Networking::Port::_read(uint8_t*, uint16_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:377:1:void sys_init()",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:12146:12:int SocketAPM_is_connected(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:438:6:bool SocketAPM::pollin(uint32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Networking::Port::tcp_client_loop; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:99:6:void AP_Networking::Port::thread_create(AP_HAL::MemberProc)",
+        "stack_size": 48
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:7625:12:int AP_Networking_index(lua_State*)",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:1524:12:int AP_Networking_get_netmask_active(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.cpp:316:10:uint32_t AP_Networking::get_gateway_active() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:421:6:void AP_IOMCU::read_erpm()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:298:9:ssize_t SocketAPM::send(const void*, size_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_Backend.h:22:18:virtual void AP_Networking_Backend::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking.h:269:14:virtual void AP_Networking::Port::_flush()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_address.cpp:73:13:const char* AP_Networking_IPV4::get_str()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_bindings.cpp:946:5:int SocketAPM_close(lua_State*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Networking/AP_Networking_port.cpp:319:6:bool AP_Networking::Port::send_receive()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Networking/lwip_hal/arch/sys_arch.cpp:39:1:unsigned int lwip_port_rand()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:304:9:uint8_t AP_Button::get_mask()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/Socket.cpp:426:6:void SocketAPM::set_broadcast() const",
+        "stack_size": 24
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:173:7:virtual float ChibiOS::AnalogSource::voltage_average()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:295:9:static uint8_t ChibiOS::AnalogIn::get_analog_pin(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:315:7:static float ChibiOS::AnalogIn::get_pin_scaling(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:339:6:static void ChibiOS::AnalogIn::adccallback(ADCDriver*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:664:6:void ChibiOS::AnalogIn::timer_tick_adc(uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:196:6:virtual bool ChibiOS::AnalogSource::set_pin(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:182:7:virtual float ChibiOS::AnalogSource::voltage_average_ratiometric()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:431:6:virtual void ChibiOS::AnalogIn::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:410:9:static uint8_t ChibiOS::AnalogIn::get_num_grp_channels(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:191:7:virtual float ChibiOS::AnalogSource::voltage_latest()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:79:14:virtual uint16_t ChibiOS::AnalogIn::power_status_flags()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:768:23:virtual AP_HAL::AnalogSource* ChibiOS::AnalogIn::channel(int16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:77:11:virtual float ChibiOS::AnalogIn::board_voltage()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:80:14:virtual uint16_t ChibiOS::AnalogIn::accumulated_power_status_flags() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:391:9:static uint8_t ChibiOS::AnalogIn::get_adc_index(ADCDriver*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:118:7:virtual float ChibiOS::AnalogSource::read_average()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:142:7:float ChibiOS::AnalogSource::_pin_scaler()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:134:7:virtual float ChibiOS::AnalogSource::read_latest()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:710:6:void ChibiOS::AnalogIn::_timer_tick()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:78:11:virtual float ChibiOS::AnalogIn::servorail_voltage()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:249:6:void ChibiOS::AnalogSource::_add_value(float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:785:6:void ChibiOS::AnalogIn::update_power_flags()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:625:6:void ChibiOS::AnalogIn::read_adc(uint8_t, uint32_t*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:274:9:static uint8_t ChibiOS::AnalogIn::get_pin_channel(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:447:6:void ChibiOS::AnalogIn::setup_adc(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:112:1:ChibiOS::AnalogSource::AnalogSource(int16_t)",
+        "stack_size": 8
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:669:6:void AP_ESC_Telem::update()",
+        "baseline": 144,
+        "current": 160,
+        "diff": 16
+      }
+    ],
+    "decreased": [],
+    "unchanged": 15858
+  },
+  "total_functions_analyzed": 16035
+}

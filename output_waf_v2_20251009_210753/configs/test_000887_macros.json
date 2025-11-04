@@ -1,0 +1,11 @@
+{
+  "test_id": 887,
+  "timestamp": "2025-10-11T14:17:26.682613",
+  "macro_changes": {
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "HAL_GENERATOR_ENABLED": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "AP_FEATURE_SBUS_OUT": 0
+  }
+}

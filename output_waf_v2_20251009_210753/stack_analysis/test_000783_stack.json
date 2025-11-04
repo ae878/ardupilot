@@ -1,0 +1,101 @@
+{
+  "test_id": 783,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [],
+    "removed_functions": [
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:32:6:virtual bool AP_ExternalControl_Copter::set_global_position(const Location&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:41:6:bool AP_ExternalControl_Copter::ready_for_external_control()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.h:32:18:virtual bool AP_ExternalControl::set_global_position(const Location&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:13:6:virtual bool AP_ExternalControl::disarm(AP_Arming::Method, bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.h:25:18:virtual bool AP_ExternalControl::set_linear_velocity_and_yaw_rate(const Vector3f&, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:27:21:AP_ExternalControl* AP::externalcontrol()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:18:1:AP_ExternalControl::AP_ExternalControl()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:15:6:virtual bool AP_ExternalControl_Copter::set_linear_velocity_and_yaw_rate(const Vector3f&, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:8:6:virtual bool AP_ExternalControl::arm(AP_Arming::Method, bool)",
+        "stack_size": 16
+      }
+    ],
+    "increased": [],
+    "decreased": [],
+    "unchanged": 15893
+  },
+  "total_functions_analyzed": 15893
+}

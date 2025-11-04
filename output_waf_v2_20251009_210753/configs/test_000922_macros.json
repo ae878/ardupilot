@@ -1,0 +1,9 @@
+{
+  "test_id": 922,
+  "timestamp": "2025-10-11T15:55:31.055654",
+  "macro_changes": {
+    "MODE_RTL_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 1
+  }
+}

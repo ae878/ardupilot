@@ -1,0 +1,9 @@
+{
+  "test_id": 549,
+  "timestamp": "2025-10-10T22:02:23.194580",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_UART_IOMCU_IDX": 0
+  }
+}

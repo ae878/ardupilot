@@ -1,0 +1,9 @@
+{
+  "test_id": 865,
+  "timestamp": "2025-10-11T13:14:27.261491",
+  "macro_changes": {
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "KDECAN_MAX_NUM_ESCS": 32
+  }
+}

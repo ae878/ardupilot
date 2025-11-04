@@ -1,0 +1,9 @@
+{
+  "test_id": 539,
+  "timestamp": "2025-10-10T21:38:12.021247",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_LOGGING_ENABLED": 0
+  }
+}

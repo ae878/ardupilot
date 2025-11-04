@@ -1,0 +1,9 @@
+{
+  "test_id": 130,
+  "timestamp": "2025-10-13T21:57:49.492204",
+  "macro_changes": {
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "HAL_HEATER_GPIO_ON": 1,
+    "TELEM_TIME_SLOT_MAX": 1
+  }
+}

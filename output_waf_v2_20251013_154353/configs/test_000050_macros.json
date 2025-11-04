@@ -1,0 +1,14 @@
+{
+  "test_id": 50,
+  "timestamp": "2025-10-13T18:04:07.548546",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "HAL_GCS_ENABLED": 1,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_DISABLE_ADC_DRIVER": 0,
+    "AP_AIRSPEED_ENABLED": 0,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "MPUREG_CONFIG_EXT_SYNC_SHIFT": 1
+  }
+}

@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #90 */
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 16
+
+/* ConfigFuzz: HAL_DEFAULT_INS_FAST_SAMPLE */
+#ifdef HAL_DEFAULT_INS_FAST_SAMPLE
+#undef HAL_DEFAULT_INS_FAST_SAMPLE
+#endif
+#define HAL_DEFAULT_INS_FAST_SAMPLE 1
+
+/* ConfigFuzz: HAL_HAVE_IMU_HEATER */
+#ifdef HAL_HAVE_IMU_HEATER
+#undef HAL_HAVE_IMU_HEATER
+#endif
+#define HAL_HAVE_IMU_HEATER 0
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ICAROUS */
+#ifdef MAVLINK_ENABLED_ICAROUS
+#undef MAVLINK_ENABLED_ICAROUS
+#endif
+#define MAVLINK_ENABLED_ICAROUS 0
+
+#endif /* _AP_CONFIG_H_ */

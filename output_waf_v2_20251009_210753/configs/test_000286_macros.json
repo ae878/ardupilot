@@ -1,0 +1,12 @@
+{
+  "test_id": 286,
+  "timestamp": "2025-10-10T10:00:38.181070",
+  "macro_changes": {
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "MODE_LOITER_ENABLED": 1,
+    "MAVLINK_ENABLED_ICAROUS": 1,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "MAX_PWMS": 16,
+    "LEDDARONE_DETECTIONS_MAX": 4
+  }
+}

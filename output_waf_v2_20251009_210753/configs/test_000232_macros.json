@@ -1,0 +1,9 @@
+{
+  "test_id": 232,
+  "timestamp": "2025-10-10T07:25:25.970483",
+  "macro_changes": {
+    "MODE_FLIP_ENABLED": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "AP_SIGNED_FIRMWARE": 1
+  }
+}

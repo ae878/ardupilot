@@ -1,0 +1,16 @@
+{
+  "test_id": 363,
+  "timestamp": "2025-10-10T13:20:17.823201",
+  "macro_changes": {
+    "HAL_INS_NONE": 0,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "NOOPLOOP_DIST_MAX_MM": 2,
+    "HAL_NUM_CAN_IFACES": 0,
+    "HAL_BARO_NONE": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_RED": 0,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "HAL_WITH_DRONECAN": 0
+  }
+}

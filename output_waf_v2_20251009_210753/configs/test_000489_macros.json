@@ -1,0 +1,10 @@
+{
+  "test_id": 489,
+  "timestamp": "2025-10-10T19:07:36.101279",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "HAL_BATT_CURR_PIN": 0
+  }
+}

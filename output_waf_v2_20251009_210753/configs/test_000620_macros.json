@@ -1,0 +1,12 @@
+{
+  "test_id": 620,
+  "timestamp": "2025-10-11T01:15:35.655328",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "MODE_THROW_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "MAVLINK_ENABLED_ICAROUS": 0,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0
+  }
+}

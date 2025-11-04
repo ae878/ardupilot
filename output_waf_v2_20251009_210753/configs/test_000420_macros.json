@@ -1,0 +1,11 @@
+{
+  "test_id": 420,
+  "timestamp": "2025-10-10T16:02:57.174393",
+  "macro_changes": {
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "AP_STATS_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MAVLINK_ENABLED_COMMON": 0,
+    "MAVLINK_ENABLED_AVSSUAS": 1
+  }
+}

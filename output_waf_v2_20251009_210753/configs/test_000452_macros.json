@@ -1,0 +1,15 @@
+{
+  "test_id": 452,
+  "timestamp": "2025-10-10T17:31:57.262207",
+  "macro_changes": {
+    "FS_THR_DISABLED": 0,
+    "HAL_HNF_MAX_FILTERS": 32,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "MODE_THROW_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "FLOW_CONTROL_ENABLED": 1,
+    "HAL_BARO_NONE": 0,
+    "HAL_HAVE_IMU_HEATER": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 35,
+  "timestamp": "2025-10-13T17:25:52.271128",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 1,
+    "HAL_WITH_UAVCAN": 0,
+    "MPUREG_CONFIG_FIFO_MODE_STOP": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": 419,
+  "timestamp": "2025-10-10T15:59:48.916248",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1
+  },
+  "build_success": false,
+  "build_time": 143.87455940246582,
+  "build_result": false,
+  "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+}

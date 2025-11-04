@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #553 */
+
+/* ConfigFuzz: FS_THR_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_THR_ENABLED_AUTO_RTL_OR_RTL 0
+
+/* ConfigFuzz: MODE_SMARTRTL_ENABLED */
+#ifdef MODE_SMARTRTL_ENABLED
+#undef MODE_SMARTRTL_ENABLED
+#endif
+#define MODE_SMARTRTL_ENABLED 0
+
+/* ConfigFuzz: AP_RCPROTOCOL_EMLID_RCIO_ENABLED */
+#ifdef AP_RCPROTOCOL_EMLID_RCIO_ENABLED
+#undef AP_RCPROTOCOL_EMLID_RCIO_ENABLED
+#endif
+#define AP_RCPROTOCOL_EMLID_RCIO_ENABLED 1
+
+/* ConfigFuzz: MODE_AUTOROTATE_ENABLED */
+#ifdef MODE_AUTOROTATE_ENABLED
+#undef MODE_AUTOROTATE_ENABLED
+#endif
+#define MODE_AUTOROTATE_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_SPI_RAMTRON */
+#ifdef HAL_WITH_SPI_RAMTRON
+#undef HAL_WITH_SPI_RAMTRON
+#endif
+#define HAL_WITH_SPI_RAMTRON 1
+
+/* ConfigFuzz: MAX_PWMS */
+#ifdef MAX_PWMS
+#undef MAX_PWMS
+#endif
+#define MAX_PWMS 32
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 4
+
+#endif /* _AP_CONFIG_H_ */

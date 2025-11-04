@@ -1,0 +1,9 @@
+{
+  "test_id": 585,
+  "timestamp": "2025-10-10T23:39:39.136590",
+  "macro_changes": {
+    "HAL_GPIO_ALT": 1,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAL_WITH_MCU_MONITORING": 1
+  }
+}

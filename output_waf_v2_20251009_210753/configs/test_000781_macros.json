@@ -1,0 +1,10 @@
+{
+  "test_id": 781,
+  "timestamp": "2025-10-11T09:09:04.029982",
+  "macro_changes": {
+    "AP_RELAY_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "USER_PARAMS_ENABLED": 0
+  }
+}

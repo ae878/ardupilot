@@ -1,0 +1,9 @@
+{
+  "test_id": 774,
+  "timestamp": "2025-10-11T08:46:40.779652",
+  "macro_changes": {
+    "HAL_WITH_RAMTRON": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "test_id": 869,
+  "timestamp": "2025-10-11T13:25:33.159573",
+  "macro_changes": {
+    "HAL_UART_IOMCU_IDX": 1,
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0
+  }
+}

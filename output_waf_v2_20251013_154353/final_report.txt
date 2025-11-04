@@ -1,0 +1,18 @@
+ConfigFuzz + Waf Integration v2 Report
+=====================================
+
+Duration: 8 hours 44 minutes 26 seconds
+Total tests: 139
+Success rate: 67.6%
+Average rate: 15.9 tests/hour
+
+Successful builds: 94
+Failed builds: 44
+Cache hits: 0 (0.0%)
+
+Stack Analysis:
+  Threshold: 512 bytes
+  Total stack changes: 378
+  Max increase: 48 bytes
+  Max decrease: 968 bytes
+  Functions affected: 181

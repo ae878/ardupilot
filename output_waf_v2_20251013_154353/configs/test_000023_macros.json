@@ -1,0 +1,13 @@
+{
+  "test_id": 23,
+  "timestamp": "2025-10-13T16:47:29.169641",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "HAL_GPIO_ALT": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "AUTOTUNE_ENABLED": 1
+  }
+}

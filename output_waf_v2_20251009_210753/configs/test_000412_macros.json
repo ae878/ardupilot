@@ -1,0 +1,12 @@
+{
+  "test_id": 412,
+  "timestamp": "2025-10-10T15:38:59.583510",
+  "macro_changes": {
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 4,
+    "MAVLINK_ENABLED_ALL": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "HAL_GPIO_OUTPUT": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0
+  }
+}

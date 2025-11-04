@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #106 */
+
+/* ConfigFuzz: AP_CRASHDUMP_ENABLED */
+#ifdef AP_CRASHDUMP_ENABLED
+#undef AP_CRASHDUMP_ENABLED
+#endif
+#define AP_CRASHDUMP_ENABLED 1
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 0
+
+/* ConfigFuzz: MODE_AUTO_ENABLED */
+#ifdef MODE_AUTO_ENABLED
+#undef MODE_AUTO_ENABLED
+#endif
+#define MODE_AUTO_ENABLED 0
+
+/* ConfigFuzz: HAL_SOARING_ENABLED */
+#ifdef HAL_SOARING_ENABLED
+#undef HAL_SOARING_ENABLED
+#endif
+#define HAL_SOARING_ENABLED 0
+
+/* ConfigFuzz: CONFIG_LWIP_DHCP_RESTORE_LAST_IP */
+#ifdef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#undef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#endif
+#define CONFIG_LWIP_DHCP_RESTORE_LAST_IP 0
+
+/* ConfigFuzz: AP_PERIPH_BATTERY_ENABLED */
+#ifdef AP_PERIPH_BATTERY_ENABLED
+#undef AP_PERIPH_BATTERY_ENABLED
+#endif
+#define AP_PERIPH_BATTERY_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC 1
+
+/* ConfigFuzz: AP_STATS_ENABLED */
+#ifdef AP_STATS_ENABLED
+#undef AP_STATS_ENABLED
+#endif
+#define AP_STATS_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

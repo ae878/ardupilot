@@ -1,0 +1,15 @@
+{
+  "test_id": 287,
+  "timestamp": "2025-10-10T10:03:20.760271",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 0,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "HAL_UART_IOMCU_IDX": 1,
+    "HAL_NUM_CAN_IFACES": 1,
+    "HAL_INS_NONE": 0,
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "USER_PARAMS_ENABLED": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 98,
+  "timestamp": "2025-10-13T20:25:32.134603",
+  "macro_changes": {
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "HAL_PERIPH_ENABLE_NOTIFY": 1,
+    "AP_RC_CHANNEL_ENABLED": 1
+  }
+}

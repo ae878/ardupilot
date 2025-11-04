@@ -1,0 +1,11 @@
+{
+  "test_id": 319,
+  "timestamp": "2025-10-10T11:21:13.531573",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "TAP_ESC_MAX_MOTOR_NUM": 2,
+    "AC_PRECLAND_ENABLED": 0,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  }
+}

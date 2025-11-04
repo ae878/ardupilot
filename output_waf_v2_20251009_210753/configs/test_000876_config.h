@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #876 */
+
+/* ConfigFuzz: MAVLINK_ENABLED_ARDUPILOTMEGA */
+#ifdef MAVLINK_ENABLED_ARDUPILOTMEGA
+#undef MAVLINK_ENABLED_ARDUPILOTMEGA
+#endif
+#define MAVLINK_ENABLED_ARDUPILOTMEGA 1
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 0
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 1
+
+/* ConfigFuzz: HAL_BARO_NONE */
+#ifdef HAL_BARO_NONE
+#undef HAL_BARO_NONE
+#endif
+#define HAL_BARO_NONE 0
+
+/* ConfigFuzz: AUTOTUNE_ENABLED */
+#ifdef AUTOTUNE_ENABLED
+#undef AUTOTUNE_ENABLED
+#endif
+#define AUTOTUNE_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 1
+
+/* ConfigFuzz: AP_CAMERA_ENABLED */
+#ifdef AP_CAMERA_ENABLED
+#undef AP_CAMERA_ENABLED
+#endif
+#define AP_CAMERA_ENABLED 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_UALBERTA */
+#ifdef MAVLINK_ENABLED_UALBERTA
+#undef MAVLINK_ENABLED_UALBERTA
+#endif
+#define MAVLINK_ENABLED_UALBERTA 0
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,14 @@
+{
+  "test_id": 38,
+  "timestamp": "2025-10-13T17:32:34.728119",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "MAX_PWMS": 8,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "USER_PARAMS_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "HAL_GCS_ENABLED": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0
+  }
+}

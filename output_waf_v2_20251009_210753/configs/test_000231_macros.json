@@ -1,0 +1,11 @@
+{
+  "test_id": 231,
+  "timestamp": "2025-10-10T07:22:19.939943",
+  "macro_changes": {
+    "LEDDARONE_DETECTIONS_MAX": 16,
+    "HAL_INS_RATE_LOOP": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1
+  }
+}

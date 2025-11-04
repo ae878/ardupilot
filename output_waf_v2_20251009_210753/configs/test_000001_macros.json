@@ -1,0 +1,11 @@
+{
+  "test_id": 1,
+  "timestamp": "2025-10-09T21:11:00.345111",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0
+  }
+}

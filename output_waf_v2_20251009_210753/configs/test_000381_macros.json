@@ -1,0 +1,13 @@
+{
+  "test_id": 381,
+  "timestamp": "2025-10-10T14:09:11.837349",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "MODE_LOITER_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 1,
+    "SUMD_MAX_CHANNELS": 2,
+    "HAL_RALLY_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 1
+  }
+}

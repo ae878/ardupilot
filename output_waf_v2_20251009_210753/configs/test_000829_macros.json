@@ -1,0 +1,13 @@
+{
+  "test_id": 829,
+  "timestamp": "2025-10-11T11:29:17.450842",
+  "macro_changes": {
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_GPIO_INPUT": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "AP_MISSION_ENABLED": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_HNF_MAX_FILTERS": 1
+  }
+}

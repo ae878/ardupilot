@@ -1,0 +1,9 @@
+{
+  "test_id": 717,
+  "timestamp": "2025-10-11T06:06:29.549347",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_PIN": 1,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1
+  }
+}

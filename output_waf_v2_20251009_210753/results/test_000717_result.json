@@ -1,0 +1,13 @@
+{
+  "test_id": 717,
+  "timestamp": "2025-10-11T06:06:29.549434",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_PIN": 1,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1
+  },
+  "build_success": false,
+  "build_time": 136.04387950897217,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

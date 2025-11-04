@@ -1,0 +1,13 @@
+{
+  "test_id": 128,
+  "timestamp": "2025-10-10T02:46:30.172388",
+  "macro_changes": {
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "HAL_GPIO_LED_ON": 0,
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "HAL_INS_RATE_LOOP": 0,
+    "MODE_GUIDED_ENABLED": 1
+  }
+}

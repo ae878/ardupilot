@@ -1,0 +1,11 @@
+{
+  "test_id": 61,
+  "timestamp": "2025-10-09T23:51:23.571930",
+  "macro_changes": {
+    "HAL_BARO_NONE": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "USER_PARAMS_ENABLED": 0
+  }
+}

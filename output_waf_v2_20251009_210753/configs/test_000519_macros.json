@@ -1,0 +1,11 @@
+{
+  "test_id": 519,
+  "timestamp": "2025-10-10T20:39:31.633452",
+  "macro_changes": {
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "MODE_LOITER_ENABLED": 0,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1
+  }
+}

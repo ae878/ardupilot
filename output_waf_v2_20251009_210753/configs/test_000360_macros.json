@@ -1,0 +1,12 @@
+{
+  "test_id": 360,
+  "timestamp": "2025-10-10T13:13:58.638418",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 1,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "FS_THR_ENABLED_ALWAYS_RTL": 1,
+    "FS_THR_DISABLED": 1,
+    "AP_RELAY_ENABLED": 1
+  }
+}

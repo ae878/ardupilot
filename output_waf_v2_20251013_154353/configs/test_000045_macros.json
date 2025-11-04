@@ -1,0 +1,11 @@
+{
+  "test_id": 45,
+  "timestamp": "2025-10-13T17:51:30.198454",
+  "macro_changes": {
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "HAL_RALLY_ENABLED": 1,
+    "HAL_INS_CONVERGANCE_MS": 0,
+    "HAL_USE_SDMMC": 1,
+    "AP_CAMERA_ENABLED": 0
+  }
+}

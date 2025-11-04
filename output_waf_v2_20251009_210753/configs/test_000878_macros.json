@@ -1,0 +1,9 @@
+{
+  "test_id": 878,
+  "timestamp": "2025-10-11T13:53:28.624087",
+  "macro_changes": {
+    "AC_PRECLAND_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 32
+  }
+}

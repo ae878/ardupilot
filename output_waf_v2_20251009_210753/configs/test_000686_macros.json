@@ -1,0 +1,16 @@
+{
+  "test_id": 686,
+  "timestamp": "2025-10-11T04:30:10.250474",
+  "macro_changes": {
+    "HAL_USB_VENDOR_ID": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 32,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "AP_OPTICALFLOW_ENABLED": 0
+  }
+}

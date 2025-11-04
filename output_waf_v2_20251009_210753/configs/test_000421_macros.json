@@ -1,0 +1,11 @@
+{
+  "test_id": 421,
+  "timestamp": "2025-10-10T16:06:04.785686",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "RANGEFINDER_MAX_INSTANCES": 8,
+    "SUMD_MAX_CHANNELS": 8,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1
+  }
+}

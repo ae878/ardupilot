@@ -1,0 +1,10 @@
+{
+  "test_id": 438,
+  "timestamp": "2025-10-10T16:48:18.099728",
+  "macro_changes": {
+    "HAL_USE_SDMMC": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1
+  }
+}

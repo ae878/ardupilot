@@ -1,0 +1,13 @@
+{
+  "test_id": 900,
+  "timestamp": "2025-10-11T14:50:40.920655",
+  "macro_changes": {
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAL_GENERATOR_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "MODE_THROW_ENABLED": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1
+  }
+}

@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #91 */
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_PERMUTATION */
+#ifdef BENCH_DEFINE_MAP_PERMUTATION
+#undef BENCH_DEFINE_MAP_PERMUTATION
+#endif
+#define BENCH_DEFINE_MAP_PERMUTATION 1
+
+/* ConfigFuzz: AP_ICENGINE_ENABLED */
+#ifdef AP_ICENGINE_ENABLED
+#undef AP_ICENGINE_ENABLED
+#endif
+#define AP_ICENGINE_ENABLED 1
+
+/* ConfigFuzz: HAL_USB_VENDOR_ID */
+#ifdef HAL_USB_VENDOR_ID
+#undef HAL_USB_VENDOR_ID
+#endif
+#define HAL_USB_VENDOR_ID 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_LAND */
+#ifdef FS_GCS_ENABLED_ALWAYS_LAND
+#undef FS_GCS_ENABLED_ALWAYS_LAND
+#endif
+#define FS_GCS_ENABLED_ALWAYS_LAND 0
+
+/* ConfigFuzz: MPUREG_CONFIG_FIFO_MODE_STOP */
+#ifdef MPUREG_CONFIG_FIFO_MODE_STOP
+#undef MPUREG_CONFIG_FIFO_MODE_STOP
+#endif
+#define MPUREG_CONFIG_FIFO_MODE_STOP 1
+
+/* ConfigFuzz: HAL_SPRAYER_ENABLED */
+#ifdef HAL_SPRAYER_ENABLED
+#undef HAL_SPRAYER_ENABLED
+#endif
+#define HAL_SPRAYER_ENABLED 0
+
+/* ConfigFuzz: HAL_USE_HW_RNG */
+#ifdef HAL_USE_HW_RNG
+#undef HAL_USE_HW_RNG
+#endif
+#define HAL_USE_HW_RNG 1
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 0
+
+#endif /* _AP_CONFIG_H_ */

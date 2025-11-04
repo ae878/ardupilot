@@ -1,0 +1,15 @@
+{
+  "test_id": 62,
+  "timestamp": "2025-10-13T18:36:30.461800",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "MODE_AUTO_ENABLED": 1,
+    "AP_HEATER_IMU_INSTANCE": 0,
+    "MODE_RTL_ENABLED": 0,
+    "AP_RADIO_ENABLED": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "HAL_NO_ROMFS_SUPPORT": 1,
+    "AP_FENCE_ENABLED": 0
+  }
+}

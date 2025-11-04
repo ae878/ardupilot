@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 42,
+    "timestamp": "2025-10-13T17:42:36.625695",
+    "macro_changes": {
+      "AP_FEATURE_RTSCTS": 0,
+      "HAL_NO_ROMFS_SUPPORT": 1,
+      "AP_SIM_ENABLED": 1,
+      "HAL_UART_IOMCU_IDX": 1,
+      "AP_TEMPCALIBRATION_ENABLED": 1,
+      "HAL_PERIPH_ENABLE_RC_OUT": 1,
+      "AP_RC_CHANNEL_ENABLED": 0,
+      "HAL_INS_NONE": 1
+    },
+    "build_success": false,
+    "build_time": 10.495530366897583,
+    "build_result": false,
+    "error": "../../libraries/AC_AutoTune/AC_AutoTune.h:65:44: error: invalid use of incomplete type 'class RC_Channel'"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "test_id": 931,
+  "timestamp": "2025-10-11T16:21:24.191399",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 0,
+    "MODE_RTL_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "AC_PRECLAND_ENABLED": 0,
+    "HAL_RCOUT_RGBLED_RED": 0
+  }
+}

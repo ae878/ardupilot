@@ -1,0 +1,12 @@
+{
+  "test_id": 44,
+  "timestamp": "2025-10-13T17:49:10.879577",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "HAL_INS_VRBRAIN": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 1
+  }
+}

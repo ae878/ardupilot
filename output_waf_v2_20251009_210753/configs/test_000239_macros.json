@@ -1,0 +1,10 @@
+{
+  "test_id": 239,
+  "timestamp": "2025-10-10T07:43:41.141401",
+  "macro_changes": {
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "NOOPLOOP_DIST_MAX_MM": 16,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

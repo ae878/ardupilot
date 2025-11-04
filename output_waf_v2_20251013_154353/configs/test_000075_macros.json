@@ -1,0 +1,13 @@
+{
+  "test_id": 75,
+  "timestamp": "2025-10-13T19:14:38.062203",
+  "macro_changes": {
+    "AC_PRECLAND_ENABLED": 1,
+    "FSYNC_CONFIG_EXT_SYNC_GY": 0,
+    "AP_PERIPH_RANGEFINDER_ENABLED": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "MODE_LOITER_ENABLED": 0,
+    "MODE_SPORT_ENABLED": 0,
+    "AP_HEATER_IMU_INSTANCE": 0
+  }
+}

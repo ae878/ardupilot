@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #22 */
+
+/* ConfigFuzz: AP_NETWORKING_NUM_PORTS */
+#ifdef AP_NETWORKING_NUM_PORTS
+#undef AP_NETWORKING_NUM_PORTS
+#endif
+#define AP_NETWORKING_NUM_PORTS 1
+
+/* ConfigFuzz: HAL_BARO_NONE */
+#ifdef HAL_BARO_NONE
+#undef HAL_BARO_NONE
+#endif
+#define HAL_BARO_NONE 0
+
+/* ConfigFuzz: CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY */
+#ifdef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#undef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#endif
+#define CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY 0
+
+/* ConfigFuzz: AP_RADIO_ENABLED */
+#ifdef AP_RADIO_ENABLED
+#undef AP_RADIO_ENABLED
+#endif
+#define AP_RADIO_ENABLED 1
+
+/* ConfigFuzz: HAL_SOLO_GIMBAL_ENABLED */
+#ifdef HAL_SOLO_GIMBAL_ENABLED
+#undef HAL_SOLO_GIMBAL_ENABLED
+#endif
+#define HAL_SOLO_GIMBAL_ENABLED 0
+
+/* ConfigFuzz: HAL_MOUNT_ENABLED */
+#ifdef HAL_MOUNT_ENABLED
+#undef HAL_MOUNT_ENABLED
+#endif
+#define HAL_MOUNT_ENABLED 0
+
+/* ConfigFuzz: MPUREG_GYRO_CONFIG */
+#ifdef MPUREG_GYRO_CONFIG
+#undef MPUREG_GYRO_CONFIG
+#endif
+#define MPUREG_GYRO_CONFIG 0
+
+/* ConfigFuzz: HAL_NO_FLASH_SUPPORT */
+#ifdef HAL_NO_FLASH_SUPPORT
+#undef HAL_NO_FLASH_SUPPORT
+#endif
+#define HAL_NO_FLASH_SUPPORT 1
+
+#endif /* _AP_CONFIG_H_ */

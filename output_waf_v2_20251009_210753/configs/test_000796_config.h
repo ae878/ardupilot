@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #796 */
+
+/* ConfigFuzz: AP_SOCKET_NATIVE_ENABLED */
+#ifdef AP_SOCKET_NATIVE_ENABLED
+#undef AP_SOCKET_NATIVE_ENABLED
+#endif
+#define AP_SOCKET_NATIVE_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC 0
+
+/* ConfigFuzz: HAL_HAVE_IMU_HEATER */
+#ifdef HAL_HAVE_IMU_HEATER
+#undef HAL_HAVE_IMU_HEATER
+#endif
+#define HAL_HAVE_IMU_HEATER 0
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 0
+
+/* ConfigFuzz: TELEM_TIME_SLOT_MAX */
+#ifdef TELEM_TIME_SLOT_MAX
+#undef TELEM_TIME_SLOT_MAX
+#endif
+#define TELEM_TIME_SLOT_MAX 1
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 0
+
+/* ConfigFuzz: HAL_SPRAYER_ENABLED */
+#ifdef HAL_SPRAYER_ENABLED
+#undef HAL_SPRAYER_ENABLED
+#endif
+#define HAL_SPRAYER_ENABLED 0
+
+/* ConfigFuzz: AP_COPTER_AHRS_AUTO_TRIM_ENABLED */
+#ifdef AP_COPTER_AHRS_AUTO_TRIM_ENABLED
+#undef AP_COPTER_AHRS_AUTO_TRIM_ENABLED
+#endif
+#define AP_COPTER_AHRS_AUTO_TRIM_ENABLED 0
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED */
+#ifdef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#undef CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED
+#endif
+#define CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED 0
+
+#endif /* _AP_CONFIG_H_ */

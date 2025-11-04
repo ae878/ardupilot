@@ -1,0 +1,10 @@
+{
+  "test_id": 345,
+  "timestamp": "2025-10-10T12:31:12.947204",
+  "macro_changes": {
+    "HAL_FLASH_PROTECTION": 1,
+    "HAL_GPIO_ALT": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0
+  }
+}

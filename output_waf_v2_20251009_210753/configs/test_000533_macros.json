@@ -1,0 +1,15 @@
+{
+  "test_id": 533,
+  "timestamp": "2025-10-10T21:23:53.002850",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "HAL_USE_FATFS": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "HAL_USE_SDMMC": 1,
+    "AP_FEATURE_RTSCTS": 1,
+    "HAL_RCOUT_RGBLED_RED": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_WITH_MCU_MONITORING": 0
+  }
+}

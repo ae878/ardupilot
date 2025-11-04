@@ -1,0 +1,9 @@
+{
+  "test_id": 550,
+  "timestamp": "2025-10-10T22:05:36.487896",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "AP_FENCE_ENABLED": 0,
+    "HAL_NUM_CAN_IFACES": 0
+  }
+}

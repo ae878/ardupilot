@@ -1,0 +1,15 @@
+{
+  "test_id": 54,
+  "timestamp": "2025-10-09T23:32:32.405908",
+  "macro_changes": {
+    "HAL_INS_NONE": 0,
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MAX_PWMS": 16,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1,
+    "METADATA_MAX_i": 2,
+    "HAL_USE_SDMMC": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

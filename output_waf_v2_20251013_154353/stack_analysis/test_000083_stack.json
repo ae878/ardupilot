@@ -1,0 +1,218 @@
+{
+  "test_id": 83,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:382:6:bool AP_Button::arming_checks(size_t, char*) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:239:6:void AP_Button::run_aux_functions(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:130:1:AP_Button::AP_Button()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:143:6:void AP_Button::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:287:6:bool AP_Button::get_button_state(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:347:6:void AP_Button::send_report() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:void AP_Button::timer_update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Button::timer_update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:364:6:void AP_Button::setup_pins()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:403:12:AP_Button& AP::button()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:304:9:uint8_t AP_Button::get_mask()",
+        "stack_size": 32
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:173:7:virtual float ChibiOS::AnalogSource::voltage_average()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:295:9:static uint8_t ChibiOS::AnalogIn::get_analog_pin(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:315:7:static float ChibiOS::AnalogIn::get_pin_scaling(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:339:6:static void ChibiOS::AnalogIn::adccallback(ADCDriver*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:664:6:void ChibiOS::AnalogIn::timer_tick_adc(uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:196:6:virtual bool ChibiOS::AnalogSource::set_pin(uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:182:7:virtual float ChibiOS::AnalogSource::voltage_average_ratiometric()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:431:6:virtual void ChibiOS::AnalogIn::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:410:9:static uint8_t ChibiOS::AnalogIn::get_num_grp_channels(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:191:7:virtual float ChibiOS::AnalogSource::voltage_latest()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:79:14:virtual uint16_t ChibiOS::AnalogIn::power_status_flags()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:768:23:virtual AP_HAL::AnalogSource* ChibiOS::AnalogIn::channel(int16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:77:11:virtual float ChibiOS::AnalogIn::board_voltage()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:80:14:virtual uint16_t ChibiOS::AnalogIn::accumulated_power_status_flags() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:391:9:static uint8_t ChibiOS::AnalogIn::get_adc_index(ADCDriver*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:118:7:virtual float ChibiOS::AnalogSource::read_average()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:142:7:float ChibiOS::AnalogSource::_pin_scaler()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:134:7:virtual float ChibiOS::AnalogSource::read_latest()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:710:6:void ChibiOS::AnalogIn::_timer_tick()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.h:78:11:virtual float ChibiOS::AnalogIn::servorail_voltage()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:249:6:void ChibiOS::AnalogSource::_add_value(float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:785:6:void ChibiOS::AnalogIn::update_power_flags()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:625:6:void ChibiOS::AnalogIn::read_adc(uint8_t, uint32_t*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:274:9:static uint8_t ChibiOS::AnalogIn::get_pin_channel(uint8_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:447:6:void ChibiOS::AnalogIn::setup_adc(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:112:1:ChibiOS::AnalogSource::AnalogSource(int16_t)",
+        "stack_size": 8
+      }
+    ],
+    "increased": [],
+    "decreased": [],
+    "unchanged": 15877
+  },
+  "total_functions_analyzed": 15890
+}

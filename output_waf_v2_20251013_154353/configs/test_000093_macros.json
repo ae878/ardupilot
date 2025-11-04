@@ -1,0 +1,13 @@
+{
+  "test_id": 93,
+  "timestamp": "2025-10-13T20:10:30.545705",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "MODE_GUIDED_ENABLED": 1,
+    "AP_BEACON_ENABLED": 0,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1
+  }
+}

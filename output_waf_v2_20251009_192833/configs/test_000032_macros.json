@@ -1,0 +1,9 @@
+{
+  "test_id": 32,
+  "timestamp": "2025-10-09T20:54:30.427272",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 0,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1
+  }
+}

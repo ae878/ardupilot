@@ -1,0 +1,14 @@
+{
+  "test_id": 121,
+  "timestamp": "2025-10-10T02:29:17.885185",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1,
+    "KDECAN_MAX_NUM_ESCS": 1,
+    "HAL_CANFD_SUPPORTED": 0,
+    "HAL_GPIO_INPUT": 0,
+    "HAL_USE_FATFS": 1,
+    "AP_RELAY_ENABLED": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0
+  }
+}

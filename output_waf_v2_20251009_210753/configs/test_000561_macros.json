@@ -1,0 +1,13 @@
+{
+  "test_id": 561,
+  "timestamp": "2025-10-10T22:39:07.040551",
+  "macro_changes": {
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "MODE_FLIP_ENABLED": 0,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0
+  }
+}

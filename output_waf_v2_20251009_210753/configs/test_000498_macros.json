@@ -1,0 +1,10 @@
+{
+  "test_id": 498,
+  "timestamp": "2025-10-10T19:33:34.706729",
+  "macro_changes": {
+    "KDECAN_MAX_NUM_ESCS": 2,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+    "MODE_ZIGZAG_ENABLED": 1
+  }
+}

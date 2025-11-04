@@ -1,0 +1,13 @@
+{
+  "test_id": 612,
+  "timestamp": "2025-10-11T00:54:32.226584",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 0,
+    "AP_FOLLOW_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0
+  }
+}

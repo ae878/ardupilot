@@ -1,0 +1,12 @@
+{
+  "test_id": 51,
+  "timestamp": "2025-10-13T18:07:24.874447",
+  "macro_changes": {
+    "TELEM_TIME_SLOT_MAX": 16,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "AP_NETWORKING_NUM_PORTS": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "AP_RC_CHANNEL_ENABLED": 1
+  }
+}

@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #816 */
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC_CRC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC_CRC 1
+
+/* ConfigFuzz: HAL_HAVE_SERVO_VOLTAGE */
+#ifdef HAL_HAVE_SERVO_VOLTAGE
+#undef HAL_HAVE_SERVO_VOLTAGE
+#endif
+#define HAL_HAVE_SERVO_VOLTAGE 1
+
+/* ConfigFuzz: MODE_SPORT_ENABLED */
+#ifdef MODE_SPORT_ENABLED
+#undef MODE_SPORT_ENABLED
+#endif
+#define MODE_SPORT_ENABLED 0
+
+/* ConfigFuzz: AP_SERIALMANAGER_ENABLED */
+#ifdef AP_SERIALMANAGER_ENABLED
+#undef AP_SERIALMANAGER_ENABLED
+#endif
+#define AP_SERIALMANAGER_ENABLED 0
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 1
+
+/* ConfigFuzz: FS_THR_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_THR_ENABLED_AUTO_RTL_OR_RTL 0
+
+#endif /* _AP_CONFIG_H_ */

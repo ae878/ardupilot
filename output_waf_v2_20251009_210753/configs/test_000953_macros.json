@@ -1,0 +1,14 @@
+{
+  "test_id": 953,
+  "timestamp": "2025-10-11T17:26:40.895819",
+  "macro_changes": {
+    "AP_FEATURE_SBUS_OUT": 1,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "WEATHERVANE_ENABLED": 1,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1
+  }
+}

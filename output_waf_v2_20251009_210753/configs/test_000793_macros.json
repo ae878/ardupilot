@@ -1,0 +1,11 @@
+{
+  "test_id": 793,
+  "timestamp": "2025-10-11T09:43:07.012610",
+  "macro_changes": {
+    "HAL_BUTTON_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "AP_SIGNED_FIRMWARE": 0
+  }
+}

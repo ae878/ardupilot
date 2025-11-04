@@ -1,0 +1,13 @@
+{
+  "test_id": 377,
+  "timestamp": "2025-10-10T13:57:51.929027",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+    "HAL_LOGGING_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "AP_RSSI_ENABLED": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 0
+  }
+}

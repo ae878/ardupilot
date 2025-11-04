@@ -1,0 +1,19 @@
+{
+  "test_id": 303,
+  "timestamp": "2025-10-10T10:45:06.320850",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "MODE_THROW_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_BUTTON_ENABLED": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "HAL_SPRAYER_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 29.370209217071533,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

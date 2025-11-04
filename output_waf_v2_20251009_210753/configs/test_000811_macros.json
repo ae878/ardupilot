@@ -1,0 +1,9 @@
+{
+  "test_id": 811,
+  "timestamp": "2025-10-11T10:33:38.998149",
+  "macro_changes": {
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

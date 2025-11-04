@@ -1,0 +1,13 @@
+{
+  "test_id": 443,
+  "timestamp": "2025-10-10T17:02:15.360066",
+  "macro_changes": {
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0,
+    "AP_SIM_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 1
+  },
+  "build_success": false,
+  "build_time": 202.8634889125824,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

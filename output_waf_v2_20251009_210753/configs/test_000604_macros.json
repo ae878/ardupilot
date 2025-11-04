@@ -1,0 +1,12 @@
+{
+  "test_id": 604,
+  "timestamp": "2025-10-11T00:32:28.710509",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 0,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+    "HAL_WITH_RAMTRON": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 2,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1
+  }
+}

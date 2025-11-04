@@ -1,0 +1,10 @@
+{
+  "test_id": 842,
+  "timestamp": "2025-10-11T12:09:37.488757",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "MODE_BRAKE_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "HAL_USE_FATFS": 0
+  }
+}

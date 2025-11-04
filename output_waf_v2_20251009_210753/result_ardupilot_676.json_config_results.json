@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 677,
+    "timestamp": "2025-10-11T04:03:46.959960",
+    "macro_changes": {
+      "METADATA_MAX_i": 16,
+      "HAL_IMUHEAT_P_DEFAULT": 1,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+      "FLOW_CONTROL_ENABLED": 1,
+      "AP_SERVORELAYEVENTS_ENABLED": 0,
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "AP_FEATURE_SBUS_OUT": 0,
+      "AP_CRASHDUMP_ENABLED": 0,
+      "HAL_SEMAPHORE_BLOCK_FOREVER": 1
+    },
+    "build_success": false,
+    "build_time": 196.57801818847656,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

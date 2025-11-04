@@ -15,8 +15,70 @@ import glob
 import hashlib
 from collections import defaultdict
 import re
+import copy
 
-class ConfigFuzzWafRunnerV2:
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from src.ir2dot.gccir2dot import Parser
+
+
+class FuzzerStep:
+    def __init__(
+        self,
+        build_result: bool,
+        function_results: list,
+        step: int,
+        config: dict,
+        start_time: float,
+        apply_time: float,
+        build_time: float,
+        analyze_time: float,
+        end_time: float,
+        unique_stack_smash_count: int,
+    ):
+        self.build_result = build_result
+        self.function_results = function_results
+        self.step = step
+        self.config = copy.deepcopy(config)
+        self.start_time = start_time
+        self.apply_time = apply_time
+        self.build_time = build_time
+        self.analyze_time = analyze_time
+        self.end_time = end_time
+        self.unique_stack_smash_count = unique_stack_smash_count
+
+    def dump_result_to_file(self, output_base_filename: str):
+        function_file_name = f"{output_base_filename}_function_results.json"
+        config_file_name = f"{output_base_filename}_config_results.json"
+        meta_file_name = f"{output_base_filename}_meta_results.json"
+
+        os.makedirs(os.path.dirname(output_base_filename) if os.path.dirname(output_base_filename) else ".", exist_ok=True)
+
+        with open(function_file_name, "w") as f:
+            json.dump(self.function_results, f, indent=2)
+
+        with open(config_file_name, "w") as f:
+            json.dump(self.config, f, indent=2)
+
+        with open(meta_file_name, "w") as f:
+            json.dump(
+                {
+                    "build_result": self.build_result,
+                    "start_time": self.start_time,
+                    "apply_time": self.apply_time,
+                    "build_time": self.build_time,
+                    "analyze_time": self.analyze_time,
+                    "end_time": self.end_time,
+                    "total_time": self.end_time - self.start_time,
+                    "unique_stack_smash_count": self.unique_stack_smash_count,
+                },
+                f,
+                indent=2
+            )
+
+
+class ConfigFuzzWafRunnerV3:
     def __init__(self, timeout_seconds=3600, use_cache=True, stack_threshold=512, resume_from=None):
         self.start_time = time.time()
         self.timeout = timeout_seconds
@@ -29,44 +91,74 @@ class ConfigFuzzWafRunnerV2:
         self.running = True
         self.resumed_session = False
         self.original_start_time = self.start_time
-        
+
         # 스택 변화 추적
-        self.baseline_stack_map = {}  # 기준 스택 사용량
+        self.baseline_stack_map = {}
         self.stack_changes_count = 0
         self.significant_changes = []
-        
+        self.unique_stack_smash_count = 0
+        self.unique_stack_smashes = set()
+
         # 경로 설정
         self.configfuzz_path = "/conffuzz"
         self.ardupilot_path = "/home/ubuntu/lab/ardupilot"
         self.build_dir = os.path.join(self.ardupilot_path, "build/AIRLink")
-        
+        self.build_base = self.build_dir
+
+        # ConfigFuzz 호환을 위한 adapter 이름
+        self.adapter_name = "ardupilot"
+
+        # ConfigFuzz 호환을 위한 thread functions
+        self.thread_functions_file_path = "src/adapter/ardupilot/thread_functions.json"
+        self.target_thread_functions = []
+
         # 작업 디렉토리 설정
         os.chdir(self.configfuzz_path)
-        
+
         # Resume 처리
         if resume_from:
             self.resume_session(resume_from)
         else:
             self.init_new_session()
-        
+
         # 매크로 캐시
         self.macro_cache = {}
         if self.use_cache:
             self.load_cache()
-        
+
         # 매크로 로드
         self.load_macros()
-        
+
+        # ConfigFuzz 호환을 위한 thread functions 로드
+        self.load_thread_functions()
+
         # Signal handler
         signal.signal(signal.SIGINT, self.signal_handler)
         signal.signal(signal.SIGTERM, self.signal_handler)
-        
+
+        # 원본과 동일하게 최근 10개 스텝 저장
+        self.max_recent_steps = 10
+        self.recent_steps = []
+        self.recent_step = None
+
         # 시작 메시지
         self.print_header()
-        
+
+    def load_thread_functions(self):
+        try:
+            thread_functions_path = os.path.join(self.configfuzz_path, self.thread_functions_file_path)
+            if os.path.exists(thread_functions_path):
+                with open(thread_functions_path, 'r') as f:
+                    datas = json.load(f)
+                    for data in datas:
+                        self.target_thread_functions.append(data["thread"])
+        except Exception as e:
+            self.log(f"Warning: Could not load thread functions: {e}")
+            # 파일이 없으면 기본값 사용
+            self.target_thread_functions = ["APM_thread", "main_thread"]
+
     def resume_session(self, resume_dir):
         """이전 세션 재개"""
-        # 전체 경로 구성
         if not os.path.isabs(resume_dir):
             if os.path.exists(os.path.join(self.configfuzz_path, resume_dir)):
                 resume_path = os.path.join(self.configfuzz_path, resume_dir)
@@ -77,14 +169,14 @@ class ConfigFuzzWafRunnerV2:
                 sys.exit(1)
         else:
             resume_path = resume_dir
-            
+
         if not os.path.exists(resume_path):
             print(f"ERROR: Resume directory does not exist: {resume_path}")
             sys.exit(1)
-            
+
         print(f"Resuming from: {resume_path}")
         self.resumed_session = True
-        
+
         # 이전 세션 상태 로드
         state_file = os.path.join(resume_path, "session_state.json")
         if os.path.exists(state_file):
@@ -98,98 +190,57 @@ class ConfigFuzzWafRunnerV2:
                 self.baseline_stack_map = state.get("baseline_stack_map", {})
                 self.stack_changes_count = state.get("stack_changes_count", 0)
                 self.significant_changes = state.get("significant_changes", [])
+                self.unique_stack_smash_count = state.get("unique_stack_smash_count", 0)
                 elapsed_time = state.get("elapsed_time", 0)
-                
-                # 남은 시간 조정 (사용자가 명시적으로 시간을 지정하지 않으면 기본값 사용)
+
                 if self.timeout == 3600:  # 기본값이면
-                    self.timeout = max(3600 - elapsed_time, 60)  # 최소 60초
-                else:
-                    # 사용자가 명시적으로 지정한 경우 그대로 사용
-                    pass
-                
+                    self.timeout = max(3600 - elapsed_time, 60)
+
                 print(f"Loaded state: {self.test_count} tests completed, {self.success_count} successful")
                 print(f"Remaining time: {self.format_duration(self.timeout)}")
-        else:
-            print("Session state file not found, calculating from results...")
-            self.calculate_stats_from_results(resume_path)
-        
-        # 출력 디렉토리는 기존 것을 사용
+
+        # 기존 출력 디렉토리 사용
         self.output_dir_name = os.path.basename(resume_path)
         self.output_dir = resume_path
-        
-        # 디렉토리가 없으면 생성
+        self.output_base_dir = "output"  # ConfigFuzz 호환성을 위해
+
+        # 필요한 서브디렉토리 생성
         os.makedirs(os.path.join(self.output_dir, "configs"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "logs"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "results"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "stack_analysis"), exist_ok=True)
-        
+
         # 로그 파일 append 모드로 열기
         self.main_log_path = f"{self.output_dir}/main.log"
         self.main_log = open(self.main_log_path, "a")
         self.log("\n" + "="*60)
         self.log(f"SESSION RESUMED at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         self.log("="*60)
-        
-    def calculate_stats_from_results(self, resume_path):
-        """결과 파일들에서 통계 계산"""
-        # 테스트 수 계산
-        config_files = glob.glob(os.path.join(resume_path, "configs", "test_*.json"))
-        self.test_count = len(config_files)
-        
-        # 성공/실패 수 계산
-        for i in range(self.test_count):
-            meta_file = os.path.join(resume_path, f"result_ardupilot_{i}.json_meta_results.json")
-            if os.path.exists(meta_file):
-                try:
-                    with open(meta_file, 'r') as f:
-                        meta = json.load(f)
-                        if meta.get("build_result"):
-                            self.success_count += 1
-                        else:
-                            self.fail_count += 1
-                except:
-                    pass
-                    
-        # main.log에서 경과 시간 추정
-        log_file = os.path.join(resume_path, "main.log")
-        if os.path.exists(log_file):
-            try:
-                with open(log_file, 'r') as f:
-                    lines = f.readlines()
-                    first_time = None
-                    last_time = None
-                    for line in lines:
-                        match = re.match(r'\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]', line)
-                        if match:
-                            timestamp = datetime.strptime(match.group(1), "%Y-%m-%d %H:%M:%S")
-                            if first_time is None:
-                                first_time = timestamp
-                            last_time = timestamp
-                    
-                    if first_time and last_time:
-                        elapsed = (last_time - first_time).total_seconds()
-                        # 사용자가 명시적으로 시간을 지정하지 않으면 기본값 사용
-                        if self.timeout == 3600:  # 기본값이면
-                            self.timeout = max(3600 - elapsed, 60)  # 최소 60초
-                        self.original_start_time = self.start_time - elapsed
-            except:
-                pass
-                
+
     def init_new_session(self):
         """새 세션 초기화"""
-        # 출력 디렉토리 생성
-        self.output_dir_name = f"output_waf_v2_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        self.output_dir_name = f"output_waf_v3_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         self.output_dir = os.path.join(self.configfuzz_path, self.output_dir_name)
+        self.output_base_dir = "output"  # ConfigFuzz 호환성을 위해
+
         os.makedirs(self.output_dir, exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "configs"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "logs"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "results"), exist_ok=True)
         os.makedirs(os.path.join(self.output_dir, "stack_analysis"), exist_ok=True)
-        
+
+        # ConfigFuzz 호환을 위한 output 심볼릭 링크 생성
+        output_link = os.path.join(self.configfuzz_path, "output")
+        if os.path.islink(output_link):
+            os.unlink(output_link)
+        elif os.path.exists(output_link):
+            shutil.rmtree(output_link)
+        os.symlink(self.output_dir, output_link)
+
         # 로그 파일
         self.main_log_path = f"{self.output_dir}/main.log"
         self.main_log = open(self.main_log_path, "w")
-        
+
     def save_session_state(self):
         """현재 세션 상태 저장"""
         state = {
@@ -202,22 +253,23 @@ class ConfigFuzzWafRunnerV2:
             "baseline_stack_map": self.baseline_stack_map,
             "stack_changes_count": self.stack_changes_count,
             "significant_changes": self.significant_changes,
+            "unique_stack_smash_count": self.unique_stack_smash_count,
             "last_update": datetime.now().isoformat()
         }
-        
+
         state_file = os.path.join(self.output_dir, "session_state.json")
         with open(state_file, 'w') as f:
             json.dump(state, f, indent=2)
-            
+
     def print_header(self):
         """헤더 정보 출력"""
         duration_str = self.format_duration(self.timeout)
-        
+
         self.log("=" * 60)
         if self.resumed_session:
-            self.log("ConfigFuzz + Waf Integration v2 [RESUMED SESSION]")
+            self.log("ConfigFuzz + Waf Integration v3 [RESUMED SESSION]")
         else:
-            self.log("ConfigFuzz + Waf Integration v2")
+            self.log("ConfigFuzz + Waf Integration v3 (ConfigFuzz Compatible)")
         self.log("=" * 60)
         self.log(f"Output directory: {self.output_dir_name}")
         self.log(f"Duration: {duration_str}")
@@ -229,13 +281,13 @@ class ConfigFuzzWafRunnerV2:
         self.log(f"Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         self.log(f"Will end at: {(datetime.now() + timedelta(seconds=self.timeout)).strftime('%Y-%m-%d %H:%M:%S')}")
         self.log("=" * 60)
-        
+
     def format_duration(self, seconds):
         """시간을 읽기 쉬운 형식으로 변환"""
         hours = seconds // 3600
         minutes = (seconds % 3600) // 60
         secs = seconds % 60
-        
+
         parts = []
         if hours > 0:
             parts.append(f"{int(hours)} hour{'s' if hours != 1 else ''}")
@@ -243,9 +295,9 @@ class ConfigFuzzWafRunnerV2:
             parts.append(f"{int(minutes)} minute{'s' if minutes != 1 else ''}")
         if secs > 0 or len(parts) == 0:
             parts.append(f"{int(secs)} second{'s' if secs != 1 else ''}")
-        
+
         return " ".join(parts)
-        
+
     def signal_handler(self, sig, frame):
         """Ctrl+C 처리"""
         self.log("\nInterrupted by user. Saving results...")
@@ -253,7 +305,7 @@ class ConfigFuzzWafRunnerV2:
         self.save_session_state()
         self.save_final_report()
         sys.exit(0)
-        
+
     def log(self, message):
         """로그 출력 및 저장"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -261,12 +313,12 @@ class ConfigFuzzWafRunnerV2:
         print(log_msg)
         self.main_log.write(log_msg + "\n")
         self.main_log.flush()
-        
+
     def load_cache(self):
         """캐시 로드 (현재 세션 + 다른 세션들)"""
         cache_loaded = 0
-        
-        # 1. 현재 세션의 캐시 로드
+
+        # 현재 세션의 캐시 로드
         current_cache_file = os.path.join(self.output_dir, "macro_cache.json")
         if os.path.exists(current_cache_file):
             try:
@@ -276,8 +328,8 @@ class ConfigFuzzWafRunnerV2:
                     self.log(f"Loaded {cache_loaded} cached results from current session")
             except Exception as e:
                 self.log(f"Error loading current cache: {e}")
-        
-        # 2. 다른 세션들의 캐시도 로드
+
+        # 다른 세션들의 캐시도 로드
         try:
             for dir_name in os.listdir(self.configfuzz_path):
                 if dir_name.startswith("output_") and dir_name != self.output_dir_name:
@@ -285,17 +337,16 @@ class ConfigFuzzWafRunnerV2:
                     if os.path.exists(cache_file):
                         with open(cache_file, 'r') as f:
                             cached = json.load(f)
-                            # 기존 캐시에 없는 항목만 추가
                             for key, value in cached.items():
                                 if key not in self.macro_cache:
                                     self.macro_cache[key] = value
                                     cache_loaded += 1
-            
+
             if cache_loaded > 0:
                 self.log(f"Total {len(self.macro_cache)} cached results loaded")
         except Exception as e:
             self.log(f"Cache loading error: {e}")
-            
+
     def load_macros(self):
         """ConfigFuzz 매크로 로드"""
         macro_file = os.path.join(self.configfuzz_path, "src/adapter/ardupilot/macros.json")
@@ -305,49 +356,66 @@ class ConfigFuzzWafRunnerV2:
         except Exception as e:
             self.log(f"Error loading macros: {e}")
             self.all_macros = {}
-        
+
         # 안전한 매크로만 선택 (버퍼 크기 관련 매크로 우선)
         self.safe_macros = []
         priority_keywords = ['BUFLEN', 'SIZE', 'MAX', 'STACK', 'ENABLED', 'DISABLE', 'HAL_', 'AP_', 'CONFIG']
-        
+
         for name, info in self.all_macros.items():
             if name != "PACKED" and isinstance(info, dict):
-                # 우선순위 매크로
                 if any(keyword in name for keyword in priority_keywords):
                     self.safe_macros.append(name)
-        
+
         # 최대 200개로 제한
         self.safe_macros = self.safe_macros[:200]
         self.log(f"Loaded {len(self.safe_macros)} safe macros from {len(self.all_macros)} total")
-        
+
     def generate_macro_combination(self):
         """매크로 조합 생성"""
         num_macros = random.randint(3, min(10, len(self.safe_macros)))
         selected_macros = random.sample(self.safe_macros, num_macros)
-        
+
         macro_changes = {}
         for macro in selected_macros:
-            # 버퍼 크기 관련 매크로는 다양한 값 시도
             if 'BUFLEN' in macro or 'SIZE' in macro:
                 macro_changes[macro] = random.choice([64, 128, 256, 512, 1024, 2048])
             elif 'MAX' in macro:
                 macro_changes[macro] = random.choice([1, 2, 4, 8, 16, 32])
             else:
-                # 일반 매크로는 0/1
                 macro_changes[macro] = random.choice([0, 1])
-                
+
         return macro_changes
-    
+
+    def create_config_dict(self, macro_changes):
+        """ConfigFuzz 호환 config dictionary 생성"""
+        config_dict = []
+
+        for macro_name, value in macro_changes.items():
+            # all_macros에서 매크로 정보 가져오기
+            macro_info = self.all_macros.get(macro_name, {})
+
+            config_entry = {
+                "name": macro_name,
+                "value": value,
+                "type": macro_info.get("type", "unknown"),
+                "used_in": macro_info.get("used_in", []),
+                "defined_in": macro_info.get("defined_in", []),
+                "line_count": macro_info.get("line_count", 0)
+            }
+            config_dict.append(config_entry)
+
+        return config_dict
+
     def get_macro_hash(self, macro_changes):
         """매크로 조합의 해시값 생성"""
         sorted_macros = sorted(macro_changes.items())
         macro_str = json.dumps(sorted_macros)
         return hashlib.md5(macro_str.encode()).hexdigest()
-        
+
     def apply_macro_changes(self, macro_changes, test_id):
         """ap_config.h에 매크로 변경사항 적용"""
         config_h = os.path.join(self.ardupilot_path, "build/AIRLink/ap_config.h")
-        
+
         content = """#pragma once
 /* ConfigFuzz generated configuration */
 
@@ -370,64 +438,92 @@ class ConfigFuzzWafRunnerV2:
 
 /* ConfigFuzz Test #{} */
 """.format(test_id)
-        
+
         for name, value in macro_changes.items():
             content += f"\n/* ConfigFuzz: {name} */\n"
             content += f"#ifdef {name}\n"
             content += f"#undef {name}\n"
             content += f"#endif\n"
             content += f"#define {name} {value}\n"
-        
+
         content += "\n#endif /* _AP_CONFIG_H_ */\n"
-        
+
         with open(config_h, 'w') as f:
             f.write(content)
-            
+
         # 설정 파일도 저장
         config_copy = os.path.join(self.output_dir, "configs", f"test_{test_id:06d}_config.h")
         shutil.copy(config_h, config_copy)
-        
-    def analyze_stack_usage(self, test_id):
-        """전체 .su 파일에서 스택 사용량 분석 (개선된 버전)"""
-        high_stack_functions = []
-        all_stack_functions = {}
-        
-        # 모든 .su 파일 찾기
-        su_files = glob.glob(os.path.join(self.build_dir, "**/*.su"), recursive=True)
-        
-        for su_file in su_files:
+
+
+    def create_function_results(self, high_stack_functions, stack_changes):
+        results = self.analyze_with_parser()  # 앞서 넣은 Parser 기반 함수
+        return results
+
+    def analyze_with_parser(self):
+        """
+        thread_functions(= self.target_thread_functions) 에 들어있는 함수들만
+        Parser로 콜그래프 BFS를 돌려 biggest_path까지 계산.
+        """
+        parser_base = self.build_base if getattr(self, "build_base", None) else getattr(self, "base", self.build_dir)
+
+
+        parser = Parser(
+            parser_base, "",
+            self.analyze_result_dir,
+            is_save_pkl=False, is_load_pkl=False, is_only_test=False
+        )
+        parser.parse()
+
+        function_results = []
+        for name in (self.target_thread_functions or []):
             try:
-                with open(su_file, 'r') as f:
-                    for line in f:
-                        parts = line.strip().split('\t')
-                        if len(parts) >= 2:
-                            func_name = parts[0]
-                            try:
-                                stack_size = int(parts[1])
-                                
-                                # 모든 함수의 스택 크기 저장
-                                all_stack_functions[func_name] = stack_size
-                                
-                                # 임계값 이상인 함수만 high_stack에 추가
-                                if stack_size >= self.stack_threshold:
-                                    high_stack_functions.append({
-                                        "function": func_name,
-                                        "stack_size": stack_size,
-                                        "file": os.path.basename(su_file)
-                                    })
-                            except ValueError:
-                                pass
-            except:
-                pass
-                
-        # 스택 크기로 정렬
-        high_stack_functions.sort(key=lambda x: x['stack_size'], reverse=True)
-        
-        # 스택 변화 분석
-        stack_changes = self.analyze_stack_changes(all_stack_functions, test_id)
-        
-        return high_stack_functions[:20], all_stack_functions, stack_changes  # 상위 20개
-        
+                func = parser.find_function(name)
+                res = parser.bfs(func)  # res: {biggest_stack, deepest_stack, max_depth, biggest_path, ...}
+
+                # biggest_path가 노드 객체일 수도 있으므로 이름으로 정규화
+                path_list = []
+                for n in res.get("biggest_path", []):
+                    # n이 dict/obj면 이름 필드(예: 'name')를, 문자열이면 그대로
+                    if isinstance(n, str):
+                        path_list.append(n)
+                    elif isinstance(n, dict) and "name" in n:
+                        path_list.append(n["name"])
+                    else:
+                        # 다른 형태면 str로 강제
+                        path_list.append(str(n))
+
+                # source_size: thread_functions.json에 size가 있다면 그 값을, 없으면 보수적으로 biggest_stack
+                src_sz = None
+                for ent in getattr(self, "thread_functions", []):
+                    if ent.get("thread") == name:
+                        src_sz = ent.get("size")
+                        break
+                if src_sz is None:
+                    src_sz = res.get("biggest_stack", 0)
+
+                function_results.append({
+                "name": name,
+                "source_size": int(src_sz),
+                "biggest_stack": int(res.get("biggest_stack", -1)),
+                "deepest_stack": int(res.get("deepest_stack", -1)),
+                "max_depth": int(res.get("max_depth", -1)),
+                "biggest_path": path_list,
+                })
+
+            except Exception as e:
+                function_results.append({
+                    "name": name,
+                    "source_size": -1,
+                    "biggest_stack": -1,
+                    "deepest_stack": -1,
+                    "max_depth": -1,
+                    "biggest_path": [],
+                })
+
+        self.function_results = function_results
+        return function_results
+    
     def analyze_stack_changes(self, current_stack_map, test_id):
         """기준 빌드 대비 스택 변화 분석"""
         stack_changes = {
@@ -437,24 +533,23 @@ class ConfigFuzzWafRunnerV2:
             "decreased": [],
             "unchanged": 0
         }
-        
-        # 첫 번째 성공 빌드를 기준으로 설정 (success_count가 1이 되었을 때)
+
+        # 첫 번째 성공 빌드를 기준으로 설정
         if not self.baseline_stack_map and self.success_count == 1:
             self.baseline_stack_map = current_stack_map.copy()
             self.log(f"[Test {test_id}] Set as baseline with {len(self.baseline_stack_map)} functions")
             return stack_changes
-        
-        # 기준이 없으면 비교하지 않음
+
         if not self.baseline_stack_map:
             return stack_changes
-        
+
         # 변화 분석
         all_functions = set(self.baseline_stack_map.keys()) | set(current_stack_map.keys())
-        
+
         for func in all_functions:
             baseline_size = self.baseline_stack_map.get(func, -1)
             current_size = current_stack_map.get(func, -1)
-            
+
             if baseline_size == -1:
                 # 새로 추가된 함수
                 stack_changes["new_functions"].append({
@@ -489,38 +584,38 @@ class ConfigFuzzWafRunnerV2:
                     })
             else:
                 stack_changes["unchanged"] += 1
-        
+
         # 가장 큰 변화들을 정렬
         stack_changes["increased"].sort(key=lambda x: x['diff'], reverse=True)
         stack_changes["decreased"].sort(key=lambda x: -x['diff'], reverse=True)
-        
+
         return stack_changes
-        
+
     def run_waf_build(self, test_id):
         """Waf로 빌드 실행"""
         current_dir = os.getcwd()
         os.chdir(self.ardupilot_path)
-        
+
         build_log = os.path.join(self.output_dir, "logs", f"test_{test_id:06d}_build.log")
-        
+
         cmd = ["./waf", "build", "--target", "bin/arducopter", "-j4"]
-        
+
         start_time = time.time()
-        
+
         try:
             with open(build_log, 'w') as log_f:
                 result = subprocess.run(
                     cmd,
                     stdout=log_f,
                     stderr=subprocess.STDOUT,
-                    timeout=6000,
+                    timeout=3000,
                     text=True
                 )
-                
+
             build_time = time.time() - start_time
             success = (result.returncode == 0)
             error_msg = None
-            
+
             if not success:
                 with open(build_log, 'r') as f:
                     lines = f.readlines()
@@ -528,32 +623,34 @@ class ConfigFuzzWafRunnerV2:
                         if 'error:' in line:
                             error_msg = line.strip()
                             break
-                            
+
         except subprocess.TimeoutExpired:
             build_time = time.time() - start_time
             success = False
             error_msg = "Build timeout (120s)"
-            
+
         except Exception as e:
             build_time = time.time() - start_time
             success = False
             error_msg = str(e)
-            
+
         os.chdir(current_dir)
-        
+
         return success, build_time, error_msg
-        
+
     def run_single_test(self):
-        """단일 테스트 실행"""
-        self.test_count += 1
-        test_id = self.test_count
-        
+        """단일 테스트 실행 (ConfigFuzz 호환 출력)"""
+        test_id = self.test_count  # ConfigFuzz 호환을 위해 0-based 사용
+
         self.log(f"\n[Test {test_id}] Starting...")
-        
+
+        # 시간 측정
+        start_time = time.time()
+
         # 매크로 조합 생성
         macro_changes = self.generate_macro_combination()
         self.log(f"[Test {test_id}] Generated {len(macro_changes)} macro changes")
-        
+
         # 캐시 확인
         if self.use_cache:
             macro_hash = self.get_macro_hash(macro_changes)
@@ -561,139 +658,140 @@ class ConfigFuzzWafRunnerV2:
                 self.cache_hits += 1
                 cached_result = self.macro_cache[macro_hash]
                 self.log(f"[Test {test_id}] Cache hit! Using previous result")
-                
+
                 success = cached_result['build_result']
-                build_time = 0.1
+                apply_time = start_time + 0.01
+                build_time = apply_time + 0.1
+                analyze_time = build_time + 0.01
                 error_msg = cached_result.get('error')
-                high_stack_functions = cached_result.get('high_stack_functions', [])
-                stack_overflow_risk = cached_result.get('stack_overflow_risk', 0)
-                stack_changes = cached_result.get('stack_changes', {})
-                
+                function_results = cached_result.get('function_results', [])
+                unique_stack_smash_count = cached_result.get('unique_stack_smash_count', 0)
+
             else:
-                # 실제 빌드 수행
+                # 설정 적용
                 self.apply_macro_changes(macro_changes, test_id)
-                success, build_time, error_msg = self.run_waf_build(test_id)
-                
+                apply_time = time.time()
+
+                # 빌드
+                success, build_duration, error_msg = self.run_waf_build(test_id)
+                build_time = apply_time + build_duration
+
                 if success:
                     # 스택 분석
-                    high_stack_functions, all_stack_map, stack_changes = self.analyze_stack_usage(test_id)
-                    stack_overflow_risk = len(high_stack_functions)
+                    #high_stack_functions, all_stack_map, stack_changes = self.analyze_stack_usage(test_id)
+                    analyze_time = time.time()
+
+                    # function results 생성
+                    #function_results = self.create_function_results(high_stack_functions, stack_changes)
+                    function_results = self.analyze_with_parser()
                     
-                    # 스택 분석 결과 저장
-                    stack_file = os.path.join(self.output_dir, "stack_analysis", f"test_{test_id:06d}_stack.json")
-                    with open(stack_file, 'w') as f:
-                        json.dump({
-                            "test_id": test_id,
-                            "high_stack_count": len(high_stack_functions),
-                            "high_stack_functions": high_stack_functions[:10],
-                            "stack_changes": stack_changes,
-                            "total_functions_analyzed": len(all_stack_map)
-                        }, f, indent=2)
+                    # unique stack smash 계산
+                    for func_result in function_results:
+                        if func_result.get("stack_overflow"):
+                            path_str = json.dumps(func_result["biggest_path"])
+                            if path_str not in self.unique_stack_smashes:
+                                self.unique_stack_smash_count += 1
+                                self.unique_stack_smashes.add(path_str)
+
+                    unique_stack_smash_count = self.unique_stack_smash_count
+
+                    # 추가 스택 분석 결과 저장
                 else:
-                    high_stack_functions = []
-                    stack_overflow_risk = 0
-                    stack_changes = {}
-                
-                # 캐시에 저장
+                    analyze_time = build_time
+                    function_results = []
+                    unique_stack_smash_count = self.unique_stack_smash_count
+
+                # 캐시 업데이트
                 self.macro_cache[macro_hash] = {
                     'build_result': success,
-                    'build_time': build_time,
-                    'error': error_msg,
-                    'high_stack_functions': high_stack_functions[:10],
-                    'stack_overflow_risk': stack_overflow_risk,
-                    'stack_changes': stack_changes
+                    'function_results': function_results,
+                    'unique_stack_smash_count': unique_stack_smash_count,
+                    'error': error_msg
                 }
         else:
-            # 캐시 없이 빌드
+            # 캐시 없음
             self.apply_macro_changes(macro_changes, test_id)
-            success, build_time, error_msg = self.run_waf_build(test_id)
-            
+            apply_time = time.time()
+
+            success, build_duration, error_msg = self.run_waf_build(test_id)
+            build_time = apply_time + build_duration
+
             if success:
                 high_stack_functions, all_stack_map, stack_changes = self.analyze_stack_usage(test_id)
-                stack_overflow_risk = len(high_stack_functions)
+                analyze_time = time.time()
+                function_results = self.create_function_results(high_stack_functions, stack_changes)
+
+                for func_result in function_results:
+                    if func_result.get("stack_overflow"):
+                        path_str = json.dumps(func_result["biggest_path"])
+                        if path_str not in self.unique_stack_smashes:
+                            self.unique_stack_smash_count += 1
+                            self.unique_stack_smashes.add(path_str)
+
+                unique_stack_smash_count = self.unique_stack_smash_count
             else:
-                high_stack_functions = []
-                stack_overflow_risk = 0
-                stack_changes = {}
-        
-        # 설정 저장
-        config_file = os.path.join(self.output_dir, "configs", f"test_{test_id:06d}_macros.json")
-        with open(config_file, 'w') as f:
-            json.dump({
-                "test_id": test_id,
-                "timestamp": datetime.now().isoformat(),
-                "macro_changes": macro_changes
-            }, f, indent=2)
-        
-        # 결과 분석
-        result = {
-            "test_id": test_id,
-            "timestamp": datetime.now().isoformat(),
-            "macro_changes": macro_changes,
-            "build_success": success,
-            "build_time": build_time,
-            "build_result": success,
-        }
-        
+                analyze_time = build_time
+                function_results = []
+                unique_stack_smash_count = self.unique_stack_smash_count
+
+        end_time = time.time()
+
+        # ConfigFuzz 호환 config 생성
+        config_dict = self.create_config_dict(macro_changes)
+
+        # FuzzerStep 생성 (ConfigFuzz 호환)
+        fuzzer_step = FuzzerStep(
+            build_result=success,
+            function_results=function_results,
+            step=test_id,
+            config=config_dict,
+            start_time=start_time,
+            apply_time=apply_time,
+            build_time=build_time,
+            analyze_time=analyze_time,
+            end_time=end_time,
+            unique_stack_smash_count=unique_stack_smash_count
+        )
+
+        # recent steps에 저장
+        self.recent_step = fuzzer_step
+        self.recent_steps.append(fuzzer_step)
+        if len(self.recent_steps) > self.max_recent_steps:
+            self.recent_steps.pop(0)
+
+        # ConfigFuzz 형식으로 결과 저장
+        output_filename = f"result_{self.adapter_name}_{test_id}.json"
+        fuzzer_step.dump_result_to_file(os.path.join(self.output_dir, output_filename))
+
+        # 호환성을 위해 output 심볼릭에도 저장
+        if os.path.exists(os.path.join(self.configfuzz_path, "output")):
+            fuzzer_step.dump_result_to_file(os.path.join(self.configfuzz_path, "output", output_filename))
+
+        # 카운터 업데이트
         if success:
             self.success_count += 1
-            self.log(f"[Test {test_id}] ✅ BUILD SUCCESS in {build_time:.1f}s")
-            
-            # 스택 분석 결과 추가
-            result["high_stack_functions"] = high_stack_functions[:10]
-            result["stack_overflow_risk"] = stack_overflow_risk
-            result["stack_changes_summary"] = {
-                "new_functions": len(stack_changes.get("new_functions", [])),
-                "removed_functions": len(stack_changes.get("removed_functions", [])),
-                "increased_stack": len(stack_changes.get("increased", [])),
-                "decreased_stack": len(stack_changes.get("decreased", [])),
-                "unchanged": stack_changes.get("unchanged", 0)
-            }
-            
-            # 중요한 스택 변화 로깅
-            if stack_changes.get("increased"):
-                self.log(f"[Test {test_id}] ⚠️  Stack increased in {len(stack_changes['increased'])} functions")
-                for func in stack_changes['increased'][:3]:  # 상위 3개만
-                    self.log(f"  - {func['function'][:60]}: {func['baseline']} → {func['current']} (+{func['diff']})")
-                    
-            if len(high_stack_functions) > 1:  # ppp_logit 외에 다른 함수가 있으면
+            self.log(f"[Test {test_id}] ✅ BUILD SUCCESS in {build_duration:.1f}s")
+
+            if len(high_stack_functions) > 0:
                 self.log(f"[Test {test_id}] 📊 Found {len(high_stack_functions)} high stack functions")
                 for i, func in enumerate(high_stack_functions[:3]):
                     self.log(f"  {i+1}. {func['stack_size']} bytes: {func['function'][:50]}...")
-                    
         else:
             self.fail_count += 1
-            self.log(f"[Test {test_id}] ❌ BUILD FAILED in {build_time:.1f}s")
+            self.log(f"[Test {test_id}] ❌ BUILD FAILED in {build_duration:.1f}s")
             if error_msg:
-                result["error"] = error_msg
                 self.log(f"[Test {test_id}] Error: {error_msg[:100]}...")
-                
-        # 결과 저장 (ConfigFuzz 형식)
-        meta_file = os.path.join(self.output_dir, f"result_ardupilot_{test_id-1}.json_meta_results.json")
-        with open(meta_file, 'w') as f:
-            json.dump({
-                "build_result": success,
-                "start_time": time.time() - build_time,
-                "end_time": time.time(),
-                "total_time": build_time,
-                "unique_stack_smash_count": stack_overflow_risk if success else 0
-            }, f)
-            
-        config_results_file = os.path.join(self.output_dir, f"result_ardupilot_{test_id-1}.json_config_results.json")
-        with open(config_results_file, 'w') as f:
-            json.dump([result], f, indent=2)
-            
-        result_file = os.path.join(self.output_dir, "results", f"test_{test_id:06d}_result.json")
-        with open(result_file, 'w') as f:
-            json.dump(result, f, indent=2)
-            
+
+        # 저장 후에 테스트 카운트 증가 (0-based 인덱싱을 위해)
+        self.test_count += 1
+
         return success
-        
+
     def print_status(self):
         """현재 상태 출력"""
         elapsed = time.time() - self.original_start_time
         remaining = self.timeout - (time.time() - self.start_time)
-        
+
         self.log("\n" + "="*60)
         self.log(f"Status Update:")
         self.log(f"  Total elapsed: {self.format_duration(elapsed)}")
@@ -704,54 +802,27 @@ class ConfigFuzzWafRunnerV2:
         if self.use_cache:
             self.log(f"  Cache hits: {self.cache_hits} ({self.cache_hits/self.test_count*100:.1f}%)")
         self.log(f"  Rate: {self.test_count/(elapsed/3600):.1f} tests/hour")
-        self.log(f"  Stack threshold: {self.stack_threshold} bytes")
+        self.log(f"  Unique stack smashes: {self.unique_stack_smash_count}")
         self.log("="*60)
-        
+
     def save_cache(self):
         """캐시 저장"""
         if self.use_cache:
             cache_file = os.path.join(self.output_dir, "macro_cache.json")
             with open(cache_file, 'w') as f:
                 json.dump(self.macro_cache, f)
-                
+
     def save_final_report(self):
         """최종 리포트 저장"""
         elapsed = time.time() - self.original_start_time
-        
+
         # 세션 상태 저장
         self.save_session_state()
-        
+
         # 캐시 저장
         self.save_cache()
-        
-        # 스택 변화 통계 수집
-        stack_change_stats = {
-            "total_changes": 0,
-            "max_increase": 0,
-            "max_decrease": 0,
-            "functions_with_changes": set()
-        }
-        
-        # stack_analysis 디렉토리의 모든 파일 분석
-        stack_files = glob.glob(os.path.join(self.output_dir, "stack_analysis", "*.json"))
-        for stack_file in stack_files:
-            try:
-                with open(stack_file, 'r') as f:
-                    data = json.load(f)
-                    changes = data.get("stack_changes", {})
-                    
-                    for func in changes.get("increased", []):
-                        stack_change_stats["total_changes"] += 1
-                        stack_change_stats["max_increase"] = max(stack_change_stats["max_increase"], func["diff"])
-                        stack_change_stats["functions_with_changes"].add(func["function"])
-                        
-                    for func in changes.get("decreased", []):
-                        stack_change_stats["total_changes"] += 1
-                        stack_change_stats["max_decrease"] = max(stack_change_stats["max_decrease"], -func["diff"])
-                        stack_change_stats["functions_with_changes"].add(func["function"])
-            except:
-                pass
-        
+
+        # 최종 리포트
         report = {
             "session_info": {
                 "start_time": datetime.fromtimestamp(self.start_time).isoformat(),
@@ -765,7 +836,8 @@ class ConfigFuzzWafRunnerV2:
                 "total_tests": self.test_count,
                 "successful_builds": self.success_count,
                 "failed_builds": self.fail_count,
-                "success_rate": self.success_count / self.test_count * 100 if self.test_count > 0 else 0
+                "success_rate": self.success_count / self.test_count * 100 if self.test_count > 0 else 0,
+                "unique_stack_smash_count": self.unique_stack_smash_count
             },
             "performance": {
                 "tests_per_hour": self.test_count / (elapsed / 3600) if elapsed > 0 else 0,
@@ -775,22 +847,20 @@ class ConfigFuzzWafRunnerV2:
             },
             "stack_analysis": {
                 "threshold": self.stack_threshold,
-                "total_stack_changes": stack_change_stats["total_changes"],
-                "max_stack_increase": stack_change_stats["max_increase"],
-                "max_stack_decrease": stack_change_stats["max_decrease"],
-                "functions_with_changes": len(stack_change_stats["functions_with_changes"])
+                "unique_stack_smashes": self.unique_stack_smash_count,
+                "baseline_functions": len(self.baseline_stack_map)
             }
         }
-        
+
         # JSON 리포트
         report_path = os.path.join(self.output_dir, "final_report.json")
         with open(report_path, 'w') as f:
             json.dump(report, f, indent=2)
-            
+
         # 텍스트 리포트
         txt_report_path = os.path.join(self.output_dir, "final_report.txt")
         with open(txt_report_path, 'w') as f:
-            f.write("ConfigFuzz + Waf Integration v2 Report\n")
+            f.write("ConfigFuzz + Waf Integration v3 Report\n")
             f.write("=====================================\n\n")
             f.write(f"Duration: {report['session_info']['duration_formatted']}\n")
             f.write(f"Total tests: {self.test_count}\n")
@@ -798,27 +868,22 @@ class ConfigFuzzWafRunnerV2:
             f.write(f"Average rate: {report['performance']['tests_per_hour']:.1f} tests/hour\n")
             f.write(f"\nSuccessful builds: {self.success_count}\n")
             f.write(f"Failed builds: {self.fail_count}\n")
+            f.write(f"Unique stack smashes: {self.unique_stack_smash_count}\n")
             if self.use_cache:
                 f.write(f"Cache hits: {self.cache_hits} ({report['performance']['cache_hit_rate']:.1f}%)\n")
-            f.write(f"\nStack Analysis:\n")
-            f.write(f"  Threshold: {self.stack_threshold} bytes\n")
-            f.write(f"  Total stack changes: {stack_change_stats['total_changes']}\n")
-            f.write(f"  Max increase: {stack_change_stats['max_increase']} bytes\n")
-            f.write(f"  Max decrease: {stack_change_stats['max_decrease']} bytes\n")
-            f.write(f"  Functions affected: {len(stack_change_stats['functions_with_changes'])}\n")
-            
+
         self.log(f"\nFinal report saved to: {self.output_dir_name}/final_report.json")
-        
+
     def run(self):
         """메인 실행 루프"""
         if not self.resumed_session:
-            self.log("Starting ConfigFuzz + Waf fuzzing v2...")
+            self.log("Starting ConfigFuzz + Waf fuzzing v3 (ConfigFuzz Compatible)...")
         else:
-            self.log("Resuming ConfigFuzz + Waf fuzzing v2...")
-        
+            self.log("Resuming ConfigFuzz + Waf fuzzing v3...")
+
         # 초기 환경 설정
         os.chdir(self.ardupilot_path)
-        
+
         # Waf configure 실행 (새 세션일 때만)
         if not self.resumed_session:
             self.log("\nRunning waf configure...")
@@ -831,21 +896,21 @@ class ConfigFuzzWafRunnerV2:
             self.log("Waf configure successful")
         else:
             self.log("Skipping waf configure (resumed session)")
-        
+
         # 메인 루프
         try:
             while self.running and (time.time() - self.start_time) < self.timeout:
                 self.run_single_test()
-                
+
                 # 10개마다 상태 출력
                 if self.test_count % 10 == 0:
                     self.print_status()
-                    
+
                 # 20개마다 캐시와 세션 상태 저장
                 if self.test_count % 20 == 0:
                     self.save_cache()
                     self.save_session_state()
-                    
+
         except KeyboardInterrupt:
             self.log("\nInterrupted by user")
         except Exception as e:
@@ -859,6 +924,7 @@ class ConfigFuzzWafRunnerV2:
             else:
                 self.log(f"Success: {self.success_count}")
             self.log(f"Failed: {self.fail_count}")
+            self.log(f"Unique stack smashes: {self.unique_stack_smash_count}")
             if self.use_cache:
                 self.log(f"Cache hits: {self.cache_hits}")
             self.save_final_report()
@@ -867,34 +933,30 @@ class ConfigFuzzWafRunnerV2:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="ConfigFuzz + Waf Integration v2 with Resume Support",
+        description="ConfigFuzz + Waf Integration v3 (ConfigFuzz Compatible)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Start new session
-  python3 ardupilot_waf.py --hours 6
-  
+  python3 configfuzz_waf_runner_v3.py --hours 6
+
   # Resume previous session
-  python3 ardupilot_waf.py --resume output_waf_v2_20250812_135802 --hours 3
-  
-  # Resume with just directory name
-  python3 ardupilot_waf.py --resume output_waf_v2_20250812_135802
-  
+  python3 configfuzz_waf_runner_v3.py --resume output_waf_v3_20250812_135802 --hours 3
+
   # Other options
-  python3 ardupilot_waf.py --minutes 30      # Run for 30 minutes
-  python3 ardupilot_waf.pyy --no-cache        # Disable cache
-  python3 ardupilot_waf.py --threshold 256   # Use 256 byte threshold
+  python3 configfuzz_waf_runner_v3.py --minutes 30      # Run for 30 minutes
+  python3 configfuzz_waf_runner_v3.py --no-cache        # Disable cache
+  python3 configfuzz_waf_runner_v3.py --threshold 256   # Use 256 byte threshold
         """
     )
-    
-    # Resume argument
+
     parser.add_argument(
         "--resume",
         type=str,
         help="Resume from previous session directory"
     )
-    
-    # Time arguments (mutually exclusive)
+
+    # 시간 인자
     time_group = parser.add_mutually_exclusive_group()
     time_group.add_argument(
         "--hours",
@@ -911,24 +973,24 @@ Examples:
         type=int,
         help="Duration in seconds"
     )
-    
-    # Other arguments
+
+    # 기타 인자
     parser.add_argument(
         "--no-cache",
         action="store_true",
         help="Disable macro combination caching"
     )
-    
+
     parser.add_argument(
         "--threshold", "-t",
         type=int,
         default=512,
         help="Stack size threshold in bytes (default: 512)"
     )
-    
+
     args = parser.parse_args()
-    
-    # 시간 계산
+
+    # 타임아웃 계산
     if args.hours:
         timeout = int(args.hours * 3600)
     elif args.minutes:
@@ -936,15 +998,14 @@ Examples:
     elif args.seconds:
         timeout = args.seconds
     else:
-        # 기본값: 1시간
-        timeout = 3600
-        
+        timeout = 3600  # 기본값: 1시간
+
     # 캐시 설정
     use_cache = not args.no_cache
-    
-    # 실행
-    fuzzer = ConfigFuzzWafRunnerV2(
-        timeout_seconds=timeout, 
+
+    # 퍼저 실행
+    fuzzer = ConfigFuzzWafRunnerV3(
+        timeout_seconds=timeout,
         use_cache=use_cache,
         stack_threshold=args.threshold,
         resume_from=args.resume

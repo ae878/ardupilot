@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #149 */
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 1
+
+/* ConfigFuzz: AP_SRV_CHANNELS_ENABLED */
+#ifdef AP_SRV_CHANNELS_ENABLED
+#undef AP_SRV_CHANNELS_ENABLED
+#endif
+#define AP_SRV_CHANNELS_ENABLED 1
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 0
+
+/* ConfigFuzz: HAL_USE_SDMMC */
+#ifdef HAL_USE_SDMMC
+#undef HAL_USE_SDMMC
+#endif
+#define HAL_USE_SDMMC 1
+
+/* ConfigFuzz: MODE_DRIFT_ENABLED */
+#ifdef MODE_DRIFT_ENABLED
+#undef MODE_DRIFT_ENABLED
+#endif
+#define MODE_DRIFT_ENABLED 1
+
+/* ConfigFuzz: AP_CRASHDUMP_ENABLED */
+#ifdef AP_CRASHDUMP_ENABLED
+#undef AP_CRASHDUMP_ENABLED
+#endif
+#define AP_CRASHDUMP_ENABLED 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_GCS_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_AUTO_RTL_OR_RTL 0
+
+/* ConfigFuzz: AP_NOTIFY_DISCO_LED_ENABLED */
+#ifdef AP_NOTIFY_DISCO_LED_ENABLED
+#undef AP_NOTIFY_DISCO_LED_ENABLED
+#endif
+#define AP_NOTIFY_DISCO_LED_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

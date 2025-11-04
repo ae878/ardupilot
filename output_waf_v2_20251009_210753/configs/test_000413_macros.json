@@ -1,0 +1,10 @@
+{
+  "test_id": 413,
+  "timestamp": "2025-10-10T15:42:05.496481",
+  "macro_changes": {
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+    "HAL_INS_VRBRAIN": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0
+  }
+}

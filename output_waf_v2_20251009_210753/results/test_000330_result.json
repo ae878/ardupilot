@@ -1,0 +1,20 @@
+{
+  "test_id": 330,
+  "timestamp": "2025-10-10T11:50:14.697963",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 0,
+    "AP_CAMERA_ENABLED": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 27.762428045272827,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

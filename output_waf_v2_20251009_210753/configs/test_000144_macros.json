@@ -1,0 +1,9 @@
+{
+  "test_id": 144,
+  "timestamp": "2025-10-10T03:30:42.586210",
+  "macro_changes": {
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "AP_AIRSPEED_ENABLED": 0
+  }
+}

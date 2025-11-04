@@ -1,0 +1,10 @@
+{
+  "test_id": 33,
+  "timestamp": "2025-10-09T20:56:54.728505",
+  "macro_changes": {
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "HAL_GPIO_LED_ON": 1,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 8,
+    "AP_HAL_UARTDRIVER_ENABLED": 0
+  }
+}

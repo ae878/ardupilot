@@ -1,0 +1,13 @@
+{
+  "test_id": 241,
+  "timestamp": "2025-10-10T07:49:29.130436",
+  "macro_changes": {
+    "HAL_BUTTON_ENABLED": 1,
+    "HAL_GPIO_ALT": 0,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "TOY_MODE_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_INS_RATE_LOOP": 1
+  }
+}

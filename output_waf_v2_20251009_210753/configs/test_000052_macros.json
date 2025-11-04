@@ -1,0 +1,10 @@
+{
+  "test_id": 52,
+  "timestamp": "2025-10-09T23:26:19.416239",
+  "macro_changes": {
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 32,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1
+  }
+}

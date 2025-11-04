@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #92 */
+
+/* ConfigFuzz: HAL_RALLY_ENABLED */
+#ifdef HAL_RALLY_ENABLED
+#undef HAL_RALLY_ENABLED
+#endif
+#define HAL_RALLY_ENABLED 1
+
+/* ConfigFuzz: HAL_WITH_RAMTRON */
+#ifdef HAL_WITH_RAMTRON
+#undef HAL_WITH_RAMTRON
+#endif
+#define HAL_WITH_RAMTRON 0
+
+/* ConfigFuzz: HAL_INS_NONE */
+#ifdef HAL_INS_NONE
+#undef HAL_INS_NONE
+#endif
+#define HAL_INS_NONE 0
+
+/* ConfigFuzz: HAL_SERIAL_ESC_COMM_ENABLED */
+#ifdef HAL_SERIAL_ESC_COMM_ENABLED
+#undef HAL_SERIAL_ESC_COMM_ENABLED
+#endif
+#define HAL_SERIAL_ESC_COMM_ENABLED 1
+
+/* ConfigFuzz: HAL_SPRAYER_ENABLED */
+#ifdef HAL_SPRAYER_ENABLED
+#undef HAL_SPRAYER_ENABLED
+#endif
+#define HAL_SPRAYER_ENABLED 0
+
+/* ConfigFuzz: KDECAN_MAX_NUM_ESCS */
+#ifdef KDECAN_MAX_NUM_ESCS
+#undef KDECAN_MAX_NUM_ESCS
+#endif
+#define KDECAN_MAX_NUM_ESCS 8
+
+/* ConfigFuzz: HAL_WITH_IO_MCU_BIDIR_DSHOT */
+#ifdef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#undef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#endif
+#define HAL_WITH_IO_MCU_BIDIR_DSHOT 1
+
+/* ConfigFuzz: HAL_QUADPLANE_ENABLED */
+#ifdef HAL_QUADPLANE_ENABLED
+#undef HAL_QUADPLANE_ENABLED
+#endif
+#define HAL_QUADPLANE_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 0
+
+/* ConfigFuzz: AP_COPTER_ADVANCED_FAILSAFE_ENABLED */
+#ifdef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#undef AP_COPTER_ADVANCED_FAILSAFE_ENABLED
+#endif
+#define AP_COPTER_ADVANCED_FAILSAFE_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

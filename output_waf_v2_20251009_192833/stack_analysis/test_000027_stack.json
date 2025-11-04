@@ -1,0 +1,105 @@
+{
+  "test_id": 27,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [],
+    "removed_functions": [
+      {
+        "function": "../../ArduCopter/mode.h:852:17:virtual const char* ModeBrake::name4() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:837:12:virtual Mode::Number ModeBrake::mode_number() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:851:17:virtual const char* ModeBrake::name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:842:10:virtual bool ModeBrake::requires_GPS() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:843:10:virtual bool ModeBrake::has_manual_throttle() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:845:10:virtual bool ModeBrake::is_autopilot() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_brake.cpp:10:6:virtual bool ModeBrake::init(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_brake.cpp:82:6:void ModeBrake::timeout_to_loiter_ms(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:844:10:virtual bool ModeBrake::allows_arming(AP_Arming::Method) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_brake.cpp:35:6:virtual void ModeBrake::run()",
+        "stack_size": 56
+      }
+    ],
+    "increased": [],
+    "decreased": [],
+    "unchanged": 15906
+  },
+  "total_functions_analyzed": 15906
+}

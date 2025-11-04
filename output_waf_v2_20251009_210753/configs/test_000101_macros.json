@@ -1,0 +1,11 @@
+{
+  "test_id": 101,
+  "timestamp": "2025-10-10T01:39:05.357138",
+  "macro_changes": {
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "RANGEFINDER_MAX_INSTANCES": 8,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "HAL_MOUNT_ENABLED": 0,
+    "MAVLINK_ENABLED_ICAROUS": 1
+  }
+}

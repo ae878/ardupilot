@@ -1,0 +1,13 @@
+{
+  "test_id": 63,
+  "timestamp": "2025-10-13T18:38:18.669738",
+  "macro_changes": {
+    "AP_RADIO_ENABLED": 1,
+    "AP_INERTIALSENSOR_KILL_IMU_ENABLED": 1,
+    "AP_PERIPH_RANGEFINDER_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 108.20574641227722,
+  "build_result": false,
+  "error": "../../libraries/AP_Radio/driver_bk2425.cpp:43:2: error: #error This configuration is not supported."
+}

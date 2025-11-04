@@ -1,0 +1,11 @@
+{
+  "test_id": 168,
+  "timestamp": "2025-10-10T04:29:38.565155",
+  "macro_changes": {
+    "MODE_GUIDED_ENABLED": 1,
+    "FS_THR_DISABLED": 1,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "HAL_GPIO_INPUT": 1
+  }
+}

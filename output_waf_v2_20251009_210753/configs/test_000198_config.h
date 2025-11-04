@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #198 */
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 0
+
+/* ConfigFuzz: HAVE_ENUM_CAMERA_CAP_FLAGS */
+#ifdef HAVE_ENUM_CAMERA_CAP_FLAGS
+#undef HAVE_ENUM_CAMERA_CAP_FLAGS
+#endif
+#define HAVE_ENUM_CAMERA_CAP_FLAGS 1
+
+/* ConfigFuzz: HAL_BATT_CURR_PIN */
+#ifdef HAL_BATT_CURR_PIN
+#undef HAL_BATT_CURR_PIN
+#endif
+#define HAL_BATT_CURR_PIN 1
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_ENABLE_COUNTERS */
+#ifdef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#undef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#endif
+#define CONFIG_SPI_FLASH_ENABLE_COUNTERS 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_CSAIRLINK */
+#ifdef MAVLINK_ENABLED_CSAIRLINK
+#undef MAVLINK_ENABLED_CSAIRLINK
+#endif
+#define MAVLINK_ENABLED_CSAIRLINK 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_RTL
+#undef FS_GCS_ENABLED_ALWAYS_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_RTL 0
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 1
+
+/* ConfigFuzz: MODE_DRIFT_ENABLED */
+#ifdef MODE_DRIFT_ENABLED
+#undef MODE_DRIFT_ENABLED
+#endif
+#define MODE_DRIFT_ENABLED 1
+
+/* ConfigFuzz: MODE_SMARTRTL_ENABLED */
+#ifdef MODE_SMARTRTL_ENABLED
+#undef MODE_SMARTRTL_ENABLED
+#endif
+#define MODE_SMARTRTL_ENABLED 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 0
+
+#endif /* _AP_CONFIG_H_ */

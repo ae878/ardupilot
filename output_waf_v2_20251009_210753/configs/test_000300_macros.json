@@ -1,0 +1,11 @@
+{
+  "test_id": 300,
+  "timestamp": "2025-10-10T10:38:24.632802",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 1,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "HAL_INS_NONE": 0,
+    "HAL_CANFD_SUPPORTED": 1
+  }
+}

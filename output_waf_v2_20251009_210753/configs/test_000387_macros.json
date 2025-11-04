@@ -1,0 +1,13 @@
+{
+  "test_id": 387,
+  "timestamp": "2025-10-10T14:24:26.634472",
+  "macro_changes": {
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "KDECAN_MAX_NUM_ESCS": 16,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "MODE_ACRO_ENABLED": 1
+  }
+}

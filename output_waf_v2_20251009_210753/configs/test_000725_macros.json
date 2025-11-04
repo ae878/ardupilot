@@ -1,0 +1,14 @@
+{
+  "test_id": 725,
+  "timestamp": "2025-10-11T06:27:18.521677",
+  "macro_changes": {
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_HNF_MAX_FILTERS": 1,
+    "AP_RELAY_ENABLED": 1,
+    "HAL_PWM_COUNT": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0
+  }
+}

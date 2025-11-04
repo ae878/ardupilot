@@ -1,0 +1,16 @@
+{
+  "test_id": 871,
+  "timestamp": "2025-10-11T13:30:33.503013",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "HAL_WITH_DRONECAN": 1,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 103.68598198890686,
+  "build_result": false,
+  "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+}

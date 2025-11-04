@@ -1,0 +1,12 @@
+{
+  "test_id": 47,
+  "timestamp": "2025-10-09T23:12:48.089222",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "AP_ICENGINE_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "BENCH_DEFINE_MAP_EXPLICIT": 0,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0
+  }
+}

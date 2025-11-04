@@ -1,0 +1,10 @@
+{
+  "test_id": 142,
+  "timestamp": "2025-10-10T03:24:32.274183",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ALL": 0,
+    "AUTOTUNE_ENABLED": 1,
+    "HAL_BUTTON_ENABLED": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0
+  }
+}

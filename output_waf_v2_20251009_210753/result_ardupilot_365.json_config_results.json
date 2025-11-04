@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 366,
+    "timestamp": "2025-10-10T13:25:00.071868",
+    "macro_changes": {
+      "HAL_SPRAYER_ENABLED": 0,
+      "AP_SIGNED_FIRMWARE": 1,
+      "BENCH_DEFINE_MAP_EXPLICIT": 0,
+      "MODE_ACRO_ENABLED": 0,
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "HAL_HEATER_GPIO_ON": 0,
+      "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "MODE_AUTO_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 29.014922380447388,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_Camera_MAVLinkCamV2.cpp:26:49: error: 'CAMERA_CAP_FLAGS_CAPTURE_IMAGE' was not declared in this scope"
+  }
+]

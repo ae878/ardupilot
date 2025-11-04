@@ -1,0 +1,12 @@
+{
+  "test_id": 591,
+  "timestamp": "2025-10-10T23:57:17.026270",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "AP_SIM_ENABLED": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "AP_SIGNED_FIRMWARE": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": 312,
+  "timestamp": "2025-10-10T11:09:26.813710",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 1,
+    "HAL_GPIO_ALT": 1,
+    "HAL_USE_SDMMC": 0,
+    "HAL_INS_RATE_LOOP": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "HAL_USE_FATFS": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "AP_CRASHDUMP_ENABLED": 0
+  }
+}

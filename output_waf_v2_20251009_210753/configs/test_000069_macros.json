@@ -1,0 +1,11 @@
+{
+  "test_id": 69,
+  "timestamp": "2025-10-10T00:12:36.907184",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "AP_BEACON_ENABLED": 1,
+    "HAL_RALLY_ENABLED": 1
+  }
+}

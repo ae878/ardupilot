@@ -1,0 +1,670 @@
+{
+  "test_id": 178,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1224:6:bool AP_IOMCU::setup_mixing(int8_t, float, uint16_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1286:13:const char* AP_IOMCU::get_rc_protocol()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:426:6:void AP_Spektrum_Telem::calc_altitude()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:607:6:bool AP_Spektrum_Telem::_get_telem_data(uint8_t*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:524:6:bool AP_ICEngine::throttle_override(float&, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:364:6:void AP_Spektrum_Telem::calc_batt_mah()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1081:6:void AP_IOMCU::send_rc_protocols()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:549:6:void AP_Spektrum_Telem::calc_gps_status()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:992:6:void AP_IOMCU::set_output_mode(uint16_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:159:6:bool AP_IOMCU::recv_bytes(uint8_t*, uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:55:1:AP_Spektrum_Telem::AP_Spektrum_Telem()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:578:6:void AP_Spektrum_Telem::calc_esc()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:868:6:void AP_IOMCU::push()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:824:6:void AP_IOMCU::trigger_event(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:32:6:virtual bool AP_ExternalControl_Copter::set_global_position(const Location&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1200:6:void AP_IOMCU::soft_reboot()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1474:15:AP_IOMCU* AP::iomcu()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:496:6:void AP_Spektrum_Telem::calc_gps_location()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:109:6:virtual bool AP_Spektrum_Telem::is_packet_ready(uint8_t, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:116:6:void AP_IOMCU::thread_main()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1019:10:uint32_t AP_IOMCU::get_disabled_channels(uint32_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:444:6:void AP_Spektrum_Telem::calc_airspeed()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:331:6:void AP_Spektrum_Telem::calc_batt_volts(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:968:6:void AP_IOMCU::set_telem_request_mask(uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:856:10:uint16_t AP_IOMCU::read_channel(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:484:6:void AP_IOMCU::read_status()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:176:6:bool AP_Spektrum_Telem::repeat_msg_chunk()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:77:6:void AP_IOMCU::init()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:471:6:void AP_Spektrum_Telem::calc_attandmag()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:961:6:void AP_IOMCU::set_dshot_esc_type(AP_HAL::RCOutput::DshotEscType)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:598:8:size_t AP_IOMCU::write_wait(const uint8_t*, uint8_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:176:6:void AP_IOMCU::drain()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:809:6:void AP_IOMCU::write_channel(uint8_t, uint16_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1402:6:void AP_IOMCU::set_GPIO_mask(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:757:14:AP_ICEngine* AP::ice()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:977:6:void AP_IOMCU::send_dshot_command(uint8_t, uint8_t, uint32_t, uint16_t, bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:898:6:bool AP_IOMCU::enable_sbus_out(uint16_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:590:6:void AP_IOMCU::discard_input()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:260:6:bool AP_IOMCU::get_info(uint8_t, uint32_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:243:6:bool AP_IOMCU::sync()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:41:6:bool AP_ExternalControl_Copter::ready_for_external_control()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:622:6:static bool AP_Spektrum_Telem::get_telem_data(uint8_t*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:835:28:AP_HAL::Util::safety_state AP_IOMCU::get_safety_switch_state() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:321:6:void AP_Spektrum_Telem::send_msg_chunk(const AP_Spektrum_Telem::MessageChunk&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:875:6:void AP_IOMCU::set_freq(uint16_t, uint16_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:200:6:bool AP_IOMCU::send(const uint8_t*, uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1312:6:void AP_IOMCU::check_iomcu_reset()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:209:6:void AP_ICEngine::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.h:32:18:virtual bool AP_ExternalControl::set_global_position(const Location&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:280:6:void AP_Spektrum_Telem::calc_qos()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:431:6:bool AP_IOMCU::reboot()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:13:6:virtual bool AP_ExternalControl::disarm(AP_Arming::Method, bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:524:6:void AP_IOMCU::write_log()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:629:6:void AP_ICEngine::update_idle_governor(int8_t&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_IOMCU::thread_main; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.h:25:18:virtual bool AP_ExternalControl::set_linear_velocity_and_yaw_rate(const Vector3f&, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:702:6:void AP_ICEngine::set_ignition(bool)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1047:6:void AP_IOMCU::update_safety_options()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:589:6:bool AP_ICEngine::engine_control(float, float, float, uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:57:1:AP_IOMCU::AP_IOMCU(AP_HAL::UARTDriver&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:290:6:bool AP_IOMCU::program(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1038:7:void AP_IOMCU::disable_ch(uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:189:6:bool AP_IOMCU::send(uint8_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:841:6:bool AP_IOMCU::force_safety_on()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:908:6:bool AP_IOMCU::check_rcinput(uint32_t&, uint8_t&, uint16_t*, uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:943:6:void AP_IOMCU::set_brushed_mode()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:796:6:bool AP_IOMCU::modify_register(uint8_t, uint8_t, uint16_t, uint16_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1170:6:void AP_IOMCU::set_safety_mask(uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1437:9:uint8_t AP_IOMCU::read_virtual_GPIO(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1181:6:bool AP_IOMCU::healthy()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:300:6:void AP_ICEngine::update()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:27:21:AP_ExternalControl* AP::externalcontrol()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1030:7:void AP_IOMCU::enable_ch(uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:77:6:virtual void AP_Spektrum_Telem::setup_wfq_scheduler()",
+        "stack_size": 12
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:18:1:AP_ExternalControl::AP_ExternalControl()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1299:6:void AP_IOMCU::handle_repeated_failures()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:920:6:void AP_IOMCU::set_heater_duty_cycle(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:65:6:virtual bool AP_Spektrum_Telem::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:889:10:uint16_t AP_IOMCU::get_freq(uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:849:6:void AP_IOMCU::force_safety_off()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:735:6:bool AP_ICEngine::allow_throttle_while_disarmed() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:718:6:void AP_ICEngine::set_starter(bool)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:579:6:void AP_IOMCU::read_servo()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1189:6:void AP_IOMCU::shutdown()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1418:6:void AP_IOMCU::write_GPIO(uint8_t, bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:862:6:void AP_IOMCU::cork()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:295:6:void AP_Spektrum_Telem::calc_rpm()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1446:6:void AP_IOMCU::toggle_GPIO(uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:382:6:bool AP_IOMCU::verify_rev3(uint32_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:615:6:bool AP_IOMCU::read_registers(uint8_t, uint8_t, uint8_t, uint16_t*)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1095:6:bool AP_IOMCU::check_crc()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../ArduCopter/AP_ExternalControl_Copter.cpp:15:6:virtual bool AP_ExternalControl_Copter::set_linear_velocity_and_yaw_rate(const Vector3f&, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:66:6:bool AP_IOMCU::upload_fw()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:201:6:virtual bool AP_Spektrum_Telem::get_next_msg_chunk()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1380:6:bool AP_IOMCU::valid_GPIO_pin(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ExternalControl/AP_ExternalControl.cpp:8:6:virtual bool AP_ExternalControl::arm(AP_Arming::Method, bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:193:1:AP_ICEngine::AP_ICEngine()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:717:6:bool AP_IOMCU::write_registers(uint8_t, uint8_t, uint8_t, const uint16_t*)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1392:6:bool AP_IOMCU::convert_pin_number(uint8_t&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:284:6:void AP_ICEngine::do_aux_function(const RC_Channel::AuxFuncTrigger&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:60:1:virtual AP_Spektrum_Telem::~AP_Spektrum_Telem()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:290:6:0(uint32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:953:6:void AP_IOMCU::set_dshot_period(uint16_t, uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:417:6:void AP_Spektrum_Telem::calc_temperature(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:640:24:AP_Spektrum_Telem* AP::spektrum_telem()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:60:1:AP_Spektrum_Telem::~AP_Spektrum_Telem()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:125:6:virtual void AP_Spektrum_Telem::process_packet(uint8_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1152:6:void AP_IOMCU::set_failsafe_pwm(uint16_t, uint16_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1210:6:void AP_IOMCU::bind_dsm(uint8_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:328:6:bool AP_IOMCU::verify_rev2(uint32_t)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1412:9:uint8_t AP_IOMCU::get_GPIO_mask() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:927:6:void AP_IOMCU::set_default_rate(uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:403:6:void AP_IOMCU::read_rc_input()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1007:6:void AP_IOMCU::set_reversible_mask(uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:141:6:bool AP_IOMCU::recv_byte_with_timeout(uint8_t*, uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:217:6:bool AP_IOMCU::get_sync(uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:106:6:void AP_IOMCU::event_failed(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/fw_uploader.cpp:279:6:bool AP_IOMCU::erase()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:936:6:void AP_IOMCU::set_oneshot_mode()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:99:6:virtual void AP_Spektrum_Telem::adjust_packet_weight(bool)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:742:6:bool AP_ICEngine::get_legacy_ignition_relay_index(int8_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1013:31:AP_HAL::RCOutput::output_mode AP_IOMCU::get_output_mode(uint8_t&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:1000:6:void AP_IOMCU::set_bidir_dshot_mask(uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_ICEngine/AP_ICEngine.cpp:224:6:void AP_ICEngine::param_conversion()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:375:6:void AP_IOMCU::send_servo_out()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_RCTelemetry/AP_Spektrum_Telem.cpp:345:6:void AP_Spektrum_Telem::calc_batt_amps(uint8_t)",
+        "stack_size": 24
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:853:6:virtual void ChibiOS::RCOutput::read(uint16_t*, uint8_t)",
+        "baseline": 32,
+        "current": 0,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/RCOutput_serial.cpp:96:6:virtual void ChibiOS::RCOutput::send_dshot_command(uint8_t, uint8_t, uint32_t, uint16_t, bool)",
+        "baseline": 56,
+        "current": 32,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:1239:6:virtual void ChibiOS::RCOutput::set_telem_request_mask(uint32_t)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/RCInput.cpp:125:6:void ChibiOS::RCInput::_timer_tick()",
+        "baseline": 48,
+        "current": 32,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15759
+  },
+  "total_functions_analyzed": 15790
+}

@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #564 */
+
+/* ConfigFuzz: RC_OUTPUT_MAX_PULSEWIDTH */
+#ifdef RC_OUTPUT_MAX_PULSEWIDTH
+#undef RC_OUTPUT_MAX_PULSEWIDTH
+#endif
+#define RC_OUTPUT_MAX_PULSEWIDTH 2
+
+/* ConfigFuzz: AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED */
+#ifdef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#undef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#endif
+#define AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED 0
+
+/* ConfigFuzz: HAL_USE_FATFS */
+#ifdef HAL_USE_FATFS
+#undef HAL_USE_FATFS
+#endif
+#define HAL_USE_FATFS 1
+
+/* ConfigFuzz: HAL_GPIO_LED_ON */
+#ifdef HAL_GPIO_LED_ON
+#undef HAL_GPIO_LED_ON
+#endif
+#define HAL_GPIO_LED_ON 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_CSAIRLINK */
+#ifdef MAVLINK_ENABLED_CSAIRLINK
+#undef MAVLINK_ENABLED_CSAIRLINK
+#endif
+#define MAVLINK_ENABLED_CSAIRLINK 0
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS 1
+
+#endif /* _AP_CONFIG_H_ */

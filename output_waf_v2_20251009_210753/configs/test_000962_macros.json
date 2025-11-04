@@ -1,0 +1,9 @@
+{
+  "test_id": 962,
+  "timestamp": "2025-10-11T17:55:48.276792",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "AP_STATS_ENABLED": 0
+  }
+}

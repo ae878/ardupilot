@@ -1,0 +1,11 @@
+{
+  "test_id": 558,
+  "timestamp": "2025-10-10T22:29:14.298631",
+  "macro_changes": {
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 8,
+    "HAL_USB_VENDOR_ID": 1,
+    "HAL_GPIO_LED_ON": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0
+  }
+}

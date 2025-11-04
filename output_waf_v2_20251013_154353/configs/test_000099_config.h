@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #99 */
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_GY */
+#ifdef MPUREG_CONFIG_EXT_SYNC_GY
+#undef MPUREG_CONFIG_EXT_SYNC_GY
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_GY 0
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 0
+
+/* ConfigFuzz: HAL_NO_ROMFS_SUPPORT */
+#ifdef HAL_NO_ROMFS_SUPPORT
+#undef HAL_NO_ROMFS_SUPPORT
+#endif
+#define HAL_NO_ROMFS_SUPPORT 0
+
+/* ConfigFuzz: AP_PERIPH_IMU_ENABLED */
+#ifdef AP_PERIPH_IMU_ENABLED
+#undef AP_PERIPH_IMU_ENABLED
+#endif
+#define AP_PERIPH_IMU_ENABLED 0
+
+/* ConfigFuzz: AP_PERIPH_AIRSPEED_ENABLED */
+#ifdef AP_PERIPH_AIRSPEED_ENABLED
+#undef AP_PERIPH_AIRSPEED_ENABLED
+#endif
+#define AP_PERIPH_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: HAL_DSHOT_ENABLED */
+#ifdef HAL_DSHOT_ENABLED
+#undef HAL_DSHOT_ENABLED
+#endif
+#define HAL_DSHOT_ENABLED 1
+
+/* ConfigFuzz: AP_ADVANCEDFAILSAFE_ENABLED */
+#ifdef AP_ADVANCEDFAILSAFE_ENABLED
+#undef AP_ADVANCEDFAILSAFE_ENABLED
+#endif
+#define AP_ADVANCEDFAILSAFE_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

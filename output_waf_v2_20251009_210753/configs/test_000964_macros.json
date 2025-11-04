@@ -1,0 +1,10 @@
+{
+  "test_id": 964,
+  "timestamp": "2025-10-11T17:59:14.929126",
+  "macro_changes": {
+    "HAL_HNF_MAX_FILTERS": 8,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "HAL_UART_IOMCU_IDX": 0,
+    "MODE_THROW_ENABLED": 0
+  }
+}

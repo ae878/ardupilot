@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 723,
+    "timestamp": "2025-10-11T06:20:44.915314",
+    "macro_changes": {
+      "AP_BEACON_ENABLED": 1,
+      "MAVLINK_ENABLED_STANDARD": 1,
+      "HAL_HAVE_HARDWARE_DOUBLE": 0,
+      "BENCH_DEFINE_MAP_GEOMETRY": 0,
+      "HAL_SPRAYER_ENABLED": 1,
+      "AP_OPTICALFLOW_ENABLED": 1,
+      "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1,
+      "AP_SERIALMANAGER_ENABLED": 0,
+      "MAVLINK_ENABLED_COMMON": 0
+    },
+    "build_success": false,
+    "build_time": 10.398658990859985,
+    "build_result": false,
+    "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+  }
+]

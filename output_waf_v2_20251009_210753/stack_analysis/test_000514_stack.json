@@ -1,0 +1,1656 @@
+{
+  "test_id": 514,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1528:6:virtual void AC_AutoTune_Heli::Log_AutoTune()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Multi.cpp:1106:6:void AC_AutoTune_Multi::Log_Write_AutoTune(AC_AutoTune::AxisType, uint8_t, float, float, float, float, float, float, float)",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli.cpp:627:7:float AP_MotorsHeli::get_cyclic_angle_scaler() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP2.cpp:519:1:void AP_GPS_SBP2::logging_ext_event()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Multi.h:126:10:virtual void AC_AutoTune_Multi::Log_AutoTuneSweep()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:296:6:void Copter::Log_Write_SysID_Setup(uint8_t, float, float, float, float, float, float, float)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::Log_Video_Stabilisation; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:174:6:void AP_Logger::handle_log_request_end(GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::loop_rate_logging; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/terrain.cpp:22:6:void Copter::terrain_logging()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RangeFinder/AP_RangeFinder.cpp:808:6:0() const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_HAL/UARTDriver.cpp:198:6:void AP_HAL::UARTDriver::log_stats(uint8_t, AP_HAL::UARTDriver::StatsTracker&, uint32_t)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:40:6:void AP_OADijkstra::Write_OADijkstra(uint8_t, uint8_t, uint8_t, uint8_t, const Location&, const Location&) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_Logging.cpp:44:6:void AP_Baro::Write_Baro()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:309:6:void AP_Logger_MAVLink::stats_init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:474:6:virtual void AP_Logger_MAVLink::push_log_blocks()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS.cpp:1676:6:void AP_GPS::Write_AP_Logger_Log_Startup_messages()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:579:6:void Copter::Log_Write_Vehicle_Startup_Messages()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::Log_Write_Vehicle_Startup_Messages; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_AttitudeControl_Logging.cpp:12:6:void AC_AttitudeControl::Write_ANG() const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:193:6:void AP_Logger_MAVLink::free_all_blocks()",
+        "stack_size": 12
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::twentyfive_hz_logging; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:82:6:void AP_AHRS::Write_POS() const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP2.cpp:471:1:void AP_GPS_SBP2::logging_log_raw_sbp(uint16_t, uint16_t, uint8_t, uint8_t*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:310:6:void NavEKF2_core::Log_Write(uint64_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_FuelCell.h:93:18:virtual void AP_Generator_IE_FuelCell::log_write()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:45:6:static void AC_PosControl::Write_PSOx(LogMessages, float, float, float, float, float, float)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1699:10:virtual bool ModeSystemId::logs_attitude() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Autorotation/AC_Autorotation.cpp:416:6:void AC_Autorotation::log_write_autorotation() const",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:169:6:void AP_InertialSensor::write_notch_log_messages() const",
+        "stack_size": 168
+      },
+      {
+        "function": "../../libraries/AP_Winch/AP_Winch_Daiwa.cpp:91:6:virtual void AP_Winch_Daiwa::write_log()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:228:6:void AP_Logger_MAVLink::handle_ack(const GCS_MAVLINK&, const mavlink_message_t&, uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:498:6:void AP_Logger_MAVLink::do_resends(uint32_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:51:10:virtual void AP_Logger_MAVLink::get_log_info(uint16_t, uint32_t&, uint32_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/system.cpp:347:6:bool Copter::should_log(uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:11:6:void NavEKF2_core::Log_Write_NKF1(uint64_t) const",
+        "stack_size": 152
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:28:1:AP_Logger_MAVLink::AP_Logger_MAVLink(AP_Logger&, LoggerMessageWriter_DFLogStart*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:104:6:bool AP_Logger_Backend::Write_Format_Units(const LogStructure*)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:67:9:uint8_t AP_Logger_MAVLink::remaining_space_in_current_block() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:286:6:void NavEKF2::Log_Write()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:132:6:virtual bool AP_Logger_MAVLink::_WritePrioritisedBlock(const void*, uint16_t, bool)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1709:17:virtual const char* ModeSystemId::name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:82:6:void Copter::Log_Write_Rate()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:179:37:AP_Logger_MAVLink::dm_block* AP_Logger_MAVLink::next_block()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:402:6:void ModeSystemId::log_data() const",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:167:10:virtual void AP_Logger_MAVLink::start_new_log()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1696:10:virtual bool ModeSystemId::has_manual_throttle() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:189:6:void NavEKF2_core::Log_Write_Quaternion(uint64_t) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:743:6:void AP_Mount::write_log(uint8_t, uint64_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:62:6:static void AC_PosControl::Write_PSON(float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:281:6:void AP_OpticalFlow::Log_Write_Optflow()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP.cpp:420:1:void AP_GPS_SBP::logging_log_raw_sbp(uint16_t, uint16_t, uint8_t, uint8_t*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/ControlMonitor.cpp:44:6:void AC_AttitudeControl::control_monitor_log() const",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Winch/AP_Winch_PWM.cpp:97:6:virtual void AP_Winch_PWM::write_log()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:557:6:0(AP_Logger_MAVLink::dm_block&)",
+        "stack_size": 544
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:85:6:void AP_InertialSensor::BatchSampler::periodic()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli_Quad.cpp:273:6:virtual void AP_MotorsHeli_Quad::Log_Write()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:557:6:bool AP_Logger_MAVLink::send_log_block(AP_Logger_MAVLink::dm_block&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1698:10:virtual bool ModeSystemId::is_autopilot() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:513:6:void AP_Logger::Write_Winch(bool, bool, bool, bool, uint8_t, float, float, float, uint16_t, float, int8_t)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:52:13:virtual int16_t AP_Logger_MAVLink::get_log_data(uint16_t, uint16_t, uint32_t, uint16_t, uint8_t*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:114:6:bool AP_Logger_Backend::Write_Parameter(const char*, float, float)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:327:6:bool AP_Logger_Backend::Write_EntireMission()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:399:6:0()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:86:6:void NavEKF2_core::Log_Write_NKF3(uint64_t) const",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:161:6:void NavEKF2_core::Log_Write_NKF5(uint64_t) const",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:317:6:void AP_OpticalFlow_Calibrator::log_sample(uint8_t, uint8_t, float, float, float)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:103:6:void Copter::Log_Write_EKF_POS()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:58:6:virtual bool AP_Logger_MAVLink::logging_failed() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:432:6:void AP_Logger::Write_Compass()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:274:6:virtual void AP_Logger_MAVLink::remote_log_block_status_msg(const GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:163:6:void AP_Logger::handle_log_request_erase(GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:154:6:virtual void ModeSystemId::exit()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:536:6:virtual void AP_Logger_MAVLink::periodic_1Hz()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/Util.cpp:673:6:virtual void ChibiOS::Util::uart_log()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP2.cpp:451:1:void AP_GPS_SBP2::logging_log_full_update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:442:6:bool AP_Logger_Backend::Write_Mode(uint8_t, ModeReason)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../ArduCopter/mode_autotune.cpp:92:6:virtual void AutoTune::log_pids()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:37:6:virtual void AP_Logger_MAVLink::Init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:207:6:void NavEKF2_core::Log_Write_Beacon(uint64_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:53:10:virtual void AP_Logger_MAVLink::end_log_transfer()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:245:6:bool AP_InertialSensor::BatchSampler::should_log(uint8_t, AP_InertialSensor::IMU_SENSOR_TYPE)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:76:6:virtual bool ModeSystemId::init(bool)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:117:6:void Copter::Log_Write_Data(LogDataID, int16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Logging.cpp:12:6:void AP_BattMonitor_Backend::Log_Write_BAT(uint8_t, uint64_t) const",
+        "stack_size": 88
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:404:6:void Copter::Log_Write_Rate_Thread_Dt(float, float, float, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_CANManager::check_logging_enable; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Copter.cpp:649:6:void Copter::ten_hz_logging_loop()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli_Single.cpp:674:6:virtual void AP_MotorsHeli_Single::Log_Write()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:220:6:virtual void AP_Logger_MAVLink::stop_logging()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:83:6:static void AC_PosControl::Write_PSOT(float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli_RSC.cpp:600:6:void AP_MotorsHeli_RSC::write_log() const",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:497:6:void AP_Logger::Write_SRTL(bool, uint16_t, uint16_t, uint8_t, const Vector3f&)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_EFI/AP_EFI_Serial_Hirth.cpp:360:6:void AP_EFI_Serial_Hirth::log_status()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:52:6:void AP_AHRS::Write_Attitude(const Vector3f&) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/Filter/NotchFilter.cpp:140:7:float NotchFilter<T>::logging_frequency() const [with T = float]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:394:9:uint8_t AP_Logger_MAVLink::queue_size(AP_Logger_MAVLink::dm_block_queue_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:74:6:void AC_Avoid::Write_SimpleAvoidance(uint8_t, const Vector3f&, const Vector3f&, bool) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:59:6:bool AP_Logger_Backend::Write_Format(const LogStructure*)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:126:6:void AP_AHRS_View::Write_AttitudeView(const Vector3f&) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:406:6:void AP_Beacon::log()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:81:6:void AP_InertialSensor::Write_Vibration() const",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:330:6:0(AP_Logger_MAVLink&)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:416:6:void AP_Mount_Backend::write_log(uint64_t)",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1556:6:virtual void AC_AutoTune_Heli::Log_AutoTuneSweep()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1695:10:virtual bool ModeSystemId::requires_GPS() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:13:6:void AP_AHRS::Write_AHRS2() const",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Multi.cpp:1127:6:void AC_AutoTune_Multi::Log_Write_AutoTuneDetails(float, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1599:6:void AC_AutoTune_Heli::Log_Write_AutoTuneDetails(float, float, float, float, float)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:181:6:void AP_InertialSensor::BatchSampler::push_data_to_log()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_NMEA.cpp:961:6:virtual void AP_GPS_NMEA::Write_AP_Logger_Log_Startup_messages() const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:28:6:void AP_Logger_Backend::Fill_Format(const LogStructure*, log_Format&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1577:6:void AC_AutoTune_Heli::Log_Write_AutoTune(AC_AutoTune::AxisType, uint8_t, float, float, float, float, float, float, float, float)",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:121:6:virtual bool AP_Logger_MAVLink::WritesOK() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:11:6:static void AC_PosControl::Write_PSCx(LogMessages, float, float, float, float, float, float, float, float, float)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_CANManager/AP_CANManager.cpp:746:6:void AP_CANManager::check_logging_enable()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_RangeFinder/AP_RangeFinder.cpp:808:6:void RangeFinder::Log_RFND() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:44:10:virtual void AP_Logger_MAVLink::EraseAll()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Multi.cpp:1050:6:virtual void AC_AutoTune_Multi::Log_AutoTune()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_BattMonitor/AP_BattMonitor_Logging.cpp:46:6:void AP_BattMonitor_Backend::Log_Write_BCL(uint8_t, uint64_t) const",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:250:6:void AP_Logger::handle_log_send_listing()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:429:6:bool ModeSystemId::is_poscontrol_axis_type() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:41:10:virtual bool AP_Logger_MAVLink::CardInserted() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:39:6:static void AC_PosControl::Write_PSCD(float, float, float, float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:161:6:0(uint64_t) const",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:331:6:void NavEKF2_core::Log_Write_GSF(uint64_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_TemperatureSensor/AP_TemperatureSensor_Backend.cpp:44:6:void AP_TemperatureSensor_Backend::Log_Write_TEMP() const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_Motors_Class.h:326:18:virtual void AP_Motors::Log_Write()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_EFI/AP_EFI.cpp:165:6:void AP_EFI::log_status()",
+        "stack_size": 152
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:335:6:bool AP_Logger_Backend::Write_Message(const char*)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP.cpp:401:1:void AP_GPS_SBP::logging_log_full_update()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:73:6:bool AP_Logger_Backend::Write_Unit(const UnitStructure*)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:34:6:void AP_Logger::handle_log_message(GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1625:6:void AC_AutoTune_Heli::Log_Write_AutoTuneSweep(float, float, float, float, float, float)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:44:6:void AP_Logger_Backend::Fill_Format_Units(const LogStructure*, log_Format_Units&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:192:6:void AP_Logger::handle_log_send()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp:99:6:void AP_Servo_Telem::write_log()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/land_detector.cpp:174:6:void Copter::Log_LDET(uint16_t, uint32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:57:10:virtual void AP_Logger_MAVLink::vehicle_was_disarmed()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:52:6:void NavEKF2_core::Log_Write_NKF2(uint64_t) const",
+        "stack_size": 104
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:574:9:virtual uint8_t Copter::get_num_log_structures() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:258:6:void NavEKF2_core::Log_Write_Timing(uint64_t)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_Logging.cpp:50:6:void AP_VisualOdom_Backend::Write_VisualVelocity(uint64_t, uint32_t, const Vector3f&, uint8_t, bool, int8_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:76:6:static void AC_PosControl::Write_PSOD(float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:386:6:void Copter::Log_Write_Guided_Attitude_Target(ModeGuided::SubMode, float, float, float, const Vector3f&, float, float)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:117:10:virtual bool AP_Logger_MAVLink::logging_enabled() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:287:6:bool AP_Logger::handle_log_send_data()",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:399:6:void AP_Logger_MAVLink::stats_collect()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:108:6:bool AP_Logger_MAVLink::free_seqno_from_queue(uint32_t, AP_Logger_MAVLink::dm_block_queue_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:70:6:void AP_InertialSensor::Write_IMU() const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:274:6:void AP_InertialSensor::BatchSampler::sample(uint8_t, AP_InertialSensor::IMU_SENSOR_TYPE, uint64_t, const Vector3f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Baro/AP_Baro_Logging.cpp:9:6:void AP_Baro::Write_Baro_instance(uint64_t, uint8_t)",
+        "stack_size": 104
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:12:6:void AP_Camera_Backend::Write_CameraInfo(LogMessages, uint64_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/Filter/NotchFilter.cpp:140:7:float NotchFilter<T>::logging_frequency() const [with T = Vector2<float>]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RPM/AP_RPM.cpp:306:6:void AP_RPM::Log_RPM() const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:50:10:virtual void AP_Logger_MAVLink::get_log_boundaries(uint16_t, uint32_t&, uint32_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:456:6:void AP_Logger::Write_PID(uint8_t, const AP_PIDInfo&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:29:6:static void AC_PosControl::Write_PSCN(float, float, float, float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_CANManager/AP_CANManager.cpp:716:6:void AP_CANManager::can_logging_callback(uint8_t, const AP_HAL::CANFrame&, AP_HAL::CANIface::CanIOFlags)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS.cpp:1882:6:void AP_GPS::Write_GPS(uint8_t)",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:46:10:virtual void AP_Logger_MAVLink::PrepForArming()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:330:6:void AP_Logger_MAVLink::Write_logger_MAV(AP_Logger_MAVLink&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:32:10:virtual bool AP_Logger_MAVLink::logging_started() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:39:6:void AP_AHRS::Write_AOA_SSA() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:130:6:bool AP_Logger_Backend::Write_Parameter(const AP_Param*, const AP_Param::ParamToken&, ap_var_type, float)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:162:6:virtual void ModeSystemId::run()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:262:6:void Copter::Log_Write_SysID_Data(float, float, float, float, float, float, float, float, float)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:346:6:void AP_Logger::Write_Power()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount.cpp:733:6:void AP_Mount::write_log()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:68:6:void AP_AHRS::Write_Origin(AP_AHRS::LogOriginType, const Location&) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:95:6:void AP_InertialSensor::BatchSampler::update_doing_sensor_rate_logging()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsMulticopter.cpp:389:6:virtual void AP_MotorsMulticopter::Log_Write()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:68:6:void AP_Logger::handle_log_request_list(GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:182:6:void AP_Logger::end_log_transfer()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1710:17:virtual const char* ModeSystemId::name4() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:314:6:void AP_Logger_MAVLink::stats_reset()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Copter.h:899:21:virtual const AP_Int32& Copter::get_log_bitmask()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1697:10:virtual bool ModeSystemId::allows_arming(AP_Arming::Method) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/GCS_MAVLink_Copter.h:64:14:virtual uint32_t GCS_MAVLINK_Copter::log_radio_bit() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:215:6:void AP_Logger::handle_log_sending()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:361:6:void Copter::Log_Write_Guided_Position_Target(ModeGuided::SubMode, const Vector3f&, bool, const Vector3f&, const Vector3f&)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:44:6:void AP_InertialSensor::Write_IMU_instance(uint64_t, uint8_t) const",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli_Dual.cpp:589:6:virtual void AP_MotorsHeli_Dual::Log_Write()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:77:6:void Copter::Log_Write_Attitude()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:225:6:void Copter::Log_Write_Parameter_Tuning(uint8_t, float, float, float)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:50:6:void AP_InertialSensor::BatchSampler::init()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:274:6:void AP_Logger::Write_Command(const mavlink_command_int_t&, uint8_t, uint8_t, MAV_RESULT, bool)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_AttitudeControl_Logging.cpp:31:6:void AC_AttitudeControl::Write_Rate(const AC_PosControl&) const",
+        "stack_size": 168
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_IE_2400.cpp:458:6:virtual void AP_Generator_IE_2400::log_write()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/BatchSampler.cpp:118:6:void AP_InertialSensor::BatchSampler::rotate_to_next_sensor()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:28:6:void AP_InertialSensor_Backend::Write_GYR(uint8_t, uint64_t, const Vector3f&, bool) const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:874:6:void AP_SmartRTL::log_action(AP_SmartRTL::Action, const Vector3f&) const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:389:6:void AP_Logger::Write_Radio(const mavlink_radio_t&)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:531:6:virtual void AP_Logger_MAVLink::periodic_10Hz(uint32_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:12:6:void AP_OABendyRuler::Write_OABendyRuler(uint8_t, bool, float, float, bool, float, const Location&, const Location&) const",
+        "stack_size": 104
+      },
+      {
+        "function": "../../ArduCopter/Copter.h:900:32:virtual const LogStructure* Copter::get_log_structures() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Copter.cpp:713:6:void Copter::twentyfive_hz_logging()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_Logging.cpp:27:6:void AP_VisualOdom_Backend::Write_VisualPosition(uint64_t, uint32_t, float, float, float, float, float, float, float, float, uint8_t, bool, int8_t)",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AP_WheelEncoder/AP_WheelEncoder.cpp:206:6:void AP_WheelEncoder::Log_Write() const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:88:6:void AP_Camera_Backend::Write_Trigger()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode_systemid.cpp:68:1:ModeSystemId::ModeSystemId()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:12:6:void AP_InertialSensor_Backend::Write_ACC(uint8_t, uint64_t, const Vector3f&) const",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:54:14:virtual uint16_t AP_Logger_MAVLink::get_num_logs()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli_Swash.cpp:293:6:void AP_MotorsHeli_Swash::write_log(float, float, float, int16_t, int16_t) const",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:405:6:void AP_Logger::Write_Compass_instance(uint64_t, uint8_t)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_LandingGear/AP_LandingGear.cpp:308:6:void AP_LandingGear::log_wow_state(AP_LandingGear::LG_WOW_State)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../ArduCopter/Copter.cpp:628:6:void Copter::loop_rate_logging()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:72:6:void AP_Logger_MAVLink::enqueue_block(AP_Logger_MAVLink::dm_block_queue_t&, AP_Logger_MAVLink::dm_block*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:160:6:void Copter::Log_Write_Data(LogDataID, int32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/Filter/NotchFilter.cpp:140:7:float NotchFilter<T>::logging_frequency() const [with T = Vector3<float>]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AC_Avoidance_Logging.cpp:59:6:void AP_OADijkstra::Write_Visgraph_point(uint8_t, uint8_t, int32_t, int32_t) const",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:453:6:bool AP_Logger_MAVLink::send_log_blocks_from_queue(AP_Logger_MAVLink::dm_block_queue_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::ten_hz_logging_loop; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:302:6:bool AP_Logger_Backend::Write_Mission_Cmd(const AP_Mission&, const AP_Mission::Mission_Command&, LogMessages)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:12:6:0(LogMessages, uint64_t)",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:355:6:void AP_Logger_MAVLink::stats_log()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:239:6:void Copter::Log_Video_Stabilisation()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:63:10:virtual uint32_t AP_Logger_MAVLink::bufferspace_available()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:27:6:void Copter::Log_Write_Control_Tuning()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:89:6:bool AP_Logger_Backend::Write_Multiplier(const MultiplierStructure*)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:116:6:void NavEKF2_core::Log_Write_NKF4(uint64_t) const",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Generator/AP_Generator_RichenPower.cpp:321:6:void AP_Generator_RichenPower::Log_Write()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:88:6:void Copter::Log_Write_PIDS()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Proximity/AP_Proximity.cpp:497:6:void AP_Proximity::log()",
+        "stack_size": 240
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:203:6:void Copter::Log_Write_Data(LogDataID, float)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLinkLogTransfer.cpp:107:6:void AP_Logger::handle_log_request_data(GCS_MAVLINK&, const mavlink_message_t&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:34:6:static void AC_PosControl::Write_PSCE(float, float, float, float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AttitudeControl/AC_PosControl_Logging.cpp:69:6:static void AC_PosControl::Write_PSOE(float, float, float, float, float, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:139:6:void Copter::Log_Write_Data(LogDataID, uint16_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1689:12:virtual Mode::Number ModeSystemId::mode_number() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:296:6:void AP_Logger_MAVLink::handle_retry(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Backend.cpp:449:6:void AP_Camera_Backend::log_picture()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_UBLOX.cpp:2231:6:virtual void AP_GPS_UBLOX::Write_AP_Logger_Log_Startup_messages() const",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Multi.cpp:1086:6:virtual void AC_AutoTune_Multi::Log_AutoTuneDetails()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:128:6:bool AP_InertialSensor::BatchSampler::Write_ISBD() const",
+        "stack_size": 224
+      },
+      {
+        "function": "../../libraries/AP_Servo_Telem/AP_Servo_Telem.cpp:99:6:0()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_GPS/GPS_Backend.cpp:168:6:bool AP_GPS_Backend::should_log() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:142:6:void AP_Logger::Write_RCIN()",
+        "stack_size": 112
+      },
+      {
+        "function": "../../libraries/AP_Tuning/AP_Tuning.cpp:250:6:void AP_Tuning::Log_Write_Parameter_Tuning(float)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_NavEKF/EKFGSF_Logging.cpp:9:6:void EKFGSF_yaw::Log_Write(uint64_t, LogMessages, LogMessages, uint8_t)",
+        "stack_size": 152
+      },
+      {
+        "function": "../../libraries/AP_Winch/AP_Winch.cpp:167:1:void AP_Winch::write_log()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS.cpp:829:6:bool AP_GPS::should_log() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.h:49:14:virtual uint16_t AP_Logger_MAVLink::find_last_log()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_Logging.cpp:82:6:void AP_Camera_Backend::Write_Camera(uint64_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_AHRS/AP_AHRS_Logging.cpp:103:6:void AP_AHRS::write_video_stabilisation() const",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_CANManager::can_logging_callback; RetType = void; Args = {unsigned char, const AP_HAL::CANFrame&, short unsigned int}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Logging.cpp:105:6:bool AP_InertialSensor::BatchSampler::Write_ISBH(float) const",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:386:9:uint8_t AP_Logger_MAVLink::stack_size(AP_Logger_MAVLink::dm_block*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1546:6:virtual void AC_AutoTune_Heli::Log_AutoTuneDetails()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Logger/AP_Logger_MAVLink.cpp:82:37:AP_Logger_MAVLink::dm_block* AP_Logger_MAVLink::dequeue_seqno(AP_Logger_MAVLink::dm_block_queue_t&, uint32_t)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/Log.cpp:181:6:void Copter::Log_Write_Data(LogDataID, uint32_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_SurfaceDistance/AP_SurfaceDistance.cpp:148:6:void AP_SurfaceDistance::Log_Write() const",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_Logging.cpp:9:6:void AP_VisualOdom_Backend::Write_VisualOdom(float, const Vector3f&, const Vector3f&, float)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:187:6:void AP_Logger::Write_RCOUT()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_GPS/GPS_Backend.cpp:161:6:virtual void AP_GPS_Backend::Write_AP_Logger_Log_Startup_messages() const",
+        "stack_size": 64
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:3674:6:void GCS_MAVLINK::handle_statustext(const mavlink_message_t&) const",
+        "baseline": 168,
+        "current": 0,
+        "diff": -168
+      },
+      {
+        "function": "../../libraries/AP_ExternalAHRS/AP_ExternalAHRS.cpp:378:6:void AP_ExternalAHRS::update()",
+        "baseline": 160,
+        "current": 16,
+        "diff": -144
+      },
+      {
+        "function": "../../libraries/AP_ExternalAHRS/AP_ExternalAHRS_VectorNav.cpp:525:6:void AP_ExternalAHRS_VectorNav::process_imu_packet(const uint8_t*)",
+        "baseline": 208,
+        "current": 64,
+        "diff": -144
+      },
+      {
+        "function": "../../libraries/AP_ExternalAHRS/AP_ExternalAHRS_VectorNav.cpp:495:6:void AP_ExternalAHRS_VectorNav::write_vnat(const AP_ExternalAHRS_VectorNav::VNAT&) const",
+        "baseline": 128,
+        "current": 0,
+        "diff": -128
+      },
+      {
+        "function": "../../libraries/AP_RCProtocol/AP_RCProtocol_Backend.cpp:179:6:void AP_RCProtocol_Backend::log_data(AP_RCProtocol::rcprotocol_t, uint32_t, const uint8_t*, uint8_t) const",
+        "baseline": 128,
+        "current": 0,
+        "diff": -128
+      },
+      {
+        "function": "../../libraries/AP_ExternalAHRS/AP_ExternalAHRS_VectorNav.cpp:624:6:void AP_ExternalAHRS_VectorNav::process_ins_ekf_packet(const uint8_t*)",
+        "baseline": 168,
+        "current": 56,
+        "diff": -112
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:352:6:void ModeFlowHold::update_height_estimate()",
+        "baseline": 200,
+        "current": 88,
+        "diff": -112
+      },
+      {
+        "function": "../../libraries/AP_ESC_Telem/AP_ESC_Telem.cpp:669:6:void AP_ESC_Telem::update()",
+        "baseline": 144,
+        "current": 40,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_GPS.cpp:14:6:void AP_DAL_GPS::start_frame()",
+        "baseline": 160,
+        "current": 56,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/AC_Autorotation/AC_Autorotation.cpp:310:6:void AC_Autorotation::update_forward_speed_controller(float)",
+        "baseline": 144,
+        "current": 40,
+        "diff": -104
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:3708:6:void GCS_MAVLINK::handle_named_value(const mavlink_message_t&) const",
+        "baseline": 104,
+        "current": 0,
+        "diff": -104
+      },
+      {
+        "function": "../../ArduCopter/mode_throw.cpp:35:6:virtual void ModeThrow::run()",
+        "baseline": 152,
+        "current": 56,
+        "diff": -96
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_tempcal.cpp:271:6:void AP_InertialSensor_TCal::Learn::add_sample(const Vector3f&, float, AP_InertialSensor_TCal::Learn::LearnState&)",
+        "baseline": 120,
+        "current": 24,
+        "diff": -96
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:413:6:void AP_DAL::writeBodyFrameOdom(float, const Vector3f&, const Vector3f&, float, uint32_t, uint16_t, const Vector3f&)",
+        "baseline": 104,
+        "current": 12,
+        "diff": -92
+      },
+      {
+        "function": "../../libraries/AP_DroneCAN/AP_DroneCAN_DNA_Server.cpp:370:6:void AP_DroneCAN_DNA_Server::handleNodeInfo(const CanardRxTransfer&, const uavcan_protocol_GetNodeInfoResponse&)",
+        "baseline": 104,
+        "current": 16,
+        "diff": -88
+      },
+      {
+        "function": "../../libraries/AP_DroneCAN/AP_DroneCAN.cpp:1934:6:void AP_DroneCAN::logging()",
+        "baseline": 88,
+        "current": 0,
+        "diff": -88
+      },
+      {
+        "function": "../../libraries/AP_GPS/GPS_Backend.cpp:328:6:bool AP_GPS_Backend::calculate_moving_base_yaw(AP_GPS::GPS_State&, float, float, float)",
+        "baseline": 240,
+        "current": 152,
+        "diff": -88
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:344:6:void AP_DAL::writeOptFlowMeas(uint8_t, const Vector2f&, const Vector2f&, uint32_t, const Vector3f&, float)",
+        "baseline": 88,
+        "current": 4,
+        "diff": -84
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:400:6:void AP_DAL::writeWheelOdom(float, float, uint32_t, const Vector3f&, float)",
+        "baseline": 80,
+        "current": 0,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:359:6:void AP_DAL::writeExtNavData(const Vector3f&, const Quaternion&, float, float, uint32_t, uint16_t, uint32_t)",
+        "baseline": 96,
+        "current": 16,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_UBLOX.cpp:863:6:void AP_GPS_UBLOX::log_tim_tm2()",
+        "baseline": 80,
+        "current": 0,
+        "diff": -80
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/Scheduler.cpp:854:6:static void ChibiOS::Scheduler::try_force_mutex()",
+        "baseline": 72,
+        "current": 0,
+        "diff": -72
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:118:6:void ModeFlowHold::flowhold_flow_to_angle(Vector2f&, bool)",
+        "baseline": 136,
+        "current": 64,
+        "diff": -72
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/Scheduler.cpp:415:6:static void ChibiOS::Scheduler::_monitor_thread(void*)",
+        "baseline": 96,
+        "current": 32,
+        "diff": -64
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/Util.cpp:758:6:virtual void ChibiOS::Util::log_stack_info()",
+        "baseline": 64,
+        "current": 0,
+        "diff": -64
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:25:6:void AP_DAL::start_frame(AP_DAL::FrameType)",
+        "baseline": 88,
+        "current": 24,
+        "diff": -64
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_Compass.cpp:15:6:void AP_DAL_Compass::start_frame()",
+        "baseline": 80,
+        "current": 24,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:386:6:void AP_DAL::writeExtNavVelData(const Vector3f&, float, uint32_t, uint16_t)",
+        "baseline": 64,
+        "current": 8,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AC_Autorotation/AC_Autorotation.cpp:230:6:void AC_Autorotation::update_headspeed_controller()",
+        "baseline": 80,
+        "current": 24,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:374:6:void AP_DAL::log_SetLatLng(const Location&, float, uint32_t)",
+        "baseline": 56,
+        "current": 0,
+        "diff": -56
+      },
+      {
+        "function": "../../libraries/AP_BoardConfig/IMU_heater.cpp:34:6:void AP_BoardConfig::set_imu_temp(float)",
+        "baseline": 88,
+        "current": 40,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_Scripting/lua_scripts.cpp:131:6:void lua_scripts::update_stats(const char*, uint32_t, int, int)",
+        "baseline": 72,
+        "current": 24,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_ExternalAHRS/AP_ExternalAHRS_VectorNav.cpp:604:6:void AP_ExternalAHRS_VectorNav::process_ahrs_ekf_packet(const uint8_t*)",
+        "baseline": 64,
+        "current": 16,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_IOMCU/AP_IOMCU.cpp:524:6:void AP_IOMCU::write_log()",
+        "baseline": 56,
+        "current": 8,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS.cpp:1620:6:0(mavlink_channel_t, const mavlink_gps_rtcm_data_t&)",
+        "baseline": 96,
+        "current": 48,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_MAV.cpp:62:6:virtual void AP_VisualOdom_MAV::handle_vision_speed_estimate(uint64_t, uint32_t, const Vector3f&, uint8_t, int8_t)",
+        "baseline": 64,
+        "current": 16,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_InertialSensor.cpp:14:6:void AP_DAL_InertialSensor::start_frame()",
+        "baseline": 96,
+        "current": 48,
+        "diff": -48
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_IntelT265.cpp:93:6:virtual void AP_VisualOdom_IntelT265::handle_vision_speed_estimate(uint64_t, uint32_t, const Vector3f&, uint8_t, int8_t)",
+        "baseline": 72,
+        "current": 32,
+        "diff": -40
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:562:6:void ModeGuided::set_velaccel(const Vector3f&, const Vector3f&, bool, float, bool, float, bool, bool)",
+        "baseline": 88,
+        "current": 48,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:3602:6:void GCS_MAVLINK::handle_timesync(const mavlink_message_t&)",
+        "baseline": 96,
+        "current": 56,
+        "diff": -40
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:530:6:void ModeGuided::set_accel(const Vector3f&, bool, float, bool, float, bool, bool)",
+        "baseline": 80,
+        "current": 48,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_MAV.cpp:28:6:virtual void AP_VisualOdom_MAV::handle_pose_estimate(uint64_t, uint32_t, float, float, float, const Quaternion&, float, float, uint8_t, int8_t)",
+        "baseline": 96,
+        "current": 64,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_UBLOX.cpp:816:6:void AP_GPS_UBLOX::log_mon_hw()",
+        "baseline": 32,
+        "current": 0,
+        "diff": -32
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:442:6:bool ModeGuided::set_destination(const Location&, bool, float, bool, float, bool)",
+        "baseline": 96,
+        "current": 64,
+        "diff": -32
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:343:6:bool ModeGuided::set_destination(const Vector3f&, bool, float, bool, float, bool, bool)",
+        "baseline": 112,
+        "current": 80,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_VisualOdom/AP_VisualOdom_IntelT265.cpp:32:6:virtual void AP_VisualOdom_IntelT265::handle_pose_estimate(uint64_t, uint32_t, float, float, float, const Quaternion&, float, float, uint8_t, int8_t)",
+        "baseline": 136,
+        "current": 104,
+        "diff": -32
+      },
+      {
+        "function": "../../ArduCopter/mode_guided.cpp:594:6:bool ModeGuided::set_destination_posvelaccel(const Vector3f&, const Vector3f&, const Vector3f&, bool, float, bool, float, bool)",
+        "baseline": 96,
+        "current": 64,
+        "diff": -32
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:254:6:void AP_DAL::log_writeEulerYawAngle(float, float, uint32_t, uint8_t)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:144:6:bool AP_SmartRTL::pop_point(Vector3f&)",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_VisualOdom.cpp:24:6:void AP_DAL_VisualOdom::start_frame()",
+        "baseline": 40,
+        "current": 16,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:186:6:void AP_DAL::log_event2(AP_DAL::Event)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:220:6:void AP_DAL::log_event3(AP_DAL::Event)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:231:6:void AP_DAL::log_SetOriginLLH3(const Location&)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_Torqeedo/AP_Torqeedo_TQBus.cpp:412:6:void AP_Torqeedo_TQBus::parse_message()",
+        "baseline": 96,
+        "current": 72,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:5144:6:void GCS_MAVLINK::handle_command_long(const mavlink_message_t&)",
+        "baseline": 104,
+        "current": 80,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:209:6:void AP_DAL::log_writeDefaultAirSpeed2(float, float)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_Baro.cpp:13:6:void AP_DAL_Baro::start_frame()",
+        "baseline": 56,
+        "current": 32,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_LandingGear/AP_LandingGear.cpp:238:6:void AP_LandingGear::update(float)",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_Relay/AP_Relay.cpp:399:6:void AP_Relay::set_pin_by_instance(uint8_t, bool)",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_UBLOX.cpp:842:6:void AP_GPS_UBLOX::log_mon_hw2()",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:197:6:void AP_DAL::log_SetOriginLLH2(const Location&)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL.cpp:243:6:void AP_DAL::log_writeDefaultAirSpeed3(float, float)",
+        "baseline": 24,
+        "current": 0,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:174:6:bool AP_SmartRTL::peek_point(Vector3f&)",
+        "baseline": 48,
+        "current": 24,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:865:6:void AP_SmartRTL::deactivate(AP_SmartRTL::Action, const char*)",
+        "baseline": 40,
+        "current": 16,
+        "diff": -24
+      },
+      {
+        "function": "../../libraries/AC_Fence/AC_Fence.cpp:242:9:uint8_t AC_Fence::enable(bool, uint8_t, bool)",
+        "baseline": 24,
+        "current": 4,
+        "diff": -20
+      },
+      {
+        "function": "../../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp:1311:6:0(float&, AC_AutoTune_Heli::sweep_info&, float&)",
+        "baseline": 24,
+        "current": 4,
+        "diff": -20
+      },
+      {
+        "function": "../../libraries/AP_DAL/AP_DAL_Airspeed.cpp:15:6:void AP_DAL_Airspeed::start_frame()",
+        "baseline": 48,
+        "current": 32,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/land_detector.cpp:37:6:void Copter::update_land_detector()",
+        "baseline": 112,
+        "current": 96,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AC_Avoidance/AP_OADijkstra.cpp:50:36:AP_OADijkstra::AP_OADijkstra_State AP_OADijkstra::update(const Location&, const Location&, const Location&, Location&, Location&, Location&, bool&)",
+        "baseline": 128,
+        "current": 112,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_LandingGear/AP_LandingGear.cpp:102:6:void AP_LandingGear::init()",
+        "baseline": 40,
+        "current": 24,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:703:6:0(uint16_t)",
+        "baseline": 104,
+        "current": 88,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Compass/AP_Compass.cpp:1767:1:0()",
+        "baseline": 32,
+        "current": 16,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:665:6:void AP_SmartRTL::remove_points_by_simplify_bitmask()",
+        "baseline": 48,
+        "current": 32,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:167:6:void Copter::rate_controller_thread()",
+        "baseline": 176,
+        "current": 160,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_MotorsHeli.cpp:613:6:void AP_MotorsHeli::set_rotor_runup_complete(bool)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_Torqeedo/AP_Torqeedo_TQBus.cpp:997:6:void AP_Torqeedo_TQBus::log_TRQD(bool)",
+        "baseline": 64,
+        "current": 48,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/land_detector.cpp:264:6:void Copter::set_land_complete_maybe(bool)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_GPS/AP_GPS_SBP.cpp:185:1:void AP_GPS_SBP::_sbp_process_message()",
+        "baseline": 24,
+        "current": 8,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/ekf_check.cpp:166:6:void Copter::failsafe_ekf_event()",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/SRV_Channel/SRV_Channels.cpp:582:6:static void SRV_Channels::set_emergency_stop(bool)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_HAL_ChibiOS/Scheduler.cpp:556:6:static void ChibiOS::Scheduler::_io_thread(void*)",
+        "baseline": 32,
+        "current": 16,
+        "diff": -16
+      },
+      {
+        "function": "../../libraries/AP_SmartRTL/AP_SmartRTL.cpp:94:6:void AP_SmartRTL::init()",
+        "baseline": 56,
+        "current": 40,
+        "diff": -16
+      },
+      {
+        "function": "../../ArduCopter/ekf_check.cpp:226:6:void Copter::failsafe_ekf_recheck()",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15507
+  },
+  "total_functions_analyzed": 15660
+}

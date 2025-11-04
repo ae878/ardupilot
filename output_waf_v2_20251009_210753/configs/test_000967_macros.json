@@ -1,0 +1,11 @@
+{
+  "test_id": 967,
+  "timestamp": "2025-10-11T18:09:05.049297",
+  "macro_changes": {
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "AP_FENCE_ENABLED": 1,
+    "ESC_CHANNEL_MAP_CHANNEL": 1,
+    "AP_RSSI_ENABLED": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 309,
+  "timestamp": "2025-10-10T11:03:10.445796",
+  "macro_changes": {
+    "RC_INPUT_MAX_PULSEWIDTH": 4,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "FLOW_CONTROL_ENABLED": 1,
+    "FS_THR_DISABLED": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "METADATA_MAX_i": 16,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_USE_HW_RNG": 1
+  }
+}

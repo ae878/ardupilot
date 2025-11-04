@@ -1,0 +1,10 @@
+{
+  "test_id": 856,
+  "timestamp": "2025-10-11T12:51:16.947888",
+  "macro_changes": {
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 1,
+    "USER_PARAMS_ENABLED": 1,
+    "HAL_UART_IOMCU_IDX": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  }
+}

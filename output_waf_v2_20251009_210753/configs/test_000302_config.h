@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #302 */
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC_CRC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC_CRC 0
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 0
+
+/* ConfigFuzz: AP_STATS_ENABLED */
+#ifdef AP_STATS_ENABLED
+#undef AP_STATS_ENABLED
+#endif
+#define AP_STATS_ENABLED 0
+
+/* ConfigFuzz: ESC_CHANNEL_MAP_CHANNEL */
+#ifdef ESC_CHANNEL_MAP_CHANNEL
+#undef ESC_CHANNEL_MAP_CHANNEL
+#endif
+#define ESC_CHANNEL_MAP_CHANNEL 0
+
+/* ConfigFuzz: AP_SOCKET_NATIVE_ENABLED */
+#ifdef AP_SOCKET_NATIVE_ENABLED
+#undef AP_SOCKET_NATIVE_ENABLED
+#endif
+#define AP_SOCKET_NATIVE_ENABLED 1
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 1
+
+/* ConfigFuzz: AP_SERVORELAYEVENTS_ENABLED */
+#ifdef AP_SERVORELAYEVENTS_ENABLED
+#undef AP_SERVORELAYEVENTS_ENABLED
+#endif
+#define AP_SERVORELAYEVENTS_ENABLED 1
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 0
+
+/* ConfigFuzz: MODE_FLIP_ENABLED */
+#ifdef MODE_FLIP_ENABLED
+#undef MODE_FLIP_ENABLED
+#endif
+#define MODE_FLIP_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

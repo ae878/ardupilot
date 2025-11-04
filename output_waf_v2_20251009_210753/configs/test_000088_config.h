@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #88 */
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_GEOMETRY */
+#ifdef BENCH_DEFINE_MAP_GEOMETRY
+#undef BENCH_DEFINE_MAP_GEOMETRY
+#endif
+#define BENCH_DEFINE_MAP_GEOMETRY 1
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_LAND */
+#ifdef FS_THR_ENABLED_ALWAYS_LAND
+#undef FS_THR_ENABLED_ALWAYS_LAND
+#endif
+#define FS_THR_ENABLED_ALWAYS_LAND 0
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 0
+
+/* ConfigFuzz: FS_THR_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_THR_ENABLED_BRAKE_OR_LAND
+#undef FS_THR_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_THR_ENABLED_BRAKE_OR_LAND 1
+
+/* ConfigFuzz: MODE_GUIDED_ENABLED */
+#ifdef MODE_GUIDED_ENABLED
+#undef MODE_GUIDED_ENABLED
+#endif
+#define MODE_GUIDED_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_DEVELOPMENT */
+#ifdef MAVLINK_ENABLED_DEVELOPMENT
+#undef MAVLINK_ENABLED_DEVELOPMENT
+#endif
+#define MAVLINK_ENABLED_DEVELOPMENT 0
+
+/* ConfigFuzz: FFT_MAX_MISSED_UPDATES */
+#ifdef FFT_MAX_MISSED_UPDATES
+#undef FFT_MAX_MISSED_UPDATES
+#endif
+#define FFT_MAX_MISSED_UPDATES 8
+
+/* ConfigFuzz: HAL_SOARING_ENABLED */
+#ifdef HAL_SOARING_ENABLED
+#undef HAL_SOARING_ENABLED
+#endif
+#define HAL_SOARING_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_MCU_MONITORING */
+#ifdef HAL_WITH_MCU_MONITORING
+#undef HAL_WITH_MCU_MONITORING
+#endif
+#define HAL_WITH_MCU_MONITORING 1
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 16
+
+#endif /* _AP_CONFIG_H_ */

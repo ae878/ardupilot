@@ -1,0 +1,16 @@
+{
+  "test_id": 8,
+  "timestamp": "2025-10-09T19:52:34.055881",
+  "macro_changes": {
+    "HAL_WITH_UAVCAN": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0,
+    "AP_SIGNED_FIRMWARE": 0,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "AC_PRECLAND_ENABLED": 1,
+    "KDECAN_MAX_NUM_ESCS": 2,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_WITH_MCU_MONITORING": 0,
+    "MODE_LOITER_ENABLED": 0
+  }
+}

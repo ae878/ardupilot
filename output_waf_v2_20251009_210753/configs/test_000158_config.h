@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #158 */
+
+/* ConfigFuzz: AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED */
+#ifdef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#undef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#endif
+#define AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED 1
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 0
+
+/* ConfigFuzz: AP_EXTERNAL_CONTROL_ENABLED */
+#ifdef AP_EXTERNAL_CONTROL_ENABLED
+#undef AP_EXTERNAL_CONTROL_ENABLED
+#endif
+#define AP_EXTERNAL_CONTROL_ENABLED 0
+
+/* ConfigFuzz: HAL_INS_NONE */
+#ifdef HAL_INS_NONE
+#undef HAL_INS_NONE
+#endif
+#define HAL_INS_NONE 1
+
+/* ConfigFuzz: HAL_USE_FATFS */
+#ifdef HAL_USE_FATFS
+#undef HAL_USE_FATFS
+#endif
+#define HAL_USE_FATFS 0
+
+/* ConfigFuzz: AP_GRIPPER_ENABLED */
+#ifdef AP_GRIPPER_ENABLED
+#undef AP_GRIPPER_ENABLED
+#endif
+#define AP_GRIPPER_ENABLED 0
+
+/* ConfigFuzz: HAVE_ENUM_CAMERA_CAP_FLAGS */
+#ifdef HAVE_ENUM_CAMERA_CAP_FLAGS
+#undef HAVE_ENUM_CAMERA_CAP_FLAGS
+#endif
+#define HAVE_ENUM_CAMERA_CAP_FLAGS 0
+
+/* ConfigFuzz: HAL_GPIO_ALT */
+#ifdef HAL_GPIO_ALT
+#undef HAL_GPIO_ALT
+#endif
+#define HAL_GPIO_ALT 0
+
+/* ConfigFuzz: HAL_SUPPORT_RCOUT_SERIAL */
+#ifdef HAL_SUPPORT_RCOUT_SERIAL
+#undef HAL_SUPPORT_RCOUT_SERIAL
+#endif
+#define HAL_SUPPORT_RCOUT_SERIAL 1
+
+#endif /* _AP_CONFIG_H_ */

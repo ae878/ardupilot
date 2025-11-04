@@ -1,0 +1,9 @@
+{
+  "test_id": 348,
+  "timestamp": "2025-10-10T12:38:34.616233",
+  "macro_changes": {
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0,
+    "AP_RSSI_ENABLED": 1
+  }
+}

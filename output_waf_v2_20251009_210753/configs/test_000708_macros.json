@@ -1,0 +1,10 @@
+{
+  "test_id": 708,
+  "timestamp": "2025-10-11T05:41:03.763208",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "AP_AIS_ENABLED": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0
+  }
+}

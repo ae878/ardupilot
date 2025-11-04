@@ -1,0 +1,18 @@
+{
+  "test_id": 283,
+  "timestamp": "2025-10-10T09:52:03.987464",
+  "macro_changes": {
+    "AP_CAMERA_ENABLED": 0,
+    "MODE_THROW_ENABLED": 1,
+    "FFT_MAX_MISSED_UPDATES": 2,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "TAP_ESC_MAX_MOTOR_NUM": 32,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "TOY_MODE_ENABLED": 1,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0
+  },
+  "build_success": false,
+  "build_time": 183.44768857955933,
+  "build_result": false,
+  "error": "libraries/GCS_MAVLink/include/mavlink/v2.0/all/../protocol.h:178:9: error: 'void* memcpy(void*, const void*, size_t)' forming offset 9 is out of the bounds [0, 9] [-Werror=array-bounds]"
+}

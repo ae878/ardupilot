@@ -1,0 +1,13 @@
+{
+  "test_id": 364,
+  "timestamp": "2025-10-10T13:23:21.332538",
+  "macro_changes": {
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "HAL_GPIO_INPUT": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 0,
+    "AP_OPTICALFLOW_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "SUMD_MAX_CHANNELS": 2
+  }
+}

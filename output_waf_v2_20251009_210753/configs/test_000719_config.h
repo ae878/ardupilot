@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #719 */
+
+/* ConfigFuzz: HAL_SEMAPHORE_BLOCK_FOREVER */
+#ifdef HAL_SEMAPHORE_BLOCK_FOREVER
+#undef HAL_SEMAPHORE_BLOCK_FOREVER
+#endif
+#define HAL_SEMAPHORE_BLOCK_FOREVER 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_MOUNT_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#undef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_MOUNT_CONFIGURE 0
+
+/* ConfigFuzz: HAL_SOLO_GIMBAL_ENABLED */
+#ifdef HAL_SOLO_GIMBAL_ENABLED
+#undef HAL_SOLO_GIMBAL_ENABLED
+#endif
+#define HAL_SOLO_GIMBAL_ENABLED 1
+
+/* ConfigFuzz: FLOW_CONTROL_ENABLED */
+#ifdef FLOW_CONTROL_ENABLED
+#undef FLOW_CONTROL_ENABLED
+#endif
+#define FLOW_CONTROL_ENABLED 0
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 0
+
+/* ConfigFuzz: AP_HAL_UARTDRIVER_ENABLED */
+#ifdef AP_HAL_UARTDRIVER_ENABLED
+#undef AP_HAL_UARTDRIVER_ENABLED
+#endif
+#define AP_HAL_UARTDRIVER_ENABLED 0
+
+/* ConfigFuzz: HAL_BATT_CURR_PIN */
+#ifdef HAL_BATT_CURR_PIN
+#undef HAL_BATT_CURR_PIN
+#endif
+#define HAL_BATT_CURR_PIN 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_COUNT */
+#ifdef BENCH_DEFINE_MAP_COUNT
+#undef BENCH_DEFINE_MAP_COUNT
+#endif
+#define BENCH_DEFINE_MAP_COUNT 0
+
+#endif /* _AP_CONFIG_H_ */

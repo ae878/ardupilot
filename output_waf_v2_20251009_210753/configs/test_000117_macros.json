@@ -1,0 +1,10 @@
+{
+  "test_id": 117,
+  "timestamp": "2025-10-10T02:18:17.125837",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_PIN": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

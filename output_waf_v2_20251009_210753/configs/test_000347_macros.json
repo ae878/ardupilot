@@ -1,0 +1,11 @@
+{
+  "test_id": 347,
+  "timestamp": "2025-10-10T12:35:30.196241",
+  "macro_changes": {
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "SUMD_MAX_CHANNELS": 8,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "HAL_USB_PRODUCT_ID": 1
+  }
+}

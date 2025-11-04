@@ -1,0 +1,15 @@
+{
+  "test_id": 300,
+  "timestamp": "2025-10-10T10:38:24.632900",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 1,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "HAL_INS_NONE": 0,
+    "HAL_CANFD_SUPPORTED": 1
+  },
+  "build_success": false,
+  "build_time": 9.59678602218628,
+  "build_result": false,
+  "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+}

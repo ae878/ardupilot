@@ -1,0 +1,13 @@
+{
+  "test_id": 349,
+  "timestamp": "2025-10-10T12:41:15.972212",
+  "macro_changes": {
+    "HAL_ENABLE_THREAD_STATISTICS": 1,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 4,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "AP_SIGNED_FIRMWARE": 1,
+    "MODE_GUIDED_ENABLED": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0
+  }
+}

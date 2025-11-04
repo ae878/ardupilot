@@ -1,0 +1,19 @@
+{
+  "test_id": 471,
+  "timestamp": "2025-10-10T18:23:09.901728",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_SOARING_ENABLED": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_GPIO_INPUT": 1,
+    "HAL_GENERATOR_ENABLED": 1,
+    "HAL_GPIO_ALT": 1,
+    "HAL_DSHOT_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 129.43227791786194,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+}

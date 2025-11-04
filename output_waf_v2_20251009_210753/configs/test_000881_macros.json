@@ -1,0 +1,12 @@
+{
+  "test_id": 881,
+  "timestamp": "2025-10-11T13:59:43.428401",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "HAL_INS_RATE_LOOP": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 0
+  }
+}

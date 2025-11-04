@@ -1,0 +1,47 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #402 */
+
+/* ConfigFuzz: CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY */
+#ifdef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#undef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#endif
+#define CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY 1
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 1
+
+/* ConfigFuzz: HAL_CAN_DRIVER_DEFAULT */
+#ifdef HAL_CAN_DRIVER_DEFAULT
+#undef HAL_CAN_DRIVER_DEFAULT
+#endif
+#define HAL_CAN_DRIVER_DEFAULT 0
+
+/* ConfigFuzz: MODE_ZIGZAG_ENABLED */
+#ifdef MODE_ZIGZAG_ENABLED
+#undef MODE_ZIGZAG_ENABLED
+#endif
+#define MODE_ZIGZAG_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

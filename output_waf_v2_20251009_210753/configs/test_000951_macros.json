@@ -1,0 +1,14 @@
+{
+  "test_id": 951,
+  "timestamp": "2025-10-11T17:21:08.335913",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_AP_ADC": 1,
+    "HAL_UART_IOMCU_IDX": 1,
+    "MAVLINK_ENABLED_ICAROUS": 0,
+    "MODE_ZIGZAG_ENABLED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "MODE_AUTO_ENABLED": 1
+  }
+}

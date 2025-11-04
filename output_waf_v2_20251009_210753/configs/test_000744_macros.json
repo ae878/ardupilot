@@ -1,0 +1,10 @@
+{
+  "test_id": 744,
+  "timestamp": "2025-10-11T07:17:24.720684",
+  "macro_changes": {
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_WITH_IO_MCU": 1,
+    "SUMD_MAX_CHANNELS": 8,
+    "MODE_ZIGZAG_ENABLED": 0
+  }
+}

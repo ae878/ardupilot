@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #563 */
+
+/* ConfigFuzz: MAVLINK_ENABLED_STANDARD */
+#ifdef MAVLINK_ENABLED_STANDARD
+#undef MAVLINK_ENABLED_STANDARD
+#endif
+#define MAVLINK_ENABLED_STANDARD 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC */
+#ifdef MAVLINK_MSG_ID_AP_ADC
+#undef MAVLINK_MSG_ID_AP_ADC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC 1
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_BLUE */
+#ifdef HAL_RCOUT_RGBLED_BLUE
+#undef HAL_RCOUT_RGBLED_BLUE
+#endif
+#define HAL_RCOUT_RGBLED_BLUE 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE 1
+
+/* ConfigFuzz: HAL_GPIO_LED_ON */
+#ifdef HAL_GPIO_LED_ON
+#undef HAL_GPIO_LED_ON
+#endif
+#define HAL_GPIO_LED_ON 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 0
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 1
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,14 @@
+{
+  "test_id": 57,
+  "timestamp": "2025-10-13T18:21:56.967955",
+  "macro_changes": {
+    "MAX_PWMS": 16,
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_PERIPH_BATTERY_ENABLED": 0,
+    "MODE_DRIFT_ENABLED": 0,
+    "HAL_UART_IOMCU_IDX": 1,
+    "FSYNC_CONFIG_EXT_SYNC_GY": 0
+  }
+}

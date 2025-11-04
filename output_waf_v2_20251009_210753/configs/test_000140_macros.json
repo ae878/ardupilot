@@ -1,0 +1,12 @@
+{
+  "test_id": 140,
+  "timestamp": "2025-10-10T03:18:20.439503",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 2,
+    "FLOW_CONTROL_ENABLED": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "MAX_PWMS": 16,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0
+  }
+}

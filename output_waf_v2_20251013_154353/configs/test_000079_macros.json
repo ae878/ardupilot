@@ -1,0 +1,9 @@
+{
+  "test_id": 79,
+  "timestamp": "2025-10-13T19:27:59.989473",
+  "macro_changes": {
+    "AP_PERIPH_BATTERY_BALANCE_ENABLED": 0,
+    "AP_PERIPH_AIRSPEED_ENABLED": 0,
+    "HAL_USE_SDMMC": 1
+  }
+}

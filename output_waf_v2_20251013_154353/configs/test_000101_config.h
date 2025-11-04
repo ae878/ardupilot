@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #101 */
+
+/* ConfigFuzz: HAL_BATT_CURR_PIN */
+#ifdef HAL_BATT_CURR_PIN
+#undef HAL_BATT_CURR_PIN
+#endif
+#define HAL_BATT_CURR_PIN 0
+
+/* ConfigFuzz: AP_PERIPH_RTC_ENABLED */
+#ifdef AP_PERIPH_RTC_ENABLED
+#undef AP_PERIPH_RTC_ENABLED
+#endif
+#define AP_PERIPH_RTC_ENABLED 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_PIN */
+#ifdef HAL_HEATER_GPIO_PIN
+#undef HAL_HEATER_GPIO_PIN
+#endif
+#define HAL_HEATER_GPIO_PIN 0
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_GY */
+#ifdef FSYNC_CONFIG_EXT_SYNC_GY
+#undef FSYNC_CONFIG_EXT_SYNC_GY
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_GY 1
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 1
+
+/* ConfigFuzz: AP_PERIPH_GPS_ENABLED */
+#ifdef AP_PERIPH_GPS_ENABLED
+#undef AP_PERIPH_GPS_ENABLED
+#endif
+#define AP_PERIPH_GPS_ENABLED 1
+
+/* ConfigFuzz: AC_PRECLAND_ENABLED */
+#ifdef AC_PRECLAND_ENABLED
+#undef AC_PRECLAND_ENABLED
+#endif
+#define AC_PRECLAND_ENABLED 0
+
+/* ConfigFuzz: MODE_AUTO_ENABLED */
+#ifdef MODE_AUTO_ENABLED
+#undef MODE_AUTO_ENABLED
+#endif
+#define MODE_AUTO_ENABLED 1
+
+/* ConfigFuzz: AP_TEMPCALIBRATION_ENABLED */
+#ifdef AP_TEMPCALIBRATION_ENABLED
+#undef AP_TEMPCALIBRATION_ENABLED
+#endif
+#define AP_TEMPCALIBRATION_ENABLED 0
+
+/* ConfigFuzz: AP_PERIPH_RPM_ENABLED */
+#ifdef AP_PERIPH_RPM_ENABLED
+#undef AP_PERIPH_RPM_ENABLED
+#endif
+#define AP_PERIPH_RPM_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

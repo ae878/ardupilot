@@ -1,0 +1,9 @@
+{
+  "test_id": 358,
+  "timestamp": "2025-10-10T13:08:44.273864",
+  "macro_changes": {
+    "MODE_CIRCLE_ENABLED": 0,
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "LEDDARONE_DETECTIONS_MAX": 1
+  }
+}

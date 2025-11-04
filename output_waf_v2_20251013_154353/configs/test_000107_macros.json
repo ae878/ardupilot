@@ -1,0 +1,13 @@
+{
+  "test_id": 107,
+  "timestamp": "2025-10-13T20:46:08.164322",
+  "macro_changes": {
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "HAL_NO_FLASH_SUPPORT": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_GPIO_OUTPUT": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 0,
+    "AP_STATS_ENABLED": 0,
+    "AP_MISSION_ENABLED": 1
+  }
+}

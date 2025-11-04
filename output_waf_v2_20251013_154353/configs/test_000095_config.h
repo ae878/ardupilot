@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #95 */
+
+/* ConfigFuzz: MODE_THROW_ENABLED */
+#ifdef MODE_THROW_ENABLED
+#undef MODE_THROW_ENABLED
+#endif
+#define MODE_THROW_ENABLED 0
+
+/* ConfigFuzz: AP_HEATER_IMU_INSTANCE */
+#ifdef AP_HEATER_IMU_INSTANCE
+#undef AP_HEATER_IMU_INSTANCE
+#endif
+#define AP_HEATER_IMU_INSTANCE 0
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS 1
+
+/* ConfigFuzz: HAL_SOLO_GIMBAL_ENABLED */
+#ifdef HAL_SOLO_GIMBAL_ENABLED
+#undef HAL_SOLO_GIMBAL_ENABLED
+#endif
+#define HAL_SOLO_GIMBAL_ENABLED 0
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_AX */
+#ifdef FSYNC_CONFIG_EXT_SYNC_AX
+#undef FSYNC_CONFIG_EXT_SYNC_AX
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_AX 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC */
+#ifdef MAVLINK_MSG_ID_AP_ADC
+#undef MAVLINK_MSG_ID_AP_ADC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC 0
+
+/* ConfigFuzz: AP_PERIPH_BATTERY_ENABLED */
+#ifdef AP_PERIPH_BATTERY_ENABLED
+#undef AP_PERIPH_BATTERY_ENABLED
+#endif
+#define AP_PERIPH_BATTERY_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_MOUNT_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#undef MAVLINK_MSG_ID_MOUNT_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_MOUNT_CONFIGURE 1
+
+#endif /* _AP_CONFIG_H_ */

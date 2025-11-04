@@ -1,0 +1,10 @@
+{
+  "test_id": 99,
+  "timestamp": "2025-10-10T01:32:54.741045",
+  "macro_changes": {
+    "AP_AIS_ENABLED": 0,
+    "HAL_INS_VRBRAIN": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0
+  }
+}

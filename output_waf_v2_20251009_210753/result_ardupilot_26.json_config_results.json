@@ -1,0 +1,14 @@
+[
+  {
+    "test_id": 27,
+    "timestamp": "2025-10-09T22:21:58.513235",
+    "macro_changes": {
+      "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+      "MAVLINK_ENABLED_COMMON": 1,
+      "MAVLINK_ENABLED_CUBEPILOT": 1
+    },
+    "build_success": false,
+    "build_time": 153.86423707008362,
+    "build_result": false
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "test_id": 919,
+  "timestamp": "2025-10-11T15:45:47.841733",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "HAL_FLASH_PROTECTION": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "LEDDARONE_DETECTIONS_MAX": 2,
+    "HAL_USE_FATFS": 1,
+    "TOY_MODE_ENABLED": 1
+  }
+}

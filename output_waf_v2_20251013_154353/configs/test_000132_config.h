@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #132 */
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_GX */
+#ifdef FSYNC_CONFIG_EXT_SYNC_GX
+#undef FSYNC_CONFIG_EXT_SYNC_GX
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_GX 1
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_AY */
+#ifdef FSYNC_CONFIG_EXT_SYNC_AY
+#undef FSYNC_CONFIG_EXT_SYNC_AY
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_AY 1
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN 0
+
+/* ConfigFuzz: AP_SCHEDULER_OVERTIME_MARGIN_US */
+#ifdef AP_SCHEDULER_OVERTIME_MARGIN_US
+#undef AP_SCHEDULER_OVERTIME_MARGIN_US
+#endif
+#define AP_SCHEDULER_OVERTIME_MARGIN_US 0
+
+/* ConfigFuzz: AP_CRASHDUMP_ENABLED */
+#ifdef AP_CRASHDUMP_ENABLED
+#undef AP_CRASHDUMP_ENABLED
+#endif
+#define AP_CRASHDUMP_ENABLED 1
+
+/* ConfigFuzz: MODE_BRAKE_ENABLED */
+#ifdef MODE_BRAKE_ENABLED
+#undef MODE_BRAKE_ENABLED
+#endif
+#define MODE_BRAKE_ENABLED 0
+
+/* ConfigFuzz: RPM_MAX_INSTANCES */
+#ifdef RPM_MAX_INSTANCES
+#undef RPM_MAX_INSTANCES
+#endif
+#define RPM_MAX_INSTANCES 16
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_GX */
+#ifdef MPUREG_CONFIG_EXT_SYNC_GX
+#undef MPUREG_CONFIG_EXT_SYNC_GX
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_GX 1
+
+#endif /* _AP_CONFIG_H_ */

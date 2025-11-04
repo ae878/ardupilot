@@ -1,0 +1,11 @@
+{
+  "test_id": 671,
+  "timestamp": "2025-10-11T03:44:05.724064",
+  "macro_changes": {
+    "HAL_WITH_DRONECAN": 0,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "MAVLINK_ENABLED_COMMON": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "MODE_GUIDED_ENABLED": 1
+  }
+}

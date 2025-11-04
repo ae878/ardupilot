@@ -1,0 +1,12 @@
+{
+  "test_id": 145,
+  "timestamp": "2025-10-10T03:33:51.696857",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 1,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "HAL_BATT_CURR_PIN": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "AP_MISSION_ENABLED": 1,
+    "AP_SIM_ENABLED": 1
+  }
+}

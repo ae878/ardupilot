@@ -1,0 +1,20 @@
+{
+  "test_id": 88,
+  "timestamp": "2025-10-10T01:02:51.301341",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 0,
+    "AP_RSSI_ENABLED": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "MODE_GUIDED_ENABLED": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "FFT_MAX_MISSED_UPDATES": 8,
+    "HAL_SOARING_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "HAL_HNF_MAX_FILTERS": 16
+  },
+  "build_success": false,
+  "build_time": 128.97782135009766,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

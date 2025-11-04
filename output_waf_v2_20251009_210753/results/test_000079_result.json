@@ -1,0 +1,16 @@
+{
+  "test_id": 79,
+  "timestamp": "2025-10-10T00:42:14.625769",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 8,
+    "MAVLINK_ENABLED_COMMON": 1
+  },
+  "build_success": false,
+  "build_time": 161.84542560577393,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

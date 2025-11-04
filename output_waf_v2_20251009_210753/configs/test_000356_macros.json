@@ -1,0 +1,11 @@
+{
+  "test_id": 356,
+  "timestamp": "2025-10-10T13:02:57.503535",
+  "macro_changes": {
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 32,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1
+  }
+}

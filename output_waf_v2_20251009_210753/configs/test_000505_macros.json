@@ -1,0 +1,13 @@
+{
+  "test_id": 505,
+  "timestamp": "2025-10-10T19:55:21.990357",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAL_LOGGING_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "AP_MISSION_ENABLED": 1
+  }
+}

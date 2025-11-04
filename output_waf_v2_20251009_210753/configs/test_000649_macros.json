@@ -1,0 +1,11 @@
+{
+  "test_id": 649,
+  "timestamp": "2025-10-11T02:36:22.865302",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 1,
+    "HAL_HNF_MAX_FILTERS": 1,
+    "HAL_GPIO_OUTPUT": 0,
+    "HAL_GENERATOR_ENABLED": 0,
+    "USER_PARAMS_ENABLED": 1
+  }
+}

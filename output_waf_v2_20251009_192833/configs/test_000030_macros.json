@@ -1,0 +1,10 @@
+{
+  "test_id": 30,
+  "timestamp": "2025-10-09T20:48:57.944878",
+  "macro_changes": {
+    "AP_CRASHDUMP_ENABLED": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1
+  }
+}

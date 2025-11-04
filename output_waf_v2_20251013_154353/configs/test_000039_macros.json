@@ -1,0 +1,12 @@
+{
+  "test_id": 39,
+  "timestamp": "2025-10-13T17:35:52.014755",
+  "macro_changes": {
+    "HAL_UART_IOMCU_IDX": 0,
+    "HAL_PERIPH_ENABLE_RC_OUT": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "HAL_SOARING_ENABLED": 1,
+    "HAL_GENERATOR_ENABLED": 1,
+    "HAL_GPIO_INPUT": 0
+  }
+}

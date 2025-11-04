@@ -1,0 +1,53 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #525 */
+
+/* ConfigFuzz: HAL_HAVE_SERVO_VOLTAGE */
+#ifdef HAL_HAVE_SERVO_VOLTAGE
+#undef HAL_HAVE_SERVO_VOLTAGE
+#endif
+#define HAL_HAVE_SERVO_VOLTAGE 0
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL */
+#ifdef FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#undef FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#endif
+#define FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL 0
+
+/* ConfigFuzz: RC_OUTPUT_MAX_PULSEWIDTH */
+#ifdef RC_OUTPUT_MAX_PULSEWIDTH
+#undef RC_OUTPUT_MAX_PULSEWIDTH
+#endif
+#define RC_OUTPUT_MAX_PULSEWIDTH 16
+
+/* ConfigFuzz: LEDDARONE_DETECTIONS_MAX */
+#ifdef LEDDARONE_DETECTIONS_MAX
+#undef LEDDARONE_DETECTIONS_MAX
+#endif
+#define LEDDARONE_DETECTIONS_MAX 16
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 2
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,10 @@
+{
+  "test_id": 365,
+  "timestamp": "2025-10-10T13:24:31.053750",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_USE_SDMMC": 0,
+    "HAL_USE_HW_RNG": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 1
+  }
+}

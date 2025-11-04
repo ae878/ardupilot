@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 649,
+    "timestamp": "2025-10-11T02:36:22.865585",
+    "macro_changes": {
+      "MODE_ZIGZAG_ENABLED": 1,
+      "HAL_HNF_MAX_FILTERS": 1,
+      "HAL_GPIO_OUTPUT": 0,
+      "HAL_GENERATOR_ENABLED": 0,
+      "USER_PARAMS_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 169.5866243839264,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

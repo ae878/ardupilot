@@ -1,0 +1,14 @@
+{
+  "test_id": 821,
+  "timestamp": "2025-10-11T11:03:00.077986",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ASLUAV": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 32,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "AP_RSSI_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "HAL_INS_NONE": 1,
+    "TELEM_TIME_SLOT_MAX": 2
+  }
+}

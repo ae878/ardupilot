@@ -1,0 +1,14 @@
+{
+  "test_id": 460,
+  "timestamp": "2025-10-10T17:50:03.315863",
+  "macro_changes": {
+    "MODE_LOITER_ENABLED": 0,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "HAL_INS_VRBRAIN": 1,
+    "NOOPLOOP_DIST_MAX_MM": 2,
+    "ESC_CHANNEL_MAP_CHANNEL": 1,
+    "HAL_MOUNT_ENABLED": 0
+  }
+}

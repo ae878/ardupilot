@@ -1,0 +1,11 @@
+{
+  "test_id": 642,
+  "timestamp": "2025-10-11T02:14:04.515538",
+  "macro_changes": {
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "LEDDARONE_DETECTIONS_MAX": 4,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_ENABLE_THREAD_STATISTICS": 1,
+    "HAL_LOGGING_ENABLED": 1
+  }
+}

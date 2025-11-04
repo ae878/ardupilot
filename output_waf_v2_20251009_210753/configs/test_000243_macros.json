@@ -1,0 +1,11 @@
+{
+  "test_id": 243,
+  "timestamp": "2025-10-10T07:55:38.486523",
+  "macro_changes": {
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "AP_ICENGINE_ENABLED": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 0
+  }
+}

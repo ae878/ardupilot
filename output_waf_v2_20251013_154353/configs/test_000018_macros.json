@@ -1,0 +1,11 @@
+{
+  "test_id": 18,
+  "timestamp": "2025-10-13T16:32:30.444170",
+  "macro_changes": {
+    "HAL_MOUNT_ENABLED": 0,
+    "MPUREG_GYRO_CONFIG": 0,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "AP_DEVO_TELEM_ENABLED": 1
+  }
+}

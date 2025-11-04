@@ -1,0 +1,11 @@
+{
+  "test_id": 118,
+  "timestamp": "2025-10-13T21:17:57.180035",
+  "macro_changes": {
+    "AP_DEVO_TELEM_ENABLED": 1,
+    "BACKEND_SAMPLE_RATE_MAX": 4,
+    "AC_PRECLAND_ENABLED": 1,
+    "HAL_INS_NONE": 1,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0
+  }
+}

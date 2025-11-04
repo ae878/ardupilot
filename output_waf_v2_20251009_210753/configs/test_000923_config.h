@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #923 */
+
+/* ConfigFuzz: AP_FEATURE_SBUS_OUT */
+#ifdef AP_FEATURE_SBUS_OUT
+#undef AP_FEATURE_SBUS_OUT
+#endif
+#define AP_FEATURE_SBUS_OUT 0
+
+/* ConfigFuzz: MODE_BRAKE_ENABLED */
+#ifdef MODE_BRAKE_ENABLED
+#undef MODE_BRAKE_ENABLED
+#endif
+#define MODE_BRAKE_ENABLED 1
+
+/* ConfigFuzz: AP_NOTIFY_NAVIGATOR_LED_ENABLED */
+#ifdef AP_NOTIFY_NAVIGATOR_LED_ENABLED
+#undef AP_NOTIFY_NAVIGATOR_LED_ENABLED
+#endif
+#define AP_NOTIFY_NAVIGATOR_LED_ENABLED 0
+
+/* ConfigFuzz: HAL_GPIO_OUTPUT */
+#ifdef HAL_GPIO_OUTPUT
+#undef HAL_GPIO_OUTPUT
+#endif
+#define HAL_GPIO_OUTPUT 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 0
+
+/* ConfigFuzz: LEDDARONE_SERIAL_PORT_MAX */
+#ifdef LEDDARONE_SERIAL_PORT_MAX
+#undef LEDDARONE_SERIAL_PORT_MAX
+#endif
+#define LEDDARONE_SERIAL_PORT_MAX 2
+
+/* ConfigFuzz: AP_SERVORELAYEVENTS_ENABLED */
+#ifdef AP_SERVORELAYEVENTS_ENABLED
+#undef AP_SERVORELAYEVENTS_ENABLED
+#endif
+#define AP_SERVORELAYEVENTS_ENABLED 0
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_RTL */
+#ifdef FS_THR_ENABLED_ALWAYS_RTL
+#undef FS_THR_ENABLED_ALWAYS_RTL
+#endif
+#define FS_THR_ENABLED_ALWAYS_RTL 1
+
+#endif /* _AP_CONFIG_H_ */

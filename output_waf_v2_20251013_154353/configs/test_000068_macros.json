@@ -1,0 +1,9 @@
+{
+  "test_id": 68,
+  "timestamp": "2025-10-13T18:54:42.998320",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "MPUREG_CONFIG_EXT_SYNC_GY": 1,
+    "HAL_RALLY_ENABLED": 0
+  }
+}

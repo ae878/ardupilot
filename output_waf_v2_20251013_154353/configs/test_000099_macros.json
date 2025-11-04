@@ -1,0 +1,13 @@
+{
+  "test_id": 99,
+  "timestamp": "2025-10-13T20:28:53.190987",
+  "macro_changes": {
+    "MPUREG_CONFIG_EXT_SYNC_GY": 0,
+    "HAL_INS_VRBRAIN": 0,
+    "HAL_NO_ROMFS_SUPPORT": 0,
+    "AP_PERIPH_IMU_ENABLED": 0,
+    "AP_PERIPH_AIRSPEED_ENABLED": 1,
+    "HAL_DSHOT_ENABLED": 1,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0
+  }
+}

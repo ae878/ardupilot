@@ -1,0 +1,11 @@
+{
+  "test_id": 771,
+  "timestamp": "2025-10-11T08:36:51.660396",
+  "macro_changes": {
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 16,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "HAL_RALLY_ENABLED": 0
+  }
+}

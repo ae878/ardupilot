@@ -1,0 +1,15 @@
+{
+  "test_id": 393,
+  "timestamp": "2025-10-10T14:41:50.804101",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "MAX_PWMS": 4,
+    "HAL_DSHOT_ENABLED": 0,
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "HAL_INS_NONE": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_GPIO_INPUT": 0
+  }
+}

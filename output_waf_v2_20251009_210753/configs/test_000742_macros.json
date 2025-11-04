@@ -1,0 +1,12 @@
+{
+  "test_id": 742,
+  "timestamp": "2025-10-11T07:10:51.110893",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "MODE_FLIP_ENABLED": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_LOGGING_ENABLED": 0,
+    "HAL_BARO_NONE": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0
+  }
+}

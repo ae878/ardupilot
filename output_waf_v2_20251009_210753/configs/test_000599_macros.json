@@ -1,0 +1,10 @@
+{
+  "test_id": 599,
+  "timestamp": "2025-10-11T00:16:08.177542",
+  "macro_changes": {
+    "FLOW_CONTROL_ENABLED": 0,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 0,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_SPRAYER_ENABLED": 0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 199,
+  "timestamp": "2025-10-10T05:55:01.655745",
+  "macro_changes": {
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 0,
+    "RPMMAX": 2,
+    "AP_MODULE_SUPPORTED": 1,
+    "MAVLINK_ENABLED_ALL": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1
+  }
+}

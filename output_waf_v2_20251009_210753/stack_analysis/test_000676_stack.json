@@ -1,0 +1,476 @@
+{
+  "test_id": 676,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.cpp:45:6:virtual bool NavigatorLED::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.h:24:7:NavigatorLED::~NavigatorLED()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.cpp:54:6:virtual bool NavigatorLED::hw_set_rgb(uint8_t, uint8_t, uint8_t)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.cpp:40:1:NavigatorLED::NavigatorLED()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.h:24:7:virtual NavigatorLED::~NavigatorLED()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Notify/NavigatorLED.cpp:74:6:void NavigatorLED::_setup_data(uint8_t, uint8_t, uint8_t)",
+        "stack_size": 12
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:107:6:void AC_Sprayer::stop_spraying()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:219:6:bool AP_Beacon::beacon_healthy(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:321:6:virtual bool AP_Beacon_Marvelmind::healthy()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:56:6:virtual void AP_Beacon_Nooploop::update()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:191:9:uint8_t AP_Beacon::count() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Backend.cpp:28:1:AP_Beacon_Backend::AP_Beacon_Backend(AP_Beacon&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:63:6:void ModeLoiter::precision_loiter_xy()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:49:6:virtual bool AP_Beacon_Nooploop::healthy()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:347:6:0(const Vector2f*, uint8_t, uint8_t, float, uint8_t&, float&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:200:6:bool AP_Beacon::get_beacon_data(uint8_t, AP_Beacon::BeaconState&) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:246:6:void NavEKF2_core::FuseRngBcnStatic()",
+        "stack_size": 216
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1332:11:virtual float ModeLoiter::crosstrack_error() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:200:6:virtual void AP_Beacon_Marvelmind::update()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:163:6:void AP_Beacon_Marvelmind::process_beacons_distances_datagram()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:116:6:void AC_Sprayer::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:327:6:void AP_Beacon_Marvelmind::set_stationary_beacons_positions()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:196:6:void AP_Beacon_Nooploop::parse_node_frame2()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:190:8:int8_t AP_Beacon_Marvelmind::find_beacon_instance(uint8_t) const",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:82:49:AP_Beacon_Marvelmind::StationaryBeaconPosition* AP_Beacon_Marvelmind::get_or_alloc_beacon(uint8_t)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:84:6:virtual void ModeLoiter::run()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:163:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1314:10:virtual bool ModeLoiter::has_user_takeoff(bool) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Backend.cpp:43:6:void AP_Beacon_Backend::set_vehicle_position(const Vector3f&, float)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:226:6:void AP_Beacon_Nooploop::parse_setting_frame0()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1305:12:virtual Mode::Number ModeLoiter::mode_number() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:228:7:float AP_Beacon::beacon_distance(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1311:10:virtual bool ModeLoiter::has_manual_throttle() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:90:6:void AC_Sprayer::run(bool)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Logging.cpp:207:6:void NavEKF2_core::Log_Write_Beacon(uint64_t)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1313:10:virtual bool ModeLoiter::is_autopilot() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:45:6:bool ModeLoiter::do_precision_loiter()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:256:6:void AP_Beacon::update_boundary_points()",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:173:6:bool AP_Beacon::get_vehicle_position_ned(Vector3f&, float&) const",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1312:10:virtual bool ModeLoiter::allows_arming(AP_Arming::Method) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:406:6:void AP_Beacon::log()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:127:6:void AP_Beacon_Marvelmind::process_beacons_positions_highres_datagram()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:462:6:void NavEKF2_core::CalcRangeBeaconPosDownOffset(ftype, Vector3F&, bool)",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:369:6:void AP_Beacon_Marvelmind::order_stationary_beacons()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Backend.cpp:70:6:void AP_Beacon_Backend::set_beacon_position(uint8_t, const Vector3f&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:140:6:void AP_Beacon::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:213:9:virtual int32_t ModeLoiter::wp_bearing() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:210:9:uint8_t AP_Beacon::beacon_id(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:369:6:0()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Backend.cpp:87:10:Vector3f AP_Beacon_Backend::correct_for_orient_yaw(const Vector3f&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:58:1:AC_Sprayer::AC_Sprayer()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:208:10:virtual uint32_t ModeLoiter::wp_distance() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Pozyx.cpp:27:6:virtual bool AP_Beacon_Pozyx::healthy()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:199:13:AC_Sprayer* AP::sprayer()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:97:29:AP_Beacon_Nooploop::MsgType AP_Beacon_Nooploop::parse_byte(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:96:6:void AP_Beacon::init()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:10:6:virtual bool ModeLoiter::init(bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AC_Sprayer/AC_Sprayer.cpp:85:13:static AC_Sprayer* AC_Sprayer::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:438:12:AP_Beacon* AP::beacon()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1315:10:virtual bool ModeLoiter::allows_autotune() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:97:6:void AP_Beacon_Marvelmind::process_beacons_positions_datagram()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:387:17:const Vector2f* AP_Beacon::get_boundary_points(uint16_t&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:45:6:void AP_Beacon_Marvelmind::process_position_datagram()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1328:17:virtual const char* ModeLoiter::name4() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:247:10:uint32_t AP_Beacon::beacon_last_update_ms(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:152:6:bool AP_Beacon::get_origin(Location&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Pozyx.cpp:34:6:virtual void AP_Beacon_Pozyx::update()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:399:6:bool AP_Beacon::device_ready() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1327:17:virtual const char* ModeLoiter::name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Backend.cpp:51:6:void AP_Beacon_Backend::set_beacon_distance(uint8_t, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:347:6:static bool AP_Beacon::get_next_boundary_point(const Vector2f*, uint8_t, uint8_t, float, uint8_t&, float&)",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:237:10:Vector3f AP_Beacon::beacon_position(uint8_t) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Pozyx.cpp:95:6:void AP_Beacon_Pozyx::parse_buffer()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_Measurements.cpp:804:6:void NavEKF2_core::readRngBcnData()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../ArduCopter/mode.h:1310:10:virtual bool ModeLoiter::requires_GPS() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:131:6:bool AP_Beacon::healthy() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Marvelmind.cpp:62:6:void AP_Beacon_Marvelmind::process_position_highres_datagram()",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon_Nooploop.cpp:83:6:void AP_Beacon_Nooploop::request_setting()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:84:1:AP_Beacon::AP_Beacon()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Beacon/AP_Beacon.cpp:125:6:bool AP_Beacon::enabled() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:27:6:void NavEKF2_core::FuseRngBcn()",
+        "stack_size": 216
+      },
+      {
+        "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_RngBcnFusion.cpp:10:6:void NavEKF2_core::SelectRngBcnFusion()",
+        "stack_size": 8
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_Mission/AP_Mission_Commands.cpp:271:6:bool AP_Mission::start_command_do_sprayer(const AP_Mission::Mission_Command&)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15818
+  },
+  "total_functions_analyzed": 15846
+}

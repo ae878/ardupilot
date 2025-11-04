@@ -1,0 +1,14 @@
+{
+  "test_id": 9,
+  "timestamp": "2025-10-09T19:54:58.463010",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "WEATHERVANE_ENABLED": 1,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "AP_RSSI_ENABLED": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 342,
+    "timestamp": "2025-10-10T12:22:51.928062",
+    "macro_changes": {
+      "AP_MISSION_ENABLED": 0,
+      "MODE_BRAKE_ENABLED": 1,
+      "HAL_MOUNT_ENABLED": 0,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+      "HAL_ENABLE_THREAD_STATISTICS": 1
+    },
+    "build_success": false,
+    "build_time": 157.48004293441772,
+    "build_result": false,
+    "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+  }
+]

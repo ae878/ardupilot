@@ -1,0 +1,13 @@
+{
+  "test_id": 344,
+  "timestamp": "2025-10-10T12:28:07.080100",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 1,
+    "CONFIG_LWIP_STATS": 0,
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_DSHOT_ENABLED": 0,
+    "MODE_ACRO_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "HAL_USB_PRODUCT_ID": 1
+  }
+}

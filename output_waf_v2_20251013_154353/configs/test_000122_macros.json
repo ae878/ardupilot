@@ -1,0 +1,13 @@
+{
+  "test_id": 122,
+  "timestamp": "2025-10-13T21:31:24.800184",
+  "macro_changes": {
+    "MODE_AUTO_ENABLED": 1,
+    "FFT_MAX_MISSED_UPDATES": 1,
+    "MODE_SPORT_ENABLED": 1,
+    "AP_SIM_ENABLED": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "BACKEND_SAMPLE_RATE_MAX": 16,
+    "HAL_GPIO_OUTPUT": 0
+  }
+}

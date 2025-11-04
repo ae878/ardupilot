@@ -1,0 +1,9 @@
+{
+  "test_id": 680,
+  "timestamp": "2025-10-11T04:13:11.214686",
+  "macro_changes": {
+    "HAL_GPIO_LED_ON": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 1
+  }
+}

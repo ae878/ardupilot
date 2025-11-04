@@ -1,0 +1,584 @@
+{
+  "test_id": 618,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/lwip/src/netif/ppp/utils.c:605:13:ppp_logit.constprop",
+      "stack_size": 1032,
+      "file": "utils.c.0.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.cpp:34:6:virtual void AP_OpticalFlow_MAV::update()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:261:6:void AP_OpticalFlow::update_state(const AP_OpticalFlow::OpticalFlow_state&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:980:10:virtual bool ModeFlowHold::has_user_takeoff(bool) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.h:11:7:virtual AP_OpticalFlow_Pixart::~AP_OpticalFlow_Pixart()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.cpp:80:6:virtual void AP_OpticalFlow_CXOF::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.cpp:61:22:static AP_OpticalFlow_CXOF* AP_OpticalFlow_CXOF::detect(AP_OpticalFlow&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:979:10:virtual bool ModeFlowHold::is_autopilot() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:173:6:bool AP_OpticalFlow_Calibrator::sample_buffers_full() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp:57:6:bool AP_OpticalFlow_PX4Flow::scan_buses()",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:179:6:void AP_OpticalFlow::update()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:95:24:static AP_OpticalFlow_Pixart* AP_OpticalFlow_Pixart::detect(const char*, AP_OpticalFlow&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:188:9:uint8_t AP_OpticalFlow_Pixart::reg_read(uint8_t)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:56:6:void AP_OpticalFlow_Calibrator::stop()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.cpp:29:21:static AP_OpticalFlow_MSP* AP_OpticalFlow_MSP::detect(AP_OpticalFlow&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.h:19:10:virtual void AP_OpticalFlow_PX4Flow::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.cpp:97:6:virtual void AP_OpticalFlow_MSP::handle_msp(const MSP::msp_opflow_data_message_t&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.h:9:7:virtual AP_OpticalFlow_CXOF::~AP_OpticalFlow_CXOF()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.h:15:10:virtual void AP_OpticalFlow_MSP::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:214:6:void AP_OpticalFlow_Pixart::srom_download()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.h:37:18:virtual void OpticalFlow_backend::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.cpp:37:6:static void AP_OpticalFlow_HereFlow::handle_measurement(AP_DroneCAN*, const CanardRxTransfer&, const com_hex_equipment_flow_Measurement&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.cpp:56:1:AP_OpticalFlow_UPFLOW::AP_OpticalFlow_UPFLOW(AP_OpticalFlow&, AP_HAL::UARTDriver*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.cpp:29:6:static bool AP_OpticalFlow_HereFlow::subscribe_msgs(AP_DroneCAN*)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:280:6:0()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp:95:6:bool AP_OpticalFlow_PX4Flow::setup_sensor()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.cpp:26:21:static AP_OpticalFlow_MAV* AP_OpticalFlow_MAV::detect(AP_OpticalFlow&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:Canard::ArgCallback<AP_DroneCAN, com_hex_equipment_flow_Measurement>::~ArgCallback()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:281:6:void AP_OpticalFlow::Log_Write_Optflow()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:88:1:AP_OpticalFlow_Pixart::AP_OpticalFlow_Pixart(const char*, AP_OpticalFlow&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.cpp:32:6:void OpticalFlow_backend::_update_frontend(const AP_OpticalFlow::OpticalFlow_state&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.h:10:7:virtual AP_OpticalFlow_PX4Flow::~AP_OpticalFlow_PX4Flow()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:112:6:void AP_OpticalFlow::init(uint32_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.cpp:93:6:virtual void AP_OpticalFlow_UPFLOW::update()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:231:6:virtual void ModeFlowHold::run()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:210:6:void AP_OpticalFlow::handle_msg(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:988:17:virtual const char* ModeFlowHold::name() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.cpp:82:6:virtual void AP_OpticalFlow_UPFLOW::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:238:6:void AP_OpticalFlow::start_calibration()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:317:6:void AP_OpticalFlow_Calibrator::log_sample(uint8_t, uint8_t, float, float, float)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.h:43:18:virtual void OpticalFlow_backend::handle_msg(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.h:10:7:virtual AP_OpticalFlow_MAV::~AP_OpticalFlow_MAV()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.cpp:22:1:OpticalFlow_backend::OpticalFlow_backend(AP_OpticalFlow&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_OpticalFlow_PX4Flow::timer; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.cpp:36:6:virtual void AP_OpticalFlow_MSP::update()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.cpp:19:1:AP_OpticalFlow_HereFlow::AP_OpticalFlow_HereFlow(AP_OpticalFlow&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.cpp:38:6:void OpticalFlow_backend::_applyYaw(Vector2f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:330:6:virtual void AP_OpticalFlow_Pixart::update()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:241:6:void AP_OpticalFlow_Pixart::load_configuration(const AP_OpticalFlow_Pixart::RegData*, uint16_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.cpp:27:1:OpticalFlow_backend::~OpticalFlow_backend()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:209:9:int16_t AP_OpticalFlow_Pixart::reg_read16s(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:180:6:bool AP_OpticalFlow_Calibrator::run_calibration()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.h:10:7:AP_OpticalFlow_HereFlow::~AP_OpticalFlow_HereFlow()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:279:6:bool AP_OpticalFlow_Calibrator::calc_sample_best_scalar(const AP_OpticalFlow_Calibrator::sample_t&, float&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.cpp:59:6:virtual void AP_OpticalFlow_HereFlow::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.cpp:54:1:AP_OpticalFlow_CXOF::AP_OpticalFlow_CXOF(AP_OpticalFlow&, AP_HAL::UARTDriver*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.h:10:7:AP_OpticalFlow_PX4Flow::~AP_OpticalFlow_PX4Flow()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:272:7:float AP_OpticalFlow_Calibrator::calc_sample_residual(const AP_OpticalFlow_Calibrator::sample_t&, float) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.h:14:10:virtual void AP_OpticalFlow_HereFlow::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp:107:6:virtual void AP_OpticalFlow_PX4Flow::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:971:12:virtual Mode::Number ModeFlowHold::mode_number() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:77:1:ModeFlowHold::ModeFlowHold()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.h:10:7:AP_OpticalFlow_MAV::~AP_OpticalFlow_MAV()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:291:7:float AP_OpticalFlow_Calibrator::calc_mean_squared_residuals(uint8_t, float) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.h:983:10:virtual bool ModeFlowHold::allows_flip() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:109:6:bool AP_OpticalFlow_Pixart::setup_sensor()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.cpp:27:1:virtual OpticalFlow_backend::~OpticalFlow_backend()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode.h:977:10:virtual bool ModeFlowHold::has_manual_throttle() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.h:10:7:virtual AP_OpticalFlow_HereFlow::~AP_OpticalFlow_HereFlow()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_Backend.cpp:553:6:void AP_MSP_Telem_Backend::msp_handle_opflow(const MSP::msp_opflow_data_message_t&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:280:6:void AP_OpticalFlow_Pixart::timer()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:39:6:void AP_OpticalFlow_Calibrator::start()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.h:8:7:AP_OpticalFlow_MSP::~AP_OpticalFlow_MSP()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.h:9:7:AP_OpticalFlow_CXOF::~AP_OpticalFlow_CXOF()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp:41:25:static AP_OpticalFlow_PX4Flow* AP_OpticalFlow_PX4Flow::detect(AP_OpticalFlow&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:253:6:void AP_OpticalFlow::stop_calibration()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:176:6:void AP_OpticalFlow_Pixart::reg_write(uint8_t, uint8_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:123:10:Vector2f AP_OpticalFlow_Calibrator::get_scalars()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_OpticalFlow_Pixart::timer; RetType = void; Args = {}]",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:256:6:void AP_OpticalFlow_Pixart::motion_burst()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MSP.h:8:7:virtual AP_OpticalFlow_MSP::~AP_OpticalFlow_MSP()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.cpp:92:6:virtual void AP_OpticalFlow_MAV::handle_msg(const mavlink_message_t&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_PX4Flow.cpp:112:6:void AP_OpticalFlow_PX4Flow::timer()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../ArduCopter/mode.h:978:10:virtual bool ModeFlowHold::allows_arming(AP_Arming::Method) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:311:17:AP_OpticalFlow* AP::opticalflow()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_HereFlow.cpp:65:6:void AP_OpticalFlow_HereFlow::_push_state()",
+        "stack_size": 48
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:97:7:virtual Canard::ArgCallback<AP_DroneCAN, com_hex_equipment_flow_Measurement>::~ArgCallback()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_MAV.h:17:10:virtual void AP_OpticalFlow_MAV::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:85:6:virtual bool ModeFlowHold::init(bool)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.h:18:10:virtual void AP_OpticalFlow_Pixart::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:191:6:bool AP_OpticalFlow_Calibrator::calc_scalars(uint8_t, float&, float&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:291:7:0(uint8_t, float) const",
+        "stack_size": 4
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.h:10:7:AP_OpticalFlow_UPFLOW::~AP_OpticalFlow_UPFLOW()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/callbacks.h:104:10:void Canard::ArgCallback<T, msgtype>::operator()(const CanardRxTransfer&, const msgtype&) [with T = AP_DroneCAN; msgtype = com_hex_equipment_flow_Measurement]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.cpp:63:24:static AP_OpticalFlow_UPFLOW* AP_OpticalFlow_UPFLOW::detect(AP_OpticalFlow&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:130:6:void AP_OpticalFlow_Calibrator::add_sample(uint32_t, const Vector2f&, const Vector2f&, const Vector2f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_UPFLOW.h:10:7:virtual AP_OpticalFlow_UPFLOW::~AP_OpticalFlow_UPFLOW()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:55:5:Canard::Subscriber<msgtype>::~Subscriber() [with msgtype = com_hex_equipment_flow_Measurement]",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:118:6:void ModeFlowHold::flowhold_flow_to_angle(Vector2f&, bool)",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.cpp:201:10:uint16_t AP_OpticalFlow_Pixart::reg_read16u(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.h:989:17:virtual const char* ModeFlowHold::name4() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode_flowhold.cpp:352:6:void ModeFlowHold::update_height_estimate()",
+        "stack_size": 200
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Calibrator.cpp:69:6:bool AP_OpticalFlow_Calibrator::update()",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Backend.h:47:18:virtual void OpticalFlow_backend::handle_msp(const MSP::msp_opflow_data_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_Pixart.h:11:7:AP_OpticalFlow_Pixart::~AP_OpticalFlow_Pixart()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:223:6:void AP_OpticalFlow::handle_msp(const MSP::msp_opflow_data_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow_CXOF.cpp:94:6:virtual void AP_OpticalFlow_CXOF::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../ArduCopter/mode.h:976:10:virtual bool ModeFlowHold::requires_GPS() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_OpticalFlow/AP_OpticalFlow.cpp:105:1:AP_OpticalFlow::AP_OpticalFlow()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = com_hex_equipment_flow_Measurement]",
+        "stack_size": 40
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_RngBcnFusion.cpp:337:6:void NavEKF3_core::FuseRngBcnStatic()",
+        "baseline": 216,
+        "current": 192,
+        "diff": -24
+      }
+    ],
+    "unchanged": 15786
+  },
+  "total_functions_analyzed": 15807
+}

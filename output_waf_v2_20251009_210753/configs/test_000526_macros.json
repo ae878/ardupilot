@@ -1,0 +1,12 @@
+{
+  "test_id": 526,
+  "timestamp": "2025-10-10T21:01:37.189705",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 0,
+    "MAVLINK_ENABLED_ALL": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "TELEM_TIME_SLOT_MAX": 8,
+    "TAP_ESC_MAX_MOTOR_NUM": 4,
+    "AP_RSSI_ENABLED": 1
+  }
+}

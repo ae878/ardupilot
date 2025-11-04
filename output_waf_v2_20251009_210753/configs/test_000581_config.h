@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #581 */
+
+/* ConfigFuzz: AC_PRECLAND_ENABLED */
+#ifdef AC_PRECLAND_ENABLED
+#undef AC_PRECLAND_ENABLED
+#endif
+#define AC_PRECLAND_ENABLED 0
+
+/* ConfigFuzz: AP_SCHEDULER_OVERTIME_MARGIN_US */
+#ifdef AP_SCHEDULER_OVERTIME_MARGIN_US
+#undef AP_SCHEDULER_OVERTIME_MARGIN_US
+#endif
+#define AP_SCHEDULER_OVERTIME_MARGIN_US 0
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 1
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 1
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 0
+
+/* ConfigFuzz: HAL_SOARING_ENABLED */
+#ifdef HAL_SOARING_ENABLED
+#undef HAL_SOARING_ENABLED
+#endif
+#define HAL_SOARING_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 1
+
+/* ConfigFuzz: HAVE_ENUM_CAMERA_CAP_FLAGS */
+#ifdef HAVE_ENUM_CAMERA_CAP_FLAGS
+#undef HAVE_ENUM_CAMERA_CAP_FLAGS
+#endif
+#define HAVE_ENUM_CAMERA_CAP_FLAGS 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN 0
+
+#endif /* _AP_CONFIG_H_ */

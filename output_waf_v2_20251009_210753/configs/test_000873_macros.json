@@ -1,0 +1,11 @@
+{
+  "test_id": 873,
+  "timestamp": "2025-10-11T13:37:06.339458",
+  "macro_changes": {
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "FLOW_CONTROL_ENABLED": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 0,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1
+  }
+}

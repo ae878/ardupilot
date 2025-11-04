@@ -1,0 +1,12 @@
+{
+  "test_id": 910,
+  "timestamp": "2025-10-11T15:21:34.868791",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "AP_FENCE_ENABLED": 1,
+    "MAX_PWMS": 2
+  }
+}

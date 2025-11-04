@@ -1,0 +1,13 @@
+{
+  "test_id": 69,
+  "timestamp": "2025-10-13T18:57:59.636326",
+  "macro_changes": {
+    "AC_PRECLAND_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "AP_SRV_CHANNELS_ENABLED": 1,
+    "AP_BEACON_ENABLED": 0,
+    "HAL_INS_NONE": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "test_id": 55,
+  "timestamp": "2025-10-13T18:15:21.748722",
+  "macro_changes": {
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "AP_FENCE_ENABLED": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "FSYNC_CONFIG_EXT_SYNC_AX": 1,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "HAL_NO_FLASH_SUPPORT": 1
+  },
+  "build_success": false,
+  "build_time": 133.19224095344543,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/Util.cpp:243:2: error: #error \"Bootloader-flashing enabled but no flashing support\""
+}

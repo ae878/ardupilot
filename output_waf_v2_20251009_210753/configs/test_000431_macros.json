@@ -1,0 +1,13 @@
+{
+  "test_id": 431,
+  "timestamp": "2025-10-10T16:32:36.405158",
+  "macro_changes": {
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "AP_FOLLOW_ENABLED": 0,
+    "HAL_USE_HW_RNG": 0,
+    "AP_FEATURE_RTSCTS": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  }
+}

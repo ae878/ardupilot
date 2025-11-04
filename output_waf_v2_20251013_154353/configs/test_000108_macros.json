@@ -1,0 +1,11 @@
+{
+  "test_id": 108,
+  "timestamp": "2025-10-13T20:49:26.832165",
+  "macro_changes": {
+    "HAL_BATT_CURR_PIN": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "HAL_RALLY_ENABLED": 1,
+    "HAL_GPIO_OUTPUT": 1,
+    "MODE_THROW_ENABLED": 0
+  }
+}

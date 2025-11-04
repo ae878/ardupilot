@@ -1,0 +1,16 @@
+{
+  "test_id": 897,
+  "timestamp": "2025-10-11T14:46:45.862867",
+  "macro_changes": {
+    "HAL_USB_PRODUCT_ID": 0,
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "HAL_USE_HW_RNG": 1,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 32,
+    "HAL_BATT_VOLT_PIN": 1,
+    "WEATHERVANE_ENABLED": 1,
+    "MODE_LOITER_ENABLED": 1,
+    "METADATA_MAX_i": 2,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1
+  }
+}

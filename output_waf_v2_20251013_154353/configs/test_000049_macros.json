@@ -1,0 +1,11 @@
+{
+  "test_id": 49,
+  "timestamp": "2025-10-13T18:00:53.019128",
+  "macro_changes": {
+    "HAL_UART_IOMCU_IDX": 0,
+    "AP_PERIPH_GPS_ENABLED": 1,
+    "HAL_BATT_CURR_PIN": 0,
+    "HAL_BATT_VOLT_PIN": 1,
+    "AP_PERIPH_BATTERY_BALANCE_ENABLED": 1
+  }
+}

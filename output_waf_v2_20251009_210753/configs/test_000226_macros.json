@@ -1,0 +1,9 @@
+{
+  "test_id": 226,
+  "timestamp": "2025-10-10T07:07:48.748454",
+  "macro_changes": {
+    "AP_AIS_ENABLED": 0,
+    "HAL_GPIO_ALT": 1,
+    "MAVLINK_ENABLED_STANDARD": 1
+  }
+}

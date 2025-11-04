@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 7,
+    "timestamp": "2025-10-13T15:58:42.875297",
+    "macro_changes": {
+      "MODE_DRIFT_ENABLED": 0,
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+      "HAL_LOGGING_ENABLED": 1,
+      "HAL_GCS_ENABLED": 0,
+      "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+      "HAL_SOARING_ENABLED": 1,
+      "HAL_WITH_UAVCAN": 0,
+      "AP_FOLLOW_ENABLED": 1,
+      "HAL_IMUHEAT_P_DEFAULT": 0
+    },
+    "build_success": false,
+    "build_time": 10.547780513763428,
+    "build_result": false,
+    "error": "../../libraries/AC_Autorotation/RSC_Autorotation.cpp:127:21: error: 'constrain_float' was not declared in this scope"
+  }
+]

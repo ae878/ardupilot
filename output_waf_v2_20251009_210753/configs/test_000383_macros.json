@@ -1,0 +1,13 @@
+{
+  "test_id": 383,
+  "timestamp": "2025-10-10T14:15:24.687646",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0,
+    "MAVLINK_ENABLED_ALL": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "HAL_BATT_CURR_PIN": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1
+  }
+}

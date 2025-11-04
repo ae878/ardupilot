@@ -1,0 +1,10 @@
+{
+  "test_id": 915,
+  "timestamp": "2025-10-11T15:33:13.592737",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1
+  }
+}

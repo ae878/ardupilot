@@ -1,0 +1,14 @@
+{
+  "test_id": 545,
+  "timestamp": "2025-10-10T21:50:50.997350",
+  "macro_changes": {
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 1,
+    "AP_AIS_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "HAL_CANFD_SUPPORTED": 0,
+    "MODE_RTL_ENABLED": 0,
+    "AP_CRASHDUMP_ENABLED": 0
+  }
+}

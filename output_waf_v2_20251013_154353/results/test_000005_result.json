@@ -1,0 +1,14 @@
+{
+  "test_id": 5,
+  "timestamp": "2025-10-13T15:55:16.677963",
+  "macro_changes": {
+    "HAL_NO_ROMFS_SUPPORT": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1
+  },
+  "build_success": false,
+  "build_time": 73.99592304229736,
+  "build_result": false,
+  "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+}

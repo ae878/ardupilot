@@ -1,0 +1,16 @@
+{
+  "test_id": 254,
+  "timestamp": "2025-10-10T08:27:43.266311",
+  "macro_changes": {
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "HAL_GPIO_INPUT": 1,
+    "MODE_GUIDED_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "AP_CAMERA_ENABLED": 0,
+    "HAL_GENERATOR_ENABLED": 0,
+    "HAL_USB_PRODUCT_ID": 1,
+    "HAL_PWM_COUNT": 1
+  }
+}

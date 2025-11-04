@@ -1,0 +1,12 @@
+{
+  "test_id": 237,
+  "timestamp": "2025-10-10T07:39:12.285434",
+  "macro_changes": {
+    "HAL_WITH_MCU_MONITORING": 0,
+    "AP_MISSION_ENABLED": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "TELEM_TIME_SLOT_MAX": 8,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 1
+  }
+}

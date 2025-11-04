@@ -1,0 +1,9 @@
+{
+  "test_id": 71,
+  "timestamp": "2025-10-13T19:04:37.119053",
+  "macro_changes": {
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 0,
+    "AP_PERIPH_MAG_ENABLED": 0,
+    "AP_PERIPH_BARO_ENABLED": 0
+  }
+}

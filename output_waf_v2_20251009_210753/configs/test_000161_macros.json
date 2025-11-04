@@ -1,0 +1,14 @@
+{
+  "test_id": 161,
+  "timestamp": "2025-10-10T04:09:06.808862",
+  "macro_changes": {
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "HAL_WITH_UAVCAN": 0,
+    "HAL_SPRAYER_ENABLED": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 0
+  }
+}

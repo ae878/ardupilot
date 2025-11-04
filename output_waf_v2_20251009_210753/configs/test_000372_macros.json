@@ -1,0 +1,9 @@
+{
+  "test_id": 372,
+  "timestamp": "2025-10-10T13:42:30.398914",
+  "macro_changes": {
+    "RPMMAX": 8,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  }
+}

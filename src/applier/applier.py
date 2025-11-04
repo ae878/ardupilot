@@ -173,6 +173,10 @@ class Applier:
                     value = "false"
                 # (additional 1/0 mapping logic can go here)
 
+                literal_suffix = getattr(macro_config, "literal_suffix", "") or getattr(macro_config, "extra", {}).get("literal_suffix", "")
+                if literal_suffix and isinstance(value, (int, str)) and str(value).isdigit():
+                    value = f"{value}{literal_suffix}"
+                
                 prefix, name, post_name_ws = match.groups()
                 # split off any "/* ... */" comment
                 rest = text[match.end():]

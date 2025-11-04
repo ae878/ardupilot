@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #686 */
+
+/* ConfigFuzz: HAL_USB_VENDOR_ID */
+#ifdef HAL_USB_VENDOR_ID
+#undef HAL_USB_VENDOR_ID
+#endif
+#define HAL_USB_VENDOR_ID 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_ADAP_TUNING */
+#ifdef MAVLINK_MSG_ID_ADAP_TUNING
+#undef MAVLINK_MSG_ID_ADAP_TUNING
+#endif
+#define MAVLINK_MSG_ID_ADAP_TUNING 1
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 32
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 1
+
+/* ConfigFuzz: HAL_BATT_VOLT_PIN */
+#ifdef HAL_BATT_VOLT_PIN
+#undef HAL_BATT_VOLT_PIN
+#endif
+#define HAL_BATT_VOLT_PIN 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 1
+
+/* ConfigFuzz: AP_HAL_UARTDRIVER_ENABLED */
+#ifdef AP_HAL_UARTDRIVER_ENABLED
+#undef AP_HAL_UARTDRIVER_ENABLED
+#endif
+#define AP_HAL_UARTDRIVER_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_WIFI_CONFIG_AP */
+#ifdef MAVLINK_MSG_ID_WIFI_CONFIG_AP
+#undef MAVLINK_MSG_ID_WIFI_CONFIG_AP
+#endif
+#define MAVLINK_MSG_ID_WIFI_CONFIG_AP 0
+
+/* ConfigFuzz: AP_OPTICALFLOW_ENABLED */
+#ifdef AP_OPTICALFLOW_ENABLED
+#undef AP_OPTICALFLOW_ENABLED
+#endif
+#define AP_OPTICALFLOW_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

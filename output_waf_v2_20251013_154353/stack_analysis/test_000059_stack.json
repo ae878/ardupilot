@@ -1,0 +1,401 @@
+{
+  "test_id": 59,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:254:6:void SoloGimbal_Parameters::set_accel_gain(const Vector3f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:541:6:void SoloGimbal::joint_rates_to_gimbal_ang_vel(const Vector3f&, Vector3f&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:45:6:void SoloGimbalEKF::reset()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:111:6:void SoloGimbal_Parameters::set_param(gmb_param_t, float)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:104:6:virtual bool AP_Mount_SoloGimbal::get_attitude_quaternion(Quaternion&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:74:6:void SoloGimbal_Parameters::fetch_params()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:319:10:Vector3f SoloGimbal::get_ang_vel_dem_roll_tilt(const Quaternion&)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:382:6:bool AP_Button::arming_checks(size_t, char*) const",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:956:6:void SoloGimbalEKF::getQuat(Quaternion&) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:200:6:void SoloGimbalEKF::predictCovariance()",
+        "stack_size": 656
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:937:6:void SoloGimbalEKF::getGyroBias(Vector3f&) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:222:6:void SoloGimbal::readVehicleDeltaAngle(uint8_t, Vector3f&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:672:6:void SoloGimbalEKF::readMagData()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:238:10:Vector3f SoloGimbal_Parameters::get_accel_gain()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:526:6:void SoloGimbal::gimbal_ang_vel_to_joint_rates(const Vector3f&, Vector3f&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:239:6:void AP_Button::run_aux_functions(bool)",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:130:1:AP_Button::AP_Button()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:143:6:void AP_Button::update()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:343:10:Vector3f SoloGimbal::get_ang_vel_dem_feedforward(const Quaternion&) const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:292:6:void SoloGimbal_Parameters::flash()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:24:6:virtual void AP_Mount_SoloGimbal::update_fast()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:287:6:bool AP_Button::get_button_state(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:347:6:void AP_Button::send_report() const",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:503:6:virtual bool SoloGimbal::_acal_get_ready_to_sample()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_SoloGimbal.cpp:83:6:virtual void AP_Camera_SoloGimbal::handle_message(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:261:10:Vector3f SoloGimbal_Parameters::get_gyro_bias()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:297:6:bool SoloGimbal_Parameters::flashing()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:279:10:Vector3f SoloGimbal::get_ang_vel_dem_yaw(const Quaternion&)",
+        "stack_size": 120
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:946:6:void SoloGimbalEKF::setGyroBias(const Vector3f&)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:918:6:void SoloGimbalEKF::fixCovariance()",
+        "stack_size": 12
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:494:18:virtual AccelCalibrator* SoloGimbal::_acal_get_calibrator(uint8_t)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:270:6:void SoloGimbal_Parameters::set_gyro_bias(const Vector3f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:18:6:virtual void AP_Mount_SoloGimbal::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:151:6:void AP_Mount_SoloGimbal::handle_gimbal_torque_report(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:143:6:virtual void AP_Mount_SoloGimbal::handle_param_value(const mavlink_message_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:83:6:bool SoloGimbal_Parameters::initialized()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:188:6:void SoloGimbal_Parameters::handle_param_value(const mavlink_message_t&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:693:6:void SoloGimbalEKF::fuseCompass()",
+        "stack_size": 208
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:102:6:void SoloGimbal::send_controls(mavlink_channel_t)",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:513:6:virtual void SoloGimbal::_acal_save_calibrations()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:391:6:void SoloGimbal::update_target(const Vector3f&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:30:13:static const char* SoloGimbal_Parameters::get_param_name(gmb_param_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:230:10:Vector3f SoloGimbal_Parameters::get_accel_bias()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:162:6:void SoloGimbalEKF::predictStates()",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:35:1:SoloGimbalEKF::SoloGimbalEKF()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:255:6:void SoloGimbal::update_joint_angle_est()",
+        "stack_size": 136
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:489:6:bool SoloGimbal::joints_near_limits() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:116:6:virtual void AP_Mount_SoloGimbal::handle_gimbal_report(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:233:6:void SoloGimbal::update_fast()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:103:6:void SoloGimbal_Parameters::get_param(gmb_param_t, float&, float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:277:10:Vector3f SoloGimbal_Parameters::get_joint_bias()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:15:6:bool SoloGimbal::present()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:30:6:virtual void AP_Mount_SoloGimbal::update()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:840:6:void SoloGimbalEKF::alignHeading()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:962:6:bool SoloGimbalEKF::getStatus() const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.h:42:10:virtual bool AP_Mount_SoloGimbal::suppress_heartbeat() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:323:6:void AP_Button::timer_update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.h:30:10:virtual bool AP_Mount_SoloGimbal::has_pan_control() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:22:6:void SoloGimbal_Parameters::reset()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:365:10:Vector3f SoloGimbal::get_ang_vel_dem_gyro_bias()",
+        "stack_size": 64
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:211:6:void SoloGimbal::update_estimators()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:508:6:virtual bool SoloGimbal::_acal_get_saving()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:46:6:void SoloGimbal::receive_feedback(mavlink_channel_t, const mavlink_message_t&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:26:6:bool SoloGimbal::aligned()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:93:6:bool SoloGimbal_Parameters::received_all()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &AP_Button::timer_update; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:372:10:Vector3f SoloGimbal::get_ang_vel_dem_body_lock()",
+        "stack_size": 96
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:247:6:void SoloGimbal_Parameters::set_accel_bias(const Vector3f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/AP_Mount_SoloGimbal.cpp:12:1:AP_Mount_SoloGimbal::AP_Mount_SoloGimbal(AP_Mount&, AP_Mount_Params&, uint8_t)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:364:6:void AP_Button::setup_pins()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:31:15:gimbal_mode_t SoloGimbal::get_mode()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:406:6:void SoloGimbal::write_logs()",
+        "stack_size": 176
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:403:12:AP_Button& AP::button()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_SoloGimbal.cpp:12:6:virtual bool AP_Camera_SoloGimbal::trigger_pic()",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:16:1:SoloGimbal_Parameters::SoloGimbal_Parameters()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:601:6:void SoloGimbalEKF::fuseVelocity()",
+        "stack_size": 128
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:60:6:void SoloGimbalEKF::RunEKF(float, const Vector3f&, const Vector3f&, const Vector3f&)",
+        "stack_size": 80
+      },
+      {
+        "function": "../../libraries/AP_Camera/AP_Camera_SoloGimbal.cpp:50:6:virtual void AP_Camera_SoloGimbal::cam_mode_toggle()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal.cpp:168:6:void SoloGimbal::extract_feedback(const mavlink_gimbal_report_t&)",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:285:7:float SoloGimbal_Parameters::get_K_rate()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbalEKF.cpp:858:7:float SoloGimbalEKF::calcMagHeadingInnov()",
+        "stack_size": 144
+      },
+      {
+        "function": "../../libraries/AP_Mount/SoloGimbal_Parameters.cpp:131:6:void SoloGimbal_Parameters::update()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../libraries/AP_Button/AP_Button.cpp:304:9:uint8_t AP_Button::get_mask()",
+        "stack_size": 32
+      }
+    ],
+    "removed_functions": [],
+    "increased": [],
+    "decreased": [],
+    "unchanged": 15901
+  },
+  "total_functions_analyzed": 15988
+}

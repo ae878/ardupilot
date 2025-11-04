@@ -1,0 +1,11 @@
+{
+  "test_id": 167,
+  "timestamp": "2025-10-10T04:26:32.680478",
+  "macro_changes": {
+    "HAL_INS_RATE_LOOP": 0,
+    "MODE_FLIP_ENABLED": 1,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 8,
+    "MODE_ACRO_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  }
+}

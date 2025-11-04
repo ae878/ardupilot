@@ -1,0 +1,13 @@
+{
+  "test_id": 397,
+  "timestamp": "2025-10-10T14:54:17.225107",
+  "macro_changes": {
+    "HAL_WITH_UAVCAN": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "NOOPLOOP_DIST_MAX_MM": 16,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "HAL_MOUNT_ENABLED": 1
+  }
+}

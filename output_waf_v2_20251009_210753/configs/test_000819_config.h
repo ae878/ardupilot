@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #819 */
+
+/* ConfigFuzz: HAL_WITH_RAMTRON */
+#ifdef HAL_WITH_RAMTRON
+#undef HAL_WITH_RAMTRON
+#endif
+#define HAL_WITH_RAMTRON 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND 1
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 0
+
+/* ConfigFuzz: AP_MISSION_ENABLED */
+#ifdef AP_MISSION_ENABLED
+#undef AP_MISSION_ENABLED
+#endif
+#define AP_MISSION_ENABLED 0
+
+/* ConfigFuzz: RPMMAX */
+#ifdef RPMMAX
+#undef RPMMAX
+#endif
+#define RPMMAX 1
+
+/* ConfigFuzz: ESC_CHANNEL_MAP_CHANNEL */
+#ifdef ESC_CHANNEL_MAP_CHANNEL
+#undef ESC_CHANNEL_MAP_CHANNEL
+#endif
+#define ESC_CHANNEL_MAP_CHANNEL 0
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_PERMUTATION */
+#ifdef BENCH_DEFINE_MAP_PERMUTATION
+#undef BENCH_DEFINE_MAP_PERMUTATION
+#endif
+#define BENCH_DEFINE_MAP_PERMUTATION 1
+
+#endif /* _AP_CONFIG_H_ */

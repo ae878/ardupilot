@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #115 */
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 1
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_AZ */
+#ifdef FSYNC_CONFIG_EXT_SYNC_AZ
+#undef FSYNC_CONFIG_EXT_SYNC_AZ
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_AZ 0
+
+/* ConfigFuzz: AP_PERIPH_GPS_ENABLED */
+#ifdef AP_PERIPH_GPS_ENABLED
+#undef AP_PERIPH_GPS_ENABLED
+#endif
+#define AP_PERIPH_GPS_ENABLED 0
+
+/* ConfigFuzz: CONFIG_LWIP_STATS */
+#ifdef CONFIG_LWIP_STATS
+#undef CONFIG_LWIP_STATS
+#endif
+#define CONFIG_LWIP_STATS 1
+
+/* ConfigFuzz: FS_THR_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_THR_ENABLED_BRAKE_OR_LAND
+#undef FS_THR_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_THR_ENABLED_BRAKE_OR_LAND 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL 1
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 1
+
+/* ConfigFuzz: INS_MAX_GYRO_WINDOW_SAMPLES */
+#ifdef INS_MAX_GYRO_WINDOW_SAMPLES
+#undef INS_MAX_GYRO_WINDOW_SAMPLES
+#endif
+#define INS_MAX_GYRO_WINDOW_SAMPLES 16
+
+/* ConfigFuzz: AP_BEACON_ENABLED */
+#ifdef AP_BEACON_ENABLED
+#undef AP_BEACON_ENABLED
+#endif
+#define AP_BEACON_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

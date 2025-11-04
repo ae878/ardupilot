@@ -1,0 +1,12 @@
+{
+  "test_id": 105,
+  "timestamp": "2025-10-13T20:42:27.750013",
+  "macro_changes": {
+    "HAL_GPIO_INPUT": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "TELEM_TIME_SLOT_MAX": 2,
+    "HAL_PERIPH_ENABLE_NOTIFY": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "AP_SRV_CHANNELS_ENABLED": 1
+  }
+}

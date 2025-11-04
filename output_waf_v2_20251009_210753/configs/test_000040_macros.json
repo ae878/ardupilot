@@ -1,0 +1,12 @@
+{
+  "test_id": 40,
+  "timestamp": "2025-10-09T22:52:12.490437",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 1,
+    "SUMD_MAX_CHANNELS": 32,
+    "MAVLINK_ENABLED_UAVIONIX": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 32,
+    "HAL_GENERATOR_ENABLED": 0
+  }
+}

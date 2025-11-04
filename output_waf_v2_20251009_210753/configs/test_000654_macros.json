@@ -1,0 +1,10 @@
+{
+  "test_id": 654,
+  "timestamp": "2025-10-11T02:52:51.022974",
+  "macro_changes": {
+    "HAL_WITH_MCU_MONITORING": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 16
+  }
+}

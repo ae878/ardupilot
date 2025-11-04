@@ -1,0 +1,14 @@
+{
+  "test_id": 524,
+  "timestamp": "2025-10-10T20:55:04.183637",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "FFT_MAX_MISSED_UPDATES": 8,
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "HAL_DSHOT_ENABLED": 1,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_GPIO_ALT": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "test_id": 19,
+  "timestamp": "2025-10-09T20:18:04.762168",
+  "macro_changes": {
+    "MAVLINK_ENABLED_UAVIONIX": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 2,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "MAVLINK_ENABLED_CSAIRLINK": 0,
+    "HAL_MOUNT_ENABLED": 0,
+    "HAL_WITH_DRONECAN": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 30.325077533721924,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

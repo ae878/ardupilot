@@ -1,0 +1,18 @@
+{
+  "test_id": 834,
+  "timestamp": "2025-10-11T11:45:14.585191",
+  "macro_changes": {
+    "MODE_CIRCLE_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_HEATER_GPIO_PIN": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "RPMMAX": 16,
+    "HAL_USE_HW_RNG": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MODE_THROW_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 170.53165483474731,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+}

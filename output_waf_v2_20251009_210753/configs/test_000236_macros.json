@@ -1,0 +1,9 @@
+{
+  "test_id": 236,
+  "timestamp": "2025-10-10T07:37:49.764588",
+  "macro_changes": {
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0
+  }
+}

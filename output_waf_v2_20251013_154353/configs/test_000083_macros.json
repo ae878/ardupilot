@@ -1,0 +1,10 @@
+{
+  "test_id": 83,
+  "timestamp": "2025-10-13T19:41:02.770412",
+  "macro_changes": {
+    "HAL_DISABLE_ADC_DRIVER": 1,
+    "FSYNC_CONFIG_EXT_SYNC_GZ": 1,
+    "HAL_BARO_NONE": 0,
+    "MPUREG_CONFIG_EXT_SYNC_SHIFT": 1
+  }
+}

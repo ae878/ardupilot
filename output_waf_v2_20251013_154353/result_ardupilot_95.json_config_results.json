@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 96,
+    "timestamp": "2025-10-13T20:19:24.941211",
+    "macro_changes": {
+      "HAL_INS_HIGHRES_SAMPLE": 0,
+      "MPUREG_CONFIG_EXT_SYNC_GY": 0,
+      "HAL_NO_FLASH_SUPPORT": 1,
+      "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+      "HAL_DSHOT_ENABLED": 1,
+      "AP_FEATURE_SBUS_OUT": 1,
+      "FSYNC_CONFIG_EXT_SYNC_TEMP": 0
+    },
+    "build_success": false,
+    "build_time": 134.84949588775635,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/Util.cpp:243:2: error: #error \"Bootloader-flashing enabled but no flashing support\""
+  }
+]

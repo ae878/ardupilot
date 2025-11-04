@@ -1,0 +1,20 @@
+{
+  "test_id": 571,
+  "timestamp": "2025-10-10T23:00:55.233104",
+  "macro_changes": {
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "HAL_INS_RATE_LOOP": 0,
+    "RANGEFINDER_MAX_INSTANCES": 2,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 0,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 1
+  },
+  "build_success": false,
+  "build_time": 134.2162811756134,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

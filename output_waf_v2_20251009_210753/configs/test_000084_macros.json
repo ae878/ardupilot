@@ -1,0 +1,14 @@
+{
+  "test_id": 84,
+  "timestamp": "2025-10-10T00:54:21.248389",
+  "macro_changes": {
+    "FLOW_CONTROL_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "NOOPLOOP_DIST_MAX_MM": 8,
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_WITH_RAMTRON": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "HAL_INS_VRBRAIN": 0
+  }
+}

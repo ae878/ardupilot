@@ -1,0 +1,20 @@
+{
+  "test_id": 119,
+  "timestamp": "2025-10-10T02:23:07.188962",
+  "macro_changes": {
+    "HAL_GENERATOR_ENABLED": 1,
+    "MAVLINK_ENABLED_UALBERTA": 0,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 2,
+    "USER_PARAMS_ENABLED": 1,
+    "MODE_AUTOROTATE_ENABLED": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0,
+    "MAVLINK_ENABLED_ASLUAV": 0,
+    "MAVLINK_ENABLED_ALL": 1,
+    "AP_FOLLOW_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 162.75619268417358,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

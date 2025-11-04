@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #807 */
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_RTL
+#undef FS_GCS_ENABLED_ALWAYS_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_RTL 0
+
+/* ConfigFuzz: MAVLINK_ENABLED_ASLUAV */
+#ifdef MAVLINK_ENABLED_ASLUAV
+#undef MAVLINK_ENABLED_ASLUAV
+#endif
+#define MAVLINK_ENABLED_ASLUAV 1
+
+/* ConfigFuzz: HAL_SEMAPHORE_BLOCK_FOREVER */
+#ifdef HAL_SEMAPHORE_BLOCK_FOREVER
+#undef HAL_SEMAPHORE_BLOCK_FOREVER
+#endif
+#define HAL_SEMAPHORE_BLOCK_FOREVER 1
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 4
+
+/* ConfigFuzz: MODE_GUIDED_NOGPS_ENABLED */
+#ifdef MODE_GUIDED_NOGPS_ENABLED
+#undef MODE_GUIDED_NOGPS_ENABLED
+#endif
+#define MODE_GUIDED_NOGPS_ENABLED 0
+
+/* ConfigFuzz: HAL_CAN_DRIVER_DEFAULT */
+#ifdef HAL_CAN_DRIVER_DEFAULT
+#undef HAL_CAN_DRIVER_DEFAULT
+#endif
+#define HAL_CAN_DRIVER_DEFAULT 1
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 0
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 0
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 1
+
+#endif /* _AP_CONFIG_H_ */

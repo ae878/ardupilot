@@ -1,0 +1,19 @@
+{
+  "test_id": 425,
+  "timestamp": "2025-10-10T16:12:53.906345",
+  "macro_changes": {
+    "HAL_QUADPLANE_ENABLED": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "HAL_USE_HW_RNG": 1,
+    "LEDDARONE_DETECTIONS_MAX": 8,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MODE_GUIDED_ENABLED": 1,
+    "TELEM_TIME_SLOT_MAX": 32,
+    "HAL_USE_SDMMC": 0
+  },
+  "build_success": false,
+  "build_time": 195.44473719596863,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

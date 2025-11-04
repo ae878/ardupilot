@@ -1,0 +1,268 @@
+{
+  "test_id": 394,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:103:6:0(Vector3f&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:453:6:void Copter::disable_fast_rate_loop(Copter::RateControllerRates&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:47:6:void AP_InertialSensor::disable_fast_rate_buffer()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_Motors/AP_Motors_Class.h:241:10:void AP_Motors::set_dt(float)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:422:6:void Copter::rate_controller_set_rates(uint8_t, Copter::RateControllerRates&, bool)",
+        "stack_size": 48
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:118:6:void FastRateBuffer::reset()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:444:6:void Copter::enable_fast_rate_loop(uint8_t, Copter::RateControllerRates&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:65:6:void AP_InertialSensor::set_rate_decimation(uint8_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:408:6:void Copter::rate_controller_filter_update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:83:6:bool AP_InertialSensor::is_dynamic_fifo_enabled(uint8_t) const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:56:10:uint32_t AP_InertialSensor::get_num_gyro_samples()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::update_dynamic_notch_at_specified_rate_main; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:167:6:void Copter::rate_controller_thread()",
+        "stack_size": 176
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:153:9:uint8_t Copter::calc_gyro_decimation(uint8_t, uint16_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:465:6:void Copter::rate_controller_log_update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:145:6:void AP_InertialSensor::update_backend_filters()",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:152:6:void AP_InertialSensor_Backend::update_filters()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:74:6:bool AP_InertialSensor::is_rate_loop_gyro_enabled(uint8_t) const",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::rate_controller_thread; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:93:6:bool AP_InertialSensor::get_next_gyro_sample(Vector3f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:123:6:bool AP_InertialSensor::push_next_gyro_sample(const Vector3f&)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:481:6:void Copter::update_dynamic_notch_at_specified_rate_main()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:103:6:bool FastRateBuffer::get_next_gyro_sample(Vector3f&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor.h:171:14:uint16_t AP_InertialSensor::get_raw_gyro_rate_hz() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/rate_thread.cpp:158:20:bool run_decimated_callback(uint8_t, uint8_t&)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/FastRateBuffer.cpp:35:6:void AP_InertialSensor::enable_fast_rate_buffer()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_Scheduler/AP_Scheduler.h:170:11:float AP_Scheduler::get_filtered_loop_rate_hz()",
+        "stack_size": 0
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../ArduCopter/Log.cpp:404:6:void Copter::Log_Write_Rate_Thread_Dt(float, float, float, float)",
+        "baseline": 56,
+        "current": 0,
+        "diff": -56
+      },
+      {
+        "function": "../../ArduCopter/Copter.cpp:768:6:void Copter::one_hz_loop()",
+        "baseline": 56,
+        "current": 16,
+        "diff": -40
+      },
+      {
+        "function": "../../libraries/AP_InertialSensor/AP_InertialSensor_Invensensev3.cpp:417:6:virtual void AP_InertialSensor_Invensensev3::set_primary(bool)",
+        "baseline": 16,
+        "current": 0,
+        "diff": -16
+      }
+    ],
+    "unchanged": 15867
+  },
+  "total_functions_analyzed": 15889
+}

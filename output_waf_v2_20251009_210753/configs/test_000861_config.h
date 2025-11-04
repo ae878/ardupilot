@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #861 */
+
+/* ConfigFuzz: MODE_ZIGZAG_ENABLED */
+#ifdef MODE_ZIGZAG_ENABLED
+#undef MODE_ZIGZAG_ENABLED
+#endif
+#define MODE_ZIGZAG_ENABLED 1
+
+/* ConfigFuzz: HAVE_ENUM_CAMERA_CAP_FLAGS */
+#ifdef HAVE_ENUM_CAMERA_CAP_FLAGS
+#undef HAVE_ENUM_CAMERA_CAP_FLAGS
+#endif
+#define HAVE_ENUM_CAMERA_CAP_FLAGS 0
+
+/* ConfigFuzz: MODE_SPORT_ENABLED */
+#ifdef MODE_SPORT_ENABLED
+#undef MODE_SPORT_ENABLED
+#endif
+#define MODE_SPORT_ENABLED 0
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_RTL */
+#ifdef FS_THR_ENABLED_ALWAYS_RTL
+#undef FS_THR_ENABLED_ALWAYS_RTL
+#endif
+#define FS_THR_ENABLED_ALWAYS_RTL 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_ICAROUS */
+#ifdef MAVLINK_ENABLED_ICAROUS
+#undef MAVLINK_ENABLED_ICAROUS
+#endif
+#define MAVLINK_ENABLED_ICAROUS 1
+
+/* ConfigFuzz: MAX_PWMS */
+#ifdef MAX_PWMS
+#undef MAX_PWMS
+#endif
+#define MAX_PWMS 32
+
+/* ConfigFuzz: AP_FEATURE_RTSCTS */
+#ifdef AP_FEATURE_RTSCTS
+#undef AP_FEATURE_RTSCTS
+#endif
+#define AP_FEATURE_RTSCTS 1
+
+/* ConfigFuzz: HAL_DSHOT_ENABLED */
+#ifdef HAL_DSHOT_ENABLED
+#undef HAL_DSHOT_ENABLED
+#endif
+#define HAL_DSHOT_ENABLED 1
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 1
+
+#endif /* _AP_CONFIG_H_ */

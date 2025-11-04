@@ -1,0 +1,15 @@
+{
+  "test_id": 1,
+  "timestamp": "2025-10-13T15:47:15.865553",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 1,
+    "MPUREG_ACCEL_CONFIG": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "FLOW_CONTROL_ENABLED": 0,
+    "AP_PERIPH_RPM_ENABLED": 0,
+    "HAL_USE_SDMMC": 0,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

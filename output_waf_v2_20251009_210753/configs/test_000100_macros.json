@@ -1,0 +1,9 @@
+{
+  "test_id": 100,
+  "timestamp": "2025-10-10T01:36:01.721499",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 1,
+    "AP_SIM_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1
+  }
+}

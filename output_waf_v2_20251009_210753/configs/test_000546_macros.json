@@ -1,0 +1,11 @@
+{
+  "test_id": 546,
+  "timestamp": "2025-10-10T21:54:08.457949",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 0,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "HAL_USB_VENDOR_ID": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 773,
+  "timestamp": "2025-10-11T08:43:22.414779",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "HAL_GPIO_ALT": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 1,
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 1,
+    "HAL_GPIO_INPUT": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 838,
+  "timestamp": "2025-10-11T11:57:22.798842",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "RANGEFINDER_MAX_INSTANCES": 16,
+    "HAL_USB_VENDOR_ID": 1
+  }
+}

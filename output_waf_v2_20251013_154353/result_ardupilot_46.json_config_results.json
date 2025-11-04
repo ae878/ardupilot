@@ -1,0 +1,18 @@
+[
+  {
+    "test_id": 47,
+    "timestamp": "2025-10-13T17:55:18.630703",
+    "macro_changes": {
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 1,
+      "AP_SRV_CHANNELS_ENABLED": 0,
+      "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+      "MODE_RTL_ENABLED": 0,
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 1
+    },
+    "build_success": false,
+    "build_time": 30.512165069580078,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+  }
+]

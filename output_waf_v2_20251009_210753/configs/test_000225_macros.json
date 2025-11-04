@@ -1,0 +1,15 @@
+{
+  "test_id": 225,
+  "timestamp": "2025-10-10T07:04:42.358986",
+  "macro_changes": {
+    "SUMD_MAX_CHANNELS": 2,
+    "AP_FENCE_ENABLED": 0,
+    "HAL_GPIO_INPUT": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "AP_ICENGINE_ENABLED": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "AP_MISSION_ENABLED": 0,
+    "HAL_WITH_RAMTRON": 0,
+    "HAL_CANFD_SUPPORTED": 1
+  }
+}

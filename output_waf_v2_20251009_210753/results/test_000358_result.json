@@ -1,0 +1,13 @@
+{
+  "test_id": 358,
+  "timestamp": "2025-10-10T13:08:44.274032",
+  "macro_changes": {
+    "MODE_CIRCLE_ENABLED": 0,
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "LEDDARONE_DETECTIONS_MAX": 1
+  },
+  "build_success": false,
+  "build_time": 161.04478287696838,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+}

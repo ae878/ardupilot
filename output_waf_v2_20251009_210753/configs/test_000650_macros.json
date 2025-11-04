@@ -1,0 +1,9 @@
+{
+  "test_id": 650,
+  "timestamp": "2025-10-11T02:39:39.428254",
+  "macro_changes": {
+    "HAL_LOGGING_ENABLED": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_GPIO_LED_ON": 1
+  }
+}

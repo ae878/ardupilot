@@ -1,0 +1,12 @@
+{
+  "test_id": 368,
+  "timestamp": "2025-10-10T13:31:08.770698",
+  "macro_changes": {
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "MAVLINK_ENABLED_UALBERTA": 1,
+    "HAL_HEATER_GPIO_ON": 0,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 0
+  }
+}

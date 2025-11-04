@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #697 */
+
+/* ConfigFuzz: KDECAN_MAX_NUM_ESCS */
+#ifdef KDECAN_MAX_NUM_ESCS
+#undef KDECAN_MAX_NUM_ESCS
+#endif
+#define KDECAN_MAX_NUM_ESCS 32
+
+/* ConfigFuzz: AP_SIGNED_FIRMWARE */
+#ifdef AP_SIGNED_FIRMWARE
+#undef AP_SIGNED_FIRMWARE
+#endif
+#define AP_SIGNED_FIRMWARE 0
+
+/* ConfigFuzz: HAL_USB_PRODUCT_ID */
+#ifdef HAL_USB_PRODUCT_ID
+#undef HAL_USB_PRODUCT_ID
+#endif
+#define HAL_USB_PRODUCT_ID 0
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC_CRC */
+#ifdef MAVLINK_MSG_ID_AP_ADC_CRC
+#undef MAVLINK_MSG_ID_AP_ADC_CRC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC_CRC 0
+
+/* ConfigFuzz: AP_SRV_CHANNELS_ENABLED */
+#ifdef AP_SRV_CHANNELS_ENABLED
+#undef AP_SRV_CHANNELS_ENABLED
+#endif
+#define AP_SRV_CHANNELS_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_STANDARD */
+#ifdef MAVLINK_ENABLED_STANDARD
+#undef MAVLINK_ENABLED_STANDARD
+#endif
+#define MAVLINK_ENABLED_STANDARD 0
+
+/* ConfigFuzz: HAL_IMUHEAT_P_DEFAULT */
+#ifdef HAL_IMUHEAT_P_DEFAULT
+#undef HAL_IMUHEAT_P_DEFAULT
+#endif
+#define HAL_IMUHEAT_P_DEFAULT 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 1
+
+#endif /* _AP_CONFIG_H_ */

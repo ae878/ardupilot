@@ -1,0 +1,29 @@
+{
+  "session_info": {
+    "start_time": "2025-10-09T21:05:56.928699",
+    "end_time": "2025-10-11T20:31:00.511546",
+    "duration_seconds": 170703.56922578812,
+    "duration_formatted": "47 hours 25 minutes 3 seconds",
+    "timeout_seconds": 356400,
+    "timeout_formatted": "99 hours"
+  },
+  "results": {
+    "total_tests": 1,
+    "successful_builds": 0,
+    "failed_builds": 0,
+    "success_rate": 0.0
+  },
+  "performance": {
+    "tests_per_hour": 0.021089189970236132,
+    "average_build_time": 170703.56922578812,
+    "cache_hits": 0,
+    "cache_hit_rate": 0.0
+  },
+  "stack_analysis": {
+    "threshold": 512,
+    "total_stack_changes": 0,
+    "max_stack_increase": 0,
+    "max_stack_decrease": 0,
+    "functions_with_changes": 0
+  }
+}

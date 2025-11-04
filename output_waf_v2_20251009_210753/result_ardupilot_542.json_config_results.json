@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 543,
+    "timestamp": "2025-10-10T21:44:42.825297",
+    "macro_changes": {
+      "MAVLINK_ENABLED_MINIMAL": 0,
+      "AP_FEATURE_RTSCTS": 1,
+      "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+      "AC_PAYLOAD_PLACE_ENABLED": 1,
+      "HAL_WITH_SPI_RAMTRON": 0,
+      "AP_FEATURE_SBUS_OUT": 0,
+      "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1,
+      "HAL_LOGGING_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 31.459710121154785,
+    "build_result": false,
+    "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+  }
+]

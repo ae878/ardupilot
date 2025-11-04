@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 3,
+    "timestamp": "2025-10-09T21:15:28.574555",
+    "macro_changes": {
+      "MAX_PWMS": 2,
+      "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+      "RANGEFINDER_MAX_INSTANCES": 4,
+      "HAL_ENABLE_THREAD_STATISTICS": 1,
+      "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+      "HAL_IMUHEAT_P_DEFAULT": 0
+    },
+    "build_success": false,
+    "build_time": 82.31064009666443,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+  }
+]

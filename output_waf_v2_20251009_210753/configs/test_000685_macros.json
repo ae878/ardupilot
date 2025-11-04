@@ -1,0 +1,9 @@
+{
+  "test_id": 685,
+  "timestamp": "2025-10-11T04:26:55.439495",
+  "macro_changes": {
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "FFT_MAX_MISSED_UPDATES": 16,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1
+  }
+}

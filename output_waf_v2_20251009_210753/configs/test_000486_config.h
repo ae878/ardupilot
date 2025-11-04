@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #486 */
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 1
+
+/* ConfigFuzz: FS_THR_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_THR_ENABLED_BRAKE_OR_LAND
+#undef FS_THR_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_THR_ENABLED_BRAKE_OR_LAND 0
+
+/* ConfigFuzz: AP_FEATURE_SBUS_OUT */
+#ifdef AP_FEATURE_SBUS_OUT
+#undef AP_FEATURE_SBUS_OUT
+#endif
+#define AP_FEATURE_SBUS_OUT 1
+
+/* ConfigFuzz: HAL_BARO_NONE */
+#ifdef HAL_BARO_NONE
+#undef HAL_BARO_NONE
+#endif
+#define HAL_BARO_NONE 1
+
+/* ConfigFuzz: AP_RELAY_ENABLED */
+#ifdef AP_RELAY_ENABLED
+#undef AP_RELAY_ENABLED
+#endif
+#define AP_RELAY_ENABLED 0
+
+/* ConfigFuzz: HAL_HAVE_SERVO_VOLTAGE */
+#ifdef HAL_HAVE_SERVO_VOLTAGE
+#undef HAL_HAVE_SERVO_VOLTAGE
+#endif
+#define HAL_HAVE_SERVO_VOLTAGE 1
+
+/* ConfigFuzz: HAL_AIRSPEED_TYPE_DEFAULT */
+#ifdef HAL_AIRSPEED_TYPE_DEFAULT
+#undef HAL_AIRSPEED_TYPE_DEFAULT
+#endif
+#define HAL_AIRSPEED_TYPE_DEFAULT 1
+
+/* ConfigFuzz: TELEM_TIME_SLOT_MAX */
+#ifdef TELEM_TIME_SLOT_MAX
+#undef TELEM_TIME_SLOT_MAX
+#endif
+#define TELEM_TIME_SLOT_MAX 2
+
+/* ConfigFuzz: AP_HAL_SHARED_DMA_ENABLED */
+#ifdef AP_HAL_SHARED_DMA_ENABLED
+#undef AP_HAL_SHARED_DMA_ENABLED
+#endif
+#define AP_HAL_SHARED_DMA_ENABLED 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_PERMUTATION */
+#ifdef BENCH_DEFINE_MAP_PERMUTATION
+#undef BENCH_DEFINE_MAP_PERMUTATION
+#endif
+#define BENCH_DEFINE_MAP_PERMUTATION 0
+
+#endif /* _AP_CONFIG_H_ */

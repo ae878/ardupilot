@@ -1,0 +1,13 @@
+{
+  "test_id": 583,
+  "timestamp": "2025-10-10T23:34:07.122940",
+  "macro_changes": {
+    "MODE_ZIGZAG_ENABLED": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "HAL_HNF_MAX_FILTERS": 16,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "HAL_GPIO_OUTPUT": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 1
+  }
+}

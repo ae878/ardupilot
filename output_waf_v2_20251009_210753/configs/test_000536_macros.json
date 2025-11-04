@@ -1,0 +1,9 @@
+{
+  "test_id": 536,
+  "timestamp": "2025-10-10T21:31:34.645090",
+  "macro_changes": {
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 1,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 0
+  }
+}

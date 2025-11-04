@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 228,
+    "timestamp": "2025-10-10T07:13:01.474658",
+    "macro_changes": {
+      "HAL_WITH_MCU_MONITORING": 1,
+      "HAL_CAN_DRIVER_DEFAULT": 0,
+      "TOY_MODE_ENABLED": 1,
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+      "FS_THR_ENABLED_BRAKE_OR_LAND": 0
+    },
+    "build_success": false,
+    "build_time": 128.5421245098114,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+  }
+]

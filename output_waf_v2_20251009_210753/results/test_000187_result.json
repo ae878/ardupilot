@@ -1,0 +1,18 @@
+{
+  "test_id": 187,
+  "timestamp": "2025-10-10T05:22:30.195736",
+  "macro_changes": {
+    "HAL_DSHOT_ENABLED": 0,
+    "AP_FOLLOW_ENABLED": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+    "HAL_WITH_RAMTRON": 1,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_INS_VRBRAIN": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_USE_HW_RNG": 1
+  },
+  "build_success": false,
+  "build_time": 126.32495260238647,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 65,
+    "timestamp": "2025-10-10T00:03:08.233888",
+    "macro_changes": {
+      "AP_HAL_UARTDRIVER_ENABLED": 0,
+      "BENCH_DEFINE_MAP_OVERRIDE": 1,
+      "AP_SERVORELAYEVENTS_ENABLED": 0,
+      "MAVLINK_ENABLED_COMMON": 1,
+      "MODE_SPORT_ENABLED": 0,
+      "HAL_USE_HW_RNG": 1,
+      "AP_SIGNED_FIRMWARE": 0,
+      "BENCH_DEFINE_MAP_IMPLICIT": 1
+    },
+    "build_success": false,
+    "build_time": 143.4896755218506,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

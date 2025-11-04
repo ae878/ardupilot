@@ -1,0 +1,11 @@
+{
+  "test_id": 388,
+  "timestamp": "2025-10-10T14:27:35.432080",
+  "macro_changes": {
+    "MAX_PWMS": 4,
+    "FS_THR_DISABLED": 1,
+    "AP_SIM_ENABLED": 1,
+    "HAL_PWM_COUNT": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 1
+  }
+}

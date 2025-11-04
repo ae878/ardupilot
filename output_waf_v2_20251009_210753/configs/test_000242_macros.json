@@ -1,0 +1,10 @@
+{
+  "test_id": 242,
+  "timestamp": "2025-10-10T07:52:32.903701",
+  "macro_changes": {
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 0,
+    "HAL_GENERATOR_ENABLED": 0
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "test_id": 392,
+    "timestamp": "2025-10-10T14:39:42.922936",
+    "macro_changes": {
+      "MAVLINK_ENABLED_UAVIONIX": 0,
+      "HAL_BARO_EXTERNAL_BUS_DEFAULT": 1,
+      "HAL_HAVE_IMU_HEATER": 0,
+      "HAL_ENABLE_THREAD_STATISTICS": 1,
+      "HAL_BUTTON_ENABLED": 0,
+      "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+      "HAL_GENERATOR_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 185.79489970207214,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

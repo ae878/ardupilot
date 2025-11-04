@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #454 */
+
+/* ConfigFuzz: HAL_MOUNT_ENABLED */
+#ifdef HAL_MOUNT_ENABLED
+#undef HAL_MOUNT_ENABLED
+#endif
+#define HAL_MOUNT_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE 0
+
+/* ConfigFuzz: HAL_COMPASS_AUTO_ROT_DEFAULT */
+#ifdef HAL_COMPASS_AUTO_ROT_DEFAULT
+#undef HAL_COMPASS_AUTO_ROT_DEFAULT
+#endif
+#define HAL_COMPASS_AUTO_ROT_DEFAULT 0
+
+/* ConfigFuzz: HAL_WITH_RAMTRON */
+#ifdef HAL_WITH_RAMTRON
+#undef HAL_WITH_RAMTRON
+#endif
+#define HAL_WITH_RAMTRON 0
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 16
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 0
+
+/* ConfigFuzz: HAL_GPIO_LED_ON */
+#ifdef HAL_GPIO_LED_ON
+#undef HAL_GPIO_LED_ON
+#endif
+#define HAL_GPIO_LED_ON 1
+
+#endif /* _AP_CONFIG_H_ */

@@ -1,0 +1,9 @@
+{
+  "test_id": 805,
+  "timestamp": "2025-10-11T10:15:38.687635",
+  "macro_changes": {
+    "MODE_RTL_ENABLED": 0,
+    "HAL_INS_NONE": 0,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

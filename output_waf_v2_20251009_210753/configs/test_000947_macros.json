@@ -1,0 +1,13 @@
+{
+  "test_id": 947,
+  "timestamp": "2025-10-11T17:08:02.634191",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "HAL_MOUNT_ENABLED": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "METADATA_MAX_i": 8,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1
+  }
+}

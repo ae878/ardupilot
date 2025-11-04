@@ -1,0 +1,14 @@
+{
+  "test_id": 756,
+  "timestamp": "2025-10-11T07:51:04.477213",
+  "macro_changes": {
+    "METADATA_MAX_i": 8,
+    "HAL_BATT_CURR_PIN": 0,
+    "HAL_INS_NONE": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "MAVLINK_ENABLED_ASLUAV": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 32,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0
+  }
+}

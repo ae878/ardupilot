@@ -1,0 +1,19 @@
+{
+  "test_id": 102,
+  "timestamp": "2025-10-10T01:40:16.138899",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "HAL_WITH_RAMTRON": 1,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "MODE_ACRO_ENABLED": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1
+  },
+  "build_success": false,
+  "build_time": 70.77463269233704,
+  "build_result": false,
+  "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+}

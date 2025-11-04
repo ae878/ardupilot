@@ -1,0 +1,11 @@
+{
+  "test_id": 468,
+  "timestamp": "2025-10-10T18:14:43.712998",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "AP_CAMERA_ENABLED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0,
+    "AP_BEACON_ENABLED": 0,
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 33,
+  "timestamp": "2025-10-09T22:38:17.375640",
+  "macro_changes": {
+    "MODE_FLIP_ENABLED": 1,
+    "AP_FOLLOW_ENABLED": 1,
+    "HAL_INS_NONE": 0
+  }
+}

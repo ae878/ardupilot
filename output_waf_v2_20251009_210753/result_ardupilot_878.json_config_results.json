@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 879,
+    "timestamp": "2025-10-11T13:53:35.662449",
+    "macro_changes": {
+      "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+      "HAL_GPIO_LED_ON": 0,
+      "AP_STATS_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 7.036459922790527,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL/AP_HAL_Boards.h:393:2: error: #error \"Do not specify HAL_GPIO_LED_ON if you are setting it to the default, 0\""
+  }
+]

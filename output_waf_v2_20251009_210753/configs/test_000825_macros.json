@@ -1,0 +1,10 @@
+{
+  "test_id": 825,
+  "timestamp": "2025-10-11T11:16:08.514177",
+  "macro_changes": {
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "AP_MISSION_ENABLED": 1,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1
+  }
+}

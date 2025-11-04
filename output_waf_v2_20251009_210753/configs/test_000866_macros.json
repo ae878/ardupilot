@@ -1,0 +1,9 @@
+{
+  "test_id": 866,
+  "timestamp": "2025-10-11T13:17:44.272723",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "HAL_HAVE_IMU_HEATER": 0
+  }
+}

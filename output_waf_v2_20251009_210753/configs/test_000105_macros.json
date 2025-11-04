@@ -1,0 +1,11 @@
+{
+  "test_id": 105,
+  "timestamp": "2025-10-10T01:49:37.276578",
+  "macro_changes": {
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 1
+  }
+}

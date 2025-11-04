@@ -1,0 +1,12 @@
+{
+  "test_id": 134,
+  "timestamp": "2025-10-10T03:04:24.336112",
+  "macro_changes": {
+    "RPMMAX": 4,
+    "MODE_AUTO_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "AP_BEACON_ENABLED": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_WITH_UAVCAN": 0
+  }
+}

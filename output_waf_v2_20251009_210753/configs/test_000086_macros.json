@@ -1,0 +1,10 @@
+{
+  "test_id": 86,
+  "timestamp": "2025-10-10T00:59:12.887397",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "AP_AIS_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 0
+  }
+}

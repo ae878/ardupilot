@@ -1,0 +1,9 @@
+{
+  "test_id": 600,
+  "timestamp": "2025-10-11T00:19:24.441257",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "AUTOTUNE_ENABLED": 1,
+    "AP_ICENGINE_ENABLED": 1
+  }
+}

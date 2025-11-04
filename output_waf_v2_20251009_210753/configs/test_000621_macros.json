@@ -1,0 +1,9 @@
+{
+  "test_id": 621,
+  "timestamp": "2025-10-11T01:18:51.969274",
+  "macro_changes": {
+    "MODE_SMARTRTL_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_RTL": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1
+  }
+}

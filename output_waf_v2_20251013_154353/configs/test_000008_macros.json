@@ -1,0 +1,9 @@
+{
+  "test_id": 8,
+  "timestamp": "2025-10-13T16:01:34.515529",
+  "macro_changes": {
+    "MAX_PWMS": 1,
+    "MPUREG_CONFIG_EXT_SYNC_AZ": 1,
+    "USER_PARAMS_ENABLED": 1
+  }
+}

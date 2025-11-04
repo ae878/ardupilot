@@ -1,0 +1,9 @@
+{
+  "test_id": 252,
+  "timestamp": "2025-10-10T08:21:34.815843",
+  "macro_changes": {
+    "AP_ICENGINE_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "AP_SRV_CHANNELS_ENABLED": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "test_id": 896,
+  "timestamp": "2025-10-11T14:43:28.453085",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "HAL_CAN_DRIVER_DEFAULT": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "HAL_PWM_COUNT": 1,
+    "FS_THR_DISABLED": 1,
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1,
+    "METADATA_MAX_i": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "test_id": 428,
+  "timestamp": "2025-10-10T16:22:46.687999",
+  "macro_changes": {
+    "HAL_NUM_CAN_IFACES": 1,
+    "HAL_UART_IOMCU_IDX": 1,
+    "AP_FEATURE_RTSCTS": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_QUADPLANE_ENABLED": 1,
+    "TELEM_TIME_SLOT_MAX": 16,
+    "HAL_USE_HW_RNG": 1,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "HAL_USB_PRODUCT_ID": 1
+  }
+}

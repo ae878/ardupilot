@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 609,
+    "timestamp": "2025-10-11T00:44:40.744692",
+    "macro_changes": {
+      "AP_SIGNED_FIRMWARE": 1,
+      "AP_MODULE_SUPPORTED": 0,
+      "BENCH_DEFINE_MAP_IMPLICIT": 1,
+      "TOY_MODE_ENABLED": 1,
+      "HAL_GPIO_LED_ON": 0
+    },
+    "build_success": false,
+    "build_time": 7.137869119644165,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL/AP_HAL_Boards.h:393:2: error: #error \"Do not specify HAL_GPIO_LED_ON if you are setting it to the default, 0\""
+  }
+]

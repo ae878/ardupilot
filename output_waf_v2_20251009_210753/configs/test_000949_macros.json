@@ -1,0 +1,11 @@
+{
+  "test_id": 949,
+  "timestamp": "2025-10-11T17:14:36.478508",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ALL": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "HAL_RCOUT_RGBLED_RED": 1,
+    "AP_RELAY_ENABLED": 1,
+    "HAL_CANFD_SUPPORTED": 1
+  }
+}

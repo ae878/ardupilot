@@ -1,0 +1,10 @@
+{
+  "test_id": 17,
+  "timestamp": "2025-10-13T16:29:15.694628",
+  "macro_changes": {
+    "AP_AIRSPEED_ENABLED": 1,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "HAL_PARACHUTE_ENABLED": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 16,
+  "timestamp": "2025-10-13T16:28:01.701660",
+  "macro_changes": {
+    "HAL_INS_NONE": 1,
+    "HAL_PWM_COUNT": 1,
+    "FSYNC_CONFIG_EXT_SYNC_GY": 0,
+    "AP_SIM_ENABLED": 1,
+    "AP_FOLLOW_ENABLED": 1,
+    "HAL_RALLY_ENABLED": 1
+  }
+}

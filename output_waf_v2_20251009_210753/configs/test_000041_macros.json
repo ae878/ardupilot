@@ -1,0 +1,9 @@
+{
+  "test_id": 41,
+  "timestamp": "2025-10-09T22:55:25.609807",
+  "macro_changes": {
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "HAL_WITH_RAMTRON": 0,
+    "HAL_USE_FATFS": 1
+  }
+}

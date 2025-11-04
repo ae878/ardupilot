@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #900 */
+
+/* ConfigFuzz: HAVE_ENUM_CAMERA_CAP_FLAGS */
+#ifdef HAVE_ENUM_CAMERA_CAP_FLAGS
+#undef HAVE_ENUM_CAMERA_CAP_FLAGS
+#endif
+#define HAVE_ENUM_CAMERA_CAP_FLAGS 0
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_CUBEPILOT */
+#ifdef MAVLINK_ENABLED_CUBEPILOT
+#undef MAVLINK_ENABLED_CUBEPILOT
+#endif
+#define MAVLINK_ENABLED_CUBEPILOT 1
+
+/* ConfigFuzz: MODE_THROW_ENABLED */
+#ifdef MODE_THROW_ENABLED
+#undef MODE_THROW_ENABLED
+#endif
+#define MODE_THROW_ENABLED 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL */
+#ifdef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#undef FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL
+#endif
+#define FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC_CRC */
+#ifdef MAVLINK_MSG_ID_AP_ADC_CRC
+#undef MAVLINK_MSG_ID_AP_ADC_CRC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC_CRC 1
+
+#endif /* _AP_CONFIG_H_ */

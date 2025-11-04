@@ -1,0 +1,11 @@
+{
+  "test_id": 21,
+  "timestamp": "2025-10-13T16:42:27.558836",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 0,
+    "AP_FENCE_ENABLED": 1,
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "USER_PARAMS_ENABLED": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0
+  }
+}

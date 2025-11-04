@@ -1,0 +1,12 @@
+{
+  "test_id": 899,
+  "timestamp": "2025-10-11T14:50:09.661857",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "AP_BEACON_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 0,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "MAVLINK_ENABLED_UALBERTA": 1
+  }
+}

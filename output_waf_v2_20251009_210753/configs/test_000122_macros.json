@@ -1,0 +1,12 @@
+{
+  "test_id": 122,
+  "timestamp": "2025-10-10T02:32:20.293699",
+  "macro_changes": {
+    "HAL_NUM_CAN_IFACES": 0,
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "MODE_ZIGZAG_ENABLED": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 0
+  }
+}

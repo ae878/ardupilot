@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #398 */
+
+/* ConfigFuzz: MAVLINK_ENABLED_ALL */
+#ifdef MAVLINK_ENABLED_ALL
+#undef MAVLINK_ENABLED_ALL
+#endif
+#define MAVLINK_ENABLED_ALL 1
+
+/* ConfigFuzz: HAL_USE_WSPI_DEFAULT_CFG */
+#ifdef HAL_USE_WSPI_DEFAULT_CFG
+#undef HAL_USE_WSPI_DEFAULT_CFG
+#endif
+#define HAL_USE_WSPI_DEFAULT_CFG 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_COMMON */
+#ifdef MAVLINK_ENABLED_COMMON
+#undef MAVLINK_ENABLED_COMMON
+#endif
+#define MAVLINK_ENABLED_COMMON 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN 0
+
+/* ConfigFuzz: HAL_NUM_CAN_IFACES */
+#ifdef HAL_NUM_CAN_IFACES
+#undef HAL_NUM_CAN_IFACES
+#endif
+#define HAL_NUM_CAN_IFACES 1
+
+/* ConfigFuzz: HAL_WITH_UAVCAN */
+#ifdef HAL_WITH_UAVCAN
+#undef HAL_WITH_UAVCAN
+#endif
+#define HAL_WITH_UAVCAN 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_MINIMAL */
+#ifdef MAVLINK_ENABLED_MINIMAL
+#undef MAVLINK_ENABLED_MINIMAL
+#endif
+#define MAVLINK_ENABLED_MINIMAL 0
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_RED */
+#ifdef HAL_RCOUT_RGBLED_RED
+#undef HAL_RCOUT_RGBLED_RED
+#endif
+#define HAL_RCOUT_RGBLED_RED 1
+
+/* ConfigFuzz: AC_PAYLOAD_PLACE_ENABLED */
+#ifdef AC_PAYLOAD_PLACE_ENABLED
+#undef AC_PAYLOAD_PLACE_ENABLED
+#endif
+#define AC_PAYLOAD_PLACE_ENABLED 0
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

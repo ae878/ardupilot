@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 508,
+    "timestamp": "2025-10-10T20:04:00.020399",
+    "macro_changes": {
+      "HAL_USE_SDMMC": 1,
+      "HAL_ENABLE_THREAD_STATISTICS": 1,
+      "MODE_THROW_ENABLED": 0,
+      "MAVLINK_ENABLED_COMMON": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+      "HAL_MOUNT_ENABLED": 0,
+      "BENCH_DEFINE_MAP_PERMUTATION": 1,
+      "MODE_GUIDED_NOGPS_ENABLED": 1,
+      "AP_RSSI_ENABLED": 0,
+      "MAVLINK_ENABLED_ICAROUS": 1
+    },
+    "build_success": false,
+    "build_time": 191.0169928073883,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

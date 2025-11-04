@@ -1,0 +1,14 @@
+{
+  "test_id": 757,
+  "timestamp": "2025-10-11T07:52:18.670823",
+  "macro_changes": {
+    "HAL_BARO_NONE": 1,
+    "MODE_BRAKE_ENABLED": 1,
+    "HAL_CANFD_SUPPORTED": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "HAL_HNF_MAX_FILTERS": 16,
+    "AP_HAL_SHARED_DMA_ENABLED": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "HAL_WITH_DRONECAN": 0
+  }
+}

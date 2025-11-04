@@ -1,0 +1,9 @@
+{
+  "test_id": 794,
+  "timestamp": "2025-10-11T09:46:23.474904",
+  "macro_changes": {
+    "AP_MISSION_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1
+  }
+}

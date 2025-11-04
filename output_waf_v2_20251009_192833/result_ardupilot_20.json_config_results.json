@@ -1,0 +1,17 @@
+[
+  {
+    "test_id": 21,
+    "timestamp": "2025-10-09T20:22:21.963823",
+    "macro_changes": {
+      "LEDDARONE_SERIAL_PORT_MAX": 32,
+      "MODE_RTL_ENABLED": 0,
+      "MODE_AUTOROTATE_ENABLED": 0,
+      "HAL_RALLY_ENABLED": 0,
+      "HAL_AHRS_EKF_TYPE_DEFAULT": 0
+    },
+    "build_success": false,
+    "build_time": 162.25515937805176,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+  }
+]

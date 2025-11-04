@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 788,
+    "timestamp": "2025-10-11T09:27:42.472000",
+    "macro_changes": {
+      "HAL_HEATER_GPIO_ON": 0,
+      "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+      "ESC_CHANNEL_MAP_CHANNEL": 0,
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+      "HAL_RCOUT_RGBLED_GREEN": 0,
+      "AP_MISSION_ENABLED": 0,
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0,
+      "HAL_BATT_CURR_PIN": 1,
+      "AUTOTUNE_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 170.28032660484314,
+    "build_result": false,
+    "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+  }
+]

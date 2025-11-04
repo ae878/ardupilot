@@ -1,0 +1,9 @@
+{
+  "test_id": 23,
+  "timestamp": "2025-10-09T20:27:10.439102",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_QUADPLANE_ENABLED": 0,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0
+  }
+}

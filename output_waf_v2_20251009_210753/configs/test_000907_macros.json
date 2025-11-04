@@ -1,0 +1,9 @@
+{
+  "test_id": 907,
+  "timestamp": "2025-10-11T15:11:46.064297",
+  "macro_changes": {
+    "AUTOTUNE_ENABLED": 1,
+    "HAL_FLASH_PROTECTION": 1,
+    "FS_THR_DISABLED": 1
+  }
+}

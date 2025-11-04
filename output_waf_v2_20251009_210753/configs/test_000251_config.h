@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #251 */
+
+/* ConfigFuzz: HAL_AHRS_EKF_TYPE_DEFAULT */
+#ifdef HAL_AHRS_EKF_TYPE_DEFAULT
+#undef HAL_AHRS_EKF_TYPE_DEFAULT
+#endif
+#define HAL_AHRS_EKF_TYPE_DEFAULT 0
+
+/* ConfigFuzz: AP_FEATURE_RTSCTS */
+#ifdef AP_FEATURE_RTSCTS
+#undef AP_FEATURE_RTSCTS
+#endif
+#define AP_FEATURE_RTSCTS 1
+
+/* ConfigFuzz: HAL_WITH_SPI_RAMTRON */
+#ifdef HAL_WITH_SPI_RAMTRON
+#undef HAL_WITH_SPI_RAMTRON
+#endif
+#define HAL_WITH_SPI_RAMTRON 1
+
+/* ConfigFuzz: CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY */
+#ifdef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#undef CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY
+#endif
+#define CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_ADAP_TUNING */
+#ifdef MAVLINK_MSG_ID_ADAP_TUNING
+#undef MAVLINK_MSG_ID_ADAP_TUNING
+#endif
+#define MAVLINK_MSG_ID_ADAP_TUNING 1
+
+/* ConfigFuzz: CONFIG_LWIP_STATS */
+#ifdef CONFIG_LWIP_STATS
+#undef CONFIG_LWIP_STATS
+#endif
+#define CONFIG_LWIP_STATS 0
+
+/* ConfigFuzz: ESC_CHANNEL_MAP_CHANNEL */
+#ifdef ESC_CHANNEL_MAP_CHANNEL
+#undef ESC_CHANNEL_MAP_CHANNEL
+#endif
+#define ESC_CHANNEL_MAP_CHANNEL 0
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS 0
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 1
+
+#endif /* _AP_CONFIG_H_ */

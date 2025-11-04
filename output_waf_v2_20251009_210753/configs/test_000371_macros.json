@@ -1,0 +1,13 @@
+{
+  "test_id": 371,
+  "timestamp": "2025-10-10T13:39:24.376910",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "HAL_BUTTON_ENABLED": 0,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1
+  }
+}

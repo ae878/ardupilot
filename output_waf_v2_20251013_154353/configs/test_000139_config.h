@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #139 */
+
+/* ConfigFuzz: FSYNC_CONFIG_EXT_SYNC_GZ */
+#ifdef FSYNC_CONFIG_EXT_SYNC_GZ
+#undef FSYNC_CONFIG_EXT_SYNC_GZ
+#endif
+#define FSYNC_CONFIG_EXT_SYNC_GZ 1
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 1
+
+/* ConfigFuzz: AP_PERIPH_RCIN_ENABLED */
+#ifdef AP_PERIPH_RCIN_ENABLED
+#undef AP_PERIPH_RCIN_ENABLED
+#endif
+#define AP_PERIPH_RCIN_ENABLED 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_PIN */
+#ifdef HAL_HEATER_GPIO_PIN
+#undef HAL_HEATER_GPIO_PIN
+#endif
+#define HAL_HEATER_GPIO_PIN 1
+
+/* ConfigFuzz: HAL_WITH_IO_MCU_BIDIR_DSHOT */
+#ifdef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#undef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#endif
+#define HAL_WITH_IO_MCU_BIDIR_DSHOT 0
+
+/* ConfigFuzz: HAL_USE_SDMMC */
+#ifdef HAL_USE_SDMMC
+#undef HAL_USE_SDMMC
+#endif
+#define HAL_USE_SDMMC 1
+
+/* ConfigFuzz: CONFIG_LWIP_DHCP_RESTORE_LAST_IP */
+#ifdef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#undef CONFIG_LWIP_DHCP_RESTORE_LAST_IP
+#endif
+#define CONFIG_LWIP_DHCP_RESTORE_LAST_IP 0
+
+/* ConfigFuzz: FS_THR_DISABLED */
+#ifdef FS_THR_DISABLED
+#undef FS_THR_DISABLED
+#endif
+#define FS_THR_DISABLED 0
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC 0
+
+#endif /* _AP_CONFIG_H_ */

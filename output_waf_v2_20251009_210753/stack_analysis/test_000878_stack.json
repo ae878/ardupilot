@@ -1,0 +1,282 @@
+{
+  "test_id": 878,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:192:7:float AP_RSSI::read_channel_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:104:1:AP_RSSI::AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:181:7:float AP_RSSI::read_pin_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:204:7:float AP_RSSI::read_pwm_pin_rssi()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:127:6:void AP_RSSI::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:162:7:float AP_RSSI::read_receiver_link_quality()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:114:1:AP_RSSI::~AP_RSSI()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:230:7:float AP_RSSI::read_telemetry_radio_rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:136:7:float AP_RSSI::read_receiver_rssi()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:121:10:static AP_RSSI* AP_RSSI::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:172:9:uint8_t AP_RSSI::read_receiver_rssi_uint8()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:273:10:AP_RSSI* AP::rssi()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_RSSI/AP_RSSI.cpp:240:7:float AP_RSSI::scale_and_constrain_float_rssi(float, float, float)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AP_Logger/LogFile.cpp:257:6:void AP_Logger::Write_RSSI()",
+        "stack_size": 40
+      }
+    ],
+    "removed_functions": [
+      {
+        "function": "../../ArduCopter/precision_landing.cpp:16:6:void Copter::update_precland()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/precision_landing.cpp:9:6:void Copter::init_precland()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:94:34:AC_PrecLand_StateMachine::Status AC_PrecLand_StateMachine::get_target_lost_actions(Vector3f&)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:63:6:void ModeLoiter::precision_loiter_xy()",
+        "stack_size": 72
+      },
+      {
+        "function": "../../ArduCopter/mode.cpp:856:6:0()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Companion.h:17:7:virtual AC_PrecLand_Companion::~AC_PrecLand_Companion()",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:2403:12:int AC_PrecLand_get_last_valid_target_ms(lua_State*)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:15:6:void AC_PrecLand_StateMachine::init()",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:2414:12:int AC_PrecLand_target_acquired(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:2363:12:int AC_PrecLand_get_target_location(lua_State*)",
+        "stack_size": 32
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_IRLock.cpp:16:6:virtual void AC_PrecLand_IRLock::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Companion.cpp:17:6:virtual void AC_PrecLand_Companion::update()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../ArduCopter/mode_loiter.cpp:45:6:bool ModeLoiter::do_precision_loiter()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:36:6:void AC_PrecLand_StateMachine::reset_failed_landing_statemachine()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &Copter::update_precland; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:1014:15:AC_PrecLand* check_AC_PrecLand(lua_State*)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:49:34:AC_PrecLand_StateMachine::Status AC_PrecLand_StateMachine::update(Vector3f&)",
+        "stack_size": 16
+      },
+      {
+        "function": "../../ArduCopter/mode.cpp:810:6:void Mode::precland_retry_position(const Vector3f&)",
+        "stack_size": 88
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:240:42:AC_PrecLand_StateMachine::FailSafeAction AC_PrecLand_StateMachine::get_failsafe_actions()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Backend.h:49:18:virtual void AC_PrecLand_Backend::handle_msg(const mavlink_landing_target_t&, uint32_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Companion.h:17:7:AC_PrecLand_Companion::~AC_PrecLand_Companion()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_StateMachine.cpp:150:34:AC_PrecLand_StateMachine::Status AC_PrecLand_StateMachine::retry_landing(Vector3f&)",
+        "stack_size": 56
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_IRLock.h:22:7:AC_PrecLand_IRLock::~AC_PrecLand_IRLock()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_IRLock.cpp:22:6:virtual void AC_PrecLand_IRLock::update()",
+        "stack_size": 16
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_IRLock.cpp:9:1:AC_PrecLand_IRLock::AC_PrecLand_IRLock(const AC_PrecLand&, AC_PrecLand::precland_state&)",
+        "stack_size": 16
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:2383:12:int AC_PrecLand_get_target_velocity(lua_State*)",
+        "stack_size": 24
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Companion.cpp:22:6:virtual void AC_PrecLand_Companion::handle_msg(const mavlink_landing_target_t&, uint32_t)",
+        "stack_size": 40
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_IRLock.h:22:7:virtual AC_PrecLand_IRLock::~AC_PrecLand_IRLock()",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AC_PrecLand/AC_PrecLand_Companion.cpp:10:6:virtual void AC_PrecLand_Companion::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:7840:12:int AC_PrecLand_index(lua_State*)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/mode.cpp:856:6:void Mode::precland_run()",
+        "stack_size": 8
+      },
+      {
+        "function": "libraries/AP_Scripting/lua_generated_bindings.cpp:2425:12:int AC_PrecLand_healthy(lua_State*)",
+        "stack_size": 8
+      }
+    ],
+    "increased": [
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2074:6:void GCS_MAVLINK::send_rc_channels() const",
+        "baseline": 112,
+        "current": 184,
+        "diff": 72
+      },
+      {
+        "function": "../../libraries/GCS_MAVLink/GCS_Common.cpp:2110:6:0() const",
+        "baseline": 64,
+        "current": 104,
+        "diff": 40
+      },
+      {
+        "function": "../../libraries/AP_MSP/AP_MSP_Telem_DJI.cpp:218:6:virtual bool AP_MSP_Telem_DJI::get_rssi(float&) const",
+        "baseline": 8,
+        "current": 24,
+        "diff": 16
+      }
+    ],
+    "decreased": [
+      {
+        "function": "../../ArduCopter/mode.cpp:623:6:void Mode::land_run_vertical_control(bool)",
+        "baseline": 72,
+        "current": 32,
+        "diff": -40
+      },
+      {
+        "function": "../../ArduCopter/mode.cpp:687:6:void Mode::land_run_horizontal_control()",
+        "baseline": 104,
+        "current": 80,
+        "diff": -24
+      }
+    ],
+    "unchanged": 15863
+  },
+  "total_functions_analyzed": 15884
+}

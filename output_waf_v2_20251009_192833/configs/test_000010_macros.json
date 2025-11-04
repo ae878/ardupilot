@@ -1,0 +1,9 @@
+{
+  "test_id": 10,
+  "timestamp": "2025-10-09T19:58:05.705233",
+  "macro_changes": {
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 2,
+    "MODE_GUIDED_NOGPS_ENABLED": 1
+  }
+}

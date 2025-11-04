@@ -1,0 +1,11 @@
+{
+  "test_id": 138,
+  "timestamp": "2025-10-10T03:12:08.263024",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "AP_SERIALMANAGER_ENABLED": 0
+  }
+}

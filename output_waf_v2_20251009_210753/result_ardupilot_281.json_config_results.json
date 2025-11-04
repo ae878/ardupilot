@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 282,
+    "timestamp": "2025-10-10T09:49:00.532426",
+    "macro_changes": {
+      "RANGEFINDER_MAX_INSTANCES": 4,
+      "HAL_MEMORY_TOTAL_KB": 0,
+      "HAL_QUADPLANE_ENABLED": 1,
+      "MODE_GUIDED_NOGPS_ENABLED": 0,
+      "LEDDARONE_SERIAL_PORT_MAX": 32,
+      "AP_HAL_UARTDRIVER_ENABLED": 0,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+      "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+      "HAL_SUPPORT_RCOUT_SERIAL": 1
+    },
+    "build_success": false,
+    "build_time": 143.49109530448914,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

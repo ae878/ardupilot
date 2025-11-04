@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #952 */
+
+/* ConfigFuzz: HAL_GPIO_ALT */
+#ifdef HAL_GPIO_ALT
+#undef HAL_GPIO_ALT
+#endif
+#define HAL_GPIO_ALT 0
+
+/* ConfigFuzz: ESC_CHANNEL_MAP_RUNNING_DIRECTION */
+#ifdef ESC_CHANNEL_MAP_RUNNING_DIRECTION
+#undef ESC_CHANNEL_MAP_RUNNING_DIRECTION
+#endif
+#define ESC_CHANNEL_MAP_RUNNING_DIRECTION 0
+
+/* ConfigFuzz: FS_THR_ENABLED_ALWAYS_RTL */
+#ifdef FS_THR_ENABLED_ALWAYS_RTL
+#undef FS_THR_ENABLED_ALWAYS_RTL
+#endif
+#define FS_THR_ENABLED_ALWAYS_RTL 0
+
+/* ConfigFuzz: HAL_WITH_MCU_MONITORING */
+#ifdef HAL_WITH_MCU_MONITORING
+#undef HAL_WITH_MCU_MONITORING
+#endif
+#define HAL_WITH_MCU_MONITORING 1
+
+/* ConfigFuzz: HAL_INS_NONE */
+#ifdef HAL_INS_NONE
+#undef HAL_INS_NONE
+#endif
+#define HAL_INS_NONE 1
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 1
+
+/* ConfigFuzz: HAL_SUPPORT_RCOUT_SERIAL */
+#ifdef HAL_SUPPORT_RCOUT_SERIAL
+#undef HAL_SUPPORT_RCOUT_SERIAL
+#endif
+#define HAL_SUPPORT_RCOUT_SERIAL 1
+
+/* ConfigFuzz: WEATHERVANE_ENABLED */
+#ifdef WEATHERVANE_ENABLED
+#undef WEATHERVANE_ENABLED
+#endif
+#define WEATHERVANE_ENABLED 1
+
+/* ConfigFuzz: HAL_NUM_CAN_IFACES */
+#ifdef HAL_NUM_CAN_IFACES
+#undef HAL_NUM_CAN_IFACES
+#endif
+#define HAL_NUM_CAN_IFACES 0
+
+/* ConfigFuzz: AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED */
+#ifdef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#undef AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED
+#endif
+#define AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

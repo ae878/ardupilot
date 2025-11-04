@@ -1,0 +1,12 @@
+{
+  "test_id": 64,
+  "timestamp": "2025-10-13T18:41:35.853667",
+  "macro_changes": {
+    "RC_INPUT_MAX_PULSEWIDTH": 32,
+    "FS_THR_DISABLED": 0,
+    "AP_PERIPH_GPS_ENABLED": 0,
+    "AP_ICENGINE_ENABLED": 1,
+    "HAL_DSHOT_ENABLED": 1,
+    "MPUREG_CONFIG_EXT_SYNC_GY": 0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "test_id": 859,
+  "timestamp": "2025-10-11T12:57:27.123598",
+  "macro_changes": {
+    "HAL_RALLY_ENABLED": 0,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+    "HAL_AIRSPEED_TYPE_DEFAULT": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "TELEM_TIME_SLOT_MAX": 1,
+    "HAL_GPIO_OUTPUT": 1,
+    "RANGEFINDER_MAX_INSTANCES": 32,
+    "HAL_HNF_MAX_FILTERS": 32
+  },
+  "build_success": false,
+  "build_time": 74.44129252433777,
+  "build_result": false,
+  "error": "../../libraries/AP_Mount/AP_Mount_Backend.cpp:230:26: error: 'GIMBAL_MANAGER_CAP_FLAGS_HAS_RETRACT' was not declared in this scope; did you mean 'GIMBAL_DEVICE_CAP_FLAGS_HAS_RETRACT'?"
+}

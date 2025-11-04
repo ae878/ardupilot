@@ -1,0 +1,9 @@
+{
+  "test_id": 778,
+  "timestamp": "2025-10-11T08:59:24.593556",
+  "macro_changes": {
+    "RC_OUTPUT_MAX_PULSEWIDTH": 1,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "AP_BEACON_ENABLED": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "test_id": 720,
+  "timestamp": "2025-10-11T06:14:00.389788",
+  "macro_changes": {
+    "AP_FEATURE_SBUS_OUT": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 1,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "HAL_GPIO_OUTPUT": 0
+  }
+}

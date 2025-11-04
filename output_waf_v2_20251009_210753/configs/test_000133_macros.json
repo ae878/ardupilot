@@ -1,0 +1,11 @@
+{
+  "test_id": 133,
+  "timestamp": "2025-10-10T03:02:00.742284",
+  "macro_changes": {
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 1,
+    "MODE_SPORT_ENABLED": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0
+  }
+}

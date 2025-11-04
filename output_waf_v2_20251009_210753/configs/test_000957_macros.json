@@ -1,0 +1,12 @@
+{
+  "test_id": 957,
+  "timestamp": "2025-10-11T17:39:22.966460",
+  "macro_changes": {
+    "MODE_FLIP_ENABLED": 0,
+    "AP_SIGNED_FIRMWARE": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "HAL_HAVE_IMU_HEATER": 0,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAL_BATT_CURR_PIN": 1
+  }
+}

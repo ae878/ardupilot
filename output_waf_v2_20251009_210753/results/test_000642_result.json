@@ -1,0 +1,15 @@
+{
+  "test_id": 642,
+  "timestamp": "2025-10-11T02:14:04.515617",
+  "macro_changes": {
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "LEDDARONE_DETECTIONS_MAX": 4,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_ENABLE_THREAD_STATISTICS": 1,
+    "HAL_LOGGING_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 169.83484840393066,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

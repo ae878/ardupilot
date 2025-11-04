@@ -1,0 +1,9 @@
+{
+  "test_id": 809,
+  "timestamp": "2025-10-11T10:27:05.890612",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "MODE_DRIFT_ENABLED": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "test_id": 188,
+  "timestamp": "2025-10-10T05:25:35.878693",
+  "macro_changes": {
+    "MODE_SPORT_ENABLED": 1,
+    "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 1
+  }
+}

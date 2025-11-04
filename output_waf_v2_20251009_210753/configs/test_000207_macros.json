@@ -1,0 +1,12 @@
+{
+  "test_id": 207,
+  "timestamp": "2025-10-10T06:18:05.338020",
+  "macro_changes": {
+    "MAVLINK_ENABLED_COMMON": 1,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 1,
+    "HAL_HEATER_GPIO_ON": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 0,
+    "HAL_SOARING_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 1
+  }
+}

@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #177 */
+
+/* ConfigFuzz: AP_HAL_SHARED_DMA_ENABLED */
+#ifdef AP_HAL_SHARED_DMA_ENABLED
+#undef AP_HAL_SHARED_DMA_ENABLED
+#endif
+#define AP_HAL_SHARED_DMA_ENABLED 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC */
+#ifdef MAVLINK_MSG_ID_AP_ADC
+#undef MAVLINK_MSG_ID_AP_ADC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC 1
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS 0
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 0
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 1
+
+/* ConfigFuzz: CONFIG_NEWLIB_NANO_FORMAT */
+#ifdef CONFIG_NEWLIB_NANO_FORMAT
+#undef CONFIG_NEWLIB_NANO_FORMAT
+#endif
+#define CONFIG_NEWLIB_NANO_FORMAT 1
+
+/* ConfigFuzz: HAL_HNF_MAX_FILTERS */
+#ifdef HAL_HNF_MAX_FILTERS
+#undef HAL_HNF_MAX_FILTERS
+#endif
+#define HAL_HNF_MAX_FILTERS 2
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 0
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_ENABLE_COUNTERS */
+#ifdef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#undef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#endif
+#define CONFIG_SPI_FLASH_ENABLE_COUNTERS 0
+
+#endif /* _AP_CONFIG_H_ */

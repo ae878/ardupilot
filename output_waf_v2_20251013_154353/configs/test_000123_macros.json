@@ -1,0 +1,9 @@
+{
+  "test_id": 123,
+  "timestamp": "2025-10-13T21:34:42.923295",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 1,
+    "HAL_FLASH_PROTECTION": 1,
+    "HAL_SOARING_ENABLED": 0
+  }
+}

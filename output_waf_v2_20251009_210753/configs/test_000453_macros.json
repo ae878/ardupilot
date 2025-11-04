@@ -1,0 +1,11 @@
+{
+  "test_id": 453,
+  "timestamp": "2025-10-10T17:32:29.935545",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 0,
+    "HAL_RCOUT_RGBLED_RED": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 1,
+    "HAL_GPIO_ALT": 0,
+    "HAL_HAVE_HARDWARE_DOUBLE": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 10,
+  "timestamp": "2025-10-13T16:08:14.126174",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "HAL_PWM_COUNT": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "AP_INERTIALSENSOR_KILL_IMU_ENABLED": 0,
+    "AP_PERIPH_BATTERY_BALANCE_ENABLED": 0
+  }
+}

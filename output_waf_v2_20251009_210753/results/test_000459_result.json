@@ -1,0 +1,19 @@
+{
+  "test_id": 459,
+  "timestamp": "2025-10-10T17:49:32.737032",
+  "macro_changes": {
+    "AP_MODULE_SUPPORTED": 1,
+    "MAVLINK_ENABLED_STANDARD": 1,
+    "HAL_LOGGING_ENABLED": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "AP_ICENGINE_ENABLED": 1,
+    "HAL_BARO_NONE": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 8,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 83.0593376159668,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+}

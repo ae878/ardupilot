@@ -1,0 +1,14 @@
+{
+  "test_id": 132,
+  "timestamp": "2025-10-13T22:01:16.815524",
+  "macro_changes": {
+    "FSYNC_CONFIG_EXT_SYNC_GX": 1,
+    "FSYNC_CONFIG_EXT_SYNC_AY": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "AP_CRASHDUMP_ENABLED": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "RPM_MAX_INSTANCES": 16,
+    "MPUREG_CONFIG_EXT_SYNC_GX": 1
+  }
+}

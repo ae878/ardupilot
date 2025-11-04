@@ -1,0 +1,15 @@
+{
+  "test_id": 409,
+  "timestamp": "2025-10-10T15:29:41.757180",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "HAL_USB_PRODUCT_ID": 1,
+    "NOOPLOOP_DIST_MAX_MM": 4,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

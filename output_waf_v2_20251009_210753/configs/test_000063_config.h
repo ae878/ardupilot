@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #63 */
+
+/* ConfigFuzz: ESC_CHANNEL_MAP_CHANNEL */
+#ifdef ESC_CHANNEL_MAP_CHANNEL
+#undef ESC_CHANNEL_MAP_CHANNEL
+#endif
+#define ESC_CHANNEL_MAP_CHANNEL 0
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC_CRC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC_CRC 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_CUBEPILOT */
+#ifdef MAVLINK_ENABLED_CUBEPILOT
+#undef MAVLINK_ENABLED_CUBEPILOT
+#endif
+#define MAVLINK_ENABLED_CUBEPILOT 0
+
+/* ConfigFuzz: HAL_USB_PRODUCT_ID */
+#ifdef HAL_USB_PRODUCT_ID
+#undef HAL_USB_PRODUCT_ID
+#endif
+#define HAL_USB_PRODUCT_ID 0
+
+/* ConfigFuzz: HAL_NUM_CAN_IFACES */
+#ifdef HAL_NUM_CAN_IFACES
+#undef HAL_NUM_CAN_IFACES
+#endif
+#define HAL_NUM_CAN_IFACES 1
+
+/* ConfigFuzz: MODE_THROW_ENABLED */
+#ifdef MODE_THROW_ENABLED
+#undef MODE_THROW_ENABLED
+#endif
+#define MODE_THROW_ENABLED 0
+
+/* ConfigFuzz: HAL_FLASH_PROTECTION */
+#ifdef HAL_FLASH_PROTECTION
+#undef HAL_FLASH_PROTECTION
+#endif
+#define HAL_FLASH_PROTECTION 0
+
+/* ConfigFuzz: HAL_SOARING_ENABLED */
+#ifdef HAL_SOARING_ENABLED
+#undef HAL_SOARING_ENABLED
+#endif
+#define HAL_SOARING_ENABLED 0
+
+#endif /* _AP_CONFIG_H_ */

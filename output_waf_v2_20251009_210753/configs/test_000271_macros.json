@@ -1,0 +1,11 @@
+{
+  "test_id": 271,
+  "timestamp": "2025-10-10T09:16:07.335613",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 0,
+    "MAVLINK_ENABLED_MINIMAL": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "test_id": 586,
+  "timestamp": "2025-10-10T23:41:58.644557",
+  "macro_changes": {
+    "HAL_WITH_MCU_MONITORING": 1,
+    "MAVLINK_ENABLED_LOWEHEISER": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "HAL_WITH_DRONECAN": 1,
+    "TELEM_TIME_SLOT_MAX": 8,
+    "HAL_LOGGING_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "HAL_PWM_COUNT": 1
+  },
+  "build_success": false,
+  "build_time": 139.49592852592468,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/AnalogIn.cpp:402:18: error: 'ADCD3' was not declared in this scope; did you mean 'ADCD1'?"
+}

@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #17 */
+
+/* ConfigFuzz: HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS */
+#ifdef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#undef HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS
+#endif
+#define HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS 0
+
+/* ConfigFuzz: NOOPLOOP_DIST_MAX_MM */
+#ifdef NOOPLOOP_DIST_MAX_MM
+#undef NOOPLOOP_DIST_MAX_MM
+#endif
+#define NOOPLOOP_DIST_MAX_MM 32
+
+/* ConfigFuzz: CONFIG_LWIP_STATS */
+#ifdef CONFIG_LWIP_STATS
+#undef CONFIG_LWIP_STATS
+#endif
+#define CONFIG_LWIP_STATS 1
+
+/* ConfigFuzz: AP_RELAY_ENABLED */
+#ifdef AP_RELAY_ENABLED
+#undef AP_RELAY_ENABLED
+#endif
+#define AP_RELAY_ENABLED 0
+
+/* ConfigFuzz: HAL_INS_RATE_LOOP */
+#ifdef HAL_INS_RATE_LOOP
+#undef HAL_INS_RATE_LOOP
+#endif
+#define HAL_INS_RATE_LOOP 0
+
+/* ConfigFuzz: AC_PRECLAND_ENABLED */
+#ifdef AC_PRECLAND_ENABLED
+#undef AC_PRECLAND_ENABLED
+#endif
+#define AC_PRECLAND_ENABLED 1
+
+/* ConfigFuzz: AP_SERIALMANAGER_ENABLED */
+#ifdef AP_SERIALMANAGER_ENABLED
+#undef AP_SERIALMANAGER_ENABLED
+#endif
+#define AP_SERIALMANAGER_ENABLED 0
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 32
+
+/* ConfigFuzz: HAL_WITH_MCU_MONITORING */
+#ifdef HAL_WITH_MCU_MONITORING
+#undef HAL_WITH_MCU_MONITORING
+#endif
+#define HAL_WITH_MCU_MONITORING 1
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

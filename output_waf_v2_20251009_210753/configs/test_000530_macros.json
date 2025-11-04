@@ -1,0 +1,16 @@
+{
+  "test_id": 530,
+  "timestamp": "2025-10-10T21:14:01.167726",
+  "macro_changes": {
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "METADATA_MAX_i": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "HAL_GENERATOR_ENABLED": 0,
+    "MODE_CIRCLE_ENABLED": 1,
+    "RPMMAX": 32,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "HAL_WITH_UAVCAN": 0
+  }
+}

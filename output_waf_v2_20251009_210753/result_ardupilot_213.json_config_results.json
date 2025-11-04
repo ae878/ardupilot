@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 214,
+    "timestamp": "2025-10-10T06:37:36.618662",
+    "macro_changes": {
+      "AP_HAL_UARTDRIVER_ENABLED": 0,
+      "HAL_USE_SDMMC": 0,
+      "HAL_AHRS_EKF_TYPE_DEFAULT": 1
+    },
+    "build_success": false,
+    "build_time": 144.08808493614197,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

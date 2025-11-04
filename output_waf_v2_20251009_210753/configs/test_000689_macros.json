@@ -1,0 +1,9 @@
+{
+  "test_id": 689,
+  "timestamp": "2025-10-11T04:40:00.864702",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "BENCH_DEFINE_MAP_OVERRIDE": 1,
+    "HAL_WITH_DRONECAN": 1
+  }
+}

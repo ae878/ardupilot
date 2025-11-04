@@ -1,0 +1,13 @@
+{
+  "test_id": 31,
+  "timestamp": "2025-10-13T17:13:41.780413",
+  "macro_changes": {
+    "TELEM_TIME_SLOT_MAX": 8,
+    "FSYNC_CONFIG_EXT_SYNC_GX": 1,
+    "HAL_INS_NONE": 1,
+    "AP_PERIPH_BATTERY_BALANCE_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 0,
+    "DISABLE_WATCHDOG": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0
+  }
+}

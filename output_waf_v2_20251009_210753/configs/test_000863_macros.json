@@ -1,0 +1,10 @@
+{
+  "test_id": 863,
+  "timestamp": "2025-10-11T13:07:51.420325",
+  "macro_changes": {
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_GPIO_LED_ON": 1,
+    "HAL_INS_RATE_LOOP": 0,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  }
+}

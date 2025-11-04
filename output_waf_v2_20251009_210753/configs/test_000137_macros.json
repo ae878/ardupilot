@@ -1,0 +1,12 @@
+{
+  "test_id": 137,
+  "timestamp": "2025-10-10T03:11:58.614491",
+  "macro_changes": {
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "AP_FEATURE_RTSCTS": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "HAL_HAVE_SERVO_VOLTAGE": 0
+  }
+}

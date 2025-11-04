@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #903 */
+
+/* ConfigFuzz: MAVLINK_ENABLED_LOWEHEISER */
+#ifdef MAVLINK_ENABLED_LOWEHEISER
+#undef MAVLINK_ENABLED_LOWEHEISER
+#endif
+#define MAVLINK_ENABLED_LOWEHEISER 1
+
+/* ConfigFuzz: AP_FOLLOW_ENABLED */
+#ifdef AP_FOLLOW_ENABLED
+#undef AP_FOLLOW_ENABLED
+#endif
+#define AP_FOLLOW_ENABLED 0
+
+/* ConfigFuzz: HAL_SPEKTRUM_TELEM_ENABLED */
+#ifdef HAL_SPEKTRUM_TELEM_ENABLED
+#undef HAL_SPEKTRUM_TELEM_ENABLED
+#endif
+#define HAL_SPEKTRUM_TELEM_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_CUBEPILOT */
+#ifdef MAVLINK_ENABLED_CUBEPILOT
+#undef MAVLINK_ENABLED_CUBEPILOT
+#endif
+#define MAVLINK_ENABLED_CUBEPILOT 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_AP_ADC */
+#ifdef MAVLINK_MSG_ID_AP_ADC
+#undef MAVLINK_MSG_ID_AP_ADC
+#endif
+#define MAVLINK_MSG_ID_AP_ADC 1
+
+/* ConfigFuzz: HAL_HAVE_DUAL_USB_CDC */
+#ifdef HAL_HAVE_DUAL_USB_CDC
+#undef HAL_HAVE_DUAL_USB_CDC
+#endif
+#define HAL_HAVE_DUAL_USB_CDC 1
+
+/* ConfigFuzz: AP_RANGEFINDER_LUA_TIMEOUT_MS */
+#ifdef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#undef AP_RANGEFINDER_LUA_TIMEOUT_MS
+#endif
+#define AP_RANGEFINDER_LUA_TIMEOUT_MS 1
+
+/* ConfigFuzz: HAL_SOARING_ENABLED */
+#ifdef HAL_SOARING_ENABLED
+#undef HAL_SOARING_ENABLED
+#endif
+#define HAL_SOARING_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

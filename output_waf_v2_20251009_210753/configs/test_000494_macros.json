@@ -1,0 +1,11 @@
+{
+  "test_id": 494,
+  "timestamp": "2025-10-10T19:20:40.696796",
+  "macro_changes": {
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "FS_THR_DISABLED": 0,
+    "AC_PRECLAND_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 758,
+  "timestamp": "2025-10-11T07:55:38.914531",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 0,
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 0,
+    "MODE_DRIFT_ENABLED": 1
+  }
+}

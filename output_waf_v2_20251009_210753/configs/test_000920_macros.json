@@ -1,0 +1,9 @@
+{
+  "test_id": 920,
+  "timestamp": "2025-10-11T15:49:04.600144",
+  "macro_changes": {
+    "AP_CAMERA_ENABLED": 1,
+    "HAL_BARO_NONE": 1,
+    "CONFIG_LWIP_STATS": 0
+  }
+}

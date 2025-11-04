@@ -1,0 +1,15 @@
+{
+  "test_id": 157,
+  "timestamp": "2025-10-10T03:59:19.815784",
+  "macro_changes": {
+    "AP_ICENGINE_ENABLED": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 0
+  },
+  "build_success": false,
+  "build_time": 29.06733012199402,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

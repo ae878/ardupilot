@@ -1,0 +1,9 @@
+{
+  "test_id": 26,
+  "timestamp": "2025-10-13T16:57:23.471669",
+  "macro_changes": {
+    "HAL_PERIPH_ENABLE_NOTIFY": 0,
+    "HAL_WITH_SPI_RAMTRON": 1,
+    "FS_THR_DISABLED": 0
+  }
+}

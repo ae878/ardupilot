@@ -1,0 +1,12 @@
+{
+  "test_id": 945,
+  "timestamp": "2025-10-11T17:01:25.725104",
+  "macro_changes": {
+    "RPMMAX": 2,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 1,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 1
+  }
+}

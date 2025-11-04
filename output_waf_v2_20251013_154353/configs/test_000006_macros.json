@@ -1,0 +1,12 @@
+{
+  "test_id": 6,
+  "timestamp": "2025-10-13T15:58:32.325348",
+  "macro_changes": {
+    "AP_PERIPH_AIRSPEED_ENABLED": 0,
+    "HAL_GPIO_ALT": 0,
+    "MPUREG_ACCEL_CONFIG": 0,
+    "HAL_USB_VENDOR_ID": 1,
+    "HAL_PARACHUTE_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 0
+  }
+}

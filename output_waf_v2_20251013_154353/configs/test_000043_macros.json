@@ -1,0 +1,13 @@
+{
+  "test_id": 43,
+  "timestamp": "2025-10-13T17:45:53.654951",
+  "macro_changes": {
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 1,
+    "HAL_INS_NONE": 0,
+    "AP_SIM_ENABLED": 0,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0,
+    "RPM_MAX_INSTANCES": 2,
+    "HAL_HEATER_GPIO_ON": 0,
+    "AP_PERIPH_MAG_ENABLED": 0
+  }
+}

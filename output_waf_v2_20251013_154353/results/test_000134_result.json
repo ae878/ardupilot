@@ -1,0 +1,20 @@
+{
+  "test_id": 134,
+  "timestamp": "2025-10-13T22:07:26.077697",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "MODE_RTL_ENABLED": 0,
+    "MODE_DRIFT_ENABLED": 0,
+    "HAL_LOGGING_ENABLED": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "HAL_DISABLE_ADC_DRIVER": 1,
+    "AP_TEMPCALIBRATION_ENABLED": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1
+  },
+  "build_success": false,
+  "build_time": 167.0041823387146,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

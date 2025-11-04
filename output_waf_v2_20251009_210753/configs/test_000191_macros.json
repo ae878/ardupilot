@@ -1,0 +1,11 @@
+{
+  "test_id": 191,
+  "timestamp": "2025-10-10T05:32:56.721781",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ICAROUS": 1,
+    "MODE_FLIP_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "CONFIG_LWIP_STATS": 1
+  }
+}

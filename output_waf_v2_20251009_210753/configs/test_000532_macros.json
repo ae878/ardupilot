@@ -1,0 +1,9 @@
+{
+  "test_id": 532,
+  "timestamp": "2025-10-10T21:20:35.596635",
+  "macro_changes": {
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MAVLINK_ENABLED_LOWEHEISER": 1,
+    "AP_AIRSPEED_ENABLED": 1
+  }
+}

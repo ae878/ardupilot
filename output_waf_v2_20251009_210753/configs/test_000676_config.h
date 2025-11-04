@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #676 */
+
+/* ConfigFuzz: HAL_SPRAYER_ENABLED */
+#ifdef HAL_SPRAYER_ENABLED
+#undef HAL_SPRAYER_ENABLED
+#endif
+#define HAL_SPRAYER_ENABLED 0
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN 0
+
+/* ConfigFuzz: FLOW_CONTROL_ENABLED */
+#ifdef FLOW_CONTROL_ENABLED
+#undef FLOW_CONTROL_ENABLED
+#endif
+#define FLOW_CONTROL_ENABLED 1
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 8
+
+/* ConfigFuzz: MODE_FLIP_ENABLED */
+#ifdef MODE_FLIP_ENABLED
+#undef MODE_FLIP_ENABLED
+#endif
+#define MODE_FLIP_ENABLED 1
+
+/* ConfigFuzz: AP_AIRSPEED_ENABLED */
+#ifdef AP_AIRSPEED_ENABLED
+#undef AP_AIRSPEED_ENABLED
+#endif
+#define AP_AIRSPEED_ENABLED 1
+
+/* ConfigFuzz: AP_BEACON_ENABLED */
+#ifdef AP_BEACON_ENABLED
+#undef AP_BEACON_ENABLED
+#endif
+#define AP_BEACON_ENABLED 0
+
+/* ConfigFuzz: AP_NOTIFY_NAVIGATOR_LED_ENABLED */
+#ifdef AP_NOTIFY_NAVIGATOR_LED_ENABLED
+#undef AP_NOTIFY_NAVIGATOR_LED_ENABLED
+#endif
+#define AP_NOTIFY_NAVIGATOR_LED_ENABLED 1
+
+/* ConfigFuzz: MODE_LOITER_ENABLED */
+#ifdef MODE_LOITER_ENABLED
+#undef MODE_LOITER_ENABLED
+#endif
+#define MODE_LOITER_ENABLED 0
+
+/* ConfigFuzz: HAL_USE_WSPI_DEFAULT_CFG */
+#ifdef HAL_USE_WSPI_DEFAULT_CFG
+#undef HAL_USE_WSPI_DEFAULT_CFG
+#endif
+#define HAL_USE_WSPI_DEFAULT_CFG 1
+
+#endif /* _AP_CONFIG_H_ */

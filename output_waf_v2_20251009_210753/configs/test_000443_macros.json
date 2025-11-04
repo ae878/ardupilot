@@ -1,0 +1,9 @@
+{
+  "test_id": 443,
+  "timestamp": "2025-10-10T17:02:15.359976",
+  "macro_changes": {
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 0,
+    "AP_SIM_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 1
+  }
+}

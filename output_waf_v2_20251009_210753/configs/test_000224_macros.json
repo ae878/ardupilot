@@ -1,0 +1,10 @@
+{
+  "test_id": 224,
+  "timestamp": "2025-10-10T07:03:21.546551",
+  "macro_changes": {
+    "NOOPLOOP_DIST_MAX_MM": 1,
+    "USER_PARAMS_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "AP_SIM_ENABLED": 0
+  }
+}

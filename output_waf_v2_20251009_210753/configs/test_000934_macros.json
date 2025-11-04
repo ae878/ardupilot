@@ -1,0 +1,12 @@
+{
+  "test_id": 934,
+  "timestamp": "2025-10-11T16:31:17.702333",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "METADATA_MAX_i": 32,
+    "HAL_HEATER_GPIO_ON": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "AP_AIRSPEED_ENABLED": 1,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

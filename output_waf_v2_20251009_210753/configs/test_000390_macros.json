@@ -1,0 +1,11 @@
+{
+  "test_id": 390,
+  "timestamp": "2025-10-10T14:33:30.643671",
+  "macro_changes": {
+    "HAL_WITH_RAMTRON": 1,
+    "HAL_USB_PRODUCT_ID": 0,
+    "AP_RELAY_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "LEDDARONE_SERIAL_PORT_MAX": 16
+  }
+}

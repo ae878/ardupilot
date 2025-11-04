@@ -1,0 +1,11 @@
+{
+  "test_id": 462,
+  "timestamp": "2025-10-10T17:56:22.465686",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1,
+    "KDECAN_MAX_NUM_ESCS": 4,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1
+  }
+}

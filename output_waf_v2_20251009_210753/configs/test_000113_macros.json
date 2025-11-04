@@ -1,0 +1,13 @@
+{
+  "test_id": 113,
+  "timestamp": "2025-10-10T02:08:49.658297",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "MAX_PWMS": 8,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 0,
+    "MODE_AUTO_ENABLED": 0,
+    "HAL_USE_FATFS": 0,
+    "AUTOTUNE_ENABLED": 0
+  }
+}

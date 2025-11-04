@@ -1,0 +1,13 @@
+{
+  "test_id": 322,
+  "timestamp": "2025-10-10T11:29:44.961640",
+  "macro_changes": {
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 1,
+    "MAVLINK_ENABLED_AVSSUAS": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "WEATHERVANE_ENABLED": 0,
+    "HAL_MOUNT_ENABLED": 1,
+    "HAL_USB_VENDOR_ID": 1
+  }
+}

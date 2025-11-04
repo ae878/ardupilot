@@ -1,0 +1,19 @@
+{
+  "test_id": 806,
+  "timestamp": "2025-10-11T10:17:50.963228",
+  "macro_changes": {
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "RANGEFINDER_MAX_INSTANCES": 8,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "HAL_MOUNT_ENABLED": 0,
+    "MODE_SMARTRTL_ENABLED": 1,
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "HAL_DSHOT_ENABLED": 0
+  },
+  "build_success": false,
+  "build_time": 132.27160096168518,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+}

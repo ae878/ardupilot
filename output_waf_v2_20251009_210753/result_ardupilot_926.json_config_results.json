@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 927,
+    "timestamp": "2025-10-11T16:08:17.795675",
+    "macro_changes": {
+      "USER_PARAMS_ENABLED": 1,
+      "MAVLINK_MSG_ID_AP_ADC": 0,
+      "HAL_CANFD_SUPPORTED": 0
+    },
+    "build_success": false,
+    "build_time": 175.64904952049255,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

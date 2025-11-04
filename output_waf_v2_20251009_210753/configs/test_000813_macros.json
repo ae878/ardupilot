@@ -1,0 +1,10 @@
+{
+  "test_id": 813,
+  "timestamp": "2025-10-11T10:40:13.497594",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "BENCH_DEFINE_MAP_COUNT": 0,
+    "METADATA_MAX_i": 16,
+    "AC_PRECLAND_ENABLED": 1
+  }
+}

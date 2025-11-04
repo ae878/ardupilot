@@ -1,0 +1,13 @@
+{
+  "test_id": 737,
+  "timestamp": "2025-10-11T06:57:39.948382",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 0,
+    "LEDDARONE_SERIAL_PORT_MAX": 32,
+    "AP_FEATURE_RTSCTS": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "HAL_HAVE_SERVO_VOLTAGE": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1
+  }
+}

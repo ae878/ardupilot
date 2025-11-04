@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 12,
+    "timestamp": "2025-10-09T21:38:40.503614",
+    "macro_changes": {
+      "HAL_HNF_MAX_FILTERS": 4,
+      "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+      "MODE_RTL_ENABLED": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+      "CONFIG_NEWLIB_NANO_FORMAT": 1,
+      "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+      "FS_THR_ENABLED_ALWAYS_LAND": 1,
+      "AP_GRIPPER_ENABLED": 0,
+      "MODE_AUTO_ENABLED": 0,
+      "BENCH_DEFINE_MAP_GEOMETRY": 1
+    },
+    "build_success": false,
+    "build_time": 161.00206995010376,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:558:4: error: #error SmartRTL requires ModeRTL which is disabled"
+  }
+]

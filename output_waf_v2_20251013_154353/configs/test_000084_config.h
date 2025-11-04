@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #84 */
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 0
+
+/* ConfigFuzz: AP_STATS_ENABLED */
+#ifdef AP_STATS_ENABLED
+#undef AP_STATS_ENABLED
+#endif
+#define AP_STATS_ENABLED 0
+
+/* ConfigFuzz: AP_NETWORKING_NUM_PORTS */
+#ifdef AP_NETWORKING_NUM_PORTS
+#undef AP_NETWORKING_NUM_PORTS
+#endif
+#define AP_NETWORKING_NUM_PORTS 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_EXPLICIT */
+#ifdef BENCH_DEFINE_MAP_EXPLICIT
+#undef BENCH_DEFINE_MAP_EXPLICIT
+#endif
+#define BENCH_DEFINE_MAP_EXPLICIT 0
+
+/* ConfigFuzz: AP_PERIPH_IMU_ENABLED */
+#ifdef AP_PERIPH_IMU_ENABLED
+#undef AP_PERIPH_IMU_ENABLED
+#endif
+#define AP_PERIPH_IMU_ENABLED 0
+
+/* ConfigFuzz: AP_ADVANCEDFAILSAFE_ENABLED */
+#ifdef AP_ADVANCEDFAILSAFE_ENABLED
+#undef AP_ADVANCEDFAILSAFE_ENABLED
+#endif
+#define AP_ADVANCEDFAILSAFE_ENABLED 1
+
+/* ConfigFuzz: USER_PARAMS_ENABLED */
+#ifdef USER_PARAMS_ENABLED
+#undef USER_PARAMS_ENABLED
+#endif
+#define USER_PARAMS_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

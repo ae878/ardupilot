@@ -1,0 +1,11 @@
+{
+  "test_id": 670,
+  "timestamp": "2025-10-11T03:40:48.769812",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_ADAP_TUNING": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 8,
+    "CONFIG_SPI_FLASH_DANGEROUS_WRITE_ALLOWED": 1,
+    "FLOW_CONTROL_ENABLED": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE": 0
+  }
+}

@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #941 */
+
+/* ConfigFuzz: AP_BEACON_ENABLED */
+#ifdef AP_BEACON_ENABLED
+#undef AP_BEACON_ENABLED
+#endif
+#define AP_BEACON_ENABLED 0
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 0
+
+/* ConfigFuzz: AP_RCPROTOCOL_EMLID_RCIO_ENABLED */
+#ifdef AP_RCPROTOCOL_EMLID_RCIO_ENABLED
+#undef AP_RCPROTOCOL_EMLID_RCIO_ENABLED
+#endif
+#define AP_RCPROTOCOL_EMLID_RCIO_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_SPI_RAMTRON */
+#ifdef HAL_WITH_SPI_RAMTRON
+#undef HAL_WITH_SPI_RAMTRON
+#endif
+#define HAL_WITH_SPI_RAMTRON 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_CUBEPILOT */
+#ifdef MAVLINK_ENABLED_CUBEPILOT
+#undef MAVLINK_ENABLED_CUBEPILOT
+#endif
+#define MAVLINK_ENABLED_CUBEPILOT 1
+
+/* ConfigFuzz: HAL_SEMAPHORE_BLOCK_FOREVER */
+#ifdef HAL_SEMAPHORE_BLOCK_FOREVER
+#undef HAL_SEMAPHORE_BLOCK_FOREVER
+#endif
+#define HAL_SEMAPHORE_BLOCK_FOREVER 1
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 1
+
+/* ConfigFuzz: HAL_BARO_NONE */
+#ifdef HAL_BARO_NONE
+#undef HAL_BARO_NONE
+#endif
+#define HAL_BARO_NONE 1
+
+/* ConfigFuzz: AP_ADVANCEDFAILSAFE_ENABLED */
+#ifdef AP_ADVANCEDFAILSAFE_ENABLED
+#undef AP_ADVANCEDFAILSAFE_ENABLED
+#endif
+#define AP_ADVANCEDFAILSAFE_ENABLED 1
+
+/* ConfigFuzz: FS_GCS_ENABLED_ALWAYS_LAND */
+#ifdef FS_GCS_ENABLED_ALWAYS_LAND
+#undef FS_GCS_ENABLED_ALWAYS_LAND
+#endif
+#define FS_GCS_ENABLED_ALWAYS_LAND 1
+
+#endif /* _AP_CONFIG_H_ */

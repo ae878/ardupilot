@@ -1,0 +1,16 @@
+{
+  "test_id": 101,
+  "timestamp": "2025-10-13T20:35:30.085834",
+  "macro_changes": {
+    "HAL_BATT_CURR_PIN": 0,
+    "AP_PERIPH_RTC_ENABLED": 0,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "FSYNC_CONFIG_EXT_SYNC_GY": 1,
+    "HAL_FLASH_PROTECTION": 1,
+    "AP_PERIPH_GPS_ENABLED": 1,
+    "AC_PRECLAND_ENABLED": 0,
+    "MODE_AUTO_ENABLED": 1,
+    "AP_TEMPCALIBRATION_ENABLED": 0,
+    "AP_PERIPH_RPM_ENABLED": 0
+  }
+}

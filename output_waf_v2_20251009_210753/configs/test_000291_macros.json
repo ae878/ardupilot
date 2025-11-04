@@ -1,0 +1,12 @@
+{
+  "test_id": 291,
+  "timestamp": "2025-10-10T10:15:45.523976",
+  "macro_changes": {
+    "HAL_RCOUT_RGBLED_BLUE": 1,
+    "ESC_CHANNEL_MAP_CHANNEL": 0,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "MODE_ACRO_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "HAL_CAN_DRIVER_DEFAULT": 0
+  }
+}

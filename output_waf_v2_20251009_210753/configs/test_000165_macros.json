@@ -1,0 +1,12 @@
+{
+  "test_id": 165,
+  "timestamp": "2025-10-10T04:20:20.318189",
+  "macro_changes": {
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "CONFIG_LWIP_STATS": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "HAL_HEATER_GPIO_PIN": 0,
+    "FS_GCS_ENABLED_ALWAYS_RTL": 0,
+    "AP_STATS_ENABLED": 1
+  }
+}

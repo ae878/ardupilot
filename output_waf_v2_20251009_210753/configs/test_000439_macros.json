@@ -1,0 +1,11 @@
+{
+  "test_id": 439,
+  "timestamp": "2025-10-10T16:51:34.923868",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 1,
+    "MODE_BRAKE_ENABLED": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 1,
+    "HAL_WITH_UAVCAN": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0
+  }
+}

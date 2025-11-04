@@ -1,0 +1,10 @@
+{
+  "test_id": 598,
+  "timestamp": "2025-10-11T00:12:52.217817",
+  "macro_changes": {
+    "HAL_HAVE_SERVO_VOLTAGE": 1,
+    "TAP_ESC_MAX_MOTOR_NUM": 2,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 1
+  }
+}

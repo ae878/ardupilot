@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 619,
+    "timestamp": "2025-10-11T01:12:19.638170",
+    "macro_changes": {
+      "HAL_GENERATOR_ENABLED": 1,
+      "TOY_MODE_ENABLED": 0,
+      "FS_GCS_ENABLED_ALWAYS_LAND": 0,
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 0,
+      "BENCH_DEFINE_MAP_GEOMETRY": 1,
+      "MAVLINK_ENABLED_UAVIONIX": 1,
+      "FFT_MAX_MISSED_UPDATES": 8,
+      "MAVLINK_ENABLED_MINIMAL": 1,
+      "CONFIG_NEWLIB_NANO_FORMAT": 1,
+      "AP_SIM_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 200.67362356185913,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

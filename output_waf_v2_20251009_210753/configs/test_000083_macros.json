@@ -1,0 +1,12 @@
+{
+  "test_id": 83,
+  "timestamp": "2025-10-10T00:52:15.772056",
+  "macro_changes": {
+    "MAX_PWMS": 32,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 1
+  }
+}

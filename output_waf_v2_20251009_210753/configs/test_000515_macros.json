@@ -1,0 +1,16 @@
+{
+  "test_id": 515,
+  "timestamp": "2025-10-10T20:26:19.797369",
+  "macro_changes": {
+    "HAL_FLASH_PROTECTION": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 1,
+    "HAL_IMUHEAT_P_DEFAULT": 0,
+    "TELEM_TIME_SLOT_MAX": 4,
+    "HAL_USE_HW_RNG": 1,
+    "AP_SERIALMANAGER_ENABLED": 1,
+    "AP_MISSION_ENABLED": 1,
+    "MAX_PWMS": 2,
+    "AP_SRV_CHANNELS_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1
+  }
+}

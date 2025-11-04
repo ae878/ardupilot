@@ -1,0 +1,13 @@
+{
+  "test_id": 132,
+  "timestamp": "2025-10-10T02:58:54.151981",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "HAL_USE_HW_RNG": 0,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0,
+    "HAL_SUPPORT_RCOUT_SERIAL": 0,
+    "AP_AIRSPEED_ENABLED": 1,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+    "HAL_WITH_IO_MCU": 1
+  }
+}

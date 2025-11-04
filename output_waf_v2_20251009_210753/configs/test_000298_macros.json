@@ -1,0 +1,9 @@
+{
+  "test_id": 298,
+  "timestamp": "2025-10-10T10:35:10.138593",
+  "macro_changes": {
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0
+  }
+}

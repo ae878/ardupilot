@@ -1,0 +1,9 @@
+{
+  "test_id": 791,
+  "timestamp": "2025-10-11T09:36:33.043745",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "HAL_SEMAPHORE_BLOCK_FOREVER": 1,
+    "MAVLINK_ENABLED_CUBEPILOT": 0
+  }
+}

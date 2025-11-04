@@ -1,0 +1,10 @@
+{
+  "test_id": 884,
+  "timestamp": "2025-10-11T14:07:47.468097",
+  "macro_changes": {
+    "MODE_ACRO_ENABLED": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 0,
+    "MODE_DRIFT_ENABLED": 1
+  }
+}

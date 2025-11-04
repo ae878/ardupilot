@@ -1,0 +1,10 @@
+{
+  "test_id": 395,
+  "timestamp": "2025-10-10T14:48:03.809898",
+  "macro_changes": {
+    "AP_SIGNED_FIRMWARE": 0,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "FLOW_CONTROL_ENABLED": 0,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 0
+  }
+}

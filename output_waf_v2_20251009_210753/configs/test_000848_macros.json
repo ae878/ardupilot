@@ -1,0 +1,14 @@
+{
+  "test_id": 848,
+  "timestamp": "2025-10-11T12:27:15.734031",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 0,
+    "HAL_USE_FATFS": 0,
+    "HAL_SPRAYER_ENABLED": 0,
+    "MAVLINK_ENABLED_COMMON": 0,
+    "FS_GCS_ENABLED_ALWAYS_LAND": 1,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 0
+  }
+}

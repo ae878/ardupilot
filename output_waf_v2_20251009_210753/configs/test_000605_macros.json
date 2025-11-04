@@ -1,0 +1,13 @@
+{
+  "test_id": 605,
+  "timestamp": "2025-10-11T00:34:41.411558",
+  "macro_changes": {
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "AP_BEACON_ENABLED": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING": 0,
+    "AP_CAMERA_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0
+  }
+}

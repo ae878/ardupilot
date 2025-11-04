@@ -1,0 +1,19 @@
+{
+  "test_id": 51,
+  "timestamp": "2025-10-09T23:25:06.999067",
+  "macro_changes": {
+    "HAL_UART_IOMCU_IDX": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 1,
+    "AP_AIRSPEED_ENABLED": 1,
+    "HAL_NUM_CAN_IFACES": 1,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "MAVLINK_ENABLED_AVSSUAS": 1,
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "USER_PARAMS_ENABLED": 1,
+    "HAL_BATT_VOLT_PIN": 1
+  },
+  "build_success": false,
+  "build_time": 166.7099244594574,
+  "build_result": false,
+  "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 831,
+  "timestamp": "2025-10-11T11:35:50.717945",
+  "macro_changes": {
+    "MODE_SPORT_ENABLED": 0,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "HAL_BUTTON_ENABLED": 1,
+    "HAL_GENERATOR_ENABLED": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "HAL_USE_FATFS": 1,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1
+  }
+}

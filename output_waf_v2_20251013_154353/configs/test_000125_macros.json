@@ -1,0 +1,11 @@
+{
+  "test_id": 125,
+  "timestamp": "2025-10-13T21:41:16.263854",
+  "macro_changes": {
+    "AP_SCHEDULER_ENABLED": 1,
+    "HAL_USB_PRODUCT_ID": 0,
+    "HAL_BATT_CURR_PIN": 0,
+    "MODE_LOITER_ENABLED": 0,
+    "AP_FEATURE_SBUS_OUT": 1
+  }
+}

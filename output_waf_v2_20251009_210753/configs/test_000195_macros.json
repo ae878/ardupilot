@@ -1,0 +1,12 @@
+{
+  "test_id": 195,
+  "timestamp": "2025-10-10T05:45:17.398963",
+  "macro_changes": {
+    "LEDDARONE_SERIAL_PORT_MAX": 16,
+    "HAL_FLASH_ALLOW_UPDATE": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "HAL_MOUNT_ENABLED": 1
+  }
+}

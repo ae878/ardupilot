@@ -1,0 +1,17 @@
+{
+  "test_id": 135,
+  "timestamp": "2025-10-13T22:07:58.595958",
+  "macro_changes": {
+    "MPUREG_CONFIG_EXT_SYNC_AZ": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAVE_ENUM_CAMERA_CAP_FLAGS": 0,
+    "AP_OPTICALFLOW_ENABLED": 1,
+    "AP_FOLLOW_ENABLED": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 32.51521611213684,
+  "build_result": false,
+  "error": "../../libraries/AP_Camera/AP_RunCam.cpp:1109:17: error: 'CAMERA_CAP_FLAGS_CAPTURE_VIDEO' was not declared in this scope"
+}

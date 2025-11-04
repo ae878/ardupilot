@@ -1,0 +1,10 @@
+{
+  "test_id": 864,
+  "timestamp": "2025-10-11T13:11:08.933227",
+  "macro_changes": {
+    "HAL_EXTERNAL_AHRS_DEFAULT": 0,
+    "AP_ICENGINE_ENABLED": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1
+  }
+}

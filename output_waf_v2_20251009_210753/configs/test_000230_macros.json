@@ -1,0 +1,11 @@
+{
+  "test_id": 230,
+  "timestamp": "2025-10-10T07:19:13.648768",
+  "macro_changes": {
+    "HAL_USB_PRODUCT_ID": 1,
+    "AP_EXTERNAL_CONTROL_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 0,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0
+  }
+}

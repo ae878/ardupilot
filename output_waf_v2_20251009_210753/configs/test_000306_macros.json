@@ -1,0 +1,12 @@
+{
+  "test_id": 306,
+  "timestamp": "2025-10-10T10:54:18.572280",
+  "macro_changes": {
+    "FLOW_CONTROL_ENABLED": 1,
+    "HAL_INS_VRBRAIN": 1,
+    "WEATHERVANE_ENABLED": 1,
+    "AP_HAL_UARTDRIVER_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_LOGGING_ENABLED": 0
+  }
+}

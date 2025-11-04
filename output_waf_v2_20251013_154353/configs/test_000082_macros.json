@@ -1,0 +1,12 @@
+{
+  "test_id": 82,
+  "timestamp": "2025-10-13T19:37:45.358571",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_PERMUTATION": 0,
+    "HAL_INS_TRIM_LIMIT_DEG": 0,
+    "HAL_SPRAYER_ENABLED": 1,
+    "MPUREG_CONFIG": 0,
+    "AP_RADIO_ENABLED": 0,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0
+  }
+}

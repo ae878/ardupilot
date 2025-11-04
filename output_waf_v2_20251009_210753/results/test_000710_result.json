@@ -1,0 +1,17 @@
+{
+  "test_id": 710,
+  "timestamp": "2025-10-11T05:46:25.339878",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 1,
+    "HAL_USB_PRODUCT_ID": 0,
+    "TAP_ESC_MAX_MOTOR_NUM": 16,
+    "HAL_DSHOT_ENABLED": 0,
+    "HAL_GPIO_OUTPUT": 1,
+    "MODE_DRIFT_ENABLED": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0
+  },
+  "build_success": false,
+  "build_time": 136.02801728248596,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+}

@@ -1,0 +1,11 @@
+{
+  "test_id": 477,
+  "timestamp": "2025-10-10T18:36:37.650034",
+  "macro_changes": {
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1,
+    "RC_INPUT_MAX_PULSEWIDTH": 4,
+    "HAL_WITH_UAVCAN": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "AP_HAL_SHARED_DMA_ENABLED": 0
+  }
+}

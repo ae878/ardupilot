@@ -1,0 +1,10 @@
+{
+  "test_id": 818,
+  "timestamp": "2025-10-11T10:53:32.263516",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_ON": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_BATT_VOLT_PIN": 1,
+    "HAL_SUPPORT_RCOUT_SERIAL": 1
+  }
+}

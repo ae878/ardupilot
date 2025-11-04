@@ -1,0 +1,59 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #286 */
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 0
+
+/* ConfigFuzz: MODE_LOITER_ENABLED */
+#ifdef MODE_LOITER_ENABLED
+#undef MODE_LOITER_ENABLED
+#endif
+#define MODE_LOITER_ENABLED 1
+
+/* ConfigFuzz: MAVLINK_ENABLED_ICAROUS */
+#ifdef MAVLINK_ENABLED_ICAROUS
+#undef MAVLINK_ENABLED_ICAROUS
+#endif
+#define MAVLINK_ENABLED_ICAROUS 1
+
+/* ConfigFuzz: AP_SERIALMANAGER_ENABLED */
+#ifdef AP_SERIALMANAGER_ENABLED
+#undef AP_SERIALMANAGER_ENABLED
+#endif
+#define AP_SERIALMANAGER_ENABLED 1
+
+/* ConfigFuzz: MAX_PWMS */
+#ifdef MAX_PWMS
+#undef MAX_PWMS
+#endif
+#define MAX_PWMS 16
+
+/* ConfigFuzz: LEDDARONE_DETECTIONS_MAX */
+#ifdef LEDDARONE_DETECTIONS_MAX
+#undef LEDDARONE_DETECTIONS_MAX
+#endif
+#define LEDDARONE_DETECTIONS_MAX 4
+
+#endif /* _AP_CONFIG_H_ */

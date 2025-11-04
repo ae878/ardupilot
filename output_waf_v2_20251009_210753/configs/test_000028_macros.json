@@ -1,0 +1,15 @@
+{
+  "test_id": 28,
+  "timestamp": "2025-10-09T22:25:06.843696",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "CONFIG_LWIP_STATS": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "AP_RSSI_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "HAL_UART_IOMCU_IDX": 1,
+    "FFT_MAX_MISSED_UPDATES": 2,
+    "HAVE_ENUM_GIMBAL_DEVICE_CAP_FLAGS": 1
+  }
+}

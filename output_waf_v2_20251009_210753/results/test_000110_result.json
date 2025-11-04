@@ -1,0 +1,20 @@
+{
+  "test_id": 110,
+  "timestamp": "2025-10-10T02:03:15.160423",
+  "macro_changes": {
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "MODE_AUTOROTATE_ENABLED": 0,
+    "HAL_WITH_MCU_MONITORING": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 0,
+    "KDECAN_MAX_NUM_ESCS": 2,
+    "AUTOTUNE_ENABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 1,
+    "AP_MISSION_ENABLED": 1
+  },
+  "build_success": false,
+  "build_time": 186.15720629692078,
+  "build_result": false,
+  "error": "collect2: error: ld returned 1 exit status"
+}

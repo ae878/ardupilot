@@ -1,0 +1,11 @@
+{
+  "test_id": 74,
+  "timestamp": "2025-10-13T19:11:20.832189",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "AP_TEMPCALIBRATION_ENABLED": 1,
+    "MODE_AUTO_ENABLED": 1,
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 1,
+    "HAL_SPEKTRUM_TELEM_ENABLED": 0
+  }
+}

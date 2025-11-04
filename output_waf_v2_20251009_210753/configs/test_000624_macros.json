@@ -1,0 +1,11 @@
+{
+  "test_id": 624,
+  "timestamp": "2025-10-11T01:26:49.942105",
+  "macro_changes": {
+    "MODE_BRAKE_ENABLED": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 0,
+    "AC_PAYLOAD_PLACE_ENABLED": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "HAL_GENERATOR_ENABLED": 0
+  }
+}

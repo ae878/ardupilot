@@ -1,0 +1,13 @@
+{
+  "test_id": 427,
+  "timestamp": "2025-10-10T16:19:28.375731",
+  "macro_changes": {
+    "RANGEFINDER_MAX_INSTANCES": 8,
+    "MODE_GUIDED_ENABLED": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP_CRC": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "METADATA_MAX_i": 4,
+    "HAL_HNF_MAX_FILTERS": 32
+  }
+}

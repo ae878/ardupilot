@@ -1,0 +1,9 @@
+{
+  "test_id": 293,
+  "timestamp": "2025-10-10T10:20:01.632534",
+  "macro_changes": {
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "HAL_HEATER_GPIO_PIN": 1,
+    "HAVE_ENUM_GIMBAL_MANAGER_CAP_FLAGS": 1
+  }
+}

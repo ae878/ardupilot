@@ -1,0 +1,10 @@
+{
+  "test_id": 129,
+  "timestamp": "2025-10-13T21:54:31.658298",
+  "macro_changes": {
+    "HAL_USE_FATFS": 0,
+    "FSYNC_CONFIG_EXT_SYNC_GY": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "BENCH_DEFINE_MAP_PERMUTATION": 0
+  }
+}

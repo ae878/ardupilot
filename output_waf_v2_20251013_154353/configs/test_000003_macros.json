@@ -1,0 +1,14 @@
+{
+  "test_id": 3,
+  "timestamp": "2025-10-13T15:53:52.079959",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 1,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "MAVLINK_MSG_ID_WIFI_CONFIG_AP": 0,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 1,
+    "HAL_WITH_DRONECAN": 0,
+    "MAX_PWMS": 16,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 1
+  }
+}

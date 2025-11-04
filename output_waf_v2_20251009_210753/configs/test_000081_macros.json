@@ -1,0 +1,12 @@
+{
+  "test_id": 81,
+  "timestamp": "2025-10-10T00:48:23.587278",
+  "macro_changes": {
+    "HAL_HAVE_HARDWARE_DOUBLE": 0,
+    "AP_AIRSPEED_ENABLED": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "AP_EXTERNAL_CONTROL_ENABLED": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  }
+}

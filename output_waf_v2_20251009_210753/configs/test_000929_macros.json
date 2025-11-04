@@ -1,0 +1,9 @@
+{
+  "test_id": 929,
+  "timestamp": "2025-10-11T16:14:51.591988",
+  "macro_changes": {
+    "CONFIG_NEWLIB_NANO_FORMAT": 0,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "test_id": 33,
+  "timestamp": "2025-10-13T17:19:14.462633",
+  "macro_changes": {
+    "AP_TEMPCALIBRATION_ENABLED": 1,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "RC_INPUT_MAX_PULSEWIDTH": 4,
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "AP_FOLLOW_ENABLED": 0,
+    "AP_TUNING_ENABLED": 0,
+    "INS_MAX_GYRO_WINDOW_SAMPLES": 8
+  }
+}

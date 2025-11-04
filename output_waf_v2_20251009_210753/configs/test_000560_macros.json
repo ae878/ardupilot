@@ -1,0 +1,14 @@
+{
+  "test_id": 560,
+  "timestamp": "2025-10-10T22:35:47.550197",
+  "macro_changes": {
+    "HAL_CANFD_SUPPORTED": 1,
+    "MAVLINK_ENABLED_ALL": 0,
+    "AP_MISSION_ENABLED": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "HAL_BARO_NONE": 1,
+    "HAL_RALLY_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

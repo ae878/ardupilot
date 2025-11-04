@@ -1,0 +1,14 @@
+{
+  "test_id": 85,
+  "timestamp": "2025-10-10T00:56:07.529968",
+  "macro_changes": {
+    "FS_THR_DISABLED": 0,
+    "METADATA_MAX_i": 32,
+    "HAL_INS_NONE": 1,
+    "MAVLINK_ENABLED_DEVELOPMENT": 0,
+    "MODE_DRIFT_ENABLED": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "HAL_MEMORY_TOTAL_KB": 1
+  }
+}

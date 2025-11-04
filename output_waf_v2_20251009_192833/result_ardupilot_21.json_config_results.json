@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 22,
+    "timestamp": "2025-10-09T20:24:01.695732",
+    "macro_changes": {
+      "MODE_ZIGZAG_ENABLED": 0,
+      "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+      "MODE_AUTOROTATE_ENABLED": 1,
+      "AP_RCPROTOCOL_EMLID_RCIO_ENABLED": 1,
+      "MAVLINK_ENABLED_CUBEPILOT": 0,
+      "HAL_GPIO_OUTPUT": 1,
+      "HAL_FLASH_PROTECTION": 1,
+      "HAL_HEATER_GPIO_PIN": 0
+    },
+    "build_success": false,
+    "build_time": 99.72471880912781,
+    "build_result": false,
+    "error": "../../libraries/AP_RCProtocol/AP_RCProtocol_Emlid_RCIO.cpp:57:9: error: 'asprintf' was not declared in this scope; did you mean 'rintf'?"
+  }
+]

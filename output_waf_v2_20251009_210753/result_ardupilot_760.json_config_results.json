@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 761,
+    "timestamp": "2025-10-11T08:05:03.520038",
+    "macro_changes": {
+      "HAL_RCOUT_RGBLED_BLUE": 1,
+      "MODE_CIRCLE_ENABLED": 0,
+      "AP_RANGEFINDER_MAVLINK_TIMEOUT_MS": 1,
+      "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+      "WEATHERVANE_ENABLED": 0,
+      "AUTOTUNE_ENABLED": 0,
+      "HAL_WITH_UAVCAN": 1,
+      "MAVLINK_MSG_ID_AP_ADC": 0,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+      "FS_THR_ENABLED_ALWAYS_RTL": 1
+    },
+    "build_success": false,
+    "build_time": 170.5335350036621,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+  }
+]

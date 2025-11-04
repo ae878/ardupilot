@@ -1,0 +1,12 @@
+{
+  "test_id": 969,
+  "timestamp": "2025-10-11T18:15:30.801956",
+  "macro_changes": {
+    "AP_FEATURE_SBUS_OUT": 0,
+    "AP_GRIPPER_ENABLED": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "MODE_LOITER_ENABLED": 1,
+    "HAL_WITH_MCU_MONITORING": 0,
+    "AP_CAMERA_ENABLED": 1
+  }
+}

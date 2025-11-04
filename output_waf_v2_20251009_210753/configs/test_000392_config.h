@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #392 */
+
+/* ConfigFuzz: MAVLINK_ENABLED_UAVIONIX */
+#ifdef MAVLINK_ENABLED_UAVIONIX
+#undef MAVLINK_ENABLED_UAVIONIX
+#endif
+#define MAVLINK_ENABLED_UAVIONIX 0
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 1
+
+/* ConfigFuzz: HAL_HAVE_IMU_HEATER */
+#ifdef HAL_HAVE_IMU_HEATER
+#undef HAL_HAVE_IMU_HEATER
+#endif
+#define HAL_HAVE_IMU_HEATER 0
+
+/* ConfigFuzz: HAL_ENABLE_THREAD_STATISTICS */
+#ifdef HAL_ENABLE_THREAD_STATISTICS
+#undef HAL_ENABLE_THREAD_STATISTICS
+#endif
+#define HAL_ENABLE_THREAD_STATISTICS 1
+
+/* ConfigFuzz: HAL_BUTTON_ENABLED */
+#ifdef HAL_BUTTON_ENABLED
+#undef HAL_BUTTON_ENABLED
+#endif
+#define HAL_BUTTON_ENABLED 0
+
+/* ConfigFuzz: HAL_EXTERNAL_AHRS_DEFAULT */
+#ifdef HAL_EXTERNAL_AHRS_DEFAULT
+#undef HAL_EXTERNAL_AHRS_DEFAULT
+#endif
+#define HAL_EXTERNAL_AHRS_DEFAULT 1
+
+/* ConfigFuzz: HAL_GENERATOR_ENABLED */
+#ifdef HAL_GENERATOR_ENABLED
+#undef HAL_GENERATOR_ENABLED
+#endif
+#define HAL_GENERATOR_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

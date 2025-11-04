@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #48 */
+
+/* ConfigFuzz: HAL_SUPPORT_RCOUT_SERIAL */
+#ifdef HAL_SUPPORT_RCOUT_SERIAL
+#undef HAL_SUPPORT_RCOUT_SERIAL
+#endif
+#define HAL_SUPPORT_RCOUT_SERIAL 1
+
+/* ConfigFuzz: HAL_DSHOT_ENABLED */
+#ifdef HAL_DSHOT_ENABLED
+#undef HAL_DSHOT_ENABLED
+#endif
+#define HAL_DSHOT_ENABLED 0
+
+/* ConfigFuzz: INS_MAX_GYRO_WINDOW_SAMPLES */
+#ifdef INS_MAX_GYRO_WINDOW_SAMPLES
+#undef INS_MAX_GYRO_WINDOW_SAMPLES
+#endif
+#define INS_MAX_GYRO_WINDOW_SAMPLES 32
+
+/* ConfigFuzz: HAL_USE_HW_RNG */
+#ifdef HAL_USE_HW_RNG
+#undef HAL_USE_HW_RNG
+#endif
+#define HAL_USE_HW_RNG 0
+
+/* ConfigFuzz: FS_THR_ENABLED_AUTO_RTL_OR_RTL */
+#ifdef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#undef FS_THR_ENABLED_AUTO_RTL_OR_RTL
+#endif
+#define FS_THR_ENABLED_AUTO_RTL_OR_RTL 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_GEOMETRY */
+#ifdef BENCH_DEFINE_MAP_GEOMETRY
+#undef BENCH_DEFINE_MAP_GEOMETRY
+#endif
+#define BENCH_DEFINE_MAP_GEOMETRY 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_PERMUTATION */
+#ifdef BENCH_DEFINE_MAP_PERMUTATION
+#undef BENCH_DEFINE_MAP_PERMUTATION
+#endif
+#define BENCH_DEFINE_MAP_PERMUTATION 1
+
+/* ConfigFuzz: HAL_HEATER_GPIO_ON */
+#ifdef HAL_HEATER_GPIO_ON
+#undef HAL_HEATER_GPIO_ON
+#endif
+#define HAL_HEATER_GPIO_ON 0
+
+/* ConfigFuzz: AP_SCHEDULER_OVERTIME_MARGIN_US */
+#ifdef AP_SCHEDULER_OVERTIME_MARGIN_US
+#undef AP_SCHEDULER_OVERTIME_MARGIN_US
+#endif
+#define AP_SCHEDULER_OVERTIME_MARGIN_US 0
+
+#endif /* _AP_CONFIG_H_ */

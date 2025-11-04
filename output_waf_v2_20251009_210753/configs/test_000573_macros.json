@@ -1,0 +1,10 @@
+{
+  "test_id": 573,
+  "timestamp": "2025-10-10T23:07:21.181756",
+  "macro_changes": {
+    "MAVLINK_ENABLED_UALBERTA": 1,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "AP_HAL_UARTDRIVER_ENABLED": 1
+  }
+}

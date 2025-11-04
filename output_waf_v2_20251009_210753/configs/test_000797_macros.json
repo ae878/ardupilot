@@ -1,0 +1,15 @@
+{
+  "test_id": 797,
+  "timestamp": "2025-10-11T09:56:14.981233",
+  "macro_changes": {
+    "HAL_HAVE_DUAL_USB_CDC": 1,
+    "BENCH_DEFINE_MAP_COUNT": 1,
+    "AC_PAYLOAD_PLACE_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 0,
+    "HAL_USB_VENDOR_ID": 0,
+    "HAL_FLASH_PROTECTION": 1,
+    "HAL_BATT_VOLT_PIN": 0,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0
+  }
+}

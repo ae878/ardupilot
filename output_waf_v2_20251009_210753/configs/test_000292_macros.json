@@ -1,0 +1,16 @@
+{
+  "test_id": 292,
+  "timestamp": "2025-10-10T10:18:51.860952",
+  "macro_changes": {
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "HAL_HNF_MAX_FILTERS": 2,
+    "MAVLINK_ENABLED_CUBEPILOT": 1,
+    "HAL_PWM_COUNT": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "HAL_HAVE_SAFETY_SWITCH": 1,
+    "HAL_WITH_IO_MCU": 0,
+    "HAL_IMUHEAT_P_DEFAULT": 1,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 0
+  }
+}

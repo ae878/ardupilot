@@ -1,0 +1,9 @@
+{
+  "test_id": 699,
+  "timestamp": "2025-10-11T05:12:46.592599",
+  "macro_changes": {
+    "AP_HAL_SHARED_DMA_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

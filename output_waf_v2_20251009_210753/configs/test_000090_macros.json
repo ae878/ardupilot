@@ -1,0 +1,12 @@
+{
+  "test_id": 90,
+  "timestamp": "2025-10-10T01:08:39.913125",
+  "macro_changes": {
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 16,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "HAL_HAVE_IMU_HEATER": 0,
+    "HAL_ENABLE_THREAD_STATISTICS": 0,
+    "HAL_FLASH_PROTECTION": 0,
+    "MAVLINK_ENABLED_ICAROUS": 0
+  }
+}

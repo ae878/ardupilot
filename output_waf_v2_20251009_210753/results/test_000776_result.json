@@ -1,0 +1,13 @@
+{
+  "test_id": 776,
+  "timestamp": "2025-10-11T08:52:48.028122",
+  "macro_changes": {
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0,
+    "MODE_RTL_ENABLED": 0,
+    "HAL_WITH_UAVCAN": 0
+  },
+  "build_success": false,
+  "build_time": 170.68329977989197,
+  "build_result": false,
+  "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+}

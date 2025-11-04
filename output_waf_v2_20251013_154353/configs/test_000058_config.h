@@ -1,0 +1,77 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #58 */
+
+/* ConfigFuzz: AP_OPTICALFLOW_ENABLED */
+#ifdef AP_OPTICALFLOW_ENABLED
+#undef AP_OPTICALFLOW_ENABLED
+#endif
+#define AP_OPTICALFLOW_ENABLED 0
+
+/* ConfigFuzz: INS_MAX_GYRO_WINDOW_SAMPLES */
+#ifdef INS_MAX_GYRO_WINDOW_SAMPLES
+#undef INS_MAX_GYRO_WINDOW_SAMPLES
+#endif
+#define INS_MAX_GYRO_WINDOW_SAMPLES 4
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_IMPLICIT */
+#ifdef BENCH_DEFINE_MAP_IMPLICIT
+#undef BENCH_DEFINE_MAP_IMPLICIT
+#endif
+#define BENCH_DEFINE_MAP_IMPLICIT 1
+
+/* ConfigFuzz: AP_DEVO_TELEM_ENABLED */
+#ifdef AP_DEVO_TELEM_ENABLED
+#undef AP_DEVO_TELEM_ENABLED
+#endif
+#define AP_DEVO_TELEM_ENABLED 1
+
+/* ConfigFuzz: MODE_GUIDED_ENABLED */
+#ifdef MODE_GUIDED_ENABLED
+#undef MODE_GUIDED_ENABLED
+#endif
+#define MODE_GUIDED_ENABLED 0
+
+/* ConfigFuzz: HAL_HEATER_GPIO_PIN */
+#ifdef HAL_HEATER_GPIO_PIN
+#undef HAL_HEATER_GPIO_PIN
+#endif
+#define HAL_HEATER_GPIO_PIN 0
+
+/* ConfigFuzz: AP_GRIPPER_ENABLED */
+#ifdef AP_GRIPPER_ENABLED
+#undef AP_GRIPPER_ENABLED
+#endif
+#define AP_GRIPPER_ENABLED 1
+
+/* ConfigFuzz: HAL_WITH_IO_MCU */
+#ifdef HAL_WITH_IO_MCU
+#undef HAL_WITH_IO_MCU
+#endif
+#define HAL_WITH_IO_MCU 1
+
+/* ConfigFuzz: AP_MISSION_ENABLED */
+#ifdef AP_MISSION_ENABLED
+#undef AP_MISSION_ENABLED
+#endif
+#define AP_MISSION_ENABLED 1
+
+#endif /* _AP_CONFIG_H_ */

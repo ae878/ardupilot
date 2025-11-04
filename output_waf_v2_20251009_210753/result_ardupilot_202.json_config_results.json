@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 203,
+    "timestamp": "2025-10-10T06:05:40.053102",
+    "macro_changes": {
+      "METADATA_MAX_i": 1,
+      "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+      "FS_THR_DISABLED": 1,
+      "AP_CRASHDUMP_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 186.8256652355194,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

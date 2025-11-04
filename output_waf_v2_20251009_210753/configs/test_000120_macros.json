@@ -1,0 +1,9 @@
+{
+  "test_id": 120,
+  "timestamp": "2025-10-10T02:26:12.040870",
+  "macro_changes": {
+    "TOY_MODE_ENABLED": 1,
+    "MODE_LOITER_ENABLED": 1,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

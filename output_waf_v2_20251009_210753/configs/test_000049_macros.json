@@ -1,0 +1,11 @@
+{
+  "test_id": 49,
+  "timestamp": "2025-10-09T23:19:10.815422",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 1,
+    "HAL_BATT_CURR_PIN": 1,
+    "AP_NOTIFY_RCOUTPUTRGBLEDINVERTED_LED_ENABLED": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "KDECAN_MAX_NUM_ESCS": 8
+  }
+}

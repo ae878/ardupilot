@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 115,
+    "timestamp": "2025-10-13T21:08:03.711979",
+    "macro_changes": {
+      "HAL_ENABLE_THREAD_STATISTICS": 1,
+      "FSYNC_CONFIG_EXT_SYNC_AZ": 0,
+      "AP_PERIPH_GPS_ENABLED": 0,
+      "CONFIG_LWIP_STATS": 1,
+      "FS_THR_ENABLED_BRAKE_OR_LAND": 1,
+      "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+      "HAL_INS_VRBRAIN": 1,
+      "INS_MAX_GYRO_WINDOW_SAMPLES": 16,
+      "AP_BEACON_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 196.9560089111328,
+    "build_result": false,
+    "error": "collect2: error: ld returned 1 exit status"
+  }
+]

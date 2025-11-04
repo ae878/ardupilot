@@ -1,0 +1,13 @@
+{
+  "test_id": 442,
+  "timestamp": "2025-10-10T16:58:52.494548",
+  "macro_changes": {
+    "AP_COPTER_ADVANCED_FAILSAFE_ENABLED": 0,
+    "METADATA_MAX_i": 16,
+    "AP_HAL_UARTDRIVER_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "MAX_PWMS": 8,
+    "HAL_INS_NONE": 1,
+    "RC_OUTPUT_MAX_PULSEWIDTH": 32
+  }
+}

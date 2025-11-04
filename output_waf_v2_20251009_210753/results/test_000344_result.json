@@ -1,0 +1,17 @@
+{
+  "test_id": 344,
+  "timestamp": "2025-10-10T12:28:07.080290",
+  "macro_changes": {
+    "AP_FEATURE_RTSCTS": 1,
+    "CONFIG_LWIP_STATS": 0,
+    "HAL_SPRAYER_ENABLED": 1,
+    "HAL_DSHOT_ENABLED": 0,
+    "MODE_ACRO_ENABLED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 0,
+    "HAL_USB_PRODUCT_ID": 1
+  },
+  "build_success": false,
+  "build_time": 127.92301893234253,
+  "build_result": false,
+  "error": "../../libraries/AP_HAL_ChibiOS/RCOutput.cpp:530:19: error: 'class AP_IOMCU' has no member named 'set_dshot_period'"
+}

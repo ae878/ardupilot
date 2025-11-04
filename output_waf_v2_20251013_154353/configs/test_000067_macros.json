@@ -1,0 +1,12 @@
+{
+  "test_id": 67,
+  "timestamp": "2025-10-13T18:51:26.911063",
+  "macro_changes": {
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "MAVLINK_MSG_ID_ADAP_TUNING_CRC": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "HAL_BUTTON_ENABLED": 1,
+    "FSYNC_CONFIG_EXT_SYNC_AX": 1
+  }
+}

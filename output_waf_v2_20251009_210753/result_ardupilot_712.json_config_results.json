@@ -1,0 +1,15 @@
+[
+  {
+    "test_id": 713,
+    "timestamp": "2025-10-11T05:54:23.298125",
+    "macro_changes": {
+      "MODE_AUTO_ENABLED": 0,
+      "MAVLINK_ENABLED_COMMON": 0,
+      "HAL_AHRS_EKF_TYPE_DEFAULT": 0
+    },
+    "build_success": false,
+    "build_time": 189.84562349319458,
+    "build_result": false,
+    "error": "../../ArduCopter/GCS_MAVLink_Copter.cpp:617:16: error: 'class Copter' has no member named 'mode_auto'; did you mean 'mode_acro'?"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "test_id": 711,
+  "timestamp": "2025-10-11T05:49:46.057746",
+  "macro_changes": {
+    "SUMD_MAX_CHANNELS": 16,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+    "HAL_WITH_IO_MCU_BIDIR_DSHOT": 1,
+    "MAVLINK_ENABLED_UAVIONIX": 1
+  }
+}

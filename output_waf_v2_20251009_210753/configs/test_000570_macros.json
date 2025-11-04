@@ -1,0 +1,10 @@
+{
+  "test_id": 570,
+  "timestamp": "2025-10-10T22:58:41.011718",
+  "macro_changes": {
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 1,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 1,
+    "AP_FENCE_ENABLED": 1
+  }
+}

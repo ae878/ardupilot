@@ -1,0 +1,10 @@
+{
+  "test_id": 548,
+  "timestamp": "2025-10-10T21:59:05.846241",
+  "macro_changes": {
+    "MODE_DRIFT_ENABLED": 0,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 0,
+    "AP_AIS_ENABLED": 1,
+    "HAL_NUM_CAN_IFACES": 1
+  }
+}

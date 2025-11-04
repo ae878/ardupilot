@@ -1,0 +1,9 @@
+{
+  "test_id": 400,
+  "timestamp": "2025-10-10T15:03:16.054996",
+  "macro_changes": {
+    "AP_SERVORELAYEVENTS_ENABLED": 0,
+    "MAVLINK_ENABLED_ARDUPILOTMEGA": 0,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1
+  }
+}

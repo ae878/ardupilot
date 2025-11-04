@@ -1,0 +1,9 @@
+{
+  "test_id": 870,
+  "timestamp": "2025-10-11T13:28:49.814322",
+  "macro_changes": {
+    "FLOW_CONTROL_ENABLED": 0,
+    "HAL_SPRAYER_ENABLED": 1,
+    "AP_CAMERA_ENABLED": 1
+  }
+}

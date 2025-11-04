@@ -1,0 +1,20 @@
+[
+  {
+    "test_id": 8,
+    "timestamp": "2025-10-09T21:30:20.874466",
+    "macro_changes": {
+      "HAL_WITH_UAVCAN": 0,
+      "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 0,
+      "HAL_RCOUT_RGBLED_GREEN": 0,
+      "HAL_PWM_COUNT": 1,
+      "HAL_BUTTON_ENABLED": 0,
+      "MAVLINK_ENABLED_MINIMAL": 0,
+      "MODE_RTL_ENABLED": 0,
+      "HAL_USE_HW_RNG": 0
+    },
+    "build_success": false,
+    "build_time": 162.0040421485901,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:550:4: error: #error ModeAuto requires ModeRTL which is disabled"
+  }
+]

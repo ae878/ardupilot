@@ -1,0 +1,13 @@
+{
+  "test_id": 258,
+  "timestamp": "2025-10-10T08:37:48.929378",
+  "macro_changes": {
+    "FS_GCS_ENABLED_BRAKE_OR_LAND": 1,
+    "HAL_HAVE_IMU_HEATER": 1,
+    "HAL_UART_IOMCU_IDX": 0,
+    "AP_ADVANCEDFAILSAFE_ENABLED": 1,
+    "MAVLINK_MSG_ID_MOUNT_CONFIGURE_CRC": 1,
+    "HAL_USE_FATFS": 1,
+    "AP_FEATURE_RTSCTS": 1
+  }
+}

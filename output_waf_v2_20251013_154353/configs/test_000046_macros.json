@@ -1,0 +1,15 @@
+{
+  "test_id": 46,
+  "timestamp": "2025-10-13T17:54:48.116482",
+  "macro_changes": {
+    "HAL_GPIO_OUTPUT": 0,
+    "HAL_PARACHUTE_ENABLED": 0,
+    "AP_RSSI_ENABLED": 1,
+    "HAL_GPIO_ALT": 1,
+    "HAL_QUADPLANE_ENABLED": 1,
+    "HAL_USE_FATFS": 1,
+    "AP_DEVO_TELEM_ENABLED": 0,
+    "HAL_UART_IOMCU_IDX": 1,
+    "MODE_THROW_ENABLED": 1
+  }
+}

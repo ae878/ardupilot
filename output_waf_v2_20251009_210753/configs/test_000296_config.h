@@ -1,0 +1,83 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #296 */
+
+/* ConfigFuzz: HAL_MEMORY_TOTAL_KB */
+#ifdef HAL_MEMORY_TOTAL_KB
+#undef HAL_MEMORY_TOTAL_KB
+#endif
+#define HAL_MEMORY_TOTAL_KB 1
+
+/* ConfigFuzz: TOY_MODE_ENABLED */
+#ifdef TOY_MODE_ENABLED
+#undef TOY_MODE_ENABLED
+#endif
+#define TOY_MODE_ENABLED 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_COUNT */
+#ifdef BENCH_DEFINE_MAP_COUNT
+#undef BENCH_DEFINE_MAP_COUNT
+#endif
+#define BENCH_DEFINE_MAP_COUNT 1
+
+/* ConfigFuzz: AP_RSSI_ENABLED */
+#ifdef AP_RSSI_ENABLED
+#undef AP_RSSI_ENABLED
+#endif
+#define AP_RSSI_ENABLED 1
+
+/* ConfigFuzz: HAL_NUM_CAN_IFACES */
+#ifdef HAL_NUM_CAN_IFACES
+#undef HAL_NUM_CAN_IFACES
+#endif
+#define HAL_NUM_CAN_IFACES 1
+
+/* ConfigFuzz: AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN */
+#ifdef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#undef AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN
+#endif
+#define AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN 0
+
+/* ConfigFuzz: FS_GCS_ENABLED_BRAKE_OR_LAND */
+#ifdef FS_GCS_ENABLED_BRAKE_OR_LAND
+#undef FS_GCS_ENABLED_BRAKE_OR_LAND
+#endif
+#define FS_GCS_ENABLED_BRAKE_OR_LAND 1
+
+/* ConfigFuzz: MAVLINK_MSG_ID_PARAM_MAP_RC_CRC */
+#ifdef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#undef MAVLINK_MSG_ID_PARAM_MAP_RC_CRC
+#endif
+#define MAVLINK_MSG_ID_PARAM_MAP_RC_CRC 0
+
+/* ConfigFuzz: HAL_LOGGING_ENABLED */
+#ifdef HAL_LOGGING_ENABLED
+#undef HAL_LOGGING_ENABLED
+#endif
+#define HAL_LOGGING_ENABLED 0
+
+/* ConfigFuzz: HAL_EXTERNAL_AHRS_DEFAULT */
+#ifdef HAL_EXTERNAL_AHRS_DEFAULT
+#undef HAL_EXTERNAL_AHRS_DEFAULT
+#endif
+#define HAL_EXTERNAL_AHRS_DEFAULT 0
+
+#endif /* _AP_CONFIG_H_ */

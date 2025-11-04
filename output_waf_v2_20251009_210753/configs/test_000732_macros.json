@@ -1,0 +1,10 @@
+{
+  "test_id": 732,
+  "timestamp": "2025-10-11T06:44:20.858251",
+  "macro_changes": {
+    "AP_BEACON_ENABLED": 1,
+    "HAL_LOGGING_ENABLED": 1,
+    "METADATA_MAX_i": 2,
+    "AP_FEATURE_SBUS_OUT": 0
+  }
+}

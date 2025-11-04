@@ -1,0 +1,22 @@
+[
+  {
+    "test_id": 75,
+    "timestamp": "2025-10-10T00:30:15.576187",
+    "macro_changes": {
+      "WEATHERVANE_ENABLED": 1,
+      "MAVLINK_ENABLED_ALL": 0,
+      "HAL_SPRAYER_ENABLED": 1,
+      "MAVLINK_ENABLED_UAVIONIX": 0,
+      "HAL_GPIO_INPUT": 1,
+      "AP_SRV_CHANNELS_ENABLED": 1,
+      "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 1,
+      "USER_PARAMS_ENABLED": 1,
+      "LEDDARONE_DETECTIONS_MAX": 32,
+      "MODE_FLIP_ENABLED": 1
+    },
+    "build_success": false,
+    "build_time": 162.90789937973022,
+    "build_result": false,
+    "error": "../../ArduCopter/Parameters.h:592:5: error: 'UserParameters' does not name a type; did you mean 'Parameters'?"
+  }
+]

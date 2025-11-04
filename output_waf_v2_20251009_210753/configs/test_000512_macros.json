@@ -1,0 +1,10 @@
+{
+  "test_id": 512,
+  "timestamp": "2025-10-10T20:16:38.344786",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_ON": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 1,
+    "MODE_CIRCLE_ENABLED": 1,
+    "BENCH_DEFINE_MAP_OVERRIDE": 0
+  }
+}

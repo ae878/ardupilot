@@ -1,0 +1,12 @@
+{
+  "test_id": 857,
+  "timestamp": "2025-10-11T12:54:32.554077",
+  "macro_changes": {
+    "HAL_GENERATOR_ENABLED": 0,
+    "MAVLINK_MSG_ID_AP_ADC": 1,
+    "AP_MAVLINK_MSG_RC_CHANNELS_RAW_ENABLED": 0,
+    "AP_NOTIFY_DISCO_LED_ENABLED": 0,
+    "HAL_HAVE_DUAL_USB_CDC": 0,
+    "AP_FEATURE_RTSCTS": 0
+  }
+}

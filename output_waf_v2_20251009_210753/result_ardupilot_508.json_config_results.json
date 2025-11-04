@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 509,
+    "timestamp": "2025-10-10T20:06:50.181188",
+    "macro_changes": {
+      "HAL_HEATER_GPIO_PIN": 1,
+      "MAVLINK_ENABLED_ASLUAV": 0,
+      "HAL_USE_SDMMC": 0,
+      "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 1,
+      "MAX_PWMS": 8,
+      "LEDDARONE_DETECTIONS_MAX": 16,
+      "CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY": 1,
+      "MODE_CIRCLE_ENABLED": 0,
+      "MODE_BRAKE_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 170.15456771850586,
+    "build_result": false,
+    "error": "../../ArduCopter/config.h:546:4: error: #error ModeAuto requires ModeCircle which is disabled"
+  }
+]

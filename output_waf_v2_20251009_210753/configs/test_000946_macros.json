@@ -1,0 +1,13 @@
+{
+  "test_id": 946,
+  "timestamp": "2025-10-11T17:04:42.640176",
+  "macro_changes": {
+    "AP_GRIPPER_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 16,
+    "AP_FEATURE_SBUS_OUT": 1,
+    "HAL_BUTTON_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "MODE_SPORT_ENABLED": 1
+  }
+}

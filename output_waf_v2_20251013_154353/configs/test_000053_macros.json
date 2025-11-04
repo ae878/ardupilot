@@ -1,0 +1,9 @@
+{
+  "test_id": 53,
+  "timestamp": "2025-10-13T18:12:58.354960",
+  "macro_changes": {
+    "FS_THR_ENABLED_ALWAYS_SMARTRTL_OR_LAND": 1,
+    "AP_HAL_SHARED_DMA_ENABLED": 1,
+    "AP_RC_CHANNEL_ENABLED": 1
+  }
+}

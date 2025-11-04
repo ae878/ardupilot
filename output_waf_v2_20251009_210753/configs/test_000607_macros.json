@@ -1,0 +1,10 @@
+{
+  "test_id": 607,
+  "timestamp": "2025-10-11T00:41:14.048498",
+  "macro_changes": {
+    "MODE_THROW_ENABLED": 1,
+    "RPMMAX": 2,
+    "AP_NOTIFY_GPIO_LED_RGB_BLUE_PIN": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 1
+  }
+}

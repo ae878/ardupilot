@@ -1,0 +1,21 @@
+[
+  {
+    "test_id": 323,
+    "timestamp": "2025-10-10T11:31:06.732699",
+    "macro_changes": {
+      "MAVLINK_MSG_ID_AP_ADC": 1,
+      "MAVLINK_ENABLED_ASLUAV": 0,
+      "AP_NOTIFY_DISCO_LED_ENABLED": 1,
+      "FLOW_CONTROL_ENABLED": 0,
+      "HAL_SOARING_ENABLED": 1,
+      "MAVLINK_ENABLED_STANDARD": 1,
+      "MODE_FLIP_ENABLED": 1,
+      "AP_GRIPPER_ENABLED": 0,
+      "MAVLINK_ENABLED_ALL": 1
+    },
+    "build_success": false,
+    "build_time": 81.76157021522522,
+    "build_result": false,
+    "error": "../../libraries/AP_HAL_Linux/Util.h:63:39: error: 'cpu_set_t' has not been declared"
+  }
+]

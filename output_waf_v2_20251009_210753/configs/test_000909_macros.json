@@ -1,0 +1,12 @@
+{
+  "test_id": 909,
+  "timestamp": "2025-10-11T15:18:17.422943",
+  "macro_changes": {
+    "AP_RSSI_ENABLED": 0,
+    "HAL_WITH_DRONECAN": 0,
+    "HAL_SOARING_ENABLED": 1,
+    "HAL_GPIO_INPUT": 1,
+    "HAL_WITH_SPI_RAMTRON": 0,
+    "HAL_MEMORY_TOTAL_KB": 0
+  }
+}

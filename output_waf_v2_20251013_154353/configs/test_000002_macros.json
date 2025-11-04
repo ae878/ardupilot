@@ -1,0 +1,11 @@
+{
+  "test_id": 2,
+  "timestamp": "2025-10-13T15:50:33.262755",
+  "macro_changes": {
+    "HAL_MEMORY_TOTAL_KB": 0,
+    "MODE_DRIFT_ENABLED": 1,
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "HAL_BUTTON_ENABLED": 0,
+    "BACKEND_SAMPLE_RATE_MAX": 8
+  }
+}

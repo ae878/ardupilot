@@ -1,0 +1,10 @@
+{
+  "test_id": 162,
+  "timestamp": "2025-10-10T04:11:49.115589",
+  "macro_changes": {
+    "HAL_CAN_DRIVER_DEFAULT": 1,
+    "HAL_GPIO_INPUT": 1,
+    "USER_PARAMS_ENABLED": 1,
+    "AP_CAMERA_ENABLED": 1
+  }
+}

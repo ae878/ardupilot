@@ -1,0 +1,15 @@
+{
+  "test_id": 384,
+  "timestamp": "2025-10-10T14:18:05.433307",
+  "macro_changes": {
+    "AP_MISSION_ENABLED": 0,
+    "AP_COMPASS_OFFSETS_MAX_DEFAULT": 2,
+    "MAX_PWMS": 8,
+    "HAL_HNF_MAX_FILTERS": 4,
+    "HAL_WITH_MCU_MONITORING": 0
+  },
+  "build_success": false,
+  "build_time": 160.74300527572632,
+  "build_result": false,
+  "error": "../../ArduCopter/mode.h:600:5: error: 'AP_Mission_ChangeDetector' does not name a type"
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": 854,
+  "timestamp": "2025-10-11T12:46:09.766625",
+  "macro_changes": {
+    "AP_SIGNED_FIRMWARE": 0,
+    "HAL_INS_VRBRAIN": 0,
+    "HAL_BARO_EXTERNAL_BUS_DEFAULT": 0,
+    "CONFIG_NEWLIB_NANO_FORMAT": 1,
+    "HAL_LOGGING_ENABLED": 1,
+    "AP_RELAY_ENABLED": 0
+  }
+}

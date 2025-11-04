@@ -22,6 +22,7 @@ from src.config.conditional_config import Condition
 from src.fuzzer import Fuzzer
 from src.applier.applier import Applier
 from utils.utils import calculate_previous_runtime
+from src.macro_registry import set_known_macros
 
 base_configuration = {
     "ardupilot": {
@@ -151,6 +152,11 @@ def main():
     macros_json_path = target_config["macros_json_path"]
     build_commands_json_path = target_config["build_commands_json_path"]
     result_file_name = target_config["result_file_name"]
+
+    with open(base_configuration[target]["macros_json_path"], "r", encoding="utf-8") as f:
+        macros_dict = json.load(f)
+
+    set_known_macros(macros_dict.keys())
 
     target_thread_functions = []
     with open(thread_functions_file_path, "r") as f:

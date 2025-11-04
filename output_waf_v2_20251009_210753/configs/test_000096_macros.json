@@ -1,0 +1,16 @@
+{
+  "test_id": 96,
+  "timestamp": "2025-10-10T01:24:14.943639",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 1,
+    "MODE_FLIP_ENABLED": 0,
+    "AP_FEATURE_SBUS_OUT": 0,
+    "MAVLINK_ENABLED_UALBERTA": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "AP_FENCE_ENABLED": 1,
+    "MODE_CIRCLE_ENABLED": 1,
+    "HAL_USE_WSPI_DEFAULT_CFG": 0,
+    "HAL_WITH_RAMTRON": 1,
+    "ESC_CHANNEL_MAP_RUNNING_DIRECTION": 1
+  }
+}

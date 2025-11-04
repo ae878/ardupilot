@@ -1,0 +1,10 @@
+{
+  "test_id": 855,
+  "timestamp": "2025-10-11T12:48:25.702304",
+  "macro_changes": {
+    "HAL_INS_NONE": 1,
+    "MAVLINK_ENABLED_CSAIRLINK": 1,
+    "HAL_WITH_MCU_MONITORING": 1,
+    "HAL_BATT_CURR_PIN": 1
+  }
+}

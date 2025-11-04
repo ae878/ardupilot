@@ -1,0 +1,10 @@
+{
+  "test_id": 746,
+  "timestamp": "2025-10-11T07:22:25.898980",
+  "macro_changes": {
+    "HAL_PWM_COUNT": 0,
+    "AP_SOCKET_NATIVE_ENABLED": 0,
+    "BENCH_DEFINE_MAP_IMPLICIT": 1,
+    "CONFIG_SPI_FLASH_ENABLE_COUNTERS": 0
+  }
+}

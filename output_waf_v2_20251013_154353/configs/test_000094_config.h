@@ -1,0 +1,53 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #94 */
+
+/* ConfigFuzz: CONFIG_LWIP_PPP_SUPPORT */
+#ifdef CONFIG_LWIP_PPP_SUPPORT
+#undef CONFIG_LWIP_PPP_SUPPORT
+#endif
+#define CONFIG_LWIP_PPP_SUPPORT 0
+
+/* ConfigFuzz: MPUREG_CONFIG_EXT_SYNC_SHIFT */
+#ifdef MPUREG_CONFIG_EXT_SYNC_SHIFT
+#undef MPUREG_CONFIG_EXT_SYNC_SHIFT
+#endif
+#define MPUREG_CONFIG_EXT_SYNC_SHIFT 0
+
+/* ConfigFuzz: CONFIG_SPI_FLASH_ENABLE_COUNTERS */
+#ifdef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#undef CONFIG_SPI_FLASH_ENABLE_COUNTERS
+#endif
+#define CONFIG_SPI_FLASH_ENABLE_COUNTERS 1
+
+/* ConfigFuzz: HAL_INS_CONVERGANCE_MS */
+#ifdef HAL_INS_CONVERGANCE_MS
+#undef HAL_INS_CONVERGANCE_MS
+#endif
+#define HAL_INS_CONVERGANCE_MS 1
+
+/* ConfigFuzz: HAL_USE_WSPI_DEFAULT_CFG */
+#ifdef HAL_USE_WSPI_DEFAULT_CFG
+#undef HAL_USE_WSPI_DEFAULT_CFG
+#endif
+#define HAL_USE_WSPI_DEFAULT_CFG 0
+
+#endif /* _AP_CONFIG_H_ */

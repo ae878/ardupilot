@@ -1,0 +1,65 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #44 */
+
+/* ConfigFuzz: RC_INPUT_MAX_PULSEWIDTH */
+#ifdef RC_INPUT_MAX_PULSEWIDTH
+#undef RC_INPUT_MAX_PULSEWIDTH
+#endif
+#define RC_INPUT_MAX_PULSEWIDTH 32
+
+/* ConfigFuzz: HAL_PWM_COUNT */
+#ifdef HAL_PWM_COUNT
+#undef HAL_PWM_COUNT
+#endif
+#define HAL_PWM_COUNT 0
+
+/* ConfigFuzz: AP_COMPASS_OFFSETS_MAX_DEFAULT */
+#ifdef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#undef AP_COMPASS_OFFSETS_MAX_DEFAULT
+#endif
+#define AP_COMPASS_OFFSETS_MAX_DEFAULT 32
+
+/* ConfigFuzz: MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC */
+#ifdef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#undef MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC
+#endif
+#define MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC 0
+
+/* ConfigFuzz: AP_NOTIFY_DISCO_LED_ENABLED */
+#ifdef AP_NOTIFY_DISCO_LED_ENABLED
+#undef AP_NOTIFY_DISCO_LED_ENABLED
+#endif
+#define AP_NOTIFY_DISCO_LED_ENABLED 1
+
+/* ConfigFuzz: MODE_CIRCLE_ENABLED */
+#ifdef MODE_CIRCLE_ENABLED
+#undef MODE_CIRCLE_ENABLED
+#endif
+#define MODE_CIRCLE_ENABLED 1
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_EXPLICIT */
+#ifdef BENCH_DEFINE_MAP_EXPLICIT
+#undef BENCH_DEFINE_MAP_EXPLICIT
+#endif
+#define BENCH_DEFINE_MAP_EXPLICIT 0
+
+#endif /* _AP_CONFIG_H_ */

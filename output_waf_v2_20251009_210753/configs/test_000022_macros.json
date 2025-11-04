@@ -1,0 +1,15 @@
+{
+  "test_id": 22,
+  "timestamp": "2025-10-09T22:07:00.970444",
+  "macro_changes": {
+    "FFT_MAX_MISSED_UPDATES": 16,
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 0,
+    "HAL_SOLO_GIMBAL_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 1,
+    "BENCH_DEFINE_MAP_EXPLICIT": 1,
+    "METADATA_MAX_i": 2,
+    "HAL_WITH_DRONECAN": 0,
+    "AP_AIRSPEED_ENABLED": 1,
+    "MAVLINK_MSG_ID_PARAM_MAP_RC_CRC": 1
+  }
+}

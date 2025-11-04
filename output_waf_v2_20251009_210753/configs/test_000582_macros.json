@@ -1,0 +1,12 @@
+{
+  "test_id": 582,
+  "timestamp": "2025-10-10T23:30:50.266143",
+  "macro_changes": {
+    "AP_SOCKET_NATIVE_ENABLED": 1,
+    "FS_THR_ENABLED_ALWAYS_LAND": 1,
+    "HAL_SPRAYER_ENABLED": 1,
+    "CONFIG_LWIP_DHCP_RESTORE_LAST_IP": 0,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 2,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0
+  }
+}

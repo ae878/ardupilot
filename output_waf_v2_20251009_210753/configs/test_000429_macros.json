@@ -1,0 +1,12 @@
+{
+  "test_id": 429,
+  "timestamp": "2025-10-10T16:26:03.902693",
+  "macro_changes": {
+    "CONFIG_LWIP_STATS": 1,
+    "HAL_AHRS_EKF_TYPE_DEFAULT": 1,
+    "MAVLINK_MSG_ID_AP_ADC": 0,
+    "HAL_WITH_UAVCAN": 0,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "HAL_HEATER_GPIO_PIN": 1
+  }
+}

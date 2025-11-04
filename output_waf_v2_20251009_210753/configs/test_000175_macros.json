@@ -1,0 +1,13 @@
+{
+  "test_id": 175,
+  "timestamp": "2025-10-10T04:47:51.875337",
+  "macro_changes": {
+    "MAVLINK_ENABLED_COMMON": 0,
+    "BENCH_DEFINE_MAP_GEOMETRY": 0,
+    "AP_MODULE_SUPPORTED": 0,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE": 1,
+    "AP_STATS_ENABLED": 1,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "HAL_USE_HW_RNG": 0
+  }
+}

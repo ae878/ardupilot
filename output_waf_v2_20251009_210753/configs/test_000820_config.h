@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #820 */
+
+/* ConfigFuzz: HAL_SUPPORT_RCOUT_SERIAL */
+#ifdef HAL_SUPPORT_RCOUT_SERIAL
+#undef HAL_SUPPORT_RCOUT_SERIAL
+#endif
+#define HAL_SUPPORT_RCOUT_SERIAL 0
+
+/* ConfigFuzz: HAL_SERIAL_ESC_COMM_ENABLED */
+#ifdef HAL_SERIAL_ESC_COMM_ENABLED
+#undef HAL_SERIAL_ESC_COMM_ENABLED
+#endif
+#define HAL_SERIAL_ESC_COMM_ENABLED 0
+
+/* ConfigFuzz: HAL_WITH_IO_MCU_BIDIR_DSHOT */
+#ifdef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#undef HAL_WITH_IO_MCU_BIDIR_DSHOT
+#endif
+#define HAL_WITH_IO_MCU_BIDIR_DSHOT 0
+
+/* ConfigFuzz: BENCH_DEFINE_MAP_PERMUTATION */
+#ifdef BENCH_DEFINE_MAP_PERMUTATION
+#undef BENCH_DEFINE_MAP_PERMUTATION
+#endif
+#define BENCH_DEFINE_MAP_PERMUTATION 0
+
+/* ConfigFuzz: SUMD_MAX_CHANNELS */
+#ifdef SUMD_MAX_CHANNELS
+#undef SUMD_MAX_CHANNELS
+#endif
+#define SUMD_MAX_CHANNELS 16
+
+/* ConfigFuzz: HAL_BARO_EXTERNAL_BUS_DEFAULT */
+#ifdef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#undef HAL_BARO_EXTERNAL_BUS_DEFAULT
+#endif
+#define HAL_BARO_EXTERNAL_BUS_DEFAULT 0
+
+/* ConfigFuzz: HAL_RALLY_ENABLED */
+#ifdef HAL_RALLY_ENABLED
+#undef HAL_RALLY_ENABLED
+#endif
+#define HAL_RALLY_ENABLED 1
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_RED */
+#ifdef HAL_RCOUT_RGBLED_RED
+#undef HAL_RCOUT_RGBLED_RED
+#endif
+#define HAL_RCOUT_RGBLED_RED 0
+
+#endif /* _AP_CONFIG_H_ */

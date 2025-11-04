@@ -1,0 +1,10 @@
+{
+  "test_id": 860,
+  "timestamp": "2025-10-11T13:00:45.459438",
+  "macro_changes": {
+    "MODE_SMARTRTL_ENABLED": 0,
+    "AP_GRIPPER_ENABLED": 1,
+    "AP_BEACON_ENABLED": 1,
+    "AP_STATS_ENABLED": 1
+  }
+}

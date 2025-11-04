@@ -1,0 +1,9 @@
+{
+  "test_id": 741,
+  "timestamp": "2025-10-11T07:07:41.775622",
+  "macro_changes": {
+    "HAL_HEATER_GPIO_ON": 1,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "HAL_INS_VRBRAIN": 1
+  }
+}

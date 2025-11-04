@@ -1,0 +1,14 @@
+{
+  "test_id": 5,
+  "timestamp": "2025-10-09T21:21:32.290191",
+  "macro_changes": {
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 0,
+    "FS_GCS_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "HAL_MEMORY_TOTAL_KB": 1,
+    "HAL_BATT_VOLT_PIN": 1,
+    "HAL_GPIO_INPUT": 1,
+    "MAVLINK_MSG_ID_DIGICAM_CONFIGURE_CRC": 1,
+    "LEDDARONE_SERIAL_PORT_MAX": 8,
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 4
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_id": 352,
+  "timestamp": "2025-10-10T12:50:33.621071",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_IMPLICIT": 0,
+    "AP_CRASHDUMP_ENABLED": 0,
+    "MAVLINK_MSG_ID_AP_ADC_CRC": 0,
+    "RPMMAX": 1,
+    "AP_SCHEDULER_OVERTIME_MARGIN_US": 0,
+    "HAL_RALLY_ENABLED": 0,
+    "HAL_USE_HW_RNG": 0,
+    "MODE_LOITER_ENABLED": 1
+  }
+}

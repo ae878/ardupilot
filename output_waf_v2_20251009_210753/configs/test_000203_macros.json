@@ -1,0 +1,10 @@
+{
+  "test_id": 203,
+  "timestamp": "2025-10-10T06:05:40.052921",
+  "macro_changes": {
+    "METADATA_MAX_i": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "FS_THR_DISABLED": 1,
+    "AP_CRASHDUMP_ENABLED": 0
+  }
+}

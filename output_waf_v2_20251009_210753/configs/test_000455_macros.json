@@ -1,0 +1,11 @@
+{
+  "test_id": 455,
+  "timestamp": "2025-10-10T17:38:45.482193",
+  "macro_changes": {
+    "HAL_INS_VRBRAIN": 0,
+    "HAL_USB_PRODUCT_ID": 0,
+    "HAL_DEFAULT_INS_FAST_SAMPLE": 1,
+    "HAL_USB_VENDOR_ID": 1,
+    "HAL_HAVE_SAFETY_SWITCH": 0
+  }
+}

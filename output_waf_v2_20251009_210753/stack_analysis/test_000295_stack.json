@@ -1,0 +1,105 @@
+{
+  "test_id": 295,
+  "high_stack_count": 20,
+  "high_stack_functions": [
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_core.cpp:1010:6:void NavEKF3_core::CovariancePrediction(Vector3F*)",
+      "stack_size": 2152,
+      "file": "AP_NavEKF3_core.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_core.cpp:889:6:void NavEKF2_core::CovariancePrediction()",
+      "stack_size": 1496,
+      "file": "AP_NavEKF2_core.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_MagFusion.cpp:473:6:void NavEKF3_core::FuseMagnetometer()",
+      "stack_size": 1120,
+      "file": "AP_NavEKF3_MagFusion.cpp.7.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF3/AP_NavEKF3_OptFlowFusion.cpp:282:6:void NavEKF3_core::FuseOptFlow(const NavEKF3_core::of_elements&, bool)",
+      "stack_size": 1072,
+      "file": "AP_NavEKF3_OptFlowFusion.cpp.7.su"
+    },
+    {
+      "function": "../../modules/DroneCAN/libcanard/canard/subscriber.h:72:10:void Canard::Subscriber<msgtype>::handle_message(const CanardRxTransfer&) [with msgtype = ardupilot_equipment_power_BatteryInfoAux]",
+      "stack_size": 1064,
+      "file": "AP_BattMonitor_DroneCAN.cpp.0.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.3.su"
+    },
+    {
+      "function": "../../libraries/AP_NavEKF2/AP_NavEKF2_OptFlowFusion.cpp:268:6:void NavEKF2_core::FuseOptFlow()",
+      "stack_size": 1048,
+      "file": "AP_NavEKF2_OptFlowFusion.cpp.7.su"
+    }
+  ],
+  "stack_changes": {
+    "new_functions": [],
+    "removed_functions": [
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:904:6:void AP_AIS::send(mavlink_channel_t)",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/RC_Channel_Copter.cpp:760:6:void RC_Channels_Copter::auto_trim_run()",
+        "stack_size": 32
+      },
+      {
+        "function": "../../ArduCopter/RC_Channel_Copter.cpp:730:6:void RC_Channels_Copter::do_aux_function_ahrs_auto_trim(RC_Channel::AuxSwitchPos)",
+        "stack_size": 8
+      },
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:902:6:void AP_AIS::init()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_HAL/utility/functor.h:85:20:) = &RC_Channels_Copter::auto_trim_run; RetType = void; Args = {}]",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:903:6:void AP_AIS::update()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:906:9:static AP_AIS* AP_AIS::get_singleton()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:900:6:bool AP_AIS::enabled() const",
+        "stack_size": 0
+      },
+      {
+        "function": "../../libraries/AP_AIS/AP_AIS.cpp:898:1:AP_AIS::AP_AIS()",
+        "stack_size": 0
+      },
+      {
+        "function": "../../ArduCopter/RC_Channel_Copter.cpp:752:6:void RC_Channels_Copter::auto_trim_cancel()",
+        "stack_size": 8
+      }
+    ],
+    "increased": [],
+    "decreased": [],
+    "unchanged": 15880
+  },
+  "total_functions_analyzed": 15892
+}

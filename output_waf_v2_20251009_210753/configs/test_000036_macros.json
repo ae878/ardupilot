@@ -1,0 +1,9 @@
+{
+  "test_id": 36,
+  "timestamp": "2025-10-09T22:44:42.366268",
+  "macro_changes": {
+    "MAVLINK_ENABLED_STANDARD": 0,
+    "LEDDARONE_DETECTIONS_MAX": 8,
+    "KDECAN_MAX_NUM_ESCS": 8
+  }
+}

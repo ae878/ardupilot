@@ -1,0 +1,17 @@
+{
+  "test_id": 739,
+  "timestamp": "2025-10-11T07:01:07.106940",
+  "macro_changes": {
+    "AP_RANGEFINDER_LUA_TIMEOUT_MS": 1,
+    "HAL_EXTERNAL_AHRS_DEFAULT": 1,
+    "AP_SERIALMANAGER_ENABLED": 0,
+    "MAVLINK_ENABLED_ICAROUS": 1,
+    "HAL_BUTTON_ENABLED": 0,
+    "AP_RANGEFINDER_MSP_TIMEOUT_MS": 1,
+    "FFT_MAX_MISSED_UPDATES": 4
+  },
+  "build_success": false,
+  "build_time": 10.447842359542847,
+  "build_result": false,
+  "error": "../../libraries/GCS_MAVLink/GCS.h:778:11: error: 'AP_SerialManager' does not name a type; did you mean 'AP_CANManager'?"
+}

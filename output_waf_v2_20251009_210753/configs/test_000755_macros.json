@@ -1,0 +1,14 @@
+{
+  "test_id": 755,
+  "timestamp": "2025-10-11T07:47:47.909355",
+  "macro_changes": {
+    "BENCH_DEFINE_MAP_PERMUTATION": 1,
+    "HAL_SPRAYER_ENABLED": 1,
+    "AP_SIM_ENABLED": 0,
+    "MODE_GUIDED_NOGPS_ENABLED": 0,
+    "AP_NOTIFY_NAVIGATOR_LED_ENABLED": 0,
+    "MODE_FLIP_ENABLED": 0,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "AC_PRECLAND_ENABLED": 0
+  }
+}

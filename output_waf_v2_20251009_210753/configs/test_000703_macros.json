@@ -1,0 +1,10 @@
+{
+  "test_id": 703,
+  "timestamp": "2025-10-11T05:25:24.234397",
+  "macro_changes": {
+    "AP_SIM_ENABLED": 1,
+    "MODE_GUIDED_ENABLED": 0,
+    "FLOW_CONTROL_ENABLED": 0,
+    "FS_THR_ENABLED_BRAKE_OR_LAND": 1
+  }
+}

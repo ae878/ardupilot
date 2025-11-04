@@ -1,0 +1,71 @@
+#pragma once
+/* ConfigFuzz generated configuration */
+
+#ifndef _AP_CONFIG_H_
+#define _AP_CONFIG_H_
+
+/* Essential defines */
+#define _GNU_SOURCE 1
+#define WAF_BUILD 1
+#define PYTHONDIR "/usr/lib/python3/dist-packages"
+#define PYTHONARCHDIR "/usr/lib/python3/dist-packages"
+#define __STDC_FORMAT_MACROS 1
+#define AP_SIGNED_FIRMWARE 0
+#define HAVE_CMATH_ISFINITE 1
+#define HAVE_CMATH_ISINF 1
+#define HAVE_CMATH_ISNAN 1
+#define NEED_CMATH_ISFINITE_STD_NAMESPACE 1
+#define NEED_CMATH_ISINF_STD_NAMESPACE 1
+#define NEED_CMATH_ISNAN_STD_NAMESPACE 1
+
+/* ConfigFuzz Test #943 */
+
+/* ConfigFuzz: MODE_GUIDED_NOGPS_ENABLED */
+#ifdef MODE_GUIDED_NOGPS_ENABLED
+#undef MODE_GUIDED_NOGPS_ENABLED
+#endif
+#define MODE_GUIDED_NOGPS_ENABLED 1
+
+/* ConfigFuzz: HAL_INS_VRBRAIN */
+#ifdef HAL_INS_VRBRAIN
+#undef HAL_INS_VRBRAIN
+#endif
+#define HAL_INS_VRBRAIN 0
+
+/* ConfigFuzz: TAP_ESC_MAX_MOTOR_NUM */
+#ifdef TAP_ESC_MAX_MOTOR_NUM
+#undef TAP_ESC_MAX_MOTOR_NUM
+#endif
+#define TAP_ESC_MAX_MOTOR_NUM 8
+
+/* ConfigFuzz: MAVLINK_ENABLED_LOWEHEISER */
+#ifdef MAVLINK_ENABLED_LOWEHEISER
+#undef MAVLINK_ENABLED_LOWEHEISER
+#endif
+#define MAVLINK_ENABLED_LOWEHEISER 1
+
+/* ConfigFuzz: AP_BEACON_ENABLED */
+#ifdef AP_BEACON_ENABLED
+#undef AP_BEACON_ENABLED
+#endif
+#define AP_BEACON_ENABLED 1
+
+/* ConfigFuzz: HAL_SEMAPHORE_BLOCK_FOREVER */
+#ifdef HAL_SEMAPHORE_BLOCK_FOREVER
+#undef HAL_SEMAPHORE_BLOCK_FOREVER
+#endif
+#define HAL_SEMAPHORE_BLOCK_FOREVER 0
+
+/* ConfigFuzz: HAL_UART_IOMCU_IDX */
+#ifdef HAL_UART_IOMCU_IDX
+#undef HAL_UART_IOMCU_IDX
+#endif
+#define HAL_UART_IOMCU_IDX 1
+
+/* ConfigFuzz: HAL_RCOUT_RGBLED_RED */
+#ifdef HAL_RCOUT_RGBLED_RED
+#undef HAL_RCOUT_RGBLED_RED
+#endif
+#define HAL_RCOUT_RGBLED_RED 0
+
+#endif /* _AP_CONFIG_H_ */

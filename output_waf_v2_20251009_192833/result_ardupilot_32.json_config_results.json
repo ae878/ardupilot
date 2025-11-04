@@ -1,0 +1,16 @@
+[
+  {
+    "test_id": 33,
+    "timestamp": "2025-10-09T20:56:54.728677",
+    "macro_changes": {
+      "AP_SOCKET_NATIVE_ENABLED": 0,
+      "HAL_GPIO_LED_ON": 1,
+      "RC_OUTPUT_MAX_PULSEWIDTH": 8,
+      "AP_HAL_UARTDRIVER_ENABLED": 0
+    },
+    "build_success": false,
+    "build_time": 144.29512405395508,
+    "build_result": false,
+    "error": "../../libraries/AP_Vehicle/AP_Vehicle.cpp:1077:15: error: 'class AP_HAL::Util' has no member named 'uart_log'"
+  }
+]

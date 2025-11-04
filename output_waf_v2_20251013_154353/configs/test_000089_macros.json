@@ -1,0 +1,9 @@
+{
+  "test_id": 89,
+  "timestamp": "2025-10-13T19:57:45.038627",
+  "macro_changes": {
+    "AP_NOTIFY_GPIO_LED_RGB_GREEN_PIN": 1,
+    "FS_THR_ENABLED_AUTO_RTL_OR_RTL": 0,
+    "HAL_SERIAL_ESC_COMM_ENABLED": 0
+  }
+}

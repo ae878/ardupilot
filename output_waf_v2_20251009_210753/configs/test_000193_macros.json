@@ -1,0 +1,12 @@
+{
+  "test_id": 193,
+  "timestamp": "2025-10-10T05:39:07.879971",
+  "macro_changes": {
+    "MAXSONAR_SERIAL_LV_BAUD_RATE": 8,
+    "RC_INPUT_MAX_PULSEWIDTH": 8,
+    "MAX_PWMS": 16,
+    "AUTOTUNE_ENABLED": 1,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "METADATA_MAX_i": 1
+  }
+}

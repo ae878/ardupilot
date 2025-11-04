@@ -1,0 +1,13 @@
+{
+  "test_id": 185,
+  "timestamp": "2025-10-10T05:17:18.227813",
+  "macro_changes": {
+    "HAL_COMPASS_AUTO_ROT_DEFAULT": 0,
+    "AP_SRV_CHANNELS_ENABLED": 0,
+    "AP_COPTER_AHRS_AUTO_TRIM_ENABLED": 0,
+    "CONFIG_LWIP_PPP_SUPPORT": 0,
+    "HAL_NUM_CAN_IFACES": 0,
+    "HAL_RCOUT_RGBLED_GREEN": 0,
+    "MODE_DRIFT_ENABLED": 0
+  }
+}

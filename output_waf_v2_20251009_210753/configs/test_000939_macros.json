@@ -1,0 +1,14 @@
+{
+  "test_id": 939,
+  "timestamp": "2025-10-11T16:44:33.407514",
+  "macro_changes": {
+    "MAVLINK_ENABLED_ALL": 0,
+    "HAL_GPIO_OUTPUT": 0,
+    "FS_GCS_ENABLED_ALWAYS_SMARTRTL_OR_RTL": 0,
+    "HAL_PWM_COUNT": 0,
+    "HAL_GPIO_INPUT": 1,
+    "AC_MAVLINK_SOLO_BUTTON_COMMAND_HANDLING_ENABLED": 0,
+    "HAL_FLASH_ALLOW_UPDATE": 1,
+    "HAL_GPIO_LED_ON": 0
+  }
+}
